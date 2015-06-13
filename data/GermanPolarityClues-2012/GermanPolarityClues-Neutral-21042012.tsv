@@ -1,0 +1,1312 @@
+!	!	$.	neutral	0.332604/0.471554/0.195842	D
+"	"	$(	neutral	0.292191/0.447523/0.260285	D
+(	(	$(	neutral	0.313617/0.446087/0.240296	D
+)	)	$(	neutral	0.334943/0.427278/0.237779	D
+*	*	$(	neutral	0.27451/0.45098/0.27451	D
+-	-	$(	neutral	0.298092/0.464229/0.237679	D
+.	.	$.	neutral	0.281739/0.473789/0.244472	D
+0	0	CA	neutral	0.277778/0.527778/0.194444	D
+1	1	CA	neutral	0.276536/0.486034/0.23743	D
+2	2	CA	neutral	0.234586/0.538346/0.227068	D
+3	3	CA	neutral	0.205508/0.440678/0.353814	D
+4	4	CA	neutral	0.272085/0.5053/0.222615	D
+5	5	CA	neutral	0.386111/0.394444/0.219444	D
+6	6	CA	neutral	0.205357/0.625/0.169643	D
+7	7	CA	neutral	0.293333/0.44/0.266667	D
+8	8	CA	neutral	0.336538/0.423077/0.240385	D
+9	9	CA	neutral	0.318182/0.386364/0.295455	D
+:	:	$.	neutral	0.299368/0.451862/0.24877	D
+?	?	$.	neutral	0.155789/0.587368/0.256842	D
+Abbild	Abbild	NN	neutral	-/-/-	D
+Abdeckblech	Abdeckblech	NN	neutral	-/-/-	D
+Abdeckgitter	Abdeckgitter	NN	neutral	-/-/-	D
+Abdeckrost	Abdeckrost	NN	neutral	-/-/-	D
+Abdeckung	Abdeckung	NN	neutral	0.454545/0.272727/0.272727	D
+Abdruck	Abdruck	NN	neutral	0/0/1	D
+Abdrucknehmen	Abdrucknehmen	NN	neutral	-/-/-	D
+Abenteuer	Abenteuer	NN	neutral	0/1/0	D
+Ablage	Ablage	NN	neutral	0.25/0.75/0	D
+Ablagegestell	Ablagegestell	NN	neutral	-/-/-	D
+Ablauf	Ablauf	NN	neutral	0/1/0	D
+Ablaufregelung	Ablaufregelung	NN	neutral	-/-/-	D
+Ablenkblech	Ablenkblech	NN	neutral	-/-/-	D
+Ablenkplatte	Ablenkplatte	NN	neutral	-/-/-	D
+Ablieferung	Ablieferung	NN	neutral	-/-/-	D
+Abreicherung	Abreicherung	NN	neutral	-/-/-	D
+Abruf	Abruf	NN	neutral	-/-/-	D
+Abschlag	Abschlag	NN	neutral	0/0/1	D
+Abschlagszahlung	Abschlagszahlung	NN	neutral	-/-/-	D
+Abschnitt	Abschnitt	NN	neutral	-/-/-	D
+Abseite	Abseite	NN	neutral	-/-/-	D
+Absicht	Absicht	NN	neutral	0.25/0.75/0	D
+Abspannung	Abspannung	NN	neutral	-/-/-	D
+Abstinenzbewegung	Abstinenzbewegung	NN	neutral	-/-/-	D
+Abtretung	Abtretung	NN	neutral	-/-/-	D
+Abwehrspieler	Abwehrspieler	NN	neutral	-/-/-	D
+Abwägung	Abwägung	NN	neutral	1/0/0	D
+Advokat	Advokat	NN	neutral	-/-/-	D
+Affekt	Affekt	NN	neutral	-/-/-	D
+Affektion	Affektion	NN	neutral	-/-/-	D
+Affinität	Affinität	NN	neutral	-/-/-	D
+Aha-Erlebnis	Aha-Erlebnis	NN	neutral	-/-/-	D
+Ahnung	Ahnung	NN	neutral	0.3/0.55/0.15	D
+Akkommodationsbreite	Akkommodationsbreite	NN	neutral	-/-/-	D
+Akkomodationsbreite	Akkomodationsbreite	NN	neutral	-/-/-	D
+Akteur	Akteur	NN	neutral	1/0/0	D
+Allgemeinplatz	Allgemeinplatz	NN	neutral	-/-/-	D
+Alter	Alter	NN	neutral	0.307692/0.538462/0.153846	D
+Alternative	Alternative	NN	neutral	0.431818/0.431818/0.136364	D
+Analyse	Analyse	NN	neutral	0.75/0.25/0	D
+Analysegerät	Analysegerät	NN	neutral	-/-/-	D
+Anblick	Anblick	NN	neutral	0/0.5/0.5	D
+Anbringung	Anbringung	NN	neutral	0.333333/0.333333/0.333333	D
+Andruck	Andruck	NN	neutral	-/-/-	D
+Anfahrt	Anfahrt	NN	neutral	-/-/-	D
+Anfangs	Anfang	NN	neutral	0.254237/0.542373/0.20339	D
+Anfertigung	Anfertigung	NN	neutral	-/-/-	D
+Anforderung	Anforderung	NN	neutral	0.166667/0.333333/0.5	D
+Anforderungen	Anforderung	NN	neutral	0.166667/0.333333/0.5	D
+Angelegenheit	Angelegenheit	NN	neutral	0.2/0.6/0.2	D
+Anlage	Anlage	NN	neutral	0.214286/0.535714/0.25	D
+Anlass	Anlaß	NN	neutral	0.666667/0/0.333333	D
+Anlegbarkeit	Anlegbarkeit	NN	neutral	-/-/-	D
+Anlehnung	Anlehnung	NN	neutral	-/-/-	D
+Anleitung	Anleitung	NN	neutral	0.511111/0.333333/0.155556	D
+Anmerkung	Anmerkung	NN	neutral	0.333333/0.333333/0.333333	D
+Annahme	Annahme	NN	neutral	0/0.5/0.5	D
+Anpflanzung	Anpflanzung	NN	neutral	-/-/-	D
+Anpressvorrichtungen	Anpressvorrichtungen	NN	neutral	-/-/-	D
+Anprobe	Anprobe	NN	neutral	-/-/-	D
+Anschauung	Anschauung	NN	neutral	-/-/-	D
+Anschein	Anschein	NN	neutral	1/0/0	D
+Ansehung	Ansehung	NN	neutral	-/-/-	D
+Ansicht	Ansicht	NN	neutral	0.2/0.3/0.5	D
+Ansichten	Ansicht	NN	neutral	0.2/0.3/0.5	D
+Ansteuerung	Ansteuerung	NN	neutral	1/0/0	D
+Anstoß	Anstoß	NN	neutral	-/-/-	D
+Antizyklone	Antizyklone	NN	neutral	-/-/-	D
+Anvulkanisation	Anvulkanisation	NN	neutral	-/-/-	D
+Anvulkanisieren	Anvulkanisieren	NN	neutral	-/-/-	D
+Anzeige	Anzeige	NN	neutral	0.52/0.28/0.2	D
+Apostel	Apostel	NN	neutral	-/-/-	D
+Arbeit	Arbeit	NN	neutral	0.428571/0.311688/0.25974	D
+Arbeitseinstellung	Arbeitseinstellung	NN	neutral	-/-/-	D
+Areal	Areal	NN	neutral	-/-/-	D
+Argument	Argument	NN	neutral	0.4/0.6/0	D
+Argumentation	Argumentation	NN	neutral	-/-/-	D
+Argumente	Argument	NN	neutral	0.4/0.6/0	D
+Art	Art	NN	neutral	0.25/0.410714/0.339286	D
+Aspiration	Aspiration	NN	neutral	-/-/-	D
+Asyl	Asyl	NN	neutral	-/-/-	D
+Aszendent	Aszendent	NN	neutral	-/-/-	D
+Atemzug	Atemzug	NN	neutral	-/-/-	D
+Aufarbeitung	Aufarbeitung	NN	neutral	-/-/-	D
+Aufenthalt	Aufenthalt	NN	neutral	-/-/-	D
+Auffassung	Auffassung	NN	neutral	0/0/1	D
+Aufführung	Aufführung	NN	neutral	-/-/-	D
+Aufgabenstellung	Aufgabenstellung	NN	neutral	0/1/0	D
+Auflagergröße	Auflagergröße	NN	neutral	-/-/-	D
+Auflagerkraft	Auflagerkraft	NN	neutral	-/-/-	D
+Auflagerreaktion	Auflagerreaktion	NN	neutral	-/-/-	D
+Aufsteller	Aufsteller	NN	neutral	-/-/-	D
+Auftakt	Auftakt	NN	neutral	-/-/-	D
+Aufteilung	Aufteilung	NN	neutral	-/-/-	D
+Auftreten	Auftreten	NN	neutral	0.121212/0.69697/0.181818	D
+Auftritt	Auftritt	NN	neutral	0.571429/0.428571/0	D
+Augenblick	Augenblick	NN	neutral	0.333333/0.333333/0.333333	D
+Augenbraue	Augenbraue	NN	neutral	-/-/-	D
+Aus-Stellung	Aus-Stellung	NN	neutral	-/-/-	D
+Ausbildungs	Ausbildungs	NN	neutral	-/-/-	D
+Ausblühungen	Ausblühungen	NN	neutral	-/-/-	D
+Ausdruck	Ausdruck	NN	neutral	0.357143/0.428571/0.214286	D
+Ausführung	Ausführung	NN	neutral	0.4/0.466667/0.133333	D
+Ausführungsform	Ausführungsform	NN	neutral	-/-/-	D
+Ausgang	Ausgang	NN	neutral	0.333333/0.5/0.166667	D
+Ausgangsdrossel	Ausgangsdrossel	NN	neutral	-/-/-	D
+Ausgangsform	Ausgangsform	NN	neutral	-/-/-	D
+Ausgestaltung	Ausgestaltung	NN	neutral	-/-/-	D
+Auskehlung	Auskehlung	NN	neutral	-/-/-	D
+Auskragung	Auskragung	NN	neutral	-/-/-	D
+Auslastung	Auslastung	NN	neutral	-/-/-	D
+Ausleger	Ausleger	NN	neutral	-/-/-	D
+Auslenkung	Auslenkung	NN	neutral	-/-/-	D
+Ausläufer	Ausläufer	NN	neutral	-/-/-	D
+Ausnutzung	Ausnutzung	NN	neutral	1/0/0	D
+Ausrichtung	Ausrichtung	NN	neutral	0.4/0.6/0	D
+Aussehen	Aussehen	NN	neutral	0.283582/0.477612/0.238806	D
+Aussichtspunkte	Aussichtspunkt	NN	neutral	-/-/-	D
+Ausstanzer	Ausstanzer	NN	neutral	-/-/-	D
+Ausstattungsfilm	Ausstattungsfilm	NN	neutral	-/-/-	D
+Aussteifung	Aussteifung	NN	neutral	-/-/-	D
+Ausstellung	Ausstellung	NN	neutral	-/-/-	D
+Aussteuerungsweite	Aussteuerungsweite	NN	neutral	-/-/-	D
+Ausströmreaktionskräfte	Ausströmreaktionskräfte	NN	neutral	-/-/-	D
+Austastung	Austastung	NN	neutral	-/-/-	D
+Ausweg	Ausweg	NN	neutral	-/-/-	D
+Auswerteverfahren	Auswerteverfahren	NN	neutral	-/-/-	D
+Auswertung	Auswertung	NN	neutral	0/0.666667/0.333333	D
+Auswärtsspiel	Auswärtsspiel	NN	neutral	-/-/-	D
+Auszug	Auszug	NN	neutral	0.25/0.25/0.5	D
+Baby	Baby	NN	neutral	0.5625/0.3125/0.125	D
+Bach	Bach	NN	neutral	0.25/0.5/0.25	D
+Bahn	Bahn	NN	neutral	0.5/0/0.5	D
+Balkenrost	Balkenrost	NN	neutral	-/-/-	D
+Ballwechsel	Ballwechsel	NN	neutral	-/-/-	D
+Bank	Bank	NN	neutral	0/0/1	D
+Bankert	Bankert	NE	neutral	-/-/-	D
+Bankschließfach	Bankschließfach	NN	neutral	-/-/-	D
+Basis	Basis	NN	neutral	0.307692/0.461538/0.230769	D
+Basisnetz	Basisnetz	NN	neutral	-/-/-	D
+Bauhöhe	Bauhöhe	NN	neutral	0/1/0	D
+Bauhütte	Bauhütte	NN	neutral	-/-/-	D
+Baumkante	Baumkante	NN	neutral	-/-/-	D
+Bausparkasse	Bausparkasse	NN	neutral	-/-/-	D
+Baustahlgewebe	Baustahlgewebe	NN	neutral	-/-/-	D
+Baustein-Freigabe	Baustein-Freigabe	NN	neutral	-/-/-	D
+Becken	Becken	NN	neutral	-/-/-	D
+Bedarf	Bedarf	NN	neutral	0.583333/0.333333/0.0833333	D
+Bediengerät	Bediengerät	NN	neutral	-/-/-	D
+Bedienungsfeld	Bedienungsfeld	NN	neutral	-/-/-	D
+Begleichung	Begleichung	NN	neutral	-/-/-	D
+Begriff	Begriff	NN	neutral	0.0909091/0.727273/0.181818	D
+Begründung	Begründung	NN	neutral	0/0.5/0.5	D
+Behandlung	Behandlung	NN	neutral	0.333333/0.333333/0.333333	D
+Behälter	Behälter	NN	neutral	0.391304/0.304348/0.304348	D
+Beispiel	Beispiel	NN	neutral	0.347305/0.383234/0.269461	D
+Beispielsfall	Beispielsfall	NN	neutral	-/-/-	D
+Beize	Beize	NN	neutral	-/-/-	D
+Beizen	Beize	NN	neutral	-/-/-	D
+Belletristik	Belletristik	NN	neutral	-/-/-	D
+Bemerkung	Bemerkung	NN	neutral	0/1/0	D
+Bemessung	Bemessung	NN	neutral	0/1/0	D
+Berater	Berater	NN	neutral	-/-/-	D
+Beratung	Beratung	NN	neutral	-/-/-	D
+Bereifung	Bereifung	NN	neutral	-/-/-	D
+Berichterstatter	Berichterstatter	NN	neutral	-/-/-	D
+Berlocke	Berlocke	NN	neutral	-/-/-	D
+Berührung	Berührung	NN	neutral	0/0.75/0.25	D
+Bescheid	Bescheid	NN	neutral	0.25/0.75/0	D
+Bescheinigungswesen	Bescheinigungswesen	NN	neutral	-/-/-	D
+Beschlag	Beschlag	NN	neutral	-/-/-	D
+Beschleuniger	Beschleuniger	NN	neutral	-/-/-	D
+Beschluss	Beschluß	NN	neutral	-/-/-	D
+Beschnittzugabe	Beschnittzugabe	NN	neutral	-/-/-	D
+Besitzer	Besitzer	NN	neutral	0.461538/0.461538/0.0769231	D
+Besitzerin	Besitz	NE	neutral	0.47619/0.333333/0.190476	D
+Besitzübertragung	Besitzübertragung	NN	neutral	-/-/-	D
+Bestimmung	Bestimmung	NN	neutral	0/0/1	D
+Beton	Beton	NN	neutral	0.8/0.2/0	D
+Betonung	Betonung	NN	neutral	-/-/-	D
+Betrieb	Betrieb	NN	neutral	0.294118/0.458824/0.247059	D
+Betriebsverfassungsgesetz	Betriebsverfassungsgesetz	NN	neutral	-/-/-	D
+Beurteilung	Beurteilung	NN	neutral	0.142857/0.714286/0.142857	D
+Bevorzugung	Bevorzugung	NN	neutral	-/-/-	D
+Bewandtnis	Bewandtnis	NN	neutral	-/-/-	D
+Beweggrund	Beweggrund	NN	neutral	-/-/-	D
+Bewegung	Bewegung	NN	neutral	0.1875/0.5625/0.25	D
+Bewusstheit	Bewußtheit	NN	neutral	-/-/-	D
+Bewusstsein	Bewußtsein	NN	neutral	-/-/-	D
+Bewusstseinsbildung	Bewußtseinsbildung	NN	neutral	-/-/-	D
+Bewusstwerdung	Bewusstwerdung	NN	neutral	-/-/-	D
+Bezugsformstück	Bezugsformstück	NN	neutral	-/-/-	D
+Bild	Bild	NN	neutral	0.35533/0.380711/0.263959	D
+Bildabstand	Bildabstand	NN	neutral	-/-/-	D
+Bildhelligkeit	Bildhelligkeit	NN	neutral	-/-/-	D
+Bildkontrastverstärkung	Bildkontrastverstärkung	NN	neutral	-/-/-	D
+Bildnis	Bildnis	NN	neutral	-/-/-	D
+Bindebogen	Bindebogen	NN	neutral	-/-/-	D
+Bisexuelle	Bisexuelle	NN	neutral	-/-/-	D
+Blattschraube	Blattschraube	NN	neutral	-/-/-	D
+Bleiplombe	Bleiplombe	NN	neutral	-/-/-	D
+Blende	Blende	NN	neutral	0/1/0	D
+Blendrahmen	Blendrahmen	NN	neutral	-/-/-	D
+Blitzen	Blitz	NN	neutral	0.75/0.25/0	D
+Block	Block	NN	neutral	0.5/0.166667/0.333333	D
+Blocksatz	Blocksatz	NN	neutral	-/-/-	D
+Blust	Blust	NN	neutral	-/-/-	D
+Blutrot	Blutrot	NN	neutral	-/-/-	D
+Boden	Boden	NN	neutral	0.301887/0.471698/0.226415	D
+Bodenverfestiger	Bodenverfestiger	NN	neutral	-/-/-	D
+Bodenwrange	Bodenwrange	NN	neutral	-/-/-	D
+Bogenweiche	Bogenweiche	NN	neutral	-/-/-	D
+Bohrarbeit	Bohrarbeit	NN	neutral	-/-/-	D
+Bohrloch	Bohrloch	NN	neutral	0/0.666667/0.333333	D
+Bohrung	Bohrung	NN	neutral	0/0.5/0.5	D
+Bordell	Bordell	NN	neutral	-/-/-	D
+Borstenhaar	Borstenhaar	NN	neutral	-/-/-	D
+Brandprobe	Brandprobe	NN	neutral	-/-/-	D
+Brandungswelle	Brandungswelle	NN	neutral	-/-/-	D
+Bride	Bride	NN	neutral	-/-/-	D
+Briefschluss	Briefschluss	NN	neutral	-/-/-	D
+Brötchen	Brötchen	NN	neutral	0.4/0.4/0.2	D
+Brückenpfeiler	Brückenpfeiler	NN	neutral	-/-/-	D
+Bundstäbchen	Bundstäbchen	NN	neutral	-/-/-	D
+Buttertoffee	Buttertoffee	NN	neutral	-/-/-	D
+Bürgschaft	Bürgschaft	NN	neutral	-/-/-	D
+Bürgschaftsnehmer	Bürgschaftsnehmer	NN	neutral	-/-/-	D
+Cartoon	Cartoon	NN	neutral	-/-/-	D
+Chassis	Chassis	NN	neutral	-/-/-	D
+Cherub	Cherub	NN	neutral	-/-/-	D
+Chevreau	Chevreau	NN	neutral	-/-/-	D
+Chevreauleder	Chevreauleder	NN	neutral	-/-/-	D
+Chiffre	Chiffre	NN	neutral	-/-/-	D
+Chiffrierschlüssel	Chiffrierschlüssel	NN	neutral	-/-/-	D
+Choral	Choral	NN	neutral	0.5/0/0.5	D
+Chorraum	Chorraum	NN	neutral	-/-/-	D
+Chrysantheme	Chrysantheme	NN	neutral	-/-/-	D
+Clique	Clique	NN	neutral	-/-/-	D
+Dachschräge	Dachschräge	NN	neutral	-/-/-	D
+Darsteller	Darsteller	NN	neutral	0.333333/0.333333/0.333333	D
+Darstellung	Darstellung	NN	neutral	0.222222/0.444444/0.333333	D
+Datenoase	Datenoase	NN	neutral	-/-/-	D
+Dauer	Dauer	NN	neutral	0.117647/0.558824/0.323529	D
+Dauerhaftigkeit	Dauerhaftigkeit	NN	neutral	-/-/-	D
+Daumen	Daumen	NN	neutral	0.444444/0.444444/0.111111	D
+Deckband	Deckband	NN	neutral	-/-/-	D
+Deckelkorb	Deckelkorb	NN	neutral	-/-/-	D
+Deckfalte	Deckfalte	NN	neutral	-/-/-	D
+Deckstütze	Deckstütze	NN	neutral	-/-/-	D
+Deduktion	Deduktion	NN	neutral	-/-/-	D
+Definiertheit	Definiertheit	NN	neutral	-/-/-	D
+Delkredere	Delkredere	NN	neutral	-/-/-	D
+Denken	Denken	NN	neutral	0.245283/0.462264/0.292453	D
+Denkungsart	Denkungsart	NN	neutral	-/-/-	D
+Depotfund	Depotfund	NN	neutral	-/-/-	D
+Destillationsapparat	Destillationsapparat	NN	neutral	-/-/-	D
+Destillationsblase	Destillationsblase	NN	neutral	-/-/-	D
+Dia	Dia	NN	neutral	-/-/-	D
+Diapositiv	Diapositiv	NN	neutral	-/-/-	D
+Dichtung	Dichtung	NN	neutral	0.2/0.7/0.1	D
+Dichtungsfilzstreifen	Dichtungsfilzstreifen	NN	neutral	-/-/-	D
+Diele	Diele	NN	neutral	-/-/-	D
+Dienstbote	Dienstbot	NN	neutral	-/-/-	D
+Dienstbotin	Dienstbotin	NN	neutral	-/-/-	D
+Dienstgrad	Dienstgrad	NN	neutral	-/-/-	D
+Dienstrang	Dienstrang	NN	neutral	-/-/-	D
+Differenz	Differenz	NN	neutral	0/1/0	D
+Differenzbetrag	Differenzbetrag	NN	neutral	-/-/-	D
+Digitalzeichen	Digitalzeichen	NN	neutral	-/-/-	D
+Ding	Ding	NN	neutral	0.271605/0.561728/0.166667	D
+Dinge	Ding	NN	neutral	0.271605/0.561728/0.166667	D
+Diplomatie	Diplomatie	NN	neutral	-/-/-	D
+Distribution	Distribution	NN	neutral	0/0/1	D
+Drahtkorbbuhne	Drahtkorbbuhne	NN	neutral	-/-/-	D
+Drahtschotterbuhne	Drahtschotterbuhne	NN	neutral	-/-/-	D
+Drall	Drall	NN	neutral	-/-/-	D
+Drehdurchmesser	Drehdurchmesser	NN	neutral	-/-/-	D
+Drehscheibe	Drehscheibe	NN	neutral	-/-/-	D
+Drehung	Drehung	NN	neutral	-/-/-	D
+Drehungen	Drehung	NN	neutral	-/-/-	D
+Drosselklappe	Drosselklappe	NN	neutral	-/-/-	D
+Drosselspule	Drosselspule	NN	neutral	-/-/-	D
+Druckluft	Druckluft	NN	neutral	-/-/-	D
+Druckpresse	Druckpresse	NN	neutral	-/-/-	D
+Druckstoß	Druckstoß	NN	neutral	-/-/-	D
+Durchblicke	Durchblick	NN	neutral	-/-/-	D
+Durchfahrtshöhe	Durchfahrtshöhe	NN	neutral	-/-/-	D
+Durchführung	Durchführung	NN	neutral	1/0/0	D
+Durchschlagpapier	Durchschlagpapier	NN	neutral	-/-/-	D
+Dämmerung	Dämmerung	NN	neutral	1/0/0	D
+Dämpfung	Dämpfung	NN	neutral	0/1/0	D
+Dämpfungsverhältnis	Dämpfungsverhältnis	NN	neutral	-/-/-	D
+Ebene	Ebene	NN	neutral	0.25/0.75/0	D
+Effektivverzinsung	Effektivverzinsung	NN	neutral	-/-/-	D
+Ehefähigkeitszeugnis	Ehefähigkeitszeugnis	NN	neutral	-/-/-	D
+Eigenkapitaldecke	Eigenkapitaldecke	NN	neutral	-/-/-	D
+Eigenschaft	Eigenschaft	NN	neutral	0.333333/0.4/0.266667	D
+Einbildungskraft	Einbildungskraft	NN	neutral	-/-/-	D
+Einfachheit	Einfachheit	NN	neutral	0.666667/0.333333/0	D
+Einfall	Einfall	NN	neutral	0/1/0	D
+Einflugloch	Einflugloch	NN	neutral	-/-/-	D
+Einfärbemittel	Einfärbemittel	NN	neutral	-/-/-	D
+Einkünfte	Einkunft	NN	neutral	-/-/-	D
+Einstellung	Einstellung	NN	neutral	0.296296/0.37037/0.333333	D
+Eintopf	Eintopf	NN	neutral	-/-/-	D
+Eintopfgericht	Eintopfgericht	NN	neutral	-/-/-	D
+Einziehschacht	Einziehschacht	NN	neutral	-/-/-	D
+Elektronenbeschuss	Elektronenbeschuss	NN	neutral	-/-/-	D
+Elektroschock-Gürtel	Elektroschock-Gürtel	NN	neutral	-/-/-	D
+Elfmeter	Elfmeter	NN	neutral	-/-/-	D
+Eltern	Elter	NN	neutral	0.526316/0.315789/0.157895	D
+Emotion	Emotion	NN	neutral	0.6/0.2/0.2	D
+Empfangsbestätigung	Empfangsbestätigung	NN	neutral	-/-/-	D
+Empfindung	Empfindung	NN	neutral	-/-/-	D
+Endneigung	Endneigung	NN	neutral	-/-/-	D
+Enkelgesellschaft	Enkelgesellschaft	NN	neutral	-/-/-	D
+Entstellung	Entstellung	NN	neutral	-/-/-	D
+Entwerter	Entwerter	NN	neutral	-/-/-	D
+Entwurf	Entwurf	NN	neutral	-/-/-	D
+Entwurfsziel	Entwurfsziel	NN	neutral	-/-/-	D
+Erfindung	Erfindung	NN	neutral	0.571429/0.142857/0.285714	D
+Ergriffenheit	Ergriffenheit	NN	neutral	-/-/-	D
+Ergussgestein	Ergussgestein	NN	neutral	-/-/-	D
+Erkenntnisbereich	Erkenntnisbereich	NN	neutral	-/-/-	D
+Ernährung	Ernährung	NN	neutral	1/0/0	D
+Erprobung	Erprobung	NN	neutral	-/-/-	D
+Erregung	Erregung	NN	neutral	-/-/-	D
+Ersatz	Ersatz	NN	neutral	0.148936/0.446809/0.404255	D
+Erwartung	Erwartung	NN	neutral	0.271429/0.457143/0.271429	D
+Erwartungswert	Erwartungswert	NN	neutral	-/-/-	D
+Erziehungsberechtigte	Erziehungsberechtigte	NN	neutral	-/-/-	D
+Erzählung	Erzählung	NN	neutral	-/-/-	D
+Europäische	Europäische	NN	neutral	-/-/-	D
+Exeget	Exeget	NN	neutral	-/-/-	D
+Exegetin	Exegetin	NN	neutral	-/-/-	D
+Exemplar	Exemplar	NN	neutral	0.125/0.625/0.25	D
+Experiment	Experiment	NN	neutral	0.333333/0.333333/0.333333	D
+Expertenkommission	Expertenkommission	NN	neutral	-/-/-	D
+Fadenreiniger	Fadenreiniger	NN	neutral	-/-/-	D
+Fahrzeugfolge	Fahrzeugfolge	NN	neutral	-/-/-	D
+Fakt	Fakt	NN	neutral	0.5/0.5/0	D
+Faktum	Faktum	NN	neutral	0.5/0.25/0.25	D
+Fall	Fall	NN	neutral	0.343434/0.353535/0.30303	D
+Farbe	Farbe	NN	neutral	0.313433/0.328358/0.358209	D
+Farbstich	Farbstich	NN	neutral	-/-/-	D
+Farbton	Farbton	NN	neutral	-/-/-	D
+Farbtongleichheit	Farbtongleichheit	NN	neutral	-/-/-	D
+Fechtbruder	Fechtbruder	NN	neutral	-/-/-	D
+Federkraft	Federkraft	NN	neutral	-/-/-	D
+Feldstärke	Feldstärke	NN	neutral	-/-/-	D
+Fensternische	Fensternische	NN	neutral	-/-/-	D
+Festung	Festung	NN	neutral	-/-/-	D
+Finanzdiplomatie	Finanzdiplomatie	NN	neutral	-/-/-	D
+Fixativ	Fixativ	NN	neutral	-/-/-	D
+Fixierbad	Fixierbad	NN	neutral	-/-/-	D
+Fixierer	Fixierer	NN	neutral	-/-/-	D
+Flachspan	Flachspan	NN	neutral	-/-/-	D
+Flamme	Flamme	NN	neutral	0.25/0.5/0.25	D
+Fleischergeselle	Fleischergeselle	NN	neutral	-/-/-	D
+Fleischerhandwerk	Fleischerhandwerk	NN	neutral	-/-/-	D
+Flor	Flor	NN	neutral	0/0/1	D
+Fluchtburg	Fluchtburg	NN	neutral	-/-/-	D
+Fluchtstange	Fluchtstange	NN	neutral	-/-/-	D
+Fluglage	Fluglage	NN	neutral	-/-/-	D
+Folgerung	Folgerung	NN	neutral	-/-/-	D
+Freisetzung	Freisetzung	NN	neutral	-/-/-	D
+Fremdatom	Fremdatom	NN	neutral	-/-/-	D
+Fremdfinanzierungsgrad	Fremdfinanzierungsgrad	NN	neutral	-/-/-	D
+Fußnote	Fußnote	NN	neutral	-/-/-	D
+Färbemittel	Färbemittel	NN	neutral	-/-/-	D
+Färberröte	Färberröte	NN	neutral	-/-/-	D
+Färberöte	Färberöte	NN	neutral	-/-/-	D
+Garndrehung	Garndrehung	NN	neutral	-/-/-	D
+Gartenfuchsschwanz	Gartenfuchsschwanz	NN	neutral	-/-/-	D
+Geblüt	Geblüt	NN	neutral	-/-/-	D
+Gebot	Gebot	NN	neutral	-/-/-	D
+Gebärdenspiel	Gebärdenspiel	NN	neutral	-/-/-	D
+Gedanke	Gedanke	NN	neutral	0.785714/0.214286/0	D
+Gedankenstrich	Gedankenstrich	NN	neutral	-/-/-	D
+Gegebenheit	Gegebenheit	NN	neutral	0.5/0/0.5	D
+Geistesart	Geistesart	NN	neutral	-/-/-	D
+Geisteshaltung	Geisteshaltung	NN	neutral	-/-/-	D
+Gemütsart	Gemütsart	NN	neutral	-/-/-	D
+Gemütsverfassung	Gemütsverfassung	NN	neutral	-/-/-	D
+Gericht	Gericht	NN	neutral	1/0/0	D
+Gerichtsentscheidung	Gerichtsentscheidung	NN	neutral	-/-/-	D
+Gerichtshof	Gerichtshof	NN	neutral	-/-/-	D
+Gerichtsurteil	Gerichtsurteil	NN	neutral	-/-/-	D
+Geschichte	Geschichte	NN	neutral	0.478261/0.217391/0.304348	D
+Geschmack	Geschmack	NN	neutral	0.292135/0.47191/0.235955	D
+Geschmacksrichtung	Geschmacksrichtung	NN	neutral	1/0/0	D
+Geschwindigkeit	Geschwindigkeit	NN	neutral	0.48/0.28/0.24	D
+Gesetze	Gesetz	NN	neutral	0/0/1	D
+Gesichtswinkel	Gesichtswinkel	NN	neutral	-/-/-	D
+Gewicht	Gewicht	NN	neutral	0.434783/0.369565/0.195652	D
+Gewissen	Gewisse	NN	neutral	0.625/0.25/0.125	D
+Gewohnheits	Gewohnheit	NE	neutral	-/-/-	D
+Gewächshaus	Gewächshaus	NN	neutral	-/-/-	D
+Ghettoblaster	Ghettoblaster	NE	neutral	-/-/-	D
+Gießbach	Gießbach	NN	neutral	-/-/-	D
+Gittervorspannung	Gittervorspannung	NN	neutral	-/-/-	D
+Glauben	Glaube	NN	neutral	0/1/0	D
+Gleisner	Gleisner	NE	neutral	-/-/-	D
+Gott	Gott	NN	neutral	0.214286/0.642857/0.142857	D
+Gottes	Gott	NN	neutral	0.214286/0.642857/0.142857	D
+Gottesdienst	Gottesdienst	NN	neutral	-/-/-	D
+Grabung	Grabung	NN	neutral	-/-/-	D
+Grannenhaar	Grannenhaar	NN	neutral	-/-/-	D
+Griffigkeit	Griffigkeit	NN	neutral	0/0/1	D
+Großsprecher	Großsprecher	NN	neutral	-/-/-	D
+Großunternehmen	Großunternehmen	NN	neutral	-/-/-	D
+Grund	Grund	NN	neutral	0.154472/0.642276/0.203252	D
+Grundaufbau	Grundaufbau	NN	neutral	-/-/-	D
+Grundschaltung	Grundschaltung	NN	neutral	-/-/-	D
+Gruppe	Gruppe	NN	neutral	0.181818/0.636364/0.181818	D
+Gummisauger	Gummisauger	NN	neutral	-/-/-	D
+Guss	Guß	NN	neutral	0.857143/0/0.142857	D
+Gärung	Gärung	NN	neutral	-/-/-	D
+Hafen	Hafen	NN	neutral	-/-/-	D
+Haltung	Haltung	NN	neutral	0.4/0.2/0.4	D
+Handhabung	Handhabung	NN	neutral	0.405797/0.318841/0.275362	D
+Handreichung	Handreichung	NN	neutral	-/-/-	D
+Haptik	Haptik	NN	neutral	0.2/0.6/0.2	D
+Hartmatte	Hartmatte	NE	neutral	-/-/-	D
+Hartmetall	Hartmetall	NN	neutral	-/-/-	D
+Hauch	Hauch	NN	neutral	0.333333/0.666667/0	D
+Haupt	Haupt	NN	neutral	0.25/0.75/0	D
+Hauptwort	Hauptwort	NN	neutral	-/-/-	D
+Hefebrötchen	Hefebrötchen	NN	neutral	-/-/-	D
+Herold	Herold	NN	neutral	-/-/-	D
+Himmelskörper	Himmelskörper	NN	neutral	-/-/-	D
+Hinweis	Hinweis	NN	neutral	0.275862/0.551724/0.172414	D
+Hitze	Hitze	NN	neutral	0.142857/0.285714/0.571429	D
+Hochdruck	Hochdruck	NN	neutral	-/-/-	D
+Hochschaubahn	Hochschaubahn	NN	neutral	-/-/-	D
+Hochsitz	Hochsitz	NN	neutral	-/-/-	D
+Holzpantoffel	Holzpantoffel	NN	neutral	-/-/-	D
+Horstbildung	Horstbildung	NN	neutral	-/-/-	D
+Hotelzimmer	Hotelzimmer	NN	neutral	-/-/-	D
+Hypothese	Hypothese	NN	neutral	-/-/-	D
+Hämatokritwert	Hämatokritwert	NN	neutral	-/-/-	D
+Höhenleitwerk	Höhenleitwerk	NN	neutral	-/-/-	D
+Hügel	Hügel	NN	neutral	-/-/-	D
+Hüne	Hüne	NN	neutral	-/-/-	D
+Hünengestalt	Hünengestalt	NN	neutral	-/-/-	D
+Inanspruchnahme	Inanspruchnahme	NN	neutral	0/0/1	D
+Inbegriff	Inbegriff	NN	neutral	1/0/0	D
+Inhibit-Draht	Inhibit-Draht	NN	neutral	-/-/-	D
+Insel	Insel	NN	neutral	0.666667/0/0.333333	D
+Instrumententafel	Instrumententafel	NN	neutral	-/-/-	D
+Intention	Intention	NN	neutral	0/1/0	D
+Isotopenhäufigkeit	Isotopenhäufigkeit	NN	neutral	-/-/-	D
+Jagdfauna	Jagdfauna	NN	neutral	-/-/-	D
+Jahresabschluss	Jahresabschluß	NN	neutral	-/-/-	D
+Johanniskraut	Johanniskraut	NE	neutral	-/-/-	D
+Kanalkühlofen	Kanalkühlofen	NN	neutral	-/-/-	D
+Kaufmann-Abderhalden-De	Kaufmann-Abderhalden-De	NN	neutral	-/-/-	D
+Kehrschaufel	Kehrschaufel	NN	neutral	-/-/-	D
+Kerl	Kerl	NN	neutral	0/1/0	D
+Kirchengesang	Kirchengesang	NN	neutral	-/-/-	D
+Klausurtagung	Klausurtagung	NN	neutral	-/-/-	D
+Kleinbildkamera	Kleinbildkamera	NN	neutral	1/0/0	D
+Kleinkind	Kleinkind	NN	neutral	0.166667/0.5/0.333333	D
+Kleinstkind	Kleinstkind	NN	neutral	-/-/-	D
+Knabe	Knabe	NN	neutral	-/-/-	D
+Koaxialkabel	Koaxialkabel	NN	neutral	-/-/-	D
+Kohldampf	Kohldampf	NN	neutral	-/-/-	D
+Koje	Koje	NN	neutral	-/-/-	D
+Kollerstoff	Kollerstoff	NN	neutral	-/-/-	D
+Konfektions	Konfektions	NN	neutral	-/-/-	D
+Konfitüre	Konfitüre	NN	neutral	-/-/-	D
+Konjektur	Konjektur	NN	neutral	-/-/-	D
+Konservenglas	Konservenglas	NN	neutral	-/-/-	D
+Kontakt	Kontakt	NN	neutral	0.205882/0.588235/0.205882	D
+Konzernumlagen	Konzernumlage	NN	neutral	-/-/-	D
+Krebs	Krebs	NN	neutral	-/-/-	D
+Kreisen	Kreis	NN	neutral	0/1/0	D
+Kriegsdienstverweigerung	Kriegsdienstverweigerung	NN	neutral	-/-/-	D
+Krokant	Krokant	NN	neutral	-/-/-	D
+Kundgebung	Kundgebung	NN	neutral	-/-/-	D
+Köpfchenkräusel	Köpfchenkräusel	NN	neutral	-/-/-	D
+Körperhaltung	Körperhaltung	NN	neutral	1/0/0	D
+Kühlbahn	Kühlbahn	NN	neutral	-/-/-	D
+Kühlofen	Kühlofen	NN	neutral	-/-/-	D
+Kürbis	Kürbis	NN	neutral	1/0/0	D
+Kürbispflanze	Kürbispflanze	NN	neutral	-/-/-	D
+Lecherleitung	Lecherleitung	NE	neutral	-/-/-	D
+Lehrbetrieb	Lehrbetrieb	NN	neutral	-/-/-	D
+Lehrvortrag	Lehrvortrag	NN	neutral	-/-/-	D
+Letalkonzentration	Letalkonzentration	NN	neutral	-/-/-	D
+Längsmesser	Längsmesser	NN	neutral	-/-/-	D
+Maat	Maat	NN	neutral	-/-/-	D
+Mama	Mama	NN	neutral	0.5/0.5/0	D
+Mantra	Mantra	NN	neutral	-/-/-	D
+Manöver	Manöver	NN	neutral	-/-/-	D
+Markenrecht	Markenrecht	NN	neutral	-/-/-	D
+Markterholung	Markterholung	NN	neutral	-/-/-	D
+Masse	Masse	NN	neutral	0.230769/0.615385/0.153846	D
+Maximum-Likelihood-Schätzung	Maximum-Likelihood-Schätzung	NN	neutral	-/-/-	D
+Maßstab	Maßstab	NN	neutral	0.2/0.2/0.6	D
+Meinung	Meinung	NN	neutral	0.287671/0.465753/0.246575	D
+Meinungen	Meinung	NN	neutral	0.287671/0.465753/0.246575	D
+Menge	Menge	NN	neutral	0.389831/0.322034/0.288136	D
+Menschengeschlecht	Menschengeschlecht	NN	neutral	-/-/-	D
+Merkmal	Merkmal	NN	neutral	0.25/0.5/0.25	D
+Methode	Methode	NN	neutral	0.333333/0.333333/0.333333	D
+Minister	Minister	NN	neutral	-/-/-	D
+Ministerpräsident	Ministerpräsident	NN	neutral	-/-/-	D
+Ministerpräsidentin	Ministerpräsidentin	NN	neutral	-/-/-	D
+Mittagsschlaf	Mittagsschlaf	NN	neutral	-/-/-	D
+Mittel	Mittel	NN	neutral	0.5/0.166667/0.333333	D
+Mitwirkende	Mitwirkende	NN	neutral	-/-/-	D
+Mond	Mond	NN	neutral	0/1/0	D
+Most	Most	NN	neutral	0.5/0/0.5	D
+Motiv	Motiv	NN	neutral	1/0/0	D
+Muttermund	Muttermund	NN	neutral	-/-/-	D
+März	März	NN	neutral	0/0.75/0.25	D
+Nachleuchten	Nachleuchten	NN	neutral	-/-/-	D
+Nahpunkt	Nahpunkt	NN	neutral	-/-/-	D
+Nahrung	Nahrung	NN	neutral	0/0.5/0.5	D
+Nationalismus	Nationalismus	NN	neutral	-/-/-	D
+Nebenfluss	Nebenfluß	NN	neutral	-/-/-	D
+Nesselzelle	Nesselzelle	NN	neutral	-/-/-	D
+Netzhaftmittel	Netzhaftmittel	NN	neutral	-/-/-	D
+Nickerchen	Nickerchen	NN	neutral	-/-/-	D
+Normalkorn	Normalkorn	NN	neutral	-/-/-	D
+Nuance	Nuance	NN	neutral	0/1/0	D
+Nutzladung	Nutzladung	NN	neutral	-/-/-	D
+OH-Form	OH-Form	NN	neutral	-/-/-	D
+OH-Gruppe	OH-Gruppe	NN	neutral	-/-/-	D
+Oberflächenansammlung	Oberflächenansammlung	NN	neutral	-/-/-	D
+Offenstall	Offenstall	NN	neutral	-/-/-	D
+Oktopus	Oktopus	NN	neutral	-/-/-	D
+Oldtimer-Ausstellung	Oldtimer-Ausstellung	NN	neutral	-/-/-	D
+Originalmaßstab	Originalmaßstab	NN	neutral	-/-/-	D
+Orthodoxie	Orthodoxie	NN	neutral	-/-/-	D
+Parteianhänger	Parteianhänger	NN	neutral	-/-/-	D
+Parteigänger	Parteigänger	NN	neutral	-/-/-	D
+Patt	Patt	NN	neutral	-/-/-	D
+Pattsituation	Pattsituation	NN	neutral	-/-/-	D
+Peilung	Peilung	NN	neutral	-/-/-	D
+Peripheriegerät	Peripheriegerät	NN	neutral	-/-/-	D
+Personality-Job-Fit-Theorie	Personality-Job-Fit-Theorie	NN	neutral	-/-/-	D
+Plan	Plan	NN	neutral	0/1/0	D
+Plenar	Plenar	NN	neutral	-/-/-	D
+Plusquamperfekt	Plusquamperfekt	NN	neutral	-/-/-	D
+Plädoyer	Plädoyer	NN	neutral	-/-/-	D
+Politik	Politik	NN	neutral	0.5/0.25/0.25	D
+Posaune	Posaune	NN	neutral	-/-/-	D
+Positur	Positur	NN	neutral	-/-/-	D
+Presse	Presse	NN	neutral	0.3/0.5/0.2	D
+Probe	Probe	NN	neutral	0/0.6/0.4	D
+Prophezeiung	Prophezeiung	NN	neutral	-/-/-	D
+Präsenzhandelsform	Präsenzhandelsform	NN	neutral	-/-/-	D
+Präteritum	Präteritum	NN	neutral	-/-/-	D
+Prüfung	Prüfung	NN	neutral	0.333333/0.333333/0.333333	D
+Raffination	Raffination	NN	neutral	-/-/-	D
+Raute	Raute	NN	neutral	-/-/-	D
+Reaktionskräfte	Reaktionskraft	NN	neutral	-/-/-	D
+Realien	Realien	NN	neutral	-/-/-	D
+Redensart	Redensart	NN	neutral	-/-/-	D
+Regeneratgummi	Regeneratgummi	NN	neutral	-/-/-	D
+Reibungselektrizität	Reibungselektrizität	NN	neutral	-/-/-	D
+Reifen	Reif	NN	neutral	0.428571/0.357143/0.214286	D
+Rhetorik	Rhetorik	NN	neutral	-/-/-	D
+Richard	Richard	NE	neutral	1/0/0	D
+Richterspruch	Richterspruch	NN	neutral	-/-/-	D
+Richtlinien	Richtlinie	NN	neutral	-/-/-	D
+Richtung	Richtung	NN	neutral	0.241379/0.448276/0.310345	D
+Rohboden	Rohboden	NN	neutral	-/-/-	D
+Röstbrot	Röstbrot	NE	neutral	-/-/-	D
+Sachkonto	Sachkonto	NN	neutral	-/-/-	D
+Sachverhalt	Sachverhalt	NN	neutral	-/-/-	D
+Sandvorspülung	Sandvorspülung	NN	neutral	-/-/-	D
+Schallfänger	Schallfänger	NN	neutral	-/-/-	D
+Schalltrichter	Schalltrichter	NN	neutral	-/-/-	D
+Schaltpunkt	Schaltpunkt	NN	neutral	-/-/-	D
+Schanze	Schanze	NN	neutral	-/-/-	D
+Schild	Schild	NN	neutral	0/0/1	D
+Schlüsselstelle	Schlüsselstelle	NN	neutral	-/-/-	D
+Seegras	Seegras	NN	neutral	-/-/-	D
+Sein	Sein	NN	neutral	0.289392/0.465159/0.24545	D
+Sendung	Sendung	NN	neutral	0/0.833333/0.166667	D
+Soll-Wert	Soll-Wert	NN	neutral	-/-/-	D
+Sparkasse	Sparkasse	NN	neutral	-/-/-	D
+Spaten	Spaten	NN	neutral	-/-/-	D
+Spedition	Spedition	NN	neutral	0.571429/0/0.428571	D
+Spekulation	Spekulation	NN	neutral	0/1/0	D
+Spiel	Spiel	NN	neutral	0.4375/0.375/0.1875	D
+Spielzeug	Spielzeug	NN	neutral	0.0588235/0.647059/0.294118	D
+Stationsvorsteher	Stationsvorsteher	NN	neutral	-/-/-	D
+Stichelhaar	Stichelhaar	NN	neutral	-/-/-	D
+Stola	Stola	NN	neutral	-/-/-	D
+Strahldichte	Strahldichte	NN	neutral	-/-/-	D
+Strahlung	Strahlung	NN	neutral	1/0/0	D
+Tatsache	Tatsache	NN	neutral	0.1875/0.4375/0.375	D
+Testament	Testament	NN	neutral	-/-/-	D
+Toastbrot	Toastbrot	NN	neutral	1/0/0	D
+Trickfilm	Trickfilm	NN	neutral	-/-/-	D
+Typ	Typ	NN	neutral	0/0.777778/0.222222	D
+Umschaltfreigabe	Umschaltfreigabe	NN	neutral	-/-/-	D
+Umwelteinstellungen	Umwelteinstellung	NN	neutral	-/-/-	D
+Unermesslichkeit	Unermeßlichkeit	NN	neutral	-/-/-	D
+Untersuchung	Untersuchung	NN	neutral	0/1/0	D
+Vegetationsaufnahmen	Vegetationsaufnahme	NN	neutral	-/-/-	D
+Verarbeitung	Verarbeitung	NN	neutral	0.302439/0.453659/0.243902	D
+Verbindung	Verbindung	NN	neutral	0.234043/0.638298/0.12766	D
+Verbindungen	Verbindung	NN	neutral	0.234043/0.638298/0.12766	D
+Verkehrsberuhigung	Verkehrsberuhigung	NN	neutral	-/-/-	D
+Vermutung	Vermutung	NN	neutral	0/0.666667/0.333333	D
+Verschanzung	Verschanzung	NN	neutral	-/-/-	D
+Verwandtschaft	Verwandtschaft	NN	neutral	-/-/-	D
+Volllast	Volllast	NN	neutral	0/1/0	D
+Volllastanreicherung	Volllastanreicherung	NN	neutral	-/-/-	D
+Vorahnung	Vorahnung	NN	neutral	-/-/-	D
+Vorspiegelung	Vorspiegelung	NN	neutral	-/-/-	D
+Vorstellung	Vorstellung	NN	neutral	0.333333/0.5/0.166667	D
+Vorvergangenheit	Vorvergangenheit	NN	neutral	-/-/-	D
+Väter	Vater	NN	neutral	0.5/0.25/0.25	D
+Wahlimpulse	Wahlimpuls	NN	neutral	-/-/-	D
+Wahlprüfung	Wahlprüfung	NN	neutral	-/-/-	D
+Wahrscheinlichkeit	Wahrscheinlichkeit	NN	neutral	0/0.5/0.5	D
+Waschtisch	Waschtisch	NN	neutral	-/-/-	D
+Wehrdienstverweigerung	Wehrdienstverweigerung	NN	neutral	-/-/-	D
+Weib	Weib	NN	neutral	-/-/-	D
+Weinraute	Weinraute	NN	neutral	-/-/-	D
+Welle	Welle	NN	neutral	0/0.666667/0.333333	D
+Wettbewerb	Wettbewerb	NN	neutral	0/1/0	D
+Zettel	Zettel	NN	neutral	0/1/0	D
+Zollpräferenzen	Zollpräferenz	NN	neutral	-/-/-	D
+Zweimaster	Zweimaster	NN	neutral	-/-/-	D
+Züchtung	Züchtung	NN	neutral	-/-/-	D
+ab-	ab-	VV	neutral	-/-/-	D
+aber	aber	KO	neutral	0.251292/0.469234/0.279474	D
+abgetastet	abtasten	VV	neutral	-/-/-	D
+abklären	abklären	VV	neutral	-/-/-	D
+ablauschen	ablauschen	VV	neutral	-/-/-	D
+ableiten	ableiten	VV	neutral	0.333333/0.333333/0.333333	D
+ableitend	ableitend	AD	neutral	-/-/-	D
+abschätzen	abschätzen	VV	neutral	1/0/0	D
+absehen	absehen	VV	neutral	0.103448/0.586207/0.310345	D
+absichtlich	absichtlich	AD	neutral	0/1/0	D
+absorbiert	absorbieren	VV	neutral	-/-/-	D
+abwägen	abwägen	VV	neutral	-/-/-	D
+additiv	additiv	AD	neutral	-/-/-	D
+aha	aha	VV	neutral	0.5/0.25/0.25	D
+akzentuieren	akzentuieren	VV	neutral	1/0/0	D
+akzentuierte	akzentuieren	VV	neutral	1/0/0	D
+allegorisieren	allegorisieren	VV	neutral	-/-/-	D
+allegorisierte	allegorisieren	VV	neutral	-/-/-	D
+allenfalls	allenfalls	AD	neutral	0.1/0.8/0.1	D
+aller	alle	PI	neutral	0.377457/0.395806/0.226737	D
+allerdings	allerdings	AD	neutral	0.228261/0.42663/0.345109	D
+allermeist	allermeist	AD	neutral	-/-/-	D
+alles	alle	PI	neutral	0.377457/0.395806/0.226737	D
+allgemein	allgemein	AD	neutral	0.269231/0.5/0.230769	D
+alltäglich	alltäglich	AD	neutral	0/1/0	D
+allwissend	allwissend	AD	neutral	-/-/-	D
+allzu	allzu	PT	neutral	0.357143/0.571429/0.0714286	D
+alsbaldig	alsbaldig	AD	neutral	-/-/-	D
+analytisch	analytisch	AD	neutral	-/-/-	D
+anbelangend	anbelangend	AD	neutral	-/-/-	D
+anbot	anbieten	VV	neutral	0.1875/0.5625/0.25	D
+andauernd	andauernd	AD	neutral	0/1/0	D
+andenken	andenken	VV	neutral	0/1/0	D
+andernfalls	andernfalls	AD	neutral	-/-/-	D
+anders	anders	NN	neutral	0.294737/0.421053/0.284211	D
+anfänglich	anfänglich	AD	neutral	0.25/0.416667/0.333333	D
+angeboren	angeboren	AD	neutral	-/-/-	D
+angehender	angehend	AD	neutral	-/-/-	D
+angelegentlich	angelegentlich	VV	neutral	-/-/-	D
+angewiesen	anweisen	VV	neutral	0/0.75/0.25	D
+angezündet	anzünden	VV	neutral	-/-/-	D
+anhaftend	anhaftend	AD	neutral	-/-/-	D
+anmuten	anmuten	VV	neutral	-/-/-	D
+anrollen	anrollen	VV	neutral	-/-/-	D
+ansaugen	ansaugen	VV	neutral	1/0/0	D
+anscheinend	anscheinend	AD	neutral	0.125/0.5625/0.3125	D
+ansetzen	ansetzen	VV	neutral	0.333333/0.333333/0.333333	D
+antasten	antasten	VV	neutral	-/-/-	D
+anteilmäßig	anteilmäßig	AD	neutral	-/-/-	D
+anwachsend	anwachsend	AD	neutral	-/-/-	D
+anzeigend	anzeigend	AD	neutral	-/-/-	D
+arbeiten	arbeiten	VV	neutral	0.397727/0.375/0.227273	D
+astronomisch	astronomisch	AD	neutral	0/0/1	D
+astronomische	astronomisch	XY	neutral	0/0/1	D
+astronomisches	astronomisch	XY	neutral	0/0/1	D
+auch	auch	KO	neutral	0.318928/0.434745/0.246327	D
+auffassen	auffassen	VV	neutral	-/-/-	D
+aufgefangen	auffangen	VV	neutral	0/0/1	D
+aufgesaugt	aufsaugen	VV	neutral	0/1/0	D
+aufladen	aufladen	VV	neutral	0.36/0.44/0.2	D
+auflesen	auflesen	VV	neutral	-/-/-	D
+aufsuchen	aufsuchen	VV	neutral	0/1/0	D
+augenfällig	augenfällig	AD	neutral	-/-/-	D
+augenscheinlich	augenscheinlich	AD	neutral	0.5/0/0.5	D
+ausgearbeitet	ausarbeiten	VV	neutral	-/-/-	D
+ausgedehnt	ausgedehnt	AD	neutral	-/-/-	D
+ausgesprochen	aussprechen	VV	neutral	0.75/0.125/0.125	D
+ausgestopft	ausstopfen	VV	neutral	-/-/-	D
+ausgesucht	aussuchen	VV	neutral	0.444444/0.333333/0.222222	D
+ausgießen	ausgießen	VV	neutral	0.375/0.5/0.125	D
+aushärten	aushärten	VV	neutral	-/-/-	D
+ausmalen	ausmalen	VV	neutral	0/1/0	D
+ausprobieren	ausprobieren	VV	neutral	0.377358/0.45283/0.169811	D
+ausrufen	ausrufen	VV	neutral	-/-/-	D
+ausschlaggebend	ausschlaggebend	AD	neutral	0.5/0.5/0	D
+ausschließlich	ausschließlich	AD	neutral	0.125/0.4375/0.4375	D
+aussehend	aussehend	AD	neutral	0/1/0	D
+außer	außer	AP	neutral	0.203125/0.5625/0.234375	D
+außerdem	außerdem	PR	neutral	0.273292/0.465839/0.26087	D
+backen	backen	VV	neutral	0.371429/0.4/0.228571	D
+beabsichtigen	beabsichtigen	VV	neutral	0/1/0	D
+beabsichtigte	beabsichtigen	VV	neutral	0/1/0	D
+beanspruchen	beanspruchen	VV	neutral	0/0.666667/0.333333	D
+beanspruchte	beanspruchen	VV	neutral	0/0.666667/0.333333	D
+bedingungslos	bedingungslos	AD	neutral	1/0/0	D
+befinden	befinden	VV	neutral	0.410256/0.487179/0.102564	D
+begegnete	begegnen	VV	neutral	0.666667/0.333333/0	D
+begierig	begierig	AD	neutral	-/-/-	D
+beglaubigt	beglaubigen	VV	neutral	-/-/-	D
+begreifen	begreifen	VV	neutral	0/1/0	D
+begriff	begreifen	VV	neutral	0/1/0	D
+beherrschend	beherrschend	AD	neutral	-/-/-	D
+belang	belangen	VV	neutral	-/-/-	D
+belange	belangen	VV	neutral	-/-/-	D
+benötigen	benötigen	VV	neutral	0.40625/0.34375/0.25	D
+berechenbar	berechenbar	AD	neutral	-/-/-	D
+bereitete	bereiten	VV	neutral	0.588235/0.235294/0.176471	D
+berichtigend	berichtigend	AD	neutral	-/-/-	D
+beschauen	beschauen	VV	neutral	-/-/-	D
+beschaute	beschauen	VV	neutral	-/-/-	D
+bescheinigt	bescheinigen	VV	neutral	-/-/-	D
+beschließen	beschließen	VV	neutral	0/1/0	D
+beschloss	beschließen	VV	neutral	0/1/0	D
+besinnlich	besinnlich	AD	neutral	0.5/0/0.5	D
+bestandsbezogen	bestandsbezogen	VV	neutral	-/-/-	D
+bestimmt	bestimmt	AD	neutral	0.233333/0.4/0.366667	D
+betete	beten	VV	neutral	0/0/1	D
+betreffend	betreffend	AD	neutral	0/1/0	D
+bezeichnend	bezeichnend	AD	neutral	-/-/-	D
+beziehungsweise	beziehungsweise	KO	neutral	0.196203/0.487342/0.316456	D
+bieten	bieten	VV	neutral	0.329897/0.43299/0.237113	D
+billigermaßen	billigermaßen	AD	neutral	-/-/-	D
+billigerweise	billigerweise	AD	neutral	-/-/-	D
+billigte	billigen	AD	neutral	0.535714/0.428571/0.0357143	D
+bindend	bindend	AD	neutral	-/-/-	D
+bisher	bisher	AD	neutral	0.418367/0.397959/0.183673	D
+bitte	bitten	VV	neutral	0.210526/0.684211/0.105263	D
+bißchen	bißchen	PI	neutral	0.294872/0.410256/0.294872	D
+blasen	blasen	VV	neutral	0.222222/0.555556/0.222222	D
+bringen	bringen	VV	neutral	0.244186/0.546512/0.209302	D
+brutto	brutto	AD	neutral	-/-/-	D
+charakteristisch	charakteristisch	AD	neutral	0/1/0	D
+dadurch	dadurch	PR	neutral	0.287129/0.435644/0.277228	D
+dahin	dahin	PT	neutral	0.166667/0.666667/0.166667	D
+damit	damit	PR	neutral	0.288/0.458667/0.253333	D
+dargelegt	darlegen	VV	neutral	-/-/-	D
+darlegen	darlegen	VV	neutral	-/-/-	D
+darum	darum	AD	neutral	0.555556/0.277778/0.166667	D
+darüber	darüber	PT	neutral	0.277778/0.555556/0.166667	D
+dazu	dazu	PT	neutral	0.377451/0.436275/0.186275	D
+demzufolge	demzufolge	VV	neutral	0/0/1	D
+denken	denken	VV	neutral	0.245283/0.462264/0.292453	D
+denkend	denkend	AD	neutral	-/-/-	D
+dennoch	dennoch	KO	neutral	0.382022/0.337079/0.280899	D
+der	der	PD	neutral	0.281173/0.473879/0.244948	D
+derart	derart	AD	neutral	0.0625/0.6875/0.25	D
+derartig	derartig	AD	neutral	0/1/0	D
+derb	derb	AD	neutral	0.333333/0.333333/0.333333	D
+dergleichen	dergleicher	PI	neutral	0/0.5/0.5	D
+derzeitig	derzeitig	AD	neutral	0.5/0/0.5	D
+desgleichen	desgleichen	AD	neutral	-/-/-	D
+deutete	deuten	VV	neutral	0/1/0	D
+dicht	dicht	AD	neutral	0.428571/0.238095/0.333333	D
+dickwandig	dickwandig	AD	neutral	-/-/-	D
+direkt	direkt	AD	neutral	0.277778/0.444444/0.277778	D
+dominierend	dominierend	AD	neutral	-/-/-	D
+dreh	drehen	AD	neutral	0.346939/0.408163/0.244898	D
+druckspitzenfreies	druckspitzenfreies	AD	neutral	-/-/-	D
+durch	durch	PT	neutral	0.352217/0.41133/0.236453	D
+durchaus	durchaus	AD	neutral	0.274194/0.387097/0.33871	D
+durchdringend	durchdringend	AD	neutral	-/-/-	D
+durchscheinen	durchscheinen	VV	neutral	0/0/1	D
+durchscheinend	durchscheinend	AD	neutral	-/-/-	D
+durchsichtig	durchsichtig	AD	neutral	0.2/0.8/0	D
+dünken	dünken	VV	neutral	-/-/-	D
+dünkte	dünken	VV	neutral	-/-/-	D
+dünn	dünn	AD	neutral	0.215686/0.529412/0.254902	D
+dürfen	dürfen	VM	neutral	0.247706/0.513761/0.238532	D
+ebenfalls	ebenfalls	AD	neutral	0.355556/0.4/0.244444	D
+ebenso	ebenso	AD	neutral	0.5/0.36/0.14	D
+egal	egal	AD	neutral	0.293103/0.517241/0.189655	D
+egalitär	egalitär	AD	neutral	-/-/-	D
+eh	eh	AD	neutral	0.27027/0.432432/0.297297	D
+eher	eher	AD	neutral	0.218605/0.47907/0.302326	D
+eigen	eigen	AD	neutral	0.325301/0.433735/0.240964	D
+eigens	eigens	AD	neutral	-/-/-	D
+eigentlich	eigentlich	AD	neutral	0.202279/0.512821/0.2849	D
+eilig	eilig	AD	neutral	0/1/0	D
+einfallen	einfallen	VV	neutral	0.166667/0.5/0.333333	D
+einförmig	einförmig	AD	neutral	0/0/1	D
+eingeschlossen	einschließen	VV	neutral	1/0/0	D
+einschneidend	einschneidend	AD	neutral	-/-/-	D
+einzeln	einzeln	AD	neutral	0.372549/0.372549/0.254902	D
+elementar	elementar	AD	neutral	0/1/0	D
+emotionsgeladen	emotionsgeladen	AD	neutral	-/-/-	D
+empfindlich	empfindlich	AD	neutral	0.318182/0.318182/0.363636	D
+endgültig	endgültig	AD	neutral	0.111111/0.888889/0	D
+enthüllend	enthüllend	AD	neutral	-/-/-	D
+entspiegelt	entspiegeln	VV	neutral	0/1/0	D
+entsprechend	entsprechen	VV	neutral	0.229508/0.442623/0.327869	D
+er	ich	XY	neutral	0.290617/0.476612/0.232771	D
+ergehen	ergehen	VV	neutral	0/0.75/0.25	D
+erkannte	erkennen	VV	neutral	0.245614/0.520468/0.233918	D
+erkennen	erkennen	VV	neutral	0.245614/0.520468/0.233918	D
+erneuerbar	erneuerbar	VV	neutral	-/-/-	D
+erneuerungsfähig	erneuerungsfähig	AD	neutral	-/-/-	D
+ersann	ersinnen	AD	neutral	-/-/-	D
+ersichtlich	ersichtlich	AD	neutral	0.166667/0.666667/0.166667	D
+ersinnen	ersinnen	VV	neutral	-/-/-	D
+erst	erst	NN	neutral	0.278519/0.491852/0.22963	D
+erwarten	erwarten	VV	neutral	0.185965/0.529825/0.284211	D
+erweiterbar	erweiterbar	VV	neutral	1/0/0	D
+etwa	etwa	AD	neutral	0.283582/0.522388/0.19403	D
+etwas	etwas	PI	neutral	0.336149/0.369932/0.293919	D
+eventuell	eventuell	AD	neutral	0.2/0.6/0.2	D
+fahrend	fahrend	AD	neutral	-/-/-	D
+faktisch	faktisch	AD	neutral	-/-/-	D
+farbecht	farbecht	AD	neutral	0/1/0	D
+fasste	fassen	VV	neutral	0.26087/0.478261/0.26087	D
+fasten	fasten	VV	neutral	-/-/-	D
+fehlerbehebend	fehlerbehebend	VV	neutral	-/-/-	D
+ferner	fern	AD	neutral	0.4/0.4/0.2	D
+fest	fest	AD	neutral	0.247059/0.388235/0.364706	D
+feststellen	feststellen	VV	neutral	0.216216/0.54955/0.234234	D
+finanziell	finanziell	AD	neutral	0/1/0	D
+finanzielle	finanziell	AD	neutral	0/1/0	D
+finanziert	finanzieren	VV	neutral	0/0.5/0.5	D
+finden	finden	VV	neutral	0.347328/0.385496/0.267176	D
+fix	fix	AD	neutral	0.454545/0.272727/0.272727	D
+fixieren	fixieren	VV	neutral	0.333333/0.25/0.416667	D
+fixierte	fixieren	VV	neutral	0.333333/0.25/0.416667	D
+folglich	folglich	AD	neutral	0/0.5/0.5	D
+freiheraus	freiheraus	AD	neutral	-/-/-	D
+freilich	freilich	AD	neutral	0/0.5/0.5	D
+freiwerdend	freiwerdend	AD	neutral	-/-/-	D
+fundamental	fundamental	AD	neutral	0.5/0.5/0	D
+fundiert	fundieren	VV	neutral	-/-/-	D
+für	für	AP	neutral	0.326321/0.416111/0.257568	D
+gab	geben	VV	neutral	0.28125/0.450284/0.268466	D
+galvanisieren	galvanisieren	VV	neutral	-/-/-	D
+galvanisierte	galvanisieren	VV	neutral	-/-/-	D
+ganz	ganz	AD	neutral	0.273134/0.437313/0.289552	D
+ganze	ganz	AD	neutral	0.273134/0.437313/0.289552	D
+ganzrandig	ganzrandig	XY	neutral	-/-/-	D
+gefeit	gefeit	AD	neutral	-/-/-	D
+gegebenenfalls	gegebenenfalls	AD	neutral	-/-/-	D
+gegenüber	gegenüber	PT	neutral	0.423077/0.230769/0.346154	D
+gegenüberstehend	gegenüberstehend	AD	neutral	-/-/-	D
+geheim	geheim	AD	neutral	-/-/-	D
+geheimnisvoll	geheimnisvoll	AD	neutral	-/-/-	D
+gelegentlich	gelegentlich	AD	neutral	0.347826/0.391304/0.26087	D
+gellend	gellend	AD	neutral	-/-/-	D
+geläufig	geläufig	AD	neutral	-/-/-	D
+gerade	gerade	AD	neutral	0.244444/0.488889/0.266667	D
+geradeheraus	geradeheraus	VV	neutral	-/-/-	D
+geradezu	geradezu	AD	neutral	0.285714/0.428571/0.285714	D
+gerichtliche	gerichtlich	VV	neutral	-/-/-	D
+geruhend	geruhend	AD	neutral	-/-/-	D
+geräuscharm	geräuscharm	AD	neutral	1/0/0	D
+gesamt	gesamt	AD	neutral	0.236842/0.526316/0.236842	D
+gespannt	spannen	VV	neutral	0.142857/0.571429/0.285714	D
+gewahr	gewahr	AD	neutral	-/-/-	D
+gewissermaßen	gewissermaßen	AD	neutral	-/-/-	D
+gewöhnlich	gewöhnlich	AD	neutral	0/0.666667/0.333333	D
+gewöhnlicher	gewöhnlich	AD	neutral	0/0.666667/0.333333	D
+ging	gehen	VV	neutral	0.284375/0.496875/0.21875	D
+glauben	glauben	VV	neutral	0.303797/0.556962/0.139241	D
+glaubte	glauben	VV	neutral	0.303797/0.556962/0.139241	D
+gleich	gleich	AD	neutral	0.247549/0.566176/0.186275	D
+gleichartig	gleichartig	AD	neutral	0/0/1	D
+gleichbedeutend	gleichbedeutend	AD	neutral	0/1/0	D
+gleichförmig	gleichförmig	AD	neutral	0/1/0	D
+gleichwohl	gleichwohl	AD	neutral	-/-/-	D
+glimmen	glimmen	VV	neutral	-/-/-	D
+griff	greifen	NN	neutral	0.21875/0.40625/0.375	D
+großangelegt	großangelegt	AD	neutral	-/-/-	D
+großflächig	großflächig	AD	neutral	0/1/0	D
+größtenteils	größtenteils	AD	neutral	0.125/0.5/0.375	D
+grübeln	grübeln	VV	neutral	1/0/0	D
+grübelte	grübeln	AD	neutral	1/0/0	D
+gängig	gängig	AD	neutral	0/0.5/0.5	D
+gänzlich	gänzlich	AD	neutral	0/0.8/0.2	D
+halb	halb	AD	neutral	0.173333/0.586667/0.24	D
+halbwegs	halbwegs	AD	neutral	0.0588235/0.705882/0.235294	D
+harmlos	harmlos	AD	neutral	0/1/0	D
+hautnah	hautnah	AD	neutral	-/-/-	D
+her	her	PT	neutral	0.313043/0.4/0.286957	D
+hinsichtlich	hinsichtlich	AP	neutral	0.333333/0.444444/0.222222	D
+hinterfragen	hinterfragen	VV	neutral	-/-/-	D
+hinterfragte	hinterfragen	VV	neutral	-/-/-	D
+hinweisend	hinweisend	AD	neutral	-/-/-	D
+hob	heben	VV	neutral	0.3/0.4/0.3	D
+hochbeanspruchbar	hochbeanspruchbar	AD	neutral	-/-/-	D
+hochbeansprucht	hochbeansprucht	AD	neutral	-/-/-	D
+hochgewachsen	hochwachsen	VV	neutral	-/-/-	D
+hypnotisieren	hypnotisieren	VV	neutral	-/-/-	D
+hypnotisierte	hypnotisieren	VV	neutral	-/-/-	D
+häufig	häufig	AD	neutral	0.215686/0.529412/0.254902	D
+höchstens	höchstens	AD	neutral	0.153846/0.538462/0.307692	D
+höchstwahrscheinlich	höchstwahrscheinlich	AD	neutral	-/-/-	D
+immer	immer	AD	neutral	0.301538/0.453846/0.244615	D
+immerhin	immerhin	AD	neutral	0.107143/0.428571/0.464286	D
+immun	immun	AD	neutral	-/-/-	D
+impliziert	implizieren	VV	neutral	-/-/-	D
+implizit	implizit	AD	neutral	-/-/-	D
+improvisieren	improvisieren	VV	neutral	-/-/-	D
+improvisierte	improvisieren	VV	neutral	-/-/-	D
+infolgedessen	infolgedessen	AD	neutral	-/-/-	D
+informationell	informationell	AD	neutral	-/-/-	D
+informatorisch	informatorisch	AD	neutral	-/-/-	D
+inhärent	inhärent	AD	neutral	-/-/-	D
+insbesondere	insbesondere	AD	neutral	0.5/0.375/0.125	D
+insgesamt	insgesamt	AD	neutral	0.242105/0.357895/0.4	D
+intensiviert	intensiviert	AD	neutral	-/-/-	D
+intim	intim	AD	neutral	1/0/0	D
+ironisch	ironisch	AD	neutral	1/0/0	D
+jedenfalls	jedenfalls	AD	neutral	0.169014/0.605634/0.225352	D
+jegliche	jeglich	PI	neutral	0.384615/0.461538/0.153846	D
+kannte	kennen	VV	neutral	0.308943/0.455285/0.235772	D
+kapitalkräftig	kapitalkräftig	AD	neutral	-/-/-	D
+kein Abbruch	kein Abbruch	NN	neutral	-/-/-	D
+kein Album	kein Album	NN	neutral	-/-/-	D
+kein Angabe	kein Angabe	NN	neutral	-/-/-	D
+kein Angst	kein Angst	NN	neutral	-/-/-	D
+kein Auge	kein Auge	NN	neutral	-/-/-	D
+kein Aussage	kein Aussage	NN	neutral	-/-/-	D
+kein CD	kein CD	NN	neutral	-/-/-	D
+kein Computer	kein Computer	NN	neutral	-/-/-	D
+kein Datum	kein Datum	NN	neutral	-/-/-	D
+kein Druck	kein Druck	NN	neutral	-/-/-	D
+kein Einzelfall	kein Einzelfall	NN	neutral	-/-/-	D
+kein Fall	kein Fall	NN	neutral	-/-/-	D
+kein Frage	kein Frage	NN	neutral	-/-/-	D
+kein Gerät	kein Gerät	NN	neutral	-/-/-	D
+kein Grund	kein Grund	NN	neutral	-/-/-	D
+kein Kabel	kein Kabel	NN	neutral	-/-/-	D
+kein Kind	kein Kind	NN	neutral	-/-/-	D
+kein PC	kein PC	NN	neutral	-/-/-	D
+kein Profi	kein Profi	NN	neutral	-/-/-	D
+kein Rede	kein Rede	NN	neutral	-/-/-	D
+kein Rolle	kein Rolle	NN	neutral	-/-/-	D
+kein Spur	kein Spur	NN	neutral	-/-/-	D
+kein Stück	kein Stück	NN	neutral	-/-/-	D
+kein Teil	kein Teil	NN	neutral	-/-/-	D
+kein Titel	kein Titel	NN	neutral	-/-/-	D
+kein Ton	kein Ton	NN	neutral	-/-/-	D
+kein Unterschied	kein Unterschied	NN	neutral	-/-/-	D
+kein Vergleich	kein Vergleich	NN	neutral	-/-/-	D
+kein Wort	kein Wort	NN	neutral	-/-/-	D
+kein Wunder	kein Wunder	NN	neutral	-/-/-	D
+kein ander	kein ander	VV	neutral	-/-/-	D
+kein direkt	kein direkt	VV	neutral	-/-/-	D
+kein einzig	kein einzig	VV	neutral	-/-/-	D
+kein groß	kein groß	VV	neutral	-/-/-	D
+kein scharf	kein scharf	VV	neutral	-/-/-	D
+kein so	kein so	VV	neutral	-/-/-	D
+kein weit	kein weit	VV	neutral	-/-/-	D
+kein wirklich	kein wirklich	VV	neutral	-/-/-	D
+kennen	kennen	VV	neutral	0.308943/0.455285/0.235772	D
+kenntlich	kenntlich	AD	neutral	-/-/-	D
+klammheimlich	klammheimlich	AD	neutral	-/-/-	D
+komisch	komisch	AD	neutral	0.166667/0.666667/0.166667	D
+kurzfristig	kurzfristig	AD	neutral	0.333333/0.666667/0	D
+können	können	VM	neutral	0.331807/0.440712/0.227481	D
+könnte	können	VM	neutral	0.331807/0.440712/0.227481	D
+las	lesen	VV	neutral	0.29927/0.489051/0.211679	D
+lauschte	lauschen	VV	neutral	1/0/0	D
+lebenswichtig	lebenswichtig	AD	neutral	-/-/-	D
+lediglich	lediglich	AD	neutral	0.367347/0.346939/0.285714	D
+legalistisch	legalistisch	VV	neutral	-/-/-	D
+legte	legen	VV	neutral	0.322222/0.455556/0.222222	D
+letzt	letzt	AD	neutral	0.292994/0.509554/0.197452	D
+letzte	letzt	AD	neutral	0.292994/0.509554/0.197452	D
+letztendlich	letztendlich	AD	neutral	0.2/0.55/0.25	D
+letztlich	letztlich	AD	neutral	0.307692/0.384615/0.307692	D
+liegt	liegen	VV	neutral	0.268482/0.490272/0.241245	D
+locken	locken	VV	neutral	0.25/0.25/0.5	D
+lockend	lockend	AD	neutral	0/0/1	D
+lockte	locken	VV	neutral	0.25/0.25/0.5	D
+lärmarm	lärmarm	AD	neutral	-/-/-	D
+macht	machen	VV	neutral	0.340456/0.437322/0.222222	D
+machte	machen	VV	neutral	0.340456/0.437322/0.222222	D
+malte	malen	VV	neutral	0.222222/0.666667/0.111111	D
+manifest	manifest	VV	neutral	-/-/-	D
+mehrmalig	mehrmalig	AD	neutral	0.129032/0.516129/0.354839	D
+merklich	merklich	AD	neutral	0.25/0.5/0.25	D
+methodisch	methodisch	AD	neutral	-/-/-	D
+minderjährig	minderjährig	AD	neutral	-/-/-	D
+mini	mini	NN	neutral	0.461538/0.307692/0.230769	D
+mir	sich	PR	neutral	0.287129/0.478742/0.234129	D
+mischen	mischen	VV	neutral	0.5/0/0.5	D
+mithin	mithin	AD	neutral	-/-/-	D
+mitteilsam	mitteilsam	AD	neutral	-/-/-	D
+mittelbar	mittelbar	AD	neutral	-/-/-	D
+mittig	mittig	AD	neutral	0.333333/0.666667/0	D
+mm-these	Mm-these	FM	neutral	-/-/-	D
+mutete	muten	AD	neutral	0/0.666667/0.333333	D
+mutmaßen	mutmaßen	VV	neutral	0/1/0	D
+mutmaßlich	mutmaßlich	AD	neutral	-/-/-	D
+mutmaßte	mutmaßen	VV	neutral	0/1/0	D
+möglichenfalls	möglichenfalls	AD	neutral	-/-/-	D
+möglicherweise	möglicherweise	AD	neutral	0.272727/0.454545/0.272727	D
+mündlich	mündlich	AD	neutral	-/-/-	D
+nachbereiten	nachbereiten	VV	neutral	-/-/-	D
+nachdenklich	nachdenklich	AD	neutral	0/0.666667/0.333333	D
+nachstehenden	nachstehend	AD	neutral	-/-/-	D
+nahm	nehmen	VV	neutral	0.246835/0.468354/0.28481	D
+namentlich	namentlich	AD	neutral	-/-/-	D
+naszierend	naszierend	VV	neutral	-/-/-	D
+naturnah	naturnah	AD	neutral	-/-/-	D
+naturverbunden	naturverbunden	AD	neutral	-/-/-	D
+nicht -	nicht -	VV	neutral	-/-/-	D
+nicht aber	nicht aber	VV	neutral	-/-/-	D
+nicht all	nicht all	VV	neutral	-/-/-	D
+nicht alle	nicht alle	VV	neutral	-/-/-	D
+nicht alleine	nicht alleine	VV	neutral	-/-/-	D
+nicht allzu	nicht allzu	VV	neutral	-/-/-	D
+nicht als	nicht als	VV	neutral	-/-/-	D
+nicht am	nicht am	VV	neutral	-/-/-	D
+nicht an	nicht an	VV	neutral	-/-/-	D
+nicht anders	nicht anders	VV	neutral	-/-/-	D
+nicht anfreunden	nicht anfreunden	VV	neutral	-/-/-	D
+nicht anschließen	nicht anschließen	VV	neutral	-/-/-	D
+nicht auch	nicht auch	VV	neutral	-/-/-	D
+nicht auf	nicht auf	VV	neutral	-/-/-	D
+nicht auftreten	nicht auftreten	VV	neutral	-/-/-	D
+nicht aus	nicht aus	VV	neutral	-/-/-	D
+nicht ausgeben	nicht ausgeben	VV	neutral	-/-/-	D
+nicht ausprobieren	nicht ausprobieren	VV	neutral	-/-/-	D
+nicht automatisch	nicht automatisch	VV	neutral	-/-/-	D
+nicht bestätigen	nicht bestätigen	VV	neutral	-/-/-	D
+nicht beurteilen	nicht beurteilen	VV	neutral	-/-/-	D
+nicht bewegen	nicht bewegen	VV	neutral	-/-/-	D
+nicht billig	nicht billig	VV	neutral	-/-/-	D
+nicht blind	nicht blind	VV	neutral	-/-/-	D
+nicht dachen	nicht dachen	VV	neutral	-/-/-	D
+nicht davon	nicht davon	VV	neutral	-/-/-	D
+nicht der	nicht der	VV	neutral	-/-/-	D
+nicht direkt	nicht direkt	VV	neutral	-/-/-	D
+nicht drauf	nicht drauf	VV	neutral	-/-/-	D
+nicht durch	nicht durch	VV	neutral	-/-/-	D
+nicht eignen	nicht eignen	VV	neutral	-/-/-	D
+nicht erkennen	nicht erkennen	VV	neutral	-/-/-	D
+nicht erleben	nicht erleben	VV	neutral	-/-/-	D
+nicht erst	nicht erst	VV	neutral	-/-/-	D
+nicht erwarten	nicht erwarten	VV	neutral	-/-/-	D
+nicht fallen	nicht fallen	VV	neutral	-/-/-	D
+nicht feststellen	nicht feststellen	VV	neutral	-/-/-	D
+nicht finden	nicht finden	VV	neutral	-/-/-	D
+nicht fällen	nicht fällen	VV	neutral	-/-/-	D
+nicht für	nicht für	VV	neutral	-/-/-	D
+nicht ganz	nicht ganz	VV	neutral	-/-/-	D
+nicht gerade	nicht gerade	VV	neutral	-/-/-	D
+nicht gewöhnen	nicht gewöhnen	VV	neutral	-/-/-	D
+nicht gleich	nicht gleich	VV	neutral	-/-/-	D
+nicht groß	nicht groß	VV	neutral	-/-/-	D
+nicht heiß	nicht heiß	VV	neutral	-/-/-	D
+nicht hin	nicht hin	VV	neutral	-/-/-	D
+nicht ich	nicht ich	VV	neutral	-/-/-	D
+nicht im	nicht im	VV	neutral	-/-/-	D
+nicht immer	nicht immer	VV	neutral	-/-/-	D
+nicht in	nicht in	VV	neutral	-/-/-	D
+nicht jed	nicht jed	VV	neutral	-/-/-	D
+nicht kennen	nicht kennen	VV	neutral	-/-/-	D
+nicht lang	nicht lang	VV	neutral	-/-/-	D
+nicht lesen	nicht lesen	VV	neutral	-/-/-	D
+nicht liegen	nicht liegen	VV	neutral	-/-/-	D
+nicht machen	nicht machen	VV	neutral	-/-/-	D
+nicht mein	nicht mein	VV	neutral	-/-/-	D
+nicht nach	nicht nach	VV	neutral	-/-/-	D
+nicht noch	nicht noch	VV	neutral	-/-/-	D
+nicht notwendig	nicht notwendig	VV	neutral	-/-/-	D
+nicht nur	nicht nur	VV	neutral	-/-/-	D
+nicht nötig	nicht nötig	VV	neutral	-/-/-	D
+nicht ob	nicht ob	VV	neutral	-/-/-	D
+nicht oder	nicht oder	VV	neutral	-/-/-	D
+nicht ohne	nicht ohne	VV	neutral	-/-/-	D
+nicht optimal	nicht optimal	VV	neutral	-/-/-	D
+nicht reinigen	nicht reinigen	VV	neutral	-/-/-	D
+nicht sagen	nicht sagen	VV	neutral	-/-/-	D
+nicht schaden	nicht schaden	VV	neutral	-/-/-	D
+nicht schon	nicht schon	VV	neutral	-/-/-	D
+nicht schwer	nicht schwer	VV	neutral	-/-/-	D
+nicht sehen	nicht sehen	VV	neutral	-/-/-	D
+nicht sehr	nicht sehr	VV	neutral	-/-/-	D
+nicht sicher	nicht sicher	VV	neutral	-/-/-	D
+nicht sofort	nicht sofort	VV	neutral	-/-/-	D
+nicht stimmen	nicht stimmen	VV	neutral	-/-/-	D
+nicht stören	nicht stören	VV	neutral	-/-/-	D
+nicht teilen	nicht teilen	VV	neutral	-/-/-	D
+nicht testen	nicht testen	VV	neutral	-/-/-	D
+nicht um	nicht um	VV	neutral	-/-/-	D
+nicht unbedingt	nicht unbedingt	VV	neutral	-/-/-	D
+nicht und	nicht und	VV	neutral	-/-/-	D
+nicht unter	nicht unter	VV	neutral	-/-/-	D
+nicht verkaufen	nicht verkaufen	VV	neutral	-/-/-	D
+nicht verlangen	nicht verlangen	VV	neutral	-/-/-	D
+nicht vermissen	nicht vermissen	VV	neutral	-/-/-	D
+nicht verändern	nicht verändern	VV	neutral	-/-/-	D
+nicht viel	nicht viel	VV	neutral	-/-/-	D
+nicht vom	nicht vom	VV	neutral	-/-/-	D
+nicht von	nicht von	VV	neutral	-/-/-	D
+nicht vor	nicht vor	VV	neutral	-/-/-	D
+nicht vorbei	nicht vorbei	VV	neutral	-/-/-	D
+nicht vorstellen	nicht vorstellen	VV	neutral	-/-/-	D
+nicht weit	nicht weit	VV	neutral	-/-/-	D
+nicht weiter	nicht weiter	VV	neutral	-/-/-	D
+nicht wenig	nicht wenig	VV	neutral	-/-/-	D
+nicht wer	nicht wer	VV	neutral	-/-/-	D
+nicht zu	nicht zu	VV	neutral	-/-/-	D
+nicht zum	nicht zum	VV	neutral	-/-/-	D
+nicht zur	nicht zur	VV	neutral	-/-/-	D
+nicht ändern	nicht ändern	VV	neutral	-/-/-	D
+nicht über	nicht über	VV	neutral	-/-/-	D
+nicht überall	nicht überall	VV	neutral	-/-/-	D
+nicht übertreiben	nicht übertreiben	VV	neutral	-/-/-	D
+nichtreflektierend	nichtreflektierend	VV	neutral	-/-/-	D
+nichts ander	nichts ander	VV	neutral	-/-/-	D
+nichts desto	nichts desto	VV	neutral	-/-/-	D
+nichts für	nichts für	VV	neutral	-/-/-	D
+nichts mehr	nichts mehr	VV	neutral	-/-/-	D
+nichts mit	nichts mit	VV	neutral	-/-/-	D
+nichts passieren	nichts passieren	VV	neutral	-/-/-	D
+nichts sagen	nichts sagen	VV	neutral	-/-/-	D
+nichts und	nichts und	VV	neutral	-/-/-	D
+nichts verkehren	nichts verkehren	VV	neutral	-/-/-	D
+nichts von	nichts von	VV	neutral	-/-/-	D
+nichts wirklich	nichts wirklich	VV	neutral	-/-/-	D
+nichts zu	nichts zu	VV	neutral	-/-/-	D
+nichtsdestotrotz	nichtsdestotrotz	AD	neutral	0/0.5/0.5	D
+nie ein	nie ein	VV	neutral	-/-/-	D
+nie so	nie so	VV	neutral	-/-/-	D
+nimm	nehmen	VV	neutral	0.246835/0.468354/0.28481	D
+nur	nur	KO	neutral	0.26119/0.496884/0.241926	D
+objektiv	objektiv	AD	neutral	0.142857/0.857143/0	D
+obwohl	obwohl	KO	neutral	0.197183/0.598592/0.204225	D
+offenbar	offenbar	AD	neutral	0.230769/0.692308/0.0769231	D
+offene	offen	AD	neutral	0.34375/0.34375/0.3125	D
+offener	offen	AD	neutral	0.34375/0.34375/0.3125	D
+offenkundig	offenkundig	AD	neutral	-/-/-	D
+ohne	ohne	KO	neutral	0.329918/0.452869/0.217213	D
+optisch	optisch	AD	neutral	0.34375/0.4375/0.21875	D
+pauschal	pauschal	AD	neutral	-/-/-	D
+persönlich	persönlich	AD	neutral	0.36/0.293333/0.346667	D
+philosophieren	philosophieren	VV	neutral	-/-/-	D
+philosophierte	philosophieren	VV	neutral	-/-/-	D
+pneu	Pneu	XY	neutral	-/-/-	D
+predigen	predigen	VV	neutral	-/-/-	D
+predigte	predigen	VV	neutral	-/-/-	D
+prognostizierbar	prognostizierbar	VV	neutral	-/-/-	D
+prognostizieren	prognostizieren	VV	neutral	-/-/-	D
+prognostizierte	prognostiziert	VV	neutral	-/-/-	D
+prophezeien	prophezeien	VV	neutral	-/-/-	D
+prophezeit	prophezeien	VV	neutral	-/-/-	D
+psychoanalytisch	psychoanalytisch	AD	neutral	-/-/-	D
+rapid	rapid	AD	neutral	0/1/0	D
+rapide	rapid	AD	neutral	0/1/0	D
+reagieren	reagieren	VV	neutral	0.121212/0.484848/0.393939	D
+reagiert	reagieren	VV	neutral	0.121212/0.484848/0.393939	D
+reaktionsschnell	reaktionsschnell	AD	neutral	-/-/-	D
+rechenintensiv	rechenintensiv	AD	neutral	-/-/-	D
+reflektierend	reflektierend	AD	neutral	-/-/-	D
+regte	regen	VV	neutral	0.333333/0.444444/0.222222	D
+restlos	restlos	AD	neutral	0.666667/0.333333/0	D
+rief	rufen	VV	neutral	0.5/0.5/0	D
+sachbezogen	sachbezogen	AD	neutral	-/-/-	D
+sachlich	sachlich	AD	neutral	0/1/0	D
+schauend	schauend	AD	neutral	-/-/-	D
+scheinbar	scheinbar	AD	neutral	0.212121/0.545455/0.242424	D
+schleunigst	schleunig	AD	neutral	-/-/-	D
+schließlich	schließlich	AD	neutral	0.178571/0.607143/0.214286	D
+schloss	schließen	NN	neutral	0.254902/0.490196/0.254902	D
+schneiden	schneiden	VV	neutral	0.338983/0.40678/0.254237	D
+schreiend	schreiend	AD	neutral	-/-/-	D
+schulmeisterlich	schulmeisterlich	AD	neutral	-/-/-	D
+sehend	sehend	AD	neutral	-/-/-	D
+seine	mein	PP	neutral	0.317023/0.448656/0.234321	D
+selten	selten	AD	neutral	0.418605/0.44186/0.139535	D
+seltener	selten	AD	neutral	0.418605/0.44186/0.139535	D
+setzte	setzen	VV	neutral	0.265625/0.46875/0.265625	D
+sitzen	sitzen	VV	neutral	0.308824/0.338235/0.352941	D
+sitzend	sitzend	AD	neutral	0/0.5/0.5	D
+so	so	AD	neutral	0.289201/0.45932/0.251479	D
+sofort	sofort	AD	neutral	0.415663/0.421687/0.162651	D
+sogar	sogar	AD	neutral	0.385093/0.385093/0.229814	D
+sogenannte	sogenannt	AD	neutral	0.214286/0.571429/0.214286	D
+sogenannter	sogenannt	AD	neutral	0.214286/0.571429/0.214286	D
+sogenanntes	sogenannt	AD	neutral	0.214286/0.571429/0.214286	D
+soll	sollen	VM	neutral	0.253049/0.48628/0.260671	D
+sollen	sollen	VM	neutral	0.253049/0.48628/0.260671	D
+sollte	sollen	VM	neutral	0.253049/0.48628/0.260671	D
+sonst	sonst	AD	neutral	0.233333/0.472222/0.294444	D
+soviel	soviel	PI	neutral	0.137931/0.517241/0.344828	D
+sprach	sprechen	VV	neutral	0.396825/0.380952/0.222222	D
+sprudelnd	sprudelnd	AD	neutral	-/-/-	D
+steinreich	steinreich	AD	neutral	-/-/-	D
+still	still	AD	neutral	0.444444/0.333333/0.222222	D
+suchen	suchen	VV	neutral	0.4/0.344828/0.255172	D
+tatsächlich	tatsächlich	AD	neutral	0.230769/0.423077/0.346154	D
+testen	testen	VV	neutral	0.271028/0.53271/0.196262	D
+tief	tief	AD	neutral	0.185185/0.518519/0.296296	D
+total	total	AD	neutral	0.308271/0.556391/0.135338	D
+trotzdem	trotzdem	PR	neutral	0.310976/0.347561/0.341463	D
+tun	tun	VV	neutral	0.226744/0.587209/0.186047	D
+unentgeltlich	unentgeltlich	AD	neutral	-/-/-	D
+unfrei	unfrei	AD	neutral	0/1/0	D
+ungeachtet	ungeachtet	KO	neutral	-/-/-	D
+ungemein	ungemein	AD	neutral	0.5/0/0.5	D
+unsichtbar	unsichtbar	AD	neutral	0/1/0	D
+unsichtbare	unsichtbar	AD	neutral	0/1/0	D
+unterrichtet	unterrichten	VV	neutral	-/-/-	D
+unverändert	unverändert	AD	neutral	0.5/0/0.5	D
+unzählbar	unzählbar	AD	neutral	-/-/-	D
+unzählig	unzählig	AD	neutral	0.333333/0.333333/0.333333	D
+ursprünglich	ursprünglich	AD	neutral	0.166667/0.333333/0.5	D
+urteilen	urteilen	VV	neutral	0.5/0/0.5	D
+urteilte	urteilen	VV	neutral	0.5/0/0.5	D
+verborgen	verborgen	VV	neutral	-/-/-	D
+verhaltener	verhalten	VV	neutral	0.272727/0.636364/0.0909091	D
+vermutlich	vermutlich	AD	neutral	0.0869565/0.695652/0.217391	D
+vernehmlich	vernehmlich	AD	neutral	-/-/-	D
+versteckt	verstecken	VV	neutral	0.416667/0.333333/0.25	D
+verwunderlich	verwunderlich	AD	neutral	0/0.666667/0.333333	D
+verwundert	verwundert	AD	neutral	-/-/-	D
+verzichtete	verzichten	VV	neutral	0.242424/0.575758/0.181818	D
+vielleicht	vielleicht	AD	neutral	0.198068/0.545894/0.256039	D
+vollauf	vollauf	AD	neutral	0.666667/0.166667/0.166667	D
+vollelektronisch	vollelektronisch	AD	neutral	-/-/-	D
+voller	voll	AD	neutral	0.435556/0.351111/0.213333	D
+vollgepfropft	vollpfropfen	VV	neutral	-/-/-	D
+vollgestopft	vollstopfen	VV	neutral	-/-/-	D
+voraussagbar	voraussagbar	AD	neutral	-/-/-	D
+voraussichtlich	voraussichtlich	AD	neutral	-/-/-	D
+vorher	vorher	PT	neutral	0.384615/0.407692/0.207692	D
+völlig	völlig	AD	neutral	0.253731/0.559701/0.186567	D
+wahrscheinlich	wahrscheinlich	AD	neutral	0.206349/0.507937/0.285714	D
+weit	weit	AD	neutral	0.30038/0.460076/0.239544	D
+weiter	weit	AD	neutral	0.30038/0.460076/0.239544	D
+weithin	weithin	AD	neutral	-/-/-	D
+wenn	wenn	KO	neutral	0.255429/0.488108/0.256463	D
+werde	werden	VV	neutral	0.258483/0.493513/0.248004	D
+wiedererkennbar	wiedererkennbar	AD	neutral	-/-/-	D
+wiederholen	wiederholen	VV	neutral	0.25/0.583333/0.166667	D
+wiederholte	wiederholen	VV	neutral	0.25/0.583333/0.166667	D
+windschief	windschief	AD	neutral	-/-/-	D
+wir	wir	PP	neutral	0.327273/0.484848/0.187879	D
+wird	werden	VV	neutral	0.258483/0.493513/0.248004	D
+wirkend	wirkend	AD	neutral	0.1/0.6/0.3	D
+wirklich	wirklich	AD	neutral	0.338257/0.397341/0.264402	D
+wissend	wissend	AD	neutral	-/-/-	D
+wissenschaftlich	wissenschaftlich	AD	neutral	0/0/1	D
+wog	wiegen	VV	neutral	0.285714/0.357143/0.357143	D
+wohl	wohl	AD	neutral	0.160784/0.607843/0.231373	D
+wünschen	wünschen	VV	neutral	0.25/0.4375/0.3125	D
+würde	werden	VV	neutral	0.258483/0.493513/0.248004	D
+zahllos	zahllos	AD	neutral	0/1/0	D
+zielbewusst	zielbewußt	AD	neutral	-/-/-	D
+zuerst	zuerst	AD	neutral	0.280702/0.473684/0.245614	D
+zufällig	zufällig	AD	neutral	0.4/0.2/0.4	D
+zuletzt	zuletzt	AD	neutral	0.166667/0.416667/0.416667	D
+zumal	zumal	KO	neutral	0.363636/0.363636/0.272727	D
+zunehmend	zunehmend	AD	neutral	0/0.25/0.75	D
+zurückstrahlend	zurückstrahlend	AD	neutral	-/-/-	D
+zuständig	zuständig	AD	neutral	0/1/0	D
+zusätzlich	zusätzlich	AD	neutral	0.436364/0.290909/0.272727	D
+zutiefst	zutiefst	AD	neutral	1/0/0	D
+Äußerung	Äußerung	NN	neutral	0/1/0	D
+Äußerungen	Äußerung	NN	neutral	0/1/0	D
+Überblick	Überblick	NN	neutral	0.2/0.2/0.6	D
+ähnlich	ähnlich	AD	neutral	0.258824/0.447059/0.294118	D
+ähnliche	ähnlich	AD	neutral	0.258824/0.447059/0.294118	D
+äußere	äußern	VV	neutral	0.290323/0.548387/0.16129	D
+äußerst	äußerst	AD	neutral	0/1/0	D
+äußerster	äußer	AD	neutral	0.2/0.5/0.3	D
+über	über	PT	neutral	0.316008/0.451143/0.232848	D
+überabzählbar	überabzählbar	VV	neutral	-/-/-	D
+überall	überall	AD	neutral	0.305556/0.694444/0	D
+überreden	überreden	VV	neutral	0/1/0	D
+überredet	überreden	VV	neutral	0/1/0	D
+überredete	überreden	VV	neutral	0/1/0	D
+überwiegend	überwiegend	AD	neutral	0.125/0.5625/0.3125	D
