@@ -1,0 +1,13 @@
+<!-- DTD for GermaNet Wiktionary Paraphrases files -->
+<!-- Version 1.0, May 2012 -->
+<!-- Copyright: Department of General and Computational Linguistics, Tuebingen University -->
+
+<!ELEMENT wiktionaryParaphrases (wiktionaryParaphrase+)>
+
+<!ELEMENT wiktionaryParaphrase EMPTY>
+
+<!ATTLIST wiktionaryParaphrase lexUnitId         CDATA #REQUIRED
+                               wiktionaryId      CDATA #REQUIRED
+                               wiktionarySenseId CDATA #REQUIRED
+                               wiktionarySense   CDATA #REQUIRED
+                               edited            (yes|no) #REQUIRED>

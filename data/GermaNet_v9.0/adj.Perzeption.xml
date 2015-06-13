@@ -1,0 +1,3035 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE synsets SYSTEM "germanet_objects.dtd">
+<synsets>
+<synset id="s787" category="adj" class="Perzeption">
+<lexUnit id="l1328" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schal</orthForm>
+</lexUnit>
+<paraphrase>schaler Beigeschmack/Nachgeschmack</paraphrase>
+</synset>
+<synset id="s2975" category="adj" class="Perzeption">
+<lexUnit id="l4347" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>wahrnehmungsspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2976" category="adj" class="Perzeption">
+<lexUnit id="l4348" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>multimedial</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2977" category="adj" class="Perzeption">
+<lexUnit id="l4349" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>audiovisuell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2978" category="adj" class="Perzeption">
+<lexUnit id="l4350" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wahrnehmbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2979" category="adj" class="Perzeption">
+<lexUnit id="l4351" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>sichtspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2980" category="adj" class="Perzeption">
+<lexUnit id="l4352" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>optisch</orthForm>
+</lexUnit>
+<lexUnit id="l4353" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>visuell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2981" category="adj" class="Perzeption">
+<lexUnit id="l4354" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sichtbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2982" category="adj" class="Perzeption">
+<lexUnit id="l4355" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unsichtbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2983" category="adj" class="Perzeption">
+<lexUnit id="l4356" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unerkennbar</orthForm>
+</lexUnit>
+<lexUnit id="l4357" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unkenntlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2984" category="adj" class="Perzeption">
+<lexUnit id="l4358" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erkennbar</orthForm>
+</lexUnit>
+<lexUnit id="l4359" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ersichtlich</orthForm>
+</lexUnit>
+<lexUnit id="l4360" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kenntlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2985" category="adj" class="Perzeption">
+<lexUnit id="l4361" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erfahrbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2986" category="adj" class="Perzeption">
+<lexUnit id="l4362" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>recherchierbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2987" category="adj" class="Perzeption">
+<lexUnit id="l4363" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>exponiert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2988" category="adj" class="Perzeption">
+<lexUnit id="l4364" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>deutlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2989" category="adj" class="Perzeption">
+<lexUnit id="l4365" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überdeutlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2990" category="adj" class="Perzeption">
+<lexUnit id="l4366" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lesbar</orthForm>
+</lexUnit>
+<lexUnit id="l127358" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leserlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2991" category="adj" class="Perzeption">
+<lexUnit id="l4367" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ablesbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2992" category="adj" class="Perzeption">
+<lexUnit id="l4368" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>auslesbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2993" category="adj" class="Perzeption">
+<lexUnit id="l4369" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unleserlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2994" category="adj" class="Perzeption">
+<lexUnit id="l4370" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>scharf</orthForm>
+<example><text>scharfes Bild</text></example>
+</lexUnit>
+</synset>
+<synset id="s2995" category="adj" class="Perzeption">
+<lexUnit id="l4371" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>undeutlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2996" category="adj" class="Perzeption">
+<lexUnit id="l4372" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>diffus</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2997" category="adj" class="Perzeption">
+<lexUnit id="l4373" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>durchsichtig</orthForm>
+</lexUnit>
+<lexUnit id="l4374" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>transparent</orthForm>
+</lexUnit>
+<lexUnit id="l126932" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>durchscheinend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2998" category="adj" class="Perzeption">
+<lexUnit id="l4375" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>opak</orthForm>
+</lexUnit>
+<lexUnit id="l4376" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>undurchsichtig</orthForm>
+</lexUnit>
+<lexUnit id="l4377" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blickdicht</orthForm>
+</lexUnit>
+</synset>
+<synset id="s2999" category="adj" class="Perzeption">
+<lexUnit id="l4378" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>milchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3000" category="adj" class="Perzeption">
+<lexUnit id="l4379" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verschwommen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3001" category="adj" class="Perzeption">
+<lexUnit id="l4380" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schemenhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3002" category="adj" class="Perzeption">
+<lexUnit id="l4381" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>belebt</orthForm>
+</lexUnit>
+<paraphrase>ein belebter Platz, eine unbelebte Gegend</paraphrase>
+</synset>
+<synset id="s3003" category="adj" class="Perzeption">
+<lexUnit id="l4382" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unbelebt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3006" category="adj" class="Perzeption">
+<lexUnit id="l4387" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spürbar</orthForm>
+</lexUnit>
+<lexUnit id="l4388" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fühlbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3007" category="adj" class="Perzeption">
+<lexUnit id="l4389" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unhörbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3008" category="adj" class="Perzeption">
+<lexUnit id="l4390" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hörbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3009" category="adj" class="Perzeption">
+<lexUnit id="l4391" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unüberhörbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3010" category="adj" class="Perzeption">
+<lexUnit id="l4392" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unübersehbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3011" category="adj" class="Perzeption">
+<lexUnit id="l4393" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unignorierbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3012" category="adj" class="Perzeption">
+<lexUnit id="l4394" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bemerkbar</orthForm>
+</lexUnit>
+<lexUnit id="l4395" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>merklich</orthForm>
+</lexUnit>
+<lexUnit id="l126310" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>merkbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3013" category="adj" class="Perzeption">
+<lexUnit id="l4396" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unmerklich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3014" category="adj" class="Perzeption">
+<lexUnit id="l4397" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>feststellbar</orthForm>
+</lexUnit>
+<lexUnit id="l106652" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beobachtbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3015" category="adj" class="Perzeption">
+<lexUnit id="l4398" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wahrgenommen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3016" category="adj" class="Perzeption">
+<lexUnit id="l4399" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beobachtet</orthForm>
+</lexUnit>
+<lexUnit id="l4400" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bemerkt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3017" category="adj" class="Perzeption">
+<lexUnit id="l4401" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>helligkeitsspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3018" category="adj" class="Perzeption">
+<lexUnit id="l4402" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3019" category="adj" class="Perzeption">
+<lexUnit id="l4403" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grell</orthForm>
+</lexUnit>
+<lexUnit id="l108480" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grellfarbig</orthForm>
+</lexUnit>
+<lexUnit id="l108481" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grellfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3020" category="adj" class="Perzeption">
+<lexUnit id="l4404" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lichterloh</orthForm>
+</lexUnit>
+<lexUnit id="l127976" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>loh</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3021" category="adj" class="Perzeption">
+<lexUnit id="l4405" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dunkel</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3022" category="adj" class="Perzeption">
+<lexUnit id="l4406" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>düster</orthForm>
+</lexUnit>
+<lexUnit id="l4407" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>duster</orthForm>
+</lexUnit>
+<lexUnit id="l4408" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>finster</orthForm>
+</lexUnit>
+<lexUnit id="l106353" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lichtarm</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3023" category="adj" class="Perzeption">
+<lexUnit id="l4409" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zappenduster</orthForm>
+</lexUnit>
+<lexUnit id="l4410" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stockdunkel</orthForm>
+</lexUnit>
+<lexUnit id="l4411" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stockfinster</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3024" category="adj" class="Perzeption">
+<lexUnit id="l4412" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dämmerig</orthForm>
+</lexUnit>
+<lexUnit id="l4413" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dämmrig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3025" category="adj" class="Perzeption">
+<lexUnit id="l4414" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>halbdunkel</orthForm>
+</lexUnit>
+<lexUnit id="l4415" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schummerig</orthForm>
+</lexUnit>
+<lexUnit id="l4416" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schummrig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3026" category="adj" class="Perzeption">
+<lexUnit id="l4417" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beleuchtet</orthForm>
+</lexUnit>
+<lexUnit id="l4418" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erleuchtet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3027" category="adj" class="Perzeption">
+<lexUnit id="l4419" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unbeleuchtet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3028" category="adj" class="Perzeption">
+<lexUnit id="l4420" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>farbspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3029" category="adj" class="Perzeption">
+<lexUnit id="l4421" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>farblich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3030" category="adj" class="Perzeption">
+<lexUnit id="l4422" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>farbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3031" category="adj" class="Perzeption">
+<lexUnit id="l4423" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bunt</orthForm>
+</lexUnit>
+<lexUnit id="l4424" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mehrfarbig</orthForm>
+</lexUnit>
+<lexUnit id="l4425" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vielfarbig</orthForm>
+</lexUnit>
+<lexUnit id="l106801" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>farbenreich</orthForm>
+</lexUnit>
+<lexUnit id="l107190" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verschiedenfarbig</orthForm>
+</lexUnit>
+<lexUnit id="l108486" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>buntfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3032" category="adj" class="Perzeption">
+<lexUnit id="l4426" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>farbenprächtig</orthForm>
+</lexUnit>
+<lexUnit id="l4427" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>farbenfroh</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3033" category="adj" class="Perzeption">
+<lexUnit id="l4428" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kunterbunt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3034" category="adj" class="Perzeption">
+<lexUnit id="l4429" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>knallig</orthForm>
+</lexUnit>
+<lexUnit id="l4430" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>knallbunt</orthForm>
+</lexUnit>
+<lexUnit id="l4431" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>poppig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3035" category="adj" class="Perzeption">
+<lexUnit id="l4432" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>regenbogenfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3036" category="adj" class="Perzeption">
+<lexUnit id="l4433" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gemustert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3037" category="adj" class="Perzeption">
+<lexUnit id="l4434" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gestreift</orthForm>
+</lexUnit>
+<lexUnit id="l126899" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>streifig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3038" category="adj" class="Perzeption">
+<lexUnit id="l127160" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>travers</orthForm>
+</lexUnit>
+<lexUnit id="l4436" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>quer gestreift</orthForm>
+<orthVar>quergestreift</orthVar>
+<oldOrthForm>quergestreift</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s3039" category="adj" class="Perzeption">
+<lexUnit id="l4438" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>längs gestreift</orthForm>
+<orthVar>längsgestreift</orthVar>
+<oldOrthForm>längsgestreift</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s3040" category="adj" class="Perzeption">
+<lexUnit id="l4439" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kariert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3041" category="adj" class="Perzeption">
+<lexUnit id="l4440" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gepunktet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3042" category="adj" class="Perzeption">
+<lexUnit id="l4441" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gefleckt</orthForm>
+</lexUnit>
+<lexUnit id="l4442" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fleckig</orthForm>
+</lexUnit>
+<lexUnit id="l127689" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gescheckt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3043" category="adj" class="Perzeption">
+<lexUnit id="l4443" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gesprenkelt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3044" category="adj" class="Perzeption">
+<lexUnit id="l4444" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geblümt</orthForm>
+</lexUnit>
+<lexUnit id="l107406" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>floral</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3045" category="adj" class="Perzeption">
+<lexUnit id="l4445" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>texturiert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3046" category="adj" class="Perzeption">
+<lexUnit id="l4446" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gemasert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3047" category="adj" class="Perzeption">
+<lexUnit id="l4447" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>marmoriert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3048" category="adj" class="Perzeption">
+<lexUnit id="l4448" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einfarbig</orthForm>
+</lexUnit>
+<lexUnit id="l107218" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>monochrom</orthForm>
+</lexUnit>
+<lexUnit id="l108025" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>monochromatisch</orthForm>
+</lexUnit>
+<lexUnit id="l4449" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>uni</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3049" category="adj" class="Perzeption">
+<lexUnit id="l4450" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gedämpft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3050" category="adj" class="Perzeption">
+<lexUnit id="l4451" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pastellfarben</orthForm>
+</lexUnit>
+<lexUnit id="l4452" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>pastellig</orthForm>
+</lexUnit>
+<lexUnit id="l4453" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pastell</orthForm>
+</lexUnit>
+<lexUnit id="l108482" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pastellfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3051" category="adj" class="Perzeption">
+<lexUnit id="l4454" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aquarellfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3052" category="adj" class="Perzeption">
+<lexUnit id="l4455" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>weiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3053" category="adj" class="Perzeption">
+<lexUnit id="l4456" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>weißlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3054" category="adj" class="Perzeption">
+<lexUnit id="l4457" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schneeweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3055" category="adj" class="Perzeption">
+<lexUnit id="l4458" sense="5" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwarz</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3056" category="adj" class="Perzeption">
+<lexUnit id="l4459" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rabenschwarz</orthForm>
+</lexUnit>
+<lexUnit id="l4460" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pechschwarz</orthForm>
+</lexUnit>
+<lexUnit id="l4461" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kohlrabenschwarz</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3057" category="adj" class="Perzeption">
+<lexUnit id="l4462" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3058" category="adj" class="Perzeption">
+<lexUnit id="l4463" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blutrot</orthForm>
+</lexUnit>
+<lexUnit id="l4464" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rubinrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3059" category="adj" class="Perzeption">
+<lexUnit id="l4465" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>knallrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3060" category="adj" class="Perzeption">
+<lexUnit id="l4466" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rötlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3061" category="adj" class="Perzeption">
+<lexUnit id="l4467" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kastanienrot</orthForm>
+</lexUnit>
+<paraphrase>rot wie eine Kastanie</paraphrase>
+</synset>
+<synset id="s3062" category="adj" class="Perzeption">
+<lexUnit id="l4468" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rostrot</orthForm>
+</lexUnit>
+<lexUnit id="l4469" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bräunlichrot</orthForm>
+</lexUnit>
+<paraphrase>rot wie Rost</paraphrase>
+</synset>
+<synset id="s3063" category="adj" class="Perzeption">
+<lexUnit id="l4470" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>braun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3064" category="adj" class="Perzeption">
+<lexUnit id="l4471" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rostbraun</orthForm>
+</lexUnit>
+<lexUnit id="l4472" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rötlichbraun</orthForm>
+</lexUnit>
+<lexUnit id="l4473" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rostfarben</orthForm>
+</lexUnit>
+<lexUnit id="l108464" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rostfarbig</orthForm>
+</lexUnit>
+<paraphrase>wie Rost</paraphrase>
+</synset>
+<synset id="s3065" category="adj" class="Perzeption">
+<lexUnit id="l4474" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kaffeebraun</orthForm>
+</lexUnit>
+<paraphrase>wie Kaffee</paraphrase>
+</synset>
+<synset id="s3066" category="adj" class="Perzeption">
+<lexUnit id="l4475" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hellrot</orthForm>
+</lexUnit>
+<paraphrase>von hellem Rot</paraphrase>
+</synset>
+<synset id="s3067" category="adj" class="Perzeption">
+<lexUnit id="l4476" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>magmarot</orthForm>
+</lexUnit>
+<lexUnit id="l4477" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glühendrot</orthForm>
+</lexUnit>
+<paraphrase>vom Rot des Magmas/von glühendem Rot</paraphrase>
+</synset>
+<synset id="s3068" category="adj" class="Perzeption">
+<lexUnit id="l4478" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>orange</orthForm>
+</lexUnit>
+<lexUnit id="l4479" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>orangefarben</orthForm>
+</lexUnit>
+<lexUnit id="l108462" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>orangefarbig</orthForm>
+</lexUnit>
+<lexUnit id="l110660" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>orangen</orthForm>
+</lexUnit>
+<paraphrase>rot wie eine Orange</paraphrase>
+</synset>
+<synset id="s3069" category="adj" class="Perzeption">
+<lexUnit id="l4480" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dunkelrot</orthForm>
+</lexUnit>
+<lexUnit id="l4481" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tiefrot</orthForm>
+</lexUnit>
+<paraphrase>von dunklem Rot</paraphrase>
+</synset>
+<synset id="s3070" category="adj" class="Perzeption">
+<lexUnit id="l4482" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rosa</orthForm>
+</lexUnit>
+<lexUnit id="l4483" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rosafarben</orthForm>
+</lexUnit>
+<lexUnit id="l108467" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rosafarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3071" category="adj" class="Perzeption">
+<lexUnit id="l4484" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rosig</orthForm>
+</lexUnit>
+<paraphrase>rosiger Teint</paraphrase>
+</synset>
+<synset id="s3072" category="adj" class="Perzeption">
+<lexUnit id="l4485" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>altrosa</orthForm>
+</lexUnit>
+<lexUnit id="l4486" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>altrosafarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3073" category="adj" class="Perzeption">
+<lexUnit id="l4487" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pink</orthForm>
+</lexUnit>
+<lexUnit id="l4488" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pinkfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3074" category="adj" class="Perzeption">
+<lexUnit id="l4489" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>purpurrot</orthForm>
+</lexUnit>
+<lexUnit id="l4490" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>purpurfarben</orthForm>
+</lexUnit>
+<lexUnit id="l4491" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>purpurfarbig</orthForm>
+</lexUnit>
+<lexUnit id="l4492" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sattrot</orthForm>
+</lexUnit>
+<paraphrase>von kräftigem Rot</paraphrase>
+</synset>
+<synset id="s3075" category="adj" class="Perzeption">
+<lexUnit id="l4493" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3076" category="adj" class="Perzeption">
+<lexUnit id="l4494" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dunkelblau</orthForm>
+</lexUnit>
+<lexUnit id="l4495" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tiefblau</orthForm>
+</lexUnit>
+<paraphrase>von dunklem Blau</paraphrase>
+</synset>
+<synset id="s3077" category="adj" class="Perzeption">
+<lexUnit id="l4496" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>marine</orthForm>
+</lexUnit>
+<lexUnit id="l4497" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>marineblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3078" category="adj" class="Perzeption">
+<lexUnit id="l4498" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hellblau</orthForm>
+</lexUnit>
+<paraphrase>von hellem Blau</paraphrase>
+</synset>
+<synset id="s3079" category="adj" class="Perzeption">
+<lexUnit id="l4499" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>himmelblau</orthForm>
+</lexUnit>
+<lexUnit id="l4500" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>azurblau</orthForm>
+</lexUnit>
+<paraphrase>vom Blau des Himmels</paraphrase>
+</synset>
+<synset id="s3080" category="adj" class="Perzeption">
+<lexUnit id="l4501" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pastellblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3081" category="adj" class="Perzeption">
+<lexUnit id="l4502" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>violett</orthForm>
+</lexUnit>
+<lexUnit id="l4503" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>veilchenfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3082" category="adj" class="Perzeption">
+<lexUnit id="l4504" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3083" category="adj" class="Perzeption">
+<lexUnit id="l4505" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gelblich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3084" category="adj" class="Perzeption">
+<lexUnit id="l4506" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zitronengelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3085" category="adj" class="Perzeption">
+<lexUnit id="l4507" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>falb</orthForm>
+</lexUnit>
+<paraphrase>von fahlem Gelb</paraphrase>
+</synset>
+<synset id="s3086" category="adj" class="Perzeption">
+<lexUnit id="l4508" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3087" category="adj" class="Perzeption">
+<lexUnit id="l4509" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hellgrün</orthForm>
+</lexUnit>
+<paraphrase>von hellem Grün</paraphrase>
+</synset>
+<synset id="s3088" category="adj" class="Perzeption">
+<lexUnit id="l4511" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grasgrün</orthForm>
+</lexUnit>
+<paraphrase>von der Farbe frischen Grases</paraphrase>
+</synset>
+<synset id="s3089" category="adj" class="Perzeption">
+<lexUnit id="l4512" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dunkelgrün</orthForm>
+</lexUnit>
+<paraphrase>von dunklem Grün</paraphrase>
+</synset>
+<synset id="s3090" category="adj" class="Perzeption">
+<lexUnit id="l4513" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tannengrün</orthForm>
+</lexUnit>
+<lexUnit id="l4514" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>flaschengrün</orthForm>
+</lexUnit>
+<paraphrase>vom Grün dunkler Tannen</paraphrase>
+</synset>
+<synset id="s3091" category="adj" class="Perzeption">
+<lexUnit id="l4516" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kaki</orthForm>
+<orthVar>khaki</orthVar>
+<oldOrthForm>khaki</oldOrthForm>
+</lexUnit>
+<lexUnit id="l4517" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kakifarben</orthForm>
+<orthVar>khakifarben</orthVar>
+<oldOrthForm>khakifarben</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s3092" category="adj" class="Perzeption">
+<lexUnit id="l4521" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blaßrosa</orthForm>
+</lexUnit>
+<lexUnit id="l4520" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blassrosa</orthForm>
+<oldOrthForm>blaßrosa</oldOrthForm>
+</lexUnit>
+<paraphrase>von blassem Rosa</paraphrase>
+</synset>
+<synset id="s3093" category="adj" class="Perzeption">
+<lexUnit id="l4522" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>metallfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3094" category="adj" class="Perzeption">
+<lexUnit id="l4523" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>silberfarben</orthForm>
+</lexUnit>
+<lexUnit id="l108466" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>silberfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3095" category="adj" class="Perzeption">
+<lexUnit id="l4524" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>goldfarben</orthForm>
+</lexUnit>
+<lexUnit id="l108465" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>goldfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3096" category="adj" class="Perzeption">
+<lexUnit id="l4525" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bronzefarben</orthForm>
+</lexUnit>
+<lexUnit id="l108477" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bronzefarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3097" category="adj" class="Perzeption">
+<lexUnit id="l4526" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kupferfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3098" category="adj" class="Perzeption">
+<lexUnit id="l4527" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hautfarben</orthForm>
+</lexUnit>
+<lexUnit id="l4528" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fleischfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3099" category="adj" class="Perzeption">
+<lexUnit id="l4529" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>türkis</orthForm>
+</lexUnit>
+<lexUnit id="l4530" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>türkisfarben</orthForm>
+</lexUnit>
+<lexUnit id="l4531" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blaugrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3100" category="adj" class="Perzeption">
+<lexUnit id="l4532" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lila</orthForm>
+</lexUnit>
+<lexUnit id="l4533" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lilafarben</orthForm>
+</lexUnit>
+<lexUnit id="l108472" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lilafarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3101" category="adj" class="Perzeption">
+<lexUnit id="l4534" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fliederfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3102" category="adj" class="Perzeption">
+<lexUnit id="l4535" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3103" category="adj" class="Perzeption">
+<lexUnit id="l4536" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anthrazit</orthForm>
+</lexUnit>
+<lexUnit id="l4537" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anthrazitfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3104" category="adj" class="Perzeption">
+<lexUnit id="l4538" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aschgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3105" category="adj" class="Perzeption">
+<lexUnit id="l4539" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>silbergrau</orthForm>
+</lexUnit>
+<lexUnit id="l4540" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>metallicgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3106" category="adj" class="Perzeption">
+<lexUnit id="l4541" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sandfarben</orthForm>
+</lexUnit>
+<lexUnit id="l108476" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sandfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3107" category="adj" class="Perzeption">
+<lexUnit id="l4542" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erdfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3108" category="adj" class="Perzeption">
+<lexUnit id="l4543" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ockerfarben</orthForm>
+</lexUnit>
+<lexUnit id="l4544" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ockergelb</orthForm>
+</lexUnit>
+<lexUnit id="l108469" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ockerfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3109" category="adj" class="Perzeption">
+<lexUnit id="l4545" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>cremefarben</orthForm>
+<orthVar>cremefarbig</orthVar>
+</lexUnit>
+<lexUnit id="l108463" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>cremefarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3110" category="adj" class="Perzeption">
+<lexUnit id="l4546" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beige</orthForm>
+</lexUnit>
+<lexUnit id="l4547" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beigefarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3111" category="adj" class="Perzeption">
+<lexUnit id="l4548" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lachsfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3112" category="adj" class="Perzeption">
+<lexUnit id="l4549" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pfirsichfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3113" category="adj" class="Perzeption">
+<lexUnit id="l4550" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>apricot</orthForm>
+</lexUnit>
+<lexUnit id="l108478" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aprikosenfarbig</orthForm>
+</lexUnit>
+<lexUnit id="l108479" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aprikosenfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3114" category="adj" class="Perzeption">
+<lexUnit id="l4551" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neonfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3115" category="adj" class="Perzeption">
+<lexUnit id="l4552" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>auberginefarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3116" category="adj" class="Perzeption">
+<lexUnit id="l4553" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>safranfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3117" category="adj" class="Perzeption">
+<lexUnit id="l4554" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>magentafarben</orthForm>
+</lexUnit>
+<lexUnit id="l104992" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>magenta</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3118" category="adj" class="Perzeption">
+<lexUnit id="l4555" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bernsteinfarben</orthForm>
+</lexUnit>
+<lexUnit id="l108473" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bernsteinfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3119" category="adj" class="Perzeption">
+<lexUnit id="l4556" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neongrün</orthForm>
+</lexUnit>
+<paraphrase>von leuchtendem Grün</paraphrase>
+</synset>
+<synset id="s3120" category="adj" class="Perzeption">
+<lexUnit id="l4557" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leuchtendrot</orthForm>
+</lexUnit>
+<paraphrase>von leuchtendem Rot</paraphrase>
+</synset>
+<synset id="s3121" category="adj" class="Perzeption">
+<lexUnit id="l4558" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>farblos</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3122" category="adj" class="Perzeption">
+<lexUnit id="l4560" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fahl</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3123" category="adj" class="Perzeption">
+<lexUnit id="l4561" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aschfahl</orthForm>
+<example><text>sein Gesicht wurde aschfahl vor Angst</text></example>
+</lexUnit>
+<paraphrase>grau wie Asche</paraphrase>
+</synset>
+<synset id="s3124" category="adj" class="Perzeption">
+<lexUnit id="l4562" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwarzweiß</orthForm>
+<example><text>mein Fernseher/Monitor ist schwarzweiß</text></example>
+</lexUnit>
+</synset>
+<synset id="s3125" category="adj" class="Perzeption">
+<lexUnit id="l4565" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bleich</orthForm>
+</lexUnit>
+<lexUnit id="l4563" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blass</orthForm>
+<oldOrthForm>blaß</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s3126" category="adj" class="Perzeption">
+<lexUnit id="l4566" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dezent</orthForm>
+</lexUnit>
+<lexUnit id="l4567" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zurückhaltend</orthForm>
+</lexUnit>
+<lexUnit id="l4568" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unauffällig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3127" category="adj" class="Perzeption">
+<lexUnit id="l4569" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verschossen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3128" category="adj" class="Perzeption">
+<lexUnit id="l4570" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ausgebleicht</orthForm>
+</lexUnit>
+<lexUnit id="l4571" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gebleicht</orthForm>
+</lexUnit>
+<lexUnit id="l4572" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verblichen</orthForm>
+</lexUnit>
+<lexUnit id="l4573" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verblasst</orthForm>
+<oldOrthForm>verblaßt</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s3129" category="adj" class="Perzeption">
+<lexUnit id="l4575" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>auffällig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3130" category="adj" class="Perzeption">
+<lexUnit id="l4576" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kräftig</orthForm>
+</lexUnit>
+<lexUnit id="l4577" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lebhaft</orthForm>
+</lexUnit>
+<lexUnit id="l4578" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lebendig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3131" category="adj" class="Perzeption">
+<lexUnit id="l4579" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leuchtend</orthForm>
+</lexUnit>
+<lexUnit id="l127037" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glühend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3132" category="adj" class="Perzeption">
+<lexUnit id="l4580" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grell</orthForm>
+</lexUnit>
+<lexUnit id="l4581" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schreiend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3133" category="adj" class="Perzeption">
+<lexUnit id="l4582" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>akustisch</orthForm>
+</lexUnit>
+<lexUnit id="l4583" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>klanglich</orthForm>
+</lexUnit>
+<lexUnit id="l106523" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lautlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3134" category="adj" class="Perzeption">
+<lexUnit id="l4584" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>auditorisch</orthForm>
+</lexUnit>
+<lexUnit id="l4585" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>auditiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3135" category="adj" class="Perzeption">
+<lexUnit id="l4586" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>geräuschspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3136" category="adj" class="Perzeption">
+<lexUnit id="l4587" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>laut</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3137" category="adj" class="Perzeption">
+<lexUnit id="l4588" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geräuschvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3138" category="adj" class="Perzeption">
+<lexUnit id="l4589" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dröhnend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3139" category="adj" class="Perzeption">
+<lexUnit id="l4590" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vernehmlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3140" category="adj" class="Perzeption">
+<lexUnit id="l4591" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ohrenbetäubend</orthForm>
+</lexUnit>
+<paraphrase>verstärkt</paraphrase>
+</synset>
+<synset id="s3141" category="adj" class="Perzeption">
+<lexUnit id="l4592" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schrill</orthForm>
+</lexUnit>
+<lexUnit id="l4593" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>durchdringend</orthForm>
+</lexUnit>
+<lexUnit id="l126398" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3142" category="adj" class="Perzeption">
+<lexUnit id="l4594" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leise</orthForm>
+</lexUnit>
+<lexUnit id="l105407" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leis</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3143" category="adj" class="Perzeption">
+<lexUnit id="l4595" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ruhig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3144" category="adj" class="Perzeption">
+<lexUnit id="l4596" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>still</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3145" category="adj" class="Perzeption">
+<lexUnit id="l4597" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geräuschlos</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3146" category="adj" class="Perzeption">
+<lexUnit id="l4598" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sacht</orthForm>
+</lexUnit>
+<lexUnit id="l4599" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>sachte</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3148" category="adj" class="Perzeption">
+<lexUnit id="l4601" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dunkel</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3149" category="adj" class="Perzeption">
+<lexUnit id="l4602" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>metallisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3150" category="adj" class="Perzeption">
+<lexUnit id="l4603" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dumpf</orthForm>
+</lexUnit>
+<lexUnit id="l4604" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gedämpft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3151" category="adj" class="Perzeption">
+<lexUnit id="l4605" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>harmonisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3152" category="adj" class="Perzeption">
+<lexUnit id="l4606" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wohlklingend</orthForm>
+</lexUnit>
+<lexUnit id="l4607" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>melodisch</orthForm>
+</lexUnit>
+<lexUnit id="l125705" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wohltönend</orthForm>
+</lexUnit>
+<lexUnit id="l107647" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>melodiös</orthForm>
+</lexUnit>
+<lexUnit id="l108035" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>klangvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3153" category="adj" class="Perzeption">
+<lexUnit id="l4608" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unharmonisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3154" category="adj" class="Perzeption">
+<lexUnit id="l4609" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dissonant</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3155" category="adj" class="Perzeption">
+<lexUnit id="l4610" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einstimmig</orthForm>
+</lexUnit>
+<lexUnit id="l4611" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unisono</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3156" category="adj" class="Perzeption">
+<lexUnit id="l4612" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gregorianisch</orthForm>
+</lexUnit>
+<paraphrase>gregorianischer Gesang</paraphrase>
+</synset>
+<synset id="s3157" category="adj" class="Perzeption">
+<lexUnit id="l4613" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mehrstimmig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3158" category="adj" class="Perzeption">
+<lexUnit id="l4614" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>geschmacksspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3159" category="adj" class="Perzeption">
+<lexUnit id="l4615" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>süß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3160" category="adj" class="Perzeption">
+<lexUnit id="l4616" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>süßlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3161" category="adj" class="Perzeption">
+<lexUnit id="l4617" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zuckersüß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3162" category="adj" class="Perzeption">
+<lexUnit id="l4618" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sauer</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3163" category="adj" class="Perzeption">
+<lexUnit id="l4619" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>säuerlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3164" category="adj" class="Perzeption">
+<lexUnit id="l4620" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>salzig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3165" category="adj" class="Perzeption">
+<lexUnit id="l4621" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>versalzen</orthForm>
+</lexUnit>
+<lexUnit id="l4622" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>übersalzen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3166" category="adj" class="Perzeption">
+<lexUnit id="l4623" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bitter</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3167" category="adj" class="Perzeption">
+<lexUnit id="l4624" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zartbitter</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3168" category="adj" class="Perzeption">
+<lexUnit id="l4625" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>herb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3169" category="adj" class="Perzeption">
+<lexUnit id="l4626" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>scharf</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3171" category="adj" class="Perzeption">
+<lexUnit id="l4628" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>würzig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3172" category="adj" class="Perzeption">
+<lexUnit id="l4629" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pikant</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3173" category="adj" class="Perzeption">
+<lexUnit id="l4630" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>megascharf</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3174" category="adj" class="Perzeption">
+<lexUnit id="l4631" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>deftig</orthForm>
+</lexUnit>
+<lexUnit id="l4632" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>herzhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3175" category="adj" class="Perzeption">
+<lexUnit id="l4633" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geschmacklos</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3176" category="adj" class="Perzeption">
+<lexUnit id="l4634" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fade</orthForm>
+<orthVar>fad</orthVar>
+</lexUnit>
+</synset>
+<synset id="s3177" category="adj" class="Perzeption">
+<lexUnit id="l4635" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wässerig</orthForm>
+</lexUnit>
+<lexUnit id="l4636" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wässrig</orthForm>
+<oldOrthForm>wäßrig</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s3178" category="adj" class="Perzeption">
+<lexUnit id="l4637" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mild</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3179" category="adj" class="Perzeption">
+<lexUnit id="l4638" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wohlschmeckend</orthForm>
+</lexUnit>
+<lexUnit id="l4639" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>köstlich</orthForm>
+</lexUnit>
+<lexUnit id="l4640" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lecker</orthForm>
+</lexUnit>
+<lexUnit id="l4641" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schmackhaft</orthForm>
+</lexUnit>
+<lexUnit id="l126905" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>delikat</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3180" category="adj" class="Perzeption">
+<lexUnit id="l4642" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kulinarisch</orthForm>
+</lexUnit>
+<lexUnit id="l4643" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>feinschmeckerisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3181" category="adj" class="Perzeption">
+<lexUnit id="l4644" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>süffig</orthForm>
+</lexUnit>
+<paraphrase>ein süffiger Wein</paraphrase>
+</synset>
+<synset id="s3182" category="adj" class="Perzeption">
+<lexUnit id="l4645" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>trocken</orthForm>
+</lexUnit>
+<paraphrase>ein trockener Wein</paraphrase>
+</synset>
+<synset id="s3183" category="adj" class="Perzeption">
+<lexUnit id="l4646" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fruchtig</orthForm>
+</lexUnit>
+<paraphrase>ein fruchtiger Wein</paraphrase>
+</synset>
+<synset id="s3184" category="adj" class="Perzeption">
+<lexUnit id="l4647" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spritzig</orthForm>
+</lexUnit>
+<lexUnit id="l4648" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erfrischend</orthForm>
+</lexUnit>
+<paraphrase>ein spritziger Sekt</paraphrase>
+</synset>
+<synset id="s3185" category="adj" class="Perzeption">
+<lexUnit id="l4649" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>geruchsspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3186" category="adj" class="Perzeption">
+<lexUnit id="l4651" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>brenzlig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3187" category="adj" class="Perzeption">
+<lexUnit id="l4653" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aromatisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3188" category="adj" class="Perzeption">
+<lexUnit id="l4654" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>streng</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3189" category="adj" class="Perzeption">
+<lexUnit id="l4655" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stechend</orthForm>
+</lexUnit>
+<lexUnit id="l4656" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beißend</orthForm>
+</lexUnit>
+<lexUnit id="l4657" sense="5" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>scharf</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3191" category="adj" class="Perzeption">
+<lexUnit id="l4659" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>muffig</orthForm>
+</lexUnit>
+<lexUnit id="l4660" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>miefig</orthForm>
+</lexUnit>
+<lexUnit id="l125227" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>modrig</orthForm>
+<orthVar>moderig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s3192" category="adj" class="Perzeption">
+<lexUnit id="l4661" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>moschusartig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3193" category="adj" class="Perzeption">
+<lexUnit id="l4662" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erdig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3194" category="adj" class="Perzeption">
+<lexUnit id="l4663" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>oberflächenspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3195" category="adj" class="Perzeption">
+<lexUnit id="l4665" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rau</orthForm>
+<oldOrthForm>rauh</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s3196" category="adj" class="Perzeption">
+<lexUnit id="l4666" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>weich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3197" category="adj" class="Perzeption">
+<lexUnit id="l4667" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rutschig</orthForm>
+</lexUnit>
+<lexUnit id="l4668" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glatt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3198" category="adj" class="Perzeption">
+<lexUnit id="l4669" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glitschig</orthForm>
+</lexUnit>
+<lexUnit id="l4670" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glibberig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3199" category="adj" class="Perzeption">
+<lexUnit id="l4671" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rutschfest</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3200" category="adj" class="Perzeption">
+<lexUnit id="l4672" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>flauschig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3201" category="adj" class="Perzeption">
+<lexUnit id="l4673" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eben</orthForm>
+</lexUnit>
+<lexUnit id="l4674" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glatt</orthForm>
+</lexUnit>
+<lexUnit id="l4675" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>plan</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3202" category="adj" class="Perzeption">
+<lexUnit id="l4676" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>seidig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3203" category="adj" class="Perzeption">
+<lexUnit id="l4677" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>uneben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3204" category="adj" class="Perzeption">
+<lexUnit id="l4678" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>runzelig</orthForm>
+</lexUnit>
+<lexUnit id="l4679" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>runzlig</orthForm>
+</lexUnit>
+<paraphrase>mit Runzeln</paraphrase>
+</synset>
+<synset id="s3206" category="adj" class="Perzeption">
+<lexUnit id="l4681" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schrumpelig</orthForm>
+</lexUnit>
+<lexUnit id="l4682" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schrumplig</orthForm>
+</lexUnit>
+<lexUnit id="l4683" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verschrumpelt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3207" category="adj" class="Perzeption">
+<lexUnit id="l4684" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>straff</orthForm>
+</lexUnit>
+<paraphrase>ohne Falten</paraphrase>
+</synset>
+<synset id="s3208" category="adj" class="Perzeption">
+<lexUnit id="l4685" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glänzend</orthForm>
+<example><text>glänzendes/mattes Gold</text></example>
+</lexUnit>
+<paraphrase>mit Glanz</paraphrase>
+</synset>
+<synset id="s3209" category="adj" class="Perzeption">
+<lexUnit id="l4686" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schillernd</orthForm>
+</lexUnit>
+<lexUnit id="l4687" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>changierend</orthForm>
+</lexUnit>
+<lexUnit id="l4688" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schimmernd</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3210" category="adj" class="Perzeption">
+<lexUnit id="l4689" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>matt</orthForm>
+</lexUnit>
+<paraphrase>ohne Glanz</paraphrase>
+</synset>
+<synset id="s3211" category="adj" class="Perzeption">
+<lexUnit id="l4690" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stumpf</orthForm>
+<example><text>stumpfes Haar</text></example>
+</lexUnit>
+<paraphrase>ohne Glanz</paraphrase>
+</synset>
+<synset id="s3212" category="adj" class="Perzeption">
+<lexUnit id="l4691" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blank</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3213" category="adj" class="Perzeption">
+<lexUnit id="l4692" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blankgeputzt</orthForm>
+</lexUnit>
+<lexUnit id="l4693" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gewienert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3214" category="adj" class="Perzeption">
+<lexUnit id="l4694" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blitzblank</orthForm>
+<orthVar>blitzeblank</orthVar>
+<oldOrthForm>blitzblank</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s3205" category="adj" class="Perzeption">
+<lexUnit id="l4680" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>faltig</orthForm>
+<example><text>faltige/straffe Haut</text></example>
+</lexUnit>
+<lexUnit id="l106885" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>faltenreich</orthForm>
+</lexUnit>
+<paraphrase>mit Falten</paraphrase>
+</synset>
+<synset id="s3147" category="adj" class="Perzeption">
+<lexUnit id="l4600" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hell</orthForm>
+<example><text>ihr helles Lachen war im ganzen Haus zu hören</text></example>
+</lexUnit>
+</synset>
+<synset id="s66403" category="adj" class="Perzeption">
+<lexUnit id="l92165" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schachbrettartig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s66460" category="adj" class="Perzeption">
+<lexUnit id="l92227" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kleinkariert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s66462" category="adj" class="Perzeption">
+<lexUnit id="l92229" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zartgelb</orthForm>
+</lexUnit>
+<lexUnit id="l104998" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blassgelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s66784" category="adj" class="Perzeption">
+<lexUnit id="l92593" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mosaikartig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77095" category="adj" class="Perzeption">
+<lexUnit id="l104990" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>giftgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77098" category="adj" class="Perzeption">
+<lexUnit id="l104994" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grünlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77100" category="adj" class="Perzeption">
+<lexUnit id="l104996" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>goldgelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77101" category="adj" class="Perzeption">
+<lexUnit id="l104997" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hellgelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77102" category="adj" class="Perzeption">
+<lexUnit id="l104999" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hellbraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77103" category="adj" class="Perzeption">
+<lexUnit id="l105000" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dunkelbraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77104" category="adj" class="Perzeption">
+<lexUnit id="l105001" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bräunlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77105" category="adj" class="Perzeption">
+<lexUnit id="l105002" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bläulich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77106" category="adj" class="Perzeption">
+<lexUnit id="l105003" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dunkelgelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77107" category="adj" class="Perzeption">
+<lexUnit id="l105004" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hellgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77108" category="adj" class="Perzeption">
+<lexUnit id="l105005" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dunkelgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77109" category="adj" class="Perzeption">
+<lexUnit id="l105006" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gräulich</orthForm>
+</lexUnit>
+<lexUnit id="l105008" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>graulich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77110" category="adj" class="Perzeption">
+<lexUnit id="l105007" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwärzlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77560" category="adj" class="Perzeption">
+<lexUnit id="l128122" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>etherisch</orthForm>
+</lexUnit>
+<lexUnit id="l105508" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ätherisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78219" category="adj" class="Perzeption">
+<lexUnit id="l106275" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sensorisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78288" category="adj" class="Perzeption">
+<lexUnit id="l106351" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geräuscharm</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78285" category="adj" class="Perzeption">
+<lexUnit id="l106348" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rauscharm</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78284" category="adj" class="Perzeption">
+<lexUnit id="l106347" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>salzarm</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78295" category="adj" class="Perzeption">
+<lexUnit id="l106359" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kontrastarm</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78324" category="adj" class="Perzeption">
+<lexUnit id="l106391" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>graubraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78325" category="adj" class="Perzeption">
+<lexUnit id="l106392" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gelbbraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78326" category="adj" class="Perzeption">
+<lexUnit id="l106393" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>goldbraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78327" category="adj" class="Perzeption">
+<lexUnit id="l106394" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>olivbraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78328" category="adj" class="Perzeption">
+<lexUnit id="l106395" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tiefbraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78329" category="adj" class="Perzeption">
+<lexUnit id="l106396" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rehbraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78330" category="adj" class="Perzeption">
+<lexUnit id="l106397" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ockerbraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78331" category="adj" class="Perzeption">
+<lexUnit id="l106398" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schokoladenbraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78332" category="adj" class="Perzeption">
+<lexUnit id="l106399" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nussbraun</orthForm>
+<oldOrthForm>nußbraun</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s78334" category="adj" class="Perzeption">
+<lexUnit id="l106401" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kupferbraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78335" category="adj" class="Perzeption">
+<lexUnit id="l106402" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sepiabraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78336" category="adj" class="Perzeption">
+<lexUnit id="l106403" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erdbraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78337" category="adj" class="Perzeption">
+<lexUnit id="l106404" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kackbraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78346" category="adj" class="Perzeption">
+<lexUnit id="l106413" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kakaobraun</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78347" category="adj" class="Perzeption">
+<lexUnit id="l106414" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>graublau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78348" category="adj" class="Perzeption">
+<lexUnit id="l106415" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blassblau</orthForm>
+<oldOrthForm>blaßblau</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s78349" category="adj" class="Perzeption">
+<lexUnit id="l106416" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stahlblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78350" category="adj" class="Perzeption">
+<lexUnit id="l106417" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwarzblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78351" category="adj" class="Perzeption">
+<lexUnit id="l106418" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grünblau</orthForm>
+</lexUnit>
+<lexUnit id="l106419" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>türkisblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78352" category="adj" class="Perzeption">
+<lexUnit id="l106420" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kobaltblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78353" category="adj" class="Perzeption">
+<lexUnit id="l106421" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lichtblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78354" category="adj" class="Perzeption">
+<lexUnit id="l106422" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rotblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78355" category="adj" class="Perzeption">
+<lexUnit id="l106423" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>indigoblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78356" category="adj" class="Perzeption">
+<lexUnit id="l106424" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kornblumenblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78357" category="adj" class="Perzeption">
+<lexUnit id="l106425" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachtblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78358" category="adj" class="Perzeption">
+<lexUnit id="l106426" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>saphirblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78359" category="adj" class="Perzeption">
+<lexUnit id="l106427" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>königsblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78360" category="adj" class="Perzeption">
+<lexUnit id="l106428" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>veilchenblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78361" category="adj" class="Perzeption">
+<lexUnit id="l106429" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pflaumenblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78362" category="adj" class="Perzeption">
+<lexUnit id="l106430" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>taubenblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78363" category="adj" class="Perzeption">
+<lexUnit id="l106431" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zartblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78364" category="adj" class="Perzeption">
+<lexUnit id="l106432" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schieferblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78365" category="adj" class="Perzeption">
+<lexUnit id="l106433" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blitzeblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78366" category="adj" class="Perzeption">
+<lexUnit id="l106434" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eisblau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78368" category="adj" class="Perzeption">
+<lexUnit id="l106436" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gelbgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78369" category="adj" class="Perzeption">
+<lexUnit id="l106437" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>graugrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78370" category="adj" class="Perzeption">
+<lexUnit id="l106438" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>smaragdgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78371" category="adj" class="Perzeption">
+<lexUnit id="l106439" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blassgrün</orthForm>
+<oldOrthForm>blaßgrün</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s78372" category="adj" class="Perzeption">
+<lexUnit id="l106440" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sattgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78373" category="adj" class="Perzeption">
+<lexUnit id="l106441" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>goldgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78374" category="adj" class="Perzeption">
+<lexUnit id="l106442" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lindgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78375" category="adj" class="Perzeption">
+<lexUnit id="l106443" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mattgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78376" category="adj" class="Perzeption">
+<lexUnit id="l106444" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tiefgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78377" category="adj" class="Perzeption">
+<lexUnit id="l106445" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>apfelgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78378" category="adj" class="Perzeption">
+<lexUnit id="l106446" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwarzgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78379" category="adj" class="Perzeption">
+<lexUnit id="l106447" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>meergrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78380" category="adj" class="Perzeption">
+<lexUnit id="l106448" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>türkisgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78381" category="adj" class="Perzeption">
+<lexUnit id="l106449" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>moosgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78383" category="adj" class="Perzeption">
+<lexUnit id="l106451" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lauchgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78384" category="adj" class="Perzeption">
+<lexUnit id="l106452" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zartgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78386" category="adj" class="Perzeption">
+<lexUnit id="l106454" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lichtgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78388" category="adj" class="Perzeption">
+<lexUnit id="l106456" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>orangegelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78389" category="adj" class="Perzeption">
+<lexUnit id="l106457" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>strohgelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78390" category="adj" class="Perzeption">
+<lexUnit id="l106458" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grüngelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78391" category="adj" class="Perzeption">
+<lexUnit id="l106459" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>weißgelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78392" category="adj" class="Perzeption">
+<lexUnit id="l106460" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwefelgelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78393" category="adj" class="Perzeption">
+<lexUnit id="l106461" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blassgelb</orthForm>
+<oldOrthVar>blaßgelb</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s78394" category="adj" class="Perzeption">
+<lexUnit id="l106462" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dottergelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78395" category="adj" class="Perzeption">
+<lexUnit id="l106463" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>honiggelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78396" category="adj" class="Perzeption">
+<lexUnit id="l106464" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fahlgelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78397" category="adj" class="Perzeption">
+<lexUnit id="l106465" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>safrangelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78398" category="adj" class="Perzeption">
+<lexUnit id="l106466" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lehmgelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78399" category="adj" class="Perzeption">
+<lexUnit id="l106467" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>buttergelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78400" category="adj" class="Perzeption">
+<lexUnit id="l106468" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sattgelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78401" category="adj" class="Perzeption">
+<lexUnit id="l106469" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sonnengelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78402" category="adj" class="Perzeption">
+<lexUnit id="l106470" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mattgelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78403" category="adj" class="Perzeption">
+<lexUnit id="l106471" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>knallgelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78404" category="adj" class="Perzeption">
+<lexUnit id="l106472" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>messinggelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78405" category="adj" class="Perzeption">
+<lexUnit id="l106473" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kanariengelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78406" category="adj" class="Perzeption">
+<lexUnit id="l106474" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grellgelb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78562" category="adj" class="Perzeption">
+<lexUnit id="l106660" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweistimmig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78563" category="adj" class="Perzeption">
+<lexUnit id="l106661" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierstimmig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78564" category="adj" class="Perzeption">
+<lexUnit id="l106662" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreistimmig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78565" category="adj" class="Perzeption">
+<lexUnit id="l106663" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfstimmig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78566" category="adj" class="Perzeption">
+<lexUnit id="l106664" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sechsstimmig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78567" category="adj" class="Perzeption">
+<lexUnit id="l106665" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vielstimmig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78570" category="adj" class="Perzeption">
+<lexUnit id="l106668" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gleichstimmig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78571" category="adj" class="Perzeption">
+<lexUnit id="l106669" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>makroskopisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78660" category="adj" class="Perzeption">
+<lexUnit id="l106767" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kontrastreich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79014" category="adj" class="Perzeption">
+<lexUnit id="l107185" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>polyfon</orthForm>
+<orthVar>polyphon</orthVar>
+<oldOrthForm>polyphon</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s79015" category="adj" class="Perzeption">
+<lexUnit id="l107186" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>homofon</orthForm>
+<orthVar>homophon</orthVar>
+<oldOrthForm>homophon</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s78864" category="adj" class="Perzeption">
+<lexUnit id="l107009" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gleitfähig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79125" category="adj" class="Perzeption">
+<lexUnit id="l107320" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spektroskopisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79206" category="adj" class="Perzeption">
+<lexUnit id="l107419" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blumig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79286" category="adj" class="Perzeption">
+<lexUnit id="l107525" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweifarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79334" category="adj" class="Perzeption">
+<lexUnit id="l107578" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glattwandig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79347" category="adj" class="Perzeption">
+<lexUnit id="l107591" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blaugrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79348" category="adj" class="Perzeption">
+<lexUnit id="l107592" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>weißgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79349" category="adj" class="Perzeption">
+<lexUnit id="l107593" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schiefergrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79350" category="adj" class="Perzeption">
+<lexUnit id="l107594" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwarzgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79351" category="adj" class="Perzeption">
+<lexUnit id="l107595" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hechtgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79352" category="adj" class="Perzeption">
+<lexUnit id="l107596" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lichtgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79353" category="adj" class="Perzeption">
+<lexUnit id="l107597" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stahlgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79354" category="adj" class="Perzeption">
+<lexUnit id="l107598" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>feldgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79355" category="adj" class="Perzeption">
+<lexUnit id="l107599" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>olivgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79356" category="adj" class="Perzeption">
+<lexUnit id="l107600" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grüngrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79357" category="adj" class="Perzeption">
+<lexUnit id="l107601" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mausgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79358" category="adj" class="Perzeption">
+<lexUnit id="l107602" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rauchgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79359" category="adj" class="Perzeption">
+<lexUnit id="l107603" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>steingrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79360" category="adj" class="Perzeption">
+<lexUnit id="l107604" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fahlgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79361" category="adj" class="Perzeption">
+<lexUnit id="l107605" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eisgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79362" category="adj" class="Perzeption">
+<lexUnit id="l107606" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anthrazitgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79363" category="adj" class="Perzeption">
+<lexUnit id="l107607" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nebelgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79364" category="adj" class="Perzeption">
+<lexUnit id="l107608" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>taubengrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79365" category="adj" class="Perzeption">
+<lexUnit id="l107609" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>perlgrau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79404" category="adj" class="Perzeption">
+<lexUnit id="l107657" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geschmacklich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79467" category="adj" class="Perzeption">
+<lexUnit id="l4887" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tonlos</orthForm>
+</lexUnit>
+<lexUnit id="l107725" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stimmlos</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79567" category="adj" class="Perzeption">
+<lexUnit id="l107851" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kalkig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79666" category="adj" class="Perzeption">
+<lexUnit id="l107961" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>silbrig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79668" category="adj" class="Perzeption">
+<lexUnit id="l107963" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>silbrig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79671" category="adj" class="Perzeption">
+<lexUnit id="l107966" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lautmalerisch</orthForm>
+</lexUnit>
+<lexUnit id="l107971" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>onomatopoetisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79720" category="adj" class="Perzeption">
+<lexUnit id="l108023" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>maschinenlesbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79772" category="adj" class="Perzeption">
+<lexUnit id="l108089" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>empfindlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80138" category="adj" class="Perzeption">
+<lexUnit id="l108516" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>taktil</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80048" category="adj" class="Perzeption">
+<lexUnit id="l108392" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>reinweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80049" category="adj" class="Perzeption">
+<lexUnit id="l108393" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grauweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80050" category="adj" class="Perzeption">
+<lexUnit id="l108394" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>cremeweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80051" category="adj" class="Perzeption">
+<lexUnit id="l108395" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>silberweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80052" category="adj" class="Perzeption">
+<lexUnit id="l108396" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gelbweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80053" category="adj" class="Perzeption">
+<lexUnit id="l108397" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>milchweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80054" category="adj" class="Perzeption">
+<lexUnit id="l108398" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mattweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80055" category="adj" class="Perzeption">
+<lexUnit id="l108399" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blütenweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80056" category="adj" class="Perzeption">
+<lexUnit id="l108400" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>perlweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80057" category="adj" class="Perzeption">
+<lexUnit id="l108401" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grellweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80058" category="adj" class="Perzeption">
+<lexUnit id="l108402" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schlohweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80059" category="adj" class="Perzeption">
+<lexUnit id="l108403" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kreideweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80060" category="adj" class="Perzeption">
+<lexUnit id="l108404" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kreideweiß</orthForm>
+</lexUnit>
+<lexUnit id="l108406" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kalkweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80061" category="adj" class="Perzeption">
+<lexUnit id="l108405" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kalkweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80062" category="adj" class="Perzeption">
+<lexUnit id="l108407" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lilienweiß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80063" category="adj" class="Perzeption">
+<lexUnit id="l108408" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grauschwarz</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80065" category="adj" class="Perzeption">
+<lexUnit id="l108410" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tiefschwarz</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80068" category="adj" class="Perzeption">
+<lexUnit id="l108413" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>braunschwarz</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80070" category="adj" class="Perzeption">
+<lexUnit id="l108415" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rußschwarz</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80084" category="adj" class="Perzeption">
+<lexUnit id="l108430" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>haptisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80089" category="adj" class="Perzeption">
+<lexUnit id="l108435" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>andersfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80096" category="adj" class="Perzeption">
+<lexUnit id="l108446" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>identifizierbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80107" category="adj" class="Perzeption">
+<lexUnit id="l108459" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gleichfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80108" category="adj" class="Perzeption">
+<lexUnit id="l108460" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreifarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80109" category="adj" class="Perzeption">
+<lexUnit id="l108461" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80110" category="adj" class="Perzeption">
+<lexUnit id="l108468" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>starkfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80111" category="adj" class="Perzeption">
+<lexUnit id="l108470" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>elfenbeinfarben</orthForm>
+</lexUnit>
+<lexUnit id="l108471" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>elfenbeinfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80112" category="adj" class="Perzeption">
+<lexUnit id="l108474" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>malvenfarben</orthForm>
+</lexUnit>
+<lexUnit id="l108475" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>malvenfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80113" category="adj" class="Perzeption">
+<lexUnit id="l108483" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>roséfarben</orthForm>
+</lexUnit>
+<lexUnit id="l108484" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>roséfarbig</orthForm>
+</lexUnit>
+<lexUnit id="l108485" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rosé</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80299" category="adj" class="Perzeption">
+<lexUnit id="l108703" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lichtstark</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80301" category="adj" class="Perzeption">
+<lexUnit id="l108705" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unlesbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80871" category="adj" class="Perzeption">
+<lexUnit id="l109347" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rosarot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80872" category="adj" class="Perzeption">
+<lexUnit id="l109348" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>orangerot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80873" category="adj" class="Perzeption">
+<lexUnit id="l109349" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>scharlachrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80875" category="adj" class="Perzeption">
+<lexUnit id="l109351" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gelbrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80877" category="adj" class="Perzeption">
+<lexUnit id="l109353" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>weinrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80878" category="adj" class="Perzeption">
+<lexUnit id="l109354" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>braunrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80879" category="adj" class="Perzeption">
+<lexUnit id="l109355" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ziegelrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80880" category="adj" class="Perzeption">
+<lexUnit id="l109356" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>karminrot</orthForm>
+</lexUnit>
+<lexUnit id="l109358" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>karmesinrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80881" category="adj" class="Perzeption">
+<lexUnit id="l109357" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>feuerrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80882" category="adj" class="Perzeption">
+<lexUnit id="l109359" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bordeauxrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80883" category="adj" class="Perzeption">
+<lexUnit id="l109360" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kirschrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80884" category="adj" class="Perzeption">
+<lexUnit id="l109361" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hochrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80886" category="adj" class="Perzeption">
+<lexUnit id="l109363" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kupferrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80887" category="adj" class="Perzeption">
+<lexUnit id="l109364" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zinnoberrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80888" category="adj" class="Perzeption">
+<lexUnit id="l109365" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rosenrot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81777" category="adj" class="Perzeption">
+<lexUnit id="l110454" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bengalisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81798" category="adj" class="Perzeption">
+<lexUnit id="l110476" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>diatonisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81904" category="adj" class="Perzeption">
+<lexUnit id="l110597" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>elektroakustisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s82087" category="adj" class="Perzeption">
+<lexUnit id="l110829" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tastbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s82235" category="adj" class="Perzeption">
+<lexUnit id="l110990" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abwaschbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s83825" category="adj" class="Perzeption">
+<lexUnit id="l113036" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geschmacksintensiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s85082" category="adj" class="Perzeption">
+<lexUnit id="l114699" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>olfaktorisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s85921" category="adj" class="Perzeption">
+<lexUnit id="l115745" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gelind</orthForm>
+</lexUnit>
+<lexUnit id="l115746" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gelinde</orthForm>
+</lexUnit>
+</synset>
+<synset id="s85958" category="adj" class="Perzeption">
+<lexUnit id="l115793" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rauchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s85960" category="adj" class="Perzeption">
+<lexUnit id="l115795" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rauchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s85967" category="adj" class="Perzeption">
+<lexUnit id="l115804" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rauchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s86103" category="adj" class="Perzeption">
+<lexUnit id="l115975" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>enharmonisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s86156" category="adj" class="Perzeption">
+<lexUnit id="l116041" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sonor</orthForm>
+</lexUnit>
+</synset>
+<synset id="s86182" category="adj" class="Perzeption">
+<lexUnit id="l116067" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>borstig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s86309" category="adj" class="Perzeption">
+<lexUnit id="l116214" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schlüpfrig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s91184" category="adj" class="Perzeption">
+<lexUnit id="l122255" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blind</orthForm>
+</lexUnit>
+</synset>
+<synset id="s93614" category="adj" class="Perzeption">
+<lexUnit id="l125228" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wohlriechend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s93615" category="adj" class="Perzeption">
+<lexUnit id="l125229" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>übelriechend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s93986" category="adj" class="Perzeption">
+<lexUnit id="l125704" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>klingend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s93987" category="adj" class="Perzeption">
+<lexUnit id="l125706" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>volltönend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94045" category="adj" class="Perzeption">
+<lexUnit id="l125774" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>guttural</orthForm>
+</lexUnit>
+<lexUnit id="l128002" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kehlig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94053" category="adj" class="Perzeption">
+<lexUnit id="l125784" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rauchfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94064" category="adj" class="Perzeption">
+<lexUnit id="l125795" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dunkelviolett</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94065" category="adj" class="Perzeption">
+<lexUnit id="l125796" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lichtdurchflutet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94122" category="adj" class="Perzeption">
+<lexUnit id="l125871" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>konsonant</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94127" category="adj" class="Perzeption">
+<lexUnit id="l125877" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geringelt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94148" category="adj" class="Perzeption">
+<lexUnit id="l125900" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>weinig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94212" category="adj" class="Perzeption">
+<lexUnit id="l125979" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>polychrom</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94224" category="adj" class="Perzeption">
+<lexUnit id="l125992" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>olivfarben</orthForm>
+</lexUnit>
+<lexUnit id="l125993" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>oliv</orthForm>
+</lexUnit>
+<lexUnit id="l125994" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>olivgrün</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94255" category="adj" class="Perzeption">
+<lexUnit id="l126034" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>flaumig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94335" category="adj" class="Perzeption">
+<lexUnit id="l126127" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sonnenbeschienen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94351" category="adj" class="Perzeption">
+<lexUnit id="l126144" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>naturfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94363" category="adj" class="Perzeption">
+<lexUnit id="l126156" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>welk</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94376" category="adj" class="Perzeption">
+<lexUnit id="l126170" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>monofon</orthForm>
+<orthVar>monophon</orthVar>
+</lexUnit>
+</synset>
+<synset id="s94377" category="adj" class="Perzeption">
+<lexUnit id="l126171" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stereofon</orthForm>
+<orthVar>stereophon</orthVar>
+</lexUnit>
+</synset>
+<synset id="s94440" category="adj" class="Perzeption">
+<lexUnit id="l126252" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dunkelfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94446" category="adj" class="Perzeption">
+<lexUnit id="l126258" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>struppig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94484" category="adj" class="Perzeption">
+<lexUnit id="l126304" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unbunt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94498" category="adj" class="Perzeption">
+<lexUnit id="l126320" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>essigsauer</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94537" category="adj" class="Perzeption">
+<lexUnit id="l126373" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>klangschön</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94846" category="adj" class="Perzeption">
+<lexUnit id="l126765" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stimmhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94849" category="adj" class="Perzeption">
+<lexUnit id="l126768" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gebändert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94913" category="adj" class="Perzeption">
+<lexUnit id="l126847" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>filzig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94976" category="adj" class="Perzeption">
+<lexUnit id="l126917" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hellfarben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94977" category="adj" class="Perzeption">
+<lexUnit id="l126918" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grellbunt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94990" category="adj" class="Perzeption">
+<lexUnit id="l126931" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gerippt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94993" category="adj" class="Perzeption">
+<lexUnit id="l126935" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwarz-rot-golden</orthForm>
+<orthVar>schwarzrotgolden</orthVar>
+</lexUnit>
+</synset>
+<synset id="s95003" category="adj" class="Perzeption">
+<lexUnit id="l126945" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gewürfelt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95010" category="adj" class="Perzeption">
+<lexUnit id="l126953" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwarz-weiß-rot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95045" category="adj" class="Perzeption">
+<lexUnit id="l126996" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blaurot</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95052" category="adj" class="Perzeption">
+<lexUnit id="l127006" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rauhaarig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95057" category="adj" class="Perzeption">
+<lexUnit id="l127013" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gefurcht</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95077" category="adj" class="Perzeption">
+<lexUnit id="l127038" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rot glühend</orthForm>
+<orthVar>rotglühend</orthVar>
+</lexUnit>
+</synset>
+<synset id="s95078" category="adj" class="Perzeption">
+<lexUnit id="l127039" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hochglänzend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95227" category="adj" class="Perzeption">
+<lexUnit id="l127219" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spiegelglatt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95228" category="adj" class="Perzeption">
+<lexUnit id="l127221" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schallgedämpft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95240" category="adj" class="Perzeption">
+<lexUnit id="l127236" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>weißgetüncht</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95246" category="adj" class="Perzeption">
+<lexUnit id="l127244" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zimtfarben</orthForm>
+</lexUnit>
+<lexUnit id="l128149" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zimtfarbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95268" category="adj" class="Perzeption">
+<lexUnit id="l127268" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungesüßt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95398" category="adj" class="Perzeption">
+<lexUnit id="l127429" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>feinporig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95414" category="adj" class="Perzeption">
+<lexUnit id="l127449" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tiefdunkel</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95425" category="adj" class="Perzeption">
+<lexUnit id="l127461" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kratzig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95514" category="adj" class="Perzeption">
+<lexUnit id="l127559" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>plattig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95519" category="adj" class="Perzeption">
+<lexUnit id="l127565" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>goldglänzend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95536" category="adj" class="Perzeption">
+<lexUnit id="l127584" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>außersinnlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95584" category="adj" class="Perzeption">
+<lexUnit id="l127641" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nussig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95629" category="adj" class="Perzeption">
+<lexUnit id="l127694" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>halbtrocken</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95650" category="adj" class="Perzeption">
+<lexUnit id="l127719" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lanciert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95668" category="adj" class="Perzeption">
+<lexUnit id="l127743" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pigmentiert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95720" category="adj" class="Perzeption">
+<lexUnit id="l127803" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verwaschen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95780" category="adj" class="Perzeption">
+<lexUnit id="l127866" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fransig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95725" category="adj" class="Perzeption">
+<lexUnit id="l127808" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abgestanden</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95883" category="adj" class="Perzeption">
+<lexUnit id="l127984" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kuschelig</orthForm>
+<orthVar>kuschlig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s95904" category="adj" class="Perzeption">
+<lexUnit id="l128009" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungefärbt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95948" category="adj" class="Perzeption">
+<lexUnit id="l128069" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aalglatt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95975" category="adj" class="Perzeption">
+<lexUnit id="l128100" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geschmacksneutral</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95977" category="adj" class="Perzeption">
+<lexUnit id="l128102" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>resch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s96101" category="adj" class="Perzeption">
+<lexUnit id="l128247" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unverschleiert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s96114" category="adj" class="Perzeption">
+<lexUnit id="l128262" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unplugged</orthForm>
+</lexUnit>
+</synset>
+</synsets>

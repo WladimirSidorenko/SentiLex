@@ -1,0 +1,22 @@
+<!-- DTD for GermaNet relation files -->
+<!-- Version 2.0, January 2007 -->
+<!-- Last update: April 2011 -->
+<!-- Copyright: Department of General and Computational Linguistics, Tuebingen University -->
+
+<!ELEMENT relations (lex_rel|con_rel)+>
+
+<!ELEMENT lex_rel EMPTY>
+<!ATTLIST lex_rel name (has_antonym|has_participle|has_pertainym) #REQUIRED
+                  dir  (one|both|revert) #REQUIRED
+                  inv  (has_antonym) #IMPLIED
+                  from CDATA #REQUIRED
+                  to   CDATA #REQUIRED>
+
+<!ELEMENT con_rel EMPTY>
+<!ATTLIST con_rel name (has_hypernym|has_component_meronym|has_member_meronym|has_substance_meronym
+                        |has_portion_meronym|entails|is_related_to|causes) #REQUIRED
+                  dir  (one|both|revert) #REQUIRED
+                  inv  (has_hyponym|has_component_holonym|has_member_holonym|has_substance_holonym
+                        |has_portion_holonym|is_entailed_by|is_related_to) #IMPLIED
+                  from CDATA #REQUIRED
+                  to   CDATA #REQUIRED>

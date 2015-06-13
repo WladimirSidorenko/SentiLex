@@ -1,0 +1,4181 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE synsets SYSTEM "germanet_objects.dtd">
+<synsets>
+<synset id="s1239" category="adj" class="Zeit">
+<lexUnit id="l2044" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>heranwachsend</orthForm>
+</lexUnit>
+<lexUnit id="l2045" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>halbwüchsig</orthForm>
+</lexUnit>
+<lexUnit id="l2046" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>halbstark</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5133" category="adj" class="Zeit">
+<lexUnit id="l7713" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>zeitspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5134" category="adj" class="Zeit">
+<lexUnit id="l7714" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitlich</orthForm>
+</lexUnit>
+<lexUnit id="l126986" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitbezogen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5135" category="adj" class="Zeit">
+<lexUnit id="l7715" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einleitend</orthForm>
+</lexUnit>
+<lexUnit id="l7716" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>initial</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5137" category="adj" class="Zeit">
+<lexUnit id="l7718" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abschließend</orthForm>
+</lexUnit>
+<lexUnit id="l7719" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>final</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5138" category="adj" class="Zeit">
+<lexUnit id="l7720" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>perspektivisch</orthForm>
+</lexUnit>
+<lexUnit id="l7721" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitperspektivisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5139" category="adj" class="Zeit">
+<lexUnit id="l7722" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zurückblickend</orthForm>
+</lexUnit>
+<lexUnit id="l7723" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rückblickend</orthForm>
+</lexUnit>
+<lexUnit id="l7724" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>retrospektiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5140" category="adj" class="Zeit">
+<lexUnit id="l7725" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorausschauend</orthForm>
+</lexUnit>
+<lexUnit id="l7726" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorausblickend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5141" category="adj" class="Zeit">
+<lexUnit id="l7727" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>prophetisch</orthForm>
+</lexUnit>
+<lexUnit id="l7728" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>visionär</orthForm>
+</lexUnit>
+<lexUnit id="l127074" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>seherisch</orthForm>
+</lexUnit>
+<lexUnit id="l127201" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hellsichtig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5142" category="adj" class="Zeit">
+<lexUnit id="l7729" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>früh</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5143" category="adj" class="Zeit">
+<lexUnit id="l7731" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erstmalig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5144" category="adj" class="Zeit">
+<lexUnit id="l7732" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorzeitig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5145" category="adj" class="Zeit">
+<lexUnit id="l7733" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rechtzeitig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5146" category="adj" class="Zeit">
+<lexUnit id="l7734" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitig</orthForm>
+</lexUnit>
+<lexUnit id="l7735" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>frühzeitig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5147" category="adj" class="Zeit">
+<lexUnit id="l7736" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorweggenommen</orthForm>
+</lexUnit>
+<lexUnit id="l7737" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorgezogen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5148" category="adj" class="Zeit">
+<lexUnit id="l7738" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verschoben</orthForm>
+</lexUnit>
+<lexUnit id="l7739" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verlegt</orthForm>
+</lexUnit>
+<lexUnit id="l7740" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>umgelegt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5149" category="adj" class="Zeit">
+<lexUnit id="l7741" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pünktlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5150" category="adj" class="Zeit">
+<lexUnit id="l7742" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überpünktlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5151" category="adj" class="Zeit">
+<lexUnit id="l7743" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unpünktlich</orthForm>
+</lexUnit>
+<lexUnit id="l7744" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verspätet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5152" category="adj" class="Zeit">
+<lexUnit id="l7745" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fortgeschritten</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5153" category="adj" class="Zeit">
+<lexUnit id="l7746" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überfällig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5154" category="adj" class="Zeit">
+<lexUnit id="l7747" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abgelaufen</orthForm>
+</lexUnit>
+<lexUnit id="l7748" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verstrichen</orthForm>
+</lexUnit>
+<paraphrase>Das Ultimatum ist abgelaufen.</paraphrase>
+</synset>
+<synset id="s5155" category="adj" class="Zeit">
+<lexUnit id="l7749" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>termingerecht</orthForm>
+</lexUnit>
+<lexUnit id="l7750" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fristgerecht</orthForm>
+</lexUnit>
+<lexUnit id="l98326" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fristgemäß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5156" category="adj" class="Zeit">
+<lexUnit id="l7751" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spät</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5157" category="adj" class="Zeit">
+<lexUnit id="l7752" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>letzte</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5158" category="adj" class="Zeit">
+<lexUnit id="l7753" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachträglich</orthForm>
+</lexUnit>
+<lexUnit id="l7754" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rückwirkend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5159" category="adj" class="Zeit">
+<lexUnit id="l7755" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>posthum</orthForm>
+<orthVar>postum</orthVar>
+</lexUnit>
+<paraphrase>nach dem Tod erschienene oder gewürdigte Leistungen</paraphrase>
+</synset>
+<synset id="s5160" category="adj" class="Zeit">
+<lexUnit id="l7757" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einmalig</orthForm>
+<example><text>der Film wurde nur einmalig gezeigt</text></example>
+</lexUnit>
+<paraphrase>nur ein einziges Mal vorkommend</paraphrase>
+</synset>
+<synset id="s5161" category="adj" class="Zeit">
+<lexUnit id="l7758" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>plötzlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5162" category="adj" class="Zeit">
+<lexUnit id="l7759" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abrupt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5176" category="adj" class="Zeit">
+<lexUnit id="l7784" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wiederholt</orthForm>
+</lexUnit>
+<lexUnit id="l7785" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wiederkehrend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5177" category="adj" class="Zeit">
+<lexUnit id="l7786" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>regelmäßig</orthForm>
+<example><text>Sie macht regelmäßig Sport</text></example>
+</lexUnit>
+<paraphrase>in zeitlich gleich langen Abständen wiederkehrend</paraphrase>
+</synset>
+<synset id="s5178" category="adj" class="Zeit">
+<lexUnit id="l7787" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>minütlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5179" category="adj" class="Zeit">
+<lexUnit id="l7788" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stündlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5180" category="adj" class="Zeit">
+<lexUnit id="l7789" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>täglich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5181" category="adj" class="Zeit">
+<lexUnit id="l7790" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>saisonal</orthForm>
+</lexUnit>
+<lexUnit id="l7791" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jahreszeitlich</orthForm>
+</lexUnit>
+<lexUnit id="l110506" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>saisonbedingt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5182" category="adj" class="Zeit">
+<lexUnit id="l7792" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ganztägig</orthForm>
+</lexUnit>
+<paraphrase>den ganzen Tag lang</paraphrase>
+</synset>
+<synset id="s5183" category="adj" class="Zeit">
+<lexUnit id="l7793" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ganzjährig</orthForm>
+</lexUnit>
+<paraphrase>das ganze Jahr lang</paraphrase>
+</synset>
+<synset id="s5184" category="adj" class="Zeit">
+<lexUnit id="l7794" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>alltäglich</orthForm>
+</lexUnit>
+<lexUnit id="l7795" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tagtäglich</orthForm>
+</lexUnit>
+<paraphrase>jeden Tag geschehend</paraphrase>
+</synset>
+<synset id="s5185" category="adj" class="Zeit">
+<lexUnit id="l7796" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>allabendlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5186" category="adj" class="Zeit">
+<lexUnit id="l7797" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>allmorgendlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5187" category="adj" class="Zeit">
+<lexUnit id="l7798" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>werktäglich</orthForm>
+<example><text>der Zug fährt werktäglich</text></example>
+</lexUnit>
+<paraphrase>jeden Werktag geschehend</paraphrase>
+</synset>
+<synset id="s5188" category="adj" class="Zeit">
+<lexUnit id="l7799" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sonntäglich</orthForm>
+<example><text>der sonntägliche Kirchenbesuch</text></example>
+</lexUnit>
+<paraphrase>jeden Sonntag geschehend</paraphrase>
+</synset>
+<synset id="s5189" category="adj" class="Zeit">
+<lexUnit id="l7800" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wöchentlich</orthForm>
+</lexUnit>
+<lexUnit id="l7801" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>allwöchentlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5190" category="adj" class="Zeit">
+<lexUnit id="l7802" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>monatlich</orthForm>
+</lexUnit>
+<lexUnit id="l7803" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>allmonatlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5191" category="adj" class="Zeit">
+<lexUnit id="l7804" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jährlich</orthForm>
+</lexUnit>
+<lexUnit id="l7805" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>alljährlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5192" category="adj" class="Zeit">
+<lexUnit id="l7806" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>halbjährlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5193" category="adj" class="Zeit">
+<lexUnit id="l7807" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierteljährlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5194" category="adj" class="Zeit">
+<lexUnit id="l7808" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jahrelang</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5195" category="adj" class="Zeit">
+<lexUnit id="l7809" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jahrzehntelang</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5196" category="adj" class="Zeit">
+<lexUnit id="l7810" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jahrhundertelang</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5197" category="adj" class="Zeit">
+<lexUnit id="l7811" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jahrtausendelang</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5198" category="adj" class="Zeit">
+<lexUnit id="l7812" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lebenslang</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5199" category="adj" class="Zeit">
+<lexUnit id="l7813" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lebenslänglich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5200" category="adj" class="Zeit">
+<lexUnit id="l7814" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>monatelang</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5201" category="adj" class="Zeit">
+<lexUnit id="l7815" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wochenlang</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5202" category="adj" class="Zeit">
+<lexUnit id="l7816" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tagelang</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5203" category="adj" class="Zeit">
+<lexUnit id="l7817" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stundenlang</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5204" category="adj" class="Zeit">
+<lexUnit id="l7818" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>minutenlang</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5205" category="adj" class="Zeit">
+<lexUnit id="l7819" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nächtelang</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5206" category="adj" class="Zeit">
+<lexUnit id="l7821" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neuerlich</orthForm>
+</lexUnit>
+<lexUnit id="l7822" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nochmalig</orthForm>
+</lexUnit>
+<lexUnit id="l107643" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abermalig</orthForm>
+</lexUnit>
+<lexUnit id="l7820" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erneut</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5207" category="adj" class="Zeit">
+<lexUnit id="l7823" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>dauerspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5208" category="adj" class="Zeit">
+<lexUnit id="l7824" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einwöchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5209" category="adj" class="Zeit">
+<lexUnit id="l7825" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mehrwöchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5210" category="adj" class="Zeit">
+<lexUnit id="l7826" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweiwöchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5211" category="adj" class="Zeit">
+<lexUnit id="l7827" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreiwöchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5212" category="adj" class="Zeit">
+<lexUnit id="l7828" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierwöchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5213" category="adj" class="Zeit">
+<lexUnit id="l7829" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfwöchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5214" category="adj" class="Zeit">
+<lexUnit id="l7830" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sechswöchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5215" category="adj" class="Zeit">
+<lexUnit id="l7831" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>siebenwöchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5216" category="adj" class="Zeit">
+<lexUnit id="l7832" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>achtwöchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5217" category="adj" class="Zeit">
+<lexUnit id="l7833" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neunwöchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5218" category="adj" class="Zeit">
+<lexUnit id="l7834" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zehnwöchig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5219" category="adj" class="Zeit">
+<lexUnit id="l7835" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einmonatig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5220" category="adj" class="Zeit">
+<lexUnit id="l7836" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mehrmonatig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5221" category="adj" class="Zeit">
+<lexUnit id="l7837" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweimonatig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5222" category="adj" class="Zeit">
+<lexUnit id="l7838" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreimonatig</orthForm>
+</lexUnit>
+<lexUnit id="l128142" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierteljährig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5223" category="adj" class="Zeit">
+<lexUnit id="l7839" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>viermonatig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5224" category="adj" class="Zeit">
+<lexUnit id="l7840" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfmonatig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5225" category="adj" class="Zeit">
+<lexUnit id="l7841" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sechsmonatig</orthForm>
+</lexUnit>
+<lexUnit id="l7842" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>halbjährig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5226" category="adj" class="Zeit">
+<lexUnit id="l7843" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>siebenmonatig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5227" category="adj" class="Zeit">
+<lexUnit id="l7844" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>achtmonatig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5228" category="adj" class="Zeit">
+<lexUnit id="l7845" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neunmonatig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5229" category="adj" class="Zeit">
+<lexUnit id="l7846" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zehnmonatig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5230" category="adj" class="Zeit">
+<lexUnit id="l7847" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>elfmonatig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5231" category="adj" class="Zeit">
+<lexUnit id="l7848" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eintägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5232" category="adj" class="Zeit">
+<lexUnit id="l7849" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mehrtägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5233" category="adj" class="Zeit">
+<lexUnit id="l7850" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweitägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5234" category="adj" class="Zeit">
+<lexUnit id="l7851" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreitägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5235" category="adj" class="Zeit">
+<lexUnit id="l7852" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>viertägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5236" category="adj" class="Zeit">
+<lexUnit id="l7853" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünftägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5237" category="adj" class="Zeit">
+<lexUnit id="l7854" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sechstägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5238" category="adj" class="Zeit">
+<lexUnit id="l7855" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>siebentägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5239" category="adj" class="Zeit">
+<lexUnit id="l7856" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>achttägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5240" category="adj" class="Zeit">
+<lexUnit id="l7857" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neuntägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5241" category="adj" class="Zeit">
+<lexUnit id="l7858" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zehntägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5242" category="adj" class="Zeit">
+<lexUnit id="l7859" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>elftägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5243" category="adj" class="Zeit">
+<lexUnit id="l7860" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zwölftägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5244" category="adj" class="Zeit">
+<lexUnit id="l7861" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreizehntägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5245" category="adj" class="Zeit">
+<lexUnit id="l7862" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierzehntägig</orthForm>
+<orthVar>14-tägig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s5246" category="adj" class="Zeit">
+<lexUnit id="l7863" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5247" category="adj" class="Zeit">
+<lexUnit id="l7864" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mehrstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5248" category="adj" class="Zeit">
+<lexUnit id="l7865" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweistündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5249" category="adj" class="Zeit">
+<lexUnit id="l7866" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreistündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5250" category="adj" class="Zeit">
+<lexUnit id="l7867" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5251" category="adj" class="Zeit">
+<lexUnit id="l7868" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5252" category="adj" class="Zeit">
+<lexUnit id="l7869" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sechsstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5253" category="adj" class="Zeit">
+<lexUnit id="l7870" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>siebenstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5254" category="adj" class="Zeit">
+<lexUnit id="l7871" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>achtstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5255" category="adj" class="Zeit">
+<lexUnit id="l7872" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neunstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5256" category="adj" class="Zeit">
+<lexUnit id="l7873" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zehnstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5257" category="adj" class="Zeit">
+<lexUnit id="l7874" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>elfstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5258" category="adj" class="Zeit">
+<lexUnit id="l7875" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zwölfstündig</orthForm>
+</lexUnit>
+<lexUnit id="l7876" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>halbtägig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5259" category="adj" class="Zeit">
+<lexUnit id="l7877" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreizehnstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5260" category="adj" class="Zeit">
+<lexUnit id="l7878" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierzehnstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5261" category="adj" class="Zeit">
+<lexUnit id="l7879" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfzehnstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5262" category="adj" class="Zeit">
+<lexUnit id="l7880" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sechzehnstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5263" category="adj" class="Zeit">
+<lexUnit id="l7881" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>siebzehnstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5264" category="adj" class="Zeit">
+<lexUnit id="l7882" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>achtzehnstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5265" category="adj" class="Zeit">
+<lexUnit id="l7883" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neunzehnstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5266" category="adj" class="Zeit">
+<lexUnit id="l7884" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zwanzigstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5267" category="adj" class="Zeit">
+<lexUnit id="l7885" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einundzwanzigstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5268" category="adj" class="Zeit">
+<lexUnit id="l7886" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweiundzwanzigstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5269" category="adj" class="Zeit">
+<lexUnit id="l7887" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreiundzwanzigstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5270" category="adj" class="Zeit">
+<lexUnit id="l7888" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierundzwanzigstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5271" category="adj" class="Zeit">
+<lexUnit id="l7889" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>andauernd</orthForm>
+</lexUnit>
+<lexUnit id="l7890" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fortwährend</orthForm>
+</lexUnit>
+<lexUnit id="l7891" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dauernd</orthForm>
+</lexUnit>
+<lexUnit id="l7892" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>permanent</orthForm>
+</lexUnit>
+<lexUnit id="l7893" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stetig</orthForm>
+</lexUnit>
+<lexUnit id="l7894" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unablässig</orthForm>
+</lexUnit>
+<lexUnit id="l125771" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stet</orthForm>
+</lexUnit>
+<paraphrase>immer wieder</paraphrase>
+</synset>
+<synset id="s5272" category="adj" class="Zeit">
+<lexUnit id="l7895" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unbefristet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5273" category="adj" class="Zeit">
+<lexUnit id="l7896" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kontinuierlich</orthForm>
+</lexUnit>
+<lexUnit id="l7897" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fortgesetzt</orthForm>
+</lexUnit>
+<lexUnit id="l7898" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungebrochen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5274" category="adj" class="Zeit">
+<lexUnit id="l7899" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>chronisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5275" category="adj" class="Zeit">
+<lexUnit id="l7900" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>akut</orthForm>
+</lexUnit>
+<lexUnit id="l7901" sense="7" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>scharf</orthForm>
+</lexUnit>
+<lexUnit id="l7902" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vordringlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5276" category="adj" class="Zeit">
+<lexUnit id="l7903" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schlagartig</orthForm>
+</lexUnit>
+<lexUnit id="l7904" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>urplötzlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5277" category="adj" class="Zeit">
+<lexUnit id="l7905" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>heftig</orthForm>
+</lexUnit>
+<lexUnit id="l7906" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jäh</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5278" category="adj" class="Zeit">
+<lexUnit id="l7907" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sequenziell</orthForm>
+<orthVar>sequentiell</orthVar>
+<oldOrthForm>sequentiell</oldOrthForm>
+</lexUnit>
+<lexUnit id="l7911" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fortlaufend</orthForm>
+</lexUnit>
+<lexUnit id="l7912" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sukzessiv</orthForm>
+</lexUnit>
+<lexUnit id="l7909" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufeinanderfolgend</orthForm>
+<orthVar>aufeinander folgend</orthVar>
+<oldOrthForm>aufeinanderfolgend</oldOrthForm>
+</lexUnit>
+<lexUnit id="l98307" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fortschreitend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5279" category="adj" class="Zeit">
+<lexUnit id="l7913" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beständig</orthForm>
+</lexUnit>
+<lexUnit id="l7914" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>konstant</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5280" category="adj" class="Zeit">
+<lexUnit id="l7915" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gewohnheitsmäßig</orthForm>
+</lexUnit>
+<lexUnit id="l7916" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>notorisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5281" category="adj" class="Zeit">
+<lexUnit id="l7917" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gleichbleibend</orthForm>
+</lexUnit>
+<lexUnit id="l7918" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unverändert</orthForm>
+</lexUnit>
+<lexUnit id="l126979" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>invariant</orthForm>
+</lexUnit>
+<lexUnit id="l127389" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unwandelbar</orthForm>
+</lexUnit>
+<lexUnit id="l107089" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unveränderlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5282" category="adj" class="Zeit">
+<lexUnit id="l7919" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wertbeständig</orthForm>
+</lexUnit>
+<lexUnit id="l7920" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>werterhaltend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5283" category="adj" class="Zeit">
+<lexUnit id="l7921" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ununterbrochen</orthForm>
+</lexUnit>
+<lexUnit id="l7922" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>durchgängig</orthForm>
+</lexUnit>
+<lexUnit id="l7923" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>durchgehend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5284" category="adj" class="Zeit">
+<lexUnit id="l7924" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>periodisch</orthForm>
+</lexUnit>
+<lexUnit id="l7925" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>turnusmäßig</orthForm>
+</lexUnit>
+<lexUnit id="l7926" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>turnunsgemäß</orthForm>
+</lexUnit>
+<lexUnit id="l7927" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zyklisch</orthForm>
+<orthVar>cyclisch</orthVar>
+</lexUnit>
+</synset>
+<synset id="s5285" category="adj" class="Zeit">
+<lexUnit id="l7928" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unregelmäßig</orthForm>
+<example><text>Er isst unregelmäßig</text></example>
+</lexUnit>
+<paraphrase>in zeitlich ungleichen Abständen wiederkehrend</paraphrase>
+</synset>
+<synset id="s5286" category="adj" class="Zeit">
+<lexUnit id="l7932" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitweise</orthForm>
+</lexUnit>
+<lexUnit id="l7933" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>temporär</orthForm>
+</lexUnit>
+<lexUnit id="l7929" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gelegentlich</orthForm>
+</lexUnit>
+<lexUnit id="l7930" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sporadisch</orthForm>
+</lexUnit>
+<lexUnit id="l7931" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitweilig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5287" category="adj" class="Zeit">
+<lexUnit id="l7934" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unterbrochen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5288" category="adj" class="Zeit">
+<lexUnit id="l7935" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unbeständig</orthForm>
+</lexUnit>
+<lexUnit id="l7936" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>veränderlich</orthForm>
+</lexUnit>
+<lexUnit id="l110867" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wandelbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5289" category="adj" class="Zeit">
+<lexUnit id="l7937" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wechselhaft</orthForm>
+</lexUnit>
+<lexUnit id="l7938" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wechselvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5290" category="adj" class="Zeit">
+<lexUnit id="l7939" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>flüchtig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5291" category="adj" class="Zeit">
+<lexUnit id="l7940" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zunehmend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5292" category="adj" class="Zeit">
+<lexUnit id="l7941" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abnehmend</orthForm>
+</lexUnit>
+<lexUnit id="l7942" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verringernd</orthForm>
+</lexUnit>
+<lexUnit id="l7943" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachlassend</orthForm>
+</lexUnit>
+<lexUnit id="l7944" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sinkend</orthForm>
+</lexUnit>
+<lexUnit id="l7945" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>degressiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5293" category="adj" class="Zeit">
+<lexUnit id="l7946" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rezessiv</orthForm>
+</lexUnit>
+<lexUnit id="l7947" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abflauend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5294" category="adj" class="Zeit">
+<lexUnit id="l7948" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rückläufig</orthForm>
+</lexUnit>
+<lexUnit id="l7949" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zurückgehend</orthForm>
+</lexUnit>
+<lexUnit id="l7950" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rückgängig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5295" category="adj" class="Zeit">
+<lexUnit id="l7951" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>baldig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5296" category="adj" class="Zeit">
+<lexUnit id="l7952" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nah</orthForm>
+</lexUnit>
+<lexUnit id="l106291" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitnah</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5297" category="adj" class="Zeit">
+<lexUnit id="l7953" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorläufig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5298" category="adj" class="Zeit">
+<lexUnit id="l7954" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einstweilig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5299" category="adj" class="Zeit">
+<lexUnit id="l7955" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>provisorisch</orthForm>
+</lexUnit>
+<lexUnit id="l7956" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>behelfsmäßig</orthForm>
+</lexUnit>
+<lexUnit id="l108264" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>interimistisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5300" category="adj" class="Zeit">
+<lexUnit id="l7957" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorübergehend</orthForm>
+</lexUnit>
+<lexUnit id="l7958" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zwischenzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5301" category="adj" class="Zeit">
+<lexUnit id="l7959" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>punktuell</orthForm>
+</lexUnit>
+<lexUnit id="l7960" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitpunktbezogen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5302" category="adj" class="Zeit">
+<lexUnit id="l7961" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kommissarisch</orthForm>
+</lexUnit>
+<paraphrase>die kommissarische Leitung der Firma</paraphrase>
+</synset>
+<synset id="s5303" category="adj" class="Zeit">
+<lexUnit id="l7962" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kurzlebig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5304" category="adj" class="Zeit">
+<lexUnit id="l7963" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dringend</orthForm>
+</lexUnit>
+<lexUnit id="l7964" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dringlich</orthForm>
+</lexUnit>
+<lexUnit id="l7965" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ernstlich</orthForm>
+</lexUnit>
+<lexUnit id="l127872" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unaufschiebbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5305" category="adj" class="Zeit">
+<lexUnit id="l7966" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bevorstehend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5306" category="adj" class="Zeit">
+<lexUnit id="l7967" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufkommend</orthForm>
+</lexUnit>
+<lexUnit id="l7968" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufkeimend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5307" category="adj" class="Zeit">
+<lexUnit id="l7969" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jetzig</orthForm>
+</lexUnit>
+<lexUnit id="l7970" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>derzeitig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5308" category="adj" class="Zeit">
+<lexUnit id="l7971" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>momentan</orthForm>
+</lexUnit>
+<lexUnit id="l7972" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>augenblicklich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5309" category="adj" class="Zeit">
+<lexUnit id="l7973" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>heutig</orthForm>
+<example><text>am heutigen Tag</text></example>
+</lexUnit>
+<paraphrase>heute stattfindend</paraphrase>
+</synset>
+<synset id="s5310" category="adj" class="Zeit">
+<lexUnit id="l7974" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bisherig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5311" category="adj" class="Zeit">
+<lexUnit id="l7975" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>diesjährig</orthForm>
+</lexUnit>
+<lexUnit id="l127026" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>heurig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5312" category="adj" class="Zeit">
+<lexUnit id="l7976" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gegenwärtig</orthForm>
+</lexUnit>
+<lexUnit id="l7977" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitgenössisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5313" category="adj" class="Zeit">
+<lexUnit id="l7978" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gleichzeitig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5314" category="adj" class="Zeit">
+<lexUnit id="l7979" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neu</orthForm>
+</lexUnit>
+<lexUnit id="l7980" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neuartig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5315" category="adj" class="Zeit">
+<lexUnit id="l7981" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>originär</orthForm>
+</lexUnit>
+<paraphrase>grundlegend neu</paraphrase>
+</synset>
+<synset id="s5316" category="adj" class="Zeit">
+<lexUnit id="l7982" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>innovativ</orthForm>
+</lexUnit>
+<lexUnit id="l7983" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erneuernd</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5317" category="adj" class="Zeit">
+<lexUnit id="l7984" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>avantgardistisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5318" category="adj" class="Zeit">
+<lexUnit id="l7985" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>futuristisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5319" category="adj" class="Zeit">
+<lexUnit id="l7986" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bahnbrechend</orthForm>
+</lexUnit>
+<lexUnit id="l7987" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>revolutionär</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5320" category="adj" class="Zeit">
+<lexUnit id="l7988" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>brandneu</orthForm>
+</lexUnit>
+<lexUnit id="l7989" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nagelneu</orthForm>
+</lexUnit>
+<paraphrase>ganz neu</paraphrase>
+</synset>
+<synset id="s5321" category="adj" class="Zeit">
+<lexUnit id="l7990" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aktuell</orthForm>
+</lexUnit>
+<lexUnit id="l7991" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>laufend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5322" category="adj" class="Zeit">
+<lexUnit id="l7992" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unwidersprochen</orthForm>
+</lexUnit>
+<lexUnit id="l7993" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unwiderlegt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5323" category="adj" class="Zeit">
+<lexUnit id="l7994" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kursierend</orthForm>
+</lexUnit>
+<lexUnit id="l7995" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>virulent</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5324" category="adj" class="Zeit">
+<lexUnit id="l7996" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neugeboren</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5325" category="adj" class="Zeit">
+<lexUnit id="l7997" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neugeschaffen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5326" category="adj" class="Zeit">
+<lexUnit id="l7998" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neugegründet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5327" category="adj" class="Zeit">
+<lexUnit id="l7999" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>topaktuell</orthForm>
+</lexUnit>
+<lexUnit id="l8000" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>brandaktuell</orthForm>
+</lexUnit>
+<lexUnit id="l106973" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hochaktuell</orthForm>
+</lexUnit>
+<paraphrase>höchst aktuell</paraphrase>
+</synset>
+<synset id="s5328" category="adj" class="Zeit">
+<lexUnit id="l8001" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neuest</orthForm>
+</lexUnit>
+<lexUnit id="l8002" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ultimativ</orthForm>
+</lexUnit>
+<paraphrase>der ultimative Kick</paraphrase>
+</synset>
+<synset id="s5329" category="adj" class="Zeit">
+<lexUnit id="l8003" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>frischgebacken</orthForm>
+</lexUnit>
+<lexUnit id="l8004" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>frischgekürt</orthForm>
+</lexUnit>
+<paraphrase>der frischgebackene Landrat</paraphrase>
+</synset>
+<synset id="s5330" category="adj" class="Zeit">
+<lexUnit id="l8005" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>modern</orthForm>
+</lexUnit>
+<lexUnit id="l8006" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neumodisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5331" category="adj" class="Zeit">
+<lexUnit id="l8007" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unmodern</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5332" category="adj" class="Zeit">
+<lexUnit id="l8008" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rückständig</orthForm>
+</lexUnit>
+<lexUnit id="l8009" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zurückgeblieben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5333" category="adj" class="Zeit">
+<lexUnit id="l8010" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>in</orthForm>
+</lexUnit>
+<lexUnit id="l8011" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>angesagt</orthForm>
+</lexUnit>
+<lexUnit id="l8012" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kultig</orthForm>
+</lexUnit>
+<lexUnit id="l127206" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>trendig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5334" category="adj" class="Zeit">
+<lexUnit id="l8013" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neuzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5335" category="adj" class="Zeit">
+<lexUnit id="l8014" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>mega-in</orthForm>
+</lexUnit>
+<paraphrase>verstärkt</paraphrase>
+</synset>
+<synset id="s5336" category="adj" class="Zeit">
+<lexUnit id="l8015" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ultramodern</orthForm>
+</lexUnit>
+<lexUnit id="l8016" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hochmodern</orthForm>
+</lexUnit>
+<lexUnit id="l127066" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hypermodern</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5337" category="adj" class="Zeit">
+<lexUnit id="l8017" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>out</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5338" category="adj" class="Zeit">
+<lexUnit id="l8018" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anachronistisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5339" category="adj" class="Zeit">
+<lexUnit id="l8020" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>progressiv</orthForm>
+</lexUnit>
+<lexUnit id="l8021" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fortschrittlich</orthForm>
+</lexUnit>
+<lexUnit id="l8022" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitgemäß</orthForm>
+</lexUnit>
+<lexUnit id="l8023" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>up to date</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5340" category="adj" class="Zeit">
+<lexUnit id="l8024" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zivilisiert</orthForm>
+</lexUnit>
+<lexUnit id="l8025" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufgeklärt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5341" category="adj" class="Zeit">
+<lexUnit id="l8026" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>technikgläubig</orthForm>
+</lexUnit>
+<lexUnit id="l8027" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>technikorientiert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5342" category="adj" class="Zeit">
+<lexUnit id="l8028" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unkonventionell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5344" category="adj" class="Zeit">
+<lexUnit id="l8031" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>nachzeitig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5345" category="adj" class="Zeit">
+<lexUnit id="l8032" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>künftig</orthForm>
+</lexUnit>
+<lexUnit id="l8033" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zukünftig</orthForm>
+</lexUnit>
+<lexUnit id="l8034" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>angehend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5346" category="adj" class="Zeit">
+<lexUnit id="l8035" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zukunftsbezogen</orthForm>
+</lexUnit>
+<lexUnit id="l8036" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zukunftsorientiert</orthForm>
+</lexUnit>
+<lexUnit id="l125302" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zukunftsgerichtet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5347" category="adj" class="Zeit">
+<lexUnit id="l8037" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>designiert</orthForm>
+</lexUnit>
+<paraphrase>die designierte Ministerin</paraphrase>
+</synset>
+<synset id="s5348" category="adj" class="Zeit">
+<lexUnit id="l8038" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>werdend</orthForm>
+</lexUnit>
+<paraphrase>die werdende Mutter</paraphrase>
+</synset>
+<synset id="s5349" category="adj" class="Zeit">
+<lexUnit id="l8039" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anschließend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5350" category="adj" class="Zeit">
+<lexUnit id="l8040" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>morgig</orthForm>
+<example><text>am morgigen Tag</text></example>
+</lexUnit>
+<paraphrase>morgen stattfindend</paraphrase>
+</synset>
+<synset id="s5351" category="adj" class="Zeit">
+<lexUnit id="l8041" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kommend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5352" category="adj" class="Zeit">
+<lexUnit id="l8042" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>drohend</orthForm>
+</lexUnit>
+<lexUnit id="l8043" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dräuend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5353" category="adj" class="Zeit">
+<lexUnit id="l8044" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nächste</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5354" category="adj" class="Zeit">
+<lexUnit id="l8047" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>darauf folgend</orthForm>
+<orthVar>darauffolgend</orthVar>
+<oldOrthForm>darauffolgend</oldOrthForm>
+</lexUnit>
+<lexUnit id="l8045" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>folgend</orthForm>
+</lexUnit>
+<lexUnit id="l8046" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachfolgend</orthForm>
+</lexUnit>
+<lexUnit id="l127732" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nächstfolgend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5355" category="adj" class="Zeit">
+<lexUnit id="l8049" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anhängig</orthForm>
+</lexUnit>
+<lexUnit id="l8050" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anhängend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5356" category="adj" class="Zeit">
+<lexUnit id="l8051" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vergangen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5358" category="adj" class="Zeit">
+<lexUnit id="l8057" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anfänglich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5359" category="adj" class="Zeit">
+<lexUnit id="l8058" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ehemalig</orthForm>
+</lexUnit>
+<lexUnit id="l8059" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vormalig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5360" category="adj" class="Zeit">
+<lexUnit id="l8060" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>damalig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5361" category="adj" class="Zeit">
+<lexUnit id="l8061" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einstig</orthForm>
+</lexUnit>
+<lexUnit id="l8062" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einstmalig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5362" category="adj" class="Zeit">
+<lexUnit id="l8063" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gestrig</orthForm>
+<example><text>am gestrigen Tag</text></example>
+</lexUnit>
+<paraphrase>gestern stattfindend</paraphrase>
+</synset>
+<synset id="s5363" category="adj" class="Zeit">
+<lexUnit id="l8064" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorig</orthForm>
+</lexUnit>
+<lexUnit id="l8065" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorherig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5364" category="adj" class="Zeit">
+<lexUnit id="l8066" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zurückliegend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5365" category="adj" class="Zeit">
+<lexUnit id="l8067" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kürzlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5366" category="adj" class="Zeit">
+<lexUnit id="l8068" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>letztjährig</orthForm>
+</lexUnit>
+<lexUnit id="l8069" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorjährig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5367" category="adj" class="Zeit">
+<lexUnit id="l8070" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>alt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5368" category="adj" class="Zeit">
+<lexUnit id="l8071" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>klassisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5369" category="adj" class="Zeit">
+<lexUnit id="l8072" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>historisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5370" category="adj" class="Zeit">
+<lexUnit id="l8073" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geschichtsträchtig</orthForm>
+</lexUnit>
+<paraphrase>ein geschichtsträchtiger Ort</paraphrase>
+</synset>
+<synset id="s5371" category="adj" class="Zeit">
+<lexUnit id="l8074" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>antik</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5372" category="adj" class="Zeit">
+<lexUnit id="l8075" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>konventionell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5373" category="adj" class="Zeit">
+<lexUnit id="l8076" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>traditionell</orthForm>
+</lexUnit>
+<lexUnit id="l8077" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>konservativ</orthForm>
+</lexUnit>
+<lexUnit id="l8078" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>restaurativ</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5374" category="adj" class="Zeit">
+<lexUnit id="l8079" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erzkonservativ</orthForm>
+</lexUnit>
+<lexUnit id="l8080" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>reaktionär</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5375" category="adj" class="Zeit">
+<lexUnit id="l8081" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>althergebracht</orthForm>
+</lexUnit>
+<lexUnit id="l8082" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>altmodisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5376" category="adj" class="Zeit">
+<lexUnit id="l8083" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unzeitgemäß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5377" category="adj" class="Zeit">
+<lexUnit id="l8084" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überholt</orthForm>
+</lexUnit>
+<lexUnit id="l8085" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>antiquiert</orthForm>
+</lexUnit>
+<lexUnit id="l8086" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>veraltet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5378" category="adj" class="Zeit">
+<lexUnit id="l8088" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>obsolet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5379" category="adj" class="Zeit">
+<lexUnit id="l8089" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überaltert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5380" category="adj" class="Zeit">
+<lexUnit id="l8090" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorsintflutlich</orthForm>
+</lexUnit>
+<lexUnit id="l8091" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>steinzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5381" category="adj" class="Zeit">
+<lexUnit id="l8092" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>altbacken</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5382" category="adj" class="Zeit">
+<lexUnit id="l8093" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>langjährig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5383" category="adj" class="Zeit">
+<lexUnit id="l8094" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>morgendlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5384" category="adj" class="Zeit">
+<lexUnit id="l8095" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abendlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5385" category="adj" class="Zeit">
+<lexUnit id="l8096" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nächtlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5386" category="adj" class="Zeit">
+<lexUnit id="l8097" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mittäglich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5387" category="adj" class="Zeit">
+<lexUnit id="l8098" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorweihnachtlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5388" category="adj" class="Zeit">
+<lexUnit id="l8099" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kurz</orthForm>
+</lexUnit>
+<lexUnit id="l8100" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kurzzeitig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5389" category="adj" class="Zeit">
+<lexUnit id="l8101" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kurzfristig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5390" category="adj" class="Zeit">
+<lexUnit id="l8102" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>langfristig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5391" category="adj" class="Zeit">
+<lexUnit id="l8103" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>längerfristig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5392" category="adj" class="Zeit">
+<lexUnit id="l8104" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mittelfristig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5393" category="adj" class="Zeit">
+<lexUnit id="l8105" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>prompt</orthForm>
+</lexUnit>
+<lexUnit id="l8106" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unverzüglich</orthForm>
+</lexUnit>
+<lexUnit id="l8107" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postwendend</orthForm>
+</lexUnit>
+<paraphrase>mit kurzer/ohne Verzögerung</paraphrase>
+</synset>
+<synset id="s5394" category="adj" class="Zeit">
+<lexUnit id="l8108" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überstürzt</orthForm>
+</lexUnit>
+<lexUnit id="l8109" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überhastet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5395" category="adj" class="Zeit">
+<lexUnit id="l8110" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sofortig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5396" category="adj" class="Zeit">
+<lexUnit id="l8111" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unmittelbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5397" category="adj" class="Zeit">
+<lexUnit id="l8112" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fristlos</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5398" category="adj" class="Zeit">
+<lexUnit id="l8113" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>umgehend</orthForm>
+</lexUnit>
+<lexUnit id="l8114" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schnellstmöglich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5399" category="adj" class="Zeit">
+<lexUnit id="l8115" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rasch</orthForm>
+</lexUnit>
+<lexUnit id="l8116" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schnell</orthForm>
+</lexUnit>
+<lexUnit id="l106787" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>temporeich</orthForm>
+</lexUnit>
+<paraphrase>Dauer: kurzer Besuch/Flug</paraphrase>
+</synset>
+<synset id="s5400" category="adj" class="Zeit">
+<lexUnit id="l8117" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>knapp</orthForm>
+<example><text>eine knappe Viertelstunde</text></example>
+</lexUnit>
+<paraphrase>etwas weniger als die genannte Zeitspanne</paraphrase>
+</synset>
+<synset id="s5401" category="adj" class="Zeit">
+<lexUnit id="l8118" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verkürzt</orthForm>
+</lexUnit>
+<paraphrase>verkürzter Besuch</paraphrase>
+</synset>
+<synset id="s5402" category="adj" class="Zeit">
+<lexUnit id="l8119" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bündig</orthForm>
+</lexUnit>
+<paraphrase>Mitteilung</paraphrase>
+</synset>
+<synset id="s5403" category="adj" class="Zeit">
+<lexUnit id="l8120" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stichwortartig</orthForm>
+</lexUnit>
+<lexUnit id="l93213" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schlagwortartig</orthForm>
+</lexUnit>
+<paraphrase>Mitteilung/Bericht</paraphrase>
+</synset>
+<synset id="s5404" category="adj" class="Zeit">
+<lexUnit id="l8121" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einsilbig</orthForm>
+</lexUnit>
+<paraphrase>Mitteilung, so wie Antwort</paraphrase>
+</synset>
+<synset id="s5405" category="adj" class="Zeit">
+<lexUnit id="l8122" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lakonisch</orthForm>
+<example><text>ein lakonischer Kommentar</text></example>
+</lexUnit>
+</synset>
+<synset id="s5406" category="adj" class="Zeit">
+<lexUnit id="l8123" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kurz gefasst</orthForm>
+<orthVar>kurzgefasst</orthVar>
+<oldOrthForm>kurzgefaßt</oldOrthForm>
+</lexUnit>
+<paraphrase>kurzer Roman/Film,kurze Note</paraphrase>
+</synset>
+<synset id="s5407" category="adj" class="Zeit">
+<lexUnit id="l8125" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>endlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5408" category="adj" class="Zeit">
+<lexUnit id="l8126" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lang</orthForm>
+<example><text>lange Brauchbarkeit</text></example>
+</lexUnit>
+<paraphrase>Eigenschaft</paraphrase>
+</synset>
+<synset id="s5410" category="adj" class="Zeit">
+<lexUnit id="l8132" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unvergessen</orthForm>
+</lexUnit>
+<lexUnit id="l8133" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unvergesslich</orthForm>
+<oldOrthForm>unvergeßlich</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s5411" category="adj" class="Zeit">
+<lexUnit id="l8135" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unsterblich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5412" category="adj" class="Zeit">
+<lexUnit id="l8136" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vergänglich</orthForm>
+</lexUnit>
+<lexUnit id="l8137" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sterblich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5413" category="adj" class="Zeit">
+<lexUnit id="l8138" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fortdauernd</orthForm>
+</lexUnit>
+<lexUnit id="l8139" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beständig</orthForm>
+</lexUnit>
+<lexUnit id="l8140" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ständig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5414" category="adj" class="Zeit">
+<lexUnit id="l8141" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachhaltig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5415" category="adj" class="Zeit">
+<lexUnit id="l8142" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ausführlich</orthForm>
+</lexUnit>
+<lexUnit id="l8143" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ausgiebig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5416" category="adj" class="Zeit">
+<lexUnit id="l8144" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>detailliert</orthForm>
+</lexUnit>
+<lexUnit id="l8145" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>detailgetreu</orthForm>
+</lexUnit>
+<lexUnit id="l105514" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>detailreich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5417" category="adj" class="Zeit">
+<lexUnit id="l8146" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>endlos</orthForm>
+</lexUnit>
+<lexUnit id="l8147" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unaufhörlich</orthForm>
+</lexUnit>
+<paraphrase>ohne zeitliches Ende</paraphrase>
+</synset>
+<synset id="s5418" category="adj" class="Zeit">
+<lexUnit id="l8148" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>allmählich</orthForm>
+</lexUnit>
+<lexUnit id="l8149" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schrittweise</orthForm>
+</lexUnit>
+<lexUnit id="l107900" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>graduell</orthForm>
+</lexUnit>
+<paraphrase>nach und nach</paraphrase>
+</synset>
+<synset id="s5419" category="adj" class="Zeit">
+<lexUnit id="l8150" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>langwierig</orthForm>
+</lexUnit>
+<lexUnit id="l8151" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schleichend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5420" category="adj" class="Zeit">
+<lexUnit id="l8152" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anhaltend</orthForm>
+</lexUnit>
+<lexUnit id="l8153" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dauerhaft</orthForm>
+</lexUnit>
+<lexUnit id="l126826" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>persistent</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5421" category="adj" class="Zeit">
+<lexUnit id="l8154" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>langlebig</orthForm>
+</lexUnit>
+<lexUnit id="l8155" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>langwährend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5422" category="adj" class="Zeit">
+<lexUnit id="l8156" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ausgedehnt</orthForm>
+<example><text>ein ausgedehnter Besuch</text></example>
+</lexUnit>
+</synset>
+<synset id="s5423" category="adj" class="Zeit">
+<lexUnit id="l8157" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gestreckt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5424" category="adj" class="Zeit">
+<lexUnit id="l8159" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>langgezogen</orthForm>
+</lexUnit>
+<lexUnit id="l8160" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>langatmig</orthForm>
+</lexUnit>
+<paraphrase>AKTIVITÄT/DAUER</paraphrase>
+</synset>
+<synset id="s5425" category="adj" class="Zeit">
+<lexUnit id="l8161" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>geschwindigkeitsspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5426" category="adj" class="Zeit">
+<lexUnit id="l8162" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>still</orthForm>
+</lexUnit>
+<paraphrase>bewegungslos</paraphrase>
+</synset>
+<synset id="s5427" category="adj" class="Zeit">
+<lexUnit id="l8163" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>langsam</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5428" category="adj" class="Zeit">
+<lexUnit id="l8164" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>andante</orthForm>
+</lexUnit>
+<paraphrase>Tempobezeichnung in der Musik</paraphrase>
+</synset>
+<synset id="s5429" category="adj" class="Zeit">
+<lexUnit id="l8165" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>andantino</orthForm>
+</lexUnit>
+<paraphrase>weniger langsam als andante, Tempobezeichnung in der Musik</paraphrase>
+</synset>
+<synset id="s5430" category="adj" class="Zeit">
+<lexUnit id="l8166" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>allegro</orthForm>
+</lexUnit>
+<paraphrase>Tempobezeichnung in der Musik</paraphrase>
+</synset>
+<synset id="s5431" category="adj" class="Zeit">
+<lexUnit id="l8167" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>allegretto</orthForm>
+</lexUnit>
+<paraphrase>weniger schnell als allegro, Tempobezeichnung in der Musik</paraphrase>
+</synset>
+<synset id="s5432" category="adj" class="Zeit">
+<lexUnit id="l8168" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>adagio</orthForm>
+</lexUnit>
+<paraphrase>Tempobezeichnung in der Musik</paraphrase>
+</synset>
+<synset id="s5433" category="adj" class="Zeit">
+<lexUnit id="l8169" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>largo</orthForm>
+</lexUnit>
+<paraphrase>Tempobezeichnung in der Musik</paraphrase>
+</synset>
+<synset id="s5434" category="adj" class="Zeit">
+<lexUnit id="l8170" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>larghetto</orthForm>
+</lexUnit>
+<paraphrase>weniger getragen als largo, Tempobezeichnung in der Musik</paraphrase>
+</synset>
+<synset id="s5435" category="adj" class="Zeit">
+<lexUnit id="l8171" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schleppend</orthForm>
+</lexUnit>
+<lexUnit id="l8172" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>lahm</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5436" category="adj" class="Zeit">
+<lexUnit id="l8173" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gemächlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5437" category="adj" class="Zeit">
+<lexUnit id="l8174" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stockend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5438" category="adj" class="Zeit">
+<lexUnit id="l8175" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>getragen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5439" category="adj" class="Zeit">
+<lexUnit id="l8176" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schnell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5440" category="adj" class="Zeit">
+<lexUnit id="l8177" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geschwind</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5441" category="adj" class="Zeit">
+<lexUnit id="l8178" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hurtig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5442" category="adj" class="Zeit">
+<lexUnit id="l8179" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitgleich</orthForm>
+</lexUnit>
+<lexUnit id="l8180" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>simultan</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5444" category="adj" class="Zeit">
+<lexUnit id="l8183" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>live</orthForm>
+</lexUnit>
+<paraphrase>Die Übertragung ist live.</paraphrase>
+</synset>
+<synset id="s5445" category="adj" class="Zeit">
+<lexUnit id="l8184" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blitzschnell</orthForm>
+</lexUnit>
+<lexUnit id="l8185" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blitzartig</orthForm>
+</lexUnit>
+<lexUnit id="l8186" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rasant</orthForm>
+</lexUnit>
+<lexUnit id="l8187" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>explosionsartig</orthForm>
+</lexUnit>
+<lexUnit id="l127193" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sekundenschnell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5446" category="adj" class="Zeit">
+<lexUnit id="l8188" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>flink</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5447" category="adj" class="Zeit">
+<lexUnit id="l8189" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wieselflink</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5448" category="adj" class="Zeit">
+<lexUnit id="l8190" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>flott</orthForm>
+</lexUnit>
+<lexUnit id="l8191" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fix</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5449" category="adj" class="Zeit">
+<lexUnit id="l8192" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zügig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5450" category="adj" class="Zeit">
+<lexUnit id="l8193" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rapid</orthForm>
+</lexUnit>
+<lexUnit id="l8194" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rapide</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5451" category="adj" class="Zeit">
+<lexUnit id="l8195" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hastig</orthForm>
+</lexUnit>
+<lexUnit id="l8196" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eilig</orthForm>
+</lexUnit>
+<paraphrase>in Hast/Eile</paraphrase>
+</synset>
+<synset id="s5452" category="adj" class="Zeit">
+<lexUnit id="l8197" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorschnell</orthForm>
+</lexUnit>
+<lexUnit id="l8198" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>voreilig</orthForm>
+</lexUnit>
+<paraphrase>zu schnell</paraphrase>
+</synset>
+<synset id="s5453" category="adj" class="Zeit">
+<lexUnit id="l8199" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kometenhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5454" category="adj" class="Zeit">
+<lexUnit id="l8200" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fluchtartig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5455" category="adj" class="Zeit">
+<lexUnit id="l8201" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>altersspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5456" category="adj" class="Zeit">
+<lexUnit id="l8202" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jung</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5457" category="adj" class="Zeit">
+<lexUnit id="l8203" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jugendlich</orthForm>
+</lexUnit>
+<lexUnit id="l107456" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>juvenil</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5458" category="adj" class="Zeit">
+<lexUnit id="l8204" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kindlich</orthForm>
+</lexUnit>
+<lexUnit id="l8205" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kindhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5459" category="adj" class="Zeit">
+<lexUnit id="l8206" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mädchenhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5460" category="adj" class="Zeit">
+<lexUnit id="l8207" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jungenhaft</orthForm>
+</lexUnit>
+<lexUnit id="l8208" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bubenhaft</orthForm>
+</lexUnit>
+<lexUnit id="l8209" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>knabenhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5461" category="adj" class="Zeit">
+<lexUnit id="l8210" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>alt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5462" category="adj" class="Zeit">
+<lexUnit id="l8211" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>greisenhaft</orthForm>
+</lexUnit>
+<lexUnit id="l8212" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>greisig</orthForm>
+</lexUnit>
+<lexUnit id="l8213" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vergreist</orthForm>
+</lexUnit>
+<paraphrase>alt wie ein Greis</paraphrase>
+</synset>
+<synset id="s5463" category="adj" class="Zeit">
+<lexUnit id="l8214" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mumienhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5464" category="adj" class="Zeit">
+<lexUnit id="l8215" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>uralt</orthForm>
+</lexUnit>
+<paraphrase>sehr alt</paraphrase>
+</synset>
+<synset id="s5465" category="adj" class="Zeit">
+<lexUnit id="l8216" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>steinalt</orthForm>
+</lexUnit>
+<paraphrase>sehr alt</paraphrase>
+</synset>
+<synset id="s5466" category="adj" class="Zeit">
+<lexUnit id="l8217" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>senil</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5467" category="adj" class="Zeit">
+<lexUnit id="l8218" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neu</orthForm>
+<example><text>ein neues Auto</text></example>
+</lexUnit>
+<paraphrase>ungebraucht/unbenutzt</paraphrase>
+</synset>
+<synset id="s5468" category="adj" class="Zeit">
+<lexUnit id="l8219" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unberührt</orthForm>
+</lexUnit>
+<lexUnit id="l8220" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jungfräulich</orthForm>
+</lexUnit>
+<lexUnit id="l8221" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unangetastet</orthForm>
+</lexUnit>
+<paraphrase>noch nicht berührt</paraphrase>
+</synset>
+<synset id="s5469" category="adj" class="Zeit">
+<lexUnit id="l8222" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>alt</orthForm>
+</lexUnit>
+<paraphrase>gebraucht/benutzt</paraphrase>
+</synset>
+<synset id="s5471" category="adj" class="Zeit">
+<lexUnit id="l8224" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einjährig</orthForm>
+<orthVar>1-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s5472" category="adj" class="Zeit">
+<lexUnit id="l8225" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mehrjährig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5473" category="adj" class="Zeit">
+<lexUnit id="l8226" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweijährig</orthForm>
+<orthVar>2-jährig</orthVar>
+<oldOrthVar>2jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5474" category="adj" class="Zeit">
+<lexUnit id="l8228" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreijährig</orthForm>
+<orthVar>3-jährig</orthVar>
+<oldOrthVar>3jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5475" category="adj" class="Zeit">
+<lexUnit id="l8230" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierjährig</orthForm>
+<orthVar>4-jährig</orthVar>
+<oldOrthVar>4jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5476" category="adj" class="Zeit">
+<lexUnit id="l8232" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfjährig</orthForm>
+<orthVar>5-jährig</orthVar>
+<oldOrthVar>5jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5477" category="adj" class="Zeit">
+<lexUnit id="l8234" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sechsjährig</orthForm>
+<orthVar>6-jährig</orthVar>
+<oldOrthVar>6jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5478" category="adj" class="Zeit">
+<lexUnit id="l8236" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>siebenjährig</orthForm>
+<orthVar>7-jährig</orthVar>
+<oldOrthVar>7jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5479" category="adj" class="Zeit">
+<lexUnit id="l8238" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>achtjährig</orthForm>
+<orthVar>8-jährig</orthVar>
+<oldOrthVar>8jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5480" category="adj" class="Zeit">
+<lexUnit id="l8240" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neunjährig</orthForm>
+<orthVar>9-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s5481" category="adj" class="Zeit">
+<lexUnit id="l8242" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zehnjährig</orthForm>
+<orthVar>10-jährig</orthVar>
+<oldOrthVar>10jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5482" category="adj" class="Zeit">
+<lexUnit id="l8244" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>elfjährig</orthForm>
+<orthVar>11-jährig</orthVar>
+<oldOrthVar>11jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5483" category="adj" class="Zeit">
+<lexUnit id="l8246" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zwölfjährig</orthForm>
+<orthVar>12-jährig</orthVar>
+<oldOrthForm>zwölfjährig</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s5484" category="adj" class="Zeit">
+<lexUnit id="l8248" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreizehnjährig</orthForm>
+<orthVar>13-jährig</orthVar>
+<oldOrthVar>13jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5485" category="adj" class="Zeit">
+<lexUnit id="l8250" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierzehnjährig</orthForm>
+<orthVar>14-jährig</orthVar>
+<oldOrthVar>14jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5486" category="adj" class="Zeit">
+<lexUnit id="l8252" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfzehnjährig</orthForm>
+<orthVar>15-jährig</orthVar>
+<oldOrthVar>15jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5487" category="adj" class="Zeit">
+<lexUnit id="l8254" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sechzehnjährig</orthForm>
+<orthVar>16-jährig</orthVar>
+<oldOrthVar>16jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5488" category="adj" class="Zeit">
+<lexUnit id="l8256" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>siebzehnjährig</orthForm>
+<orthVar>17-jährig</orthVar>
+<oldOrthForm>siebzehnjährig</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s5489" category="adj" class="Zeit">
+<lexUnit id="l8258" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>achtzehnjährig</orthForm>
+<orthVar>18-jährig</orthVar>
+<oldOrthVar>18jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5490" category="adj" class="Zeit">
+<lexUnit id="l8260" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neunzehnjährig</orthForm>
+<orthVar>19-jährig</orthVar>
+<oldOrthVar>19jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5491" category="adj" class="Zeit">
+<lexUnit id="l8262" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zwanzigjährig</orthForm>
+<orthVar>20-jährig</orthVar>
+<oldOrthVar>20jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5492" category="adj" class="Zeit">
+<lexUnit id="l8264" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreißigjährig</orthForm>
+<orthVar>30-jährig</orthVar>
+<oldOrthVar>30jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5493" category="adj" class="Zeit">
+<lexUnit id="l8266" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierzigjährig</orthForm>
+<orthVar>40-jährig</orthVar>
+<oldOrthVar>40jährig</oldOrthVar>
+</lexUnit>
+</synset>
+<synset id="s5494" category="adj" class="Zeit">
+<lexUnit id="l8268" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>gewohnheitsspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5495" category="adj" class="Zeit">
+<lexUnit id="l8269" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>normal</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5496" category="adj" class="Zeit">
+<lexUnit id="l8270" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>durchschnittlich</orthForm>
+</lexUnit>
+<lexUnit id="l8271" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mittelmäßig</orthForm>
+</lexUnit>
+<lexUnit id="l8272" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mittel</orthForm>
+</lexUnit>
+<lexUnit id="l8273" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mäßig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5497" category="adj" class="Zeit">
+<lexUnit id="l8274" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>serienmäßig</orthForm>
+</lexUnit>
+<lexUnit id="l8275" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>standardmäßig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5498" category="adj" class="Zeit">
+<lexUnit id="l8276" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überdurchschnittlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5499" category="adj" class="Zeit">
+<lexUnit id="l8277" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unterdurchschnittlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5500" category="adj" class="Zeit">
+<lexUnit id="l8278" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>selbstverständlich</orthForm>
+</lexUnit>
+<lexUnit id="l8279" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>selbstredend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5501" category="adj" class="Zeit">
+<lexUnit id="l8280" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mittlere</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5502" category="adj" class="Zeit">
+<lexUnit id="l8281" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>üblich</orthForm>
+</lexUnit>
+<lexUnit id="l8282" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>herkömmlich</orthForm>
+</lexUnit>
+<lexUnit id="l8283" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gebräuchlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5503" category="adj" class="Zeit">
+<lexUnit id="l8284" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>landläufig</orthForm>
+</lexUnit>
+<lexUnit id="l8285" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gängig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5504" category="adj" class="Zeit">
+<lexUnit id="l8286" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ortsüblich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5505" category="adj" class="Zeit">
+<lexUnit id="l8287" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>handelsüblich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5506" category="adj" class="Zeit">
+<lexUnit id="l8288" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>haushaltsüblich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5507" category="adj" class="Zeit">
+<lexUnit id="l8289" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>branchenüblich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5508" category="adj" class="Zeit">
+<lexUnit id="l8290" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>routinemäßig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5509" category="adj" class="Zeit">
+<lexUnit id="l8291" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gewohnt</orthForm>
+</lexUnit>
+<lexUnit id="l8292" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gewöhnlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5510" category="adj" class="Zeit">
+<lexUnit id="l8293" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>alltäglich</orthForm>
+<example><text>ein alltäglicher Mann</text></example>
+</lexUnit>
+<paraphrase>keine Besonderheiten aufweisend</paraphrase>
+</synset>
+<synset id="s5511" category="adj" class="Zeit">
+<lexUnit id="l8294" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>werktäglich</orthForm>
+<example><text>er war werktäglich gekleidet</text></example>
+</lexUnit>
+<paraphrase>wie an jedem Werktag</paraphrase>
+</synset>
+<synset id="s5513" category="adj" class="Zeit">
+<lexUnit id="l8296" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>typisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5514" category="adj" class="Zeit">
+<lexUnit id="l8297" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>prototypisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5515" category="adj" class="Zeit">
+<lexUnit id="l8298" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stereotypisch</orthForm>
+</lexUnit>
+<lexUnit id="l8299" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stereotyp</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5517" category="adj" class="Zeit">
+<lexUnit id="l8301" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unnormal</orthForm>
+</lexUnit>
+<lexUnit id="l8302" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abnorm</orthForm>
+</lexUnit>
+<lexUnit id="l8303" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anomal</orthForm>
+</lexUnit>
+<lexUnit id="l108227" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abnormal</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5518" category="adj" class="Zeit">
+<lexUnit id="l8304" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungewohnt</orthForm>
+</lexUnit>
+<lexUnit id="l8305" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungewöhnlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5519" category="adj" class="Zeit">
+<lexUnit id="l8306" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>außergewöhnlich</orthForm>
+</lexUnit>
+<lexUnit id="l8307" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>originell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5520" category="adj" class="Zeit">
+<lexUnit id="l8308" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gewöhnungsbedürftig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5521" category="adj" class="Zeit">
+<lexUnit id="l8309" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einmalig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5523" category="adj" class="Zeit">
+<lexUnit id="l8313" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unerwartet</orthForm>
+</lexUnit>
+<lexUnit id="l8314" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überraschend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5524" category="adj" class="Zeit">
+<lexUnit id="l8315" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungeahnt</orthForm>
+</lexUnit>
+<lexUnit id="l8316" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unerahnt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5525" category="adj" class="Zeit">
+<lexUnit id="l8317" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unverhofft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5526" category="adj" class="Zeit">
+<lexUnit id="l8318" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unvermutet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5527" category="adj" class="Zeit">
+<lexUnit id="l8319" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erstaunlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5529" category="adj" class="Zeit">
+<lexUnit id="l8321" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verwunderlich</orthForm>
+</lexUnit>
+<lexUnit id="l8322" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wundersam</orthForm>
+</lexUnit>
+<lexUnit id="l8323" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wunderlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5530" category="adj" class="Zeit">
+<lexUnit id="l8325" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fantastisch</orthForm>
+<orthVar>phantastisch</orthVar>
+<oldOrthForm>phantastisch</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s5531" category="adj" class="Zeit">
+<lexUnit id="l8326" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>regelwidrig</orthForm>
+</lexUnit>
+<lexUnit id="l8327" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>normwidrig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5532" category="adj" class="Zeit">
+<lexUnit id="l8328" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verfassungswidrig</orthForm>
+</lexUnit>
+<lexUnit id="l8329" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gesetzwidrig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5533" category="adj" class="Zeit">
+<lexUnit id="l8330" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sittenwidrig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5534" category="adj" class="Zeit">
+<lexUnit id="l8331" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rechtswidrig</orthForm>
+</lexUnit>
+<lexUnit id="l8332" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>widerrechtlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5535" category="adj" class="Zeit">
+<lexUnit id="l8333" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wahrheitswidrig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5536" category="adj" class="Zeit">
+<lexUnit id="l8334" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unüblich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5537" category="adj" class="Zeit">
+<lexUnit id="l8335" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>untypisch</orthForm>
+</lexUnit>
+<lexUnit id="l106723" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>atypisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5538" category="adj" class="Zeit">
+<lexUnit id="l8336" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einheitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5539" category="adj" class="Zeit">
+<lexUnit id="l8337" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>uneinheitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5540" category="adj" class="Zeit">
+<lexUnit id="l8338" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bundeseinheitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5541" category="adj" class="Zeit">
+<lexUnit id="l8339" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>landeseinheitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5542" category="adj" class="Zeit">
+<lexUnit id="l8340" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>staatseinheitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5543" category="adj" class="Zeit">
+<lexUnit id="l8341" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>truppeneinheitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5544" category="adj" class="Zeit">
+<lexUnit id="l8342" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einförmig</orthForm>
+</lexUnit>
+<lexUnit id="l8343" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gleichförmig</orthForm>
+</lexUnit>
+<lexUnit id="l8344" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>uniform</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5545" category="adj" class="Zeit">
+<lexUnit id="l8345" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gleichmäßig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5546" category="adj" class="Zeit">
+<lexUnit id="l8346" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einhellig</orthForm>
+</lexUnit>
+<lexUnit id="l8347" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>übereinstimmend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5522" category="adj" class="Zeit">
+<lexUnit id="l8311" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abwegig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5512" category="adj" class="Zeit">
+<lexUnit id="l8295" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sonntäglich</orthForm>
+<example><text>der sonntägliche Spaziergang</text></example>
+</lexUnit>
+<paraphrase>für einen Sonntag üblich</paraphrase>
+</synset>
+<synset id="s5547" category="adj" class="Zeit">
+<lexUnit id="l8348" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>regelmäßig</orthForm>
+<example><text>der Tisch hat eine regelmäßige Oberfläche</text></example>
+<example><text>regelmäßige Gesichtszüge</text></example>
+</lexUnit>
+</synset>
+<synset id="s5548" category="adj" class="Zeit">
+<lexUnit id="l8349" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ebenmäßig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5549" category="adj" class="Zeit">
+<lexUnit id="l8350" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>regelhaft</orthForm>
+</lexUnit>
+<lexUnit id="l8351" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geregelt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5409" category="adj" class="Zeit">
+<lexUnit id="l8127" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ewig</orthForm>
+</lexUnit>
+<lexUnit id="l8128" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unendlich</orthForm>
+</lexUnit>
+<lexUnit id="l8129" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unvergänglich</orthForm>
+</lexUnit>
+<lexUnit id="l8130" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitlos</orthForm>
+</lexUnit>
+<lexUnit id="l8131" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>immerwährend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s66402" category="adj" class="Zeit">
+<lexUnit id="l92164" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ruckartig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s66407" category="adj" class="Zeit">
+<lexUnit id="l92169" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stichprobenartig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s66439" category="adj" class="Zeit">
+<lexUnit id="l92206" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stichpunktartig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s66899" category="adj" class="Zeit">
+<lexUnit id="l92717" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>großjährig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s67148" category="adj" class="Zeit">
+<lexUnit id="l92997" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>konsekutiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s67303" category="adj" class="Zeit">
+<lexUnit id="l93183" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nicht ständig</orthForm>
+<orthVar>nichtständig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s67329" category="adj" class="Zeit">
+<lexUnit id="l93218" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überfallartig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s67333" category="adj" class="Zeit">
+<lexUnit id="l93222" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>handstreichartig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5443" category="adj" class="Zeit">
+<lexUnit id="l8181" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nahtlos</orthForm>
+</lexUnit>
+<lexUnit id="l8182" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verzögerungslos</orthForm>
+</lexUnit>
+<paraphrase>ohne Verzögerung</paraphrase>
+</synset>
+<synset id="s68956" category="adj" class="Zeit">
+<lexUnit id="l95109" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anstehend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s68959" category="adj" class="Zeit">
+<lexUnit id="l95112" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachstehend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5357" category="adj" class="Zeit">
+<lexUnit id="l8052" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorbei</orthForm>
+</lexUnit>
+<lexUnit id="l8053" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorüber</orthForm>
+</lexUnit>
+<lexUnit id="l8054" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aus</orthForm>
+</lexUnit>
+<lexUnit id="l8055" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>gegessen</orthForm>
+</lexUnit>
+<lexUnit id="l8056" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>passiert</orthForm>
+</lexUnit>
+<paraphrase>nur prädikativ</paraphrase>
+</synset>
+<synset id="s70823" category="adj" class="Zeit">
+<lexUnit id="l97237" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>diskontinuierlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s70824" category="adj" class="Zeit">
+<lexUnit id="l97238" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stoßweise</orthForm>
+</lexUnit>
+<lexUnit id="l97239" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schubweise</orthForm>
+</lexUnit>
+</synset>
+<synset id="s71732" category="adj" class="Zeit">
+<lexUnit id="l98296" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eiszeitlich</orthForm>
+</lexUnit>
+<lexUnit id="l107279" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glazial</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77323" category="adj" class="Zeit">
+<lexUnit id="l105248" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorchristlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77587" category="adj" class="Zeit">
+<lexUnit id="l105538" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abseitig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77641" category="adj" class="Zeit">
+<lexUnit id="l105598" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>reformatorisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77647" category="adj" class="Zeit">
+<lexUnit id="l105605" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überlang</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77658" category="adj" class="Zeit">
+<lexUnit id="l105616" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ultralang</orthForm>
+</lexUnit>
+</synset>
+<synset id="s77811" category="adj" class="Zeit">
+<lexUnit id="l105795" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>extensiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78031" category="adj" class="Zeit">
+<lexUnit id="l106035" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bronzezeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78214" category="adj" class="Zeit">
+<lexUnit id="l106266" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neolithisch</orthForm>
+</lexUnit>
+<lexUnit id="l106386" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jungsteinzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78444" category="adj" class="Zeit">
+<lexUnit id="l106525" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfzigjährig</orthForm>
+<orthVar>50-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s78538" category="adj" class="Zeit">
+<lexUnit id="l106628" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachchristlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78629" category="adj" class="Zeit">
+<lexUnit id="l106732" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nunmehrig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78824" category="adj" class="Zeit">
+<lexUnit id="l106962" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eisenzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78833" category="adj" class="Zeit">
+<lexUnit id="l106971" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tagesaktuell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78941" category="adj" class="Zeit">
+<lexUnit id="l107102" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>allerletzte</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78952" category="adj" class="Zeit">
+<lexUnit id="l107116" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>frühneuzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78971" category="adj" class="Zeit">
+<lexUnit id="l107139" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungleichmäßig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78973" category="adj" class="Zeit">
+<lexUnit id="l107141" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>frühkindlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78996" category="adj" class="Zeit">
+<lexUnit id="l107165" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungebräuchlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79024" category="adj" class="Zeit">
+<lexUnit id="l107199" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>temporal</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79027" category="adj" class="Zeit">
+<lexUnit id="l107204" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spätantik</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79042" category="adj" class="Zeit">
+<lexUnit id="l107227" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>iterativ</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79095" category="adj" class="Zeit">
+<lexUnit id="l107287" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tausendjährig</orthForm>
+<orthVar>1000-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s79126" category="adj" class="Zeit">
+<lexUnit id="l107321" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gründerzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79189" category="adj" class="Zeit">
+<lexUnit id="l107397" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>junior</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79216" category="adj" class="Zeit">
+<lexUnit id="l107429" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nacheiszeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79219" category="adj" class="Zeit">
+<lexUnit id="l107432" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>regionaltypisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79235" category="adj" class="Zeit">
+<lexUnit id="l107448" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mesolithisch</orthForm>
+</lexUnit>
+<lexUnit id="l107449" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mittelsteinzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79251" category="adj" class="Zeit">
+<lexUnit id="l107482" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>antiquarisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79339" category="adj" class="Zeit">
+<lexUnit id="l107583" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unorthodox</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79372" category="adj" class="Zeit">
+<lexUnit id="l107619" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hip</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79396" category="adj" class="Zeit">
+<lexUnit id="l107645" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erstrangig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79402" category="adj" class="Zeit">
+<lexUnit id="l107655" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>landestypisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79403" category="adj" class="Zeit">
+<lexUnit id="l107656" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeittypisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79407" category="adj" class="Zeit">
+<lexUnit id="l107660" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79455" category="adj" class="Zeit">
+<lexUnit id="l107713" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>greis</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79489" category="adj" class="Zeit">
+<lexUnit id="l107751" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>quartär</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79496" category="adj" class="Zeit">
+<lexUnit id="l107759" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>reformistisch</orthForm>
+</lexUnit>
+<lexUnit id="l111587" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>reformerisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79506" category="adj" class="Zeit">
+<lexUnit id="l107769" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pubertär</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79518" category="adj" class="Zeit">
+<lexUnit id="l107784" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nationalkonservativ</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79522" category="adj" class="Zeit">
+<lexUnit id="l107793" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verderblich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79531" category="adj" class="Zeit">
+<lexUnit id="l107806" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorrevolutionär</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79696" category="adj" class="Zeit">
+<lexUnit id="l107995" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>urzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79735" category="adj" class="Zeit">
+<lexUnit id="l108047" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einschichtig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79757" category="adj" class="Zeit">
+<lexUnit id="l108073" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>napoleonisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79873" category="adj" class="Zeit">
+<lexUnit id="l108193" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>prospektiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79907" category="adj" class="Zeit">
+<lexUnit id="l108234" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postmortal</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79908" category="adj" class="Zeit">
+<lexUnit id="l108235" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postgradual</orthForm>
+</lexUnit>
+<lexUnit id="l108245" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postgraduell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79909" category="adj" class="Zeit">
+<lexUnit id="l108236" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>posttraumatisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79910" category="adj" class="Zeit">
+<lexUnit id="l108237" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postoperativ</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79911" category="adj" class="Zeit">
+<lexUnit id="l108238" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postkolonial</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79912" category="adj" class="Zeit">
+<lexUnit id="l108239" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postglazial</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79913" category="adj" class="Zeit">
+<lexUnit id="l108240" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postapokalyptisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79915" category="adj" class="Zeit">
+<lexUnit id="l108242" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postnatal</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79916" category="adj" class="Zeit">
+<lexUnit id="l108243" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postpubertär</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79917" category="adj" class="Zeit">
+<lexUnit id="l108244" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postsozialistisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79919" category="adj" class="Zeit">
+<lexUnit id="l108247" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postembryonal</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79920" category="adj" class="Zeit">
+<lexUnit id="l108248" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postkapitalistisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79921" category="adj" class="Zeit">
+<lexUnit id="l108249" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postkolonialistisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79922" category="adj" class="Zeit">
+<lexUnit id="l108250" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>posttertiär</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79938" category="adj" class="Zeit">
+<lexUnit id="l108269" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hallstattzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79984" category="adj" class="Zeit">
+<lexUnit id="l108323" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfminütig</orthForm>
+<orthVar>5-minütig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s79985" category="adj" class="Zeit">
+<lexUnit id="l108324" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zehnminütig</orthForm>
+<orthVar>10-minütig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s79986" category="adj" class="Zeit">
+<lexUnit id="l108325" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mehrminütig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80028" category="adj" class="Zeit">
+<lexUnit id="l108370" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mesozoisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80130" category="adj" class="Zeit">
+<lexUnit id="l108505" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>senior</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80179" category="adj" class="Zeit">
+<lexUnit id="l108564" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>völkerrechtswidrig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80204" category="adj" class="Zeit">
+<lexUnit id="l108595" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>halbstündlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80209" category="adj" class="Zeit">
+<lexUnit id="l108601" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>achtzigjährig</orthForm>
+<orthVar>80-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s80233" category="adj" class="Zeit">
+<lexUnit id="l108631" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>prognostisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80284" category="adj" class="Zeit">
+<lexUnit id="l108687" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pleistozän</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80285" category="adj" class="Zeit">
+<lexUnit id="l108688" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>holozän</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80291" category="adj" class="Zeit">
+<lexUnit id="l108694" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>paläozoisch</orthForm>
+</lexUnit>
+<lexUnit id="l108710" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>altsteinzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80292" category="adj" class="Zeit">
+<lexUnit id="l108695" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kambrisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80384" category="adj" class="Zeit">
+<lexUnit id="l108801" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>marktüblich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80385" category="adj" class="Zeit">
+<lexUnit id="l108802" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>landesüblich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80441" category="adj" class="Zeit">
+<lexUnit id="l108862" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorausgehend</orthForm>
+</lexUnit>
+<lexUnit id="l108863" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorangehend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80453" category="adj" class="Zeit">
+<lexUnit id="l108876" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>idealtypisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80548" category="adj" class="Zeit">
+<lexUnit id="l108977" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pränatal</orthForm>
+</lexUnit>
+<lexUnit id="l111549" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorgeburtlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80549" category="adj" class="Zeit">
+<lexUnit id="l108978" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>präklinisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80550" category="adj" class="Zeit">
+<lexUnit id="l108979" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>präoperativ</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80551" category="adj" class="Zeit">
+<lexUnit id="l108980" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>präverbal</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80552" category="adj" class="Zeit">
+<lexUnit id="l108981" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>prälogisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80553" category="adj" class="Zeit">
+<lexUnit id="l108982" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>präglazial</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81002" category="adj" class="Zeit">
+<lexUnit id="l109506" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ausgehend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81023" category="adj" class="Zeit">
+<lexUnit id="l115938" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweitletzte</orthForm>
+</lexUnit>
+<lexUnit id="l109529" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorletzte</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81034" category="adj" class="Zeit">
+<lexUnit id="l109544" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lang andauernd</orthForm>
+<orthVar>langandauernd</orthVar>
+</lexUnit>
+<lexUnit id="l109542" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lang anhaltend</orthForm>
+<orthVar>langanhaltend</orthVar>
+</lexUnit>
+</synset>
+<synset id="s81530" category="adj" class="Zeit">
+<lexUnit id="l110168" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweitälteste</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81531" category="adj" class="Zeit">
+<lexUnit id="l110169" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>drittälteste</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81532" category="adj" class="Zeit">
+<lexUnit id="l110170" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>viertälteste</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81762" category="adj" class="Zeit">
+<lexUnit id="l110435" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfundzwanzigjährig</orthForm>
+<orthVar>25-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s81763" category="adj" class="Zeit">
+<lexUnit id="l110436" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hundertjährig</orthForm>
+<orthVar>100-jährig</orthVar>
+</lexUnit>
+<lexUnit id="l110450" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einhundertjährig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81764" category="adj" class="Zeit">
+<lexUnit id="l110437" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweihundertjährig</orthForm>
+<orthVar>200-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s81765" category="adj" class="Zeit">
+<lexUnit id="l110438" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hundertjünfzigjährig</orthForm>
+<orthVar>150-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s81766" category="adj" class="Zeit">
+<lexUnit id="l110439" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sechzigjährig</orthForm>
+<orthVar>60-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s81767" category="adj" class="Zeit">
+<lexUnit id="l110440" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreihundertjährig</orthForm>
+<orthVar>300-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s81768" category="adj" class="Zeit">
+<lexUnit id="l110441" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfhundertjährig</orthForm>
+<orthVar>500-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s81769" category="adj" class="Zeit">
+<lexUnit id="l110443" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfundsiebzigjährig</orthForm>
+<orthVar>75-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s81770" category="adj" class="Zeit">
+<lexUnit id="l110445" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>siebzigjährig</orthForm>
+<orthVar>70-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s81771" category="adj" class="Zeit">
+<lexUnit id="l110446" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierhundertjährig</orthForm>
+<orthVar>400-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s81772" category="adj" class="Zeit">
+<lexUnit id="l110447" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eineinhalbjährig</orthForm>
+</lexUnit>
+<lexUnit id="l110448" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anderthalbjährig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81773" category="adj" class="Zeit">
+<lexUnit id="l110449" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweieinhalbjährig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81794" category="adj" class="Zeit">
+<lexUnit id="l110472" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neoklassisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81878" category="adj" class="Zeit">
+<lexUnit id="l110566" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>halbstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81881" category="adj" class="Zeit">
+<lexUnit id="l110569" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorindustriell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s81882" category="adj" class="Zeit">
+<lexUnit id="l110570" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>präkolumbisch</orthForm>
+</lexUnit>
+<lexUnit id="l110571" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>präkolumbianisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s82327" category="adj" class="Zeit">
+<lexUnit id="l111094" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachmalig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s82343" category="adj" class="Zeit">
+<lexUnit id="l111114" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>übernächste</orthForm>
+</lexUnit>
+</synset>
+<synset id="s82585" category="adj" class="Zeit">
+<lexUnit id="l111425" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>metabolisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s82588" category="adj" class="Zeit">
+<lexUnit id="l111428" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>elisabethanisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s82602" category="adj" class="Zeit">
+<lexUnit id="l111442" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>drittletzte</orthForm>
+</lexUnit>
+</synset>
+<synset id="s82678" category="adj" class="Zeit">
+<lexUnit id="l111545" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreißigminütig</orthForm>
+<orthVar>30-minütig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s82715" category="adj" class="Zeit">
+<lexUnit id="l111591" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>letztmalig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s82911" category="adj" class="Zeit">
+<lexUnit id="l111825" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kaiserzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s82927" category="adj" class="Zeit">
+<lexUnit id="l111842" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorehelich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s83837" category="adj" class="Zeit">
+<lexUnit id="l113048" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweistündlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s83838" category="adj" class="Zeit">
+<lexUnit id="l113049" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schließlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s83839" category="adj" class="Zeit">
+<lexUnit id="l113050" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweiwöchentlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s83840" category="adj" class="Zeit">
+<lexUnit id="l113051" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s83841" category="adj" class="Zeit">
+<lexUnit id="l113052" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweimonatlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s83842" category="adj" class="Zeit">
+<lexUnit id="l113053" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweijährlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s83843" category="adj" class="Zeit">
+<lexUnit id="l113054" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachmittäglich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s83844" category="adj" class="Zeit">
+<lexUnit id="l113055" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mitternächtlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s84118" category="adj" class="Zeit">
+<lexUnit id="l113431" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>endzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s84119" category="adj" class="Zeit">
+<lexUnit id="l113432" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spätbronzezeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s84120" category="adj" class="Zeit">
+<lexUnit id="l113433" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kreidezeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s84121" category="adj" class="Zeit">
+<lexUnit id="l113434" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>frühbronzezeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s84122" category="adj" class="Zeit">
+<lexUnit id="l113435" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tageszeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s84123" category="adj" class="Zeit">
+<lexUnit id="l113436" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>la-tène-zeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s86077" category="adj" class="Zeit">
+<lexUnit id="l115945" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kalendarisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s86189" category="adj" class="Zeit">
+<lexUnit id="l116074" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>paläolithisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s86243" category="adj" class="Zeit">
+<lexUnit id="l116138" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>devonisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s86563" category="adj" class="Zeit">
+<lexUnit id="l116542" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>habituell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s93907" category="adj" class="Zeit">
+<lexUnit id="l125608" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schnellfüßig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s93936" category="adj" class="Zeit">
+<lexUnit id="l125644" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jahrhundertealt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s93944" category="adj" class="Zeit">
+<lexUnit id="l125657" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>echt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s93955" category="adj" class="Zeit">
+<lexUnit id="l125669" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bleibend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94016" category="adj" class="Zeit">
+<lexUnit id="l125736" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rezent</orthForm>
+</lexUnit>
+</synset>
+<synset id="s1238" category="adj" class="Zeit">
+<lexUnit id="l2043" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erwachsen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94046" category="adj" class="Zeit">
+<lexUnit id="l125775" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unstetig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94072" category="adj" class="Zeit">
+<lexUnit id="l125803" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorklinisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94095" category="adj" class="Zeit">
+<lexUnit id="l125839" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wertkonservativ</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94107" category="adj" class="Zeit">
+<lexUnit id="l125852" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hochbetagt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94123" category="adj" class="Zeit">
+<lexUnit id="l125872" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unrund</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94126" category="adj" class="Zeit">
+<lexUnit id="l125876" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fabrikneu</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94139" category="adj" class="Zeit">
+<lexUnit id="l125889" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorgängig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94153" category="adj" class="Zeit">
+<lexUnit id="l125905" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>frühestmöglich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94163" category="adj" class="Zeit">
+<lexUnit id="l125916" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schnellwüchsig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94235" category="adj" class="Zeit">
+<lexUnit id="l126007" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitgerecht</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94243" category="adj" class="Zeit">
+<lexUnit id="l126018" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>konzis</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94249" category="adj" class="Zeit">
+<lexUnit id="l126027" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>inkonstant</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94267" category="adj" class="Zeit">
+<lexUnit id="l126049" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>altbacken</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94330" category="adj" class="Zeit">
+<lexUnit id="l126122" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>antizyklisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94331" category="adj" class="Zeit">
+<lexUnit id="l126123" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>prozyklisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94357" category="adj" class="Zeit">
+<lexUnit id="l126150" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verflossen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94374" category="adj" class="Zeit">
+<lexUnit id="l126167" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>reflexartig</orthForm>
+</lexUnit>
+<lexUnit id="l126168" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>reflexhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94409" category="adj" class="Zeit">
+<lexUnit id="l126216" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ephemer</orthForm>
+</lexUnit>
+<lexUnit id="l126217" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ephemerisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94411" category="adj" class="Zeit">
+<lexUnit id="l126219" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>regressiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94474" category="adj" class="Zeit">
+<lexUnit id="l126293" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unverbrüchlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94479" category="adj" class="Zeit">
+<lexUnit id="l126298" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gegenwartsbezogen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94481" category="adj" class="Zeit">
+<lexUnit id="l126300" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>perinatal</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94513" category="adj" class="Zeit">
+<lexUnit id="l126342" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>synchronistisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94514" category="adj" class="Zeit">
+<lexUnit id="l126344" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eruptiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94525" category="adj" class="Zeit">
+<lexUnit id="l126358" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitgebunden</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94539" category="adj" class="Zeit">
+<lexUnit id="l126375" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>viertelstündig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94575" category="adj" class="Zeit">
+<lexUnit id="l126424" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>postindustriell</orthForm>
+</lexUnit>
+<lexUnit id="l126425" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachindustriell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94603" category="adj" class="Zeit">
+<lexUnit id="l126458" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>reißend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94636" category="adj" class="Zeit">
+<lexUnit id="l126495" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachgelassen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94868" category="adj" class="Zeit">
+<lexUnit id="l126788" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unstet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94869" category="adj" class="Zeit">
+<lexUnit id="l126789" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>betagt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94874" category="adj" class="Zeit">
+<lexUnit id="l126799" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>konzertiert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94877" category="adj" class="Zeit">
+<lexUnit id="l126803" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hergebracht</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94881" category="adj" class="Zeit">
+<lexUnit id="l126807" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>raumzeitlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94933" category="adj" class="Zeit">
+<lexUnit id="l126867" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweitausendjährig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94941" category="adj" class="Zeit">
+<lexUnit id="l126875" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>galoppierend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95035" category="adj" class="Zeit">
+<lexUnit id="l126985" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitversetzt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95060" category="adj" class="Zeit">
+<lexUnit id="l127017" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jahrtausendealt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95148" category="adj" class="Zeit">
+<lexUnit id="l127118" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pflichtwidrig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95149" category="adj" class="Zeit">
+<lexUnit id="l127119" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erdrutschartig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95161" category="adj" class="Zeit">
+<lexUnit id="l127133" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unterjährig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95253" category="adj" class="Zeit">
+<lexUnit id="l127252" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>passé</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95284" category="adj" class="Zeit">
+<lexUnit id="l127286" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>alsbaldig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95297" category="adj" class="Zeit">
+<lexUnit id="l127302" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spätklassisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95316" category="adj" class="Zeit">
+<lexUnit id="l127323" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>superschnell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95266" category="adj" class="Zeit">
+<lexUnit id="l127266" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unauslöschlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95324" category="adj" class="Zeit">
+<lexUnit id="l127333" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>angestaubt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95326" category="adj" class="Zeit">
+<lexUnit id="l127335" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rückgebildet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95380" category="adj" class="Zeit">
+<lexUnit id="l127407" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schablonenhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95390" category="adj" class="Zeit">
+<lexUnit id="l127420" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blutjung</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95499" category="adj" class="Zeit">
+<lexUnit id="l127542" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>präkambrisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95528" category="adj" class="Zeit">
+<lexUnit id="l127575" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>proaktiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95599" category="adj" class="Zeit">
+<lexUnit id="l127662" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>jederzeitig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95606" category="adj" class="Zeit">
+<lexUnit id="l127669" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>versponnen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95643" category="adj" class="Zeit">
+<lexUnit id="l127709" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>intermittierend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95655" category="adj" class="Zeit">
+<lexUnit id="l127728" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mittelalt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95661" category="adj" class="Zeit">
+<lexUnit id="l127736" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>österlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95722" category="adj" class="Zeit">
+<lexUnit id="l127805" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>summarisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95729" category="adj" class="Zeit">
+<lexUnit id="l127812" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>terminlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95796" category="adj" class="Zeit">
+<lexUnit id="l127887" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>harzig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95809" category="adj" class="Zeit">
+<lexUnit id="l127900" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pfingstlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95839" category="adj" class="Zeit">
+<lexUnit id="l127935" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ältlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95840" category="adj" class="Zeit">
+<lexUnit id="l127936" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>studienbegleitend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95845" category="adj" class="Zeit">
+<lexUnit id="l127942" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>transitorisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95860" category="adj" class="Zeit">
+<lexUnit id="l127958" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rückwärtsgewandt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95913" category="adj" class="Zeit">
+<lexUnit id="l128020" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachgehend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95941" category="adj" class="Zeit">
+<lexUnit id="l128058" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>frühklassisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95999" category="adj" class="Zeit">
+<lexUnit id="l128126" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>deflationär</orthForm>
+</lexUnit>
+</synset>
+<synset id="s96031" category="adj" class="Zeit">
+<lexUnit id="l128169" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>alt</orthForm>
+</lexUnit>
+<paraphrase>gibt das Alter an</paraphrase>
+</synset>
+<synset id="s96032" category="adj" class="Zeit">
+<lexUnit id="l128170" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfhundertjährig</orthForm>
+<orthVar>500-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96033" category="adj" class="Zeit">
+<lexUnit id="l128171" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfzigjährig</orthForm>
+<orthVar>50-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96034" category="adj" class="Zeit">
+<lexUnit id="l128172" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>achtzigjährig</orthForm>
+<orthVar>80-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96035" category="adj" class="Zeit">
+<lexUnit id="l128173" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierzehnjährig</orthForm>
+<orthVar>14-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96036" category="adj" class="Zeit">
+<lexUnit id="l128174" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweihundertjährig</orthForm>
+<orthVar>200-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96037" category="adj" class="Zeit">
+<lexUnit id="l128175" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfzehnjährig</orthForm>
+<orthVar>15-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96038" category="adj" class="Zeit">
+<lexUnit id="l128176" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hundertjährig</orthForm>
+<orthVar>100-jährig</orthVar>
+</lexUnit>
+<lexUnit id="l128177" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einhundertjährig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s96039" category="adj" class="Zeit">
+<lexUnit id="l128178" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfundzwanzigjährig</orthForm>
+<orthVar>25-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96040" category="adj" class="Zeit">
+<lexUnit id="l128179" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eineinhalbjährig</orthForm>
+</lexUnit>
+<lexUnit id="l128180" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anderthalbjährig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s96041" category="adj" class="Zeit">
+<lexUnit id="l128181" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreihundertjährig</orthForm>
+<orthVar>300-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96042" category="adj" class="Zeit">
+<lexUnit id="l128182" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>elfjährig</orthForm>
+<orthVar>11-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96043" category="adj" class="Zeit">
+<lexUnit id="l128183" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfjährig</orthForm>
+<orthVar>5-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96044" category="adj" class="Zeit">
+<lexUnit id="l128184" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierhundertjährig</orthForm>
+<orthVar>400-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96045" category="adj" class="Zeit">
+<lexUnit id="l128185" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tausendjährig</orthForm>
+<orthVar>1000-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96046" category="adj" class="Zeit">
+<lexUnit id="l128186" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sechzigjährig</orthForm>
+<orthVar>60-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96047" category="adj" class="Zeit">
+<lexUnit id="l128187" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zwölfjährig</orthForm>
+<orthVar>12-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96048" category="adj" class="Zeit">
+<lexUnit id="l128188" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hundertjünfzigjährig</orthForm>
+<orthVar>150-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96049" category="adj" class="Zeit">
+<lexUnit id="l128189" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neunzehnjährig</orthForm>
+<orthVar>19-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96050" category="adj" class="Zeit">
+<lexUnit id="l128190" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreizehnjährig</orthForm>
+<orthVar>13-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96051" category="adj" class="Zeit">
+<lexUnit id="l128191" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fünfundsiebzigjährig</orthForm>
+<orthVar>75-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96052" category="adj" class="Zeit">
+<lexUnit id="l128192" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>siebenjährig</orthForm>
+<orthVar>7-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96053" category="adj" class="Zeit">
+<lexUnit id="l128193" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sechzehnjährig</orthForm>
+<orthVar>16-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96054" category="adj" class="Zeit">
+<lexUnit id="l128194" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreißigjährig</orthForm>
+<orthVar>30-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96055" category="adj" class="Zeit">
+<lexUnit id="l128195" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zehnjährig</orthForm>
+<orthVar>10-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96056" category="adj" class="Zeit">
+<lexUnit id="l128196" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dreijährig</orthForm>
+<orthVar>3-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96057" category="adj" class="Zeit">
+<lexUnit id="l128197" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweieinhalbjährig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s96058" category="adj" class="Zeit">
+<lexUnit id="l128198" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neunjährig</orthForm>
+<orthVar>9-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96059" category="adj" class="Zeit">
+<lexUnit id="l128199" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>siebzigjährig</orthForm>
+<orthVar>70-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96060" category="adj" class="Zeit">
+<lexUnit id="l128200" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>achtzehnjährig</orthForm>
+<orthVar>18-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96061" category="adj" class="Zeit">
+<lexUnit id="l128201" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierzigjährig</orthForm>
+<orthVar>40-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96062" category="adj" class="Zeit">
+<lexUnit id="l128202" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweijährig</orthForm>
+<orthVar>2-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96063" category="adj" class="Zeit">
+<lexUnit id="l128203" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>achtjährig</orthForm>
+<orthVar>8-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96064" category="adj" class="Zeit">
+<lexUnit id="l128204" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweitausendjährig</orthForm>
+<orthVar>2000-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96065" category="adj" class="Zeit">
+<lexUnit id="l128205" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zwanzigjährig</orthForm>
+<orthVar>20-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96066" category="adj" class="Zeit">
+<lexUnit id="l128206" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vierjährig</orthForm>
+<orthVar>4-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96067" category="adj" class="Zeit">
+<lexUnit id="l128207" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sechsjährig</orthForm>
+<orthVar>6-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96068" category="adj" class="Zeit">
+<lexUnit id="l128208" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>siebzehnjährig</orthForm>
+<orthVar>17-jährig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s96070" category="adj" class="Zeit">
+<lexUnit id="l128211" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>modebewusst</orthForm>
+<oldOrthForm>modebewußt</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s96095" category="adj" class="Zeit">
+<lexUnit id="l128241" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachtschlafend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s96100" category="adj" class="Zeit">
+<lexUnit id="l128246" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pfeilschnell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s96106" category="adj" class="Zeit">
+<lexUnit id="l128252" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>remanent</orthForm>
+</lexUnit>
+</synset>
+</synsets>

@@ -1,0 +1,2157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE synsets SYSTEM "germanet_objects.dtd">
+<synsets>
+<synset id="s38902" category="nomen" class="Motiv">
+<lexUnit id="l57194" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Motiv</orthForm>
+</lexUnit>
+<lexUnit id="l57195" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Intention</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38903" category="nomen" class="Motiv">
+<lexUnit id="l57196" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Motivation</orthForm>
+</lexUnit>
+<lexUnit id="l57197" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Beweggrund</orthForm>
+<compound>
+<modifier category="Verb">bewegen</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+<lexUnit id="l57198" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Veranlassung</orthForm>
+</lexUnit>
+<lexUnit id="l57201" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Grund</orthForm>
+</lexUnit>
+<lexUnit id="l57199" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Anlass</orthForm>
+<oldOrthForm>Anlaß</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s38904" category="nomen" class="Motiv">
+<lexUnit id="l57202" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Indikation</orthForm>
+</lexUnit>
+<paraphrase>Grund für einen Schwangerschaftsabbruch</paraphrase>
+</synset>
+<synset id="s38905" category="nomen" class="Motiv">
+<lexUnit id="l57203" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Notlagenindikation</orthForm>
+<compound>
+<modifier category="Nomen">Notlage</modifier>
+<head>Indikation</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38909" category="nomen" class="Motiv">
+<lexUnit id="l57208" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Indikation</orthForm>
+</lexUnit>
+<paraphrase>Grund für eine medizinische Untersuchung</paraphrase>
+</synset>
+<synset id="s38910" category="nomen" class="Motiv">
+<lexUnit id="l57209" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Ursache</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38911" category="nomen" class="Motiv">
+<lexUnit id="l57210" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Unfallursache</orthForm>
+<compound>
+<modifier category="Nomen">Unfall</modifier>
+<head>Ursache</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38912" category="nomen" class="Motiv">
+<lexUnit id="l57211" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Todesursache</orthForm>
+<compound>
+<modifier category="Nomen">Tod</modifier>
+<head>Ursache</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38913" category="nomen" class="Motiv">
+<lexUnit id="l57212" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Brandursache</orthForm>
+<compound>
+<modifier category="Nomen">Brand</modifier>
+<head>Ursache</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38914" category="nomen" class="Motiv">
+<lexUnit id="l57213" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Schadensursache</orthForm>
+<compound>
+<modifier category="Nomen">Schaden</modifier>
+<head>Ursache</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38915" category="nomen" class="Motiv">
+<lexUnit id="l57214" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Unglücksursache</orthForm>
+<compound>
+<modifier category="Nomen">Unglück</modifier>
+<head>Ursache</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38916" category="nomen" class="Motiv">
+<lexUnit id="l57215" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Absturzursache</orthForm>
+<compound>
+<modifier category="Nomen">Absturz</modifier>
+<head>Ursache</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38917" category="nomen" class="Motiv">
+<lexUnit id="l57216" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Hauptursache</orthForm>
+<compound>
+<modifier property="Affixoid">haupt</modifier>
+<head>Ursache</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38918" category="nomen" class="Motiv">
+<lexUnit id="l57217" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Störungsursache</orthForm>
+<compound>
+<modifier category="Nomen">Störung</modifier>
+<head>Ursache</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38919" category="nomen" class="Motiv">
+<lexUnit id="l57218" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Fehlerursache</orthForm>
+<compound>
+<modifier category="Nomen">Fehler</modifier>
+<head>Ursache</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38920" category="nomen" class="Motiv">
+<lexUnit id="l57219" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Zankapfel</orthForm>
+<compound>
+<modifier category="Nomen">Zank</modifier>
+<head>Apfel</head>
+</compound>
+</lexUnit>
+<paraphrase>Streitobjekt</paraphrase>
+</synset>
+<synset id="s38921" category="nomen" class="Motiv">
+<lexUnit id="l57220" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Faktor</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38922" category="nomen" class="Motiv">
+<lexUnit id="l57221" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Störfaktor</orthForm>
+<compound>
+<modifier category="Verb">stören</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38923" category="nomen" class="Motiv">
+<lexUnit id="l57222" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Wirtschaftsfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Wirtschaft</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38924" category="nomen" class="Motiv">
+<lexUnit id="l57223" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Machtfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Macht</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38925" category="nomen" class="Motiv">
+<lexUnit id="l57224" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Kostenfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Kosten</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38926" category="nomen" class="Motiv">
+<lexUnit id="l57225" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Risikofaktor</orthForm>
+<compound>
+<modifier category="Nomen">Risiko</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38927" category="nomen" class="Motiv">
+<lexUnit id="l57226" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Unsicherheitsfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Unsicherheit</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38928" category="nomen" class="Motiv">
+<lexUnit id="l57227" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Produktionsfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Produktion</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38929" category="nomen" class="Motiv">
+<lexUnit id="l57228" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Kostengrund</orthForm>
+<compound>
+<modifier category="Nomen">Kosten</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38930" category="nomen" class="Motiv">
+<lexUnit id="l57229" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Kündigungsgrund</orthForm>
+<compound>
+<modifier category="Nomen">Kündigung</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38931" category="nomen" class="Motiv">
+<lexUnit id="l57230" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Haftgrund</orthForm>
+<compound>
+<modifier category="Nomen">Haft</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38932" category="nomen" class="Motiv">
+<lexUnit id="l57231" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Altersgründe</orthForm>
+<compound>
+<modifier category="Nomen">Alter</modifier>
+<head>Gründe</head>
+</compound>
+</lexUnit>
+<paraphrase>Pluralwort</paraphrase>
+</synset>
+<synset id="s38933" category="nomen" class="Motiv">
+<lexUnit id="l57232" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Zeitgrund</orthForm>
+<compound>
+<modifier category="Nomen">Zeit</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38934" category="nomen" class="Motiv">
+<lexUnit id="l57233" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Hauptgrund</orthForm>
+<compound>
+<modifier property="Affixoid">haupt</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38935" category="nomen" class="Motiv">
+<lexUnit id="l57234" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Asylgrund</orthForm>
+<compound>
+<modifier category="Nomen">Asyl</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38936" category="nomen" class="Motiv">
+<lexUnit id="l57235" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Überarbeitungsgrund</orthForm>
+<compound>
+<modifier category="Nomen">Überarbeitung</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38937" category="nomen" class="Motiv">
+<lexUnit id="l57236" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Verursachung</orthForm>
+</lexUnit>
+<lexUnit id="l57237" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Verursacher</orthForm>
+</lexUnit>
+<lexUnit id="l57238" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Auslöser</orthForm>
+</lexUnit>
+<lexUnit id="l91108" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Trigger</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38939" category="nomen" class="Motiv">
+<lexUnit id="l57240" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Keim</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38941" category="nomen" class="Motiv">
+<lexUnit id="l57243" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Vereinsleben</orthForm>
+<compound>
+<modifier category="Nomen">Verein</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38942" category="nomen" class="Motiv">
+<lexUnit id="l57244" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Stadtleben</orthForm>
+<compound>
+<modifier category="Nomen">Stadt</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38943" category="nomen" class="Motiv">
+<lexUnit id="l57245" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Gemeindeleben</orthForm>
+<compound>
+<modifier category="Nomen">Gemeinde</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38944" category="nomen" class="Motiv">
+<lexUnit id="l57246" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Dorfleben</orthForm>
+<compound>
+<modifier category="Nomen">Dorf</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38945" category="nomen" class="Motiv">
+<lexUnit id="l57247" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Liebesleben</orthForm>
+<compound>
+<modifier category="Nomen">Liebe</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38946" category="nomen" class="Motiv">
+<lexUnit id="l57248" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Eheleben</orthForm>
+<compound>
+<modifier category="Nomen">Ehe</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38947" category="nomen" class="Motiv">
+<lexUnit id="l57249" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Landleben</orthForm>
+<compound>
+<modifier category="Nomen">Land</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38948" category="nomen" class="Motiv">
+<lexUnit id="l57250" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Moral</orthForm>
+</lexUnit>
+<lexUnit id="l57251" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Moralvorstellung</orthForm>
+<compound>
+<modifier category="Nomen">Moral</modifier>
+<head>Vorstellung</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38949" category="nomen" class="Motiv">
+<lexUnit id="l57253" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Zahlungsmoral</orthForm>
+<compound>
+<modifier category="Nomen">Zahlung</modifier>
+<head>Moral</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38950" category="nomen" class="Motiv">
+<lexUnit id="l57254" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Wertvorstellung</orthForm>
+<compound>
+<modifier category="Nomen">Wert</modifier>
+<head>Vorstellung</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38951" category="nomen" class="Motiv">
+<lexUnit id="l57255" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Sitte</orthForm>
+</lexUnit>
+<lexUnit id="l57256" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Sittlichkeit</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38952" category="nomen" class="Motiv">
+<lexUnit id="l57257" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Trieb</orthForm>
+</lexUnit>
+<paraphrase>vom Instinkt gesteuerter innerer Antrieb, der auf die Befriedigung starker, oft lebensnotwendiger Bedürfnisse abzielt</paraphrase>
+</synset>
+<synset id="s38953" category="nomen" class="Motiv">
+<lexUnit id="l57258" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Spieltrieb</orthForm>
+<compound>
+<modifier category="Nomen">Spiel</modifier>
+<modifier category="Verb">spielen</modifier>
+<head>Trieb</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38954" category="nomen" class="Motiv">
+<lexUnit id="l57259" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Lebenstrieb</orthForm>
+<compound>
+<modifier category="Nomen">Leben</modifier>
+<head>Trieb</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38956" category="nomen" class="Motiv">
+<lexUnit id="l57261" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Triebfeder</orthForm>
+<compound>
+<modifier category="Nomen">Trieb</modifier>
+<head>Feder</head>
+</compound>
+</lexUnit>
+<lexUnit id="l57262" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Antrieb</orthForm>
+</lexUnit>
+<lexUnit id="l57263" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Dynamik</orthForm>
+</lexUnit>
+<lexUnit id="l57264" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Antriebskraft</orthForm>
+<compound>
+<modifier category="Nomen">Antrieb</modifier>
+<head>Kraft</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38957" category="nomen" class="Motiv">
+<lexUnit id="l57265" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Eigendynamik</orthForm>
+<compound>
+<modifier category="Adjektiv">eigen</modifier>
+<head>Dynamik</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38958" category="nomen" class="Motiv">
+<lexUnit id="l57266" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Reiz</orthForm>
+</lexUnit>
+<lexUnit id="l57267" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Reizung</orthForm>
+</lexUnit>
+<lexUnit id="l57269" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Stimulus</orthForm>
+</lexUnit>
+<lexUnit id="l57270" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Impuls</orthForm>
+</lexUnit>
+<lexUnit id="l57271" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Impetus</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38959" category="nomen" class="Motiv">
+<lexUnit id="l57272" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Ansporn</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38960" category="nomen" class="Motiv">
+<lexUnit id="l57273" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Kaufanreiz</orthForm>
+<compound>
+<modifier category="Nomen">Kauf</modifier>
+<modifier category="Verb">kaufen</modifier>
+<head>Anreiz</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38961" category="nomen" class="Motiv">
+<lexUnit id="l57274" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Juckreiz</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38962" category="nomen" class="Motiv">
+<lexUnit id="l57275" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>Kick</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38963" category="nomen" class="Motiv">
+<lexUnit id="l57276" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Drehimpuls</orthForm>
+<compound>
+<modifier category="Verb">drehen</modifier>
+<head>Impuls</head>
+</compound>
+</lexUnit>
+<lexUnit id="l101450" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Spin</orthForm>
+</lexUnit>
+<paraphrase>physikalische Erhaltungsgröße</paraphrase>
+</synset>
+<synset id="s38964" category="nomen" class="Motiv">
+<lexUnit id="l57277" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Drang</orthForm>
+</lexUnit>
+<lexUnit id="l57278" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Drängen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38965" category="nomen" class="Motiv">
+<lexUnit id="l57279" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Tätigkeitsdrang</orthForm>
+<compound>
+<modifier category="Nomen">Tätigkeit</modifier>
+<head>Drang</head>
+</compound>
+</lexUnit>
+<lexUnit id="l57280" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Aktionismus</orthForm>
+</lexUnit>
+<lexUnit id="l57281" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Schaffensdrang</orthForm>
+<compound>
+<modifier category="Nomen">Schaffen</modifier>
+<head>Drang</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38966" category="nomen" class="Motiv">
+<lexUnit id="l57282" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Geltungsdrang</orthForm>
+<compound>
+<modifier category="Nomen">Geltung</modifier>
+<head>Drang</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38940" category="nomen" class="Motiv">
+<lexUnit id="l57241" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Leben</orthForm>
+</lexUnit>
+<lexUnit id="l57242" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Lebensinhalt</orthForm>
+<compound>
+<modifier category="Nomen">Leben</modifier>
+<head>Inhalt</head>
+</compound>
+</lexUnit>
+<paraphrase>die Art und Weise seine Existenz zu gestalten</paraphrase>
+</synset>
+<synset id="s38938" category="nomen" class="Motiv">
+<lexUnit id="l57239" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Ursprung</orthForm>
+</lexUnit>
+<paraphrase>der Grund von etwas</paraphrase>
+</synset>
+<synset id="s38967" category="nomen" class="Motiv">
+<lexUnit id="l57283" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Großmannssucht</orthForm>
+<compound>
+<modifier property="Wortgruppe">groß Mann</modifier>
+<head>Sucht</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38968" category="nomen" class="Motiv">
+<lexUnit id="l57284" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Anregung</orthForm>
+</lexUnit>
+<lexUnit id="l57285" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Stimulierung</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38969" category="nomen" class="Motiv">
+<lexUnit id="l57286" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Kitzel</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38970" category="nomen" class="Motiv">
+<lexUnit id="l57287" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Bewegungsdrang</orthForm>
+<compound>
+<modifier category="Nomen">Bewegung</modifier>
+<head>Drang</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38971" category="nomen" class="Motiv">
+<lexUnit id="l57288" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Freiheitsdrang</orthForm>
+<compound>
+<modifier category="Nomen">Freiheit</modifier>
+<head>Drang</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38972" category="nomen" class="Motiv">
+<lexUnit id="l57289" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Denkanstoß</orthForm>
+<compound>
+<modifier category="Verb">denken</modifier>
+<head>Anstoß</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38973" category="nomen" class="Motiv">
+<lexUnit id="l57290" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Belebung</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38974" category="nomen" class="Motiv">
+<lexUnit id="l57291" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Wiederbelebung</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38975" category="nomen" class="Motiv">
+<lexUnit id="l57292" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Befruchtung</orthForm>
+</lexUnit>
+<paraphrase>geistige Anregung</paraphrase>
+</synset>
+<synset id="s38976" category="nomen" class="Motiv">
+<lexUnit id="l57293" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Attraktivität</orthForm>
+</lexUnit>
+<lexUnit id="l57294" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Attraktion</orthForm>
+</lexUnit>
+<lexUnit id="l57295" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Anziehungskraft</orthForm>
+<compound>
+<modifier category="Nomen">Anziehung</modifier>
+<head>Kraft</head>
+</compound>
+</lexUnit>
+<lexUnit id="l57296" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Anziehung</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38977" category="nomen" class="Motiv">
+<lexUnit id="l57297" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Faszination</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38978" category="nomen" class="Motiv">
+<lexUnit id="l57298" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Anstoß</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38979" category="nomen" class="Motiv">
+<lexUnit id="l57299" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Initiative</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38980" category="nomen" class="Motiv">
+<lexUnit id="l57300" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Eigeninitiative</orthForm>
+<compound>
+<modifier category="Adjektiv">eigen</modifier>
+<head>Initiative</head>
+</compound>
+</lexUnit>
+<lexUnit id="l57301" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Selbstmotivation</orthForm>
+<compound>
+<modifier category="Partikel">selbst</modifier>
+<head>Motivation</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38981" category="nomen" class="Motiv">
+<lexUnit id="l57302" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Privatinitiative</orthForm>
+<compound>
+<modifier category="Adjektiv">privat</modifier>
+<head>Initiative</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38982" category="nomen" class="Motiv">
+<lexUnit id="l57303" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Unternehmergeist</orthForm>
+<compound>
+<modifier category="Nomen">Unternehmer</modifier>
+<head>Geist</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38983" category="nomen" class="Motiv">
+<lexUnit id="l57304" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Qualitätsoffensive</orthForm>
+<compound>
+<modifier category="Nomen">Qualität</modifier>
+<head>Offensive</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38984" category="nomen" class="Motiv">
+<lexUnit id="l57305" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Hauptmotiv</orthForm>
+<compound>
+<modifier property="Affixoid">haupt</modifier>
+<head>Motiv</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38985" category="nomen" class="Motiv">
+<lexUnit id="l57306" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Leitmotiv</orthForm>
+<compound>
+<modifier category="Verb">leiten</modifier>
+<head>Motiv</head>
+</compound>
+</lexUnit>
+<lexUnit id="l57307" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Zentralmotiv</orthForm>
+<compound>
+<modifier category="Adjektiv">zentral</modifier>
+<head>Motiv</head>
+</compound>
+</lexUnit>
+<lexUnit id="l114695" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Grundmotiv</orthForm>
+<compound>
+<modifier property="Affixoid">Grund</modifier>
+<head>Motiv</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38986" category="nomen" class="Motiv">
+<lexUnit id="l57308" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Topos</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38987" category="nomen" class="Motiv">
+<lexUnit id="l57309" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Motiv</orthForm>
+</lexUnit>
+<lexUnit id="l57310" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Bildmotiv</orthForm>
+<compound>
+<modifier category="Nomen">Bild</modifier>
+<head>Motiv</head>
+</compound>
+</lexUnit>
+<lexUnit id="l57311" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Bildthema</orthForm>
+<compound>
+<modifier category="Nomen">Bild</modifier>
+<head>Thema</head>
+</compound>
+</lexUnit>
+<lexUnit id="l57312" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Bildthematik</orthForm>
+<compound>
+<modifier category="Nomen">Bild</modifier>
+<head>Thematik</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38990" category="nomen" class="Motiv">
+<lexUnit id="l57316" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Putte</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38991" category="nomen" class="Motiv">
+<lexUnit id="l57317" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Lieblingsmotiv</orthForm>
+<compound>
+<modifier category="Nomen">Liebling</modifier>
+<head>Motiv</head>
+</compound>
+</lexUnit>
+<lexUnit id="l57318" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Lieblingsthematik</orthForm>
+<compound>
+<modifier category="Nomen">Liebling</modifier>
+<head>Thematik</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38992" category="nomen" class="Motiv">
+<lexUnit id="l57319" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Anliegen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38993" category="nomen" class="Motiv">
+<lexUnit id="l57320" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Hauptanliegen</orthForm>
+<compound>
+<modifier property="Affixoid">haupt</modifier>
+<head>Anliegen</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38994" category="nomen" class="Motiv">
+<lexUnit id="l57321" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Herzensangelegenheit</orthForm>
+<compound>
+<modifier category="Nomen">Herz</modifier>
+<head>Angelegenheit</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38996" category="nomen" class="Motiv">
+<lexUnit id="l57324" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Thema</orthForm>
+</lexUnit>
+<lexUnit id="l57323" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Motto</orthForm>
+</lexUnit>
+</synset>
+<synset id="s38997" category="nomen" class="Motiv">
+<lexUnit id="l57325" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Unternehmensphilosophie</orthForm>
+<compound>
+<modifier category="Nomen">Unternehmen</modifier>
+<head>Philosophie</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38998" category="nomen" class="Motiv">
+<lexUnit id="l57326" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Schwerpunkt</orthForm>
+<compound>
+<modifier>schwer</modifier>
+<head>Punkt</head>
+</compound>
+</lexUnit>
+<lexUnit id="l117122" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Hauptgewicht</orthForm>
+<compound>
+<modifier property="Affixoid">haupt</modifier>
+<head>Gewicht</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s38999" category="nomen" class="Motiv">
+<lexUnit id="l57327" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Forschungsschwerpunkt</orthForm>
+<compound>
+<modifier category="Nomen">Forschung</modifier>
+<head>Schwerpunkt</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39000" category="nomen" class="Motiv">
+<lexUnit id="l57328" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Aufgabenschwerpunkt</orthForm>
+<compound>
+<modifier category="Nomen">Aufgabe</modifier>
+<head>Schwerpunkt</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39001" category="nomen" class="Motiv">
+<lexUnit id="l57329" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Themenschwerpunkt</orthForm>
+<compound>
+<modifier category="Nomen">Thema</modifier>
+<head>Schwerpunkt</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39002" category="nomen" class="Motiv">
+<lexUnit id="l57330" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Arbeitsschwerpunkt</orthForm>
+<compound>
+<modifier category="Nomen">Arbeit</modifier>
+<head>Schwerpunkt</head>
+</compound>
+</lexUnit>
+<lexUnit id="l57331" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Tätigkeitsschwerpunkt</orthForm>
+<compound>
+<modifier category="Nomen">Tätigkeit</modifier>
+<head>Schwerpunkt</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39004" category="nomen" class="Motiv">
+<lexUnit id="l57333" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Ziel</orthForm>
+</lexUnit>
+<paraphrase>erstrebter Punkt</paraphrase>
+</synset>
+<synset id="s39005" category="nomen" class="Motiv">
+<lexUnit id="l57334" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Vertriebsziel</orthForm>
+<compound>
+<modifier category="Nomen">Vertrieb</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39006" category="nomen" class="Motiv">
+<lexUnit id="l57335" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Auftragsziel</orthForm>
+<compound>
+<modifier category="Nomen">Auftrag</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39007" category="nomen" class="Motiv">
+<lexUnit id="l57336" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Betriebsziel</orthForm>
+<compound>
+<modifier category="Nomen">Betrieb</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39008" category="nomen" class="Motiv">
+<lexUnit id="l57337" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Hauptziel</orthForm>
+<compound>
+<modifier property="Affixoid">haupt</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39009" category="nomen" class="Motiv">
+<lexUnit id="l57338" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Lernziel</orthForm>
+<compound>
+<modifier category="Verb">lernen</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39010" category="nomen" class="Motiv">
+<lexUnit id="l57339" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Nahziel</orthForm>
+<compound>
+<modifier category="Adjektiv">nah</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39011" category="nomen" class="Motiv">
+<lexUnit id="l57340" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Produktionsziel</orthForm>
+<compound>
+<modifier category="Nomen">Produktion</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39012" category="nomen" class="Motiv">
+<lexUnit id="l57341" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Umsatzziel</orthForm>
+<compound>
+<modifier category="Nomen">Umsatz</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39013" category="nomen" class="Motiv">
+<lexUnit id="l57342" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Unternehmensziel</orthForm>
+<compound>
+<modifier category="Nomen">Unternehmen</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39014" category="nomen" class="Motiv">
+<lexUnit id="l57343" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Klassenziel</orthForm>
+<compound>
+<modifier category="Nomen">Klasse</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39015" category="nomen" class="Motiv">
+<lexUnit id="l57344" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Teilziel</orthForm>
+<compound>
+<modifier category="Nomen">Teil</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39016" category="nomen" class="Motiv">
+<lexUnit id="l57345" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Kriegsziel</orthForm>
+<compound>
+<modifier category="Nomen">Krieg</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39017" category="nomen" class="Motiv">
+<lexUnit id="l57346" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Werbeziel</orthForm>
+<compound>
+<modifier category="Verb">werben</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39018" category="nomen" class="Motiv">
+<lexUnit id="l57347" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Projektziel</orthForm>
+<compound>
+<modifier category="Nomen">Projekt</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39019" category="nomen" class="Motiv">
+<lexUnit id="l57348" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Lebensziel</orthForm>
+<compound>
+<modifier category="Nomen">Leben</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39020" category="nomen" class="Motiv">
+<lexUnit id="l57349" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Wahlziel</orthForm>
+<compound>
+<modifier category="Nomen">Wahl</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39021" category="nomen" class="Motiv">
+<lexUnit id="l57350" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Zweck</orthForm>
+</lexUnit>
+<paraphrase>Ziel einer Handlung</paraphrase>
+</synset>
+<synset id="s39022" category="nomen" class="Motiv">
+<lexUnit id="l57351" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Werbezweck</orthForm>
+<compound>
+<modifier category="Verb">werben</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39023" category="nomen" class="Motiv">
+<lexUnit id="l57352" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Forschungszweck</orthForm>
+<compound>
+<modifier category="Nomen">Forschung</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39024" category="nomen" class="Motiv">
+<lexUnit id="l57353" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Verwendungszweck</orthForm>
+<compound>
+<modifier category="Nomen">Verwendung</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39025" category="nomen" class="Motiv">
+<lexUnit id="l57354" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Hauptzweck</orthForm>
+<compound>
+<modifier property="Affixoid">haupt</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39026" category="nomen" class="Motiv">
+<lexUnit id="l57355" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Einsatzzweck</orthForm>
+<compound>
+<modifier category="Nomen">Einsatz</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39027" category="nomen" class="Motiv">
+<lexUnit id="l57356" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Bestimmung</orthForm>
+</lexUnit>
+</synset>
+<synset id="s39028" category="nomen" class="Motiv">
+<lexUnit id="l57357" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Selbstzweck</orthForm>
+<compound>
+<modifier category="Partikel">selbst</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39029" category="nomen" class="Motiv">
+<lexUnit id="l57358" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Tatmotiv</orthForm>
+<compound>
+<modifier category="Nomen">Tat</modifier>
+<head>Motiv</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39033" category="nomen" class="Motiv">
+<lexUnit id="l57362" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Manie</orthForm>
+</lexUnit>
+<lexUnit id="l57363" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Leidenschaft</orthForm>
+</lexUnit>
+<lexUnit id="l57364" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Besessenheit</orthForm>
+</lexUnit>
+<lexUnit id="l57365" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Obsession</orthForm>
+</lexUnit>
+</synset>
+<synset id="s39034" category="nomen" class="Motiv">
+<lexUnit id="l57366" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Sammelleidenschaft</orthForm>
+<compound>
+<modifier category="Verb">sammeln</modifier>
+<head>Leidenschaft</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s39032" category="nomen" class="Motiv">
+<lexUnit id="l57361" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Vernunft</orthForm>
+</lexUnit>
+<paraphrase>rationaler Beweggrund</paraphrase>
+</synset>
+<synset id="s62281" category="nomen" class="Motiv">
+<lexUnit id="l87355" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Klosterleben</orthForm>
+<compound>
+<modifier category="Nomen">Kloster</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s62294" category="nomen" class="Motiv">
+<lexUnit id="l87371" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Sicherheitsgrund</orthForm>
+<compound>
+<modifier category="Nomen">Sicherheit</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s62724" category="nomen" class="Motiv">
+<lexUnit id="l87846" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Krankheitsgrund</orthForm>
+<compound>
+<modifier category="Nomen">Krankheit</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s62794" category="nomen" class="Motiv">
+<lexUnit id="l87927" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Propagandazweck</orthForm>
+<compound>
+<modifier category="Nomen">Propaganda</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s63153" category="nomen" class="Motiv">
+<lexUnit id="l88333" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Wachstumsfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Wachstum</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s63197" category="nomen" class="Motiv">
+<lexUnit id="l88390" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Bodenziel</orthForm>
+<compound>
+<modifier category="Nomen">Boden</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s63450" category="nomen" class="Motiv">
+<lexUnit id="l88698" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Volksleben</orthForm>
+<compound>
+<modifier category="Nomen">Volk</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s63773" category="nomen" class="Motiv">
+<lexUnit id="l89077" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Zivilleben</orthForm>
+<compound>
+<modifier category="Adjektiv">zivil</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s63953" category="nomen" class="Motiv">
+<lexUnit id="l89296" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Verbreitungsschwerpunkt</orthForm>
+<compound>
+<modifier category="Nomen">Verbreitung</modifier>
+<head>Schwerpunkt</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s64380" category="nomen" class="Motiv">
+<lexUnit id="l89797" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Förderschwerpunkt</orthForm>
+<compound>
+<modifier category="Verb">fördern</modifier>
+<head>Schwerpunkt</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s64637" category="nomen" class="Motiv">
+<lexUnit id="l90101" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Transkriptionsfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Transkription</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s64746" category="nomen" class="Motiv">
+<lexUnit id="l90221" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Ausbildungszweck</orthForm>
+<compound>
+<modifier category="Nomen">Ausbildung</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s64928" category="nomen" class="Motiv">
+<lexUnit id="l90432" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Trainingszweck</orthForm>
+<compound>
+<modifier category="Nomen">Training</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s65211" category="nomen" class="Motiv">
+<lexUnit id="l90752" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Relegationsgrund</orthForm>
+<compound>
+<modifier category="Nomen">Relegation</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s65329" category="nomen" class="Motiv">
+<lexUnit id="l90895" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Gewissensgrund</orthForm>
+<compound>
+<modifier category="Nomen">Gewissen</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s65308" category="nomen" class="Motiv">
+<lexUnit id="l90865" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Landziel</orthForm>
+<compound>
+<modifier category="Nomen">Land</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s65424" category="nomen" class="Motiv">
+<lexUnit id="l91009" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Angriffsziel</orthForm>
+<compound>
+<modifier category="Nomen">Angriff</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s65684" category="nomen" class="Motiv">
+<lexUnit id="l91328" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Anwendungszweck</orthForm>
+<compound>
+<modifier category="Nomen">Anwendung</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s65742" category="nomen" class="Motiv">
+<lexUnit id="l91396" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Demonstrationszweck</orthForm>
+<compound>
+<modifier category="Nomen">Demonstration</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s65918" category="nomen" class="Motiv">
+<lexUnit id="l91598" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Übungszweck</orthForm>
+<compound>
+<modifier category="Nomen">Übung</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s66381" category="nomen" class="Motiv">
+<lexUnit id="l92142" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Kontraindikation</orthForm>
+</lexUnit>
+</synset>
+<synset id="s29522" category="nomen" class="Motiv">
+<lexUnit id="l40323" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Sternzeichen</orthForm>
+<compound>
+<modifier category="Nomen">Stern</modifier>
+<head>Zeichen</head>
+</compound>
+</lexUnit>
+<lexUnit id="l40324" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Sternbild</orthForm>
+<compound>
+<modifier category="Nomen">Stern</modifier>
+<head>Bild</head>
+</compound>
+</lexUnit>
+<lexUnit id="l40325" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Tierkreiszeichen</orthForm>
+<compound>
+<modifier category="Nomen">Tierkreis</modifier>
+<head>Zeichen</head>
+</compound>
+</lexUnit>
+<lexUnit id="l40326" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Haus</orthForm>
+</lexUnit>
+</synset>
+<synset id="s66752" category="nomen" class="Motiv">
+<lexUnit id="l92560" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Gerinnungsfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Gerinnung</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s66768" category="nomen" class="Motiv">
+<lexUnit id="l92577" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Hofleben</orthForm>
+<compound>
+<modifier category="Nomen">Hof</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s67246" category="nomen" class="Motiv">
+<lexUnit id="l93113" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Standortfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Standort</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s67797" category="nomen" class="Motiv">
+<lexUnit id="l93766" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Luftziel</orthForm>
+<compound>
+<modifier category="Nomen">Luft</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s67959" category="nomen" class="Motiv">
+<lexUnit id="l93958" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Gemeinschaftsleben</orthForm>
+<compound>
+<modifier category="Nomen">Gemeinschaft</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s68025" category="nomen" class="Motiv">
+<lexUnit id="l94034" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Sexualleben</orthForm>
+<compound>
+<modifier category="Adjektiv">sexual</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s68412" category="nomen" class="Motiv">
+<lexUnit id="l94485" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Verteidigungszweck</orthForm>
+<compound>
+<modifier category="Nomen">Verteidigung</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s68457" category="nomen" class="Motiv">
+<lexUnit id="l94535" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Doppelmoral</orthForm>
+<compound>
+<modifier category="Adjektiv">doppelt</modifier>
+<head>Moral</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s68615" category="nomen" class="Motiv">
+<lexUnit id="l94723" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Kampfmoral</orthForm>
+<compound>
+<modifier category="Nomen">Kampf</modifier>
+<head>Moral</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s69023" category="nomen" class="Motiv">
+<lexUnit id="l95182" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Missionsziel</orthForm>
+<compound>
+<modifier category="Nomen">Mission</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s69092" category="nomen" class="Motiv">
+<lexUnit id="l95259" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Ordensleben</orthForm>
+<compound>
+<modifier category="Nomen">Orden</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s69126" category="nomen" class="Motiv">
+<lexUnit id="l95295" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Schulleben</orthForm>
+<compound>
+<modifier category="Nomen">Schule</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s69586" category="nomen" class="Motiv">
+<lexUnit id="l95815" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Versuchszweck</orthForm>
+<compound>
+<modifier category="Nomen">Versuch</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s69694" category="nomen" class="Motiv">
+<lexUnit id="l95934" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Schlüsselreiz</orthForm>
+<compound>
+<modifier category="Nomen">Schlüssel</modifier>
+<head>Reiz</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s70274" category="nomen" class="Motiv">
+<lexUnit id="l96591" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Gruppendynamik</orthForm>
+<compound>
+<modifier category="Nomen">Gruppe</modifier>
+<head>Dynamik</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s70592" category="nomen" class="Motiv">
+<lexUnit id="l96951" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Grundthema</orthForm>
+<compound>
+<modifier property="Affixoid">grund</modifier>
+<head>Thema</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s70929" category="nomen" class="Motiv">
+<lexUnit id="l97363" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Unterrichtszweck</orthForm>
+<compound>
+<modifier category="Nomen">Unterricht</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s71117" category="nomen" class="Motiv">
+<lexUnit id="l97579" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Umweltschutzgrund</orthForm>
+<compound>
+<modifier category="Nomen">Umweltschutz</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s71252" category="nomen" class="Motiv">
+<lexUnit id="l97734" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Repräsentationszweck</orthForm>
+<compound>
+<modifier category="Nomen">Repräsentation</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s71336" category="nomen" class="Motiv">
+<lexUnit id="l97832" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Wirtschaftsethik</orthForm>
+<compound>
+<modifier category="Nomen">Wirtschaft</modifier>
+<head>Ethik</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s71397" category="nomen" class="Motiv">
+<lexUnit id="l97899" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Neubelebung</orthForm>
+<compound>
+<modifier category="Adjektiv">neu</modifier>
+<head>Belebung</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s72030" category="nomen" class="Motiv">
+<lexUnit id="l98657" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Rechtfertigungsgrund</orthForm>
+<compound>
+<modifier category="Nomen">Rechtfertigung</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s72115" category="nomen" class="Motiv">
+<lexUnit id="l98767" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Sexualmoral</orthForm>
+<compound>
+<modifier category="Adjektiv">sexual</modifier>
+<head>Moral</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s72132" category="nomen" class="Motiv">
+<lexUnit id="l98789" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Zuchtziel</orthForm>
+<compound>
+<modifier category="Nomen">Zucht</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s72341" category="nomen" class="Motiv">
+<lexUnit id="l99036" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Spielziel</orthForm>
+<compound>
+<modifier category="Nomen">Spiel</modifier>
+<modifier category="Verb">spielen</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s72413" category="nomen" class="Motiv">
+<lexUnit id="l99121" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Erfolgsfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Erfolg</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s72486" category="nomen" class="Motiv">
+<lexUnit id="l99204" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Vergleichszweck</orthForm>
+<compound>
+<modifier category="Nomen">Vergleich</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s72710" category="nomen" class="Motiv">
+<lexUnit id="l99474" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Studentenleben</orthForm>
+<compound>
+<modifier category="Nomen">Student</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s72758" category="nomen" class="Motiv">
+<lexUnit id="l99531" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Gesamtdrehimpuls</orthForm>
+<compound>
+<modifier category="Adjektiv">gesamt</modifier>
+<head>Drehimpuls</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s73044" category="nomen" class="Motiv">
+<lexUnit id="l99861" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Lehrzweck</orthForm>
+<compound>
+<modifier category="Nomen">Lehre</modifier>
+<modifier category="Verb">lehren</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s69318" category="nomen" class="Motiv">
+<lexUnit id="l95514" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Causa</orthForm>
+</lexUnit>
+<paraphrase>die Ursache oder Anlass für etwas</paraphrase>
+</synset>
+<synset id="s39003" category="nomen" class="Motiv">
+<lexUnit id="l57332" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Losung</orthForm>
+</lexUnit>
+<paraphrase>ein  Motto, nachdem sich eine bestimmte Gruppe/ Person richtet</paraphrase>
+</synset>
+<synset id="s73565" category="nomen" class="Motiv">
+<lexUnit id="l100505" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Brechreiz</orthForm>
+<compound>
+<modifier category="Verb">brechen</modifier>
+<head>Reiz</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s73694" category="nomen" class="Motiv">
+<lexUnit id="l100655" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Altersgrund</orthForm>
+<compound>
+<modifier category="Nomen">Alter</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s74034" category="nomen" class="Motiv">
+<lexUnit id="l101084" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Wohnzweck</orthForm>
+<compound>
+<modifier category="Verb">wohnen</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s74455" category="nomen" class="Motiv">
+<lexUnit id="l101602" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Studienzweck</orthForm>
+<compound>
+<modifier category="Nomen">Studie</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s74943" category="nomen" class="Motiv">
+<lexUnit id="l102236" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Kriegszweck</orthForm>
+<compound>
+<modifier category="Nomen">Krieg</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s75391" category="nomen" class="Motiv">
+<lexUnit id="l102809" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Testzweck</orthForm>
+<compound>
+<modifier category="Nomen">Test</modifier>
+<modifier category="Verb">testen</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s75494" category="nomen" class="Motiv">
+<lexUnit id="l102944" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Umweltfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Umwelt</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s76360" category="nomen" class="Motiv">
+<lexUnit id="l104098" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Wurzel</orthForm>
+</lexUnit>
+</synset>
+<synset id="s76410" category="nomen" class="Motiv">
+<lexUnit id="l104158" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Einflussfaktor</orthForm>
+<oldOrthForm>Einflußfaktor</oldOrthForm>
+<compound>
+<modifier category="Nomen">Einfluss</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s76615" category="nomen" class="Motiv">
+<lexUnit id="l104417" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Gesundheitsthema</orthForm>
+<compound>
+<modifier category="Nomen">Gesundheit</modifier>
+<head>Thema</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s76633" category="nomen" class="Motiv">
+<lexUnit id="l104436" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Einsatzschwerpunkt</orthForm>
+<compound>
+<modifier category="Nomen">Einsatz</modifier>
+<head>Schwerpunkt</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s76760" category="nomen" class="Motiv">
+<lexUnit id="l104583" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Rechtsgrund</orthForm>
+<compound>
+<modifier category="Nomen">Recht</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s76963" category="nomen" class="Motiv">
+<lexUnit id="l104833" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Sinnesreiz</orthForm>
+<compound>
+<modifier category="Nomen">Sinn</modifier>
+<head>Reiz</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s77056" category="nomen" class="Motiv">
+<lexUnit id="l104940" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Schutzzweck</orthForm>
+<compound>
+<modifier category="Nomen">Schutz</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s77213" category="nomen" class="Motiv">
+<lexUnit id="l105127" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Marketingzweck</orthForm>
+<compound>
+<modifier category="Nomen">Marketing</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s77259" category="nomen" class="Motiv">
+<lexUnit id="l105179" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Gesellschaftsleben</orthForm>
+<compound>
+<modifier category="Nomen">Gesellschaft</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s77692" category="nomen" class="Motiv">
+<lexUnit id="l105655" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Vereinszweck</orthForm>
+<compound>
+<modifier category="Nomen">Verein</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s77977" category="nomen" class="Motiv">
+<lexUnit id="l105977" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Prestigegrund</orthForm>
+<compound>
+<modifier category="Nomen">Prestige</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s81130" category="nomen" class="Motiv">
+<lexUnit id="l109653" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Lichtreiz</orthForm>
+<compound>
+<modifier category="Nomen">Licht</modifier>
+<head>Reiz</head>
+</compound>
+</lexUnit>
+<lexUnit id="l112143" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Lichtimpuls</orthForm>
+<compound>
+<modifier category="Nomen">Licht</modifier>
+<head>Impuls</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s82335" category="nomen" class="Motiv">
+<lexUnit id="l111103" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Soldatenleben</orthForm>
+<compound>
+<modifier category="Nomen">Soldat</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s82745" category="nomen" class="Motiv">
+<lexUnit id="l111624" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Motivierung</orthForm>
+</lexUnit>
+</synset>
+<synset id="s82980" category="nomen" class="Motiv">
+<lexUnit id="l111909" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Instinkt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s83167" category="nomen" class="Motiv">
+<lexUnit id="l112181" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Erholungszweck</orthForm>
+<compound>
+<modifier category="Nomen">Erholung</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s83800" category="nomen" class="Motiv">
+<lexUnit id="l113004" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Programmschwerpunkt</orthForm>
+<compound>
+<modifier category="Nomen">Programm</modifier>
+<head>Schwerpunkt</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s84763" category="nomen" class="Motiv">
+<lexUnit id="l114298" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Sammlungsschwerpunkt</orthForm>
+<compound>
+<modifier category="Nomen">Sammlung</modifier>
+<head>Schwerpunkt</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s84803" category="nomen" class="Motiv">
+<lexUnit id="l114349" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Todestrieb</orthForm>
+<compound>
+<modifier category="Nomen">Tod</modifier>
+<head>Trieb</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s84820" category="nomen" class="Motiv">
+<lexUnit id="l114370" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Umweltreiz</orthForm>
+<compound>
+<modifier category="Nomen">Umwelt</modifier>
+<head>Reiz</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s85352" category="nomen" class="Motiv">
+<lexUnit id="l115068" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Studienschwerpunkt</orthForm>
+<compound>
+<modifier category="Nomen">Studium</modifier>
+<head>Schwerpunkt</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s86621" category="nomen" class="Motiv">
+<lexUnit id="l116618" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Berufsziel</orthForm>
+<compound>
+<modifier category="Nomen">Beruf</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s86772" category="nomen" class="Motiv">
+<lexUnit id="l116825" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Expansionsdrang</orthForm>
+<compound>
+<modifier category="Nomen">Expansion</modifier>
+<head>Drang</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s87603" category="nomen" class="Motiv">
+<lexUnit id="l117909" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Anschub</orthForm>
+</lexUnit>
+</synset>
+<synset id="s87671" category="nomen" class="Motiv">
+<lexUnit id="l117997" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Krankheitsursache</orthForm>
+<compound>
+<modifier category="Nomen">Krankheit</modifier>
+<head>Ursache</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s88305" category="nomen" class="Motiv">
+<lexUnit id="l118802" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Kernspin</orthForm>
+<compound>
+<modifier category="Nomen">Kern</modifier>
+<head>Spin</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s88392" category="nomen" class="Motiv">
+<lexUnit id="l118904" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Staatsziel</orthForm>
+<compound>
+<modifier category="Nomen">Staat</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s88597" category="nomen" class="Motiv">
+<lexUnit id="l119178" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Heizzweck</orthForm>
+<compound>
+<modifier category="Verb">heizen</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s89137" category="nomen" class="Motiv">
+<lexUnit id="l119824" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Efferenz</orthForm>
+</lexUnit>
+</synset>
+<synset id="s89167" category="nomen" class="Motiv">
+<lexUnit id="l119859" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Künstlerleben</orthForm>
+<compound>
+<modifier category="Nomen">Künstler</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s89239" category="nomen" class="Motiv">
+<lexUnit id="l119963" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Glaubensgrund</orthForm>
+<compound>
+<modifier category="Nomen">Glauben</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s89509" category="nomen" class="Motiv">
+<lexUnit id="l120295" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Sicherheitsfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Sicherheit</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s90140" category="nomen" class="Motiv">
+<lexUnit id="l121013" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Stressfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Stress</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s90168" category="nomen" class="Motiv">
+<lexUnit id="l121044" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Geschäftszweck</orthForm>
+<compound>
+<modifier category="Nomen">Geschäft</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s90227" category="nomen" class="Motiv">
+<lexUnit id="l121109" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Erziehungsziel</orthForm>
+<compound>
+<modifier category="Nomen">Erziehung</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s90374" category="nomen" class="Motiv">
+<lexUnit id="l121283" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Behuf</orthForm>
+</lexUnit>
+</synset>
+<synset id="s90570" category="nomen" class="Motiv">
+<lexUnit id="l121508" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Großstadtleben</orthForm>
+<compound>
+<modifier category="Nomen">Großstadt</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s90821" category="nomen" class="Motiv">
+<lexUnit id="l121817" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Hauptfaktor</orthForm>
+<compound>
+<modifier>haupt</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s91167" category="nomen" class="Motiv">
+<lexUnit id="l122233" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Hustenreiz</orthForm>
+<compound>
+<modifier category="Nomen">Husten</modifier>
+<head>Reiz</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s91304" category="nomen" class="Motiv">
+<lexUnit id="l122390" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Lichtschutzfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Lichtschutz</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s91358" category="nomen" class="Motiv">
+<lexUnit id="l122450" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Hinweisreiz</orthForm>
+<compound>
+<modifier category="Nomen">Hinweis</modifier>
+<head>Reiz</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s91454" category="nomen" class="Motiv">
+<lexUnit id="l122562" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Zwischenziel</orthForm>
+<compound>
+<modifier category="Präposition">zwischen</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s91928" category="nomen" class="Motiv">
+<lexUnit id="l123155" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Klimafaktor</orthForm>
+<compound>
+<modifier category="Nomen">Klima</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s92391" category="nomen" class="Motiv">
+<lexUnit id="l123745" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Kriegsgrund</orthForm>
+<compound>
+<modifier category="Nomen">Krieg</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s92664" category="nomen" class="Motiv">
+<lexUnit id="l124086" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Wanderleben</orthForm>
+<compound>
+<modifier category="Verb">wandern</modifier>
+<head>Leben</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s93009" category="nomen" class="Motiv">
+<lexUnit id="l124533" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Hinderungsgrund</orthForm>
+<compound>
+<modifier category="Nomen">Hinderung</modifier>
+<head>Grund</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s93423" category="nomen" class="Motiv">
+<lexUnit id="l124993" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Dokumentationszweck</orthForm>
+<compound>
+<modifier category="Nomen">Dokumentation</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s93441" category="nomen" class="Motiv">
+<lexUnit id="l125013" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Heilzweck</orthForm>
+<compound>
+<modifier category="Verb">heilen</modifier>
+<head>Zweck</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s93509" category="nomen" class="Motiv">
+<lexUnit id="l125099" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Entwicklungsziel</orthForm>
+<compound>
+<modifier category="Nomen">Entwicklung</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s93570" category="nomen" class="Motiv">
+<lexUnit id="l125163" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Verlustfaktor</orthForm>
+<compound>
+<modifier category="Nomen">Verlust</modifier>
+<head>Faktor</head>
+</compound>
+</lexUnit>
+</synset>
+<synset id="s93640" category="nomen" class="Motiv">
+<lexUnit id="l125264" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Forschungsziel</orthForm>
+<compound>
+<modifier category="Nomen">Forschung</modifier>
+<head>Ziel</head>
+</compound>
+</lexUnit>
+</synset>
+</synsets>

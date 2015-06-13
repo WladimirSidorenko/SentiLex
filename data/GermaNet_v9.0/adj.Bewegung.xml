@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE synsets SYSTEM "germanet_objects.dtd">
+<synsets>
+<synset id="s414" category="adj" class="Bewegung">
+<lexUnit id="l675" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>bewegungsspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s415" category="adj" class="Bewegung">
+<lexUnit id="l676" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fließend</orthForm>
+</lexUnit>
+<lexUnit id="l677" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gleitend</orthForm>
+</lexUnit>
+<lexUnit id="l678" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>harmonisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s416" category="adj" class="Bewegung">
+<lexUnit id="l679" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geschmeidig</orthForm>
+</lexUnit>
+<lexUnit id="l680" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>elegant</orthForm>
+</lexUnit>
+</synset>
+<synset id="s417" category="adj" class="Bewegung">
+<lexUnit id="l681" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beschwingt</orthForm>
+</lexUnit>
+<lexUnit id="l682" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwungvoll</orthForm>
+</lexUnit>
+<paraphrase>mit/voll Schwung</paraphrase>
+</synset>
+<synset id="s418" category="adj" class="Bewegung">
+<lexUnit id="l683" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abgehackt</orthForm>
+</lexUnit>
+<lexUnit id="l684" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unharmonisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s419" category="adj" class="Bewegung">
+<lexUnit id="l685" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eckig</orthForm>
+</lexUnit>
+<lexUnit id="l686" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kantig</orthForm>
+</lexUnit>
+<lexUnit id="l687" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zackig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s420" category="adj" class="Bewegung">
+<lexUnit id="l688" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leicht</orthForm>
+</lexUnit>
+</synset>
+<synset id="s421" category="adj" class="Bewegung">
+<lexUnit id="l689" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grazil</orthForm>
+</lexUnit>
+<lexUnit id="l690" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>graziös</orthForm>
+</lexUnit>
+<lexUnit id="l691" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anmutig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s422" category="adj" class="Bewegung">
+<lexUnit id="l692" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>heftig</orthForm>
+</lexUnit>
+<lexUnit id="l693" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vehement</orthForm>
+</lexUnit>
+<lexUnit id="l694" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungestüm</orthForm>
+</lexUnit>
+</synset>
+<synset id="s423" category="adj" class="Bewegung">
+<lexUnit id="l695" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>turbulent</orthForm>
+</lexUnit>
+<lexUnit id="l696" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unruhig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s424" category="adj" class="Bewegung">
+<lexUnit id="l697" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>furios</orthForm>
+</lexUnit>
+<lexUnit id="l698" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mitreißend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s425" category="adj" class="Bewegung">
+<lexUnit id="l699" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>plump</orthForm>
+</lexUnit>
+</synset>
+<synset id="s426" category="adj" class="Bewegung">
+<lexUnit id="l701" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwerfällig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s427" category="adj" class="Bewegung">
+<lexUnit id="l702" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>behäbig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s428" category="adj" class="Bewegung">
+<lexUnit id="l703" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wild</orthForm>
+</lexUnit>
+<lexUnit id="l704" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zappelig</orthForm>
+</lexUnit>
+<lexUnit id="l705" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hektisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s429" category="adj" class="Bewegung">
+<lexUnit id="l706" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>starr</orthForm>
+</lexUnit>
+<lexUnit id="l707" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unbeweglich</orthForm>
+</lexUnit>
+<lexUnit id="l708" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unflexibel</orthForm>
+</lexUnit>
+<lexUnit id="l709" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fest</orthForm>
+</lexUnit>
+</synset>
+<synset id="s430" category="adj" class="Bewegung">
+<lexUnit id="l711" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hölzern</orthForm>
+</lexUnit>
+<lexUnit id="l712" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>holprig</orthForm>
+</lexUnit>
+<lexUnit id="l713" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>staksig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s431" category="adj" class="Bewegung">
+<lexUnit id="l714" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungelenk</orthForm>
+</lexUnit>
+<lexUnit id="l715" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungelenkig</orthForm>
+</lexUnit>
+<lexUnit id="l125623" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>steif</orthForm>
+</lexUnit>
+</synset>
+<synset id="s432" category="adj" class="Bewegung">
+<lexUnit id="l716" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gegeben</orthForm>
+</lexUnit>
+<lexUnit id="l717" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>feststehend</orthForm>
+</lexUnit>
+<lexUnit id="l718" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fix</orthForm>
+</lexUnit>
+</synset>
+<synset id="s435" category="adj" class="Bewegung">
+<lexUnit id="l721" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beweglich</orthForm>
+</lexUnit>
+<lexUnit id="l722" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mobil</orthForm>
+</lexUnit>
+</synset>
+<synset id="s436" category="adj" class="Bewegung">
+<lexUnit id="l723" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rhythmisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s437" category="adj" class="Bewegung">
+<lexUnit id="l724" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gelenkig</orthForm>
+</lexUnit>
+<lexUnit id="l725" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>biegsam</orthForm>
+</lexUnit>
+</synset>
+<synset id="s438" category="adj" class="Bewegung">
+<lexUnit id="l726" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>flexibel</orthForm>
+</lexUnit>
+</synset>
+<synset id="s440" category="adj" class="Bewegung">
+<lexUnit id="l729" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>elastisch</orthForm>
+</lexUnit>
+<lexUnit id="l730" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dehnbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s441" category="adj" class="Bewegung">
+<lexUnit id="l731" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>positionsspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s442" category="adj" class="Bewegung">
+<lexUnit id="l732" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sitzend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s443" category="adj" class="Bewegung">
+<lexUnit id="l733" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stehend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s444" category="adj" class="Bewegung">
+<lexUnit id="l734" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>liegend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s445" category="adj" class="Bewegung">
+<lexUnit id="l735" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hockend</orthForm>
+</lexUnit>
+<lexUnit id="l736" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kauernd</orthForm>
+</lexUnit>
+</synset>
+<synset id="s446" category="adj" class="Bewegung">
+<lexUnit id="l737" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ruhend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s447" category="adj" class="Bewegung">
+<lexUnit id="l738" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>laufend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s448" category="adj" class="Bewegung">
+<lexUnit id="l739" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fliegend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s449" category="adj" class="Bewegung">
+<lexUnit id="l740" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gehend</orthForm>
+</lexUnit>
+<lexUnit id="l741" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schreitend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s450" category="adj" class="Bewegung">
+<lexUnit id="l742" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rennend</orthForm>
+</lexUnit>
+<lexUnit id="l743" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rasend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s451" category="adj" class="Bewegung">
+<lexUnit id="l744" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>steigend</orthForm>
+</lexUnit>
+<lexUnit id="l745" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ansteigend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s452" category="adj" class="Bewegung">
+<lexUnit id="l746" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fallend</orthForm>
+</lexUnit>
+<lexUnit id="l747" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sinkend</orthForm>
+</lexUnit>
+<lexUnit id="l748" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>absinkend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s66919" category="adj" class="Bewegung">
+<lexUnit id="l92740" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schlangenartig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s68961" category="adj" class="Bewegung">
+<lexUnit id="l95114" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abstehend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s68965" category="adj" class="Bewegung">
+<lexUnit id="l95118" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gegenüberstehend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79560" category="adj" class="Bewegung">
+<lexUnit id="l107842" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>laminar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80446" category="adj" class="Bewegung">
+<lexUnit id="l108869" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>motorisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s86140" category="adj" class="Bewegung">
+<lexUnit id="l116021" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>psychomotorisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s86173" category="adj" class="Bewegung">
+<lexUnit id="l116058" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>halbstarr</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94026" category="adj" class="Bewegung">
+<lexUnit id="l125747" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gravitätisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94117" category="adj" class="Bewegung">
+<lexUnit id="l125865" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>linksdrehend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94118" category="adj" class="Bewegung">
+<lexUnit id="l125866" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rechtsdrehend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94329" category="adj" class="Bewegung">
+<lexUnit id="l126121" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hieratisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94353" category="adj" class="Bewegung">
+<lexUnit id="l126146" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unelastisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94361" category="adj" class="Bewegung">
+<lexUnit id="l126154" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sensomotorisch</orthForm>
+<orthVar>sensumotorisch </orthVar>
+</lexUnit>
+</synset>
+<synset id="s94485" category="adj" class="Bewegung">
+<lexUnit id="l126305" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>immobil</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94489" category="adj" class="Bewegung">
+<lexUnit id="l126309" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>polyrhythmisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94604" category="adj" class="Bewegung">
+<lexUnit id="l126459" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>reißend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94606" category="adj" class="Bewegung">
+<lexUnit id="l126461" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ortsfest</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94614" category="adj" class="Bewegung">
+<lexUnit id="l126469" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>innenliegend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94615" category="adj" class="Bewegung">
+<lexUnit id="l126470" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hochgelegen</orthForm>
+</lexUnit>
+<lexUnit id="l127012" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hochliegend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94632" category="adj" class="Bewegung">
+<lexUnit id="l126490" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>außenliegend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94875" category="adj" class="Bewegung">
+<lexUnit id="l126800" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tiefliegend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94908" category="adj" class="Bewegung">
+<lexUnit id="l126839" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unbewegt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94968" category="adj" class="Bewegung">
+<lexUnit id="l126908" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beiliegend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95501" category="adj" class="Bewegung">
+<lexUnit id="l127544" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tief stehend</orthForm>
+<orthVar>tiefstehend</orthVar>
+</lexUnit>
+</synset>
+<synset id="s95527" category="adj" class="Bewegung">
+<lexUnit id="l127574" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>duktil</orthForm>
+</lexUnit>
+</synset>
+</synsets>

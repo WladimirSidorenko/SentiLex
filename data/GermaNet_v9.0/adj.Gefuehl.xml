@@ -1,0 +1,3276 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE synsets SYSTEM "germanet_objects.dtd">
+<synsets>
+<synset id="s453" category="adj" class="Gefuehl">
+<lexUnit id="l749" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>gefühlsspezifisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s454" category="adj" class="Gefuehl">
+<lexUnit id="l750" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>Gefühl empfindend</orthForm>
+</lexUnit>
+<paraphrase>Gefühl empfindend</paraphrase>
+</synset>
+<synset id="s455" category="adj" class="Gefuehl">
+<lexUnit id="l752" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gefühlsmäßig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s456" category="adj" class="Gefuehl">
+<lexUnit id="l753" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>instinktiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s457" category="adj" class="Gefuehl">
+<lexUnit id="l754" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>instinktgetrieben</orthForm>
+</lexUnit>
+<lexUnit id="l755" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>instinktgesteuert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s458" category="adj" class="Gefuehl">
+<lexUnit id="l756" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gefühlvoll</orthForm>
+</lexUnit>
+<paraphrase>voll Gefühl</paraphrase>
+</synset>
+<synset id="s459" category="adj" class="Gefuehl">
+<lexUnit id="l757" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>feierlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s460" category="adj" class="Gefuehl">
+<lexUnit id="l758" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pathetisch</orthForm>
+</lexUnit>
+<lexUnit id="l759" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwülstig</orthForm>
+</lexUnit>
+<lexUnit id="l126898" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geschwollen</orthForm>
+</lexUnit>
+<paraphrase>übertrieben</paraphrase>
+</synset>
+<synset id="s461" category="adj" class="Gefuehl">
+<lexUnit id="l760" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gemütsvoll</orthForm>
+</lexUnit>
+<lexUnit id="l127156" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gemütvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s462" category="adj" class="Gefuehl">
+<lexUnit id="l761" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>romantisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s463" category="adj" class="Gefuehl">
+<lexUnit id="l762" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>emotional</orthForm>
+</lexUnit>
+<lexUnit id="l763" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>emotionell</orthForm>
+</lexUnit>
+</synset>
+<synset id="s464" category="adj" class="Gefuehl">
+<lexUnit id="l764" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beseelt</orthForm>
+</lexUnit>
+<lexUnit id="l765" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>seelenvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s465" category="adj" class="Gefuehl">
+<lexUnit id="l766" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>herzlich</orthForm>
+</lexUnit>
+<lexUnit id="l767" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>innig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s466" category="adj" class="Gefuehl">
+<lexUnit id="l768" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sensibel</orthForm>
+</lexUnit>
+<lexUnit id="l769" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einfühlsam</orthForm>
+</lexUnit>
+<lexUnit id="l770" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>intuitiv</orthForm>
+</lexUnit>
+<lexUnit id="l771" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mitfühlend</orthForm>
+</lexUnit>
+<lexUnit id="l126185" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>empathisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s467" category="adj" class="Gefuehl">
+<lexUnit id="l772" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mitleidend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s468" category="adj" class="Gefuehl">
+<lexUnit id="l773" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tröstlich</orthForm>
+</lexUnit>
+<lexUnit id="l774" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tröstend</orthForm>
+</lexUnit>
+<lexUnit id="l775" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>trostspendend</orthForm>
+</lexUnit>
+<lexUnit id="l127625" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>trostreich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s469" category="adj" class="Gefuehl">
+<lexUnit id="l776" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verständig</orthForm>
+</lexUnit>
+<lexUnit id="l777" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verständnisvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s470" category="adj" class="Gefuehl">
+<lexUnit id="l778" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>augenzwinkernd</orthForm>
+</lexUnit>
+</synset>
+<synset id="s471" category="adj" class="Gefuehl">
+<lexUnit id="l779" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachsichtig</orthForm>
+</lexUnit>
+<lexUnit id="l780" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rücksichtsvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s472" category="adj" class="Gefuehl">
+<lexUnit id="l781" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>empfindlich</orthForm>
+</lexUnit>
+<lexUnit id="l782" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>empfindsam</orthForm>
+</lexUnit>
+</synset>
+<synset id="s473" category="adj" class="Gefuehl">
+<lexUnit id="l783" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verletzlich</orthForm>
+</lexUnit>
+<lexUnit id="l784" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verletzbar</orthForm>
+</lexUnit>
+<lexUnit id="l785" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verwundbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s474" category="adj" class="Gefuehl">
+<lexUnit id="l786" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mimosenhaft</orthForm>
+</lexUnit>
+<lexUnit id="l787" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zimperlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s475" category="adj" class="Gefuehl">
+<lexUnit id="l789" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zartbesaitet</orthForm>
+<orthVar>zart besaitet</orthVar>
+<oldOrthForm>zartbesaitet</oldOrthForm>
+</lexUnit>
+<lexUnit id="l788" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dünnhäutig</orthForm>
+</lexUnit>
+<lexUnit id="l791" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überempfindlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s476" category="adj" class="Gefuehl">
+<lexUnit id="l792" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>feinnervig</orthForm>
+</lexUnit>
+<lexUnit id="l793" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>feinfühlig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s477" category="adj" class="Gefuehl">
+<lexUnit id="l794" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mitleidig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s478" category="adj" class="Gefuehl">
+<lexUnit id="l795" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sentimental</orthForm>
+</lexUnit>
+<lexUnit id="l796" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rührselig</orthForm>
+</lexUnit>
+<paraphrase>übertrieben gefühlvoll</paraphrase>
+</synset>
+<synset id="s479" category="adj" class="Gefuehl">
+<lexUnit id="l797" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sehnsüchtig</orthForm>
+</lexUnit>
+<lexUnit id="l798" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sehnsuchtsvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s480" category="adj" class="Gefuehl">
+<lexUnit id="l799" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nostalgisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s481" category="adj" class="Gefuehl">
+<lexUnit id="l800" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gefühllos</orthForm>
+</lexUnit>
+<lexUnit id="l801" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gefühlsarm</orthForm>
+</lexUnit>
+<lexUnit id="l802" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gefühlskalt</orthForm>
+</lexUnit>
+<paraphrase>ohne Gefühl</paraphrase>
+</synset>
+<synset id="s482" category="adj" class="Gefuehl">
+<lexUnit id="l803" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kühl</orthForm>
+</lexUnit>
+<lexUnit id="l804" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unterkühlt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s483" category="adj" class="Gefuehl">
+<lexUnit id="l805" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sachlich</orthForm>
+</lexUnit>
+<lexUnit id="l806" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>knochentrocken</orthForm>
+</lexUnit>
+<lexUnit id="l807" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>dröge</orthForm>
+</lexUnit>
+</synset>
+<synset id="s484" category="adj" class="Gefuehl">
+<lexUnit id="l808" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unsachlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s485" category="adj" class="Gefuehl">
+<lexUnit id="l809" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hartherzig</orthForm>
+</lexUnit>
+<lexUnit id="l810" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hart</orthForm>
+</lexUnit>
+<lexUnit id="l811" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kalt</orthForm>
+</lexUnit>
+<lexUnit id="l812" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kaltherzig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s486" category="adj" class="Gefuehl">
+<lexUnit id="l813" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verletzend</orthForm>
+</lexUnit>
+<lexUnit id="l814" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unsensibel</orthForm>
+</lexUnit>
+</synset>
+<synset id="s487" category="adj" class="Gefuehl">
+<lexUnit id="l815" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schroff</orthForm>
+</lexUnit>
+<lexUnit id="l816" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>brüsk</orthForm>
+</lexUnit>
+</synset>
+<synset id="s488" category="adj" class="Gefuehl">
+<lexUnit id="l817" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unempfindlich</orthForm>
+</lexUnit>
+<lexUnit id="l818" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unverwundbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s489" category="adj" class="Gefuehl">
+<lexUnit id="l819" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dickfellig</orthForm>
+</lexUnit>
+<lexUnit id="l820" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dickhäutig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s490" category="adj" class="Gefuehl">
+<lexUnit id="l821" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unantastbar</orthForm>
+</lexUnit>
+<lexUnit id="l822" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unangreifbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s491" category="adj" class="Gefuehl">
+<lexUnit id="l823" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unerschütterlich</orthForm>
+</lexUnit>
+<lexUnit id="l824" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unerschrocken</orthForm>
+</lexUnit>
+</synset>
+<synset id="s492" category="adj" class="Gefuehl">
+<lexUnit id="l825" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glücklich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s493" category="adj" class="Gefuehl">
+<lexUnit id="l826" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>strahlend</orthForm>
+</lexUnit>
+<lexUnit id="l827" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glückstrahlend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s494" category="adj" class="Gefuehl">
+<lexUnit id="l828" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überglücklich</orthForm>
+</lexUnit>
+<lexUnit id="l829" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>seelig</orthForm>
+</lexUnit>
+<lexUnit id="l127879" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glückselig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s495" category="adj" class="Gefuehl">
+<lexUnit id="l830" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>froh</orthForm>
+</lexUnit>
+<lexUnit id="l831" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>froh gestimmt</orthForm>
+<orthVar>frohgestimmt</orthVar>
+<oldOrthForm>frohgestimmt</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s496" category="adj" class="Gefuehl">
+<lexUnit id="l833" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zufrieden</orthForm>
+</lexUnit>
+</synset>
+<synset id="s497" category="adj" class="Gefuehl">
+<lexUnit id="l834" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungetrübt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s498" category="adj" class="Gefuehl">
+<lexUnit id="l835" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hochzufrieden</orthForm>
+</lexUnit>
+</synset>
+<synset id="s499" category="adj" class="Gefuehl">
+<lexUnit id="l836" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fröhlich</orthForm>
+</lexUnit>
+<lexUnit id="l837" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vergnügt</orthForm>
+</lexUnit>
+<paraphrase>Fröhlichkeit empfindend</paraphrase>
+</synset>
+<synset id="s500" category="adj" class="Gefuehl">
+<lexUnit id="l838" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>quietschvergnügt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s501" category="adj" class="Gefuehl">
+<lexUnit id="l839" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beschwingt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s502" category="adj" class="Gefuehl">
+<lexUnit id="l840" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>heiter</orthForm>
+</lexUnit>
+</synset>
+<synset id="s503" category="adj" class="Gefuehl">
+<lexUnit id="l841" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fidel</orthForm>
+</lexUnit>
+</synset>
+<synset id="s504" category="adj" class="Gefuehl">
+<lexUnit id="l842" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unbeschwert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s505" category="adj" class="Gefuehl">
+<lexUnit id="l843" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ausgelassen</orthForm>
+<example><text>in ausgelassener Stimmung</text></example>
+</lexUnit>
+</synset>
+<synset id="s506" category="adj" class="Gefuehl">
+<lexUnit id="l844" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>euphorisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s507" category="adj" class="Gefuehl">
+<lexUnit id="l845" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überschäumend</orthForm>
+</lexUnit>
+<lexUnit id="l846" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überbordend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s510" category="adj" class="Gefuehl">
+<lexUnit id="l852" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gut aufgelegt</orthForm>
+</lexUnit>
+<lexUnit id="l853" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>launig</orthForm>
+</lexUnit>
+<lexUnit id="l851" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gut gelaunt</orthForm>
+<orthVar>gutgelaunt</orthVar>
+<oldOrthForm>gutgelaunt</oldOrthForm>
+</lexUnit>
+<lexUnit id="l126503" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>froh gelaunt</orthForm>
+<orthVar>frohgelaunt</orthVar>
+</lexUnit>
+<paraphrase>gute Laune haben</paraphrase>
+</synset>
+<synset id="s511" category="adj" class="Gefuehl">
+<lexUnit id="l854" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>frohgemut</orthForm>
+</lexUnit>
+<paraphrase>frohen Mutes sein</paraphrase>
+</synset>
+<synset id="s512" category="adj" class="Gefuehl">
+<lexUnit id="l855" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leichtfüßig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s513" category="adj" class="Gefuehl">
+<lexUnit id="l856" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufgekratzt</orthForm>
+</lexUnit>
+<lexUnit id="l857" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufgedreht</orthForm>
+</lexUnit>
+</synset>
+<synset id="s514" category="adj" class="Gefuehl">
+<lexUnit id="l858" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überschwänglich</orthForm>
+<oldOrthForm>überschwenglich</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s515" category="adj" class="Gefuehl">
+<lexUnit id="l860" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lebenslustig</orthForm>
+</lexUnit>
+<lexUnit id="l861" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lebensfroh</orthForm>
+</lexUnit>
+<lexUnit id="l862" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lebensbejahend</orthForm>
+</lexUnit>
+<paraphrase>voller Lebensmut</paraphrase>
+</synset>
+<synset id="s516" category="adj" class="Gefuehl">
+<lexUnit id="l863" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lustbetont</orthForm>
+</lexUnit>
+<lexUnit id="l864" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lustvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s517" category="adj" class="Gefuehl">
+<lexUnit id="l865" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erleichtert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s518" category="adj" class="Gefuehl">
+<lexUnit id="l866" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>heilfroh</orthForm>
+</lexUnit>
+</synset>
+<synset id="s519" category="adj" class="Gefuehl">
+<lexUnit id="l867" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>befreit</orthForm>
+</lexUnit>
+<lexUnit id="l868" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erlöst</orthForm>
+</lexUnit>
+</synset>
+<synset id="s520" category="adj" class="Gefuehl">
+<lexUnit id="l869" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beruhigt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s521" category="adj" class="Gefuehl">
+<lexUnit id="l870" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dankbar</orthForm>
+</lexUnit>
+</synset>
+<synset id="s522" category="adj" class="Gefuehl">
+<lexUnit id="l871" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ernst</orthForm>
+</lexUnit>
+<lexUnit id="l872" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ernsthaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s523" category="adj" class="Gefuehl">
+<lexUnit id="l875" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>übellaunig</orthForm>
+</lexUnit>
+<lexUnit id="l874" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schlecht gelaunt</orthForm>
+<orthVar>schlechtgelaunt</orthVar>
+<oldOrthForm>schlechtgelaunt</oldOrthForm>
+</lexUnit>
+<lexUnit id="l126504" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>übel gelaunt</orthForm>
+<orthVar>übelgelaunt</orthVar>
+</lexUnit>
+<paraphrase>schlechte Laune haben</paraphrase>
+</synset>
+<synset id="s524" category="adj" class="Gefuehl">
+<lexUnit id="l876" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grantig</orthForm>
+</lexUnit>
+<lexUnit id="l877" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grimmig</orthForm>
+</lexUnit>
+<lexUnit id="l126391" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grimm</orthForm>
+</lexUnit>
+</synset>
+<synset id="s509" category="adj" class="Gefuehl">
+<lexUnit id="l849" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>übermütig</orthForm>
+</lexUnit>
+<paraphrase>voll Übermut</paraphrase>
+</synset>
+<synset id="s525" category="adj" class="Gefuehl">
+<lexUnit id="l878" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mürrisch</orthForm>
+</lexUnit>
+<lexUnit id="l879" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verdrossen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s526" category="adj" class="Gefuehl">
+<lexUnit id="l882" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>muffig</orthForm>
+</lexUnit>
+<lexUnit id="l887" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verstimmt</orthForm>
+</lexUnit>
+<lexUnit id="l880" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>missgestimmt</orthForm>
+<oldOrthForm>mißgestimmt</oldOrthForm>
+</lexUnit>
+<lexUnit id="l883" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>misslaunig</orthForm>
+<oldOrthForm>mißlaunig</oldOrthForm>
+</lexUnit>
+<lexUnit id="l885" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>missgelaunt</orthForm>
+<oldOrthForm>mißgelaunt</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s527" category="adj" class="Gefuehl">
+<lexUnit id="l888" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>knatschig</orthForm>
+</lexUnit>
+<lexUnit id="l889" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>quengelig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s528" category="adj" class="Gefuehl">
+<lexUnit id="l890" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nörgelig</orthForm>
+</lexUnit>
+<lexUnit id="l891" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nölig</orthForm>
+</lexUnit>
+<lexUnit id="l892" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nörglerisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s529" category="adj" class="Gefuehl">
+<lexUnit id="l893" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>traurig</orthForm>
+</lexUnit>
+<lexUnit id="l894" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>freudlos</orthForm>
+</lexUnit>
+<paraphrase>Trauer empfindend</paraphrase>
+</synset>
+<synset id="s530" category="adj" class="Gefuehl">
+<lexUnit id="l895" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verbittert</orthForm>
+</lexUnit>
+<lexUnit id="l896" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bitter</orthForm>
+</lexUnit>
+<paraphrase>Bitterkeit empfindend</paraphrase>
+</synset>
+<synset id="s531" category="adj" class="Gefuehl">
+<lexUnit id="l897" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verhärtet</orthForm>
+</lexUnit>
+<lexUnit id="l898" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vergrämt</orthForm>
+</lexUnit>
+<lexUnit id="l899" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vergrätzt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s532" category="adj" class="Gefuehl">
+<lexUnit id="l900" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unglücklich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s533" category="adj" class="Gefuehl">
+<lexUnit id="l901" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unzufrieden</orthForm>
+</lexUnit>
+</synset>
+<synset id="s534" category="adj" class="Gefuehl">
+<lexUnit id="l902" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>todunglücklich</orthForm>
+</lexUnit>
+<lexUnit id="l903" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>todtraurig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s535" category="adj" class="Gefuehl">
+<lexUnit id="l904" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bedrückt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s536" category="adj" class="Gefuehl">
+<lexUnit id="l905" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einsam</orthForm>
+</lexUnit>
+<lexUnit id="l906" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>allein</orthForm>
+</lexUnit>
+</synset>
+<synset id="s537" category="adj" class="Gefuehl">
+<lexUnit id="l907" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>reumütig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s538" category="adj" class="Gefuehl">
+<lexUnit id="l908" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verlassen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s539" category="adj" class="Gefuehl">
+<lexUnit id="l909" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vereinsamt</orthForm>
+</lexUnit>
+<lexUnit id="l910" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vereinzelt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s540" category="adj" class="Gefuehl">
+<lexUnit id="l911" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tieftraurig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s541" category="adj" class="Gefuehl">
+<lexUnit id="l913" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>untröstlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s542" category="adj" class="Gefuehl">
+<lexUnit id="l914" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>betroffen</orthForm>
+</lexUnit>
+<lexUnit id="l915" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leidtragend</orthForm>
+<orthVar>Leid tragend</orthVar>
+<oldOrthForm>leidtragend</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s543" category="adj" class="Gefuehl">
+<lexUnit id="l917" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>bedröppelt</orthForm>
+</lexUnit>
+<lexUnit id="l918" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>begossen</orthForm>
+</lexUnit>
+<lexUnit id="l919" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>gelackmeiert</orthForm>
+</lexUnit>
+<paraphrase>wie ein begossener Pudel</paraphrase>
+</synset>
+<synset id="s544" category="adj" class="Gefuehl">
+<lexUnit id="l920" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beschämt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s545" category="adj" class="Gefuehl">
+<lexUnit id="l921" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wehmütig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s546" category="adj" class="Gefuehl">
+<lexUnit id="l922" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bekümmert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s547" category="adj" class="Gefuehl">
+<lexUnit id="l923" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>melancholisch</orthForm>
+</lexUnit>
+<lexUnit id="l924" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>deprimiert</orthForm>
+</lexUnit>
+<lexUnit id="l925" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwermütig</orthForm>
+</lexUnit>
+<lexUnit id="l107903" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>elegisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s549" category="adj" class="Gefuehl">
+<lexUnit id="l930" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gedankenvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s550" category="adj" class="Gefuehl">
+<lexUnit id="l931" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>versunken</orthForm>
+</lexUnit>
+<lexUnit id="l932" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kontemplativ</orthForm>
+</lexUnit>
+</synset>
+<synset id="s551" category="adj" class="Gefuehl">
+<lexUnit id="l933" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>meditativ</orthForm>
+</lexUnit>
+</synset>
+<synset id="s552" category="adj" class="Gefuehl">
+<lexUnit id="l934" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>trübsinnig</orthForm>
+</lexUnit>
+<paraphrase>Trübsinn empfindend</paraphrase>
+</synset>
+<synset id="s553" category="adj" class="Gefuehl">
+<lexUnit id="l935" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verärgert</orthForm>
+</lexUnit>
+<lexUnit id="l936" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ärgerlich</orthForm>
+</lexUnit>
+<paraphrase>Ärger empfindend</paraphrase>
+</synset>
+<synset id="s554" category="adj" class="Gefuehl">
+<lexUnit id="l937" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wütend</orthForm>
+</lexUnit>
+<lexUnit id="l938" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wild</orthForm>
+</lexUnit>
+</synset>
+<synset id="s555" category="adj" class="Gefuehl">
+<lexUnit id="l939" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zornig</orthForm>
+</lexUnit>
+<lexUnit id="l940" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erzürnt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s556" category="adj" class="Gefuehl">
+<lexUnit id="l941" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>empört</orthForm>
+</lexUnit>
+<lexUnit id="l942" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>entrüstet</orthForm>
+</lexUnit>
+<lexUnit id="l943" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>indigniert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s557" category="adj" class="Gefuehl">
+<lexUnit id="l944" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>böse</orthForm>
+<orthVar>bös</orthVar>
+</lexUnit>
+</synset>
+<synset id="s558" category="adj" class="Gefuehl">
+<lexUnit id="l946" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bitterböse</orthForm>
+</lexUnit>
+</synset>
+<synset id="s559" category="adj" class="Gefuehl">
+<lexUnit id="l947" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beleidigt</orthForm>
+</lexUnit>
+<lexUnit id="l948" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gekränkt</orthForm>
+</lexUnit>
+<lexUnit id="l949" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>sauer</orthForm>
+</lexUnit>
+<lexUnit id="l950" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verletzt</orthForm>
+</lexUnit>
+<lexUnit id="l951" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pikiert</orthForm>
+</lexUnit>
+<lexUnit id="l952" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eingeschnappt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s560" category="adj" class="Gefuehl">
+<lexUnit id="l953" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nachtragend</orthForm>
+</lexUnit>
+<lexUnit id="l954" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unversöhnlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s561" category="adj" class="Gefuehl">
+<lexUnit id="l955" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vorwurfsvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s562" category="adj" class="Gefuehl">
+<lexUnit id="l956" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erbost</orthForm>
+</lexUnit>
+</synset>
+<synset id="s563" category="adj" class="Gefuehl">
+<lexUnit id="l957" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufgebracht</orthForm>
+</lexUnit>
+</synset>
+<synset id="s564" category="adj" class="Gefuehl">
+<lexUnit id="l958" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schockiert</orthForm>
+</lexUnit>
+<lexUnit id="l959" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geschockt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s565" category="adj" class="Gefuehl">
+<lexUnit id="l960" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>paralysiert</orthForm>
+</lexUnit>
+<lexUnit id="l961" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gelähmt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s566" category="adj" class="Gefuehl">
+<lexUnit id="l962" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erbittert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s567" category="adj" class="Gefuehl">
+<lexUnit id="l963" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>fuchsteufelswild</orthForm>
+</lexUnit>
+<lexUnit id="l964" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>fuchsig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s568" category="adj" class="Gefuehl">
+<lexUnit id="l965" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>optimistisch</orthForm>
+</lexUnit>
+<paraphrase>Optimismus empfindend</paraphrase>
+</synset>
+<synset id="s569" category="adj" class="Gefuehl">
+<lexUnit id="l966" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hoffnungsvoll</orthForm>
+</lexUnit>
+<lexUnit id="l967" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erwartungsvoll</orthForm>
+</lexUnit>
+<lexUnit id="l968" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hoffnungsfroh</orthForm>
+</lexUnit>
+<paraphrase>voller Hoffnung</paraphrase>
+</synset>
+<synset id="s570" category="adj" class="Gefuehl">
+<lexUnit id="l969" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zuversichtlich</orthForm>
+</lexUnit>
+<paraphrase>voller Zuversicht</paraphrase>
+</synset>
+<synset id="s571" category="adj" class="Gefuehl">
+<lexUnit id="l970" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sorgenfrei</orthForm>
+</lexUnit>
+<lexUnit id="l971" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sorglos</orthForm>
+</lexUnit>
+<paraphrase>frei von Sorgen</paraphrase>
+</synset>
+<synset id="s572" category="adj" class="Gefuehl">
+<lexUnit id="l972" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leichtherzig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s573" category="adj" class="Gefuehl">
+<lexUnit id="l973" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unbekümmert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s574" category="adj" class="Gefuehl">
+<lexUnit id="l974" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>versöhnlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s575" category="adj" class="Gefuehl">
+<lexUnit id="l975" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sicher</orthForm>
+</lexUnit>
+<lexUnit id="l976" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fest</orthForm>
+</lexUnit>
+</synset>
+<synset id="s576" category="adj" class="Gefuehl">
+<lexUnit id="l977" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überzeugt</orthForm>
+</lexUnit>
+<paraphrase>eine überzeugte Christin</paraphrase>
+</synset>
+<synset id="s577" category="adj" class="Gefuehl">
+<lexUnit id="l978" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bombensicher</orthForm>
+</lexUnit>
+<lexUnit id="l979" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>felsenfest</orthForm>
+</lexUnit>
+</synset>
+<synset id="s581" category="adj" class="Gefuehl">
+<lexUnit id="l987" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungefährdet</orthForm>
+</lexUnit>
+<paraphrase>ein zu keinem Zeitpunkt gefährdeter Sieg</paraphrase>
+</synset>
+<synset id="s583" category="adj" class="Gefuehl">
+<lexUnit id="l991" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eifersüchtig</orthForm>
+</lexUnit>
+<paraphrase>dunkles Gefühl empfindend</paraphrase>
+</synset>
+<synset id="s584" category="adj" class="Gefuehl">
+<lexUnit id="l993" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neidisch</orthForm>
+</lexUnit>
+<lexUnit id="l992" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>missgünstig</orthForm>
+<oldOrthForm>mißgünstig</oldOrthForm>
+</lexUnit>
+<paraphrase>dunkles Gefühl empfindend</paraphrase>
+</synset>
+<synset id="s585" category="adj" class="Gefuehl">
+<lexUnit id="l994" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abwertend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s586" category="adj" class="Gefuehl">
+<lexUnit id="l995" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rachsüchtig</orthForm>
+</lexUnit>
+<paraphrase>dunkles Gefühl empfindend</paraphrase>
+</synset>
+<synset id="s587" category="adj" class="Gefuehl">
+<lexUnit id="l996" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pessimistisch</orthForm>
+</lexUnit>
+<paraphrase>Pessimismus empfindend</paraphrase>
+</synset>
+<synset id="s588" category="adj" class="Gefuehl">
+<lexUnit id="l997" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hoffnungslos</orthForm>
+</lexUnit>
+<paraphrase>ohne Hoffnung</paraphrase>
+</synset>
+<synset id="s589" category="adj" class="Gefuehl">
+<lexUnit id="l998" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verzweifelt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s590" category="adj" class="Gefuehl">
+<lexUnit id="l999" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>niedergeschlagen</orthForm>
+</lexUnit>
+<lexUnit id="l1000" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>niedergedrückt</orthForm>
+</lexUnit>
+<lexUnit id="l1001" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gedrückt</orthForm>
+</lexUnit>
+<lexUnit id="l1002" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>down</orthForm>
+</lexUnit>
+</synset>
+<synset id="s591" category="adj" class="Gefuehl">
+<lexUnit id="l1003" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gebrochen</orthForm>
+</lexUnit>
+<lexUnit id="l1004" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geknickt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s592" category="adj" class="Gefuehl">
+<lexUnit id="l1005" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>besorgt</orthForm>
+</lexUnit>
+<lexUnit id="l1006" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sorgenvoll</orthForm>
+</lexUnit>
+<paraphrase>von Sorge erfüllt</paraphrase>
+</synset>
+<synset id="s593" category="adj" class="Gefuehl">
+<lexUnit id="l1007" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beunruhigt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s594" category="adj" class="Gefuehl">
+<lexUnit id="l1008" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zweifelnd</orthForm>
+</lexUnit>
+<lexUnit id="l1009" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unsicher</orthForm>
+</lexUnit>
+<paraphrase>von Zweifel erfüllt</paraphrase>
+</synset>
+<synset id="s595" category="adj" class="Gefuehl">
+<lexUnit id="l1010" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mutlos</orthForm>
+</lexUnit>
+<paraphrase>ohne Mut</paraphrase>
+</synset>
+<synset id="s596" category="adj" class="Gefuehl">
+<lexUnit id="l1011" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zuversichtslos</orthForm>
+</lexUnit>
+<paraphrase>ohne Zuversicht</paraphrase>
+</synset>
+<synset id="s597" category="adj" class="Gefuehl">
+<lexUnit id="l1012" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lebensmüde</orthForm>
+</lexUnit>
+<paraphrase>ohne Lebensmut</paraphrase>
+</synset>
+<synset id="s598" category="adj" class="Gefuehl">
+<lexUnit id="l1013" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erregt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s599" category="adj" class="Gefuehl">
+<lexUnit id="l1014" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>entspannt</orthForm>
+</lexUnit>
+<lexUnit id="l1015" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>relaxed</orthForm>
+</lexUnit>
+<lexUnit id="l1016" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>chillig</orthForm>
+</lexUnit>
+<lexUnit id="l1017" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ausgeruht</orthForm>
+</lexUnit>
+</synset>
+<synset id="s600" category="adj" class="Gefuehl">
+<lexUnit id="l1018" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gespannt</orthForm>
+</lexUnit>
+<paraphrase>Spannung empfindend</paraphrase>
+</synset>
+<synset id="s601" category="adj" class="Gefuehl">
+<lexUnit id="l1019" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>angespannt</orthForm>
+</lexUnit>
+<lexUnit id="l1020" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überspannt</orthForm>
+</lexUnit>
+<lexUnit id="l1021" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>belastet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s602" category="adj" class="Gefuehl">
+<lexUnit id="l1022" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überlastet</orthForm>
+</lexUnit>
+<lexUnit id="l1023" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überbelastet</orthForm>
+</lexUnit>
+<lexUnit id="l1024" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überfordert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s603" category="adj" class="Gefuehl">
+<lexUnit id="l1025" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überarbeitet</orthForm>
+</lexUnit>
+<lexUnit id="l1026" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überdreht</orthForm>
+</lexUnit>
+</synset>
+<synset id="s604" category="adj" class="Gefuehl">
+<lexUnit id="l1027" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufgeregt</orthForm>
+</lexUnit>
+<paraphrase>Aufregung empfindend</paraphrase>
+</synset>
+<synset id="s605" category="adj" class="Gefuehl">
+<lexUnit id="l1028" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>panisch</orthForm>
+</lexUnit>
+<lexUnit id="l1029" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>panikartig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s606" category="adj" class="Gefuehl">
+<lexUnit id="l1030" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>exaltiert</orthForm>
+</lexUnit>
+<lexUnit id="l1031" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überkandidelt</orthForm>
+</lexUnit>
+<paraphrase>übertrieben aufgeregt</paraphrase>
+</synset>
+<synset id="s607" category="adj" class="Gefuehl">
+<lexUnit id="l1032" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>theatralisch</orthForm>
+</lexUnit>
+<lexUnit id="l1033" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>übertrieben</orthForm>
+</lexUnit>
+</synset>
+<synset id="s608" category="adj" class="Gefuehl">
+<lexUnit id="l1034" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ergriffen</orthForm>
+</lexUnit>
+<lexUnit id="l1035" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bewegt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s609" category="adj" class="Gefuehl">
+<lexUnit id="l1036" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verzückt</orthForm>
+</lexUnit>
+<lexUnit id="l1037" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>entrückt</orthForm>
+</lexUnit>
+<lexUnit id="l1038" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verzaubert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s610" category="adj" class="Gefuehl">
+<lexUnit id="l1039" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ekstatisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s611" category="adj" class="Gefuehl">
+<lexUnit id="l1041" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tief bewegt</orthForm>
+<orthVar>tiefbewegt</orthVar>
+<oldOrthForm>tiefbewegt</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s612" category="adj" class="Gefuehl">
+<lexUnit id="l1042" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erschüttert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s613" category="adj" class="Gefuehl">
+<lexUnit id="l1043" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>krisenerschüttert</orthForm>
+</lexUnit>
+<lexUnit id="l1044" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>krisengeschüttelt</orthForm>
+</lexUnit>
+<lexUnit id="l1045" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>krisengebeutelt</orthForm>
+</lexUnit>
+<paraphrase>auch von Gruppen und Regionen</paraphrase>
+</synset>
+<synset id="s614" category="adj" class="Gefuehl">
+<lexUnit id="l1046" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erstaunt</orthForm>
+</lexUnit>
+<lexUnit id="l1047" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überrascht</orthForm>
+</lexUnit>
+</synset>
+<synset id="s615" category="adj" class="Gefuehl">
+<lexUnit id="l1048" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verblüfft</orthForm>
+</lexUnit>
+<lexUnit id="l1049" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verdutzt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s616" category="adj" class="Gefuehl">
+<lexUnit id="l1050" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kopfschüttelnd</orthForm>
+</lexUnit>
+</synset>
+<synset id="s617" category="adj" class="Gefuehl">
+<lexUnit id="l1051" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überwältigt</orthForm>
+</lexUnit>
+<lexUnit id="l1052" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>übermannt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s618" category="adj" class="Gefuehl">
+<lexUnit id="l1053" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>interessiert</orthForm>
+</lexUnit>
+<paraphrase>Interesse empfindend</paraphrase>
+</synset>
+<synset id="s619" category="adj" class="Gefuehl">
+<lexUnit id="l1054" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>angeregt</orthForm>
+</lexUnit>
+<lexUnit id="l1055" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>motiviert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s620" category="adj" class="Gefuehl">
+<lexUnit id="l1056" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s621" category="adj" class="Gefuehl">
+<lexUnit id="l1057" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gleichgültig</orthForm>
+</lexUnit>
+<lexUnit id="l1058" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>uninteressiert</orthForm>
+</lexUnit>
+<lexUnit id="l1059" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>desinteressiert</orthForm>
+</lexUnit>
+<lexUnit id="l1060" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>indifferent</orthForm>
+</lexUnit>
+</synset>
+<synset id="s622" category="adj" class="Gefuehl">
+<lexUnit id="l1061" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>selbstkritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s623" category="adj" class="Gefuehl">
+<lexUnit id="l1062" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unmotiviert</orthForm>
+</lexUnit>
+<lexUnit id="l1063" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>demotiviert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s624" category="adj" class="Gefuehl">
+<lexUnit id="l1064" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unkritisch</orthForm>
+</lexUnit>
+<lexUnit id="l1065" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schweigend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s625" category="adj" class="Gefuehl">
+<lexUnit id="l1066" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gelangweilt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s626" category="adj" class="Gefuehl">
+<lexUnit id="l1067" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>egal</orthForm>
+<example><text>mir ist alles egal</text></example>
+</lexUnit>
+</synset>
+<synset id="s627" category="adj" class="Gefuehl">
+<lexUnit id="l1068" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>wurstig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s628" category="adj" class="Gefuehl">
+<lexUnit id="l1069" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>apathisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s629" category="adj" class="Gefuehl">
+<lexUnit id="l1070" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beeindruckt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s630" category="adj" class="Gefuehl">
+<lexUnit id="l1071" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fasziniert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s631" category="adj" class="Gefuehl">
+<lexUnit id="l1072" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hingerissen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s632" category="adj" class="Gefuehl">
+<lexUnit id="l1073" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>neugierig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s633" category="adj" class="Gefuehl">
+<lexUnit id="l1074" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wissensdurstig</orthForm>
+</lexUnit>
+<lexUnit id="l1075" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wissbegierig</orthForm>
+<oldOrthForm>wißbegierig</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s634" category="adj" class="Gefuehl">
+<lexUnit id="l1076" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ästhetisch</orthForm>
+</lexUnit>
+<lexUnit id="l1078" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>feingeistig</orthForm>
+</lexUnit>
+<lexUnit id="l116036" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schöngeistig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s635" category="adj" class="Gefuehl">
+<lexUnit id="l1079" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>begeistert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s636" category="adj" class="Gefuehl">
+<lexUnit id="l1080" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>musikbegeistert</orthForm>
+</lexUnit>
+<lexUnit id="l1081" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>musikinteressiert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s637" category="adj" class="Gefuehl">
+<lexUnit id="l1082" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sportbegeistert</orthForm>
+</lexUnit>
+<lexUnit id="l1083" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sportinteressiert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s638" category="adj" class="Gefuehl">
+<lexUnit id="l1084" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>literaturbegeistert</orthForm>
+</lexUnit>
+<lexUnit id="l1085" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>literaturinteressiert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s639" category="adj" class="Gefuehl">
+<lexUnit id="l1086" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kunstbegeistert</orthForm>
+</lexUnit>
+<lexUnit id="l1087" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kunstinteressiert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s640" category="adj" class="Gefuehl">
+<lexUnit id="l1088" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>theaterbegeistert</orthForm>
+</lexUnit>
+<lexUnit id="l1089" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>theaterinteressiert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s641" category="adj" class="Gefuehl">
+<lexUnit id="l1090" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>filmbegeistert</orthForm>
+</lexUnit>
+<lexUnit id="l1091" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>filminteressiert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s642" category="adj" class="Gefuehl">
+<lexUnit id="l1092" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>enthusiastisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s643" category="adj" class="Gefuehl">
+<lexUnit id="l1093" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>idealistisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s644" category="adj" class="Gefuehl">
+<lexUnit id="l1094" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glühend</orthForm>
+</lexUnit>
+<lexUnit id="l1095" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leidenschaftlich</orthForm>
+</lexUnit>
+<paraphrase>ein leidenschaftlicher Verfechter der Menschenrechte</paraphrase>
+</synset>
+<synset id="s645" category="adj" class="Gefuehl">
+<lexUnit id="l1096" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>frenetisch</orthForm>
+</lexUnit>
+<lexUnit id="l1097" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rasend</orthForm>
+</lexUnit>
+<lexUnit id="l1098" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>heftig</orthForm>
+</lexUnit>
+<lexUnit id="l1099" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>furios</orthForm>
+</lexUnit>
+</synset>
+<synset id="s646" category="adj" class="Gefuehl">
+<lexUnit id="l1100" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>inbrünstig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s647" category="adj" class="Gefuehl">
+<lexUnit id="l1101" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwärmerisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s649" category="adj" class="Gefuehl">
+<lexUnit id="l1103" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verwirrt</orthForm>
+</lexUnit>
+<paraphrase>Verwirrung empfindend</paraphrase>
+</synset>
+<synset id="s650" category="adj" class="Gefuehl">
+<lexUnit id="l1104" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>seltsam</orthForm>
+</lexUnit>
+<paraphrase>Verwirrung empfindend</paraphrase>
+</synset>
+<synset id="s651" category="adj" class="Gefuehl">
+<lexUnit id="l1106" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ratlos</orthForm>
+</lexUnit>
+</synset>
+<synset id="s652" category="adj" class="Gefuehl">
+<lexUnit id="l1107" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hilflos</orthForm>
+</lexUnit>
+</synset>
+<synset id="s653" category="adj" class="Gefuehl">
+<lexUnit id="l1108" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>Gefühl erweckend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s655" category="adj" class="Gefuehl">
+<lexUnit id="l1111" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tieftraurig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s656" category="adj" class="Gefuehl">
+<lexUnit id="l1113" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>trostlos</orthForm>
+</lexUnit>
+<lexUnit id="l1114" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>trist</orthForm>
+</lexUnit>
+<paraphrase>ohne Trost</paraphrase>
+</synset>
+<synset id="s657" category="adj" class="Gefuehl">
+<lexUnit id="l1115" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>enttäuscht</orthForm>
+</lexUnit>
+</synset>
+<synset id="s658" category="adj" class="Gefuehl">
+<lexUnit id="l1116" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>trübselig</orthForm>
+</lexUnit>
+<lexUnit id="l1117" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>betrübt</orthForm>
+</lexUnit>
+<paraphrase>Trübsal erweckend</paraphrase>
+</synset>
+<synset id="s659" category="adj" class="Gefuehl">
+<lexUnit id="l1118" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>melancholisch</orthForm>
+</lexUnit>
+<lexUnit id="l1119" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>deprimierend</orthForm>
+</lexUnit>
+<lexUnit id="l1120" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwermütig</orthForm>
+</lexUnit>
+<paraphrase>Melancholie/Schwermut erweckend</paraphrase>
+</synset>
+<synset id="s660" category="adj" class="Gefuehl">
+<lexUnit id="l1122" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>misslich</orthForm>
+<oldOrthForm>mißlich</oldOrthForm>
+</lexUnit>
+<lexUnit id="l1121" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unerfreulich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s661" category="adj" class="Gefuehl">
+<lexUnit id="l1124" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schade</orthForm>
+</lexUnit>
+<lexUnit id="l1125" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bedauerlich</orthForm>
+</lexUnit>
+<lexUnit id="l1126" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bedauernswert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s662" category="adj" class="Gefuehl">
+<lexUnit id="l1127" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unerquicklich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s663" category="adj" class="Gefuehl">
+<lexUnit id="l1128" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>entmutigend</orthForm>
+</lexUnit>
+<lexUnit id="l1129" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>demoralisierend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s664" category="adj" class="Gefuehl">
+<lexUnit id="l1130" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>niederschmetternd</orthForm>
+</lexUnit>
+</synset>
+<synset id="s665" category="adj" class="Gefuehl">
+<lexUnit id="l1131" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>froh</orthForm>
+</lexUnit>
+</synset>
+<synset id="s666" category="adj" class="Gefuehl">
+<lexUnit id="l1132" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wehmütig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s667" category="adj" class="Gefuehl">
+<lexUnit id="l1133" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>freudig</orthForm>
+</lexUnit>
+<lexUnit id="l1134" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erfreulich</orthForm>
+</lexUnit>
+<paraphrase>Freude erweckend</paraphrase>
+</synset>
+<synset id="s668" category="adj" class="Gefuehl">
+<lexUnit id="l1135" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erquicklich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s669" category="adj" class="Gefuehl">
+<lexUnit id="l1136" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fröhlich</orthForm>
+<example><text>ein fröhliches Lied</text></example>
+</lexUnit>
+<paraphrase>Fröhlichkeit erweckend</paraphrase>
+</synset>
+<synset id="s670" category="adj" class="Gefuehl">
+<lexUnit id="l1137" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>heiter</orthForm>
+<example><text>ein heiteres Lied</text></example>
+</lexUnit>
+<paraphrase>Heiterkeit erweckend</paraphrase>
+</synset>
+<synset id="s671" category="adj" class="Gefuehl">
+<lexUnit id="l1138" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lustig</orthForm>
+<example><text>ein lustiges Lied</text></example>
+</lexUnit>
+</synset>
+<synset id="s672" category="adj" class="Gefuehl">
+<lexUnit id="l1139" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>witzig</orthForm>
+</lexUnit>
+<lexUnit id="l1140" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>komisch</orthForm>
+</lexUnit>
+<lexUnit id="l1141" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spaßig</orthForm>
+</lexUnit>
+<lexUnit id="l1142" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spaßhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s673" category="adj" class="Gefuehl">
+<lexUnit id="l1143" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>scherzhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s674" category="adj" class="Gefuehl">
+<lexUnit id="l1144" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tragikomisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s675" category="adj" class="Gefuehl">
+<lexUnit id="l1145" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>saukomisch</orthForm>
+</lexUnit>
+<lexUnit id="l1146" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>urkomisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s676" category="adj" class="Gefuehl">
+<lexUnit id="l1147" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lächerlich</orthForm>
+</lexUnit>
+<lexUnit id="l1148" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lachhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s677" category="adj" class="Gefuehl">
+<lexUnit id="l1149" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>drollig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s680" category="adj" class="Gefuehl">
+<lexUnit id="l1153" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ernst</orthForm>
+</lexUnit>
+<lexUnit id="l1154" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ernsthaft</orthForm>
+</lexUnit>
+<paraphrase>Ernsthaftigkeit erweckend</paraphrase>
+</synset>
+<synset id="s681" category="adj" class="Gefuehl">
+<lexUnit id="l1155" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>humorlos</orthForm>
+</lexUnit>
+<paraphrase>ohne Humor</paraphrase>
+</synset>
+<synset id="s682" category="adj" class="Gefuehl">
+<lexUnit id="l1156" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bitter</orthForm>
+</lexUnit>
+</synset>
+<synset id="s683" category="adj" class="Gefuehl">
+<lexUnit id="l1157" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ärgerlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s684" category="adj" class="Gefuehl">
+<lexUnit id="l1158" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lächerlich</orthForm>
+</lexUnit>
+<lexUnit id="l1159" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>peinlich</orthForm>
+</lexUnit>
+<lexUnit id="l126844" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>genant</orthForm>
+</lexUnit>
+<lexUnit id="l126845" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>genierlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s685" category="adj" class="Gefuehl">
+<lexUnit id="l1160" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schmählich</orthForm>
+</lexUnit>
+<lexUnit id="l1161" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schmachvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s689" category="adj" class="Gefuehl">
+<lexUnit id="l1171" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erregend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s690" category="adj" class="Gefuehl">
+<lexUnit id="l1172" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erotisch</orthForm>
+</lexUnit>
+<lexUnit id="l1173" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stimulierend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s691" category="adj" class="Gefuehl">
+<lexUnit id="l1174" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unerotisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s692" category="adj" class="Gefuehl">
+<lexUnit id="l1176" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mitleiderregend</orthForm>
+<orthVar>Mitleid erregend</orthVar>
+<oldOrthForm>mitleiderregend</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s693" category="adj" class="Gefuehl">
+<lexUnit id="l1177" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ergreifend</orthForm>
+</lexUnit>
+<lexUnit id="l1178" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bewegend</orthForm>
+</lexUnit>
+<lexUnit id="l1179" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rührend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s694" category="adj" class="Gefuehl">
+<lexUnit id="l1180" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>herzbewegend</orthForm>
+</lexUnit>
+<lexUnit id="l1181" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>herzzerreißend</orthForm>
+</lexUnit>
+<lexUnit id="l1182" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>herzergreifend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s695" category="adj" class="Gefuehl">
+<lexUnit id="l1183" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erschütternd</orthForm>
+</lexUnit>
+</synset>
+<synset id="s696" category="adj" class="Gefuehl">
+<lexUnit id="l1184" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sentimental</orthForm>
+</lexUnit>
+<lexUnit id="l1185" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rührselig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s697" category="adj" class="Gefuehl">
+<lexUnit id="l1186" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anregend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s698" category="adj" class="Gefuehl">
+<lexUnit id="l1187" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erfrischend</orthForm>
+</lexUnit>
+<lexUnit id="l1188" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ermunternd</orthForm>
+</lexUnit>
+</synset>
+<synset id="s699" category="adj" class="Gefuehl">
+<lexUnit id="l1189" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erquickend</orthForm>
+</lexUnit>
+<lexUnit id="l1190" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erlabend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s700" category="adj" class="Gefuehl">
+<lexUnit id="l1191" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>belebend</orthForm>
+</lexUnit>
+<lexUnit id="l1192" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aktivierend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s701" category="adj" class="Gefuehl">
+<lexUnit id="l1193" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>peinigend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s702" category="adj" class="Gefuehl">
+<lexUnit id="l1194" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leidvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s703" category="adj" class="Gefuehl">
+<lexUnit id="l1195" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leidgeplagt</orthForm>
+</lexUnit>
+<lexUnit id="l1196" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leidgeprüft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s704" category="adj" class="Gefuehl">
+<lexUnit id="l1197" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>qualvoll</orthForm>
+</lexUnit>
+<lexUnit id="l1198" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grausam</orthForm>
+</lexUnit>
+</synset>
+<synset id="s705" category="adj" class="Gefuehl">
+<lexUnit id="l1199" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>quälend</orthForm>
+</lexUnit>
+<lexUnit id="l1200" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bohrend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s706" category="adj" class="Gefuehl">
+<lexUnit id="l1201" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schmerzhaft</orthForm>
+</lexUnit>
+<lexUnit id="l1202" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schmerzvoll</orthForm>
+</lexUnit>
+<lexUnit id="l1203" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schmerzlich</orthForm>
+</lexUnit>
+<lexUnit id="l1204" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>weh</orthForm>
+</lexUnit>
+</synset>
+<synset id="s707" category="adj" class="Gefuehl">
+<lexUnit id="l1205" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>langweilig</orthForm>
+</lexUnit>
+<lexUnit id="l1206" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>uninteressant</orthForm>
+</lexUnit>
+<paraphrase>Langeweile erweckend</paraphrase>
+</synset>
+<synset id="s708" category="adj" class="Gefuehl">
+<lexUnit id="l1207" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fade</orthForm>
+<orthVar>fad</orthVar>
+</lexUnit>
+</synset>
+<synset id="s709" category="adj" class="Gefuehl">
+<lexUnit id="l1208" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>öde</orthForm>
+<orthVar>öd</orthVar>
+</lexUnit>
+</synset>
+<synset id="s710" category="adj" class="Gefuehl">
+<lexUnit id="l1209" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eintönig</orthForm>
+</lexUnit>
+<lexUnit id="l1210" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einförmig</orthForm>
+</lexUnit>
+<lexUnit id="l1211" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>monoton</orthForm>
+</lexUnit>
+</synset>
+<synset id="s711" category="adj" class="Gefuehl">
+<lexUnit id="l1212" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>trocken</orthForm>
+</lexUnit>
+<lexUnit id="l1213" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>dröge</orthForm>
+</lexUnit>
+</synset>
+<synset id="s712" category="adj" class="Gefuehl">
+<lexUnit id="l1214" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geisttötend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s713" category="adj" class="Gefuehl">
+<lexUnit id="l1215" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ermüdend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s714" category="adj" class="Gefuehl">
+<lexUnit id="l1216" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>reizlos</orthForm>
+</lexUnit>
+</synset>
+<synset id="s715" category="adj" class="Gefuehl">
+<lexUnit id="l1217" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grau</orthForm>
+</lexUnit>
+</synset>
+<synset id="s716" category="adj" class="Gefuehl">
+<lexUnit id="l1218" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>stinklangweilig</orthForm>
+</lexUnit>
+<lexUnit id="l1219" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sterbenslangweilig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s717" category="adj" class="Gefuehl">
+<lexUnit id="l1220" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nichtssagend</orthForm>
+<orthVar>nichts sagend</orthVar>
+<oldOrthForm>nichtssagend</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s718" category="adj" class="Gefuehl">
+<lexUnit id="l1222" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>interessant</orthForm>
+</lexUnit>
+<paraphrase>Interesse erweckend</paraphrase>
+</synset>
+<synset id="s719" category="adj" class="Gefuehl">
+<lexUnit id="l1223" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lesenswert</orthForm>
+</lexUnit>
+<lexUnit id="l1224" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lesbar</orthForm>
+</lexUnit>
+<paraphrase>ein lesenswerter Roman</paraphrase>
+</synset>
+<synset id="s720" category="adj" class="Gefuehl">
+<lexUnit id="l1225" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abwechslungsreich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s722" category="adj" class="Gefuehl">
+<lexUnit id="l1227" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vielseitig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s654" category="adj" class="Gefuehl">
+<lexUnit id="l1109" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>traurig</orthForm>
+</lexUnit>
+<lexUnit id="l1110" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>freudlos</orthForm>
+</lexUnit>
+<paraphrase>Trauer erweckend</paraphrase>
+</synset>
+<synset id="s724" category="adj" class="Gefuehl">
+<lexUnit id="l1229" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einseitig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s725" category="adj" class="Gefuehl">
+<lexUnit id="l1230" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ansprechend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s726" category="adj" class="Gefuehl">
+<lexUnit id="l1231" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einnehmend</orthForm>
+</lexUnit>
+<lexUnit id="l1232" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gewinnend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s727" category="adj" class="Gefuehl">
+<lexUnit id="l1234" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sympathieerweckend</orthForm>
+<orthVar>Sympathie erweckend</orthVar>
+<oldOrthForm>sympathieerweckend</oldOrthForm>
+</lexUnit>
+<lexUnit id="l1233" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sympathisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s728" category="adj" class="Gefuehl">
+<lexUnit id="l1236" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mannigfaltig</orthForm>
+</lexUnit>
+<lexUnit id="l1237" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vielfältig</orthForm>
+</lexUnit>
+<lexUnit id="l105410" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>multipel</orthForm>
+</lexUnit>
+</synset>
+<synset id="s729" category="adj" class="Gefuehl">
+<lexUnit id="l1239" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>facettenreich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s730" category="adj" class="Gefuehl">
+<lexUnit id="l1240" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>faszinierend</orthForm>
+</lexUnit>
+<lexUnit id="l1241" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fesselnd</orthForm>
+</lexUnit>
+<lexUnit id="l1242" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>begeisternd</orthForm>
+</lexUnit>
+</synset>
+<synset id="s731" category="adj" class="Gefuehl">
+<lexUnit id="l1243" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anregend</orthForm>
+</lexUnit>
+<lexUnit id="l1244" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erbaulich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s732" category="adj" class="Gefuehl">
+<lexUnit id="l1245" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sehenswert</orthForm>
+</lexUnit>
+<lexUnit id="l1246" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sehenswürdig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s733" category="adj" class="Gefuehl">
+<lexUnit id="l1247" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>besinnlich</orthForm>
+</lexUnit>
+<lexUnit id="l1248" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stimmungsvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s734" category="adj" class="Gefuehl">
+<lexUnit id="l1249" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anziehend</orthForm>
+</lexUnit>
+<lexUnit id="l1250" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>attraktiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s735" category="adj" class="Gefuehl">
+<lexUnit id="l1251" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>charismatisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s736" category="adj" class="Gefuehl">
+<lexUnit id="l1252" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lieblich</orthForm>
+</lexUnit>
+<lexUnit id="l1253" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>liebreizend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s737" category="adj" class="Gefuehl">
+<lexUnit id="l1254" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>begehrenswert</orthForm>
+</lexUnit>
+<lexUnit id="l1255" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unwiderstehlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s738" category="adj" class="Gefuehl">
+<lexUnit id="l1256" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>betörend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s739" category="adj" class="Gefuehl">
+<lexUnit id="l1257" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verführerisch</orthForm>
+</lexUnit>
+<lexUnit id="l1258" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kokett</orthForm>
+</lexUnit>
+</synset>
+<synset id="s740" category="adj" class="Gefuehl">
+<lexUnit id="l1259" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>charmant</orthForm>
+<orthVar>scharmant</orthVar>
+<oldOrthForm>charmant</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s741" category="adj" class="Gefuehl">
+<lexUnit id="l1261" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>reizend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s742" category="adj" class="Gefuehl">
+<lexUnit id="l1262" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>entzückend</orthForm>
+</lexUnit>
+<lexUnit id="l1263" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bezückend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s743" category="adj" class="Gefuehl">
+<lexUnit id="l1264" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hinreißend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s744" category="adj" class="Gefuehl">
+<lexUnit id="l1265" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zauberhaft</orthForm>
+</lexUnit>
+<lexUnit id="l1266" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bezaubernd</orthForm>
+</lexUnit>
+</synset>
+<synset id="s745" category="adj" class="Gefuehl">
+<lexUnit id="l1267" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beeindruckend</orthForm>
+</lexUnit>
+<lexUnit id="l1268" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eindrucksvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s746" category="adj" class="Gefuehl">
+<lexUnit id="l1269" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eindrücklich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s747" category="adj" class="Gefuehl">
+<lexUnit id="l1270" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erstaunlich</orthForm>
+</lexUnit>
+<lexUnit id="l1271" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überraschend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s748" category="adj" class="Gefuehl">
+<lexUnit id="l1272" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verblüffend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s749" category="adj" class="Gefuehl">
+<lexUnit id="l1273" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ausdrucksvoll</orthForm>
+</lexUnit>
+<lexUnit id="l1274" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ausdrucksstark</orthForm>
+</lexUnit>
+<lexUnit id="l1275" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>expressiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s750" category="adj" class="Gefuehl">
+<lexUnit id="l1276" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>enttäuschend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s751" category="adj" class="Gefuehl">
+<lexUnit id="l1277" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erschreckend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s752" category="adj" class="Gefuehl">
+<lexUnit id="l1278" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schockierend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s753" category="adj" class="Gefuehl">
+<lexUnit id="l1279" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>skandalös</orthForm>
+</lexUnit>
+<lexUnit id="l1280" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>skandalträchtig</orthForm>
+</lexUnit>
+<lexUnit id="l127165" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>skandalumwittert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s754" category="adj" class="Gefuehl">
+<lexUnit id="l1281" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unterhaltsam</orthForm>
+</lexUnit>
+<lexUnit id="l1282" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kurzweilig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s755" category="adj" class="Gefuehl">
+<lexUnit id="l1283" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bunt</orthForm>
+<example><text>eine bunte Veranstaltung</text></example>
+</lexUnit>
+</synset>
+<synset id="s756" category="adj" class="Gefuehl">
+<lexUnit id="l1284" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufregend</orthForm>
+</lexUnit>
+<paraphrase>Aufregung erweckend</paraphrase>
+</synset>
+<synset id="s757" category="adj" class="Gefuehl">
+<lexUnit id="l1285" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spektakulär</orthForm>
+</lexUnit>
+<lexUnit id="l1287" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufsehenerregend</orthForm>
+<orthVar>Aufsehen erregend</orthVar>
+<oldOrthForm>aufsehenerregend</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s758" category="adj" class="Gefuehl">
+<lexUnit id="l1288" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abenteuerlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s759" category="adj" class="Gefuehl">
+<lexUnit id="l1289" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spannend</orthForm>
+</lexUnit>
+<lexUnit id="l126041" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spannungsvoll</orthForm>
+</lexUnit>
+<lexUnit id="l106777" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spannungsreich</orthForm>
+</lexUnit>
+<paraphrase>Spannung erweckend</paraphrase>
+</synset>
+<synset id="s760" category="adj" class="Gefuehl">
+<lexUnit id="l1290" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dramatisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s761" category="adj" class="Gefuehl">
+<lexUnit id="l1291" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>packend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s762" category="adj" class="Gefuehl">
+<lexUnit id="l1292" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>prickelnd</orthForm>
+</lexUnit>
+<lexUnit id="l1293" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>reizvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s763" category="adj" class="Gefuehl">
+<lexUnit id="l1294" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nervenzerreißend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s764" category="adj" class="Gefuehl">
+<lexUnit id="l1295" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>atemberaubend</orthForm>
+</lexUnit>
+<lexUnit id="l1296" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>atemraubend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s765" category="adj" class="Gefuehl">
+<lexUnit id="l1297" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwindelerregend</orthForm>
+<orthVar>Schwindel erregend</orthVar>
+</lexUnit>
+</synset>
+<synset id="s766" category="adj" class="Gefuehl">
+<lexUnit id="l1298" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>imposant</orthForm>
+</lexUnit>
+<lexUnit id="l1299" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>imponierend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s767" category="adj" class="Gefuehl">
+<lexUnit id="l1301" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bewundernswert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s768" category="adj" class="Gefuehl">
+<lexUnit id="l1302" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>umwerfend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s769" category="adj" class="Gefuehl">
+<lexUnit id="l1303" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überwältigend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s770" category="adj" class="Gefuehl">
+<lexUnit id="l1304" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>frappierend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s771" category="adj" class="Gefuehl">
+<lexUnit id="l1305" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>angenehm</orthForm>
+</lexUnit>
+</synset>
+<synset id="s772" category="adj" class="Gefuehl">
+<lexUnit id="l1306" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gemütlich</orthForm>
+</lexUnit>
+<lexUnit id="l1307" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>behaglich</orthForm>
+</lexUnit>
+<lexUnit id="l1308" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geruhsam</orthForm>
+</lexUnit>
+<paraphrase>Gemütlichkeit erweckend</paraphrase>
+</synset>
+<synset id="s773" category="adj" class="Gefuehl">
+<lexUnit id="l1309" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>heimelig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s774" category="adj" class="Gefuehl">
+<lexUnit id="l1310" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einladend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s776" category="adj" class="Gefuehl">
+<lexUnit id="l1313" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wohltuend</orthForm>
+</lexUnit>
+<lexUnit id="l1314" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wohlig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s777" category="adj" class="Gefuehl">
+<lexUnit id="l1315" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>befriedigend</orthForm>
+</lexUnit>
+<lexUnit id="l1316" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zufriedenstellend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s778" category="adj" class="Gefuehl">
+<lexUnit id="l1317" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unangenehm</orthForm>
+</lexUnit>
+</synset>
+<synset id="s779" category="adj" class="Gefuehl">
+<lexUnit id="l1318" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unbequem</orthForm>
+</lexUnit>
+</synset>
+<synset id="s780" category="adj" class="Gefuehl">
+<lexUnit id="l1319" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unbefriedigend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s781" category="adj" class="Gefuehl">
+<lexUnit id="l1320" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungemütlich</orthForm>
+</lexUnit>
+<lexUnit id="l1321" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unbehaglich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s782" category="adj" class="Gefuehl">
+<lexUnit id="l1322" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unsympathisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s783" category="adj" class="Gefuehl">
+<lexUnit id="l1323" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abstoßend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s784" category="adj" class="Gefuehl">
+<lexUnit id="l1324" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mulmig</orthForm>
+</lexUnit>
+<paraphrase>ein mulmiges Gefühl</paraphrase>
+</synset>
+<synset id="s785" category="adj" class="Gefuehl">
+<lexUnit id="l1325" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>belastend</orthForm>
+</lexUnit>
+<lexUnit id="l1326" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bedrückend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s786" category="adj" class="Gefuehl">
+<lexUnit id="l1327" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erdrückend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s788" category="adj" class="Gefuehl">
+<lexUnit id="l1329" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beklemmend</orthForm>
+</lexUnit>
+<lexUnit id="l1330" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>befremdlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s789" category="adj" class="Gefuehl">
+<lexUnit id="l1331" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beängstigend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s790" category="adj" class="Gefuehl">
+<lexUnit id="l1332" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unheilvoll</orthForm>
+</lexUnit>
+<lexUnit id="l1333" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unheilschwanger</orthForm>
+</lexUnit>
+<lexUnit id="l1334" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>Unheil verheißend</orthForm>
+<orthVar>unheilverheißend</orthVar>
+<oldOrthForm>unheilverheißend</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s791" category="adj" class="Gefuehl">
+<lexUnit id="l1335" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unheilig</orthForm>
+</lexUnit>
+<lexUnit id="l1336" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unselig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s792" category="adj" class="Gefuehl">
+<lexUnit id="l1337" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>düster</orthForm>
+</lexUnit>
+<lexUnit id="l1338" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwarz</orthForm>
+</lexUnit>
+</synset>
+<synset id="s793" category="adj" class="Gefuehl">
+<lexUnit id="l1339" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>besorgniserregend</orthForm>
+</lexUnit>
+<lexUnit id="l1340" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>alarmierend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s794" category="adj" class="Gefuehl">
+<lexUnit id="l1341" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unheimlich</orthForm>
+</lexUnit>
+<lexUnit id="l1342" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ungeheuer</orthForm>
+</lexUnit>
+</synset>
+<synset id="s795" category="adj" class="Gefuehl">
+<lexUnit id="l1343" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>makaber</orthForm>
+</lexUnit>
+</synset>
+<synset id="s796" category="adj" class="Gefuehl">
+<lexUnit id="l1344" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beunruhigend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s797" category="adj" class="Gefuehl">
+<lexUnit id="l1345" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bedenklich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s798" category="adj" class="Gefuehl">
+<lexUnit id="l1346" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>alptraumartig</orthForm>
+</lexUnit>
+<lexUnit id="l1347" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>alptraumhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s799" category="adj" class="Gefuehl">
+<lexUnit id="l1348" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schaudervoll</orthForm>
+</lexUnit>
+<lexUnit id="l1349" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schauderhaft</orthForm>
+</lexUnit>
+<lexUnit id="l1350" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schauerhaft</orthForm>
+</lexUnit>
+<lexUnit id="l1351" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schauerlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s800" category="adj" class="Gefuehl">
+<lexUnit id="l1352" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gruselig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s801" category="adj" class="Gefuehl">
+<lexUnit id="l1353" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schaurig</orthForm>
+</lexUnit>
+<lexUnit id="l1354" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gespenstig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s802" category="adj" class="Gefuehl">
+<lexUnit id="l1355" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grauenerregend</orthForm>
+<orthVar>Grauen erregend</orthVar>
+<oldOrthForm>grauenerregend</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s803" category="adj" class="Gefuehl">
+<lexUnit id="l1357" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geisterhaft</orthForm>
+</lexUnit>
+<lexUnit id="l1358" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gespensterhaft</orthForm>
+</lexUnit>
+<lexUnit id="l1359" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gespenstisch</orthForm>
+</lexUnit>
+<lexUnit id="l1360" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spukhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s804" category="adj" class="Gefuehl">
+<lexUnit id="l1361" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schreckenerregend</orthForm>
+<orthVar>Schrecken erregend</orthVar>
+<oldOrthForm>schreckenerregend</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s805" category="adj" class="Gefuehl">
+<lexUnit id="l1363" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schrecklich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s806" category="adj" class="Gefuehl">
+<lexUnit id="l1364" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>furchtbar</orthForm>
+</lexUnit>
+<lexUnit id="l1365" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fürchterlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s807" category="adj" class="Gefuehl">
+<lexUnit id="l1366" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tragisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s808" category="adj" class="Gefuehl">
+<lexUnit id="l1369" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>angsterregend</orthForm>
+<orthVar>Angst erregend</orthVar>
+<oldOrthForm>angsterregend</oldOrthForm>
+</lexUnit>
+<lexUnit id="l1370" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>furchterregend</orthForm>
+<orthVar>Furcht erregend</orthVar>
+<oldOrthForm>furchterregend</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s809" category="adj" class="Gefuehl">
+<lexUnit id="l1372" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ekelerregend</orthForm>
+<orthVar>Ekel erregend</orthVar>
+<oldOrthForm>ekelerregend</oldOrthForm>
+</lexUnit>
+<lexUnit id="l1373" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ekelhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s810" category="adj" class="Gefuehl">
+<lexUnit id="l1374" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>widerlich</orthForm>
+</lexUnit>
+<lexUnit id="l1375" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>widerwärtig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s811" category="adj" class="Gefuehl">
+<lexUnit id="l1376" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abscheulich</orthForm>
+</lexUnit>
+<lexUnit id="l1377" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verabscheuungswürdig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s812" category="adj" class="Gefuehl">
+<lexUnit id="l1378" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>scheußlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s813" category="adj" class="Gefuehl">
+<lexUnit id="l1379" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>entsetzlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s814" category="adj" class="Gefuehl">
+<lexUnit id="l1380" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grauenhaft</orthForm>
+</lexUnit>
+<lexUnit id="l1381" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grauenvoll</orthForm>
+</lexUnit>
+<lexUnit id="l105009" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gräulich</orthForm>
+<oldOrthForm>greulich</oldOrthForm>
+</lexUnit>
+<lexUnit id="l1382" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grausig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s815" category="adj" class="Gefuehl">
+<lexUnit id="l1383" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grässlich</orthForm>
+<oldOrthForm>gräßlich</oldOrthForm>
+</lexUnit>
+</synset>
+<synset id="s816" category="adj" class="Gefuehl">
+<lexUnit id="l1385" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gefährlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s817" category="adj" class="Gefuehl">
+<lexUnit id="l1386" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bedrohlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s818" category="adj" class="Gefuehl">
+<lexUnit id="l1387" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verhängnisvoll</orthForm>
+</lexUnit>
+<lexUnit id="l1388" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fatal</orthForm>
+</lexUnit>
+<lexUnit id="l107815" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>desaströs</orthForm>
+</lexUnit>
+</synset>
+<synset id="s819" category="adj" class="Gefuehl">
+<lexUnit id="l1389" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lästig</orthForm>
+</lexUnit>
+<lexUnit id="l1390" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>nervig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s820" category="adj" class="Gefuehl">
+<lexUnit id="l1391" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leidig</orthForm>
+</lexUnit>
+<lexUnit id="l1392" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verdrießlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s821" category="adj" class="Gefuehl">
+<lexUnit id="l1393" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>seltsam</orthForm>
+</lexUnit>
+<paraphrase>Verwirrung erweckend</paraphrase>
+</synset>
+<synset id="s822" category="adj" class="Gefuehl">
+<lexUnit id="l1395" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geheimnisvoll</orthForm>
+</lexUnit>
+<lexUnit id="l126843" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geheimnisumwittert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s823" category="adj" class="Gefuehl">
+<lexUnit id="l1396" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>magisch</orthForm>
+</lexUnit>
+<lexUnit id="l1397" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>mystisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s824" category="adj" class="Gefuehl">
+<lexUnit id="l1399" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hermetisch</orthForm>
+</lexUnit>
+<lexUnit id="l1400" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dunkel</orthForm>
+</lexUnit>
+<lexUnit id="l1401" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>undurchdringlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s825" category="adj" class="Gefuehl">
+<lexUnit id="l1402" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rätselhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s826" category="adj" class="Gefuehl">
+<lexUnit id="l1403" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schleierhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s827" category="adj" class="Gefuehl">
+<lexUnit id="l1404" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beschämend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s900" category="adj" class="Gefuehl">
+<lexUnit id="l1521" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>teilnahmslos</orthForm>
+</lexUnit>
+</synset>
+<synset id="s901" category="adj" class="Gefuehl">
+<lexUnit id="l1522" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stumpfsinnig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s1790" category="adj" class="Gefuehl">
+<lexUnit id="l2763" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>resigniert</orthForm>
+</lexUnit>
+<lexUnit id="l2764" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>frustriert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s3266" category="adj" class="Gefuehl">
+<lexUnit id="l4767" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sprachlos</orthForm>
+</lexUnit>
+<paraphrase>ohne </paraphrase>
+</synset>
+<synset id="s5086" category="adj" class="Gefuehl">
+<lexUnit id="l7631" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>verknallt</orthForm>
+</lexUnit>
+<lexUnit id="l7632" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>verschossen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s66388" category="adj" class="Gefuehl">
+<lexUnit id="l92150" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>isoliert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s775" category="adj" class="Gefuehl">
+<lexUnit id="l1311" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bequem</orthForm>
+</lexUnit>
+<lexUnit id="l1312" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>komfortabel</orthForm>
+</lexUnit>
+</synset>
+<synset id="s678" category="adj" class="Gefuehl">
+<lexUnit id="l1150" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>humorvoll</orthForm>
+</lexUnit>
+<lexUnit id="l1151" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>humorig</orthForm>
+</lexUnit>
+<paraphrase>voll Humor</paraphrase>
+</synset>
+<synset id="s69039" category="adj" class="Gefuehl">
+<lexUnit id="l95201" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verstehend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78073" category="adj" class="Gefuehl">
+<lexUnit id="l106085" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sozialkritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78074" category="adj" class="Gefuehl">
+<lexUnit id="l106086" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gesellschaftskritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78075" category="adj" class="Gefuehl">
+<lexUnit id="l106087" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zeitkritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78120" category="adj" class="Gefuehl">
+<lexUnit id="l106141" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>regimekritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78121" category="adj" class="Gefuehl">
+<lexUnit id="l106142" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>globalisierungskritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78122" category="adj" class="Gefuehl">
+<lexUnit id="l106143" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>religionskritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78123" category="adj" class="Gefuehl">
+<lexUnit id="l106144" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>regierungskritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78128" category="adj" class="Gefuehl">
+<lexUnit id="l106149" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>systemkritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78129" category="adj" class="Gefuehl">
+<lexUnit id="l106150" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kulturkritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78130" category="adj" class="Gefuehl">
+<lexUnit id="l106151" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ideologiekritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78132" category="adj" class="Gefuehl">
+<lexUnit id="l106153" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kirchenkritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78133" category="adj" class="Gefuehl">
+<lexUnit id="l106154" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kapitalismuskritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78134" category="adj" class="Gefuehl">
+<lexUnit id="l106155" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>medienkritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78137" category="adj" class="Gefuehl">
+<lexUnit id="l106159" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zivilisationskritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78138" category="adj" class="Gefuehl">
+<lexUnit id="l106160" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>konsumkritisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78668" category="adj" class="Gefuehl">
+<lexUnit id="l106775" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ereignisreich</orthForm>
+</lexUnit>
+<lexUnit id="l106825" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erlebnisreich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78670" category="adj" class="Gefuehl">
+<lexUnit id="l106778" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spannungsreich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78673" category="adj" class="Gefuehl">
+<lexUnit id="l127153" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>konfliktträchtig</orthForm>
+</lexUnit>
+<lexUnit id="l128163" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>konfliktgeladen</orthForm>
+</lexUnit>
+<lexUnit id="l106781" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>konfliktreich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78698" category="adj" class="Gefuehl">
+<lexUnit id="l106813" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blumenreich</orthForm>
+</lexUnit>
+<lexUnit id="l107417" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blumig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78793" category="adj" class="Gefuehl">
+<lexUnit id="l106925" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lichtempfindlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78794" category="adj" class="Gefuehl">
+<lexUnit id="l106926" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hochempfindlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78829" category="adj" class="Gefuehl">
+<lexUnit id="l106967" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ominös</orthForm>
+</lexUnit>
+</synset>
+<synset id="s78693" category="adj" class="Gefuehl">
+<lexUnit id="l106805" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tränenreich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79005" category="adj" class="Gefuehl">
+<lexUnit id="l107175" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>affektiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79098" category="adj" class="Gefuehl">
+<lexUnit id="l107292" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>apokryph</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79367" category="adj" class="Gefuehl">
+<lexUnit id="l107611" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>homoerotisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79440" category="adj" class="Gefuehl">
+<lexUnit id="l107697" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>melodramatisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79441" category="adj" class="Gefuehl">
+<lexUnit id="l107698" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>melodramatisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79513" category="adj" class="Gefuehl">
+<lexUnit id="l107777" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>torgefährlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79554" category="adj" class="Gefuehl">
+<lexUnit id="l107835" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unpersönlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79655" category="adj" class="Gefuehl">
+<lexUnit id="l107946" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>delphisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79709" category="adj" class="Gefuehl">
+<lexUnit id="l108009" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kunstsinnig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79725" category="adj" class="Gefuehl">
+<lexUnit id="l108036" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>klangvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79734" category="adj" class="Gefuehl">
+<lexUnit id="l108046" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einschichtig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79737" category="adj" class="Gefuehl">
+<lexUnit id="l108049" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sensitiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s79923" category="adj" class="Gefuehl">
+<lexUnit id="l108251" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hochdramatisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80040" category="adj" class="Gefuehl">
+<lexUnit id="l108382" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stachelig</orthForm>
+<orthVar>stachlig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s80067" category="adj" class="Gefuehl">
+<lexUnit id="l108412" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tiefschwarz</orthForm>
+</lexUnit>
+</synset>
+<synset id="s80428" category="adj" class="Gefuehl">
+<lexUnit id="l108848" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dionysisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s86118" category="adj" class="Gefuehl">
+<lexUnit id="l115994" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>warmherzig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s850" category="adj" class="Gefuehl">
+<lexUnit id="l1441" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lyrisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5083" category="adj" class="Gefuehl">
+<lexUnit id="l7626" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verliebt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s5087" category="adj" class="Gefuehl">
+<lexUnit id="l7633" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>entflammt</orthForm>
+<example><text>er ist für sie entflammt</text></example>
+</lexUnit>
+</synset>
+<synset id="s93939" category="adj" class="Gefuehl">
+<lexUnit id="l125649" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>passioniert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s93951" category="adj" class="Gefuehl">
+<lexUnit id="l125664" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>trübe</orthForm>
+<orthVar>trüb</orthVar>
+</lexUnit>
+</synset>
+<synset id="s93952" category="adj" class="Gefuehl">
+<lexUnit id="l125665" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>missmutig</orthForm>
+</lexUnit>
+<lexUnit id="l125666" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verdrießlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s93953" category="adj" class="Gefuehl">
+<lexUnit id="l125667" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>missvergnügt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s93959" category="adj" class="Gefuehl">
+<lexUnit id="l125673" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gelöst</orthForm>
+</lexUnit>
+</synset>
+<synset id="s93985" category="adj" class="Gefuehl">
+<lexUnit id="l125703" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>eingenommen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94025" category="adj" class="Gefuehl">
+<lexUnit id="l125746" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>flammend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94109" category="adj" class="Gefuehl">
+<lexUnit id="l125855" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stimmungsaufhellend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94132" category="adj" class="Gefuehl">
+<lexUnit id="l125882" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sehnlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94254" category="adj" class="Gefuehl">
+<lexUnit id="l126033" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hochsensibel</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94256" category="adj" class="Gefuehl">
+<lexUnit id="l126036" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unsentimental</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94405" category="adj" class="Gefuehl">
+<lexUnit id="l126212" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geharnischt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94507" category="adj" class="Gefuehl">
+<lexUnit id="l126332" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bemitleidenswert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94508" category="adj" class="Gefuehl">
+<lexUnit id="l126333" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beklagenswert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94509" category="adj" class="Gefuehl">
+<lexUnit id="l126334" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unglückselig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94510" category="adj" class="Gefuehl">
+<lexUnit id="l126335" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unglückselig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94521" category="adj" class="Gefuehl">
+<lexUnit id="l126354" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>obsessiv</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94522" category="adj" class="Gefuehl">
+<lexUnit id="l126355" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nervenaufreibend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94538" category="adj" class="Gefuehl">
+<lexUnit id="l126374" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>feuchtfröhlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94553" category="adj" class="Gefuehl">
+<lexUnit id="l126396" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>faustisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94558" category="adj" class="Gefuehl">
+<lexUnit id="l126402" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>furchteinflößend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94589" category="adj" class="Gefuehl">
+<lexUnit id="l126444" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>emotionsgeladen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94590" category="adj" class="Gefuehl">
+<lexUnit id="l126445" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufgelegt</orthForm>
+</lexUnit>
+<lexUnit id="l126502" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gelaunt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94627" category="adj" class="Gefuehl">
+<lexUnit id="l126484" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>geborgen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94863" category="adj" class="Gefuehl">
+<lexUnit id="l126782" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hochinteressant</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94895" category="adj" class="Gefuehl">
+<lexUnit id="l126824" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schmelzend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94955" category="adj" class="Gefuehl">
+<lexUnit id="l126892" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erhebend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s94966" category="adj" class="Gefuehl">
+<lexUnit id="l126906" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>delikat</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95039" category="adj" class="Gefuehl">
+<lexUnit id="l126990" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wildromantisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95073" category="adj" class="Gefuehl">
+<lexUnit id="l127032" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>detachiert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95212" category="adj" class="Gefuehl">
+<lexUnit id="l127200" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unkomfortabel</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95233" category="adj" class="Gefuehl">
+<lexUnit id="l127226" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bemitleidenswert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95267" category="adj" class="Gefuehl">
+<lexUnit id="l127267" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unlustig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95278" category="adj" class="Gefuehl">
+<lexUnit id="l127278" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>deklamatorisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95322" category="adj" class="Gefuehl">
+<lexUnit id="l127331" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nervtötend</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95337" category="adj" class="Gefuehl">
+<lexUnit id="l127346" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unbefriedigt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95347" category="adj" class="Gefuehl">
+<lexUnit id="l127361" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>staubtrocken</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95356" category="adj" class="Gefuehl">
+<lexUnit id="l127370" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>orphisch</orthForm>
+</lexUnit>
+<lexUnit id="l127967" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sibyllinisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95359" category="adj" class="Gefuehl">
+<lexUnit id="l127376" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>betrüblich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95370" category="adj" class="Gefuehl">
+<lexUnit id="l127394" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rauschhaft</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95484" category="adj" class="Gefuehl">
+<lexUnit id="l127523" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blamabel</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95490" category="adj" class="Gefuehl">
+<lexUnit id="l127531" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>unverarbeitet</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95504" category="adj" class="Gefuehl">
+<lexUnit id="l127548" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufgeräumt</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95585" category="adj" class="Gefuehl">
+<lexUnit id="l127644" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leichtlebig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95586" category="adj" class="Gefuehl">
+<lexUnit id="l127645" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lang gehegt</orthForm>
+<orthVar>langgehegt</orthVar>
+</lexUnit>
+</synset>
+<synset id="s95600" category="adj" class="Gefuehl">
+<lexUnit id="l127663" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spannungsgeladen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95601" category="adj" class="Gefuehl">
+<lexUnit id="l127664" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spannungsgeladen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95620" category="adj" class="Gefuehl">
+<lexUnit id="l127684" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gefühlsbetont</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95733" category="adj" class="Gefuehl">
+<lexUnit id="l127816" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>amourös</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95828" category="adj" class="Gefuehl">
+<lexUnit id="l127920" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fußballbegeistert</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95830" category="adj" class="Gefuehl">
+<lexUnit id="l127922" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pythisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95844" category="adj" class="Gefuehl">
+<lexUnit id="l127941" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wohnlich</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95851" category="adj" class="Gefuehl">
+<lexUnit id="l127949" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>liebestoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95854" category="adj" class="Gefuehl">
+<lexUnit id="l127952" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ulkig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95858" category="adj" class="Gefuehl">
+<lexUnit id="l127956" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>drangvoll</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95868" category="adj" class="Gefuehl">
+<lexUnit id="l127966" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>apollinisch</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95882" category="adj" class="Gefuehl">
+<lexUnit id="l127983" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kuschelig</orthForm>
+<orthVar>kuschlig</orthVar>
+</lexUnit>
+</synset>
+<synset id="s95884" category="adj" class="Gefuehl">
+<lexUnit id="l127985" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lauschig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95937" category="adj" class="Gefuehl">
+<lexUnit id="l128053" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>angefressen</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95938" category="adj" class="Gefuehl">
+<lexUnit id="l128054" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bärbeißig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95979" category="adj" class="Gefuehl">
+<lexUnit id="l128104" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schmalzig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95985" category="adj" class="Gefuehl">
+<lexUnit id="l128110" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wehleidig</orthForm>
+</lexUnit>
+</synset>
+<synset id="s95988" category="adj" class="Gefuehl">
+<lexUnit id="l128113" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>desperat</orthForm>
+</lexUnit>
+</synset>
+</synsets>

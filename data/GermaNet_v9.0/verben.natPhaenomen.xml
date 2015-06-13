@@ -1,0 +1,1242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE synsets SYSTEM "germanet_objects.dtd">
+<synsets>
+<synset id="s58305" category="verben" class="natPhaenomen">
+<lexUnit id="l82109" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gewittern</orthForm>
+<frame>NE</frame>
+<example><text>Im Sommer gewittert es oft am Abend.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58304" category="verben" class="natPhaenomen">
+<lexUnit id="l82108" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>graupeln</orthForm>
+<frame>NE</frame>
+<example><text>Es graupelt schon den ganzen Morgen.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58307" category="verben" class="natPhaenomen">
+<lexUnit id="l82111" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>grollen</orthForm>
+<frame>NN</frame>
+<example><text>Der Donner grollt in der Ferne.</text><exframe>NN</exframe></example>
+</lexUnit>
+<lexUnit id="l82112" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rumoren</orthForm>
+<frame>NN</frame>
+<example><text>Der Sturm rumorte draußen.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58302" category="verben" class="natPhaenomen">
+<lexUnit id="l82106" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hageln</orthForm>
+<frame>NE</frame>
+<example><text>Gestern hat es gehagelt.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58309" category="verben" class="natPhaenomen">
+<lexUnit id="l82114" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>krachen</orthForm>
+<frame>NN.BD</frame>
+<example><text>Ein Blitz krachte vom Himmel.</text><exframe>NN.BD</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58324" category="verben" class="natPhaenomen">
+<lexUnit id="l82141" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kondensieren</orthForm>
+<frame>NN</frame>
+<example><text>Die feuchte Luft im Zimmer kondensierte am Fenster.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58300" category="verben" class="natPhaenomen">
+<lexUnit id="l82104" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schneien</orthForm>
+<frame>NE</frame>
+<example><text>In den Alpen hat es viel geschneit dieses Jahr.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58317" category="verben" class="natPhaenomen">
+<lexUnit id="l82125" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sommern</orthForm>
+<frame>NE</frame>
+<example><text>Es sommert allmählich.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58301" category="verben" class="natPhaenomen">
+<lexUnit id="l82105" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>stiemen</orthForm>
+<frame>NE</frame>
+<example><text>Es stiemte den ganzen Tag lang.</text><exframe>NE</exframe></example>
+</lexUnit>
+<paraphrase>heftig schneien</paraphrase>
+</synset>
+<synset id="s58318" category="verben" class="natPhaenomen">
+<lexUnit id="l82126" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>herbsten</orthForm>
+<frame>NE</frame>
+<example><text>Es herbstet schon.</text><exframe>NE</exframe></example>
+</lexUnit>
+<lexUnit id="l82127" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>herbsteln</orthForm>
+<frame>NE</frame>
+<example><text>Es herbstelt schon.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58294" category="verben" class="natPhaenomen">
+<lexUnit id="l82093" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>pladdern</orthForm>
+<frame>NN.Bd</frame>
+<example><text>Der Regen pladderte an die Fensterscheiben.</text><exframe>NN.Bd</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58292" category="verben" class="natPhaenomen">
+<lexUnit id="l82091" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>regnen</orthForm>
+<frame>NE</frame>
+<example><text>Es regnet und stürmt.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58308" category="verben" class="natPhaenomen">
+<lexUnit id="l82113" sense="5" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rollen</orthForm>
+<frame>NN</frame>
+<example><text>Der Donner rollt in der Ferne.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>ein dumpfes, rumpelndes, polterndes o.ä. Geräusch erzeugen, von sich geben</paraphrase>
+</synset>
+<synset id="s58299" category="verben" class="natPhaenomen">
+<lexUnit id="l82103" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schauern</orthForm>
+<frame>NE</frame>
+<example><text>Es schauerte heftig, hörte aber schnell wieder auf.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58295" category="verben" class="natPhaenomen">
+<lexUnit id="l82094" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tröpfeln</orthForm>
+<frame>NN</frame>
+<frame>NE</frame>
+<example><text>Es tröpfelte etwas und hörte sofort wieder auf.</text><exframe>NE</exframe></example>
+</lexUnit>
+<lexUnit id="l82096" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>tribbeln</orthForm>
+<frame>NN.Bl</frame>
+<frame>NE</frame>
+<example><text>Der Regen tribbelte auf das Dach.</text><exframe>NN.Bl</exframe></example>
+</lexUnit>
+<lexUnit id="l82095" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>drippeln</orthForm>
+<frame>NN.Pp</frame>
+<example><text>Der Regen drippelt aufs Vordach.</text><exframe>NN.Pp</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58296" category="verben" class="natPhaenomen">
+<lexUnit id="l82097" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gießen</orthForm>
+<frame>NE.PP</frame>
+<example><text>Es gießt in Strömen.</text><exframe>NE.PP</exframe></example>
+</lexUnit>
+<lexUnit id="l82098" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schütten</orthForm>
+<frame>NE</frame>
+<example><text>Es hat den ganzen Tag geschüttet.</text><exframe>NE</exframe></example>
+</lexUnit>
+<lexUnit id="l82099" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schiffen</orthForm>
+<frame>NE</frame>
+<example><text>Es schifft ununterbrochen.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58303" category="verben" class="natPhaenomen">
+<lexUnit id="l82107" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schloßen</orthForm>
+<frame>NE.PP</frame>
+<example><text>Es schloßte auf die Flachdächer der Fabrik.</text><exframe>NE.PP</exframe></example>
+</lexUnit>
+<paraphrase>heftig hageln</paraphrase>
+</synset>
+<synset id="s58321" category="verben" class="natPhaenomen">
+<lexUnit id="l82137" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zuziehen</orthForm>
+<frame>NN.AR</frame>
+<example><text>Der Himmel zieht sich zu.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+<lexUnit id="l82138" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bewölken</orthForm>
+<frame>NN.AR</frame>
+<example><text>Der Himmel bewölkte sich plötzlich.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58313" category="verben" class="natPhaenomen">
+<lexUnit id="l82120" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überfrieren</orthForm>
+<frame>NN</frame>
+<example><text>Die nassen Straßen werden heute Nacht überfrieren.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>an der Oberfläche leicht überfrieren</paraphrase>
+</synset>
+<synset id="s58314" category="verben" class="natPhaenomen">
+<lexUnit id="l82122" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tauen</orthForm>
+<frame>NN</frame>
+<example><text>Der Schnee taut schon.</text><exframe>NN</exframe></example>
+</lexUnit>
+<lexUnit id="l82121" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schmelzen</orthForm>
+<frame>NN</frame>
+<example><text>Das Eis schmilzt durch das schöne Wetter.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58311" category="verben" class="natPhaenomen">
+<lexUnit id="l82116" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wetterleuchten</orthForm>
+<frame>NE</frame>
+<example><text>In den Bergen wetterleuchtete es.</text><exframe>NE</exframe></example>
+</lexUnit>
+<paraphrase>als Blitz in der Ferne aufleuchten</paraphrase>
+</synset>
+<synset id="s58316" category="verben" class="natPhaenomen">
+<lexUnit id="l82124" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wintern</orthForm>
+<frame>NE</frame>
+<example><text>Es winterte schon im Oktober.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58289" category="verben" class="natPhaenomen">
+<lexUnit id="l82088" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>nat Phänomen Verb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s58290" category="verben" class="natPhaenomen">
+<lexUnit id="l82089" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>Wetterverb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s58291" category="verben" class="natPhaenomen">
+<lexUnit id="l82090" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>spez Phänomen Verb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s58315" category="verben" class="natPhaenomen">
+<lexUnit id="l82123" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>Jahreszeiten Wetterverb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s58323" category="verben" class="natPhaenomen">
+<lexUnit id="l82140" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>Wasserverb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s58319" category="verben" class="natPhaenomen">
+<lexUnit id="l82128" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufklären</orthForm>
+<frame>NN.AR</frame>
+<frame>NE.AR</frame>
+<example><text>Der Himmel klärte sich auf.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+<lexUnit id="l82129" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufklaren</orthForm>
+<frame>NE</frame>
+<example><text>Es klart morgen wieder auf.</text><exframe>NE</exframe></example>
+</lexUnit>
+<lexUnit id="l82130" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufhellen</orthForm>
+<frame>NN.AR</frame>
+<frame>NE.AR</frame>
+<example><text>Der Himmel hellte sich langsam auf.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+<lexUnit id="l82131" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lichten</orthForm>
+<frame>NN.AR</frame>
+<example><text>Die Wolkendecke lichtete sich.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+<lexUnit id="l82132" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>hellen</orthForm>
+<frame>NN.AR</frame>
+<example><text>Der Tag hellt sich.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58297" category="verben" class="natPhaenomen">
+<lexUnit id="l82100" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>nieseln</orthForm>
+<frame>NE</frame>
+<example><text>Es nieselte den ganzen Tag.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58298" category="verben" class="natPhaenomen">
+<lexUnit id="l82102" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einnieseln</orthForm>
+<frame>NE.AR</frame>
+<example><text>Es nieselte sich ein und hörte nicht mehr auf.</text><exframe>NE.AR</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58293" category="verben" class="natPhaenomen">
+<lexUnit id="l82092" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einregnen</orthForm>
+<frame>NE.AR</frame>
+<example><text>Es wird sich einregnen und nicht mehr aufhören.</text><exframe>NE.AR</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58365" category="verben" class="natPhaenomen">
+<lexUnit id="l82195" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ionisieren</orthForm>
+<frame>NN.AN</frame>
+<example><text>Elektronen ionisieren Atome.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58335" category="verben" class="natPhaenomen">
+<lexUnit id="l82153" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glimmen</orthForm>
+<frame>NN</frame>
+<example><text>Die Asche glimmte noch ein wenig.</text><exframe>NN</exframe></example>
+</lexUnit>
+<lexUnit id="l82154" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glühen</orthForm>
+<frame>NN.Bl</frame>
+<frame>NN.Pp</frame>
+<frame>NN.Bt</frame>
+<example><text>Das Feuer glühte in der Dunkelheit.</text><exframe>NN.Bl</exframe></example>
+<example><text>Der Himmel glühte von der untergehenden Sonne.</text><exframe>NN.Pp</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58340" category="verben" class="natPhaenomen">
+<lexUnit id="l82162" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>entflammen</orthForm>
+<frame>NN.AR</frame>
+<frame>NN.Pp</frame>
+<example><text>Der Stoff entflammte sich sofort.</text><exframe>NN.AR</exframe></example>
+<example><text>Durch die Reibung der beiden Steine entflammte ein kleines Feuer.</text><exframe>NN.Pp</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58360" category="verben" class="natPhaenomen">
+<lexUnit id="l82189" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>korrodieren</orthForm>
+<frame>NN</frame>
+<example><text>Aluminium und Eisen korrodieren.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>Materialien zerfressen oder angreifen</paraphrase>
+</synset>
+<synset id="s58362" category="verben" class="natPhaenomen">
+<lexUnit id="l82191" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kristallisieren</orthForm>
+<frame>NN.Bm</frame>
+<example><text>Diamanten kristallisieren kubisch.</text><exframe>NN.Bm</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58334" category="verben" class="natPhaenomen">
+<lexUnit id="l82152" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>entzünden</orthForm>
+<frame>NN.AN</frame>
+<frame>NN.AR</frame>
+<example><text>Der weggeworfene Zigarettenstummel entzündete einen Waldbrand.</text><exframe>NN.AN</exframe></example>
+<example><text>Das Feuer entzündete sich durch eine dort liegende Glasscherbe.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58351" category="verben" class="natPhaenomen">
+<lexUnit id="l82177" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sengen</orthForm>
+<frame>NN</frame>
+<example><text>Die Sonne sengte.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>sehr große Hitze</paraphrase>
+</synset>
+<synset id="s58361" category="verben" class="natPhaenomen">
+<lexUnit id="l82190" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erodieren</orthForm>
+<frame>NN.AN</frame>
+<example><text>Wasser, Eis und Wind erodieren die Böden.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+<paraphrase>den Boden wegspülen oder abtragen</paraphrase>
+</synset>
+<synset id="s58369" category="verben" class="natPhaenomen">
+<lexUnit id="l82199" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>versteppen</orthForm>
+<frame>NN</frame>
+<example><text>Durch die große Trockenheit versteppte die Landschaft.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58353" category="verben" class="natPhaenomen">
+<lexUnit id="l82179" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spucken</orthForm>
+<frame>NN.AN</frame>
+<example><text>Der Vulkan spuckte glühende Asche.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+<paraphrase>Vulkan</paraphrase>
+</synset>
+<synset id="s58338" category="verben" class="natPhaenomen">
+<lexUnit id="l82157" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lodern</orthForm>
+<frame>NN</frame>
+<example><text>Die Flammen loderten zum Himmel.</text><exframe>NN</exframe></example>
+</lexUnit>
+<lexUnit id="l82158" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lohen</orthForm>
+<frame>NN.Bm</frame>
+<example><text>Das Feuer lohte meterhoch.</text><exframe>NN.Bm</exframe></example>
+</lexUnit>
+<lexUnit id="l82159" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>flammen</orthForm>
+<frame>NN</frame>
+<example><text>Im Kamin flammte ein Feuer.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58378" category="verben" class="natPhaenomen">
+<lexUnit id="l82209" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>lumineszieren</orthForm>
+<frame>NN</frame>
+<example><text>Der Kobalt lumineszierte.</text><exframe>NN</exframe></example>
+<example><text>Der Stoff luminesziert durch die Röntgenstrahlung.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>kalt leuchten</paraphrase>
+</synset>
+<synset id="s58356" category="verben" class="natPhaenomen">
+<lexUnit id="l82184" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>strahlen</orthForm>
+<frame>NN</frame>
+<example><text>Uran strahlt.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>radioaktive Strahlen aussenden</paraphrase>
+</synset>
+<synset id="s58377" category="verben" class="natPhaenomen">
+<lexUnit id="l82207" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>leuchten</orthForm>
+<frame>NN</frame>
+<example><text>Der Mond leuchtete in der Nacht.</text><exframe>NN</exframe></example>
+</lexUnit>
+<lexUnit id="l82208" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>strahlen</orthForm>
+<frame>NN</frame>
+<example><text>Die Lichter der Stadt strahlen in die Nacht.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>Lichtstrahlen aussenden, große Helligkeit verbreiten</paraphrase>
+</synset>
+<synset id="s58359" category="verben" class="natPhaenomen">
+<lexUnit id="l82188" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stratifizieren</orthForm>
+<frame>NN</frame>
+<example><text>Die Gesteine stratifizierten.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>in Schichten ablagern</paraphrase>
+</synset>
+<synset id="s58374" category="verben" class="natPhaenomen">
+<lexUnit id="l82204" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sumpfen</orthForm>
+<frame>NN</frame>
+<example><text>Die Gegend um das alte Forsthaus sumpfte zusehends.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>sumpfig werden</paraphrase>
+</synset>
+<synset id="s58331" category="verben" class="natPhaenomen">
+<lexUnit id="l82149" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tauen</orthForm>
+<frame>NE</frame>
+<example><text>Heute Morgen hat es getaut.</text><exframe>NE</exframe></example>
+</lexUnit>
+<paraphrase>sich als Tau niederschlagen</paraphrase>
+</synset>
+<synset id="s58380" category="verben" class="natPhaenomen">
+<lexUnit id="l82211" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>prangen</orthForm>
+<frame>NN.BL</frame>
+<example><text>Die goldnen Sternlein prangen am Himmel.</text><exframe>NN.BL</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58350" category="verben" class="natPhaenomen">
+<lexUnit id="l82176" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>qualmen</orthForm>
+<frame>NN</frame>
+<frame>NE.Pp</frame>
+<example><text>Der Schornstein qualmt ganz schön.</text><exframe>NN</exframe></example>
+<example><text>Es qualmte aus dem Fenster.</text><exframe>NE.Pp</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58349" category="verben" class="natPhaenomen">
+<lexUnit id="l82175" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>rauchen</orthForm>
+<frame>NN</frame>
+<example><text>Der Vulkan raucht seit ein paar Wochen.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58329" category="verben" class="natPhaenomen">
+<lexUnit id="l82147" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verdampfen</orthForm>
+<frame>NN</frame>
+<example><text>Das Wasser im Kochtopf verdampfte.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58330" category="verben" class="natPhaenomen">
+<lexUnit id="l82148" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verdunsten</orthForm>
+<frame>NN</frame>
+<example><text>Das Wasser der Flüsse verdunstet bei großer Hitze.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58364" category="verben" class="natPhaenomen">
+<lexUnit id="l82194" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vereisen</orthForm>
+<frame>NN</frame>
+<example><text>Die nassen Straßen vereisten über Nacht.</text><exframe>NN</exframe></example>
+<example><text>Der See ist vereist.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58320" category="verben" class="natPhaenomen">
+<lexUnit id="l82133" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verdunkeln</orthForm>
+<frame>NN.AR</frame>
+<example><text>Der Himmel verdunkelte sich.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+<lexUnit id="l82134" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verfinstern</orthForm>
+<frame>NN.AR</frame>
+<example><text>Der Himmel verfinsterte sich.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+<lexUnit id="l82136" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dunkeln</orthForm>
+<frame>NE</frame>
+<example><text>Es dunkelt allmählich.</text><exframe>NE</exframe></example>
+</lexUnit>
+<lexUnit id="l110670" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verdüstern</orthForm>
+<frame>NN.AR</frame>
+<example><text>Der Himmel verdüstert sich.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58371" category="verben" class="natPhaenomen">
+<lexUnit id="l82201" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vergletschern</orthForm>
+<frame>NN</frame>
+<example><text>Eines Tages wird Europa vergletschern.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58337" category="verben" class="natPhaenomen">
+<lexUnit id="l82156" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verglühen</orthForm>
+<frame>NN</frame>
+<example><text>Der Himmelskörper verglühte in Jahrmillionen.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58343" category="verben" class="natPhaenomen">
+<lexUnit id="l82166" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verglühen</orthForm>
+<frame>NN.AN</frame>
+<example><text>Die Sonne verglühte den Anwohnern die Steppe.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58363" category="verben" class="natPhaenomen">
+<lexUnit id="l82192" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>versteinern</orthForm>
+<frame>NN</frame>
+<example><text>Pflanzen und Tiere versteinerten im Laufe der Erdzeitalter.</text><exframe>NN</exframe></example>
+</lexUnit>
+<lexUnit id="l82193" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>petrifizieren</orthForm>
+<frame>NN</frame>
+<frame>NN.AN</frame>
+<example><text>Dinosaurierskelette wurden petrifiziert.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58373" category="verben" class="natPhaenomen">
+<lexUnit id="l82203" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>versumpfen</orthForm>
+<frame>NN</frame>
+<example><text>Ganze Landstriche versumpften nach und nach.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58370" category="verben" class="natPhaenomen">
+<lexUnit id="l82200" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verkarsten</orthForm>
+<frame>NN</frame>
+<example><text>Durch die Wasserknappheit verkarstete das Gebirge zusehends.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58372" category="verben" class="natPhaenomen">
+<lexUnit id="l82202" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vermooren</orthForm>
+<frame>NN</frame>
+<example><text>Die Gegend vermoort komplett.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58375" category="verben" class="natPhaenomen">
+<lexUnit id="l82205" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>vermoosen</orthForm>
+<frame>NN</frame>
+<example><text>Die Mauern sind ziemlich vermoost.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58342" category="verben" class="natPhaenomen">
+<lexUnit id="l82164" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verbrennen</orthForm>
+<frame>NN.AN</frame>
+<example><text>Sie hat ihre alten Schulhefte verbrannt.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+<lexUnit id="l82165" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="yes">
+<orthForm>abfackeln</orthForm>
+<frame>NN.AN</frame>
+<example><text>Er fackelte die ganze Scheune ab.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58382" category="verben" class="natPhaenomen">
+<lexUnit id="l82213" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zurückstrahlen</orthForm>
+<frame>NN</frame>
+<example><text>Der helle Blitz reflektierte im Fenster und strahlte zurück.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58348" category="verben" class="natPhaenomen">
+<lexUnit id="l82173" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zündeln</orthForm>
+<frame>NN</frame>
+<example><text>Die Kinder zündeln mit Streichhölzern.</text><exframe>NN</exframe></example>
+<example><text>Er hat in der Scheune gezündelt.</text><exframe>NN</exframe></example>
+</lexUnit>
+<lexUnit id="l82174" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>kokeln</orthForm>
+<frame>NN</frame>
+<frame>NN.PP</frame>
+<example><text>Die Kinder kokeln.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58385" category="verben" class="natPhaenomen">
+<lexUnit id="l82218" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wabern</orthForm>
+<frame>NN</frame>
+<example><text>Der Nebel waberte durch den Raum.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58381" category="verben" class="natPhaenomen">
+<lexUnit id="l82212" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überstrahlen</orthForm>
+<frame>NN.AN</frame>
+<example><text>Die Sonne überstrahlt das ganze Tal.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58339" category="verben" class="natPhaenomen">
+<lexUnit id="l82161" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schwelen</orthForm>
+<frame>NN</frame>
+<example><text>Das Feuer schwelte unter der Asche vor sich hin.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58344" category="verben" class="natPhaenomen">
+<lexUnit id="l82167" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>absengen</orthForm>
+<frame>NN.AN</frame>
+<example><text>Er sengte das Feld ab.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58332" category="verben" class="natPhaenomen">
+<lexUnit id="l82150" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>Feuerverb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s58341" category="verben" class="natPhaenomen">
+<lexUnit id="l82163" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufflammen</orthForm>
+<frame>NN</frame>
+<example><text>Das Feuer flammte kurz auf.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58355" category="verben" class="natPhaenomen">
+<lexUnit id="l82183" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>Erdenverb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s58312" category="verben" class="natPhaenomen">
+<lexUnit id="l82117" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>frieren</orthForm>
+<frame>NE</frame>
+<example><text>Heute Nacht friert es.</text><exframe>NE</exframe></example>
+</lexUnit>
+<lexUnit id="l82119" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gefrieren</orthForm>
+<frame>NE</frame>
+<frame>NN</frame>
+<example><text>Der Boden gefriert über Nacht.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58376" category="verben" class="natPhaenomen">
+<lexUnit id="l82206" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>Lichtverb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s58383" category="verben" class="natPhaenomen">
+<lexUnit id="l82214" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufleuchten</orthForm>
+<frame>NN</frame>
+<example><text>Die Sonne leuchtete hinter den Bergen auf.</text><exframe>NN</exframe></example>
+</lexUnit>
+<lexUnit id="l82215" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufflackern</orthForm>
+<frame>NN</frame>
+<example><text>Die Flammen flackerten im Wind noch einmal auf.</text><exframe>NN</exframe></example>
+</lexUnit>
+<lexUnit id="l82216" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>auflodern</orthForm>
+<frame>NN</frame>
+<example><text>Die Glut loderte kurz auf.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58354" category="verben" class="natPhaenomen">
+<lexUnit id="l82180" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erwärmen</orthForm>
+<frame>NN.AR</frame>
+<example><text>Das Wasser hat sich um mehrere Grad erwärmt.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+<lexUnit id="l82181" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erhitzen</orthForm>
+<frame>NN.AR</frame>
+<example><text>Das Wasser hat sich in der Sonne erhitzt.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+<lexUnit id="l82182" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufheizen</orthForm>
+<frame>NN.AR</frame>
+<example><text>Die Atmosphäre heizt sich zunehmend auf.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58358" category="verben" class="natPhaenomen">
+<lexUnit id="l82186" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ablagern</orthForm>
+<frame>NN.AR</frame>
+<frame>NN.AN</frame>
+<example><text>Im Boden lagerten sich Gesteinsschichten ab.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+<lexUnit id="l82187" sense="5" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>absetzen</orthForm>
+<frame>NN.AR</frame>
+<frame>NN.AN</frame>
+<example><text>In der Badewanne hat sich Kalk abgesetzt.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58352" category="verben" class="natPhaenomen">
+<lexUnit id="l82178" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ausbrechen</orthForm>
+<frame>NN.Bt</frame>
+<example><text>Der Vulkan ist heute Nacht ausgebrochen.</text><exframe>NN.Bt</exframe></example>
+</lexUnit>
+<paraphrase>Vulkan</paraphrase>
+</synset>
+<synset id="s58310" category="verben" class="natPhaenomen">
+<lexUnit id="l82115" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blitzen</orthForm>
+<frame>NE</frame>
+<example><text>Es blitzte und donnerte.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58325" category="verben" class="natPhaenomen">
+<lexUnit id="l82143" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>brausen</orthForm>
+<frame>NN</frame>
+<example><text>Das Meer braust.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58328" category="verben" class="natPhaenomen">
+<lexUnit id="l82146" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dampfen</orthForm>
+<frame>NN</frame>
+<example><text>Die Erde dampfte im Morgengrauen.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58306" category="verben" class="natPhaenomen">
+<lexUnit id="l82110" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>donnern</orthForm>
+<frame>NE</frame>
+<example><text>Es donnerte schon lange vor dem Gewitterausbruch.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58326" category="verben" class="natPhaenomen">
+<lexUnit id="l82144" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fluten</orthForm>
+<frame>NN.BD</frame>
+<example><text>Die Sonnenstrahlen fluteten ins Zimmer.</text><exframe>NN.BD</exframe></example>
+<example><text>Das Wasser des Rheins flutete über die Felder.</text><exframe>NN.BD</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58345" category="verben" class="natPhaenomen">
+<lexUnit id="l82168" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>flämmen</orthForm>
+<frame>NN.AN</frame>
+<example><text>Er flämmte das Geflügel.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+<paraphrase>Federkiele von gerupften Gänsen absengen</paraphrase>
+</synset>
+<synset id="s58333" category="verben" class="natPhaenomen">
+<lexUnit id="l82151" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>brennen</orthForm>
+<frame>NN</frame>
+<example><text>Der Wald brannte.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>eine Flamme hervorbringen, in Flammen stehen</paraphrase>
+</synset>
+<synset id="s58398" category="verben" class="natPhaenomen">
+<lexUnit id="l82238" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>funkeln</orthForm>
+<frame>NN</frame>
+<example><text>Die Sterne funkelten am Himmel.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58407" category="verben" class="natPhaenomen">
+<lexUnit id="l82248" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>funken</orthForm>
+<frame>NE</frame>
+<example><text>Beim Kabelbrand funkte es gewaltig.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58411" category="verben" class="natPhaenomen">
+<lexUnit id="l82253" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>föhnen</orthForm>
+<frame>NE</frame>
+<example><text>Es föhnt heute stark.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58390" category="verben" class="natPhaenomen">
+<lexUnit id="l82226" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>knallen</orthForm>
+<frame>NN.BD</frame>
+<example><text>Die Sonne knallt auf mein Auto.</text><exframe>NN.BD</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58401" category="verben" class="natPhaenomen">
+<lexUnit id="l82241" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>gleißen</orthForm>
+<frame>NN.Bm</frame>
+<frame>NN.Bt</frame>
+<frame>NN.Bl</frame>
+<example><text>Die Sonne gleißt in aller Intensität.</text><exframe>NN.Bm</exframe></example>
+</lexUnit>
+<paraphrase>sehr hell leuchten und blenden</paraphrase>
+</synset>
+<synset id="s58399" category="verben" class="natPhaenomen">
+<lexUnit id="l82239" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>glänzen</orthForm>
+<frame>NN.PP</frame>
+<frame>NN.BL</frame>
+<frame>NN.BM</frame>
+<example><text>Der See glänzte im Mondschein.</text><exframe>NN.PP</exframe></example>
+<example><text>Die Sterne glänzten am Himmel.</text><exframe>NN.BL</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58388" category="verben" class="natPhaenomen">
+<lexUnit id="l82222" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erleuchten</orthForm>
+<frame>NN.AN</frame>
+<example><text>Der Stern erleuchtete den Abendhimmel.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+<lexUnit id="l82223" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erhellen</orthForm>
+<frame>NN.AN</frame>
+<example><text>Er erhellte den Speicher mit einer Taschenlampe.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+<lexUnit id="l82224" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>illuminieren</orthForm>
+<frame>NN.AN</frame>
+<example><text>Laternen illuminieren die Straße.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58387" category="verben" class="natPhaenomen">
+<lexUnit id="l82220" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bescheinen</orthForm>
+<frame>NN.AN</frame>
+<example><text>Das Mondlicht beschien die Felder.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+<lexUnit id="l82221" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>beleuchten</orthForm>
+<frame>NN.AN</frame>
+<example><text>Die Flutlichter beleuchteten das Stadion.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58404" category="verben" class="natPhaenomen">
+<lexUnit id="l82244" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>opalisieren</orthForm>
+<frame>NN</frame>
+<example><text>Die Steine opalisierten in der Sonne.</text><exframe>NN</exframe></example>
+</lexUnit>
+<lexUnit id="l82245" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>opaleszieren</orthForm>
+<frame>NN</frame>
+<example><text>Die Steine opaleszieren im Licht.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>wie ein Opal schimmern</paraphrase>
+</synset>
+<synset id="s58405" category="verben" class="natPhaenomen">
+<lexUnit id="l82246" sense="13" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spielen</orthForm>
+<frame>NN.PP</frame>
+<example><text>Das Licht spielt im Wasser.</text><exframe>NN.PP</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58391" category="verben" class="natPhaenomen">
+<lexUnit id="l82227" sense="7" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stechen</orthForm>
+<frame>NN</frame>
+<example><text>Die Sonne sticht heute sehr.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58412" category="verben" class="natPhaenomen">
+<lexUnit id="l82254" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>stürmen</orthForm>
+<frame>NE</frame>
+<example><text>Im Norden stürmt und schneit es.</text><exframe>NE</exframe></example>
+<example><text>Es stürmte die ganze Nacht hindurch.</text><exframe>NE</exframe></example>
+<example><text>Es stürmte heftig.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58392" category="verben" class="natPhaenomen">
+<lexUnit id="l82228" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>niederbrennen</orthForm>
+<frame>NN</frame>
+<frame>NN.AN</frame>
+<example><text>Das Haus brannte vollständig nieder.</text><exframe>NN</exframe></example>
+</lexUnit>
+<lexUnit id="l82229" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>herniederbrennen</orthForm>
+<frame>NN</frame>
+<frame>NN.AN</frame>
+<example><text>Die Scheune ist restlos herniedergebrannt.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58396" category="verben" class="natPhaenomen">
+<lexUnit id="l82235" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>tagen</orthForm>
+<frame>NE</frame>
+<example><text>Es tagte schon als sie loswanderten.</text><exframe>NE</exframe></example>
+</lexUnit>
+<lexUnit id="l82236" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dämmern</orthForm>
+<frame>NN</frame>
+<frame>NE</frame>
+<example><text>Der Tag dämmert im Sommer immer sehr früh.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58413" category="verben" class="natPhaenomen">
+<lexUnit id="l82255" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blasen</orthForm>
+<frame>NN.Bl</frame>
+<example><text>Der Wind bläst um die Häuser.</text><exframe>NN.Bl</exframe></example>
+<example><text>Der Wind blies ihr ins Gesicht.</text><exframe>NN.Bl</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58400" category="verben" class="natPhaenomen">
+<lexUnit id="l82240" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blenden</orthForm>
+<frame>NN.An</frame>
+<example><text>Ein entgegenkommendes Auto hat den Fahrer geblendet.</text><exframe>NN.An</exframe></example>
+<example><text>Die Sonne blendet.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>durch sehr helles Licht am Sehen hindern</paraphrase>
+</synset>
+<synset id="s58406" category="verben" class="natPhaenomen">
+<lexUnit id="l82247" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>blinken</orthForm>
+<frame>NN</frame>
+<example><text>Die Sterne blinkten am Himmel.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58386" category="verben" class="natPhaenomen">
+<lexUnit id="l82219" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>scheinen</orthForm>
+<frame>NN</frame>
+<example><text>Die Sonne schien den ganzen Tag.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58397" category="verben" class="natPhaenomen">
+<lexUnit id="l82237" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schillern</orthForm>
+<frame>NN.Pp</frame>
+<example><text>Der Regenbogen schillerte in allen Farben.</text><exframe>NN.Pp</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58403" category="verben" class="natPhaenomen">
+<lexUnit id="l82243" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schimmern</orthForm>
+<frame>NN</frame>
+<example><text>Das Wasser schimmerte im Sonnenschein.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58393" category="verben" class="natPhaenomen">
+<lexUnit id="l82230" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>untergehen</orthForm>
+<frame>NN.Bl</frame>
+<example><text>Der Morgenstern geht hinter den Berggipfeln unter.</text><exframe>NN.Bl</exframe></example>
+</lexUnit>
+<lexUnit id="l82231" sense="5" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>sinken</orthForm>
+<frame>NN.Bl</frame>
+<example><text>Die Sonne sank hinter den Bergen.</text><exframe>NN.Bl</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58409" category="verben" class="natPhaenomen">
+<lexUnit id="l82250" sense="7" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ziehen</orthForm>
+<frame>NN.BD</frame>
+<frame>NE</frame>
+<example><text>Es zieht von der Eingangstüre her.</text><exframe>NE</exframe></example>
+<example><text>Die giftige Rauchwolke zog über das ganze Stadtgebiet.</text><exframe>NN.BD</exframe></example>
+</lexUnit>
+<paraphrase>als Luftzug in Erscheinung treten</paraphrase>
+</synset>
+<synset id="s58410" category="verben" class="natPhaenomen">
+<lexUnit id="l82251" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>wehen</orthForm>
+<frame>NN.Bd</frame>
+<frame>NN.Bl</frame>
+<example><text>Der Wind wehte über das Land.</text><exframe>NN.Bd</exframe></example>
+</lexUnit>
+<lexUnit id="l82252" sense="5" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>winden</orthForm>
+<frame>NE.Bl</frame>
+<example><text>Hier windet es immer.</text><exframe>NE.Bl</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58395" category="verben" class="natPhaenomen">
+<lexUnit id="l82234" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufgehen</orthForm>
+<frame>NN.Bl</frame>
+<example><text>Die Sonne geht im Osten auf.</text><exframe>NN.Bl</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58408" category="verben" class="natPhaenomen">
+<lexUnit id="l82249" sense="1" source="core" namedEntity="no" artificial="yes" styleMarking="no">
+<orthForm>Luftverb</orthForm>
+</lexUnit>
+</synset>
+<synset id="s58389" category="verben" class="natPhaenomen">
+<lexUnit id="l82225" sense="5" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>brennen</orthForm>
+<frame>NN</frame>
+<example><text>Die Sonne brennt auf die Erde.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58384" category="verben" class="natPhaenomen">
+<lexUnit id="l82217" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>flackern</orthForm>
+<frame>NN</frame>
+<frame>NN.Bl</frame>
+<example><text>Die Kerze flackerte.</text><exframe>NN</exframe></example>
+<example><text>Das Feuer flackerte im Kamin.</text><exframe>NN.Bl</exframe></example>
+<example><text>Blitze flackerten am Horizont.</text><exframe>NN.Bl</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58402" category="verben" class="natPhaenomen">
+<lexUnit id="l82242" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>flimmern</orthForm>
+<frame>NN.Pp</frame>
+<example><text>Das Meer flimmerte in der Sonne.</text><exframe>NN.Pp</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58394" category="verben" class="natPhaenomen">
+<lexUnit id="l82233" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>dämmern</orthForm>
+<frame>NE</frame>
+<example><text>Es dämmert schon früh im Winter.</text><exframe>NE</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s58379" category="verben" class="natPhaenomen">
+<lexUnit id="l82210" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fluoreszieren</orthForm>
+<frame>NN</frame>
+<example><text>Das Material fluoreszierte.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>von selbst leuchten</paraphrase>
+</synset>
+<synset id="s58346" category="verben" class="natPhaenomen">
+<lexUnit id="l82169" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anzünden</orthForm>
+<frame>NN.AN</frame>
+<example><text>Der Vater zündete das Holz im Kamin an.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+<lexUnit id="l82170" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anstecken</orthForm>
+<frame>NN.AN</frame>
+<example><text>Er hatte das Feld angesteckt.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+<lexUnit id="l82171" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>in Brand setzen</orthForm>
+<frame>NN.AN</frame>
+<example><text>Das Kind hat das ganze Haus in Brand gesetzt.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s65299" category="verben" class="natPhaenomen">
+<lexUnit id="l90856" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abbrennen</orthForm>
+<frame>NN</frame>
+<example><text>Das Haus brannte vollständig ab.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s66024" category="verben" class="natPhaenomen">
+<lexUnit id="l91721" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>überhitzen</orthForm>
+<frame>NN</frame>
+<example><text>Der Motor überhitzt, wenn die Kühlung nicht funktioniert.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>etwas wird zu warm</paraphrase>
+</synset>
+<synset id="s66167" category="verben" class="natPhaenomen">
+<lexUnit id="l91890" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>entfachen</orthForm>
+<frame>NN.AN</frame>
+<example><text>Der Vater entfachte ein Feuer im Kamin.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+<paraphrase>ein Feuer anbrennen</paraphrase>
+</synset>
+<synset id="s66168" category="verben" class="natPhaenomen">
+<lexUnit id="l91892" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>anfachen</orthForm>
+<frame>NN.AN</frame>
+<example><text>Der Wind fachte das Feuer wieder an.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+<lexUnit id="l91891" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>fachen</orthForm>
+<frame>NN.AN</frame>
+<example><text>Die Maschine fachte das Schmiedefeuer.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+<paraphrase>durch einen Luftzug (wieder) zum Brennen bringen</paraphrase>
+</synset>
+<synset id="s66506" category="verben" class="natPhaenomen">
+<lexUnit id="l92280" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zufrieren</orthForm>
+<frame>NN</frame>
+<example><text>Der See ist über Nacht zugefroren.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>eine Eisschicht entsteht auf etwas</paraphrase>
+</synset>
+<synset id="s66967" category="verben" class="natPhaenomen">
+<lexUnit id="l92792" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>durchscheinen</orthForm>
+<frame>NN.PP</frame>
+<example><text>Die Sonne scheint durch die Wolkendecke durch.</text><exframe>NN.PP</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s67435" category="verben" class="natPhaenomen">
+<lexUnit id="l93338" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>auskristallisieren</orthForm>
+<frame>NN</frame>
+<example><text>Das Salz kristallisiert aus, wenn es erhitzt wird.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>Kristalle bilden</paraphrase>
+</synset>
+<synset id="s67597" category="verben" class="natPhaenomen">
+<lexUnit id="l93526" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>weiterschwelen</orthForm>
+<frame>NN</frame>
+<example><text>Die Glut schwelte die ganze Nacht weiter.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s68136" category="verben" class="natPhaenomen">
+<lexUnit id="l94168" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>durchbrennen</orthForm>
+<frame>NN</frame>
+<example><text>Die Kohle ist durchgebrannt.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>etwas glüht durch und durch</paraphrase>
+</synset>
+<synset id="s65300" category="verben" class="natPhaenomen">
+<lexUnit id="l90857" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>abbrennen</orthForm>
+<frame>NN.AN</frame>
+<example><text>Die Dorfgemeinschaft brannte wie üblich das Osterfeuer ab.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s79855" category="verben" class="natPhaenomen">
+<lexUnit id="l108175" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>umwehen</orthForm>
+<frame>NN.AN</frame>
+<example><text>Ein lauer Wind umweht die Weiden.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s80151" category="verben" class="natPhaenomen">
+<lexUnit id="l108531" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>einstrahlen</orthForm>
+<frame>NN.PP</frame>
+<example><text>Die Sonne strahlte durch die bunten Kirchenfenster ein und malte schöne Bilder an die Wand. </text><exframe>NN.PP</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s80715" category="verben" class="natPhaenomen">
+<lexUnit id="l109164" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>aufdampfen</orthForm>
+<frame>NN</frame>
+<example><text>Über den Wiesen dampfte der Nebel auf.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s80904" category="verben" class="natPhaenomen">
+<lexUnit id="l109381" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>bestrahlen</orthForm>
+<frame>NN.AN</frame>
+<example><text>Die Sonne bestrahlt die Häuser.</text><exframe>NN.AN</exframe></example>
+<example><text>Die Lichter bestrahlen das Gebäude.</text><exframe>NN.AN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s83238" category="verben" class="natPhaenomen">
+<lexUnit id="l112274" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verhageln</orthForm>
+<frame>NN</frame>
+<example><text>Die gesamte Ernte ist verhagelt.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>durch Hagel vernichtet werden</paraphrase>
+</synset>
+<synset id="s83267" category="verben" class="natPhaenomen">
+<lexUnit id="l112307" sense="3" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>hineinblasen</orthForm>
+<frame>NN.BD</frame>
+<example><text>Der Wind bläst in das Haus hinein.</text><exframe>NN.BD</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s83506" category="verben" class="natPhaenomen">
+<lexUnit id="l112611" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>versinken</orthForm>
+<frame>NN.Bl</frame>
+<example><text>Die rote Sonne versank im Meer.</text><exframe>NN.Bl</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s83618" category="verben" class="natPhaenomen">
+<lexUnit id="l112749" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>erglänzen</orthForm>
+<frame>NN.PP</frame>
+<frame>NN.BL</frame>
+<frame>NN.BM</frame>
+<example><text>Am nächsten Morgen erglänzte die Sonne wieder im hellsten Lichterkleid.</text><exframe>NN.PP</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s83762" category="verben" class="natPhaenomen">
+<lexUnit id="l112937" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>schlammen</orthForm>
+<frame>NN</frame>
+<frame>NN.AN</frame>
+<example><text>Das Wasser schlammt.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s83537" category="verben" class="natPhaenomen">
+<lexUnit id="l112648" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>verschlammen</orthForm>
+<frame>NN</frame>
+<example><text>Das Gewässer verschlammt zusehends.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>schlammig werden</paraphrase>
+</synset>
+<synset id="s55916" category="verben" class="natPhaenomen">
+<lexUnit id="l78872" sense="1" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zusammenbrauen</orthForm>
+<frame>NN.AR</frame>
+<example><text>Ein Unwetter braute sich zusammen.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+<lexUnit id="l113059" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>zusammenziehen</orthForm>
+<frame>NN.AR</frame>
+<example><text>Ein Gewitter zog sich zusammen.</text><exframe>NN.AR</exframe></example>
+</lexUnit>
+</synset>
+<synset id="s84012" category="verben" class="natPhaenomen">
+<lexUnit id="l113283" sense="4" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>spiegeln</orthForm>
+<frame>NN</frame>
+<example><text>Der Monitor des Computers spiegelt.</text><exframe>NN</exframe></example>
+</lexUnit>
+<paraphrase>etw. blendet störend</paraphrase>
+</synset>
+<synset id="s86592" category="verben" class="natPhaenomen">
+<lexUnit id="l116578" sense="2" source="core" namedEntity="no" artificial="no" styleMarking="no">
+<orthForm>ausbrennen</orthForm>
+<frame>NN</frame>
+<example><text>Die alten Gebäudeteile sind alle vollständig ausgebrannt.</text><exframe>NN</exframe></example>
+</lexUnit>
+</synset>
+</synsets>
