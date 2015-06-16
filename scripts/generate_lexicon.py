@@ -64,9 +64,12 @@ generating sentiment lexicons.""")
     parser_w2v = subparsers.add_parser(W2V, help = "word2vec model (Mikolov, 2013)")
     parser_w2v.add_argument("N", help = "final number of terms to extract")
 
-    argparser.add_argument("seed_pos", help = "initial seed set of positive terms")
-    argparser.add_argument("seed_neg", help = "initial seed set of negative terms")
-    argparser.add_argument("seed_neut", help = "initial seed set of neutral terms")
+    argparser.add_argument("--seed-pos", help = "initial seed set of positive terms", \
+                               required = True, type = str)
+    argparser.add_argument("--seed-neg", help = "initial seed set of negative terms", \
+                               required = True, type = str)
+    argparser.add_argument("-seed-neut", help = "initial seed set of neutral terms", \
+                               required = True, type = str)
 
     args = argparser.parse_args(a_argv)
 
