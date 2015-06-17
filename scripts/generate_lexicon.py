@@ -21,11 +21,89 @@ import sys
 TAKAMURA = "takamura"
 ESULI = "esuli"
 W2V = "w2v"
+TAB_RE = re.compile(' *\t+ *')
+SPACE_RE = re.compile('(?:\t| \s)+')
+ENCODING = "utf-8"
 GNET_DIR = "germanet_dir"
+POSITIVE = "positive"
+POS_SET = set()                 # set of positive terms
+NEGATIVE = "negative"
+NEG_SET = set()                 # set of negative terms
+NEUTRAL = "negative"
+NEUT_SET = set()                # set of neutral terms
 
 ##################################################################
 # Main
-def esuli_sebastiani(a_gnet_dir, a_N, a_pos, a_neg, a_neut):
+def _normalize(a_string)
+    """
+    Lowercase string and replace multiple whitespaces.
+
+    @param a_string - string to normalize
+
+    @return normalized string version
+    """
+    return SPACE_RE.sub(' ', a_string.lower())
+
+def _read_set(a_fname):
+    """
+    Read initial seed set of terms.
+
+    @param a_fname - name of input file containing terms
+
+    @return \c void
+    """
+    global POS_SET, NEG_SET, NEUT_SET
+    fields = []
+    with codecs.open(a_fname, 'r', encoding = ENCODING) as ifile:
+        for iline in ifile:
+            iline = iline.strip()
+            if not line:
+                continue
+            fields = TAB_RE.split(iline)
+            if fields[-1] == POSITIVE:
+                POS_SET.add(_normalize(fields[0]))
+            elif fields[-1] == NEGATIVE:
+                NEG_SET.add(_normalize(fields[0]))
+            elif fields[-1] == NEGATIVE:
+                NEUT_SET.add(_normalize(fields[0]))
+            else:
+                raise RuntimeError("Unknown field specification: {:s}".format(fields[-1]))
+
+def esuli_sebastiani(a_germanet, a_N, a_pos, a_neg, a_neut):
+    """
+    Method for extending sentiment lexicons using Esuli and Sebastiani method
+
+    @param a_germanet - GermaNet instance
+    @param a_N - number of terms to extract
+    @param a_pos - initial set of positive terms
+    @param a_neg - initial set of negative terms
+    @param a_neut - initial set of neutral terms
+
+    @return \c 0 on success, non-\c 0 otherwise
+    """
+    pos_candidates = set(); neg_candidates = set()
+    for ipos in a_pos:
+        for isyn_id in a_germanet.lex2synids.get(ipos, []):
+            for itrg_syn_id, irelname in a_germanet.relations.get(isyn_id, [(None, None)]):
+                if irelname in SYNRELS:
+                    for ilex in a_germanet.synid2lex[itrg_syn_id]:
+                        pos_candidates.add(ilex)
+                elif irelname in ANTIRELS:
+                    for ilex in a_germanet.synid2lex[itrg_syn_id]:
+                        neg_candidates.add(ilex)
+    for ipos in a_pos:
+        for isyn_id in a_germanet.lex2synids.get(ipos, []):
+            for itrg_syn_id, irelname in a_germanet.relations.get(isyn_id, [(None, None)]):
+                if irelname in SYNRELS:
+                    for ilex in a_germanet.synid2lex[itrg_syn_id]:
+                        pos_candidates.add(ilex)
+                elif irelname in ANTIRELS:
+                    for ilex in a_germanet.synid2lex[itrg_syn_id]:
+                        neg_candidates.add(ilex)
+    # return the union of three sets
+    return a_pos | a_neg | a_neut
+
+def takamura(a_gnet_dir, a_N, a_pos, a_neg, a_neut):
     """
     Method for extending sentiment lexicons using Esuli and Sebastiani method
 
@@ -37,7 +115,8 @@ def esuli_sebastiani(a_gnet_dir, a_N, a_pos, a_neg, a_neut):
 
     @return \c 0 on success, non-\c 0 otherwise
     """
-    return 0
+    ret = set()
+    return ret
 
 def main(a_argv):
     """
@@ -50,38 +129,42 @@ def main(a_argv):
     argparser = argparse.ArgumentParser(description = """Script for \
 generating sentiment lexicons.""")
     # add type-specific subparsers
-    subparsers = parser.add_subparsers(help = "lexicon expansion method to use", dest = "dmethod")
+    subparsers = argparser.add_subparsers(help = "lexicon expansion method to use", dest = "dmethod")
 
-    parser_takamura = subparsers.add_parser(TAKAMURA, help = "Ising spin model (Takamura, 2005)")
-    parser_takamura.add_argument(GNET_DIR, help = "directory containing GermaNet files")
-    parser_takamura.add_argument("corpus_dir", help = "directory containing raw corpus files")
-    parser_takamura.add_argument("N", help = "final number of terms to extract")
+    subparser_takamura = subparsers.add_parser(TAKAMURA, help = "Ising spin model (Takamura, 2005)")
+    subparser_takamura.add_argument(GNET_DIR, help = "directory containing GermaNet files")
+    subparser_takamura.add_argument("corpus_dir", help = "directory containing raw corpus files")
+    subparser_takamura.add_argument("N", help = "final number of additional terms to extract")
 
-    parser_esuli = subparsers.add_parser(ESULI, help = "SentiWordNet model (Esuli and Sebastiani, 2005)")
-    parser_esuli.add_argument(GNET_DIR, help = "directory containing GermaNet files")
-    parser_esuli.add_argument("N", help = "number of expansion iterations")
+    subparser_esuli = subparsers.add_parser(ESULI, help = "SentiWordNet model (Esuli and Sebastiani, 2005)")
+    subparser_esuli.add_argument(GNET_DIR, help = "directory containing GermaNet files")
+    subparser_esuli.add_argument("N", help = "number of expansion iterations")
 
-    parser_w2v = subparsers.add_parser(W2V, help = "word2vec model (Mikolov, 2013)")
-    parser_w2v.add_argument("N", help = "final number of terms to extract")
+    subparser_w2v = subparsers.add_parser(W2V, help = "word2vec model (Mikolov, 2013)")
+    subparser_w2v.add_argument("N", help = "final number of terms to extract")
 
-    argparser.add_argument("--seed-pos", help = "initial seed set of positive terms", \
-                               required = True, type = str)
-    argparser.add_argument("--seed-neg", help = "initial seed set of negative terms", \
-                               required = True, type = str)
-    argparser.add_argument("-seed-neut", help = "initial seed set of neutral terms", \
-                               required = True, type = str)
+    argparser.add_argument("seed_set", help = "initial seed set of positive, negative, and neutral terms")
 
     args = argparser.parse_args(a_argv)
 
     # initialize GermaNet, if needed
+    igermanet = None
     if GNET_DIR in args:
         igermanet = Germanet(getattr(args, GNET_DIR))
-    else:
-        igermanet = None
 
     # obtain lists of conjoined terms, if needed
 
     # read seed sets
+    _read_set(args.seed_set)
+
+    # apply requested method
+    if args.dmethod == ESULI:
+        new_set = esuli_sebastiani(igermanet, N, POS_SET, NEG_SET, NEUT_SET)
+    elif args.dmethod == TAKAMURA:
+        new_set = esuli_sebastiani(igermanet, N, POS_SET, NEG_SET, NEUT_SET)
+
+    for iexpression in sorted(new_set):
+        print iexpression.encode(ENCODING)
 
 ##################################################################
 # Main
