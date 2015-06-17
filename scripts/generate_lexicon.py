@@ -34,7 +34,7 @@ NEUT_SET = set()                # set of neutral terms
 
 ##################################################################
 # Main
-def _normalize(a_string)
+def normalize(a_string)
     """
     Lowercase string and replace multiple whitespaces.
 
@@ -61,11 +61,11 @@ def _read_set(a_fname):
                 continue
             fields = TAB_RE.split(iline)
             if fields[-1] == POSITIVE:
-                POS_SET.add(_normalize(fields[0]))
+                POS_SET.add(normalize(fields[0]))
             elif fields[-1] == NEGATIVE:
-                NEG_SET.add(_normalize(fields[0]))
+                NEG_SET.add(normalize(fields[0]))
             elif fields[-1] == NEGATIVE:
-                NEUT_SET.add(_normalize(fields[0]))
+                NEUT_SET.add(normalize(fields[0]))
             else:
                 raise RuntimeError("Unknown field specification: {:s}".format(fields[-1]))
 
