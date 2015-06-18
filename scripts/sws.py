@@ -83,16 +83,17 @@ class SWS(object):
 
         @return score for the word with that tag or 0.0 if the pair is not present
         """
-        for iscore, itag in self.check_word(a_word):
+        for iscore, itag, iclass in self.check_word(a_word):
             if itag == a_tag:
-                return iscore
+                return (iscore, iclass)
         return 0.0
 
-    def _read_dict(self, a_dict):
+    def _read_dict(self, a_dict, a_class):
         """
         Class constructor
 
         @param a_dict - file containing dictionary entries
+        @param a_class - expected target class of the entries
 
         @return dictionary read
         """
@@ -115,7 +116,7 @@ class SWS(object):
                 forms = [normalize(f) for f in COMMA_RE.split(iforms)]
                 forms.append(normalize(word))
                 for itag in tags:
-                    ivalue = (itag, score)
+                    ivalue = (itag, score, a_class)
                     for iform in forms:
                         if iform in ret:
                             ret[iform].append(ivalue)

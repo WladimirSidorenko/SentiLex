@@ -7,11 +7,11 @@
 %% Contact: klenner@cl.uzh.ch
 %%
 %% Version: 1.1. 2010/08/01
-%% 
+%%
 %% Format
 %% Word {NEG|POS|NEU|SHI|INT}=PolarityStrength PoS
 %% SHI for Shifters, INT for Intensifiers
-%% INT < 1, e.g. 0.5 is a reduction factor, > 1, e.g. 2 is a gain factor 
+%% INT < 1, e.g. 0.5 is a reduction factor, > 1, e.g. 2 is a gain factor
 %%
 %%   Licensed under the Apache License, Version 2.0 (the "License");
 %%   you may not use this file except in compliance with the License.

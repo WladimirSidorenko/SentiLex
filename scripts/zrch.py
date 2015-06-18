@@ -2,12 +2,12 @@
 # -*- mode: python; coding: utf-8; -*-
 
 """
-Module for processing German Polarity Clues lexicon
+Module for processing Zurich Polarity lexicon
 
 Constants:
 
 Classes:
-GPC - main interface for the German Polarity Clues lexicon
+ZRCH - main interface for the Zurich Polarity lexicon
 
 """
 
@@ -20,22 +20,19 @@ import re
 
 ##################################################################
 # Constants
-NEGATIVE = "negative"
-GPC_NEGATIVE = "GermanPolarityClues-Negative-21042012.tsv"
-POSITIVE = "GermanPolarityClues-Positive-21042012.tsv"
-GPC_POSITIVE = "GermanPolarityClues-Positive-21042012.tsv"
-NEUTRAL = "neutral"
-GPC_NEUTRAL = "GermanPolarityClues-Neutral-21042012.tsv"
-CLASS2IDX = {POSITIVE: 0, NEGATIVE: 1, NEUTRAL: 2}
-TAB_RE = re.compile(" *(?:\t *)+")
-SLASH_RE = re.compile(" *(?:/ *)+")
+LEXICON = "german.lex"
+POSITIVE = "POS"
+NEGATIVE = "NEG"
+NEUTRAL = "NEU"
+EQUAL_RE = re.compile("\s*=\s*")
+COMMENT_RE = re.compile("%%")
 ENCODING = "utf-8"
 
 ##################################################################
 # Classes
-class GPC(object):
+class ZRCH(object):
     """
-    Class for reading and processing German Polarity Clues lexicon
+    Class for reading and processing Zurich Polarity lexicon
 
     Instance variables:
     negative - dictionary of negative sentiment words
@@ -55,13 +52,11 @@ class GPC(object):
         """
         if not os.path.isdir(a_dir) or not os.access(a_dir, os.R_OK):
             raise RuntimeError("Cannot acess directory {:s}".format(a_dir))
-        inegative = os.path.join(a_dir, GPC_NEGATIVE)
-        ineutral = os.path.join(a_dir, GPC_NEUTRAL)
-        ipositive = os.path.join(a_dir, GPC_POSITIVE)
-        if not os.path.exists(inegative) or not os.path.exists(ipositive) or \
-                not os.path.exists(ineutral):
-            raise RuntimeError("GPC files not found in directory {:s}".format(a_dir))
+        ilex = os.path.join(a_dir, LEXICON)
+        if not os.path.exists(ilex):
+            raise RuntimeError("Lexicon file not found in directory {:s}".format(a_dir))
         # initialize instance variables
+        self.negative = dict(); self.neutral = dict(); self.positive = dict()
         _read_dict(inegative, NEGATIVE, self.negative)
         _read_dict(ineutral, NEUTRAL, self.neutral)
         _read_dict(ineutral, POSITIVE, self.positive)
