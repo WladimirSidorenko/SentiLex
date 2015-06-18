@@ -13,8 +13,9 @@ GPC - main interface for the German Polarity Clues lexicon
 
 ##################################################################
 # Classes
-from .generate_lexicon import normalize
+from generate_lexicon import normalize
 
+import codecs
 import os
 import re
 
@@ -22,7 +23,7 @@ import re
 # Constants
 NEGATIVE = "negative"
 GPC_NEGATIVE = "GermanPolarityClues-Negative-21042012.tsv"
-POSITIVE = "GermanPolarityClues-Positive-21042012.tsv"
+POSITIVE = "positive"
 GPC_POSITIVE = "GermanPolarityClues-Positive-21042012.tsv"
 NEUTRAL = "neutral"
 GPC_NEUTRAL = "GermanPolarityClues-Neutral-21042012.tsv"
@@ -38,6 +39,8 @@ class GPC(object):
     Class for reading and processing German Polarity Clues lexicon
 
     Instance variables:
+    lemma2forms - dictionary mapping lemmas to forms
+    form2lemma - dictionary mapping form to lemma
     negative - dictionary of negative sentiment words
     positive - dictionary of positive sentiment words
     neutral - dictionary of neutral words
@@ -62,9 +65,12 @@ class GPC(object):
                 not os.path.exists(ineutral):
             raise RuntimeError("GPC files not found in directory {:s}".format(a_dir))
         # initialize instance variables
-        _read_dict(inegative, NEGATIVE, self.negative)
-        _read_dict(ineutral, NEUTRAL, self.neutral)
-        _read_dict(ineutral, POSITIVE, self.positive)
+        self.lemma2forms = dict()
+        self.negative = dict(); self._read_dict(inegative, NEGATIVE, self.negative)
+        self.neutral = dict(); self._read_dict(ineutral, NEUTRAL, self.neutral)
+        self.positive = dict(); self._read_dict(ipositive, POSITIVE, self.positive)
+        self.form2lemma = {f: lemma for lemma, forms in self.lemma2forms.iteritems() \
+                               for f in forms}
 
     def check_word(self, a_word):
         """
@@ -77,11 +83,11 @@ class GPC(object):
         ret = []
         iword = normalize(a_word)
         if iword in self.negative:
-            ret += self.negative[iword]
+            ret.append(self.negative[iword])
         if iword in self.positive:
-            ret += self.positive[iword]
+            ret.append(self.positive[iword])
         if iword in self.neutral:
-            ret += self.neutral[iword]
+            ret.append(self.neutral[iword])
         return ret
 
     def check_word_tag(self, a_word, a_tag):
@@ -110,25 +116,34 @@ class GPC(object):
         """
         scores = []; itags = []; iforms = []
         iform = ilemma = tag = iclass = iscores = ""
-        with codecs.open(a_fname, ENCODING) as ifile:
+        with codecs.open(a_fname, 'r', encoding = ENCODING) as ifile:
             for iline in ifile:
                 iline = iline.strip()
-                if not line:
+                if not iline:
                     continue
                 iform, ilemma, itag, iclass, iscores, _ = TAB_RE.split(iline)
                 assert a_class == iclass, \
                     "Mismatching classes: '{:s}' vs. '{:s}'".format(a_class, iclass)
-                iscores = [0.0 if s == '-' else float(s) for s in SLASH_RE.split(iscores)][CLASS2IDX[a_class]]
+                score = SLASH_RE.split(iscores)[CLASS2IDX[a_class]]
+                score = 0.0 if score == '-' else float(score)
                 if itag == "AD":
                     itags = ["ADJA", "ADJD"]
                 else:
                     itags = [itag]
                 iform = normalize(iform); ilemma = normalize(ilemma)
-                iforms = (iform, ilemma)
+                if ilemma in self.lemma2forms:
+                    self.lemma2forms[ilemma].update([iform])
+                else:
+                    self.lemma2forms[ilemma] = set([iform])
+                if ilemma not in a_dict:
+                    iforms = set([iform, ilemma])
+                else:
+                    iforms = [iform]
                 for itag in itags:
                     ivalue = (itag, score, iclass)
                     for iform in iforms:
-                        if iform in ret:
-                            a_dict[iform].append(ivalue)
+                        if iform in a_dict:
+                            if abs(a_dict[iform][1]) < abs(ivalue[1]):
+                                a_dict[iform] = ivalue
                         else:
-                            a_dict[iform] = [ivalue]
+                            a_dict[iform] = ivalue

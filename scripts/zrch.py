@@ -5,6 +5,16 @@
 Module for processing Zurich Polarity lexicon
 
 Constants:
+LEXICON - default file name of the polarity lexicon
+TAB_RE - regexp matching tab separators
+POSITIVE - symbolic representation of the positive class
+NEGATIVE - symbolic representation of the negative class
+NEUTRAL - symbolic representation of the neutral class
+KNOWN_CLASSES - allowed polarity classes
+COMMENT_RE - regexp matching line comments
+EQUAL_RE - regexp matching the equal sign
+SPACE_RE - regexp matching whitespaces
+ENCODING - deault encoding of lexicon files
 
 Classes:
 ZRCH - main interface for the Zurich Polarity lexicon
@@ -13,10 +23,13 @@ ZRCH - main interface for the Zurich Polarity lexicon
 
 ##################################################################
 # Classes
-from .generate_lexicon import normalize
+from __future__ import print_function
+from generate_lexicon import normalize
 
+import codecs
 import os
 import re
+import sys
 
 ##################################################################
 # Constants
@@ -26,13 +39,15 @@ NEGATIVE = "NEG"
 NEUTRAL = "NEU"
 EQUAL_RE = re.compile("\s*=\s*")
 COMMENT_RE = re.compile("%%")
+SPACE_RE = re.compile("\s+")
+KNOWN_CLASSES = set(["NEG", "POS", "NEU", "SHI", "INT"])
 ENCODING = "utf-8"
 
 ##################################################################
 # Classes
 class ZRCH(object):
     """
-    Class for reading and processing Zurich Polarity lexicon
+    Class for reading and processing Zurich polarity lexicon
 
     Instance variables:
     negative - dictionary of negative sentiment words
@@ -57,9 +72,7 @@ class ZRCH(object):
             raise RuntimeError("Lexicon file not found in directory {:s}".format(a_dir))
         # initialize instance variables
         self.negative = dict(); self.neutral = dict(); self.positive = dict()
-        _read_dict(inegative, NEGATIVE, self.negative)
-        _read_dict(ineutral, NEUTRAL, self.neutral)
-        _read_dict(ineutral, POSITIVE, self.positive)
+        self._read_dict(ilex)
 
     def check_word(self, a_word):
         """
@@ -72,11 +85,11 @@ class ZRCH(object):
         ret = []
         iword = normalize(a_word)
         if iword in self.negative:
-            ret += self.negative[iword]
+            ret.append(self.negative[iword])
         if iword in self.positive:
-            ret += self.positive[iword]
+            ret.append(self.positive[iword])
         if iword in self.neutral:
-            ret += self.neutral[iword]
+            ret.append(self.neutral[iword])
         return ret
 
     def check_word_tag(self, a_word, a_tag):
@@ -93,37 +106,40 @@ class ZRCH(object):
                 return (iscore, iclass)
         return (0.0, NEUTRAL)
 
-    def _read_dict(self, a_fname, a_class, a_dict):
+    def _read_dict(self, a_fname):
         """
         Class constructor
 
         @param a_fname - source file to read from
-        @param a_class - expected target class of the entries
-        @param a_dict - dictionary to be populated
 
         @return \c void
         """
-        scores = []; itags = []; iforms = []
-        iform = ilemma = tag = iclass = iscores = ""
-        with codecs.open(a_fname, ENCODING) as ifile:
+        score = 0.0
+        trg_dict = None; ivalue = None
+        iform = iclass_score = iclass = iscore = ""
+        with codecs.open(a_fname, 'r', encoding = ENCODING) as ifile:
             for iline in ifile:
                 iline = iline.strip()
-                if not line:
+                if not iline or COMMENT_RE.match(iline):
                     continue
-                iform, ilemma, itag, iclass, iscores, _ = TAB_RE.split(iline)
-                assert a_class == iclass, \
-                    "Mismatching classes: '{:s}' vs. '{:s}'".format(a_class, iclass)
-                iscores = [0.0 if s == '-' else float(s) for s in SLASH_RE.split(iscores)][CLASS2IDX[a_class]]
-                if itag == "AD":
-                    itags = ["ADJA", "ADJD"]
+                iform, iclass_score = SPACE_RE.split(iline)[:2]
+                iclass, iscore = EQUAL_RE.split(iclass_score)
+                assert iclass in KNOWN_CLASSES, \
+                    "Unknown polarity class: {:s}".format(iclass).encode(ENCODING)
+                score = float(iscore)
+                iform = normalize(iform)
+                if iclass == POSITIVE:
+                    trg_dict = self.positive
+                elif iclass == NEGATIVE:
+                    trg_dict = self.negative
+                elif iclass == NEUTRAL:
+                    trg_dict = self.neutral
                 else:
-                    itags = [itag]
-                iform = normalize(iform); ilemma = normalize(ilemma)
-                iforms = (iform, ilemma)
-                for itag in itags:
-                    ivalue = (itag, score, iclass)
-                    for iform in iforms:
-                        if iform in ret:
-                            a_dict[iform].append(ivalue)
-                        else:
-                            a_dict[iform] = [ivalue]
+                    continue
+
+                ivalue = ("NONE", score, iclass)
+                if iform in trg_dict:
+                    if abs(trg_dict[iform][1]) < abs(score):
+                        trg_dict[iform] = ivalue
+                else:
+                    trg_dict[iform] = ivalue

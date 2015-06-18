@@ -11,9 +11,11 @@ generate_lexicon.py [OPTIONS] [INPUT_FILES]
 
 ##################################################################
 # Imports
+from __future__ import unicode_literals
 from germanet import Germanet
 
 import argparse
+import re
 import sys
 
 ##################################################################
@@ -31,10 +33,11 @@ NEGATIVE = "negative"
 NEG_SET = set()                 # set of negative terms
 NEUTRAL = "negative"
 NEUT_SET = set()                # set of neutral terms
+SZET_RE = re.compile('ß', re.U)
 
 ##################################################################
 # Main
-def normalize(a_string)
+def normalize(a_string):
     """
     Lowercase string and replace multiple whitespaces.
 
@@ -42,7 +45,7 @@ def normalize(a_string)
 
     @return normalized string version
     """
-    return SPACE_RE.sub(' ', a_string.lower())
+    return SZET_RE.sub("ss", SPACE_RE.sub(' ', a_string.lower()))
 
 def _read_set(a_fname):
     """
