@@ -53,8 +53,8 @@ def main():
     argparser.add_argument("--operation", \
                                help = "type of operation to perform on dictionary entries", \
                                type = str, choices = [UNION, INTERSECT], default = INTERSECT)
-    argparser.add_argument("gpc_dir", help = "directory containing German Polarity Clues")
-    argparser.add_argument("sws_dir", help = "directory containing SentiWS lexicon")
+    # argparser.add_argument("gpc_dir", help = "directory containing German Polarity Clues")
+    # argparser.add_argument("sws_dir", help = "directory containing SentiWS lexicon")
     argparser.add_argument("zrch_dir", help = "directory containing Zurich polarity lexicon")
     args = argparser.parse_args()
 

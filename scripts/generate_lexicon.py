@@ -13,6 +13,7 @@ generate_lexicon.py [OPTIONS] [INPUT_FILES]
 # Imports
 from __future__ import unicode_literals
 from germanet import Germanet
+from gpc import POSITIVE, NEGATIVE, NEUTRAL
 
 import argparse
 import re
@@ -31,7 +32,7 @@ POSITIVE = "positive"
 POS_SET = set()                 # set of positive terms
 NEGATIVE = "negative"
 NEG_SET = set()                 # set of negative terms
-NEUTRAL = "negative"
+NEUTRAL = "neutral"
 NEUT_SET = set()                # set of neutral terms
 SZET_RE = re.compile('ß', re.U)
 
@@ -67,10 +68,24 @@ def _read_set(a_fname):
                 POS_SET.add(normalize(fields[0]))
             elif fields[-1] == NEGATIVE:
                 NEG_SET.add(normalize(fields[0]))
-            elif fields[-1] == NEGATIVE:
+            elif fields[-1] == NEUTRAL:
                 NEUT_SET.add(normalize(fields[0]))
             else:
                 raise RuntimeError("Unknown field specification: {:s}".format(fields[-1]))
+
+def _lexeme2synset(a_lexemes):
+    """
+    Extract all synsets containing lexemes
+
+    @param a_lexemes - set of lexemes for which to extract the synsets
+
+    @return set of synset id's which contain lexemes
+    """
+    ret = set()
+    for ilex in a_lexemes:
+        for isyn_id in a_germanet.lex2synids.get(ilex, []):
+            ret.add(isyn_id)
+    return ret
 
 def esuli_sebastiani(a_germanet, a_N, a_pos, a_neg, a_neut):
     """
@@ -84,7 +99,10 @@ def esuli_sebastiani(a_germanet, a_N, a_pos, a_neg, a_neut):
 
     @return \c 0 on success, non-\c 0 otherwise
     """
-    pos_candidates = set(); neg_candidates = set()
+    global POS_SET, NEG_SET, NEUT_SET
+    # convert lexemes to synsets
+    ipos = _lexeme2synset(POS_SET); ineg = _lexeme2synset(NEG_SET); ineut = _lexeme2synset(NEUT_SET)
+    # train classifier on each of the sets
     for ipos in a_pos:
         for isyn_id in a_germanet.lex2synids.get(ipos, []):
             for itrg_syn_id, irelname in a_germanet.relations.get(isyn_id, [(None, None)]):
@@ -164,7 +182,7 @@ generating sentiment lexicons.""")
     if args.dmethod == ESULI:
         new_set = esuli_sebastiani(igermanet, N, POS_SET, NEG_SET, NEUT_SET)
     elif args.dmethod == TAKAMURA:
-        new_set = esuli_sebastiani(igermanet, N, POS_SET, NEG_SET, NEUT_SET)
+        new_set = takamura(igermanet, N, POS_SET, NEG_SET, NEUT_SET)
 
     for iexpression in sorted(new_set):
         print iexpression.encode(ENCODING)
