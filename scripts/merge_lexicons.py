@@ -53,8 +53,8 @@ def main():
     argparser.add_argument("--operation", \
                                help = "type of operation to perform on dictionary entries", \
                                type = str, choices = [UNION, INTERSECT], default = INTERSECT)
-    # argparser.add_argument("gpc_dir", help = "directory containing German Polarity Clues")
-    # argparser.add_argument("sws_dir", help = "directory containing SentiWS lexicon")
+    argparser.add_argument("gpc_dir", help = "directory containing German Polarity Clues")
+    argparser.add_argument("sws_dir", help = "directory containing SentiWS lexicon")
     argparser.add_argument("zrch_dir", help = "directory containing Zurich polarity lexicon")
     args = argparser.parse_args()
 
@@ -69,7 +69,7 @@ def main():
     neut_union = set(gpc.neutral.keys()) | set(zrch.neutral.keys())
 
     if args.operation == INTERSECT:
-        pos_set = set(gpc.positive.keys()) & set(sws.positive.keys()) & set(sws.positive.keys())
+        pos_set = set(gpc.positive.keys()) & set(sws.positive.keys()) & set(zrch.positive.keys())
         pos_set = _extend_set(pos_set, pos_union, gpc.form2lemma, sws.form2lemma)
         pos_union.clear()
 

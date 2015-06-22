@@ -1,4 +1,5 @@
 #!/usr/bin/env python2.7
+# -*- coding: utf-8; mode: python; -*-
 
 """
 Module for reading and processing GemaNet files.
@@ -14,12 +15,15 @@ Germanet - main class for processing GermaNet files
 
 ##################################################################
 # Imports
+from __future__ import unicode_literals, print_function
+
 from itertools import chain
 from collections import defaultdict
 
 import argparse
 import glob
 import os
+import re
 import sys
 import xml.etree.ElementTree as ET
 
@@ -27,6 +31,20 @@ import xml.etree.ElementTree as ET
 # Variables and Constants
 POS = ["adj.", "nomen.", "verben."]
 RELTYPES = ["con_rel", "lex_rel"]
+SZET_RE = re.compile('ß', re.U)
+SPACE_RE = re.compile('(?:\t| \s)+')
+
+##################################################################
+# Methods
+def normalize(a_string):
+    """
+    Lowercase string and replace multiple whitespaces.
+
+    @param a_string - string to normalize
+
+    @return normalized string version
+    """
+    return SZET_RE.sub("ss", SPACE_RE.sub(' ', a_string.lower()))
 
 ##################################################################
 # Class
@@ -47,16 +65,16 @@ class Germanet(object):
 
         @param a_dir - directory containing GermaNet files
         """
-        if not os.path.isdir(args.gnet_dir) or not os.access(args.gnet_dir, os.R_OK):
-            raise RuntimeError("Can't read from directory: {:s}".format(args.gnet_dir))
+        if not os.path.isdir(a_dir) or not os.access(a_dir, os.R_OK):
+            raise RuntimeError("Can't read from directory: {:s}".format(a_dir))
         self.synid2defexmp = dict()
         self.lex2synids = defaultdict(set)
         self.synid2lex = defaultdict(set)
         self.relations = defaultdict(set)
         # parse synsets
-        for ifile in chain.from_iterable(glob.iglob(os.path.join(args.gnet_dir, ipos + '*')) \
+        for ifile in chain.from_iterable(glob.iglob(os.path.join(a_dir, ipos + '*')) \
                                              for ipos in POS):
-            self._parse_synsets(ifile, synid2examples, lexid2synid)
+            self._parse_synsets(ifile)
 
         assert self.lex2synids, "No synset files found in directory {:s}".format(a_dir)
         # parse relations
@@ -79,15 +97,15 @@ class Germanet(object):
             assert synid not in self.synid2defexmp, \
                 "Duplicate description of synset {:s}".format(syn_id)
             self.synid2defexmp[synid] = (("" if iparaphrase is None else iparaphrase.text), \
-                                             [el.text for el in isynset.iterfind(".//example")])
+                                             [el.text for el in isynset.iterfind(".//example/text")])
             for ilex in isynset.iterfind("./lexUnit"):
                 lexid = ilex.get("id")
                 for iform in ilex.iterfind("./orthForm"):
-                    lex = iform.text
+                    lex = normalize(iform.text)
                     self.lex2synids[lex].add(synid)
                     self.synid2lex[synid].add(lex)
 
-    def _parse_relations(a_fname):
+    def _parse_relations(self, a_fname):
         """
         Parse GemaNet relations file
 
