@@ -14,8 +14,8 @@ generate_lexicon.py [OPTIONS] [INPUT_FILES]
 from __future__ import unicode_literals, print_function
 from germanet import Germanet, normalize
 from itertools import chain
-from irlib.classifier import Rocchio
 from sklearn.svm import LinearSVC
+from sklearn.neighbors.nearest_centroid import NearestCentroid
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 import argparse
@@ -29,6 +29,8 @@ import string
 # Imports
 BINARY = "binary"
 TERNARY = "ternary"
+ROCCHIO = "rocchio"
+SVM = "svm"
 GNET_DIR = "germanet_dir"
 
 ESULI = "esuli"
@@ -166,67 +168,65 @@ def _lexemes2synset_tfidf(a_germanet, a_synid2tfidf, a_lexemes):
                   if isyn_id in a_synid2tfidf)
     return ret
 
-def _es_expand_set_helper(a_candidates, a_func):
+def _es_train_binary(a_clf_pos, a_clf_neg, a_pos, a_neg, a_neut):
     """
-    Extend sets of polar terms by applying a custom desicion function
+    Private method for training binary classifiers on synset sets
 
-    @param a_candidates - set of candidate synsets
-    @param a_func - custom decision function
+    @param a_clf_pos - pointer to positive-vs-all classifier
+    @param a_clf_pos - pointer to negative-vs-all classifier
+    @param a_pos - set of synsets and their tf/idf vectors that have positive polarity
+    @param a_neg - set of synsets and their tf/idf vectors that have negative polarity
+    @param a_neut - set of synsets and their tf/idf vectors that have neutral polarity
 
-    @return updated candidate set
+    @return \c void
     """
-    pass
+    # obtain id's of instances pertaining to relevant classes
+    pos_ids = set(inst[0] for inst in a_pos)
+    neg_ids = set(inst[0] for inst in a_neg)
+    neut_ids = set(inst[0] for inst in a_neut)
+    pos_train_ids = pos_ids - (neg_ids | neut_ids)
+    neg_train_ids = neg_ids - (pos_ids | neut_ids)
+    pos_ids.clear(); neg_ids.clear(); neut_ids.clear();
+    # create training sets for positive classifier
+    instances = []; trg_classes = []
+    for syn_id, tfidf_vec in chain(a_pos, a_neg, a_neut):
+        instances.append(tfidf_vec)
+        trg_classes.append(str(syn_id in pos_train_ids))
+    # train positive-vs-all classifier
+    a_clf_pos.fit(instances, trg_classes)
+    # replace training classes with the negative training instances (assuming
+    # that iteration order is the same, we don't modify the actual training
+    # vectors)
+    del trg_classes[:]
+    for syn_id, _ in chain(a_pos, a_neg, a_neut):
+        trg_classes.append(str(syn_id in neg_train_ids))
+    # train negative-vs-all classifier
+    a_clf_neg.fit(instances, trg_classes)
 
-def _es_expand_sets(a_rocchio, a_svm, a_pos, a_neg, a_neut):
+def _es_train_ternary(a_clf, a_pos, a_neg, a_neut):
     """
-    Extend sets of polar terms by applying an ensemble of classifiers
+    Private method for training binary classifiers on synset sets
 
-    @param a_rocchio - GermaNet instance
-    @param a_N - number of terms to extract
-    @param a_classifier_type - type of classifiers to use (binary or ternary)
+    @param a_clf - pointer to ternary classifier
+    @param a_pos - set of synsets and their tf/idf vectors that have positive polarity
+    @param a_neg - set of synsets and their tf/idf vectors that have negative polarity
+    @param a_neut - set of synsets and their tf/idf vectors that have neutral polarity
 
-    @return \c 0 on success, non-\c 0 otherwise
+    @return \c void
     """
-    pass
+    instances = [inst[-1] for inst in chain(a_pos, a_neg, a_neut)]
+    trg_classes = [POSITIVE] * len(a_pos) + [NEGATIVE] * len(a_neg) + NEUTRAL * len(a_neut)
+    a_clf.fit(instances, trg_classes)
 
-def esuli_sebastiani(a_germanet, a_N, a_classifier_type):
+def _es_generate_candidates(a_candidates, a_class):
     """
-    Method for extending sentiment lexicons using Esuli and Sebastiani method
+    Extend sets of polar terms by applying custom decision function
 
-    @param a_germanet - GermaNet instance
-    @param a_N - number of terms to extract
-    @param a_classifier_type - type of classifiers to use (binary or ternary)
+    @param a_seeds - set of candidate synsets
+    @param a_class - class of the items in seed set
 
-    @return \c 0 on success, non-\c 0 otherwise
+    @return 2-tuple containing two sets:
     """
-    global POS_SET, NEG_SET, NEUT_SET
-    # obtain Tf/Idf vector for each synset description
-    synid2tfidf = _get_tfidf_vec(a_germanet)
-    # convert obtained lexemes to synsets
-    ipos = _lexemes2synset_tfidf(a_germanet, synid2tfidf, POS_SET)
-    ineg = _lexemes2synset_tfidf(a_germanet, synid2tfidf, NEG_SET)
-    ineut = _lexemes2synset_tfidf(a_germanet, synid2tfidf, NEUT_SET)
-    # train classifier on each of the sets
-    i = 0
-    changed = True
-    # initialize classifiers
-    rocchio = 
-    svm = None
-    while i < a_N:
-        # train classifier on each of the sets
-        if changed:
-            if a_classifier_type == BINARY:
-                rocchio, svm = _es_train_binary(ipos, ineg, ineut)
-            else:
-                rocchio, svm = _es_train_ternary(ipos, ineg, ineut)
-        # expand sets
-        changed = _es_expand_sets(rocchio, svm, ipos, ineg, ineut)
-        # check if sets were changed
-        if not changed:
-            break
-    return (ipos, ineg, ineut)
-
-
     # for ipos in a_pos:
     #     for isyn_id in a_germanet.lex2synids.get(ipos, []):
     #         for itrg_syn_id, irelname in a_germanet.relations.get(isyn_id, [(None, None)]):
@@ -247,6 +247,85 @@ def esuli_sebastiani(a_germanet, a_N, a_classifier_type):
     #                     neg_candidates.add(ilex)
     # # return the union of three sets
     # return a_pos | a_neg | a_neut
+
+def _es_expand_sets_binary(a_clf_pos, a_clf_neg, a_pos, a_neg, a_neut):
+    """
+    Extend sets of polar terms by applying an ensemble of classifiers
+
+    @param a_clf_pos - classifier which predicts the POSITIVE class
+    @param a_clf_neg - classifier which predicts the NEGATIVE class
+    @param a_pos - set of synsets and their tf/idf vectors that have positive polarity
+    @param a_neg - set of synsets and their tf/idf vectors that have negative polarity
+    @param a_neut - set of synsets and their tf/idf vectors that have neutral polarity
+    @param a_decfunc - decision function for determining polarity of new terms
+
+    @return \c True if sets were changed, \c False otherwise
+    """
+    pass
+
+def _es_expand_sets_ternary(a_clf, a_pos, a_neg, a_neut):
+    """
+    Extend sets of polar terms by applying an ensemble of classifiers
+
+    @param a_clf - classifier which makes predictions about the polarity
+    @param a_pos - set of synsets and their tf/idf vectors that have positive polarity
+    @param a_neg - set of synsets and their tf/idf vectors that have negative polarity
+    @param a_neut - set of synsets and their tf/idf vectors that have neutral polarity
+    @param a_decfunc - decision function for determining polarity of new terms
+
+    @return \c True if sets were changed, \c False otherwise
+    """
+    pass
+
+def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity):
+    """
+    Method for extending sentiment lexicons using Esuli and Sebastiani method
+
+    @param a_germanet - GermaNet instance
+    @param a_N - number of terms to extract
+    @param a_clf_type - type of classifiers to use (Rocchio or SVM)
+    @param a_clf_arity - arity type of classifier (binary or ternary)
+
+    @return \c 0 on success, non-\c 0 otherwise
+    """
+    global POS_SET, NEG_SET, NEUT_SET
+    # obtain Tf/Idf vector for each synset description
+    synid2tfidf = _get_tfidf_vec(a_germanet)
+    # convert obtained lexemes to synsets
+    ipos = _lexemes2synset_tfidf(a_germanet, synid2tfidf, POS_SET)
+    ineg = _lexemes2synset_tfidf(a_germanet, synid2tfidf, NEG_SET)
+    ineut = _lexemes2synset_tfidf(a_germanet, synid2tfidf, NEUT_SET)
+    # train classifier on each of the sets
+    i = 0
+    changed = True
+    clf_pos = clf_neg = None
+    binary_clf = bool(a_clf_arity == BINARY)
+    # initialize classifiers
+    if a_clf_type == SVM:
+        clf_pos = LinearSVC(multiclass = (not binary_clf))
+        if binary_clf:
+            clf_neg = LinearSVC(multiclass = (not binary_clf))
+    elif a_clf_type == ROCCHIO:
+        clf_pos = NearestCentroid()
+        if binary_clf:
+            clf_neg = NearestCentroid()
+    else:
+        raise RuntimeError("Unknown classifier type: '{:s}'".format(a_clf_type))
+    # iteratively expand sets
+    while i < a_N:
+        # train classifier on each of the sets and expand these sets afterwards
+        if changed:
+            if binary_clf:
+                 _es_train_binary(clf_pos, clf_neg, ipos, ineg, ineut)
+                 changed = _es_expand_sets_binary(clf_pos, clf_neg, ipos, ineg, ineut)
+            else:
+                _es_train_ternary(clf_pos, ipos, ineg, ineut)
+                 changed = _es_expand_sets_binary(clf_pos, ipos, ineg, ineut)
+        # check if sets were changed
+        if not changed:
+            break
+        i += 1
+    return (ipos, ineg, ineut)
 
 def takamura(a_gnet_dir, a_N, a_pos, a_neg, a_neut):
     """
@@ -284,7 +363,9 @@ generating sentiment lexicons.""")
     subparser_takamura.add_argument("seed_set", help = "initial seed set of positive, negative, and neutral terms")
 
     subparser_esuli = subparsers.add_parser(ESULI, help = "SentiWordNet model (Esuli and Sebastiani, 2005)")
-    subparser_esuli.add_argument("--classifier-type", help = "type of classifiers to use in ensemble", \
+    subparser_esuli.add_argument("--clf-type", help = "type of classifier to use in ensemble", \
+                                     choices = [ROCCHIO, SVM], default = SVM)
+    subparser_esuli.add_argument("--clf-arity", help = "classifier's arity", \
                                      choices = [BINARY, TERNARY], default = BINARY)
     subparser_esuli.add_argument("--form2lemma", "-l", help = \
                                      """file containing form - lemma correspondances for words occurring in synset definitions""", \
@@ -315,7 +396,7 @@ generating sentiment lexicons.""")
 
     # apply requested method
     if args.dmethod == ESULI:
-        new_set = esuli_sebastiani(igermanet, args.N, args.classifier_type)
+        new_set = esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity)
     elif args.dmethod == TAKAMURA:
         new_set = takamura(igermanet, args.N, POS_SET, NEG_SET, NEUT_SET)
 
