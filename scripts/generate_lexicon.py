@@ -218,64 +218,121 @@ def _es_train_ternary(a_clf, a_pos, a_neg, a_neut):
     trg_classes = [POSITIVE] * len(a_pos) + [NEGATIVE] * len(a_neg) + NEUTRAL * len(a_neut)
     a_clf.fit(instances, trg_classes)
 
-def _es_generate_candidates(a_candidates, a_class):
+def _es_generate_candidates(a_germanet, a_synid2tfidf, a_seeds, a_new_same, a_new_opposite):
     """
     Extend sets of polar terms by applying custom decision function
 
+    @param a_germanet - GermaNet instance
+    @param a_synid2tfidf - dictionary mapping synset id's to tf/idf vectors
     @param a_seeds - set of candidate synsets
-    @param a_class - class of the items in seed set
+    @param a_new_same - new potential items of the same class
+    @param a_new_opposite - new potential items of the opposite class
 
-    @return 2-tuple containing two sets:
+    @return \c void
     """
-    # for ipos in a_pos:
-    #     for isyn_id in a_germanet.lex2synids.get(ipos, []):
-    #         for itrg_syn_id, irelname in a_germanet.relations.get(isyn_id, [(None, None)]):
-    #             if irelname in SYNRELS:
-    #                 for ilex in a_germanet.synid2lex[itrg_syn_id]:
-    #                     pos_candidates.add(ilex)
-    #             elif irelname in ANTIRELS:
-    #                 for ilex in a_germanet.synid2lex[itrg_syn_id]:
-    #                     neg_candidates.add(ilex)
-    # for ipos in a_pos:
-    #     for isyn_id in a_germanet.lex2synids.get(ipos, []):
-    #         for itrg_syn_id, irelname in a_germanet.relations.get(isyn_id, [(None, None)]):
-    #             if irelname in SYNRELS:
-    #                 for ilex in a_germanet.synid2lex[itrg_syn_id]:
-    #                     pos_candidates.add(ilex)
-    #             elif irelname in ANTIRELS:
-    #                 for ilex in a_germanet.synid2lex[itrg_syn_id]:
-    #                     neg_candidates.add(ilex)
-    # # return the union of three sets
-    # return a_pos | a_neg | a_neut
+    trg_set = None
+    for isrc_id, _ in a_seeds:
+        for itrg_id, irelname in a_germanet.relations.get(isrc_id, [(None, None)]):
+            if irelname in SYNRELS:
+                trg_set = a_new_same
+            elif irelname in ANTIRELS:
+                trg_set = a_new_opposite
+            else:
+                continue
+            if itrg_id in a_synid2tfidf:
+                trg_set.add((itrg_id, a_synid2tfidf[itrg_id]))
 
-def _es_expand_sets_binary(a_clf_pos, a_clf_neg, a_pos, a_neg, a_neut):
+def _es_synid2lex(a_germanet, a_synids):
+    """
+    Convert set of synset id's to corresponding lexemes
+
+    @param a_germanet - GermaNet instance
+    @param a_synids - set of synset id's
+
+    @return set of lexemes corresponding to synset id's
+    """
+    ret = set()
+    return ret
+
+def _es_expand_sets_binary(a_germanet, a_synid2tfidf, a_clf_pos, a_clf_neg, a_pos, a_neg, a_neut):
     """
     Extend sets of polar terms by applying an ensemble of classifiers
 
+    @param a_germanet - GermaNet instance
+    @param a_synid2tfidf - dictionary mapping synset id's to tf/idf vectors
     @param a_clf_pos - classifier which predicts the POSITIVE class
     @param a_clf_neg - classifier which predicts the NEGATIVE class
-    @param a_pos - set of synsets and their tf/idf vectors that have positive polarity
-    @param a_neg - set of synsets and their tf/idf vectors that have negative polarity
-    @param a_neut - set of synsets and their tf/idf vectors that have neutral polarity
+    @param a_pos - set of synset id's and their tf/idf vectors that have positive polarity
+    @param a_neg - set of synset id's and their tf/idf vectors that have negative polarity
+    @param a_neut - set of synset id's and their tf/idf vectors that have neutral polarity
     @param a_decfunc - decision function for determining polarity of new terms
 
     @return \c True if sets were changed, \c False otherwise
     """
-    pass
+    ret = False
+    pos_candidates = set(); neg_candidates = set(); neut_candidates = set();
+    # obtain potential candidates
+    _es_generate_candidates(a_germanet, a_synid2tfidf, a_pos, pos_candidates, neg_candidates)
+    _es_generate_candidates(a_germanet, a_synid2tfidf, a_neg, neg_candidates, pos_candidates)
+    if pos_candidates or neg_candidates:
+        ret = True
+    # remove from potential candidates items that are already in seed sets
+    seeds = a_pos | a_neg | a_neut
+    pos_candidates -= seeds; neg_candidates -= seeds;
+    seeds.clear()
+    # obtain predictions for the potential positive terms
+    pos_pred = a_clf_pos.predict([iitem for _, iitem in pos_candidates])
+    neg_pred = a_clf_neg.predict([iitem for _, iitem in pos_candidates])
+    # obtain new positive terms based on the made predictions
+    new_pos = set(iitem for iitem, ipos, ineg in zip(pos_candidates, pos_pred, neg_pred) \
+                      if ipos == '1' and ineg != '1')
+    # obtain predictions for the potential negative terms
+    pos_pred = a_clf_pos.predict([iitem for _, iitem in neg_candidates])
+    neg_pred = a_clf_neg.predict([iitem for _, iitem in neg_candidates])
+    # obtain new negative terms based on the made predictions
+    new_neg = set(iitem for iitem, ipos, ineg in zip(pos_candidates, pos_pred, neg_pred) \
+                      if ipos != '1' and ineg == '1')
+    # update positive, negative, and neutral sets
+    a_pos |= new_pos; a_neg |= new_neg
+    a_neut |= ((pos_candidates | neg_candidates) - (new_pos | new_neg))
+    return ret
 
-def _es_expand_sets_ternary(a_clf, a_pos, a_neg, a_neut):
+def _es_expand_sets_ternary(a_germanet, a_synid2tfidf, a_clf, a_pos, a_neg, a_neut):
     """
     Extend sets of polar terms by applying an ensemble of classifiers
 
+    @param a_germanet - GermaNet instance
+    @param a_synid2tfidf - dictionary mapping synset id's to tf/idf vectors
     @param a_clf - classifier which makes predictions about the polarity
     @param a_pos - set of synsets and their tf/idf vectors that have positive polarity
     @param a_neg - set of synsets and their tf/idf vectors that have negative polarity
     @param a_neut - set of synsets and their tf/idf vectors that have neutral polarity
-    @param a_decfunc - decision function for determining polarity of new terms
 
     @return \c True if sets were changed, \c False otherwise
     """
-    pass
+    ret = False
+    pos_candidates = set(); neg_candidates = set(); neut_candidates = set();
+    # obtain potential candidates
+    _es_generate_candidates(a_germanet, a_synid2tfidf, a_pos, pos_candidates, neg_candidates)
+    _es_generate_candidates(a_germanet, a_synid2tfidf, a_neg, neg_candidates, pos_candidates)
+    if pos_candidates or neg_candidates:
+        ret = True
+    # remove from potential candidates items that are already in seed sets
+    seeds = a_pos | a_neg | a_neut
+    pos_candidates -= seeds; neg_candidates -= seeds;
+    seeds.clear()
+    # obtain predictions for the potential positive terms
+    predicted = []
+    for iset in (pos_candidates, neg_candidates):
+        predicted = a_clf_pos.predict([iitem for _, iitem in iset])
+        for iclass, iitem in zip(predicted, iset):
+            if iclass == POSITIVE:
+                a_pos.add(iitem)
+            elif iclass == NEGATIVE:
+                a_neg.add(iitem)
+            else:
+                a_neut.add(iitem)
+    return ret
 
 def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity):
     """
@@ -316,11 +373,11 @@ def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity):
         # train classifier on each of the sets and expand these sets afterwards
         if changed:
             if binary_clf:
-                 _es_train_binary(clf_pos, clf_neg, ipos, ineg, ineut)
-                 changed = _es_expand_sets_binary(clf_pos, clf_neg, ipos, ineg, ineut)
+                 _es_train_binary(a_germanet, clf_pos, clf_neg, ipos, ineg, ineut)
+                 changed = _es_expand_sets_binary(a_germanet, synid2tfidf, clf_pos, clf_neg, ipos, ineg, ineut)
             else:
-                _es_train_ternary(clf_pos, ipos, ineg, ineut)
-                 changed = _es_expand_sets_binary(clf_pos, ipos, ineg, ineut)
+                _es_train_ternary(a_germanet, clf_pos, ipos, ineg, ineut)
+                changed = _es_expand_sets_ternary(a_germanet, synid2tfidf, clf_pos, ipos, ineg, ineut)
         # check if sets were changed
         if not changed:
             break
