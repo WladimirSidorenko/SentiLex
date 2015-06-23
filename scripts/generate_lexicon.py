@@ -242,16 +242,22 @@ def _es_generate_candidates(a_germanet, a_synid2tfidf, a_seeds, a_new_same, a_ne
             if itrg_id in a_synid2tfidf:
                 trg_set.add((itrg_id, a_synid2tfidf[itrg_id]))
 
-def _es_synid2lex(a_germanet, a_synids):
+def _es_synid2lex(a_germanet, *a_sets):
     """
     Convert set of synset id's to corresponding lexemes
 
     @param a_germanet - GermaNet instance
-    @param a_synids - set of synset id's
+    @param a_sets - set of synset id's with their tf/idf vectors
 
     @return set of lexemes corresponding to synset id's
     """
-    ret = set()
+    ret = []
+    new_set = None
+    for iset in a_sets:
+        new_set = set()
+        for isyn_id in iset:
+            new_set |= a_germanet.synid2lex(isyn_id)
+        ret.append(new_set)
     return ret
 
 def _es_expand_sets_binary(a_germanet, a_synid2tfidf, a_clf_pos, a_clf_neg, a_pos, a_neg, a_neut):
@@ -382,7 +388,7 @@ def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity):
         if not changed:
             break
         i += 1
-    return (ipos, ineg, ineut)
+    return _es_synid2lex(a_germanet, ipos, ineg, ineut)
 
 def takamura(a_gnet_dir, a_N, a_pos, a_neg, a_neut):
     """
@@ -453,10 +459,13 @@ generating sentiment lexicons.""")
 
     # apply requested method
     if args.dmethod == ESULI:
-        new_set = esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity)
+        new_sets = esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity)
     elif args.dmethod == TAKAMURA:
-        new_set = takamura(igermanet, args.N, POS_SET, NEG_SET, NEUT_SET)
+        new_sets = takamura(igermanet, args.N, POS_SET, NEG_SET, NEUT_SET)
 
+    for iclass, iset in zip((POSITIVE, NEGATIVE, NEUTRAL), new_sets):
+        for iitem in iset:
+            print((iitem + "\t" + iclass).encode())
     for iexpression in sorted(new_set):
         print(iexpression.encode(ENCODING))
 
