@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2.7
 # -*- mode: python; coding: utf-8; -*-
 
 """
@@ -38,6 +38,8 @@ GNET_DIR = "germanet_dir"
 ESULI = "esuli"
 TAKAMURA = "takamura"
 W2V = "w2v"
+
+NEGATORS = set(["nicht", "keine", "kein", "keines", "keinem", "keinen"])
 
 # not sure whether "has_hypernym" should be added to SYNRELS
 SYNRELS = set(["has_pertainym", "is_related_to", "entails", "is_entailed_by", "has_hyponym", \
