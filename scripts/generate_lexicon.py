@@ -15,6 +15,7 @@ from __future__ import unicode_literals, print_function
 from germanet import Germanet, normalize
 from itertools import chain
 from sklearn.svm import LinearSVC
+from sklearn.preprocessing import normalize as vecnormalize
 from sklearn.neighbors.nearest_centroid import NearestCentroid
 from sklearn.feature_extraction.text import TfidfVectorizer
 
@@ -128,6 +129,7 @@ def _length_normalize(a_vec):
 
     @return normalized vector
     """
+    return vecnormalize(a_vec)
 
 def _get_tfidf_vec(a_germanet):
     """
@@ -180,7 +182,7 @@ def _es_train_binary(a_clf_pos, a_clf_neg, a_pos, a_neg, a_neut):
 
     @return \c void
     """
-    # obtain id's of instances pertaining to relevant classes
+    # obtain id's of instances pertaining to the relevant classes
     pos_ids = set(inst[0] for inst in a_pos)
     neg_ids = set(inst[0] for inst in a_neg)
     neut_ids = set(inst[0] for inst in a_neut)
@@ -191,15 +193,20 @@ def _es_train_binary(a_clf_pos, a_clf_neg, a_pos, a_neg, a_neut):
     instances = []; trg_classes = []
     for syn_id, tfidf_vec in chain(a_pos, a_neg, a_neut):
         instances.append(tfidf_vec)
-        trg_classes.append(str(syn_id in pos_train_ids))
+        trg_classes.append(str(int(syn_id in pos_train_ids)))
     # train positive-vs-all classifier
+    print("instances[:10]", repr(instances[:10]), file = sys.stderr)
+    print("trg_classes[:10]", repr(trg_classes[:10]), file = sys.stderr)
+    # sys.exit(66)
+    print("Fitting model parameters... ", file = sys.stderr)
     a_clf_pos.fit(instances, trg_classes)
+    print("done", file = sys.stderr)
     # replace training classes with the negative training instances (assuming
     # that iteration order is the same, we don't modify the actual training
     # vectors)
     del trg_classes[:]
     for syn_id, _ in chain(a_pos, a_neg, a_neut):
-        trg_classes.append(str(syn_id in neg_train_ids))
+        trg_classes.append(str(int(syn_id in neg_train_ids)))
     # train negative-vs-all classifier
     a_clf_neg.fit(instances, trg_classes)
 
@@ -365,9 +372,9 @@ def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity):
     binary_clf = bool(a_clf_arity == BINARY)
     # initialize classifiers
     if a_clf_type == SVM:
-        clf_pos = LinearSVC(multiclass = (not binary_clf))
+        clf_pos = LinearSVC(multi_class = "ovr")
         if binary_clf:
-            clf_neg = LinearSVC(multiclass = (not binary_clf))
+            clf_neg = LinearSVC(multi_class = "ovr")
     elif a_clf_type == ROCCHIO:
         clf_pos = NearestCentroid()
         if binary_clf:
@@ -376,18 +383,20 @@ def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity):
         raise RuntimeError("Unknown classifier type: '{:s}'".format(a_clf_type))
     # iteratively expand sets
     while i < a_N:
+        print("Iteration #{:d}\r".format(i), file = sys.stderr)
         # train classifier on each of the sets and expand these sets afterwards
         if changed:
             if binary_clf:
-                 _es_train_binary(a_germanet, clf_pos, clf_neg, ipos, ineg, ineut)
+                 _es_train_binary(clf_pos, clf_neg, ipos, ineg, ineut)
                  changed = _es_expand_sets_binary(a_germanet, synid2tfidf, clf_pos, clf_neg, ipos, ineg, ineut)
             else:
-                _es_train_ternary(a_germanet, clf_pos, ipos, ineg, ineut)
+                _es_train_ternary(clf_pos, ipos, ineg, ineut)
                 changed = _es_expand_sets_ternary(a_germanet, synid2tfidf, clf_pos, ipos, ineg, ineut)
         # check if sets were changed
         if not changed:
             break
         i += 1
+    print("\n", file = sys.stderr)
     return _es_synid2lex(a_germanet, ipos, ineg, ineut)
 
 def takamura(a_gnet_dir, a_N, a_pos, a_neg, a_neut):
@@ -446,22 +455,28 @@ generating sentiment lexicons.""")
     # initialize GermaNet, if needed
     igermanet = None
     if GNET_DIR in args:
+        print("Reading GermaNet synsets... ", end = "", file = sys.stderr)
         igermanet = Germanet(getattr(args, GNET_DIR))
         if "form2lemma" in args:
             global lemmatize
             lemmatize = _lemmatize
             _get_form2lemma(args.form2lemma)
+        print("done", file = sys.stderr)
 
     # obtain lists of conjoined terms, if needed
 
     # read initial seed set
+    print("Reading seed sets... ", end = "", file = sys.stderr)
     _read_set(args.seed_set)
+    print("done", file = sys.stderr)
 
     # apply requested method
+    print("Expanding seed sets... ", file = sys.stderr)
     if args.dmethod == ESULI:
         new_sets = esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity)
     elif args.dmethod == TAKAMURA:
         new_sets = takamura(igermanet, args.N, POS_SET, NEG_SET, NEUT_SET)
+    print("done\n", file = sys.stderr)
 
     for iclass, iset in zip((POSITIVE, NEGATIVE, NEUTRAL), new_sets):
         for iitem in iset:
