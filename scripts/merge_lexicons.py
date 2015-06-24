@@ -87,7 +87,7 @@ def main():
     else:
         raise RuntimeError("Unrecognized operation type: '{:s}'".format(args.operation))
 
-    for iset, iclass in ((pos_set, POSITIVE), (neg_set, POSITIVE), (neut_set, NEUTRAL)):
+    for iset, iclass in ((pos_set, POSITIVE), (neg_set, NEGATIVE), (neut_set, NEUTRAL)):
         for iword in sorted(iset):
             print((iword + DELIM + iclass).encode(ENCODING))
 

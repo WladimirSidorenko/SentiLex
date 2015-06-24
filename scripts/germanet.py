@@ -30,7 +30,9 @@ import xml.etree.ElementTree as ET
 ##################################################################
 # Variables and Constants
 POS = ["adj.", "nomen.", "verben."]
-RELTYPES = ["con_rel", "lex_rel"]
+CON_REL = "con_rel"
+LEX_REL = "lex_rel"
+RELTYPES = [CON_REL, LEX_REL]
 SZET_RE = re.compile('ß', re.U)
 SPACE_RE = re.compile('(?:\t| \s)+')
 
@@ -56,7 +58,8 @@ class Germanet(object):
     lex2synids - mapping from lexeme IDs to synset IDs
     synid2lex - mapping from synset IDs to lexemes
     synid2defexmp - mapping from synset IDs to synset definitions and examples
-    relations - adjacency list of relations
+    con_relations - adjacency lists of relations between synsets
+    lex_relations - adjacency lists of relations between lexemes
     """
 
     def __init__(self, a_dir = os.getcwd()):
@@ -70,7 +73,8 @@ class Germanet(object):
         self.synid2defexmp = dict()
         self.lex2synids = defaultdict(set)
         self.synid2lex = defaultdict(set)
-        self.relations = defaultdict(set)
+        self.con_relations = defaultdict(set)
+        self.lex_relations = defaultdict(set)
         # parse synsets
         for ifile in chain.from_iterable(glob.iglob(os.path.join(a_dir, ipos + '*')) \
                                              for ipos in POS):
@@ -115,10 +119,17 @@ class Germanet(object):
         """
         ifrom = ito = iinverse = None
         idoc = ET.parse(a_fname).getroot()
-        for rel_type in RELTYPES:
-            for irel in idoc.iterfind(rel_type):
-                ifrom, ito = irel.get("from"), irel.get("to")
-                self.relations[ifrom].add((ito, irel.get("name")))
-                iinverse = irel.get("inv")
-                if iinverse:
-                    self.relations[ito].add((ifrom, iinverse))
+        # populate con relations
+        for irel in idoc.iterfind(CON_REL):
+            ifrom, ito = irel.get("from"), irel.get("to")
+            self.con_relations[ifrom].add((ito, irel.get("name")))
+            iinverse = irel.get("inv")
+            if iinverse:
+                self.lex_relations[ito].add((ifrom, iinverse))
+        # populate lex relations
+        for irel in idoc.iterfind(LEX_REL):
+            ifrom, ito = irel.get("from"), irel.get("to")
+            self.lex_relations[ifrom].add((ito, irel.get("name")))
+            iinverse = irel.get("inv")
+            if iinverse:
+                self.lex_relations[ito].add((ifrom, iinverse))

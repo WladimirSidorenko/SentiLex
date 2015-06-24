@@ -21,6 +21,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 import argparse
 import codecs
+import numpy as np
 import os
 import re
 import sys
@@ -37,6 +38,11 @@ GNET_DIR = "germanet_dir"
 ESULI = "esuli"
 TAKAMURA = "takamura"
 W2V = "w2v"
+
+# not sure whether "has_hypernym" should be added to SYNRELS
+SYNRELS = set(["has_pertainym", "is_related_to", "entails", "is_entailed_by", "has_hyponym", \
+                   "has_hypernym"])
+ANTIRELS = set(["has_antonym"])
 
 W_DELIM_RE = re.compile('(?:\s|{:s})+'.format('|'.join([re.escape(c) for c in string.punctuation])))
 TAB_RE = re.compile(' *\t+ *')
@@ -170,6 +176,16 @@ def _lexemes2synset_tfidf(a_germanet, a_synid2tfidf, a_lexemes):
                   if isyn_id in a_synid2tfidf)
     return ret
 
+def _es_flatten(a_smtx):
+    """
+    Private method for convierting sparse matrices to flat arrays
+
+    @param a_sparse_mtx - sparse matrix to be flattened
+
+    @return flat 1-dimensional array
+    """
+    return np.squeeze(a_smtx.toarray())
+
 def _es_train_binary(a_clf_pos, a_clf_neg, a_pos, a_neg, a_neut):
     """
     Private method for training binary classifiers on synset sets
@@ -190,25 +206,20 @@ def _es_train_binary(a_clf_pos, a_clf_neg, a_pos, a_neg, a_neut):
     neg_train_ids = neg_ids - (pos_ids | neut_ids)
     pos_ids.clear(); neg_ids.clear(); neut_ids.clear();
     # create training sets for positive classifier
-    instances = []; trg_classes = []
+    instances = []; pos_classes = []; neg_classes = []
     for syn_id, tfidf_vec in chain(a_pos, a_neg, a_neut):
-        instances.append(tfidf_vec)
-        trg_classes.append(str(int(syn_id in pos_train_ids)))
+        instances.append(_es_flatten(tfidf_vec))
+        pos_classes.append(str(int(syn_id in pos_train_ids)))
+        neg_classes.append(str(int(syn_id in neg_train_ids)))
     # train positive-vs-all classifier
-    print("instances[:10]", repr(instances[:10]), file = sys.stderr)
-    print("trg_classes[:10]", repr(trg_classes[:10]), file = sys.stderr)
-    # sys.exit(66)
-    print("Fitting model parameters... ", file = sys.stderr)
-    a_clf_pos.fit(instances, trg_classes)
+    print("Fitting parameters of positive-vs-all model... ", end = "", file = sys.stderr)
+    a_clf_pos.fit(instances, pos_classes)
     print("done", file = sys.stderr)
-    # replace training classes with the negative training instances (assuming
-    # that iteration order is the same, we don't modify the actual training
-    # vectors)
-    del trg_classes[:]
-    for syn_id, _ in chain(a_pos, a_neg, a_neut):
-        trg_classes.append(str(int(syn_id in neg_train_ids)))
+    del pos_classes[:]
     # train negative-vs-all classifier
-    a_clf_neg.fit(instances, trg_classes)
+    print("Fitting parameters of negative-vs-all model... ", end = "", file = sys.stderr)
+    a_clf_neg.fit(instances, neg_classes)
+    print("done", file = sys.stderr)
 
 def _es_train_ternary(a_clf, a_pos, a_neg, a_neut):
     """
@@ -221,8 +232,8 @@ def _es_train_ternary(a_clf, a_pos, a_neg, a_neut):
 
     @return \c void
     """
-    instances = [inst[-1] for inst in chain(a_pos, a_neg, a_neut)]
-    trg_classes = [POSITIVE] * len(a_pos) + [NEGATIVE] * len(a_neg) + NEUTRAL * len(a_neut)
+    instances = [_es_flatten(inst[-1]) for inst in chain(a_pos, a_neg, a_neut)]
+    trg_classes = [POSITIVE] * len(a_pos) + [NEGATIVE] * len(a_neg) + [NEUTRAL] * len(a_neut)
     a_clf.fit(instances, trg_classes)
 
 def _es_generate_candidates(a_germanet, a_synid2tfidf, a_seeds, a_new_same, a_new_opposite):
@@ -239,7 +250,8 @@ def _es_generate_candidates(a_germanet, a_synid2tfidf, a_seeds, a_new_same, a_ne
     """
     trg_set = None
     for isrc_id, _ in a_seeds:
-        for itrg_id, irelname in a_germanet.relations.get(isrc_id, [(None, None)]):
+        # obtain new sets by following links in con rels
+        for itrg_id, irelname in a_germanet.con_relations.get(isrc_id, [(None, None)]):
             if irelname in SYNRELS:
                 trg_set = a_new_same
             elif irelname in ANTIRELS:
@@ -248,6 +260,21 @@ def _es_generate_candidates(a_germanet, a_synid2tfidf, a_seeds, a_new_same, a_ne
                 continue
             if itrg_id in a_synid2tfidf:
                 trg_set.add((itrg_id, a_synid2tfidf[itrg_id]))
+        # iterate over all lexemes pertaining to this synset
+        for ilex_src_id in a_germanet.synid2lex[isrc_id]:
+            # iterate over all target lexemes which the given source lexeme is
+            # connected to
+            for ilex_trg_id, irelname in a_germanet.lex_relations.get(ilex_src_id, [(None, None)]):
+                if irelname in SYNRELS:
+                    trg_set = a_new_same
+                elif irelname in ANTIRELS:
+                    trg_set = a_new_opposite
+                else:
+                    continue
+                # iterate over all synsets which the given target lexeme pertains to
+                for itrg_id in a_germanet.lex2synids[ilex_trg_id]:
+                    if itrg_id in a_synid2tfidf:
+                        trg_set.add((itrg_id, a_synid2tfidf[itrg_id]))
 
 def _es_synid2lex(a_germanet, *a_sets):
     """
@@ -262,8 +289,10 @@ def _es_synid2lex(a_germanet, *a_sets):
     new_set = None
     for iset in a_sets:
         new_set = set()
-        for isyn_id in iset:
-            new_set |= a_germanet.synid2lex(isyn_id)
+        # print("_es_synid2lex: iset =", repr(iset), file = sys.stderr)
+        for isyn_id, _ in iset:
+            new_set |= a_germanet.synid2lex[isyn_id]
+        # print("_es_synid2lex: new_set =", repr(new_set), file = sys.stderr)
         ret.append(new_set)
     return ret
 
@@ -287,24 +316,36 @@ def _es_expand_sets_binary(a_germanet, a_synid2tfidf, a_clf_pos, a_clf_neg, a_po
     # obtain potential candidates
     _es_generate_candidates(a_germanet, a_synid2tfidf, a_pos, pos_candidates, neg_candidates)
     _es_generate_candidates(a_germanet, a_synid2tfidf, a_neg, neg_candidates, pos_candidates)
+    # print("pos_candidates before =", repr(pos_candidates), file = sys.stderr)
+    # print("neg_candidates before =", repr(neg_candidates), file = sys.stderr)
     if pos_candidates or neg_candidates:
         ret = True
+    else:
+        return False
     # remove from potential candidates items that are already in seed sets
     seeds = a_pos | a_neg | a_neut
     pos_candidates -= seeds; neg_candidates -= seeds;
     seeds.clear()
+    # print("pos_candidates after =", repr(pos_candidates), file = sys.stderr)
+    # print("neg_candidates after =", repr(neg_candidates), file = sys.stderr)
     # obtain predictions for the potential positive terms
-    pos_pred = a_clf_pos.predict([iitem for _, iitem in pos_candidates])
-    neg_pred = a_clf_neg.predict([iitem for _, iitem in pos_candidates])
-    # obtain new positive terms based on the made predictions
-    new_pos = set(iitem for iitem, ipos, ineg in zip(pos_candidates, pos_pred, neg_pred) \
-                      if ipos == '1' and ineg != '1')
+    if pos_candidates:
+        pos_pred = a_clf_pos.predict([_es_flatten(iitem) for _, iitem in pos_candidates])
+        neg_pred = a_clf_neg.predict([_es_flatten(iitem) for _, iitem in pos_candidates])
+        # obtain new positive terms based on the made predictions
+        new_pos = set(iitem for iitem, ipos, ineg in zip(pos_candidates, pos_pred, neg_pred) \
+                          if ipos == '1' and ineg != '1')
+    else:
+        new_pos = set()
     # obtain predictions for the potential negative terms
-    pos_pred = a_clf_pos.predict([iitem for _, iitem in neg_candidates])
-    neg_pred = a_clf_neg.predict([iitem for _, iitem in neg_candidates])
-    # obtain new negative terms based on the made predictions
-    new_neg = set(iitem for iitem, ipos, ineg in zip(pos_candidates, pos_pred, neg_pred) \
-                      if ipos != '1' and ineg == '1')
+    if neg_candidates:
+        pos_pred = a_clf_pos.predict([_es_flatten(iitem) for _, iitem in neg_candidates])
+        neg_pred = a_clf_neg.predict([_es_flatten(iitem) for _, iitem in neg_candidates])
+        # obtain new negative terms based on the made predictions
+        new_neg = set(iitem for iitem, ipos, ineg in zip(pos_candidates, pos_pred, neg_pred) \
+                          if ipos != '1' and ineg == '1')
+    else:
+        new_neg = set()
     # update positive, negative, and neutral sets
     a_pos |= new_pos; a_neg |= new_neg
     a_neut |= ((pos_candidates | neg_candidates) - (new_pos | new_neg))
@@ -330,6 +371,8 @@ def _es_expand_sets_ternary(a_germanet, a_synid2tfidf, a_clf, a_pos, a_neg, a_ne
     _es_generate_candidates(a_germanet, a_synid2tfidf, a_neg, neg_candidates, pos_candidates)
     if pos_candidates or neg_candidates:
         ret = True
+    else:
+        return False
     # remove from potential candidates items that are already in seed sets
     seeds = a_pos | a_neg | a_neut
     pos_candidates -= seeds; neg_candidates -= seeds;
@@ -337,7 +380,7 @@ def _es_expand_sets_ternary(a_germanet, a_synid2tfidf, a_clf, a_pos, a_neg, a_ne
     # obtain predictions for the potential positive terms
     predicted = []
     for iset in (pos_candidates, neg_candidates):
-        predicted = a_clf_pos.predict([iitem for _, iitem in iset])
+        predicted = a_clf.predict([_es_flatten(iitem[-1]) for iitem in iset])
         for iclass, iitem in zip(predicted, iset):
             if iclass == POSITIVE:
                 a_pos.add(iitem)
@@ -356,7 +399,7 @@ def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity):
     @param a_clf_type - type of classifiers to use (Rocchio or SVM)
     @param a_clf_arity - arity type of classifier (binary or ternary)
 
-    @return \c 0 on success, non-\c 0 otherwise
+    @return \c void
     """
     global POS_SET, NEG_SET, NEUT_SET
     # obtain Tf/Idf vector for each synset description
@@ -366,24 +409,25 @@ def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity):
     ineg = _lexemes2synset_tfidf(a_germanet, synid2tfidf, NEG_SET)
     ineut = _lexemes2synset_tfidf(a_germanet, synid2tfidf, NEUT_SET)
     # train classifier on each of the sets
-    i = 0
     changed = True
     clf_pos = clf_neg = None
     binary_clf = bool(a_clf_arity == BINARY)
     # initialize classifiers
     if a_clf_type == SVM:
-        clf_pos = LinearSVC(multi_class = "ovr")
+        clf_pos = LinearSVC()
         if binary_clf:
-            clf_neg = LinearSVC(multi_class = "ovr")
+            clf_neg = LinearSVC()
     elif a_clf_type == ROCCHIO:
         clf_pos = NearestCentroid()
         if binary_clf:
             clf_neg = NearestCentroid()
     else:
         raise RuntimeError("Unknown classifier type: '{:s}'".format(a_clf_type))
+    i = 0
     # iteratively expand sets
     while i < a_N:
-        print("Iteration #{:d}\r".format(i), file = sys.stderr)
+        print("Iteration #{:d}".format(i), file = sys.stderr)
+        i += 1
         # train classifier on each of the sets and expand these sets afterwards
         if changed:
             if binary_clf:
@@ -395,9 +439,9 @@ def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity):
         # check if sets were changed
         if not changed:
             break
-        i += 1
-    print("\n", file = sys.stderr)
-    return _es_synid2lex(a_germanet, ipos, ineg, ineut)
+    # lexicalize sets of synset id's
+    ipos, ineg, ineut = _es_synid2lex(a_germanet, ipos, ineg, ineut)
+    POS_SET |= ipos; NEG_SET |= ineg; NEUT_SET |= ineut;
 
 def takamura(a_gnet_dir, a_N, a_pos, a_neg, a_neut):
     """
@@ -431,7 +475,7 @@ generating sentiment lexicons.""")
     subparser_takamura.add_argument("--form2lemma", "-l", help = "file containing form - lemma correspondances", type = str)
     subparser_takamura.add_argument(GNET_DIR, help = "directory containing GermaNet files")
     subparser_takamura.add_argument("corpus_dir", help = "directory containing raw corpus files")
-    subparser_takamura.add_argument("N", help = "final number of additional terms to extract")
+    subparser_takamura.add_argument("N", help = "final number of additional terms to extract", type = int)
     subparser_takamura.add_argument("seed_set", help = "initial seed set of positive, negative, and neutral terms")
 
     subparser_esuli = subparsers.add_parser(ESULI, help = "SentiWordNet model (Esuli and Sebastiani, 2005)")
@@ -443,11 +487,11 @@ generating sentiment lexicons.""")
                                      """file containing form - lemma correspondances for words occurring in synset definitions""", \
                                      type = str)
     subparser_esuli.add_argument(GNET_DIR, help = "directory containing GermaNet files")
-    subparser_esuli.add_argument("N", help = "number of expansion iterations")
+    subparser_esuli.add_argument("N", help = "number of expansion iterations", type = int)
     subparser_esuli.add_argument("seed_set", help = "initial seed set of positive, negative, and neutral terms")
 
     subparser_w2v = subparsers.add_parser(W2V, help = "word2vec model (Mikolov, 2013)")
-    subparser_w2v.add_argument("N", help = "final number of terms to extract")
+    subparser_w2v.add_argument("N", help = "final number of terms to extract", type = int)
     subparser_w2v.add_argument("seed_set", help = "initial seed set of positive, negative, and neutral terms")
 
     args = argparser.parse_args(a_argv)
@@ -473,16 +517,14 @@ generating sentiment lexicons.""")
     # apply requested method
     print("Expanding seed sets... ", file = sys.stderr)
     if args.dmethod == ESULI:
-        new_sets = esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity)
+        esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity)
     elif args.dmethod == TAKAMURA:
         new_sets = takamura(igermanet, args.N, POS_SET, NEG_SET, NEUT_SET)
-    print("done\n", file = sys.stderr)
+    print("done", file = sys.stderr)
 
-    for iclass, iset in zip((POSITIVE, NEGATIVE, NEUTRAL), new_sets):
-        for iitem in iset:
-            print((iitem + "\t" + iclass).encode())
-    for iexpression in sorted(new_set):
-        print(iexpression.encode(ENCODING))
+    for iclass, iset in ((POSITIVE, POS_SET), (NEGATIVE, NEG_SET), (NEUTRAL, NEUT_SET)):
+        for iitem in sorted(iset):
+            print((iitem + "\t" + iclass).encode(ENCODING))
 
 ##################################################################
 # Main
