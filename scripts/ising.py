@@ -18,6 +18,40 @@ warm = 1000     # Number of warmup steps
 measure = 100   # How often to take a measurement
 
 ##################################################################
+# Class
+class Ising(object):
+    """
+    Class representing the Ising spin model
+
+    Instance variables:
+    nodes - list of nodes in the model
+    n_nodes - number of nodes stored in the model
+    dflt_node_wght - default weight to be used for nodes
+    dflt_edge_wght - default weight to be used for edges
+
+    Public methods:
+
+    """
+
+    def __init__(self, a_nodes = [], a_node_wght = 1., a_edge_wght = 1.):
+        """
+        Class constructor
+
+        @param a_nodes - initial list of nodes (each node should be a
+                         3-tuple holding element, its weight, and an adjacency list of
+                         connections to other nodes)
+        @param a_node_wght - default weight to be used for nodes
+        @param a_edge_wght - default weight to be used for edges
+        """
+        # check node format
+        for inode in a_nodes:
+            assert type(inode) == tuple and len(inode == 3), "Incorrect node format: 3-tuple expected"
+        self.nodes = a_nodes
+        self.n_nodes = len(self.nodes)
+        self.dflt_node_wght = a_node_wght
+        self.dflt_edge_wght = a_edge_wght
+
+##################################################################
 # Methods
 def CEnergy(latt):
     "Energy of a 2D Ising lattice at particular configuration"

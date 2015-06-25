@@ -13,6 +13,8 @@ generate_lexicon.py [OPTIONS] [INPUT_FILES]
 # Imports
 from __future__ import unicode_literals, print_function
 from germanet import Germanet, normalize
+from ising import Ising
+
 from itertools import chain
 from sklearn.svm import LinearSVC
 from sklearn.preprocessing import normalize as vecnormalize
@@ -34,6 +36,7 @@ TERNARY = "ternary"
 ROCCHIO = "rocchio"
 SVM = "svm"
 GNET_DIR = "germanet_dir"
+CORPUS_DIR = "corpus_dir"
 
 ESULI = "esuli"
 TAKAMURA = "takamura"
@@ -392,24 +395,27 @@ def _es_expand_sets_ternary(a_germanet, a_synid2tfidf, a_clf, a_pos, a_neg, a_ne
                 a_neut.add(iitem)
     return ret
 
-def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity):
+def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity, \
+                         a_pos, a_neg, a_neut):
     """
     Method for extending sentiment lexicons using Esuli and Sebastiani method
 
     @param a_germanet - GermaNet instance
-    @param a_N - number of terms to extract
+    @param a_N - number of iterations
     @param a_clf_type - type of classifiers to use (Rocchio or SVM)
     @param a_clf_arity - arity type of classifier (binary or ternary)
+    @param a_pos - set of synsets and their tf/idf vectors that have positive polarity
+    @param a_neg - set of synsets and their tf/idf vectors that have negative polarity
+    @param a_neut - set of synsets and their tf/idf vectors that have neutral polarity
 
     @return \c void
     """
-    global POS_SET, NEG_SET, NEUT_SET
     # obtain Tf/Idf vector for each synset description
     synid2tfidf = _get_tfidf_vec(a_germanet)
     # convert obtained lexemes to synsets
-    ipos = _lexemes2synset_tfidf(a_germanet, synid2tfidf, POS_SET)
-    ineg = _lexemes2synset_tfidf(a_germanet, synid2tfidf, NEG_SET)
-    ineut = _lexemes2synset_tfidf(a_germanet, synid2tfidf, NEUT_SET)
+    ipos = _lexemes2synset_tfidf(a_germanet, synid2tfidf, a_pos)
+    ineg = _lexemes2synset_tfidf(a_germanet, synid2tfidf, a_neg)
+    ineut = _lexemes2synset_tfidf(a_germanet, synid2tfidf, a_neut)
     # train classifier on each of the sets
     changed = True
     clf_pos = clf_neg = None
@@ -443,22 +449,28 @@ def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity):
             break
     # lexicalize sets of synset id's
     ipos, ineg, ineut = _es_synid2lex(a_germanet, ipos, ineg, ineut)
-    POS_SET |= ipos; NEG_SET |= ineg; NEUT_SET |= ineut;
+    a_pos |= ipos; a_neg |= ineg; a_neut |= ineut;
 
-def takamura(a_gnet_dir, a_N, a_pos, a_neg, a_neut):
+def takamura(a_germanet, a_N, a_corpus_dir, a_pos, a_neg, a_neut):
     """
     Method for extending sentiment lexicons using Esuli and Sebastiani method
 
-    @param a_gnet_dir - directory containing GermaNet files
+    @param a_germanet - GermaNet instance
     @param a_N - number of terms to extract
-    @param a_pos - initial set of positive terms
-    @param a_neg - initial set of negative terms
-    @param a_neut - initial set of neutral terms
+    @param a_corpus_dir - directory containing corpus
+    @param a_pos - initial set of positive terms to be expanded
+    @param a_neg - initial set of negative terms to be expanded
+    @param a_neut - initial set of neutral terms to be expanded
 
     @return \c 0 on success, non-\c 0 otherwise
     """
-    ret = set()
-    return ret
+    # create initial empty network
+    ising = Ising()
+    # populate network from GermaNet
+    _tkm_add_germanet(ising, a_germanet)
+    # populate network from corpus
+    _tkm_add_corpus(ising, a_corpus_dir)
+    # perform MCMC sampling
 
 def main(a_argv):
     """
@@ -476,7 +488,7 @@ generating sentiment lexicons.""")
     subparser_takamura = subparsers.add_parser(TAKAMURA, help = "Ising spin model (Takamura, 2005)")
     subparser_takamura.add_argument("--form2lemma", "-l", help = "file containing form - lemma correspondances", type = str)
     subparser_takamura.add_argument(GNET_DIR, help = "directory containing GermaNet files")
-    subparser_takamura.add_argument("corpus_dir", help = "directory containing raw corpus files")
+    subparser_takamura.add_argument(CORPUS_DIR, help = "directory containing raw corpus files")
     subparser_takamura.add_argument("N", help = "final number of additional terms to extract", type = int)
     subparser_takamura.add_argument("seed_set", help = "initial seed set of positive, negative, and neutral terms")
 
@@ -519,10 +531,10 @@ generating sentiment lexicons.""")
     # apply requested method
     print("Expanding seed sets... ", file = sys.stderr)
     if args.dmethod == ESULI:
-        esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity)
+        esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity, POS_SET, NEG_SET, NEUT_SET)
     elif args.dmethod == TAKAMURA:
-        new_sets = takamura(igermanet, args.N, POS_SET, NEG_SET, NEUT_SET)
-    print("done", file = sys.stderr)
+        new_sets = takamura(igermanet, args.N, getattr(args, CORPUS_DIR), POS_SET, NEG_SET, NEUT_SET)
+    print("Expanding seed sets... done", file = sys.stderr)
 
     for iclass, iset in ((POSITIVE, POS_SET), (NEGATIVE, NEG_SET), (NEUTRAL, NEUT_SET)):
         for iitem in sorted(iset):
