@@ -26,6 +26,7 @@ class Ising(object):
     Instance variables:
     nodes - list of nodes in the model
     n_nodes - number of nodes stored in the model
+    item2nid - dictionary mapping items to their respective node id's
     dflt_node_wght - default weight to be used for nodes
     dflt_edge_wght - default weight to be used for edges
 
@@ -33,23 +34,54 @@ class Ising(object):
 
     """
 
-    def __init__(self, a_nodes = [], a_node_wght = 1., a_edge_wght = 1.):
+    def __init__(self, a_node_wght = 1., a_edge_wght = 1.):
         """
         Class constructor
 
-        @param a_nodes - initial list of nodes (each node should be a
-                         3-tuple holding element, its weight, and an adjacency list of
-                         connections to other nodes)
         @param a_node_wght - default weight to be used for nodes
         @param a_edge_wght - default weight to be used for edges
         """
-        # check node format
-        for inode in a_nodes:
-            assert type(inode) == tuple and len(inode == 3), "Incorrect node format: 3-tuple expected"
-        self.nodes = a_nodes
-        self.n_nodes = len(self.nodes)
         self.dflt_node_wght = a_node_wght
         self.dflt_edge_wght = a_edge_wght
+        self.item2nid = dict()
+        self.nodes = []
+        self.n_nodes = 0
+
+    def add_node(self, a_item, a_weight = None):
+        """
+        Add node to the ising spin model
+
+        @param a_item - item corresponding to the new node
+        @param a_weight - initial weight associated with the new node
+
+        @return \c void
+        """
+        if a_item in self.item2nid:
+            return
+        if a_weight is None:
+            a_weight = self.dflt_node_wght
+        self.nodes.append((a_item, a_weight, {}))
+        self.item2node[a_item] = self.n_nodes
+        self.n_nodes += 1
+
+    def add_edge(self, a_item1, a_item2, a_wght = None, a_allow_self_links = False):
+        """
+        Add an undirected link between two existing nodes in the ising spin model
+
+        @param a_item1 - first item which should be connected via a link
+        @param a_item2 - second item which should be connected via a link
+        @param a_wght - initial weight associated with the edge
+        @param a_allow_self_links - boolean indicating whether cyclic links to
+                      the same node should be allowed
+
+        @return \c void
+        """
+        if not a_allow_self_links and a_item1 == a_item2:
+            return
+        assert a_item1 in self.item2nid, "Item '{:s}' not found".format(repr(a_item1))
+        assert a_item2 in self.item2nid, "Item '{:s}' not found".format(repr(a_item2))
+        inid1 = self.item2nid[a_item1]; inid2 = self.item2nid[a_item2]
+        self.nodes[inid1][-1][inid2] = self.nodes[inid2][-1][inid1] = a_wght
 
 ##################################################################
 # Methods

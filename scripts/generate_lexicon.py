@@ -451,6 +451,34 @@ def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity, \
     ipos, ineg, ineut = _es_synid2lex(a_germanet, ipos, ineg, ineut)
     a_pos |= ipos; a_neg |= ineg; a_neut |= ineut;
 
+def _tkm_add_germanet(ising, a_germanet):
+    """
+    Add lexical nodes from GermaNet ot the Ising spin model
+
+    @param a_ising - instance of the Ising spin model
+    @param a_germanet - GermaNet instance
+
+    @return \c void
+    """
+    # add all lemmas from `FORM2LEMMA` dictionary
+    for ilemma in FORM2LEMMA.itervalues():
+        ising.add_node(ilemma)
+    # add all words from `FORM2LEMMA` dictionary
+    for ilemma in a_germanet.lex2synids.iterkeys():
+        ising.add_node(ilemma)
+    # establish links between synset words and definition lemmas
+    def_lexemes = []
+    for isynid, (idef, iexamples) in a_germanet.synid2defexmp.iteritems():
+        def_lexemes = [lemmatize(iword) for itxt in chain([idef], iexamples) \
+                           for iword in W_DELIM_RE.split(itxt)]
+        def_lexemes = [ilex for ilex in lexemes if ilex]
+        if def_lexemes:
+            for idef_lex in def_lexemes:
+                for ilex in a_germanet.synid2lex[isynid]:
+                    ising.add_edge(ilex, idef_lex)
+    # establish links between synset words according to synset relations
+    pass
+
 def takamura(a_germanet, a_N, a_corpus_dir, a_pos, a_neg, a_neut):
     """
     Method for extending sentiment lexicons using Esuli and Sebastiani method
@@ -471,6 +499,7 @@ def takamura(a_germanet, a_N, a_corpus_dir, a_pos, a_neg, a_neut):
     # populate network from corpus
     _tkm_add_corpus(ising, a_corpus_dir)
     # perform MCMC sampling
+    # ising.mcmc()
 
 def main(a_argv):
     """
