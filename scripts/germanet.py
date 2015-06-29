@@ -46,7 +46,7 @@ def normalize(a_string):
 
     @return normalized string version
     """
-    return SZET_RE.sub("ss", SPACE_RE.sub(' ', a_string.lower()))
+    return SZET_RE.sub("ss", SPACE_RE.sub(' ', a_string.lower())).strip()
 
 ##################################################################
 # Class
@@ -55,8 +55,10 @@ class Germanet(object):
     Class for reading and pocessing GermaNet files
 
     Instance variables:
-    lex2synids - mapping from lexeme IDs to synset IDs
-    synid2lex - mapping from synset IDs to lexemes
+    lexid2lex - mapping from lexeme IDs to lexemes
+    lex2lexid - mapping from lexemes to lexeme IDs
+    lexid2synids - mapping from lexeme IDs to synset IDs
+    synid2lexids - mapping from synset IDs to lexemes
     synid2defexmp - mapping from synset IDs to synset definitions and examples
     con_relations - adjacency lists of relations between synsets
     lex_relations - adjacency lists of relations between lexemes
@@ -71,8 +73,9 @@ class Germanet(object):
         if not os.path.isdir(a_dir) or not os.access(a_dir, os.R_OK):
             raise RuntimeError("Can't read from directory: {:s}".format(a_dir))
         self.synid2defexmp = dict()
-        self.lex2synids = defaultdict(set)
-        self.synid2lex = defaultdict(set)
+        self.lexid2lex = dict(); self.lex2lexid = dict()
+        self.lexid2synids = defaultdict(set)
+        self.synid2lexids = defaultdict(set)
         self.con_relations = defaultdict(set)
         self.lex_relations = defaultdict(set)
         # parse synsets
@@ -80,7 +83,7 @@ class Germanet(object):
                                              for ipos in POS):
             self._parse_synsets(ifile)
 
-        assert self.lex2synids, "No synset files found in directory {:s}".format(a_dir)
+        assert self.lexid2synids, "No synset files found in directory {:s}".format(a_dir)
         # parse relations
         self._parse_relations(os.path.join(a_dir, "gn_relations.xml"))
 
@@ -104,10 +107,16 @@ class Germanet(object):
                                              [el.text for el in isynset.iterfind(".//example/text")])
             for ilex in isynset.iterfind("./lexUnit"):
                 lexid = ilex.get("id")
+                self.lexid2synids[lexid].add(synid)
+                self.synid2lexids[synid].add(lexid)
                 for iform in ilex.iterfind("./orthForm"):
                     lex = normalize(iform.text)
-                    self.lex2synids[lex].add(synid)
-                    self.synid2lex[synid].add(lex)
+                    if lexid in self.lexid2lex:
+                        assert lex not in self.lex2lexid, "Multiple lexeme id's specified for lemma {:s}".format(lex)
+                        self.lexid2lex[lexid].add(lex)
+                    else:
+                        self.lexid2lex[lexid] = set([lex])
+                        self.lex2lexid[lex] = lexid
 
     def _parse_relations(self, a_fname):
         """
@@ -125,7 +134,7 @@ class Germanet(object):
             self.con_relations[ifrom].add((ito, irel.get("name")))
             iinverse = irel.get("inv")
             if iinverse:
-                self.lex_relations[ito].add((ifrom, iinverse))
+                self.con_relations[ito].add((ifrom, iinverse))
         # populate lex relations
         for irel in idoc.iterfind(LEX_REL):
             ifrom, ito = irel.get("from"), irel.get("to")

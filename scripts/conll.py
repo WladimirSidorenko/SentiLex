@@ -30,15 +30,14 @@ import re
 import sys
 from collections import defaultdict
 
-from tokenizer import EOS_TAG_RE
-
 ##################################################################
 # Constants
 EOS      = u'\n'
 EOL      = u'\n'
-ESC_CHAR = os.environ.get("SOCMEDIA_ESC_CHAR", "")
+ESC_CHAR = ''
 FIELDSEP = u'\t'
 EMPTY_FIELD = u'_'
+EOS_TAG_RE = re.compile("<sentence />")
 
 FEAT_SEP = u'|'
 FEAT_VALUE_SEP = u'='
@@ -394,9 +393,9 @@ class CONLLWord(object):
     def __getitem__(self, name):
         """Return self.field's item if this item's name is present in key2field.
 
-        This method uses the self.__getattr__() method but converts the
-        AttributeException to IndexError in case when lookup was not
-        successful.
+        This method uses the self.__getattr__() method but converts
+        the AttributeException to IndexError in case when lookup was
+        not successful.
 
         @param name - name of the field to be retrieved
 

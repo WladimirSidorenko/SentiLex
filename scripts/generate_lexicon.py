@@ -14,8 +14,9 @@ generate_lexicon.py [OPTIONS] [INPUT_FILES]
 from __future__ import unicode_literals, print_function
 from germanet import Germanet, normalize
 from ising import Ising
+from tokenizer import Tokenizer
 
-from itertools import chain
+from itertools import chain, combinations
 from sklearn.svm import LinearSVC
 from sklearn.preprocessing import normalize as vecnormalize
 from sklearn.neighbors.nearest_centroid import NearestCentroid
@@ -59,6 +60,7 @@ NEG_SET = set()                 # set of negative terms
 NEUTRAL = "neutral"
 NEUT_SET = set()                # set of neutral terms
 
+TOKENIZER = Tokenizer()
 INFORMATIVE_TAGS = set(["AD", "FM", "NE", "NN", "VV"])
 STOP_WORDS = set()
 FORM2LEMMA = dict()
@@ -92,6 +94,7 @@ def _get_form2lemma(a_fname):
             else:
                 STOP_WORDS.add(iform)
 
+
 def _read_set(a_fname):
     """
     Read initial seed set of terms.
@@ -117,16 +120,18 @@ def _read_set(a_fname):
             else:
                 raise RuntimeError("Unknown field specification: {:s}".format(fields[-1]))
 
-def _lemmatize(a_form):
+def _lemmatize(a_form, a_prune = True):
     """
     Convert word form to its lemma
 
     @param a_form - word form for which we should obtain lemma
+    @param a_prune - flag indicating whether uninformative words
+                    should be pruned
 
     @return lemma of the word
     """
     a_form = normalize(a_form)
-    if a_form in STOP_WORDS:
+    if a_prune and a_form in STOP_WORDS:
         return None
     if a_form in FORM2LEMMA:
         return FORM2LEMMA[a_form]
@@ -155,7 +160,7 @@ def _get_tfidf_vec(a_germanet):
     # iterate over all synsets
     for isyn_id, (idef, iexamples) in a_germanet.synid2defexmp.iteritems():
         lexemes = [lemmatize(iword) for itxt in chain([idef], iexamples) \
-                       for iword in W_DELIM_RE.split(itxt)]
+                       for iword in TOKENIZER.tokenize(itxt)]
         lexemes = [ilex for ilex in lexemes if ilex]
         if lexemes:
             ret[isyn_id] = lexemes
@@ -177,7 +182,7 @@ def _lexemes2synset_tfidf(a_germanet, a_synid2tfidf, a_lexemes):
     """
     ret = set((isyn_id, a_synid2tfidf[isyn_id]) \
                   for ilex in a_lexemes \
-                  for isyn_id in a_germanet.lex2synids.get(ilex, []) \
+                  for isyn_id in a_germanet.lexid2synids.get(a_germanet.lex2lexid.get(ilex, None), []) \
                   if isyn_id in a_synid2tfidf)
     return ret
 
@@ -266,7 +271,7 @@ def _es_generate_candidates(a_germanet, a_synid2tfidf, a_seeds, a_new_same, a_ne
             if itrg_id in a_synid2tfidf:
                 trg_set.add((itrg_id, a_synid2tfidf[itrg_id]))
         # iterate over all lexemes pertaining to this synset
-        for ilex_src_id in a_germanet.synid2lex[isrc_id]:
+        for ilex_src_id in a_germanet.synid2lexids[isrc_id]:
             # iterate over all target lexemes which the given source lexeme is
             # connected to
             for ilex_trg_id, irelname in a_germanet.lex_relations.get(ilex_src_id, [(None, None)]):
@@ -277,7 +282,7 @@ def _es_generate_candidates(a_germanet, a_synid2tfidf, a_seeds, a_new_same, a_ne
                 else:
                     continue
                 # iterate over all synsets which the given target lexeme pertains to
-                for itrg_id in a_germanet.lex2synids[ilex_trg_id]:
+                for itrg_id in a_germanet.lexid2synids[ilex_trg_id]:
                     if itrg_id in a_synid2tfidf:
                         trg_set.add((itrg_id, a_synid2tfidf[itrg_id]))
 
@@ -296,7 +301,9 @@ def _es_synid2lex(a_germanet, *a_sets):
         new_set = set()
         # print("_es_synid2lex: iset =", repr(iset), file = sys.stderr)
         for isyn_id, _ in iset:
-            new_set |= a_germanet.synid2lex[isyn_id]
+            # print("_es_synid2lex: isyn_id =", repr(isyn_id), file = sys.stderr)
+            new_set |= set([ilex for ilexid in a_germanet.synid2lexids[isyn_id] \
+                                for ilex in a_germanet.lexid2lex[ilexid]])
         # print("_es_synid2lex: new_set =", repr(new_set), file = sys.stderr)
         ret.append(new_set)
     return ret
@@ -453,31 +460,107 @@ def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity, \
 
 def _tkm_add_germanet(ising, a_germanet):
     """
-    Add lexical nodes from GermaNet ot the Ising spin model
+    Add lexical nodes from GermaNet to the Ising spin model
 
     @param a_ising - instance of the Ising spin model
     @param a_germanet - GermaNet instance
 
     @return \c void
     """
-    # add all lemmas from `FORM2LEMMA` dictionary
+    # add all lemmas from the `FORM2LEMMA` dictionary
     for ilemma in FORM2LEMMA.itervalues():
-        ising.add_node(ilemma)
-    # add all words from `FORM2LEMMA` dictionary
-    for ilemma in a_germanet.lex2synids.iterkeys():
-        ising.add_node(ilemma)
-    # establish links between synset words and definition lemmas
+        if ilemma not in STOP_WORDS:
+            ising.add_node(ilemma)
+    # add all lemmas from synsets
+    for ilexid in a_germanet.lexid2synids.iterkeys():
+        for ilex in a_germanet.lexid2lex[ilexid]:
+            ising.add_node(ilex)
+    # establish links between synset words and lemmas appearing in
+    # examples and definitions
     def_lexemes = []
+    negation_seen = False
     for isynid, (idef, iexamples) in a_germanet.synid2defexmp.iteritems():
-        def_lexemes = [lemmatize(iword) for itxt in chain([idef], iexamples) \
-                           for iword in W_DELIM_RE.split(itxt)]
-        def_lexemes = [ilex for ilex in lexemes if ilex]
+        def_lexemes = [lemmatize(iword, a_prune = False) for itxt in chain([idef], iexamples) \
+                           for iword in TOKENIZER.tokenize(itxt)]
+        def_lexemes = [ilexeme for ilexeme in def_lexemes if ilexeme and ising.item2nid.get(ilexeme, None)]
         if def_lexemes:
+            negation_seen = False
             for idef_lex in def_lexemes:
-                for ilex in a_germanet.synid2lex[isynid]:
-                    ising.add_edge(ilex, idef_lex)
-    # establish links between synset words according to synset relations
-    pass
+                if idef_lex in NEGATORS:
+                    negation_seen = True
+                    continue
+                elif idef_lex in STOP_WORDS:
+                    continue
+                for ilexid in a_germanet.synid2lexids[isynid]:
+                    for ilex in a_germanet.lexid2lex[ilexid]:
+                        ising.add_edge(ilex, idef_lex, -1. if negation_seen else 1.)
+    # establish links between synset lemmas based on the lexical
+    # relations
+    iwght = 1.
+    lemmas1 = lemmas2 = None
+    for ifrom, irelset in a_germanet.lex_relations.iteritems():
+        lemmas1 = a_germanet.lexid2lex.get(ifrom)
+        assert lemmas1 is not None, "No lemma found for id {:s}".format(ifrom)
+        for ito, irel in irelset:
+            lemmas2 = a_germanet.lexid2lex.get(ito)
+            assert lemmas2 is not None, "No lemma found for id {:s}".format(ito)
+            if irel in SYNRELS:
+                iwght = 1.
+            elif irel in ANTIRELS:
+                iwght = -1.
+            else:
+                continue
+            for ilemma1 in lemmas1:
+                for ilemma2 in lemmas2:
+                    ising.add_edge(ilemma1, ilemma2, iwght)
+    # establish links between synset lemmas based on the con relations
+    for ifrom, irelset in a_germanet.con_relations.iteritems():
+        # iterate over all lexemes pertaining to the first synset
+        for ilex_id1 in a_germanet.synid2lexids[ifrom]:
+            lemmas1 = a_germanet.lexid2lex.get(ilex_id1)
+            assert lemmas1 is not None, "No lemma found for id {:s}".format(ifrom)
+            # iterate over target synsets and their respective relations
+            for ito, irel in irelset:
+                if irel in SYNRELS:
+                    iwght = 1.
+                elif irel in ANTIRELS:
+                    iwght = -1.
+                else:
+                    continue
+                # iterate over all lexemes pertaining to the second synset
+                for ilex_id2 in a_germanet.synid2lexids[ito]:
+                    lemmas2 = a_germanet.lexid2lex.get(ilex_id2)
+                    assert lemmas2 is not None, "No lemma found for id {:s}".format(ito)
+                    for ilemma1 in lemmas1:
+                        for ilemma2 in lemmas2:
+                            ising.add_edge(ilemma1, ilemma2, iwght)
+    # establish links between lemmas pertaining to the same synset
+    ilexemes = set()
+    for ilex_ids in a_germanet.synid2lexids.itervalues():
+        ilexemes = set([ilex for ilex_id in ilex_ids for ilex in a_germanet.lexid2lex[ilex_id]])
+        # generate all possible (n choose 2) combinations of lexemes
+        # and put links between them
+        for ilemma1, ilemma2 in combinations(ilexemes, 2):
+            ising.add_edge(ilemma1, ilemma2, 1.)
+
+def _tkm_add_corpus(ising, a_corpus_file):
+    """
+    Add lexical nodes from corpus to the Ising spin model
+
+    @param a_ising - instance of the Ising spin model
+    @param a_corpus_file - file containing conjoined word pairs extracted from corpus
+
+    @return \c void
+    """
+    iwght = 1.
+    ilemma1 = ilemma2 = ""
+    with codecs.open(a_corpus_file, 'r', ENCODING) as ifile:
+        for iline in ifile:
+            iline = iline.strip()
+            if not iline:
+                continue
+            ilemma1, ilemma2, iwght = TAB_RE.split(iline)
+            ising.add_edge(normalize(ilemma1), normalize(ilemma2), float(iwght))
 
 def takamura(a_germanet, a_N, a_corpus_dir, a_pos, a_neg, a_neut):
     """
@@ -485,7 +568,7 @@ def takamura(a_germanet, a_N, a_corpus_dir, a_pos, a_neg, a_neut):
 
     @param a_germanet - GermaNet instance
     @param a_N - number of terms to extract
-    @param a_corpus_dir - directory containing corpus
+    @param a_corpus_file - file containing conjoined word pairs extracted from corpus
     @param a_pos - initial set of positive terms to be expanded
     @param a_neg - initial set of negative terms to be expanded
     @param a_neut - initial set of neutral terms to be expanded
@@ -497,7 +580,7 @@ def takamura(a_germanet, a_N, a_corpus_dir, a_pos, a_neg, a_neut):
     # populate network from GermaNet
     _tkm_add_germanet(ising, a_germanet)
     # populate network from corpus
-    _tkm_add_corpus(ising, a_corpus_dir)
+    _tkm_add_corpus(ising, a_corpus_file)
     # perform MCMC sampling
     # ising.mcmc()
 

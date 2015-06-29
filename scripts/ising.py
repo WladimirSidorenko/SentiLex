@@ -6,6 +6,7 @@ Monte Carlo simulation of the 2D Ising model
 
 ##################################################################
 # Imports
+from collections import defaultdict
 from scipy import *
 from scipy import weave
 from pylab import *
@@ -60,8 +61,8 @@ class Ising(object):
             return
         if a_weight is None:
             a_weight = self.dflt_node_wght
-        self.nodes.append((a_item, a_weight, {}))
-        self.item2node[a_item] = self.n_nodes
+        self.nodes.append((a_item, a_weight, defaultdict(lambda: 0.)))
+        self.item2nid[a_item] = self.n_nodes
         self.n_nodes += 1
 
     def add_edge(self, a_item1, a_item2, a_wght = None, a_allow_self_links = False):
@@ -78,10 +79,11 @@ class Ising(object):
         """
         if not a_allow_self_links and a_item1 == a_item2:
             return
-        assert a_item1 in self.item2nid, "Item '{:s}' not found".format(repr(a_item1))
-        assert a_item2 in self.item2nid, "Item '{:s}' not found".format(repr(a_item2))
+        assert a_item1 in self.item2nid, "Item '{:s}' not found in Ising model".format(repr(a_item1))
+        assert a_item2 in self.item2nid, "Item '{:s}' not found in Ising model".format(repr(a_item2))
         inid1 = self.item2nid[a_item1]; inid2 = self.item2nid[a_item2]
-        self.nodes[inid1][-1][inid2] = self.nodes[inid2][-1][inid1] = a_wght
+        self.nodes[inid1][-1][inid2] += a_wght
+        self.nodes[inid2][-1][inid1] += a_wght
 
 ##################################################################
 # Methods
