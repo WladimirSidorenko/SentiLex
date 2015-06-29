@@ -174,16 +174,29 @@ def parse_file(a_fname):
         if a_fname != "-":
             ifile = codecs.open(a_fname, 'r', ENCODING)
         # iterate over file's lines
+        broken = False
         conll_sentence = CONLLSentence()
         for iline in ifile:
             iline = iline.strip()
             if not iline:
-                process_cc(conll_sentence)
+                if broken:
+                    conll_sentence.clear()
+                    broken = False
+                else:
+                    process_cc(conll_sentence)
             elif iline[0] == ESC_CHAR:
-                process_cc(conll_sentence)
+                if broken:
+                    conll_sentence.clear()
+                    broken = False
+                else:
+                    process_cc(conll_sentence)
                 continue
             else:
-                conll_sentence.push_word(CONLLWord(iline))
+                try:
+                    conll_sentence.push_word(CONLLWord(iline))
+                except:
+                    broken = True
+                    continue
         process_cc(conll_sentence)
     finally:
         ifile.close()
