@@ -44,7 +44,7 @@ class Ising(object):
     reweight - re-estimate weights of undirected links
     """
 
-    def __init__(self, a_node_wght = 1., a_edge_wght = 1.):
+    def __init__(self, a_node_wght = 0., a_edge_wght = 1.):
         """
         Class constructor
 
@@ -102,7 +102,7 @@ class Ising(object):
         if a_weight is None:
             a_weight = self.dflt_node_wght
         # each node has the form: (item, weight: fixed_weight, edges: {trg: edge_weight})
-        self.nodes.append([a_item, a_weight, a_weight, defaultdict(lambda: 0.)])
+        self.nodes.append([a_item, a_weight, 0., defaultdict(lambda: 0.)])
         self.item2nid[a_item] = self.n_nodes
         self.n_nodes += 1
 
