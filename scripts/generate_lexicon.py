@@ -13,7 +13,7 @@ generate_lexicon.py [OPTIONS] [INPUT_FILES]
 # Imports
 from __future__ import unicode_literals, print_function
 from germanet import Germanet, normalize
-from ising import Ising
+from ising import Ising, WGHT_IDX, FXD_WGHT_IDX
 from tokenizer import Tokenizer
 
 from itertools import chain, combinations
@@ -37,7 +37,7 @@ TERNARY = "ternary"
 ROCCHIO = "rocchio"
 SVM = "svm"
 GNET_DIR = "germanet_dir"
-CORPUS_DIR = "corpus_dir"
+CC_FILE = "cc_file"
 
 ESULI = "esuli"
 TAKAMURA = "takamura"
@@ -51,6 +51,7 @@ SYNRELS = set(["has_pertainym", "is_related_to", "entails", "is_entailed_by", "h
 ANTIRELS = set(["has_antonym"])
 
 W_DELIM_RE = re.compile('(?:\s|{:s})+'.format('|'.join([re.escape(c) for c in string.punctuation])))
+WORD_RE = re.compile('^[-.\w]+$', re.U)
 TAB_RE = re.compile(' *\t+ *')
 ENCODING = "utf-8"
 POSITIVE = "positive"
@@ -64,7 +65,7 @@ TOKENIZER = Tokenizer()
 INFORMATIVE_TAGS = set(["AD", "FM", "NE", "NN", "VV"])
 STOP_WORDS = set()
 FORM2LEMMA = dict()
-lemmatize = lambda x: normalize(x)
+lemmatize = lambda x, a_prune = True: normalize(x)
 
 ##################################################################
 # Main
@@ -468,7 +469,7 @@ def _tkm_add_germanet(ising, a_germanet):
     @return \c void
     """
     # add all lemmas from the `FORM2LEMMA` dictionary
-    for ilemma in FORM2LEMMA.itervalues():
+    for ilemma in set(FORM2LEMMA.itervalues()):
         if ilemma not in STOP_WORDS:
             ising.add_node(ilemma)
     # add all lemmas from synsets
@@ -543,32 +544,38 @@ def _tkm_add_germanet(ising, a_germanet):
         for ilemma1, ilemma2 in combinations(ilexemes, 2):
             ising.add_edge(ilemma1, ilemma2, 1.)
 
-def _tkm_add_corpus(ising, a_corpus_file):
+def _tkm_add_corpus(ising, a_cc_file):
     """
     Add lexical nodes from corpus to the Ising spin model
 
     @param a_ising - instance of the Ising spin model
-    @param a_corpus_file - file containing conjoined word pairs extracted from corpus
+    @param a_cc_file - file containing conjoined word pairs extracted from corpus
 
     @return \c void
     """
+    ifields = []
     iwght = 1.
     ilemma1 = ilemma2 = ""
-    with codecs.open(a_corpus_file, 'r', ENCODING) as ifile:
+    with codecs.open(a_cc_file, 'r', ENCODING) as ifile:
         for iline in ifile:
             iline = iline.strip()
             if not iline:
                 continue
-            ilemma1, ilemma2, iwght = TAB_RE.split(iline)
-            ising.add_edge(normalize(ilemma1), normalize(ilemma2), float(iwght))
+            ifields = TAB_RE.split(iline)
+            if len(ifields) != 3:
+                continue
+            ilemma1, ilemma2, iwght = ifields
+            if WORD_RE.match(ilemma1) and WORD_RE.match(ilemma2):
+                ising.add_edge(normalize(ilemma1), normalize(ilemma2), float(iwght), \
+                                   a_add_missing = True)
 
-def takamura(a_germanet, a_N, a_corpus_dir, a_pos, a_neg, a_neut):
+def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut):
     """
     Method for extending sentiment lexicons using Esuli and Sebastiani method
 
     @param a_germanet - GermaNet instance
     @param a_N - number of terms to extract
-    @param a_corpus_file - file containing conjoined word pairs extracted from corpus
+    @param a_cc_file - file containing coordinatively conjoined phrases
     @param a_pos - initial set of positive terms to be expanded
     @param a_neg - initial set of negative terms to be expanded
     @param a_neut - initial set of neutral terms to be expanded
@@ -578,10 +585,32 @@ def takamura(a_germanet, a_N, a_corpus_dir, a_pos, a_neg, a_neut):
     # create initial empty network
     ising = Ising()
     # populate network from GermaNet
+    print("Adding GermaNet synsets...", end = "", file = sys.stderr)
     _tkm_add_germanet(ising, a_germanet)
+    print("done (Ising model has {:d} nodes)".format(ising.n_nodes), file = sys.stderr)
     # populate network from corpus
-    _tkm_add_corpus(ising, a_corpus_file)
-    # perform MCMC sampling
+    print("Adding coordinate phrases from corpus...", end = "", file = sys.stderr)
+    _tkm_add_corpus(ising, a_cc_file)
+    print("done (Ising model has {:d} nodes)".format(ising.n_nodes), file = sys.stderr)
+    # reweight edges
+    ising.reweight()
+    # set fixed weights for words pertaining to the positive, negative, and neutral set
+    for ipos in a_pos:
+        if ipos in ising:
+            ising[ipos][WGHT_IDX] = ising[ipos][FXD_WGHT_IDX] = abs(ising[ipos][FXD_WGHT_IDX])
+        else:
+            ising.add_node(ipos, 1.)
+    for ineg in a_neg:
+        if ineg in ising:
+            ising[ineg][WGHT_IDX] = ising[ineg][FXD_WGHT_IDX] = - abs(ising[ineg][FXD_WGHT_IDX])
+        else:
+            ising.add_node(ineg, -1.)
+    for ineut in a_neut:
+        if ineut in ising:
+            ising[ineut][WGHT_IDX] = ising[ineut][FXD_WGHT_IDX] = 0.
+        else:
+            ising.add_node(ineut, 0.)
+    sys.exit(66)
     # ising.mcmc()
 
 def main(a_argv):
@@ -600,7 +629,7 @@ generating sentiment lexicons.""")
     subparser_takamura = subparsers.add_parser(TAKAMURA, help = "Ising spin model (Takamura, 2005)")
     subparser_takamura.add_argument("--form2lemma", "-l", help = "file containing form - lemma correspondances", type = str)
     subparser_takamura.add_argument(GNET_DIR, help = "directory containing GermaNet files")
-    subparser_takamura.add_argument(CORPUS_DIR, help = "directory containing raw corpus files")
+    subparser_takamura.add_argument(CC_FILE, help = "file containing coordinatively conjoined phrases")
     subparser_takamura.add_argument("N", help = "final number of additional terms to extract", type = int)
     subparser_takamura.add_argument("seed_set", help = "initial seed set of positive, negative, and neutral terms")
 
@@ -627,7 +656,7 @@ generating sentiment lexicons.""")
     if GNET_DIR in args:
         print("Reading GermaNet synsets... ", end = "", file = sys.stderr)
         igermanet = Germanet(getattr(args, GNET_DIR))
-        if "form2lemma" in args:
+        if "form2lemma" in args and args.form2lemma is not None:
             global lemmatize
             lemmatize = _lemmatize
             _get_form2lemma(args.form2lemma)
@@ -645,7 +674,7 @@ generating sentiment lexicons.""")
     if args.dmethod == ESULI:
         esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity, POS_SET, NEG_SET, NEUT_SET)
     elif args.dmethod == TAKAMURA:
-        new_sets = takamura(igermanet, args.N, getattr(args, CORPUS_DIR), POS_SET, NEG_SET, NEUT_SET)
+        new_sets = takamura(igermanet, args.N, getattr(args, CC_FILE), POS_SET, NEG_SET, NEUT_SET)
     print("Expanding seed sets... done", file = sys.stderr)
 
     for iclass, iset in ((POSITIVE, POS_SET), (NEGATIVE, NEG_SET), (NEUTRAL, NEUT_SET)):

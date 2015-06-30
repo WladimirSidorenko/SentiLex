@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-Monte Carlo simulation of the 2D Ising model
+Implementation of the Ising spin model
 """
 
 ##################################################################
@@ -11,12 +11,19 @@ from scipy import *
 from scipy import weave
 from pylab import *
 
+import math
+
 ##################################################################
 # Variables and Constants
 Nitt = 1000000  # total number of Monte Carlo steps
 N = 10          # linear dimension of the lattice, lattice-size= N x N
 warm = 1000     # Number of warmup steps
 measure = 100   # How often to take a measurement
+
+ITEM_IDX = 0
+WGHT_IDX = 1
+FXD_WGHT_IDX = 2
+EDGE_IDX = 3
 
 ##################################################################
 # Class
@@ -32,7 +39,9 @@ class Ising(object):
     dflt_edge_wght - default weight to be used for edges
 
     Public methods:
-
+    add_node - add node to the ising spin model
+    add_edge - connect two nodes via an undirected link
+    reweight - re-estimate weights of undirected links
     """
 
     def __init__(self, a_node_wght = 1., a_edge_wght = 1.):
@@ -48,6 +57,37 @@ class Ising(object):
         self.nodes = []
         self.n_nodes = 0
 
+    def __contains__(self, a_item):
+        """
+        Check if an item is present among the Ising nodes
+
+        @param a_node_wght - default weight to be used for nodes
+
+        @return \c True
+        """
+        return (a_item in self.item2nid)
+
+    def __getitem__(self, a_item):
+        """
+        Return node corresponding to the given item
+
+        @param a_item - item which should be retrieved
+
+        @return node corresponding to the given item
+        """
+        return self.nodes[self.item2nid[a_item]]
+
+    def __setitem__(self, a_item, a_value):
+        """
+        Return node corresponding to the given item
+
+        @param a_item - item which should be retrieved
+
+        @return node corresponding to the given item
+        """
+        ret = self.nodes[self.item2nid[a_item]] = a_value
+        return ret
+
     def add_node(self, a_item, a_weight = None):
         """
         Add node to the ising spin model
@@ -61,29 +101,59 @@ class Ising(object):
             return
         if a_weight is None:
             a_weight = self.dflt_node_wght
-        self.nodes.append((a_item, a_weight, defaultdict(lambda: 0.)))
+        # each node has the form: (item, weight: fixed_weight, edges: {trg: edge_weight})
+        self.nodes.append([a_item, a_weight, a_weight, defaultdict(lambda: 0.)])
         self.item2nid[a_item] = self.n_nodes
         self.n_nodes += 1
 
-    def add_edge(self, a_item1, a_item2, a_wght = None, a_allow_self_links = False):
+    def add_edge(self, a_item1, a_item2, a_wght = None, a_allow_self_links = False, \
+                     a_add_missing = False):
         """
-        Add an undirected link between two existing nodes in the ising spin model
+        Connect two nodes via an undirected link
 
         @param a_item1 - first item which should be connected via a link
         @param a_item2 - second item which should be connected via a link
         @param a_wght - initial weight associated with the edge
         @param a_allow_self_links - boolean indicating whether cyclic links to
                       the same node should be allowed
+        @param a_add_missing - boolean flag indicating whether missing nodes should
+                      be added
 
         @return \c void
         """
         if not a_allow_self_links and a_item1 == a_item2:
             return
-        assert a_item1 in self.item2nid, "Item '{:s}' not found in Ising model".format(repr(a_item1))
-        assert a_item2 in self.item2nid, "Item '{:s}' not found in Ising model".format(repr(a_item2))
+        if a_item1 not in self.item2nid:
+            if a_add_missing:
+                self.add_node(a_item1)
+            else:
+                raise RuntimeError("Item '{:s}' not found in Ising model".format(repr(a_item1)))
+        if a_item2 not in self.item2nid:
+            if a_add_missing:
+                self.add_node(a_item2)
+            else:
+                raise RuntimeError("Item '{:s}' not found in Ising model".format(repr(a_item2)))
         inid1 = self.item2nid[a_item1]; inid2 = self.item2nid[a_item2]
-        self.nodes[inid1][-1][inid2] += a_wght
-        self.nodes[inid2][-1][inid1] += a_wght
+        self.nodes[inid1][EDGE_IDX][inid2] += a_wght
+        self.nodes[inid2][EDGE_IDX][inid1] += a_wght
+
+    def reweight(self):
+        """
+        Re-estimate weights of undirected links by multiplying them with
+        `1/sqrt(d(i) * d(j))` where `d(i)` and `d(j)` denote the degree of the
+        adjacent nodes.
+
+        @return \c void
+        """
+        children = []
+        src_degree = 0.; trg_degree = 0.
+        for isrc_nid in xrange(self.n_nodes):
+            children = self.nodes[isrc_nid][EDGE_IDX]
+            src_degree = math.sqrt(float(len(children)))
+            for itrg_nid in children:
+                # multiply edge weight with 1/sqrt(d(i) * d(j))
+                trg_degree = math.sqrt(float(len(self.nodes[itrg_nid][EDGE_IDX])))
+                children[itrg_nid] *= 1. / (src_degree * trg_degree)
 
 ##################################################################
 # Methods
