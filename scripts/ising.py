@@ -12,6 +12,7 @@ from scipy import weave
 from pylab import *
 
 import math
+import numpy
 
 ##################################################################
 # Variables and Constants
@@ -24,6 +25,8 @@ ITEM_IDX = 0
 WGHT_IDX = 1
 FXD_WGHT_IDX = 2
 EDGE_IDX = 3
+
+ALPHA = 10**-2
 
 ##################################################################
 # Class
@@ -102,7 +105,7 @@ class Ising(object):
         if a_weight is None:
             a_weight = self.dflt_node_wght
         # each node has the form: (item, weight: fixed_weight, edges: {trg: edge_weight})
-        self.nodes.append([a_item, a_weight, 0., defaultdict(lambda: 0.)])
+        self.nodes.append([a_item, a_weight, a_weight, defaultdict(lambda: 0.)])
         self.item2nid[a_item] = self.n_nodes
         self.n_nodes += 1
 
@@ -154,6 +157,51 @@ class Ising(object):
                 # multiply edge weight with 1/sqrt(d(i) * d(j))
                 trg_degree = math.sqrt(float(len(self.nodes[itrg_nid][EDGE_IDX])))
                 children[itrg_nid] *= 1. / (src_degree * trg_degree)
+
+    def train(self, a_betas = numpy.linspace(start = 0.1, end = 2., num = 20), a_epsilon = 10 ** -5):
+        """
+        Determine spin orientation of the model
+
+        @param a_beta - range of beta values to test
+        @param a_epsilon - epsilon value to determine convergence
+
+        @return beta2em - dictionary mapping beta values to energy/magnetization values
+        """
+        ret = dict()
+        inode = None
+        energy = magn = float("inf")
+        prev_energy = prev_magn = 0.
+        edge_wght = node_wght = 0.
+        node_wghts = norm_wghts = []
+        # iterate over all specified beta values
+        for ibeta in a_betas:
+            # optimize spin orientation until magnitization is below
+            # the threshold
+            while abs(prev_magn - magn) < a_epsilon:
+                for inid in xrange(self.n_nodes):
+                    inode = self.nodes[inid]
+                    edge_wght = sum([self.nodes[k][FXD_WGHT_IDX] * v for k, v in inode[EDGE_IDX].iteritems()])
+                    norm_wghts = [exp(ibeta * edge_wght - ALPHA * (x_i - inode[FXD_WGHT_IDX]) ** 2) for x_i in [-1., 1.]]
+                    node_wght = sum([x_i * iwght for x_i, iwght in zip([-1., 1.], norm_wghts)])
+                    # update node's spin orientation
+                    inode[WGHT_IDX] = node_wght / float(sum(norm_wghts))
+            # estimate energy and magnetization
+            energy, magn = self._measure()
+            ret[ibeta] = (energy, magn)
+        return ret
+
+    def _measure(self):
+        """
+        Measure energy and magnetization of the current model
+
+        @return 2-tuple holding energy and magnetization
+        """
+        energy = magn = edge_wght = 0.
+        for inode in self.nodes:
+            edge_wght = sum([self.nodes[k][WGHT_IDX] * v for k, v in inode[EDGE_IDX].iteritems()])
+            energy += inode[WGHT_IDX] * edge_wght / 2.
+            magn += inode[WGHT_IDX]
+        return (energy, magn)
 
 ##################################################################
 # Methods

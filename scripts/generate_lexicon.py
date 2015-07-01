@@ -535,7 +535,7 @@ def _tkm_add_germanet(ising, a_germanet):
                     for ilemma1 in lemmas1:
                         for ilemma2 in lemmas2:
                             ising.add_edge(ilemma1, ilemma2, iwght)
-    # establish links between lemmas pertaining to the same synset
+    # establish links between lemmas which pertain to the same synset
     ilexemes = set()
     for ilex_ids in a_germanet.synid2lexids.itervalues():
         ilexemes = set([ilex for ilex_id in ilex_ids for ilex in a_germanet.lexid2lex[ilex_id]])
@@ -610,8 +610,7 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut):
             ising[ineut][WGHT_IDX] = ising[ineut][FXD_WGHT_IDX] = 0.
         else:
             ising.add_node(ineut, 0.)
-    sys.exit(66)
-    # ising.mcmc()
+    beta2magnet = ising.train()
 
 def main(a_argv):
     """
