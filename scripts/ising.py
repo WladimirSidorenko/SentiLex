@@ -16,17 +16,15 @@ import numpy
 
 ##################################################################
 # Variables and Constants
-Nitt = 1000000  # total number of Monte Carlo steps
-N = 10          # linear dimension of the lattice, lattice-size= N x N
-warm = 1000     # Number of warmup steps
-measure = 100   # How often to take a measurement
-
 ITEM_IDX = 0
 WGHT_IDX = 1
-FXD_WGHT_IDX = 2
-EDGE_IDX = 3
+PREV_WGHT_IDX = 2
+FXD_WGHT_IDX = 3
+EDGE_IDX = 4
 
-ALPHA = 10**-2
+ALPHA = 1000
+DFLT_EPSILON = 10 ** -5
+SPIN_DOMAIN = (-1., 1.)
 
 ##################################################################
 # Class
@@ -59,6 +57,7 @@ class Ising(object):
         self.item2nid = dict()
         self.nodes = []
         self.n_nodes = 0
+        self.beta = -1
 
     def __contains__(self, a_item):
         """
@@ -105,7 +104,7 @@ class Ising(object):
         if a_weight is None:
             a_weight = self.dflt_node_wght
         # each node has the form: (item, weight: fixed_weight, edges: {trg: edge_weight})
-        self.nodes.append([a_item, a_weight, a_weight, defaultdict(lambda: 0.)])
+        self.nodes.append([a_item, a_weight, a_weight, a_weight, defaultdict(lambda: 0.)])
         self.item2nid[a_item] = self.n_nodes
         self.n_nodes += 1
 
@@ -158,37 +157,60 @@ class Ising(object):
                 trg_degree = math.sqrt(float(len(self.nodes[itrg_nid][EDGE_IDX])))
                 children[itrg_nid] *= 1. / (src_degree * trg_degree)
 
-    def train(self, a_betas = numpy.linspace(start = 0.1, end = 2., num = 20), a_epsilon = 10 ** -5):
+    def train(self, a_betas = numpy.linspace(start = 0.1, end = 2., num = 20), \
+                  a_epsilon = DFLT_EPSILON, a_plot = False):
         """
         Determine spin orientation of the model
 
         @param a_beta - range of beta values to test
         @param a_epsilon - epsilon value to determine convergence
+        @param a_plot - boolean flag indicating whether the energy changes should be plotted
 
-        @return beta2em - dictionary mapping beta values to energy/magnetization values
+        @return \c void
         """
-        ret = dict()
-        inode = None
-        energy = magn = float("inf")
-        prev_energy = prev_magn = 0.
-        edge_wght = node_wght = 0.
-        node_wghts = norm_wghts = []
+        beta2em = dict()
+        i = best_i = -1
+        energy = magn = min_magn = float("inf")
         # iterate over all specified beta values
-        for ibeta in a_betas:
-            # optimize spin orientation until magnitization is below
-            # the threshold
-            while abs(prev_magn - magn) < a_epsilon:
-                for inid in xrange(self.n_nodes):
-                    inode = self.nodes[inid]
-                    edge_wght = sum([self.nodes[k][FXD_WGHT_IDX] * v for k, v in inode[EDGE_IDX].iteritems()])
-                    norm_wghts = [exp(ibeta * edge_wght - ALPHA * (x_i - inode[FXD_WGHT_IDX]) ** 2) for x_i in [-1., 1.]]
-                    node_wght = sum([x_i * iwght for x_i, iwght in zip([-1., 1.], norm_wghts)])
-                    # update node's spin orientation
-                    inode[WGHT_IDX] = node_wght / float(sum(norm_wghts))
-            # estimate energy and magnetization
-            energy, magn = self._measure()
-            ret[ibeta] = (energy, magn)
-        return ret
+        for i, ibeta in enumerate(a_betas):
+            self.beta = ibeta
+            # optimize spin orientation of the model
+            energy, magn = self._train(a_epsilon)
+            beta2em[ibeta] = (energy, magn)
+            if magn < min_magn:
+                min_magn = magn
+                best_i = i
+        # re-train the model with the best parameter setting
+        if best_i != i:
+            ibeta = a_betas[best_i]
+            self.beta = ibeta
+            self._train(a_epsilon)
+        # plot energy/magnetization development, if asked to do so
+        # if a_plot:
+        #     self._plot(beta2em)
+
+    def _train(self, a_epsilon = DFLT_EPSILON):
+        """
+        Helper function for doing single training run with the given beta
+
+        @param a_epsilon - epsilon value to determine convergence
+
+        @return 2-tuple holding energy and magnetism values
+        """
+        energy = magn = 0.
+        a_epsilon = abs(a_epsilon)
+        prev_energy = prev_magn = float("inf")
+        while abs(prev_magn - magn) < a_epsilon:
+            for inode in self.nodes:
+                # update node's spin orientation
+                inode[WGHT_IDX] = self._compute_mean(inode, a_idx = PREV_WGHT_IDX):
+                # re-estimate energy and magnetization
+                prev_energy, prev_magn = energy, magn
+                energy, magn = self._measure()
+            # after all the nodes have been processed, remember the newly
+            # computed node weights as the old ones
+            for inode in self.nodes:
+                inode[PREV_WGHT_IDX] = inode[WGHT_IDX]
 
     def _measure(self):
         """
@@ -196,15 +218,39 @@ class Ising(object):
 
         @return 2-tuple holding energy and magnetization
         """
-        energy = magn = edge_wght = 0.
+        energy = magn = 0.
+        mean = q_pos = q_neg = 0.
         for inode in self.nodes:
-            edge_wght = sum([self.nodes[k][WGHT_IDX] * v for k, v in inode[EDGE_IDX].iteritems()])
-            energy += inode[WGHT_IDX] * edge_wght / 2.
             magn += inode[WGHT_IDX]
-        return (energy, magn)
+            mean = self._compute_mean(inode)
+            q_pos = (1. + mean) / 2.; q_neg = (1. - mean) / 2.
+            energy -= (self.beta / 2.) * inode[WGHT_IDX] * \
+                sum([self.nodes[k][WGHT_IDX] * v for k, v in a_node[EDGE_IDX].iteritems()]) - \
+                q_pos * log(q_pos) - q_neg * log(q_neg)
+        return (energy, magn / float(self.n_nodes))
+
+    def _compute_mean(self, a_node, a_idx = PREV_WGHT_IDX):
+        """
+        Compute mean of spin orientation of the given node
+
+        @param a_node - node whose spin orientation should be computed
+        @param a_idx - list index of neighbor weights
+
+        @return float representing the mean spin orientation
+        """
+        edge_wght = sum([self.nodes[k][a_idx] * v for k, v in a_node[EDGE_IDX].iteritems()])
+        norm_wghts = [exp(self.beta * x_i * edge_wght - ALPHA * ((x_i - inode[FXD_WGHT_IDX]) ** 2)) \
+                                  for x_i in SPIN_DOMAIN]
+        node_wght = sum([x_i * iwght for x_i, iwght in zip(SPIN_DOMAIN, norm_wghts)])
+        return (node_wght / float(sum(norm_wghts)))
 
 ##################################################################
-# Methods
+# Reference Implementation
+Nitt = 1000000  # total number of Monte Carlo steps
+N = 10          # linear dimension of the lattice, lattice-size= N x N
+warm = 1000     # Number of warmup steps
+measure = 100   # How often to take a measurement
+
 def CEnergy(latt):
     "Energy of a 2D Ising lattice at particular configuration"
     Ene = 0

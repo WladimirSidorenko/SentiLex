@@ -597,20 +597,23 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut):
     # set fixed weights for words pertaining to the positive, negative, and neutral set
     for ipos in a_pos:
         if ipos in ising:
-            ising[ipos][WGHT_IDX] = ising[ipos][FXD_WGHT_IDX] = abs(ising[ipos][WGHT_IDX])
+            ising[ipos][WGHT_IDX] = ising[ipos][PREV_WGHT_IDX] = \
+                ising[ipos][FXD_WGHT_IDX] = abs(ising[ipos][WGHT_IDX])
         else:
             ising.add_node(ipos, 1.)
     for ineg in a_neg:
         if ineg in ising:
-            ising[ineg][WGHT_IDX] = ising[ineg][FXD_WGHT_IDX] = - abs(ising[ineg][WGHT_IDX])
+            ising[ineg][WGHT_IDX] = ising[ineg][PREV_WGHT_IDX] = \
+                ising[ineg][FXD_WGHT_IDX] = - abs(ising[ineg][WGHT_IDX])
         else:
             ising.add_node(ineg, -1.)
     for ineut in a_neut:
         if ineut in ising:
-            ising[ineut][WGHT_IDX] = ising[ineut][FXD_WGHT_IDX] = 0.
+            ising[ineut][WGHT_IDX] = ising[ineut][PREV_WGHT_IDX] = \
+                ising[ineut][FXD_WGHT_IDX] = 0.
         else:
             ising.add_node(ineut, 0.)
-    beta2magnet = ising.train()
+    beta2magnet = ising.train(a_plot = "energy.png")
 
 def main(a_argv):
     """
