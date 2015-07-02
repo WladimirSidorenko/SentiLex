@@ -13,7 +13,7 @@ generate_lexicon.py [OPTIONS] [INPUT_FILES]
 # Imports
 from __future__ import unicode_literals, print_function
 from germanet import Germanet, normalize
-from ising import Ising, WGHT_IDX, PREV_WGHT_IDX, FXD_WGHT_IDX
+from ising import Ising, WGHT_IDX, HAS_FXD_WGHT, FXD_WGHT_IDX
 from tokenizer import Tokenizer
 
 from itertools import chain, combinations
@@ -602,16 +602,19 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot = None):
             ising[ipos][FXD_WGHT_IDX] = 1.
         else:
             ising.add_node(ipos, 1.)
+        ising[ipos][HAS_FXD_WGHT] = 1
     for ineg in a_neg:
         if ineg in ising:
             ising[ineg][FXD_WGHT_IDX] = -1.
         else:
             ising.add_node(ineg, -1.)
+        ising[ineg][HAS_FXD_WGHT] = 1
     for ineut in a_neut:
         if ineut in ising:
             ising[ineut][FXD_WGHT_IDX] = 0.
         else:
             ising.add_node(ineut, 0.)
+        ising[ineut][HAS_FXD_WGHT] = 1
     ising.train(a_plot = a_plot)
     # obtain Ising nodes and sort them according to their spin orientations
     seed_set = a_pos | a_neg | a_neut

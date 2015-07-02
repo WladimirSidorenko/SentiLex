@@ -20,7 +20,9 @@ import numpy
 # Variables and Constants
 ITEM_IDX = 0
 WGHT_IDX = 1
-PREV_WGHT_IDX = 2
+# unused
+# PREV_WGHT_IDX = 2
+HAS_FXD_WGHT = 2
 FXD_WGHT_IDX = 3
 EDGE_IDX = 4
 
@@ -110,7 +112,7 @@ class Ising(object):
         if a_weight is None:
             a_weight = self.dflt_node_wght
         # each node has the form: (item, weight: fixed_weight, edges: {trg: edge_weight})
-        self.nodes.append([a_item, a_weight, a_weight, a_weight, defaultdict(lambda: 0.)])
+        self.nodes.append([a_item, a_weight, 0, a_weight, defaultdict(lambda: 0.)])
         self.item2nid[a_item] = self.n_nodes
         self.n_nodes += 1
 
@@ -216,13 +218,13 @@ class Ising(object):
                 # update node's spin orientation (according to Takamura's code,
                 # we do the update reluing on the new spin weights)
                 # was `a_idx = PREV_WGHT_IDX`
-                inode[WGHT_IDX] = self._compute_mean(inode, a_idx = WGHT_IDX)
+                inode[WGHT_IDX] = self._compute_mean(inode, a_idx = WGHT_IDX, a_beta = a_beta)
                 # if inode[WGHT_IDX] != inode[PREV_WGHT_IDX]:
                 #     print("1) inode[{:s}] = {:f}".format(repr(inode[ITEM_IDX]), inode[WGHT_IDX]), file = sys.stderr)
                 #     print("2) inode[{:s}] = {:f}".format(repr(inode[ITEM_IDX]), inode[PREV_WGHT_IDX]), file = sys.stderr)
             # re-estimate energy and magnetization
             prev_energy, prev_magn = energy, magn
-            energy, magn = self._measure()
+            energy, magn = self._measure(a_beta = a_beta)
             print("Run #{:d}: energy = {:f}, magnetization = {:f}".format(cnt, energy, magn), file = sys.stderr)
             # after all nodes have been processed, remember the newly computed
             # node weights as the old ones (commented out according to Takamura's code)
@@ -243,7 +245,11 @@ class Ising(object):
 
         @return \c void
         """
-        pass
+        for inode in self.nodes:
+            if inode[HAS_FXD_WGHT]:
+                inode[WGHT_IDX] = inode[FXD_WGHT_IDX]
+            else:
+                inode[WGHT_IDX] = 0.
 
     def _measure(self, a_beta = None):
         """
@@ -260,17 +266,17 @@ class Ising(object):
         energy = magn = sum1 = sum2 = sum3 = node_wght = 0.
         for inode in self.nodes:
             node_wght = inode[WGHT_IDX]
-            edge_wght = sum([self.nodes[k][a_idx] * v for k, v in a_node[EDGE_IDX].iteritems()])
+            edge_wght = sum([self.nodes[k][WGHT_IDX] * v for k, v in inode[EDGE_IDX].iteritems()])
             probs = self._compute_probs(inode, WGHT_IDX, a_beta)
 
             magn += node_wght
             sum1 -= node_wght * edge_wght
             # entropy
-            sum2 -= sum([iprob * log(iprob, 2.) for iprob in probs if iprob])
+            sum2 -= sum([iprob * math.log(iprob, 2.) for iprob in probs if iprob])
             # penalty
             if inode[HAS_FXD_WGHT]:
-                sum3 += sum([iprob * (x_i - inode[FXD_WGHT_IDX])**2] for iprob, x_i in \
-                                zip(probs, SPIN_DOMAIN))
+                sum3 += sum([iprob * (x_i - inode[FXD_WGHT_IDX])**2 for iprob, x_i in \
+                                zip(probs, SPIN_DOMAIN)])
             # mean = self._compute_mean(inode)
             # # mean = inode[WGHT_IDX]
             # q_pos = (1. + mean) / 2.; q_neg = (1. - mean) / 2.
@@ -293,7 +299,7 @@ class Ising(object):
         @return float representing the mean spin orientation
         """
         probs = self._compute_probs(a_node, a_idx, a_beta)
-        return sum([x_i * iprob for x_i, iprob in zip(SPIN_DOMAIN, probs]])
+        return sum([x_i * iprob for x_i, iprob in zip(SPIN_DOMAIN, probs)])
 
     def _compute_probs(self, a_node, a_idx = WGHT_IDX, a_beta = None):
         """
@@ -309,7 +315,7 @@ class Ising(object):
             a_beta = self.beta
 
         edge_wght = self.beta * sum([self.nodes[k][a_idx] * v for k, v in a_node[EDGE_IDX].iteritems()])
-        probs = [exp(x_i * edge_wght - ALPHA * ((x_i - a_node[FXD_WGHT_IDX]) ** 2)) \
+        probs = [exp(x_i * edge_wght - ALPHA * a_node[HAS_FXD_WGHT] * ((x_i - a_node[FXD_WGHT_IDX]) ** 2)) \
                      for x_i in SPIN_DOMAIN]
         norm = float(sum(probs))
         if norm:
