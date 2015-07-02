@@ -569,7 +569,7 @@ def _tkm_add_corpus(ising, a_cc_file):
                 ising.add_edge(normalize(ilemma1), normalize(ilemma2), float(iwght), \
                                    a_add_missing = True)
 
-def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut):
+def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot = None):
     """
     Method for extending sentiment lexicons using Esuli and Sebastiani method
 
@@ -579,6 +579,8 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut):
     @param a_pos - initial set of positive terms to be expanded
     @param a_neg - initial set of negative terms to be expanded
     @param a_neut - initial set of neutral terms to be expanded
+    @param a_plot - name of file in which generated statics plots should be
+                    saved (None if no plot should be generated)
 
     @return \c 0 on success, non-\c 0 otherwise
     """
@@ -597,24 +599,31 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut):
     # set fixed weights for words pertaining to the positive, negative, and neutral set
     for ipos in a_pos:
         if ipos in ising:
-            ising[ipos][WGHT_IDX] = ising[ipos][PREV_WGHT_IDX] = \
-                ising[ipos][FXD_WGHT_IDX] = 1.
+            ising[ipos][FXD_WGHT_IDX] = 1.
         else:
             ising.add_node(ipos, 1.)
     for ineg in a_neg:
         if ineg in ising:
-            ising[ineg][WGHT_IDX] = ising[ineg][PREV_WGHT_IDX] = \
-                ising[ineg][FXD_WGHT_IDX] = -1.
+            ising[ineg][FXD_WGHT_IDX] = -1.
         else:
             ising.add_node(ineg, -1.)
-    # so far, the following block is unnecessary, because the default value for nodes is 0.
-    # for ineut in a_neut:
-    #     if ineut in ising:
-    #         ising[ineut][WGHT_IDX] = ising[ineut][PREV_WGHT_IDX] = \
-    #             ising[ineut][FXD_WGHT_IDX] = 0.
-    #     else:
-    #         ising.add_node(ineut, 0.)
-    beta2magnet = ising.train(a_plot = "energy.png")
+    for ineut in a_neut:
+        if ineut in ising:
+            ising[ineut][FXD_WGHT_IDX] = 0.
+        else:
+            ising.add_node(ineut, 0.)
+    ising.train(a_plot = a_plot)
+    # obtain Ising nodes and sort them according to their spin orientations
+    seed_set = a_pos | a_neg | a_neut
+    nodes = [inode for inode in sorted(ising.nodes, key = lambda x: x[WGHT_IDX]) \
+                 if inode[ITEM_IDX] not in seed_set]
+    seed_set.clear()
+    # extract additional terms
+    if a_N > len(nodes):
+        a_N = len(nodes)
+    a_N /= 2
+    a_neg.update(nodes[:a_N])
+    a_pos.update(nodes[-a_N:])
     sys.exit(66)
 
 def main(a_argv):
@@ -632,6 +641,9 @@ generating sentiment lexicons.""")
 
     subparser_takamura = subparsers.add_parser(TAKAMURA, help = "Ising spin model (Takamura, 2005)")
     subparser_takamura.add_argument("--form2lemma", "-l", help = "file containing form - lemma correspondances", type = str)
+    subparser_takamura.add_argument("--plot", "-p", \
+                                        help = "suffix of files in which to store the plot image", \
+                                        type = str, default = "")
     subparser_takamura.add_argument(GNET_DIR, help = "directory containing GermaNet files")
     subparser_takamura.add_argument(CC_FILE, help = "file containing coordinatively conjoined phrases")
     subparser_takamura.add_argument("N", help = "final number of additional terms to extract", type = int)
@@ -643,7 +655,7 @@ generating sentiment lexicons.""")
     subparser_esuli.add_argument("--clf-arity", help = "classifier's arity", \
                                      choices = [BINARY, TERNARY], default = BINARY)
     subparser_esuli.add_argument("--form2lemma", "-l", help = \
-                                     """file containing form - lemma correspondances for words occurring in synset definitions""", \
+                                     """file containing form - lemma correspondences for words occurring in synset definitions""", \
                                      type = str)
     subparser_esuli.add_argument(GNET_DIR, help = "directory containing GermaNet files")
     subparser_esuli.add_argument("N", help = "number of expansion iterations", type = int)
@@ -678,7 +690,8 @@ generating sentiment lexicons.""")
     if args.dmethod == ESULI:
         esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity, POS_SET, NEG_SET, NEUT_SET)
     elif args.dmethod == TAKAMURA:
-        new_sets = takamura(igermanet, args.N, getattr(args, CC_FILE), POS_SET, NEG_SET, NEUT_SET)
+        new_sets = takamura(igermanet, args.N, getattr(args, CC_FILE), POS_SET, NEG_SET, NEUT_SET, \
+                                a_plot = args.plot or None)
     print("Expanding seed sets... done", file = sys.stderr)
 
     for iclass, iset in ((POSITIVE, POS_SET), (NEGATIVE, NEG_SET), (NEUTRAL, NEUT_SET)):

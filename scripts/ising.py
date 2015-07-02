@@ -26,6 +26,9 @@ EDGE_IDX = 4
 
 INFINITY = float("inf")
 ALPHA = 10
+# BETA_RANGE = numpy.linspace(start = 0.1, stop = 2., num = 20)
+# BETA_RANGE = numpy.linspace(start = 1., stop = 10., num = 10)
+BETA_RANGE = numpy.linspace(start = 0., stop = 10., num = 5)
 DFLT_EPSILON = 10 ** -5
 SPIN_DOMAIN = (-1., 1.)
 
@@ -160,8 +163,7 @@ class Ising(object):
                 trg_degree = math.sqrt(float(len(self.nodes[itrg_nid][EDGE_IDX])))
                 children[itrg_nid] *= 1. / (src_degree * trg_degree)
 
-    def train(self, a_betas = numpy.linspace(start = 0.1, stop = 2., num = 20), \
-                  a_epsilon = DFLT_EPSILON, a_plot = False):
+    def train(self, a_betas = BETA_RANGE, a_epsilon = DFLT_EPSILON, a_plot = None):
         """
         Determine spin orientation of the model
 
@@ -172,44 +174,49 @@ class Ising(object):
         @return \c void
         """
         beta2em = dict()
-        i = best_i = -1
+        ibeta = best_beta = -1
         energy = magn = min_magn = INFINITY
         # iterate over all specified beta values
         for i, ibeta in enumerate(a_betas):
-            self.beta = ibeta
             print("Iteration #{:d}: beta = {:f}".format(i, ibeta), file = sys.stderr)
             # optimize spin orientation of the model
-            energy, magn = self._train(a_epsilon)
+            energy, magn = self._train(ibeta, a_epsilon)
             print("Energy = {:f}, magnetization = {:f}".format(energy, magn), file = sys.stderr)
             beta2em[ibeta] = (energy, magn)
             if magn < min_magn:
                 min_magn = magn
-                best_i = i
+                best_beta = ibeta
         # re-train the model with the best parameter setting
-        if best_i != i:
-            ibeta = a_betas[best_i]
-            self.beta = ibeta
-            self._train(a_epsilon)
+        if best_beta != ibeta:
+            self.beta = best_beta
+            self._train(best_beta, a_epsilon)
         # plot energy/magnetization development, if asked to do so
-        # if a_plot:
-        #     self._plot(beta2em)
+        if a_plot is not None:
+            self._plot(a_plot, beta2em)
 
-    def _train(self, a_epsilon = DFLT_EPSILON):
+    def _train(self, a_beta = None, a_epsilon = DFLT_EPSILON):
         """
         Helper function for doing single training run with the given beta
 
+        @param a_beta - beta value to use
         @param a_epsilon - epsilon value to determine convergence
 
-        @return 2-tuple holding energy and magnetism values
+        @return 2-tuple holding energy and magnetization values
         """
+        if a_beta is None:
+            a_beta = self.beta
         cnt = 0
         energy = magn = 0.
         a_epsilon = abs(a_epsilon)
         prev_energy = prev_magn = INFINITY
+        # set initial weights
+        self._train_init(a_beta)
         while prev_magn == INFINITY or abs(prev_magn - magn) > a_epsilon:
             for inode in self.nodes:
-                # update node's spin orientation
-                inode[WGHT_IDX] = self._compute_mean(inode, a_idx = PREV_WGHT_IDX)
+                # update node's spin orientation (according to Takamura's code,
+                # we do the update reluing on the new spin weights)
+                # was `a_idx = PREV_WGHT_IDX`
+                inode[WGHT_IDX] = self._compute_mean(inode, a_idx = WGHT_IDX)
                 # if inode[WGHT_IDX] != inode[PREV_WGHT_IDX]:
                 #     print("1) inode[{:s}] = {:f}".format(repr(inode[ITEM_IDX]), inode[WGHT_IDX]), file = sys.stderr)
                 #     print("2) inode[{:s}] = {:f}".format(repr(inode[ITEM_IDX]), inode[PREV_WGHT_IDX]), file = sys.stderr)
@@ -217,58 +224,118 @@ class Ising(object):
             prev_energy, prev_magn = energy, magn
             energy, magn = self._measure()
             print("Run #{:d}: energy = {:f}, magnetization = {:f}".format(cnt, energy, magn), file = sys.stderr)
-            # after all the nodes have been processed, remember the newly
-            # computed node weights as the old ones
-            for inode in self.nodes:
-                inode[PREV_WGHT_IDX] = inode[WGHT_IDX]
+            # after all nodes have been processed, remember the newly computed
+            # node weights as the old ones (commented out according to Takamura's code)
+            # for inode in self.nodes:
+            #     inode[PREV_WGHT_IDX] = inode[WGHT_IDX]
+
+            # prevent inifinite loops
             if prev_magn == INFINITY and cnt > 10:
                 break
             cnt += 1
         return (energy, magn)
 
-    def _measure(self):
+    def _train_init(self, a_beta):
+        """
+        Helper function for initializing state weights
+
+        @param a_beta - beta value to use
+
+        @return \c void
+        """
+        pass
+
+    def _measure(self, a_beta = None):
         """
         Measure energy and magnetization of the current model
 
+        @param a_beta - beta value to use
+
         @return 2-tuple holding energy and magnetization
         """
-        energy = magn = 0.
-        mean = q_pos = q_neg = 0.
+        if a_beta is None:
+            a_beta = self.beta
+        probs = []
+        edge_wght = 0.
+        energy = magn = sum1 = sum2 = sum3 = node_wght = 0.
         for inode in self.nodes:
-            magn += inode[WGHT_IDX]
-            mean = self._compute_mean(inode)
-            q_pos = (1. + mean) / 2.; q_neg = (1. - mean) / 2.
-            lq_pos = log(q_pos) if q_pos else 0.
-            lq_neg = log(q_neg) if q_neg else 0.
-            energy -= (self.beta / 2.) * inode[WGHT_IDX] * \
-                sum([self.nodes[k][WGHT_IDX] * v for k, v in inode[EDGE_IDX].iteritems()]) - \
-                q_pos * lq_pos - q_neg * lq_neg
+            node_wght = inode[WGHT_IDX]
+            edge_wght = sum([self.nodes[k][a_idx] * v for k, v in a_node[EDGE_IDX].iteritems()])
+            probs = self._compute_probs(inode, WGHT_IDX, a_beta)
+
+            magn += node_wght
+            sum1 -= node_wght * edge_wght
+            # entropy
+            sum2 -= sum([iprob * log(iprob, 2.) for iprob in probs if iprob])
+            # penalty
+            if inode[HAS_FXD_WGHT]:
+                sum3 += sum([iprob * (x_i - inode[FXD_WGHT_IDX])**2] for iprob, x_i in \
+                                zip(probs, SPIN_DOMAIN))
+            # mean = self._compute_mean(inode)
+            # # mean = inode[WGHT_IDX]
+            # q_pos = (1. + mean) / 2.; q_neg = (1. - mean) / 2.
+            # lq_pos = log(q_pos) if q_pos else 0.
+            # lq_neg = log(q_neg) if q_neg else 0.
+            # energy -= (self.beta / 2.) * inode[WGHT_IDX] * \
+            #     sum([self.nodes[k][WGHT_IDX] * v for k, v in inode[EDGE_IDX].iteritems()]) - \
+            #     q_pos * lq_pos - q_neg * lq_neg
+        energy = (sum1 * a_beta / 2.) + sum2 + sum3
         return (energy, magn / float(self.n_nodes))
 
-    def _compute_mean(self, a_node, a_idx = PREV_WGHT_IDX):
+    def _compute_mean(self, a_node, a_idx = WGHT_IDX, a_beta = None):
         """
         Compute mean of spin orientation of the given node
 
         @param a_node - node whose spin orientation should be computed
         @param a_idx - list index of neighbor weights
+        @param a_beta - beta value to use
 
         @return float representing the mean spin orientation
         """
-        # print("_compute_mean: edges:", repr([(self.nodes[k][a_idx], v) for k, v in a_node[EDGE_IDX].iteritems()]), file = sys.stderr)
-        edge_wght = sum([self.nodes[k][a_idx] * v for k, v in a_node[EDGE_IDX].iteritems()])
-        # print("_compute_mean: edge_wght = {:f}".format(edge_wght), file = sys.stderr)
-        norm_wghts = [exp(self.beta * x_i * edge_wght - ALPHA * ((x_i - a_node[FXD_WGHT_IDX]) ** 2)) \
-                                  for x_i in SPIN_DOMAIN]
-        # print("_compute_mean: raw norm_wghts = ", repr([self.beta * x_i * edge_wght - ALPHA * ((x_i - a_node[FXD_WGHT_IDX]) ** 2) \
-        #                                                     for x_i in SPIN_DOMAIN]), file = sys.stderr)
-        # print("_compute_mean: exp norm_wghts = ", repr(norm_wghts), file = sys.stderr)
-        node_wght = sum([x_i * iwght for x_i, iwght in zip(SPIN_DOMAIN, norm_wghts)])
-        # print("_compute_mean: node_wght = {:f}".format(node_wght), file = sys.stderr)
-        norm = float(sum(norm_wghts))
-        # print("_compute_mean: norm = {:f}".format(norm), file = sys.stderr)
+        probs = self._compute_probs(a_node, a_idx, a_beta)
+        return sum([x_i * iprob for x_i, iprob in zip(SPIN_DOMAIN, probs]])
+
+    def _compute_probs(self, a_node, a_idx = WGHT_IDX, a_beta = None):
+        """
+        Compute probabilities of spin orientations for the given node
+
+        @param a_node - node whose spin orientation should be computed
+        @param a_idx - list index of neighbor weights
+        @param a_beta - beta value to use
+
+        @return vector representing probabilities of each value in SPIN_DOMAIN
+        """
+        if a_beta is None:
+            a_beta = self.beta
+
+        edge_wght = self.beta * sum([self.nodes[k][a_idx] * v for k, v in a_node[EDGE_IDX].iteritems()])
+        probs = [exp(x_i * edge_wght - ALPHA * ((x_i - a_node[FXD_WGHT_IDX]) ** 2)) \
+                     for x_i in SPIN_DOMAIN]
+        norm = float(sum(probs))
         if norm:
-            return node_wght / norm
-        return 0.
+            return [iprob / norm for iprob in probs]
+        return probs
+
+    def _plot(self, a_fname, a_beta2em):
+        """
+        Plot the development of energy/magnetization
+
+        @param a_fname - name of the file in which new plot should be saved
+        @param a_beta2em - dictionary mapping beta vaules to free energy/magnetization
+
+        @return \c void
+        """
+        betas = []; energy = []; magnetization = []
+        for ibeta, (ienergy, imagnet) in a_beta2em.iteritems():
+            betas.append(ibeta)
+            energy.append(ienergy)
+            magnetization.append(imagnet)
+        plot(betas, energy, label="E($\beta$)")
+        xlabel("$\beta$")
+        savefig("energy-" + a_fname)
+        plot(betas, wMag, label="M($\beta$)")
+        xlabel("$\beta$")
+        savefig("magnetization-" + a_fname)
 
 ##################################################################
 # Reference Implementation
