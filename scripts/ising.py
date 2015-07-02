@@ -6,6 +6,8 @@ Implementation of the Ising spin model
 
 ##################################################################
 # Imports
+from __future__ import print_function
+
 from collections import defaultdict
 from scipy import *
 from scipy import weave
@@ -22,7 +24,8 @@ PREV_WGHT_IDX = 2
 FXD_WGHT_IDX = 3
 EDGE_IDX = 4
 
-ALPHA = 1000
+INFINITY = float("inf")
+ALPHA = 10
 DFLT_EPSILON = 10 ** -5
 SPIN_DOMAIN = (-1., 1.)
 
@@ -108,7 +111,7 @@ class Ising(object):
         self.item2nid[a_item] = self.n_nodes
         self.n_nodes += 1
 
-    def add_edge(self, a_item1, a_item2, a_wght = None, a_allow_self_links = False, \
+    def add_edge(self, a_item1, a_item2, a_wght, a_allow_self_links = False, \
                      a_add_missing = False):
         """
         Connect two nodes via an undirected link
@@ -157,7 +160,7 @@ class Ising(object):
                 trg_degree = math.sqrt(float(len(self.nodes[itrg_nid][EDGE_IDX])))
                 children[itrg_nid] *= 1. / (src_degree * trg_degree)
 
-    def train(self, a_betas = numpy.linspace(start = 0.1, end = 2., num = 20), \
+    def train(self, a_betas = numpy.linspace(start = 0.1, stop = 2., num = 20), \
                   a_epsilon = DFLT_EPSILON, a_plot = False):
         """
         Determine spin orientation of the model
@@ -170,12 +173,14 @@ class Ising(object):
         """
         beta2em = dict()
         i = best_i = -1
-        energy = magn = min_magn = float("inf")
+        energy = magn = min_magn = INFINITY
         # iterate over all specified beta values
         for i, ibeta in enumerate(a_betas):
             self.beta = ibeta
+            print("Iteration #{:d}: beta = {:f}".format(i, ibeta), file = sys.stderr)
             # optimize spin orientation of the model
             energy, magn = self._train(a_epsilon)
+            print("Energy = {:f}, magnetization = {:f}".format(energy, magn), file = sys.stderr)
             beta2em[ibeta] = (energy, magn)
             if magn < min_magn:
                 min_magn = magn
@@ -197,20 +202,29 @@ class Ising(object):
 
         @return 2-tuple holding energy and magnetism values
         """
+        cnt = 0
         energy = magn = 0.
         a_epsilon = abs(a_epsilon)
-        prev_energy = prev_magn = float("inf")
-        while abs(prev_magn - magn) < a_epsilon:
+        prev_energy = prev_magn = INFINITY
+        while prev_magn == INFINITY or abs(prev_magn - magn) > a_epsilon:
             for inode in self.nodes:
                 # update node's spin orientation
-                inode[WGHT_IDX] = self._compute_mean(inode, a_idx = PREV_WGHT_IDX):
-                # re-estimate energy and magnetization
-                prev_energy, prev_magn = energy, magn
-                energy, magn = self._measure()
+                inode[WGHT_IDX] = self._compute_mean(inode, a_idx = PREV_WGHT_IDX)
+                # if inode[WGHT_IDX] != inode[PREV_WGHT_IDX]:
+                #     print("1) inode[{:s}] = {:f}".format(repr(inode[ITEM_IDX]), inode[WGHT_IDX]), file = sys.stderr)
+                #     print("2) inode[{:s}] = {:f}".format(repr(inode[ITEM_IDX]), inode[PREV_WGHT_IDX]), file = sys.stderr)
+            # re-estimate energy and magnetization
+            prev_energy, prev_magn = energy, magn
+            energy, magn = self._measure()
+            print("Run #{:d}: energy = {:f}, magnetization = {:f}".format(cnt, energy, magn), file = sys.stderr)
             # after all the nodes have been processed, remember the newly
             # computed node weights as the old ones
             for inode in self.nodes:
                 inode[PREV_WGHT_IDX] = inode[WGHT_IDX]
+            if prev_magn == INFINITY and cnt > 10:
+                break
+            cnt += 1
+        return (energy, magn)
 
     def _measure(self):
         """
@@ -224,9 +238,11 @@ class Ising(object):
             magn += inode[WGHT_IDX]
             mean = self._compute_mean(inode)
             q_pos = (1. + mean) / 2.; q_neg = (1. - mean) / 2.
+            lq_pos = log(q_pos) if q_pos else 0.
+            lq_neg = log(q_neg) if q_neg else 0.
             energy -= (self.beta / 2.) * inode[WGHT_IDX] * \
-                sum([self.nodes[k][WGHT_IDX] * v for k, v in a_node[EDGE_IDX].iteritems()]) - \
-                q_pos * log(q_pos) - q_neg * log(q_neg)
+                sum([self.nodes[k][WGHT_IDX] * v for k, v in inode[EDGE_IDX].iteritems()]) - \
+                q_pos * lq_pos - q_neg * lq_neg
         return (energy, magn / float(self.n_nodes))
 
     def _compute_mean(self, a_node, a_idx = PREV_WGHT_IDX):
@@ -238,11 +254,21 @@ class Ising(object):
 
         @return float representing the mean spin orientation
         """
+        # print("_compute_mean: edges:", repr([(self.nodes[k][a_idx], v) for k, v in a_node[EDGE_IDX].iteritems()]), file = sys.stderr)
         edge_wght = sum([self.nodes[k][a_idx] * v for k, v in a_node[EDGE_IDX].iteritems()])
-        norm_wghts = [exp(self.beta * x_i * edge_wght - ALPHA * ((x_i - inode[FXD_WGHT_IDX]) ** 2)) \
+        # print("_compute_mean: edge_wght = {:f}".format(edge_wght), file = sys.stderr)
+        norm_wghts = [exp(self.beta * x_i * edge_wght - ALPHA * ((x_i - a_node[FXD_WGHT_IDX]) ** 2)) \
                                   for x_i in SPIN_DOMAIN]
+        # print("_compute_mean: raw norm_wghts = ", repr([self.beta * x_i * edge_wght - ALPHA * ((x_i - a_node[FXD_WGHT_IDX]) ** 2) \
+        #                                                     for x_i in SPIN_DOMAIN]), file = sys.stderr)
+        # print("_compute_mean: exp norm_wghts = ", repr(norm_wghts), file = sys.stderr)
         node_wght = sum([x_i * iwght for x_i, iwght in zip(SPIN_DOMAIN, norm_wghts)])
-        return (node_wght / float(sum(norm_wghts)))
+        # print("_compute_mean: node_wght = {:f}".format(node_wght), file = sys.stderr)
+        norm = float(sum(norm_wghts))
+        # print("_compute_mean: norm = {:f}".format(norm), file = sys.stderr)
+        if norm:
+            return node_wght / norm
+        return 0.
 
 ##################################################################
 # Reference Implementation
@@ -363,7 +389,7 @@ if __name__ == '__main__':
         wCv.append( cv/(N*N) )
         wChi.append( chi/(N*N) )
 
-        print T, aM/(N*N), aE/(N*N), cv/(N*N), chi/(N*N)
+        print(T, aM/(N*N), aE/(N*N), cv/(N*N), chi/(N*N))
 
     plot(wT, wEne, label='E(T)')
     plot(wT, wCv, label='cv(T)')

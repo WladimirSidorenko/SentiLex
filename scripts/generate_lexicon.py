@@ -13,7 +13,7 @@ generate_lexicon.py [OPTIONS] [INPUT_FILES]
 # Imports
 from __future__ import unicode_literals, print_function
 from germanet import Germanet, normalize
-from ising import Ising, WGHT_IDX, FXD_WGHT_IDX
+from ising import Ising, WGHT_IDX, PREV_WGHT_IDX, FXD_WGHT_IDX
 from tokenizer import Tokenizer
 
 from itertools import chain, combinations
@@ -598,22 +598,24 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut):
     for ipos in a_pos:
         if ipos in ising:
             ising[ipos][WGHT_IDX] = ising[ipos][PREV_WGHT_IDX] = \
-                ising[ipos][FXD_WGHT_IDX] = abs(ising[ipos][WGHT_IDX])
+                ising[ipos][FXD_WGHT_IDX] = 1.
         else:
             ising.add_node(ipos, 1.)
     for ineg in a_neg:
         if ineg in ising:
             ising[ineg][WGHT_IDX] = ising[ineg][PREV_WGHT_IDX] = \
-                ising[ineg][FXD_WGHT_IDX] = - abs(ising[ineg][WGHT_IDX])
+                ising[ineg][FXD_WGHT_IDX] = -1.
         else:
             ising.add_node(ineg, -1.)
-    for ineut in a_neut:
-        if ineut in ising:
-            ising[ineut][WGHT_IDX] = ising[ineut][PREV_WGHT_IDX] = \
-                ising[ineut][FXD_WGHT_IDX] = 0.
-        else:
-            ising.add_node(ineut, 0.)
+    # so far, the following block is unnecessary, because the default value for nodes is 0.
+    # for ineut in a_neut:
+    #     if ineut in ising:
+    #         ising[ineut][WGHT_IDX] = ising[ineut][PREV_WGHT_IDX] = \
+    #             ising[ineut][FXD_WGHT_IDX] = 0.
+    #     else:
+    #         ising.add_node(ineut, 0.)
     beta2magnet = ising.train(a_plot = "energy.png")
+    sys.exit(66)
 
 def main(a_argv):
     """
