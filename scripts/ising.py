@@ -30,7 +30,7 @@ INFINITY = float("inf")
 ALPHA = 10
 # BETA_RANGE = numpy.linspace(start = 0.1, stop = 2., num = 20)
 # BETA_RANGE = numpy.linspace(start = 1., stop = 10., num = 10)
-BETA_RANGE = numpy.linspace(start = 0., stop = 10., num = 5)
+BETA_RANGE = numpy.linspace(start = 0., stop = 10., num = 2)
 DFLT_EPSILON = 10 ** -5
 SPIN_DOMAIN = (-1., 1.)
 
@@ -190,6 +190,7 @@ class Ising(object):
                 best_beta = ibeta
         # re-train the model with the best parameter setting
         if best_beta != ibeta:
+            print("Final iteration: beta = {:f}".format(best_beta), file = sys.stderr)
             self.beta = best_beta
             self._train(best_beta, a_epsilon)
         # plot energy/magnetization development, if asked to do so
@@ -213,7 +214,7 @@ class Ising(object):
         prev_energy = prev_magn = INFINITY
         # set initial weights
         self._train_init(a_beta)
-        while prev_magn == INFINITY or abs(prev_magn - magn) > a_epsilon:
+        while prev_energy == INFINITY or abs(prev_energy - energy) > a_epsilon:
             for inode in self.nodes:
                 # update node's spin orientation (according to Takamura's code,
                 # we do the update reluing on the new spin weights)

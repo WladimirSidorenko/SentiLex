@@ -13,7 +13,7 @@ generate_lexicon.py [OPTIONS] [INPUT_FILES]
 # Imports
 from __future__ import unicode_literals, print_function
 from germanet import Germanet, normalize
-from ising import Ising, WGHT_IDX, HAS_FXD_WGHT, FXD_WGHT_IDX
+from ising import Ising, ITEM_IDX, WGHT_IDX, HAS_FXD_WGHT, FXD_WGHT_IDX
 from tokenizer import Tokenizer
 
 from itertools import chain, combinations
@@ -627,7 +627,6 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot = None):
     a_N /= 2
     a_neg.update(nodes[:a_N])
     a_pos.update(nodes[-a_N:])
-    sys.exit(66)
 
 def main(a_argv):
     """
