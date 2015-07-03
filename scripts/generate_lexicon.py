@@ -51,7 +51,7 @@ SYNRELS = set(["has_pertainym", "is_related_to", "entails", "is_entailed_by", "h
 ANTIRELS = set(["has_antonym"])
 
 W_DELIM_RE = re.compile('(?:\s|{:s})+'.format('|'.join([re.escape(c) for c in string.punctuation])))
-WORD_RE = re.compile('^[-.\w]+$', re.U)
+WORD_RE = re.compile('^[-.\w]+$')
 TAB_RE = re.compile(' *\t+ *')
 ENCODING = "utf-8"
 POSITIVE = "positive"
@@ -544,6 +544,16 @@ def _tkm_add_germanet(ising, a_germanet):
         for ilemma1, ilemma2 in combinations(ilexemes, 2):
             ising.add_edge(ilemma1, ilemma2, 1.)
 
+def _check_word(a_word):
+    """
+    Check if given word forms a valid lexeme
+
+    @param a_word - word to be checked
+
+    @return \c True if word forms a valid lexeme, \c False otherwise
+    """
+    return WORD_RE.match(a_word) and all(ord(c) < 256 for c in a_word)
+
 def _tkm_add_corpus(ising, a_cc_file):
     """
     Add lexical nodes from corpus to the Ising spin model
@@ -565,7 +575,7 @@ def _tkm_add_corpus(ising, a_cc_file):
             if len(ifields) != 3:
                 continue
             ilemma1, ilemma2, iwght = ifields
-            if WORD_RE.match(ilemma1) and WORD_RE.match(ilemma2):
+            if _check_word(ilemma1) and _check_word(ilemma2):
                 ising.add_edge(normalize(ilemma1), normalize(ilemma2), float(iwght), \
                                    a_add_missing = True)
 
@@ -618,9 +628,15 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot = None):
     ising.train(a_plot = a_plot)
     # obtain Ising nodes and sort them according to their spin orientations
     seed_set = a_pos | a_neg | a_neut
+    # nodes = [inode[ITEM_IDX] for inode in sorted(ising.nodes, key = lambda x: x[WGHT_IDX]) \
+    #              if inode[ITEM_IDX] not in seed_set]
     nodes = [inode for inode in sorted(ising.nodes, key = lambda x: x[WGHT_IDX]) \
                  if inode[ITEM_IDX] not in seed_set]
     seed_set.clear()
+    with open(os.path.join("data", "ising_full.txt"), 'w') as ofile:
+        for inode in nodes:
+            print(nodes[ITEM_IDX].encode(ENCODING), "\t{:f}".format(nodes[WGHT_IDX]), file = ofile)
+    nodes = [inode[ITEM_IDX] for inode in nodes]
     # extract additional terms
     if a_N > len(nodes):
         a_N = len(nodes)

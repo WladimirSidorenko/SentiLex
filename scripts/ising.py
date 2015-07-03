@@ -20,7 +20,7 @@ import numpy
 # Variables and Constants
 ITEM_IDX = 0
 WGHT_IDX = 1
-# unused
+# now unused
 # PREV_WGHT_IDX = 2
 HAS_FXD_WGHT = 2
 FXD_WGHT_IDX = 3
@@ -29,8 +29,7 @@ EDGE_IDX = 4
 INFINITY = float("inf")
 ALPHA = 10
 # BETA_RANGE = numpy.linspace(start = 0.1, stop = 2., num = 20)
-# BETA_RANGE = numpy.linspace(start = 1., stop = 10., num = 10)
-BETA_RANGE = numpy.linspace(start = 0., stop = 10., num = 2)
+BETA_RANGE = numpy.linspace(start = 1., stop = 10., num = 10)
 DFLT_EPSILON = 10 ** -5
 SPIN_DOMAIN = (-1., 1.)
 
@@ -270,7 +269,9 @@ class Ising(object):
             edge_wght = sum([self.nodes[k][WGHT_IDX] * v for k, v in inode[EDGE_IDX].iteritems()])
             probs = self._compute_probs(inode, WGHT_IDX, a_beta)
 
-            magn += node_wght
+            magn += node_wght # raw spin orientation
+            # magn += sum([x_i * iprob for x_i, iprob in zip(SPIN_DOMAIN, probs)]) # model expectation
+
             sum1 -= node_wght * edge_wght
             # entropy
             sum2 -= sum([iprob * math.log(iprob, 2.) for iprob in probs if iprob])
@@ -337,11 +338,14 @@ class Ising(object):
             betas.append(ibeta)
             energy.append(ienergy)
             magnetization.append(imagnet)
-        plot(betas, energy, label="E($\beta$)")
-        xlabel("$\beta$")
+        figure(num=None, figsize=(8, 6), dpi=120, facecolor='w', edgecolor='k')
+        rc("text", usetex = True)
+        plot(betas, energy, label = r"E($\beta$)")
+        xlabel(r"$\beta$")
         savefig("energy-" + a_fname)
-        plot(betas, wMag, label="M($\beta$)")
-        xlabel("$\beta$")
+        clf()
+        plot(betas, magnetization, label = r"M($\beta$)")
+        xlabel(r"$\beta$")
         savefig("magnetization-" + a_fname)
 
 ##################################################################
