@@ -5,7 +5,7 @@
 #include <algorithm>
 #include <armadillo>		// arma::mat
 #include <cctype>		// std::isspace()
-#include <cstdio>		// sprintf()
+#include <cstdio>		// sprintf(), sscanf()
 #include <cstdlib>		// std::exit()
 #include <fstream>		// std::ifstream
 #include <functional>
@@ -134,6 +134,7 @@ static int read_seed_set(const char *a_fname) {
   Polarity ipol;
   std::string iline;
   size_t tab_pos, tab_pos_orig;
+
   std::ifstream is(a_fname);
   if (! is) {
     std::cerr << "Cannot open file " << a_fname << std::endl;
@@ -168,12 +169,13 @@ static int read_seed_set(const char *a_fname) {
       goto error_exit;
     }
 
-    while (tab_pos_orig >= 0 && std::isspace(tab_pos_orig)) {--tab_pos_orig;}
-    if (tab_pos_orig == 0) {
+    while (tab_pos_orig > 0 && std::isspace(iline[tab_pos_orig])) {--tab_pos_orig;}
+    if (tab_pos_orig == 0 && std::isspace(iline[tab_pos_orig])) {
       std::cerr << "Incorrect line format (missing word): " << iline << std::endl;
       goto error_exit;
     }
-    word2pol.insert(std::make_pair<std::string, Polarity> \
+    ++tab_pos_orig;
+    word2pol.insert(std::make_pair<std::string, Polarity>		\
 		    (std::move(iline.substr(0, tab_pos_orig)), std::move(ipol)));
   }
 
@@ -196,7 +198,69 @@ static int read_seed_set(const char *a_fname) {
  * @return \c 0 on success, non-\c 0 otherwise
  */
 static int read_vectors(const char *a_fname) {
+  float iwght;
+  const char *cline;
+  std::string iline;
+  size_t space_pos;
+  size_t mrows, ncolumns, irow = 0, icolumn = 0;
+
+  std::ifstream is(a_fname);
+  if (! is) {
+    std::cerr << "Cannot open file " << a_fname << std::endl;
+    goto error_exit;
+  }
+  // skip empty lines at the beginning of file
+  while (std::getline(is, iline) && iline.empty()) {}
+  // initialize matrix
+  sscanf(iline.c_str(), "%zu %zu", &mrows, &ncolumns);
+  // allocate space for map and matrix
+  word2vecid.reserve(mrows); vecid2word.reserve(mrows);
+  NWE.set_size(mrows, ncolumns);
+
+  while (irow < mrows && std::getline(is, iline)) {
+    space_pos = iline.find_first_of(' ');
+    while (space_pos > 0 && std::isspace(iline[space_pos])) {--space_pos;}
+    if (space_pos == 0  && std::isspace(iline[space_pos])) {
+      std::cerr << "Incorrect line format (missing word): " << iline << std::endl;
+      goto error_exit;
+    }
+    ++space_pos;
+    word2vecid.insert(std::make_pair<std::string, size_t> \
+		      (std::move(iline.substr(0, space_pos)), std::move(irow)));
+    vecid2word.insert(std::make_pair<size_t, std::string>	\
+		      (std::move(irow), std::move(iline.substr(0, space_pos))));
+
+    cline = &iline[space_pos];
+
+    for (icolumn = 0; icolumn < ncolumns && sscanf(cline, " %f", &iwght) == 1; ++icolumn) {
+      NWE(irow, icolumn) = iwght;
+    }
+    if (icolumn != ncolumns) {
+      std::cerr << "cline = " << cline << std::endl;
+      std::cerr << "Incorrect line format: declared vector size " << ncolumns << \
+	" differs from the actual size " << icolumn << std::endl;
+      goto error_exit;
+    }
+    ++irow;
+  }
+
+  if (is.bad() || is.bad()) {
+    std::cerr << "Failed to read file " << a_fname << std::endl;
+    goto error_exit;
+  }
+  if (irow != mrows) {
+    std::cerr << "Incorrect file format: declared number of rows " << mrows << \
+      " differs from the actual number " << irow << std::endl;
+    goto error_exit;
+  }
+
   return 0;
+
+ error_exit:
+  word2vecid.clear();		// basic guarantee
+  vecid2word.clear();		// basic guarantee
+  NWE.reset();
+  return 1;
 }
 
 //////////

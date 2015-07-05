@@ -679,9 +679,10 @@ generating sentiment lexicons.""")
     subparser_esuli.add_argument("N", help = "number of expansion iterations", type = int)
     subparser_esuli.add_argument("seed_set", help = "initial seed set of positive, negative, and neutral terms")
 
-    subparser_w2v = subparsers.add_parser(W2V, help = "word2vec model (Mikolov, 2013)")
-    subparser_w2v.add_argument("N", help = "final number of terms to extract", type = int)
-    subparser_w2v.add_argument("seed_set", help = "initial seed set of positive, negative, and neutral terms")
+    # disabled.  look at the C++ implementation instead.
+    # subparser_w2v = subparsers.add_parser(W2V, help = "word2vec model (Mikolov, 2013)")
+    # subparser_w2v.add_argument("N", help = "final number of terms to extract", type = int)
+    # subparser_w2v.add_argument("seed_set", help = "initial seed set of positive, negative, and neutral terms")
 
     args = argparser.parse_args(a_argv)
 
