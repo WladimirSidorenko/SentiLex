@@ -635,7 +635,7 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot = None):
     seed_set.clear()
     with open(os.path.join("data", "ising_full.txt"), 'w') as ofile:
         for inode in nodes:
-            print(nodes[ITEM_IDX].encode(ENCODING), "\t{:f}".format(nodes[WGHT_IDX]), file = ofile)
+            print(inode[ITEM_IDX].encode(ENCODING), "\t{:f}".format(nodes[WGHT_IDX]), file = ofile)
     nodes = [inode[ITEM_IDX] for inode in nodes]
     # extract additional terms
     if a_N > len(nodes):
