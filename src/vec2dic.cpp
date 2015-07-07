@@ -1,5 +1,7 @@
-//////////////////////////////////////////////////////////////////
-// Includes
+//////////////
+// Includes //
+//////////////
+#include "expansion.h"
 #include "optparse.h"
 
 #include <algorithm>
@@ -18,26 +20,42 @@
 /////////////
 // Classes //
 /////////////
+enum class ExpansionType: int {
+  KNN_CLUSTERING = 0,		// K-nearest neighbors
+    RCH_CLUSTERING,		// Rocchio algorithm
+    PRJ_CLUSTERING,		// Projection-based clustering
+    PRJ_LENGTH,			// Projection-length
+    LIN_TRANSFORM,		// Linear transformation
+    MAX_SENTINEL		// Unused type that serves as a sentinel
+};
+
+// forward declaration of `usage()` method
 static void usage(int a_ret = EXIT_SUCCESS);
 
-class option : public optparse {
+class Option: public optparse {
 public:
   // Members
   std::ifstream m_seedfile();
+  size_t nwords = 0;
+  ExpansionType etype = ExpansionType::KNN_CLUSTERING;
 
-  option() {}
+  Option() {}
 
   BEGIN_OPTION_MAP_INLINE()
   ON_OPTION(SHORTOPT('h') || LONGOPT("help"))
   usage();
 
-  END_OPTION_MAP()
-};
+  ON_OPTION_WITH_ARG(SHORTOPT('n') || LONGOPT("n-words"))
+  nwords = static_cast<size_t>(std::atoi(arg));
 
-enum class Polarity: char {
-  POSITIVE = 0,
-    NEGATIVE,
-    NEUTRAL
+  ON_OPTION_WITH_ARG(SHORTOPT('t') || LONGOPT("type"))
+  int itype = std::atoi(arg);
+  if (itype < 0 || itype >= static_cast<int>(ExpansionType::MAX_SENTINEL))
+    throw invalid_value("Invalid type of expansion algorithm.");
+
+  etype = static_cast<ExpansionType>(itype);
+
+  END_OPTION_MAP()
 };
 
 /////////////////////////////
@@ -52,11 +70,11 @@ const std::string neutral {"neutral"};
 /// Mapping from Polarity enum to string
 static const std::string pol2pol[] {positive, negative, neutral};
 /// Mapping from words in seed set to their polarity
-static std::unordered_map<std::string, Polarity> word2pol;
+static w2p_t word2pol;
 /// Mapping from words to the index of their NWE vector
-static std::unordered_map<std::string, unsigned int> word2vecid;
+static w2v_t word2vecid;
 /// Mapping from the index of NWE vectors to their respective words
-static std::unordered_map<unsigned int, std::string> vecid2word;
+static v2w_t vecid2word;
 /// Matrix of neural word embeddings
 static arma::mat NWE;
 
@@ -179,14 +197,16 @@ static int read_seed_set(const char *a_fname) {
 		    (std::move(iline.substr(0, tab_pos_orig)), std::move(ipol)));
   }
 
-  if (is.bad() || is.bad()) {
+  if (is.fail()) {
     std::cerr << "Failed to read file " << a_fname << std::endl;
     goto error_exit;
   }
+  is.close();
   return 0;
 
  error_exit:
-  word2pol.clear();		// basic guarantee
+  is.close();		// basic guarantee
+  word2pol.clear();
   return 1;
 }
 
@@ -202,7 +222,7 @@ static int read_vectors(const char *a_fname) {
   const char *cline;
   std::string iline;
   size_t space_pos;
-  size_t mrows, ncolumns, irow = 0, icolumn = 0;
+  size_t nrows, mcolumns, irow = 0, icolumn = 0;
 
   std::ifstream is(a_fname);
   if (! is) {
@@ -212,12 +232,12 @@ static int read_vectors(const char *a_fname) {
   // skip empty lines at the beginning of file
   while (std::getline(is, iline) && iline.empty()) {}
   // initialize matrix
-  sscanf(iline.c_str(), "%zu %zu", &mrows, &ncolumns);
+  sscanf(iline.c_str(), "%zu %zu", &nrows, &mcolumns);
   // allocate space for map and matrix
-  word2vecid.reserve(mrows); vecid2word.reserve(mrows);
-  NWE.set_size(mrows, ncolumns);
+  word2vecid.reserve(nrows); vecid2word.reserve(nrows);
+  NWE.set_size(nrows, mcolumns);
 
-  while (irow < mrows && std::getline(is, iline)) {
+  while (irow < nrows && std::getline(is, iline)) {
     space_pos = iline.find_first_of(' ');
     while (space_pos > 0 && std::isspace(iline[space_pos])) {--space_pos;}
     if (space_pos == 0  && std::isspace(iline[space_pos])) {
@@ -232,33 +252,34 @@ static int read_vectors(const char *a_fname) {
 
     cline = &iline[space_pos];
 
-    for (icolumn = 0; icolumn < ncolumns && sscanf(cline, " %f", &iwght) == 1; ++icolumn) {
+    for (icolumn = 0; icolumn < mcolumns && sscanf(cline, " %f", &iwght) == 1; ++icolumn) {
       NWE(irow, icolumn) = iwght;
     }
-    if (icolumn != ncolumns) {
+    if (icolumn != mcolumns) {
       std::cerr << "cline = " << cline << std::endl;
-      std::cerr << "Incorrect line format: declared vector size " << ncolumns << \
+      std::cerr << "Incorrect line format: declared vector size " << mcolumns << \
 	" differs from the actual size " << icolumn << std::endl;
       goto error_exit;
     }
     ++irow;
   }
 
-  if (is.bad() || is.bad()) {
+  if (is.fail()) {
     std::cerr << "Failed to read file " << a_fname << std::endl;
     goto error_exit;
   }
-  if (irow != mrows) {
-    std::cerr << "Incorrect file format: declared number of rows " << mrows << \
+  if (irow != nrows) {
+    std::cerr << "Incorrect file format: declared number of rows " << nrows << \
       " differs from the actual number " << irow << std::endl;
     goto error_exit;
   }
-
+  is.close();
   return 0;
 
  error_exit:
-  word2vecid.clear();		// basic guarantee
-  vecid2word.clear();		// basic guarantee
+  is.close();			// basic guarantee
+  word2vecid.clear();
+  vecid2word.clear();
   NWE.reset();
   return 1;
 }
@@ -270,7 +291,7 @@ int main(int argc, char *argv[]) {
   int nargs;
   int ret = EXIT_SUCCESS;
 
-  option opt {};
+  Option opt {};
   int argused = 1 + opt.parse(&argv[1], argc-1); // Skip argv[0].
 
   if ((nargs = argc - argused) != 2) {
@@ -285,6 +306,22 @@ int main(int argc, char *argv[]) {
   // read word vectors
   if ((ret = read_vectors(argv[argused++])))
     return ret;
+
+  // apply requested expansion algorithm
+  switch (opt.etype) {
+  case KNN_CLUSTERING:
+    break;
+  case RCH_CLUSTERING:
+    break;
+  case: PRJ_CLUSTERING:
+    break;
+  case PRJ_LENGTH:
+    break;
+  case LIN_TRANSFORM:
+    break;
+  default:
+    throw std::invalid_argument("Invalid type of seed set expansion algorithm.");
+  }
 
   return ret;
 }
