@@ -27,7 +27,7 @@ enum class ExpansionType: int {
     PRJ_LENGTH,			// Projection-length
     LIN_TRANSFORM,		// Linear transformation
     MAX_SENTINEL		// Unused type that serves as a sentinel
-};
+    };
 
 // forward declaration of `usage()` method
 static void usage(int a_ret = EXIT_SUCCESS);
@@ -69,12 +69,12 @@ const std::string neutral {"neutral"};
 
 /// Mapping from Polarity enum to string
 static const std::string pol2pol[] {positive, negative, neutral};
-/// Mapping from words in seed set to their polarity
-static w2p_t word2pol;
 /// Mapping from words to the index of their NWE vector
 static w2v_t word2vecid;
 /// Mapping from the index of NWE vectors to their respective words
 static v2w_t vecid2word;
+/// Mapping from word to its polarity
+static w2p_t word2pol;
 /// Matrix of neural word embeddings
 static arma::mat NWE;
 
@@ -94,7 +94,7 @@ static void usage(int a_ret) {
   std::cerr << "Expand initial seed set of subjective terms by applying clustering" << std::endl;
   std::cerr << "to neural word embeddings." << std::endl << std::endl;
   std::cerr << "USAGE:" << std::endl;
-  std::cerr << "vec2dic [OPTIONS] SEED_FILE VECTOR_FILE" << std::endl << std::endl;
+  std::cerr << "vec2dic [OPTIONS] VECTOR_FILE SEED_FILE" << std::endl << std::endl;
   std::cerr << "OPTIONS:" << std::endl;
   std::cerr << "-h|--help  show this screen and exit" << std::endl << std::endl;
   std::cerr << "EXIT STATUS" << std::endl;
@@ -141,6 +141,79 @@ static inline std::string &normalize(std::string &s) {
   std::transform(s.begin(), s.end(), s.begin(), ::tolower);;
   return s;
 }
+
+/**
+ * Read NWE vectors for word terms
+ *
+ * @param a_ret - exit code for the program
+ *
+ * @return \c 0 on success, non-\c 0 otherwise
+ */
+static int read_vectors(const char *a_fname) {
+  float iwght;
+  const char *cline;
+  std::string iline;
+  size_t space_pos;
+  size_t nrows, mcolumns, irow = 0, icolumn = 0;
+
+  std::ifstream is(a_fname);
+  if (! is) {
+    std::cerr << "Cannot open file " << a_fname << std::endl;
+    goto error_exit;
+  }
+  // skip empty lines at the beginning of file
+  while (std::getline(is, iline) && iline.empty()) {}
+  // initialize matrix
+  sscanf(iline.c_str(), "%zu %zu", &nrows, &mcolumns);
+  // allocate space for map and matrix
+  word2vecid.reserve(nrows); vecid2word.reserve(nrows);
+  NWE.set_size(nrows, mcolumns);
+
+  while (irow < nrows && std::getline(is, iline)) {
+    space_pos = iline.find_first_of(' ');
+    while (space_pos > 0 && std::isspace(iline[space_pos])) {--space_pos;}
+    if (space_pos == 0  && std::isspace(iline[space_pos])) {
+      std::cerr << "Incorrect line format (missing word): " << iline << std::endl;
+      goto error_exit;
+    }
+    ++space_pos;
+    word2vecid.emplace(std::move(iline.substr(0, space_pos)), std::move(irow));
+    vecid2word.emplace(std::move(irow), std::move(iline.substr(0, space_pos)));
+
+    cline = &iline[space_pos];
+
+    for (icolumn = 0; icolumn < mcolumns && sscanf(cline, " %f", &iwght) == 1; ++icolumn) {
+      NWE(irow, icolumn) = iwght;
+    }
+    if (icolumn != mcolumns) {
+      std::cerr << "cline = " << cline << std::endl;
+      std::cerr << "Incorrect line format: declared vector size " << mcolumns << \
+	" differs from the actual size " << icolumn << std::endl;
+      goto error_exit;
+    }
+    ++irow;
+  }
+
+  if (!is.eof() && is.fail()) {
+    std::cerr << "Failed to read vector file " << a_fname << std::endl;
+    goto error_exit;
+  }
+  if (irow != nrows) {
+    std::cerr << "Incorrect file format: declared number of rows " << nrows << \
+      " differs from the actual number " << irow << std::endl;
+    goto error_exit;
+  }
+  is.close();
+  return 0;
+
+ error_exit:
+  is.close();			// basic guarantee
+  word2vecid.clear();
+  vecid2word.clear();
+  NWE.reset();
+  return 1;
+}
+
 /**
  * Read seed set of polarity terms
  *
@@ -193,12 +266,11 @@ static int read_seed_set(const char *a_fname) {
       goto error_exit;
     }
     ++tab_pos_orig;
-    word2pol.insert(std::make_pair<std::string, Polarity>		\
-		    (std::move(iline.substr(0, tab_pos_orig)), std::move(ipol)));
+    word2pol.emplace(std::move(iline.substr(0, tab_pos_orig)), std::move(ipol));
   }
 
-  if (is.fail()) {
-    std::cerr << "Failed to read file " << a_fname << std::endl;
+  if (!is.eof() && is.fail()) {
+    std::cerr << "Failed to read seed set file " << a_fname << std::endl;
     goto error_exit;
   }
   is.close();
@@ -207,80 +279,6 @@ static int read_seed_set(const char *a_fname) {
  error_exit:
   is.close();		// basic guarantee
   word2pol.clear();
-  return 1;
-}
-
-/**
- * Read NWE vectors for word terms
- *
- * @param a_ret - exit code for the program
- *
- * @return \c 0 on success, non-\c 0 otherwise
- */
-static int read_vectors(const char *a_fname) {
-  float iwght;
-  const char *cline;
-  std::string iline;
-  size_t space_pos;
-  size_t nrows, mcolumns, irow = 0, icolumn = 0;
-
-  std::ifstream is(a_fname);
-  if (! is) {
-    std::cerr << "Cannot open file " << a_fname << std::endl;
-    goto error_exit;
-  }
-  // skip empty lines at the beginning of file
-  while (std::getline(is, iline) && iline.empty()) {}
-  // initialize matrix
-  sscanf(iline.c_str(), "%zu %zu", &nrows, &mcolumns);
-  // allocate space for map and matrix
-  word2vecid.reserve(nrows); vecid2word.reserve(nrows);
-  NWE.set_size(nrows, mcolumns);
-
-  while (irow < nrows && std::getline(is, iline)) {
-    space_pos = iline.find_first_of(' ');
-    while (space_pos > 0 && std::isspace(iline[space_pos])) {--space_pos;}
-    if (space_pos == 0  && std::isspace(iline[space_pos])) {
-      std::cerr << "Incorrect line format (missing word): " << iline << std::endl;
-      goto error_exit;
-    }
-    ++space_pos;
-    word2vecid.insert(std::make_pair<std::string, size_t> \
-		      (std::move(iline.substr(0, space_pos)), std::move(irow)));
-    vecid2word.insert(std::make_pair<size_t, std::string>	\
-		      (std::move(irow), std::move(iline.substr(0, space_pos))));
-
-    cline = &iline[space_pos];
-
-    for (icolumn = 0; icolumn < mcolumns && sscanf(cline, " %f", &iwght) == 1; ++icolumn) {
-      NWE(irow, icolumn) = iwght;
-    }
-    if (icolumn != mcolumns) {
-      std::cerr << "cline = " << cline << std::endl;
-      std::cerr << "Incorrect line format: declared vector size " << mcolumns << \
-	" differs from the actual size " << icolumn << std::endl;
-      goto error_exit;
-    }
-    ++irow;
-  }
-
-  if (is.fail()) {
-    std::cerr << "Failed to read file " << a_fname << std::endl;
-    goto error_exit;
-  }
-  if (irow != nrows) {
-    std::cerr << "Incorrect file format: declared number of rows " << nrows << \
-      " differs from the actual number " << irow << std::endl;
-    goto error_exit;
-  }
-  is.close();
-  return 0;
-
- error_exit:
-  is.close();			// basic guarantee
-  word2vecid.clear();
-  vecid2word.clear();
-  NWE.reset();
   return 1;
 }
 
@@ -299,29 +297,48 @@ int main(int argc, char *argv[]) {
       "Type --help to see usage." << std::endl;
     std::exit(EXIT_FAILURE);
   }
-  // read seed sets
-  if ((ret = read_seed_set(argv[argused++])))
-    return ret;
-
   // read word vectors
   if ((ret = read_vectors(argv[argused++])))
     return ret;
 
-  // apply requested expansion algorithm
+  // read seed sets
+  if ((ret = read_seed_set(argv[argused++])))
+    return ret;
+
+  // generate mapping from vector id's to the known polarity of
+  // respective words
+  v2p_t vecid2pol;
+  w2v_t::const_iterator vecid, vecend = word2vecid.end();
+  for (auto& w2p: word2pol) {
+    vecid = word2vecid.find(w2p.first);
+    if (vecid != vecend)
+      vecid2pol.emplace(vecid->second, w2p.second);
+  }
+
+  // apply the requested expansion algorithm
   switch (opt.etype) {
-  case KNN_CLUSTERING:
+  case ExpansionType::KNN_CLUSTERING:
+    expand_knn(vecid2pol, NWE, opt.nwords);
     break;
-  case RCH_CLUSTERING:
+  case ExpansionType::RCH_CLUSTERING:
+    expand_rocchio(vecid2pol, NWE, opt.nwords);
     break;
-  case: PRJ_CLUSTERING:
+  case ExpansionType::PRJ_CLUSTERING:
+    expand_projected(vecid2pol, NWE, opt.nwords);
     break;
-  case PRJ_LENGTH:
+  case ExpansionType::PRJ_LENGTH:
+    expand_projected_length(vecid2pol, NWE, opt.nwords);
     break;
-  case LIN_TRANSFORM:
+  case ExpansionType::LIN_TRANSFORM:
+    expand_linear_transform(vecid2pol, NWE, opt.nwords);
     break;
   default:
     throw std::invalid_argument("Invalid type of seed set expansion algorithm.");
   }
+
+  // expand word2pol with the new terms
+  // for (auto& w2p: word2pol) {
+  // }
 
   return ret;
 }

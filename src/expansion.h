@@ -17,12 +17,16 @@ enum class Polarity: char {
     NEUTRAL
 };
 
+/** Map from word to its polarity */
 typedef std::unordered_map<std::string, Polarity> w2p_t;
 
-typedef std::unordered_map<unsigned int, Polarity> v2p_t;
-
+/** Map from string to the index of its vector */
 typedef std::unordered_map<std::string, unsigned int> w2v_t;
 
+/** Map from word index to its polarity */
+typedef std::unordered_map<unsigned int, Polarity> v2p_t;
+
+/** Map from vector index to string */
 typedef std::unordered_map<unsigned int, std::string> v2w_t;
 
 /////////////
@@ -100,6 +104,6 @@ void expand_projected_length(v2p_t &a_vecid2pol, const arma::mat &a_nwe, const s
  *
  * @return \c void (`a_vecid2pol` is modified in place)
  */
-void expand_linear_length(v2p_t &a_vecid2pol, const arma::mat &a_nwe, const size_t a_N);
+void expand_linear_transform(v2p_t &a_vecid2pol, const arma::mat &a_nwe, const size_t a_N);
 
 #endif	// VEC2DIC_EXPANSION_H_
