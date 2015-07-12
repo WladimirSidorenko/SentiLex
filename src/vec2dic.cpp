@@ -7,6 +7,7 @@
 #include <algorithm>
 #include <armadillo>		// arma::mat
 #include <cctype>		// std::isspace()
+#include <clocale>		// setlocale()
 #include <cstdio>		// sprintf(), sscanf()
 #include <cstdlib>		// std::exit()
 #include <fstream>		// std::ifstream
@@ -22,7 +23,7 @@
 /////////////
 enum class ExpansionType: int {
   KNN_CLUSTERING = 0,		// K-nearest neighbors
-    RCH_CLUSTERING,		// Rocchio algorithm
+    NC_CLUSTERING,		// Nearest centroids algorithm
     PRJ_CLUSTERING,		// Projection-based clustering
     PRJ_LENGTH,			// Projection-length
     LIN_TRANSFORM,		// Linear transformation
@@ -36,7 +37,7 @@ class Option: public optparse {
 public:
   // Members
   std::ifstream m_seedfile();
-  size_t nwords = 0;
+  int n_terms = -1;
   ExpansionType etype = ExpansionType::KNN_CLUSTERING;
 
   Option() {}
@@ -45,8 +46,8 @@ public:
   ON_OPTION(SHORTOPT('h') || LONGOPT("help"))
   usage();
 
-  ON_OPTION_WITH_ARG(SHORTOPT('n') || LONGOPT("n-words"))
-  nwords = static_cast<size_t>(std::atoi(arg));
+  ON_OPTION_WITH_ARG(SHORTOPT('n') || LONGOPT("n-terms"))
+  n_terms = std::atoi(arg);
 
   ON_OPTION_WITH_ARG(SHORTOPT('t') || LONGOPT("type"))
   int itype = std::atoi(arg);
@@ -96,7 +97,11 @@ static void usage(int a_ret) {
   std::cerr << "USAGE:" << std::endl;
   std::cerr << "vec2dic [OPTIONS] VECTOR_FILE SEED_FILE" << std::endl << std::endl;
   std::cerr << "OPTIONS:" << std::endl;
-  std::cerr << "-h|--help  show this screen and exit" << std::endl << std::endl;
+  std::cerr << "-h|--help  show this screen and exit" << std::endl;
+  std::cerr << "-n|--n-terms  number of terms to extract (default: -1 (unlimited))" << std::endl;
+  std::cerr << "-t|--type  type of expansion algorithm to use:" << std::endl;
+  std::cerr << "           (0 - KNN, 1 - nearest centroids, 2 - projection," << std::endl;
+  std::cerr << "            3 - projection length, 4 - linear transformation)" << std::endl << std::endl;
   std::cerr << "EXIT STATUS" << std::endl;
   std::cerr << EXIT_SUCCESS << " on sucess" << std::endl;
   std::cerr << "non-" << EXIT_SUCCESS << " on failure" << std::endl;
@@ -154,7 +159,7 @@ static int read_vectors(const char *a_fname) {
   const char *cline;
   std::string iline;
   size_t space_pos;
-  size_t nrows, mcolumns, irow = 0, icolumn = 0;
+  size_t mrows, ncolumns, icol = 0, irow = 0;
 
   std::ifstream is(a_fname);
   if (! is) {
@@ -163,13 +168,13 @@ static int read_vectors(const char *a_fname) {
   }
   // skip empty lines at the beginning of file
   while (std::getline(is, iline) && iline.empty()) {}
-  // initialize matrix
-  sscanf(iline.c_str(), "%zu %zu", &nrows, &mcolumns);
+  // initialize matrix (columns represent words, rows are coordinates)
+  sscanf(iline.c_str(), "%zu %zu", &ncolumns, &mrows);
   // allocate space for map and matrix
-  word2vecid.reserve(nrows); vecid2word.reserve(nrows);
-  NWE.set_size(nrows, mcolumns);
+  word2vecid.reserve(ncolumns); vecid2word.reserve(ncolumns);
+  NWE.set_size(mrows, ncolumns);
 
-  while (irow < nrows && std::getline(is, iline)) {
+  while (icol < ncolumns && std::getline(is, iline)) {
     space_pos = iline.find_first_of(' ');
     while (space_pos > 0 && std::isspace(iline[space_pos])) {--space_pos;}
     if (space_pos == 0  && std::isspace(iline[space_pos])) {
@@ -177,29 +182,29 @@ static int read_vectors(const char *a_fname) {
       goto error_exit;
     }
     ++space_pos;
-    word2vecid.emplace(std::move(iline.substr(0, space_pos)), std::move(irow));
-    vecid2word.emplace(std::move(irow), std::move(iline.substr(0, space_pos)));
+    word2vecid.emplace(std::move(iline.substr(0, space_pos)), std::move(icol));
+    vecid2word.emplace(std::move(icol), std::move(iline.substr(0, space_pos)));
 
     cline = &iline[space_pos];
 
-    for (icolumn = 0; icolumn < mcolumns && sscanf(cline, " %f", &iwght) == 1; ++icolumn) {
-      NWE(irow, icolumn) = iwght;
+    for (irow = 0; irow < mrows && sscanf(cline, " %f", &iwght) == 1; ++irow) {
+      NWE(icol, irow) = iwght;
     }
-    if (icolumn != mcolumns) {
+    if (irow != mrows) {
       std::cerr << "cline = " << cline << std::endl;
-      std::cerr << "Incorrect line format: declared vector size " << mcolumns << \
-	" differs from the actual size " << icolumn << std::endl;
+      std::cerr << "Incorrect line format: declared vector size " << mrows << \
+	" differs from the actual size " << irow << std::endl;
       goto error_exit;
     }
-    ++irow;
+    ++icol;
   }
 
   if (!is.eof() && is.fail()) {
     std::cerr << "Failed to read vector file " << a_fname << std::endl;
     goto error_exit;
   }
-  if (irow != nrows) {
-    std::cerr << "Incorrect file format: declared number of rows " << nrows << \
+  if (irow != mrows) {
+    std::cerr << "Incorrect file format: declared number of rows " << mrows << \
       " differs from the actual number " << irow << std::endl;
     goto error_exit;
   }
@@ -289,6 +294,9 @@ int main(int argc, char *argv[]) {
   int nargs;
   int ret = EXIT_SUCCESS;
 
+  // set appropriate locale
+  setlocale(LC_ALL, NULL);
+
   Option opt {};
   int argused = 1 + opt.parse(&argv[1], argc-1); // Skip argv[0].
 
@@ -318,26 +326,26 @@ int main(int argc, char *argv[]) {
   // apply the requested expansion algorithm
   switch (opt.etype) {
   case ExpansionType::KNN_CLUSTERING:
-    expand_knn(vecid2pol, NWE, opt.nwords);
+    expand_knn(&vecid2pol, &NWE, opt.n_terms);
     break;
-  case ExpansionType::RCH_CLUSTERING:
-    expand_rocchio(vecid2pol, NWE, opt.nwords);
+  case ExpansionType::NC_CLUSTERING:
+    expand_nearest_centroids(&vecid2pol, &NWE, opt.n_terms);
     break;
   case ExpansionType::PRJ_CLUSTERING:
-    expand_projected(vecid2pol, NWE, opt.nwords);
+    expand_projected(&vecid2pol, &NWE, opt.n_terms);
     break;
   case ExpansionType::PRJ_LENGTH:
-    expand_projected_length(vecid2pol, NWE, opt.nwords);
+    expand_projected_length(&vecid2pol, &NWE, opt.n_terms);
     break;
   case ExpansionType::LIN_TRANSFORM:
-    expand_linear_transform(vecid2pol, NWE, opt.nwords);
+    expand_linear_transform(&vecid2pol, &NWE, opt.n_terms);
     break;
   default:
     throw std::invalid_argument("Invalid type of seed set expansion algorithm.");
   }
 
-  // expand word2pol with the new terms
-  // for (auto& w2p: word2pol) {
+  // output new terms
+  // for (auto& v2p: vecid2pol) {
   // }
 
   return ret;

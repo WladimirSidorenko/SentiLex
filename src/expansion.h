@@ -14,7 +14,8 @@
 enum class Polarity: char {
   POSITIVE = 0,
     NEGATIVE,
-    NEUTRAL
+    NEUTRAL,
+    MAX_SENTINEL
 };
 
 /** Map from word to its polarity */
@@ -34,16 +35,17 @@ typedef std::unordered_map<unsigned int, std::string> v2w_t;
 /////////////
 
 /**
- * Apply Rocchio clustering algorithm to expand seed sets of polar terms
+ * Apply nearest centroids clustering algorithm to expand seed sets of polar terms
  *
  * @param a_vecid2pol - dictionary mapping known vector id's to the
  *                      polarities of their respective words
  * @param a_nwe - matrix of neural word embeddings
- * @param a_N - number of polar terms to extract
+ * @param a_N - number of new terms to extract (these terms will have
+ *              minimal distance to their respective centroids)
  *
  * @return \c void (`a_vecid2pol` is modified in place)
  */
-void expand_rocchio(v2p_t &a_vecid2pol, const arma::mat &a_nwe, const size_t a_N);
+void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N);
 
 /**
  * Apply K-nearest neighbors clustering algorithm to expand seed sets of polar terms
@@ -55,7 +57,7 @@ void expand_rocchio(v2p_t &a_vecid2pol, const arma::mat &a_nwe, const size_t a_N
  *
  * @return \c void (`a_vecid2pol` is modified in place)
  */
-void expand_knn(v2p_t &a_vecid2pol, const arma::mat &a_nwe, const size_t a_N);
+void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N);
 
 /**
  * Apply projection to expand seed sets of polar terms
@@ -71,7 +73,7 @@ void expand_knn(v2p_t &a_vecid2pol, const arma::mat &a_nwe, const size_t a_N);
  *
  * @return \c void (`a_vecid2pol` is modified in place)
  */
-void expand_projected(v2p_t &a_vecid2pol, const arma::mat &a_nwe, const size_t a_N);
+void expand_projected(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N);
 
 /**
  * Apply projection to expand seed sets of polar terms
@@ -87,7 +89,7 @@ void expand_projected(v2p_t &a_vecid2pol, const arma::mat &a_nwe, const size_t a
  *
  * @return \c void (`a_vecid2pol` is modified in place)
  */
-void expand_projected_length(v2p_t &a_vecid2pol, const arma::mat &a_nwe, const size_t a_N);
+void expand_projected_length(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N);
 
 /**
  * Derive projection matrix to expand seed sets of polar terms
@@ -104,6 +106,6 @@ void expand_projected_length(v2p_t &a_vecid2pol, const arma::mat &a_nwe, const s
  *
  * @return \c void (`a_vecid2pol` is modified in place)
  */
-void expand_linear_transform(v2p_t &a_vecid2pol, const arma::mat &a_nwe, const size_t a_N);
+void expand_linear_transform(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N);
 
 #endif	// VEC2DIC_EXPANSION_H_
