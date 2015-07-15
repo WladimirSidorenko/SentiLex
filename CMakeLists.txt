@@ -2,9 +2,11 @@ cmake_minimum_required(VERSION 2.8.8)
 
 project(vec2dic)
 
-set(CMAKE_REQUIRED_LIBRARIES ${CMAKE_REQUIRED_LIBRARIES} armadillo)
-set(EXECUTABLE_OUTPUT_PATH bin)
-set(SOURCE src/vec2dic.cpp)
+find_package(Armadillo REQUIRED)
 
-add_definitions(-Wall -std=c++11)
-add_executable(vec2dic ${SOURCE})
+include_directories(src/)
+set(EXECUTABLE_OUTPUT_PATH bin)
+set(SOURCES src/vec2dic.cpp src/expansion.h src/expansion.cpp)
+
+add_definitions(-Wall -std=c++11 -fopenmp)
+add_executable(vec2dic ${SOURCES})
