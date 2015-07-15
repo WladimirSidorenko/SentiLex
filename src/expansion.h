@@ -18,17 +18,23 @@ enum class Polarity: char {
     MAX_SENTINEL
 };
 
+/** Integral type for distance measure */
+typedef double dist_t;
+
+/** Integral type for vector id */
+typedef unsigned int vid_t;
+
 /** Map from word to its polarity */
 typedef std::unordered_map<std::string, Polarity> w2p_t;
 
 /** Map from string to the index of its vector */
-typedef std::unordered_map<std::string, unsigned int> w2v_t;
+typedef std::unordered_map<std::string, vid_t> w2v_t;
 
 /** Map from word index to its polarity */
-typedef std::unordered_map<unsigned int, Polarity> v2p_t;
+typedef std::unordered_map<vid_t, Polarity> v2p_t;
 
 /** Map from vector index to string */
-typedef std::unordered_map<unsigned int, std::string> v2w_t;
+typedef std::unordered_map<vid_t, std::string> v2w_t;
 
 /////////////
 // Methods //
