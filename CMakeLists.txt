@@ -8,5 +8,5 @@ include_directories(src/)
 set(EXECUTABLE_OUTPUT_PATH bin)
 set(SOURCES src/vec2dic.cpp src/expansion.h src/expansion.cpp)
 
-add_definitions(-Wall -std=c++11 -fopenmp)
+add_definitions(-Wall -Wextra -std=c++11 -fopenmp)
 add_executable(vec2dic ${SOURCES})

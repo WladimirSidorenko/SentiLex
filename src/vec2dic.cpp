@@ -8,7 +8,7 @@
 #include <armadillo>		// arma::mat
 #include <cctype>		// std::isspace()
 #include <clocale>		// setlocale()
-#include <cstdio>		// sprintf(), sscanf()
+#include <cstdio>		// sscanf()
 #include <cstdlib>		// std::exit()
 #include <fstream>		// std::ifstream
 #include <functional>
@@ -91,20 +91,18 @@ static arma::mat NWE;
  * @return \c void
  */
 static void usage(int a_ret) {
-  std::cerr << "DESCRIPTION:" << std::endl;
   std::cerr << "Expand initial seed set of subjective terms by applying clustering" << std::endl;
   std::cerr << "to neural word embeddings." << std::endl << std::endl;
-  std::cerr << "USAGE:" << std::endl;
+  std::cerr << "Usage:" << std::endl;
   std::cerr << "vec2dic [OPTIONS] VECTOR_FILE SEED_FILE" << std::endl << std::endl;
-  std::cerr << "OPTIONS:" << std::endl;
+  std::cerr << "Options:" << std::endl;
   std::cerr << "-h|--help  show this screen and exit" << std::endl;
   std::cerr << "-n|--n-terms  number of terms to extract (default: -1 (unlimited))" << std::endl;
   std::cerr << "-t|--type  type of expansion algorithm to use:" << std::endl;
   std::cerr << "           (0 - KNN, 1 - nearest centroids, 2 - projection," << std::endl;
   std::cerr << "            3 - projection length, 4 - linear transformation)" << std::endl << std::endl;
-  std::cerr << "EXIT STATUS" << std::endl;
-  std::cerr << EXIT_SUCCESS << " on sucess" << std::endl;
-  std::cerr << "non-" << EXIT_SUCCESS << " on failure" << std::endl;
+  std::cerr << "Exit status:" << std::endl;
+  std::cerr << EXIT_SUCCESS << " on sucess" <<  "non-" << EXIT_SUCCESS << " otherwise" << std::endl;
   std::exit(a_ret);
 }
 
@@ -159,7 +157,8 @@ static int read_vectors(const char *a_fname) {
   const char *cline;
   std::string iline;
   size_t space_pos;
-  size_t mrows, ncolumns, icol = 0, irow = 0;
+  vid_t mrows = 0, ncolumns = 0, icol = 0, irow = 0;
+  std::cerr << "Reading word vectors ... ";
 
   std::ifstream is(a_fname);
   if (! is) {
@@ -169,7 +168,10 @@ static int read_vectors(const char *a_fname) {
   // skip empty lines at the beginning of file
   while (std::getline(is, iline) && iline.empty()) {}
   // initialize matrix (columns represent words, rows are coordinates)
-  sscanf(iline.c_str(), "%zu %zu", &ncolumns, &mrows);
+  if (sscanf(iline.c_str(), "%u %u", &ncolumns, &mrows) != 2) {
+    std::cerr << "Incorrect declaration line format: '" << iline.c_str() << std::endl;
+    goto error_exit;
+  }
   // allocate space for map and matrix
   word2vecid.reserve(ncolumns); vecid2word.reserve(ncolumns);
   NWE.set_size(mrows, ncolumns);
@@ -188,7 +190,7 @@ static int read_vectors(const char *a_fname) {
     cline = &iline[space_pos];
 
     for (irow = 0; irow < mrows && sscanf(cline, " %f", &iwght) == 1; ++irow) {
-      NWE(icol, irow) = iwght;
+      NWE(irow, icol) = iwght;
     }
     if (irow != mrows) {
       std::cerr << "cline = " << cline << std::endl;
@@ -209,6 +211,7 @@ static int read_vectors(const char *a_fname) {
     goto error_exit;
   }
   is.close();
+  std::cerr << "done (read " << ncolumns << " columns with " << mrows << " rows)" << std::endl;
   return 0;
 
  error_exit:
@@ -230,6 +233,8 @@ static int read_seed_set(const char *a_fname) {
   Polarity ipol;
   std::string iline;
   size_t tab_pos, tab_pos_orig;
+
+  std::cerr << "Reading seed set file ...";
 
   std::ifstream is(a_fname);
   if (! is) {
@@ -279,6 +284,7 @@ static int read_seed_set(const char *a_fname) {
     goto error_exit;
   }
   is.close();
+  std::cerr << "done (read " << word2pol.size() << " entries)" << std::endl;
   return 0;
 
  error_exit:

@@ -167,17 +167,20 @@ static bool _nc_compute_centroids(arma::mat *a_new_centroids, const arma::mat *a
   pol_t c_id;
   for (auto& p2v: *a_pol2vecids) {
     c_id = p2v.first;
-    std::cerr << "a) centroid #" << c_id << ": " << a_new_centroids->col(c_id) << std::endl;
+    std::cerr << "polarity = " << c_id << std::endl;
     // sum-up coordinates of all the vectors pertaining to the given
     // polarity
-    for (auto& vecid: p2v.second)
+    for (auto& vecid: p2v.second) {
+      std::cerr << "vecid = " << vecid << std::endl;
+      // std::cerr << "word vector = " << a_nwe->col(vecid) << std::endl;
       a_new_centroids->col(c_id) += a_nwe->col(vecid);
-
-    std::cerr << "b) centroid #" << c_id << ": " << a_new_centroids->row(c_id) << std::endl;
-    std::cerr << "   p2v.second.size() =" << p2v.second.size() << std::endl;
+      // std::cerr << "centroid = " << a_new_centroids->col(c_id) << std::endl;
+    }
+    // std::cerr << "b) centroid #" << c_id << ": " << a_new_centroids->col(c_id) << std::endl;
+    // std::cerr << "   p2v.second.size() =" << p2v.second.size() << std::endl;
     // take the mean of the new centroid
     a_new_centroids->col(c_id) /= float(p2v.second.size());
-    std::cerr << "c) centroid #" << c_id << ": " << a_new_centroids->col(c_id) << std::endl;
+    // std::cerr << "c) centroid #" << c_id << ": " << a_new_centroids->col(c_id) << std::endl;
   }
   return _cmp_mat(a_new_centroids, a_old_centroids);
 }
