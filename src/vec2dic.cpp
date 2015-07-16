@@ -10,10 +10,12 @@
 #include <clocale>		// setlocale()
 #include <cstdio>		// sscanf()
 #include <cstdlib>		// std::exit()
+#include <cstring>		// strcmp()
 #include <fstream>		// std::ifstream
 #include <functional>
 #include <iostream>		// std::cerr, std::cout
 #include <locale>
+#include <stdexcept>		// std::domain_error()
 #include <string>		// std::string
 #include <unordered_map>	// std::unordered_map
 #include <utility>		// std::make_pair
@@ -58,6 +60,23 @@ public:
 
   END_OPTION_MAP()
 };
+
+/// Pair of c_string and polarity
+typedef struct WP {
+  const char *m_word;
+  Polarity m_polarity;
+
+  WP(void):
+    m_word {}, m_polarity {}
+  {}
+
+  WP(const char *a_word, Polarity a_polarity):
+    m_word {a_word}, m_polarity {a_polarity}
+  {}
+} wp_t;
+
+/// Vector of pairs of c_string and their polarities
+typedef std::vector<wp_t> wpv_t;
 
 /////////////////////////////
 // Variables and Constants //
@@ -104,6 +123,55 @@ static void usage(int a_ret) {
   std::cerr << "Exit status:" << std::endl;
   std::cerr << EXIT_SUCCESS << " on sucess" <<  "non-" << EXIT_SUCCESS << " otherwise" << std::endl;
   std::exit(a_ret);
+}
+
+/**
+ * Output polar terms in sorted alphabetic order
+ *
+ * @param a_stream - output stream to use
+ * @param a_vecid2pol - mapping from vector id's to their respective polarities
+ *
+ * @return \c void
+ */
+static void output_terms(std::ostream &a_stream, const v2p_t *a_vecid2pol) {
+  // add new words to `word2pol` map
+  v2w_t::iterator v2w_it;
+  w2p_t::iterator w2p_it;
+  w2p_t::const_iterator w2p_end = word2pol.end();
+  for (auto &v2p: *a_vecid2pol) {
+    // we assume that the word is always found
+    v2w_it = vecid2word.find(v2p.first);
+    word2pol.emplace(v2w_it->second, v2p.second);
+  }
+
+  // populate word/polarity vector
+  wpv_t wpv;
+  wpv.reserve(word2pol.size());
+  for (auto &w2p: word2pol) {
+    wpv.push_back(WP {w2p.first.c_str(), w2p.second});
+  }
+  // sort words
+  std::sort(wpv.begin(), wpv.end(), [](const wp_t& wp1, const wp_t& wp2) \
+	    {return strcmp(wp1.m_word, wp2.m_word) < 0;});
+
+  // output sorted dict to the requested stream
+  for (auto &wp: wpv) {
+    a_stream << wp.m_word << '\t';
+    switch (wp.m_polarity) {
+      case Polarity::POSITIVE:
+	a_stream << positive;
+	break;
+      case Polarity::NEGATIVE:
+	a_stream << negative;
+	break;
+      case Polarity::NEUTRAL:
+	a_stream << neutral;
+	break;
+    default:
+      throw std::domain_error("Unknown polarity type");
+    }
+    a_stream << std::endl;
+  }
 }
 
 /**
@@ -157,6 +225,7 @@ static int read_vectors(const char *a_fname) {
   const char *cline;
   std::string iline;
   size_t space_pos;
+  int nchars;
   vid_t mrows = 0, ncolumns = 0, icol = 0, irow = 0;
   std::cerr << "Reading word vectors ... ";
 
@@ -172,6 +241,7 @@ static int read_vectors(const char *a_fname) {
     std::cerr << "Incorrect declaration line format: '" << iline.c_str() << std::endl;
     goto error_exit;
   }
+
   // allocate space for map and matrix
   word2vecid.reserve(ncolumns); vecid2word.reserve(ncolumns);
   NWE.set_size(mrows, ncolumns);
@@ -187,14 +257,14 @@ static int read_vectors(const char *a_fname) {
     word2vecid.emplace(std::move(iline.substr(0, space_pos)), std::move(icol));
     vecid2word.emplace(std::move(icol), std::move(iline.substr(0, space_pos)));
 
-    cline = &iline[space_pos];
-
-    for (irow = 0; irow < mrows && sscanf(cline, " %f", &iwght) == 1; ++irow) {
+    cline = &(iline.c_str()[space_pos]);
+    for (irow = 0; irow < mrows && sscanf(cline, " %f%n", &iwght, &nchars) == 1; ++irow) {
       NWE(irow, icol) = iwght;
+      cline += nchars;
     }
     if (irow != mrows) {
       std::cerr << "cline = " << cline << std::endl;
-      std::cerr << "Incorrect line format: declared vector size " << mrows << \
+      std::cerr << "Incorrect line format: '" << iline << " :declared vector size " << mrows << \
 	" differs from the actual size " << irow << std::endl;
       goto error_exit;
     }
@@ -211,7 +281,7 @@ static int read_vectors(const char *a_fname) {
     goto error_exit;
   }
   is.close();
-  std::cerr << "done (read " << ncolumns << " columns with " << mrows << " rows)" << std::endl;
+  std::cerr << "done (read " << mrows << " rows with " << ncolumns << " columns)" << std::endl;
   return 0;
 
  error_exit:
@@ -323,12 +393,13 @@ int main(int argc, char *argv[]) {
   // respective words
   v2p_t vecid2pol;
   w2v_t::const_iterator vecid, vecend = word2vecid.end();
-  for (auto& w2p: word2pol) {
+  for (auto &w2p: word2pol) {
     vecid = word2vecid.find(w2p.first);
     if (vecid != vecend)
       vecid2pol.emplace(vecid->second, w2p.second);
   }
 
+  std::cerr << "vecid2pol.size() before expansion = " << vecid2pol.size() << std::endl;
   // apply the requested expansion algorithm
   switch (opt.etype) {
   case ExpansionType::KNN_CLUSTERING:
@@ -349,10 +420,10 @@ int main(int argc, char *argv[]) {
   default:
     throw std::invalid_argument("Invalid type of seed set expansion algorithm.");
   }
+  std::cerr << "vecid2pol.size() after expansion = " << vecid2pol.size() << std::endl;
 
-  // output new terms
-  // for (auto& v2p: vecid2pol) {
-  // }
+  // output new terms in sorted alphabetic order
+  output_terms(std::cout, &vecid2pol);
 
   return ret;
 }

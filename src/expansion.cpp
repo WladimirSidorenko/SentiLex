@@ -3,7 +3,7 @@
 //////////////
 #include "expansion.h"
 
-#include <algorithm>		// std::swap
+#include <algorithm>		// std::swap(), std::sort()
 #include <cassert>		// assert
 #include <cfloat>		// DBL_MAX
 #include <cmath>		// sqrt()
@@ -11,7 +11,6 @@
 #include <cstdint>		// MAX_SIZE
 #include <iostream>		// std::cerr
 #include <unordered_set>	// std::unordered_set
-#include <utility>		// std::make_pair
 
 ///////////
 // Types //
@@ -31,10 +30,16 @@ typedef std::unordered_map<vid_t, pol_t> v2pi_t;
 
 /** 3-tuple of vector id, vector polarity, and its distance to the
     nearest centroid */
-typedef struct {
-  dist_t m_distance;
-  pol_t m_polarity;
-  vid_t m_vecid;
+typedef struct VPD {
+  dist_t m_distance {};
+  pol_t m_polarity {};
+  vid_t m_vecid {};
+
+  VPD(void) {}
+
+  VPD(dist_t a_distance, pol_t a_polarity, vid_t a_vecid):
+    m_distance{a_distance}, m_polarity{a_polarity}, m_vecid{a_vecid}
+  {}
 } vpd_t;
 
 /** vector of 3-tuples of vector id, vector polarity, and distctance
@@ -97,7 +102,7 @@ static pol_t _nc_find_cluster(const arma::mat *a_centroids,	\
     // compare distance with
     if (idistance < mindistance) {
       mindistance = idistance;
-      ret = j;
+      ret = i;
     }
   }
   if (a_dist != nullptr)
@@ -167,11 +172,9 @@ static bool _nc_compute_centroids(arma::mat *a_new_centroids, const arma::mat *a
   pol_t c_id;
   for (auto& p2v: *a_pol2vecids) {
     c_id = p2v.first;
-    std::cerr << "polarity = " << c_id << std::endl;
     // sum-up coordinates of all the vectors pertaining to the given
     // polarity
     for (auto& vecid: p2v.second) {
-      std::cerr << "vecid = " << vecid << std::endl;
       // std::cerr << "word vector = " << a_nwe->col(vecid) << std::endl;
       a_new_centroids->col(c_id) += a_nwe->col(vecid);
       // std::cerr << "centroid = " << a_new_centroids->col(c_id) << std::endl;
@@ -182,7 +185,7 @@ static bool _nc_compute_centroids(arma::mat *a_new_centroids, const arma::mat *a
     a_new_centroids->col(c_id) /= float(p2v.second.size());
     // std::cerr << "c) centroid #" << c_id << ": " << a_new_centroids->col(c_id) << std::endl;
   }
-  return _cmp_mat(a_new_centroids, a_old_centroids);
+  return !_cmp_mat(a_new_centroids, a_old_centroids);
 }
 
 /**
@@ -201,8 +204,9 @@ static inline bool _nc_run(arma::mat *a_new_centroids, arma::mat *a_old_centroid
   bool ret = false;
   // calculate centroids
   if ((ret = _nc_compute_centroids(a_new_centroids, a_old_centroids, a_polid2vecids, a_nwe)))
-    // assign new items to their new nearest centroids
-    ret = _nc_assign(a_polid2vecids, a_vecid2polid, a_new_centroids, a_nwe);
+    // assign new items to their new nearest centroids (can return
+    // `ret =` here, but then remove assert from )
+    _nc_assign(a_polid2vecids, a_vecid2polid, a_new_centroids, a_nwe);
 
   return ret;
 }
@@ -215,11 +219,12 @@ static inline bool _nc_run(arma::mat *a_new_centroids, arma::mat *a_old_centroid
  *
  * @return id of the cluster with the nearest centroid
  */
-static void _nc_expand(v2p_t *a_vecid2pol, const arma::mat *a_centroids, \
+static void _nc_expand(v2p_t *a_vecid2pol, const arma::mat *const a_centroids, \
 		       const arma::mat *a_nwe, const int a_N) {
   // vector of word vector ids, their respective polarities (aka
   // nearest centroids), and distances to the nearest centroids
-  vpd_v_t vpds(a_vecid2pol->size());
+  vpd_v_t vpds;
+  vpds.reserve(a_vecid2pol->size());
 
   dist_t idist;
   pol_t ipol;
@@ -227,7 +232,7 @@ static void _nc_expand(v2p_t *a_vecid2pol, const arma::mat *a_centroids, \
   v2p_t::const_iterator v2p_end = a_vecid2pol->end();
   // populate
   for (unsigned int i = 0; i < a_nwe->n_rows; ++i) {
-    if (a_vecid2pol->find(i) == v2p_end)
+    if (a_vecid2pol->find(i) != v2p_end)
       continue;
 
     // obtain polarity class and minimum distance to the nearest
@@ -235,7 +240,7 @@ static void _nc_expand(v2p_t *a_vecid2pol, const arma::mat *a_centroids, \
     ipol = _nc_find_cluster(a_centroids, a_nwe->colptr(i), &idist);
 
     // add new element to the vector
-    vpds[j] = {idist, ipol, i};
+    vpds.push_back(VPD {idist, ipol, i});
     ++j;
   }
   // sort vpds according to their distances to the centroids
@@ -267,11 +272,14 @@ void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const 
     polid2vecids[polid].insert(v2p.first);
     vecid2polid[v2p.first] = polid;
   }
+  int i = 0;
   // run the algorithm until convergence
   while (_nc_run(centroids, new_centroids, &polid2vecids, &vecid2polid, a_nwe)) {
+    std::cerr << "Run #" << i++ << '\r';
     // swap the centroids
     std::swap(centroids, new_centroids);
   }
+  std::cerr << std::endl;
 
   // add new terms to the polarity sets based on their distance to the
   // centroids (centroids and new centroids should contain identical
