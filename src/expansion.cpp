@@ -231,7 +231,7 @@ static void _nc_expand(v2p_t *a_vecid2pol, const arma::mat *const a_centroids, \
   int j = 0;
   v2p_t::const_iterator v2p_end = a_vecid2pol->end();
   // populate
-  for (unsigned int i = 0; i < a_nwe->n_rows; ++i) {
+  for (unsigned int i = 0; i < a_nwe->n_cols; ++i) {
     if (a_vecid2pol->find(i) != v2p_end)
       continue;
 

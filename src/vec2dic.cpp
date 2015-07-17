@@ -138,6 +138,7 @@ static void output_terms(std::ostream &a_stream, const v2p_t *a_vecid2pol) {
   v2w_t::iterator v2w_it;
   w2p_t::iterator w2p_it;
   w2p_t::const_iterator w2p_end = word2pol.end();
+
   for (auto &v2p: *a_vecid2pol) {
     // we assume that the word is always found
     v2w_it = vecid2word.find(v2p.first);
@@ -263,7 +264,6 @@ static int read_vectors(const char *a_fname) {
       cline += nchars;
     }
     if (irow != mrows) {
-      std::cerr << "cline = " << cline << std::endl;
       std::cerr << "Incorrect line format: '" << iline << " :declared vector size " << mrows << \
 	" differs from the actual size " << irow << std::endl;
       goto error_exit;
@@ -399,7 +399,6 @@ int main(int argc, char *argv[]) {
       vecid2pol.emplace(vecid->second, w2p.second);
   }
 
-  std::cerr << "vecid2pol.size() before expansion = " << vecid2pol.size() << std::endl;
   // apply the requested expansion algorithm
   switch (opt.etype) {
   case ExpansionType::KNN_CLUSTERING:
@@ -420,10 +419,7 @@ int main(int argc, char *argv[]) {
   default:
     throw std::invalid_argument("Invalid type of seed set expansion algorithm.");
   }
-  std::cerr << "vecid2pol.size() after expansion = " << vecid2pol.size() << std::endl;
-
   // output new terms in sorted alphabetic order
   output_terms(std::cout, &vecid2pol);
-
   return ret;
 }
