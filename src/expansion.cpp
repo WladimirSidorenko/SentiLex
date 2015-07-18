@@ -175,16 +175,13 @@ static bool _nc_compute_centroids(arma::mat *a_new_centroids, const arma::mat *a
     // sum-up coordinates of all the vectors pertaining to the given
     // polarity
     for (auto& vecid: p2v.second) {
-      // std::cerr << "word vector = " << a_nwe->col(vecid) << std::endl;
       a_new_centroids->col(c_id) += a_nwe->col(vecid);
-      // std::cerr << "centroid = " << a_new_centroids->col(c_id) << std::endl;
     }
-    // std::cerr << "b) centroid #" << c_id << ": " << a_new_centroids->col(c_id) << std::endl;
-    // std::cerr << "   p2v.second.size() =" << p2v.second.size() << std::endl;
     // take the mean of the new centroid
-    a_new_centroids->col(c_id) /= float(p2v.second.size());
-    // std::cerr << "c) centroid #" << c_id << ": " << a_new_centroids->col(c_id) << std::endl;
+    if (p2v.second.size())
+      a_new_centroids->col(c_id) /= float(p2v.second.size());
   }
+
   return !_cmp_mat(a_new_centroids, a_old_centroids);
 }
 
@@ -254,7 +251,8 @@ static void _nc_expand(v2p_t *a_vecid2pol, const arma::mat *const a_centroids, \
   }
 }
 
-void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
+void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
+			      const bool a_early_break) {
   // determine the number of clusters
   size_t n_clusters = static_cast<size_t>(Polarity::MAX_SENTINEL);
   // create two matrices for storing centroids
@@ -276,6 +274,11 @@ void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const 
   // run the algorithm until convergence
   while (_nc_run(centroids, new_centroids, &polid2vecids, &vecid2polid, a_nwe)) {
     std::cerr << "Run #" << i++ << '\r';
+    // early break
+    if (a_early_break) {
+      *centroids = *new_centroids;
+      break;
+    }
     // swap the centroids
     std::swap(centroids, new_centroids);
   }

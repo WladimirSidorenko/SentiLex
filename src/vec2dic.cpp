@@ -8,6 +8,7 @@
 #include <armadillo>		// arma::mat
 #include <cctype>		// std::isspace()
 #include <clocale>		// setlocale()
+#include <cmath>		// sqrt()
 #include <cstdio>		// sscanf()
 #include <cstdlib>		// std::exit()
 #include <cstring>		// strcmp()
@@ -24,8 +25,8 @@
 // Classes //
 /////////////
 enum class ExpansionType: int {
-  KNN_CLUSTERING = 0,		// K-nearest neighbors
-    NC_CLUSTERING,		// Nearest centroids algorithm
+  NC_CLUSTERING = 0,		// Nearest centroids algorithm
+    KNN_CLUSTERING,		// K-nearest neighbors
     PRJ_CLUSTERING,		// Projection-based clustering
     PRJ_LENGTH,			// Projection-length
     LIN_TRANSFORM,		// Linear transformation
@@ -39,7 +40,9 @@ class Option: public optparse {
 public:
   // Members
   std::ifstream m_seedfile();
+  int knn = 5;
   int n_terms = -1;
+  bool no_length_normalize = false;
   ExpansionType etype = ExpansionType::KNN_CLUSTERING;
 
   Option() {}
@@ -50,6 +53,14 @@ public:
 
   ON_OPTION_WITH_ARG(SHORTOPT('n') || LONGOPT("n-terms"))
   n_terms = std::atoi(arg);
+
+  ON_OPTION_WITH_ARG(SHORTOPT('k') || LONGOPT("k-nearest-neighbors"))
+  knn = std::atoi(arg);
+  if (knn < 1)
+    throw optparse::invalid_value("k-nearest-neighbors should be >= 1");
+
+  ON_OPTION(SHORTOPT('L') || LONGOPT("no-length-normalize"))
+  no_length_normalize = true;
 
   ON_OPTION_WITH_ARG(SHORTOPT('t') || LONGOPT("type"))
   int itype = std::atoi(arg);
@@ -117,8 +128,10 @@ static void usage(int a_ret) {
   std::cerr << "Options:" << std::endl;
   std::cerr << "-h|--help  show this screen and exit" << std::endl;
   std::cerr << "-n|--n-terms  number of terms to extract (default: -1 (unlimited))" << std::endl;
+  std::cerr << "-k|--k-nearest-neighbors  set the number of neighbors for KNN algorithm" << std::endl;
+  std::cerr << "-L|--no-length-normalize  do not normalize length of word vectors" << std::endl;
   std::cerr << "-t|--type  type of expansion algorithm to use:" << std::endl;
-  std::cerr << "           (0 - KNN, 1 - nearest centroids, 2 - projection," << std::endl;
+  std::cerr << "           (0 - KNN, 1 - nearest centroids (default), 2 - projection," << std::endl;
   std::cerr << "            3 - projection length, 4 - linear transformation)" << std::endl << std::endl;
   std::cerr << "Exit status:" << std::endl;
   std::cerr << EXIT_SUCCESS << " on sucess" <<  "non-" << EXIT_SUCCESS << " otherwise" << std::endl;
@@ -215,13 +228,40 @@ static inline std::string &normalize(std::string &s) {
 }
 
 /**
+ * Perform length-normalization of word vectors
+ *
+ * @param a_nwe - Armadillo matrix of word vectors (each word vector
+ *                is a column in this matrix)
+ *
+ * @return \c void
+ */
+static void _length_normalize(arma::mat *a_nwe) {
+  dist_t ilength = 0., tmp_j;
+  size_t j, n_rows = a_nwe->n_rows;
+  for (size_t i = 0; i < a_nwe->n_cols; ++i) {
+    ilength = 0.;
+    // compute the unnormalized length of the vector
+    for (j = 0; j < n_rows; ++j) {
+      tmp_j = (*a_nwe)(j, i);
+      ilength += tmp_j * tmp_j;
+    }
+    // normalize the length
+    ilength = sqrt(ilength);
+    // normalize the vector by dividing it by normalized length
+    if (ilength)
+      a_nwe->col(i) /= float(ilength);
+  }
+}
+
+/**
  * Read NWE vectors for word terms
  *
  * @param a_ret - exit code for the program
+ * @param a_no_length_normalize - do not length-normalize word vectors
  *
  * @return \c 0 on success, non-\c 0 otherwise
  */
-static int read_vectors(const char *a_fname) {
+static int read_vectors(const char *a_fname, const bool a_no_length_normalize) {
   float iwght;
   const char *cline;
   std::string iline;
@@ -281,6 +321,10 @@ static int read_vectors(const char *a_fname) {
     goto error_exit;
   }
   is.close();
+  // length-normalize the word vectors
+  if (!a_no_length_normalize)
+    _length_normalize(&NWE);
+
   std::cerr << "done (read " << mrows << " rows with " << ncolumns << " columns)" << std::endl;
   return 0;
 
@@ -382,7 +426,7 @@ int main(int argc, char *argv[]) {
     std::exit(EXIT_FAILURE);
   }
   // read word vectors
-  if ((ret = read_vectors(argv[argused++])))
+  if ((ret = read_vectors(argv[argused++], opt.no_length_normalize)))
     return ret;
 
   // read seed sets
@@ -401,11 +445,11 @@ int main(int argc, char *argv[]) {
 
   // apply the requested expansion algorithm
   switch (opt.etype) {
-  case ExpansionType::KNN_CLUSTERING:
-    expand_knn(&vecid2pol, &NWE, opt.n_terms);
-    break;
   case ExpansionType::NC_CLUSTERING:
     expand_nearest_centroids(&vecid2pol, &NWE, opt.n_terms);
+    break;
+  case ExpansionType::KNN_CLUSTERING:
+    expand_knn(&vecid2pol, &NWE, opt.n_terms);
     break;
   case ExpansionType::PRJ_CLUSTERING:
     expand_projected(&vecid2pol, &NWE, opt.n_terms);

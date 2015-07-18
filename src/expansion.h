@@ -11,7 +11,7 @@
 ///////////
 // Types //
 ///////////
-enum class Polarity: char {
+enum class Polarity: size_t {
   POSITIVE = 0,
     NEGATIVE,
     NEUTRAL,
@@ -48,11 +48,13 @@ typedef std::unordered_map<vid_t, std::string> v2w_t;
  * @param a_nwe - matrix of neural word embeddings
  * @param a_N - number of new terms to extract (these terms will have
  *              minimal distance to their respective centroids)
+ * @param a_early_break - only apply one iteration (i.e. only assign words to the
+ *                      centroids of known polarity term clusters)
  *
  * @return \c void (`a_vecid2pol` is modified in place)
  */
-void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N);
-
+void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
+			      const bool a_early_break = false);
 /**
  * Apply K-nearest neighbors clustering algorithm to expand seed sets of polar terms
  *
