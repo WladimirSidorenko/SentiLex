@@ -17,20 +17,20 @@
 ///////////
 
 /** Integral type for polarity id */
-typedef size_t pol_t;
+using pol_t = size_t;
 
 /** Set of NWE id's */
-typedef std::unordered_set<vid_t> vids_t;
+using vids_t = std::unordered_set<vid_t>;
 
 /** Map from polarity id to a set of respective NWE id's */
-typedef std::unordered_map<pol_t, vids_t> pi2v_t;
+using pi2v_t = std::unordered_map<pol_t, vids_t>;
 
 /** Map from NWE id to polarity id */
-typedef std::unordered_map<vid_t, pol_t> v2pi_t;
+using v2pi_t = std::unordered_map<vid_t, pol_t>;
 
 /** 3-tuple of vector id, vector polarity, and its distance to the
     nearest centroid */
-typedef struct VPD {
+using vpd_t = struct VPD {
   dist_t m_distance {};
   pol_t m_polarity {};
   vid_t m_vecid {};
@@ -40,18 +40,23 @@ typedef struct VPD {
   VPD(dist_t a_distance, pol_t a_polarity, vid_t a_vecid):
     m_distance{a_distance}, m_polarity{a_polarity}, m_vecid{a_vecid}
   {}
-} vpd_t;
+
+  bool operator <(const VPD& rhs) const {
+    return m_distance < rhs.m_distance;
+  }
+};
 
 /** vector of 3-tuples of vector id, vector polarity, and distctance
     to the centroid */
-typedef std::vector<vpd_t> vpd_v_t;
+using vpd_v_t = std::vector<vpd_t>;
+
+/** priority queue of 3-tuples of vector id, vector polarity, and
+    distctance to the centroid */
+using vpd_pq_t = std::priority_queue<vpd_t>;
 
 /////////////
 // Methods //
 /////////////
-void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
-
-}
 
 /**
  * Check if two matrices are equal
@@ -77,6 +82,46 @@ static bool _cmp_mat(const arma::mat *a_mat1, const arma::mat *a_mat2) {
 }
 
 /**
+ * Compute unnormaized Euclidean distance between two vectors
+ *
+ * @param a_vec1 - 1-st vector
+ * @param a_vec2 - 2-nd vector
+ * @param a_N - number of elements in each vector
+ *
+ * @return unnormaized Euclidean distance between vectors
+ */
+static inline dist_t _unnorm_eucl_distance(const dist_t *a_vec1, const dist_t *a_vec2, size_t a_N) {
+  dist_t tmp_i = 0., idistance = 0;
+
+  for (size_t i = 0; i < a_N; ++i) {
+    tmp_i = a_vec1[i] - a_vec2[i];
+    idistance += tmp_i * tmp_i;
+  }
+  return idistance;
+}
+
+/**
+ * Add newly extracted terms to the polarity lexicon
+ *
+ * @param a_vecid2pol - target dictionary mapping vector id's to polarities
+ * @param a_vpds - source vector of NWE ids, their polarities, and distances
+ * @param a_j - actual number of new terms
+ * @param a_N - maximum number of terms to extract (-1 means unlimited)
+ *
+ * @return \c void
+ */
+static inline void _add_terms(v2p_t *a_vecid2pol, vpd_v_t *a_vpds, const int a_j, const int a_N) {
+  // sort vpds according to their distances to the centroids
+  std::sort(a_vpds->begin(), a_vpds->end());
+  // add new terms to the dictionary
+  vpd_t *ivpd;
+  for (int i = 0; (a_N < 0 || i < a_N) && i < a_j; ++i) {
+    ivpd = &vpds[i];
+    a_vecid2pol->emplace(ivpd->m_vecid, static_cast<Polarity>(ivpd->m_polarity));
+  }
+}
+
+/**
  * Find cluster whose centroid is nearest to the given word vector
  *
  * @param a_centroids - matrix of pre-computed cluster centroids
@@ -92,13 +137,9 @@ static pol_t _nc_find_cluster(const arma::mat *a_centroids,	\
   const double *centroid;
   dist_t tmp_j, idistance, mindistance = DBL_MAX;
   for (size_t i = 0; i < a_centroids->n_cols; ++i) {
-    idistance = 0.;
     centroid = a_centroids->colptr(i);
     // compute Euclidean distance from vector to centroid
-    for (j = 0; j < a_centroids->n_rows; ++j) {
-      tmp_j = a_vec[j] - centroid[j];
-      idistance += tmp_j * tmp_j;
-    }
+    idistance = _unnorm_eucl_distance(a_vec, centroid, a_centroids->n_rows);
     // compare distance with
     if (idistance < mindistance) {
       mindistance = idistance;
@@ -240,15 +281,7 @@ static void _nc_expand(v2p_t *a_vecid2pol, const arma::mat *const a_centroids, \
     vpds.push_back(VPD {idist, ipol, i});
     ++j;
   }
-  // sort vpds according to their distances to the centroids
-  std::sort(vpds.begin(), vpds.end(), [](const vpd_t& vpd1, const vpd_t& vpd2) \
-	    {return vpd1.m_distance < vpd2.m_distance;});
-  // add new terms to the dictionary
-  vpd_t *ivpd;
-  for (int i = 0; (a_N < 0 || i < a_N) && i < j; ++i) {
-    ivpd = &vpds[i];
-    a_vecid2pol->emplace(ivpd->m_vecid, static_cast<Polarity>(ivpd->m_polarity));
-  }
+  _add_terms(a_vecid2pol, &vpds, j, a_N);
 }
 
 void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
@@ -292,6 +325,77 @@ void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const 
 
   delete new_centroids;
   delete centroids;
+}
+
+/**
+ * Find K known neighbors nearest to the vector `a_vid`
+ *
+ * @param a_vid - id of the vector whose neighbors should be found
+ * @param a_nwe - matrix of neural word embeddings
+ * @param a_vecid2pol - map of vector id's with known polarities
+ * @param a_knn - vector for storing K earest neighbors
+ *
+ * @return \c void
+ */
+static void _knn_find_nearest(vid_t a_vid, const arma::mat *a_nwe, const v2p_t *a_vecid2pol, \
+			      vpd_pq_t *a_knn) {
+  bool filled = false;
+  size_t added = 0, total = a_knn->size();
+  if (total == 0)
+    return;
+
+  // reset KNN vector
+  for (auto& knn: *a_knn) {
+    knn.m_distance = MAX_SIZE;
+    knn.m_vecid = -1;
+  }
+
+  dist_t idistance, mindistance = a_knn->front().m_distance;
+  dist_t *ivec = a_nwe->colptr(a_vid);
+  const size_t n_rows = a_nwe->n_rows;
+  // iterate over each known vector and find K nearest ones
+  for (auto& v2p: *a_vecid2pol) {
+    // compute distance between
+    idistance = _unnorm_eucl_distance(ivec, a_nwe->colptr(v2p.first), n_rows);
+
+    if (idistance >= mindistance)
+      continue;
+
+    // check if container is full and pop one elemtn if necessary
+    if (filled)
+      a_knn->pop();
+    else
+      filled = (++added == total);
+
+    a_knn->push(VPD {idistance, v2p.second, v2p.first});
+  }
+}
+
+/**
+ *
+ */
+static void _knn_add(vpd_t *a_vpd, const vpd_pq_t *a_knn) {
+  ;
+}
+
+void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, const int a_K) {
+  vpd_v_t vpds;
+  vpds.reserve(a_vecid2pol->size());
+  vpd_v_t _knn(a_K);
+  vpd_pq_t knn(_knn.begin(), _knn.end());
+
+  vpd_t ivpd;
+  size_t i = 0;
+  v2p_t v2p_end = a_vecid2pol->end();
+  // iterate over each word vector and find k-nearest neigbors for it
+  for (vid_t vid = 0; vid < a_nwe->n_cols; ++vid) {
+    // skip vector if its polarity is already known
+    if (a_vecid2pol->find(vid) != v2p_end)
+      continue;
+
+    _knn_find_nearest(vid, a_nwe, a_vecid2pol, &knn);
+    _knn_add(&vpds[i++], &knn);
+  }
 }
 
 void expand_projected(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {

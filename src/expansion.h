@@ -19,22 +19,22 @@ enum class Polarity: size_t {
 };
 
 /** Integral type for distance measure */
-typedef double dist_t;
+using dist_t = double;
 
 /** Integral type for vector id */
-typedef unsigned int vid_t;
+using vid_t = int;
 
 /** Map from word to its polarity */
-typedef std::unordered_map<std::string, Polarity> w2p_t;
+using w2p_t = std::unordered_map<std::string, Polarity>;
 
 /** Map from string to the index of its vector */
-typedef std::unordered_map<std::string, vid_t> w2v_t;
+using w2v_t = std::unordered_map<std::string, vid_t>;
 
 /** Map from word index to its polarity */
-typedef std::unordered_map<vid_t, Polarity> v2p_t;
+using v2p_t = std::unordered_map<vid_t, Polarity>;
 
 /** Map from vector index to string */
-typedef std::unordered_map<vid_t, std::string> v2w_t;
+using v2w_t = std::unordered_map<vid_t, std::string>;
 
 /////////////
 // Methods //
@@ -62,10 +62,11 @@ void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const 
  *                      polarities of their respective words
  * @param a_nwe - matrix of neural word embeddings
  * @param a_N - number of polar terms to extract
+ * @param a_K - number of nearest neighbors to use
  *
  * @return \c void (`a_vecid2pol` is modified in place)
  */
-void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N);
+void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, const int a_K = 5);
 
 /**
  * Apply projection to expand seed sets of polar terms

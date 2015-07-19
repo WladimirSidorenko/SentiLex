@@ -449,7 +449,7 @@ int main(int argc, char *argv[]) {
     expand_nearest_centroids(&vecid2pol, &NWE, opt.n_terms);
     break;
   case ExpansionType::KNN_CLUSTERING:
-    expand_knn(&vecid2pol, &NWE, opt.n_terms);
+    expand_knn(&vecid2pol, &NWE, opt.n_terms, opt.knn);
     break;
   case ExpansionType::PRJ_CLUSTERING:
     expand_projected(&vecid2pol, &NWE, opt.n_terms);
