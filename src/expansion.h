@@ -11,7 +11,7 @@
 ///////////
 // Types //
 ///////////
-enum class Polarity: size_t {
+enum class Polarity: char {
   POSITIVE = 0,
     NEGATIVE,
     NEUTRAL,

@@ -362,7 +362,7 @@ static void _knn_find_nearest(vid_t a_vid, const arma::mat *a_nwe, const v2p_t *
     if (idistance >= mindistance)
       continue;
 
-    // check if container is full and pop one elemtn if necessary
+    // check if container is full and pop one element if necessary
     if (filled)
       a_knn->pop();
     else
@@ -373,10 +373,49 @@ static void _knn_find_nearest(vid_t a_vid, const arma::mat *a_nwe, const v2p_t *
 }
 
 /**
+ * Compute most probable polarity class for given item from its K neighbors
  *
+ * @param a_vpd - element in which to store the result
+ * @param a_vid - id of the vector in question
+ * @param a_knn - priority queue of K nearest neighbors
+ * @param a_workbench - workbench for constructing polarities
+ *
+ * @return \c void
  */
-static void _knn_add(vpd_t *a_vpd, const vpd_pq_t *a_knn) {
-  ;
+static void _knn_add(vpd_t *a_vpd, const vid_t a_vid, vpd_pq_t *a_knn, \
+		     vpd_v_t *a_workbench) {
+  // reset workbench
+  for (auto& vpd: *a_workbench) {
+    vpd.m_vecid = 0;		// will serve as neighbor counter
+    vpd.m_distance = 0.;	// will store the sum of the distances
+  }
+
+  const vpd_t *vpd;
+  // iterate over neighbors
+  while (! a_knn->empty()) {
+    vpd = &a_knn->top();
+    ++(*a_workbench)[vpd->m_polarity].m_vecid;
+    (*a_workbench)[vpd->m_polarity].m_distance += vpd->m_distance;
+    a_knn->pop();
+  }
+
+  dist_t idistance, maxdistance = 0.;
+  pol_t pol, maxpol = static_cast<pol_t>(Polarity::MAX_SENTINEL);
+  for (pol_t ipol = 0; ipol < maxpol; ++ipol) {
+    if ((*a_workbench)[ipol].m_distance == 0)
+      continue;
+
+    // square the number of neighbors for that class and divide by the distance
+    idistance = (*a_workbench)[ipol].m_vecid;
+    idistance *= idistance;
+    idistance /= (*a_workbench)[ipol].m_distance;
+
+    if (idistance > maxdistance) {
+      maxdistance = idistance;
+      pol = ipol;
+    }
+  }
+  *a_vpd = VPD {maxdistance, pol, a_vid};
 }
 
 void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, const int a_K) {
@@ -384,6 +423,7 @@ void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, const
   vpds.reserve(a_vecid2pol->size());
   vpd_v_t _knn(a_K);
   vpd_pq_t knn(_knn.begin(), _knn.end());
+  vpd_v_t workbench(static_cast<size_t>(Polarity::MAX_SENTINEL));
 
   vpd_t ivpd;
   size_t i = 0;
@@ -395,7 +435,7 @@ void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, const
       continue;
 
     _knn_find_nearest(vid, a_nwe, a_vecid2pol, &knn);
-    _knn_add(&vpds[i++], &knn);
+    _knn_add(&vpds[i++], vid, &knn, &workbench);
   }
 }
 
