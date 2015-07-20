@@ -6,14 +6,16 @@
 #include <algorithm>		// std::swap(), std::sort()
 #include <cassert>		// assert
 #include <cfloat>		// DBL_MAX
+#include <climits>		// UINT_MAX
 #include <cmath>		// sqrt()
 #include <cstdlib>		// size_t
 #include <cstdint>		// MAX_SIZE
 #include <iostream>		// std::cerr
 #include <unordered_set>	// std::unordered_set
+#include <queue>		// std::priority_queue
 
 ///////////
-// Types //
+// types //
 ///////////
 
 /** Integral type for polarity id */
@@ -116,7 +118,7 @@ static inline void _add_terms(v2p_t *a_vecid2pol, vpd_v_t *a_vpds, const int a_j
   // add new terms to the dictionary
   vpd_t *ivpd;
   for (int i = 0; (a_N < 0 || i < a_N) && i < a_j; ++i) {
-    ivpd = &vpds[i];
+    ivpd = &(*a_vpds)[i];
     a_vecid2pol->emplace(ivpd->m_vecid, static_cast<Polarity>(ivpd->m_polarity));
   }
 }
@@ -133,9 +135,9 @@ static inline void _add_terms(v2p_t *a_vecid2pol, vpd_v_t *a_vpds, const int a_j
 static pol_t _nc_find_cluster(const arma::mat *a_centroids,	\
 			       const double *a_vec,		\
 			       dist_t *a_dist = nullptr) {
-  pol_t j, ret = 0;
+  pol_t ret = 0;
   const double *centroid;
-  dist_t tmp_j, idistance, mindistance = DBL_MAX;
+  dist_t idistance, mindistance = DBL_MAX;
   for (size_t i = 0; i < a_centroids->n_cols; ++i) {
     centroid = a_centroids->colptr(i);
     // compute Euclidean distance from vector to centroid
@@ -345,13 +347,12 @@ static void _knn_find_nearest(vid_t a_vid, const arma::mat *a_nwe, const v2p_t *
     return;
 
   // reset KNN vector
-  for (auto& knn: *a_knn) {
-    knn.m_distance = MAX_SIZE;
-    knn.m_vecid = -1;
+  while (! a_knn->empty()) {
+    a_knn->pop();
   }
 
-  dist_t idistance, mindistance = a_knn->front().m_distance;
-  dist_t *ivec = a_nwe->colptr(a_vid);
+  dist_t idistance, mindistance = a_knn->top().m_distance;
+  const dist_t *ivec = a_nwe->colptr(a_vid);
   const size_t n_rows = a_nwe->n_rows;
   // iterate over each known vector and find K nearest ones
   for (auto& v2p: *a_vecid2pol) {
@@ -367,7 +368,7 @@ static void _knn_find_nearest(vid_t a_vid, const arma::mat *a_nwe, const v2p_t *
     else
       filled = (++added == total);
 
-    a_knn->push(VPD {idistance, v2p.second, v2p.first});
+    a_knn->push(VPD {idistance, static_cast<pol_t>(v2p.second), v2p.first});
   }
 }
 
@@ -386,7 +387,7 @@ void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, const
 
   vpd_t ivpd;
   size_t i = 0;
-  v2p_t v2p_end = a_vecid2pol->end();
+  v2p_t::const_iterator v2p_end = a_vecid2pol->end();
   // iterate over each word vector and find k-nearest neigbors for it
   for (vid_t vid = 0; vid < a_nwe->n_cols; ++vid) {
     // skip vector if its polarity is already known

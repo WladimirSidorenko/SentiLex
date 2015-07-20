@@ -22,7 +22,7 @@ enum class Polarity: size_t {
 using dist_t = double;
 
 /** Integral type for vector id */
-using vid_t = int;
+using vid_t = unsigned int;
 
 /** Map from word to its polarity */
 using w2p_t = std::unordered_map<std::string, Polarity>;
