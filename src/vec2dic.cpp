@@ -43,7 +43,7 @@ public:
   int knn = 5;
   int n_terms = -1;
   bool no_length_normalize = false;
-  ExpansionType etype = ExpansionType::KNN_CLUSTERING;
+  ExpansionType etype = ExpansionType::NC_CLUSTERING;
 
   Option() {}
 
@@ -59,7 +59,7 @@ public:
   if (knn < 1)
     throw optparse::invalid_value("k-nearest-neighbors should be >= 1");
 
-  ON_OPTION(SHORTOPT('L') || LONGOPT("no-length-normalize"))
+  ON_OPTION(SHORTOPT('L') || LONGOPT("no-length-normalizion"))
   no_length_normalize = true;
 
   ON_OPTION_WITH_ARG(SHORTOPT('t') || LONGOPT("type"))
@@ -129,12 +129,12 @@ static void usage(int a_ret) {
   std::cerr << "-h|--help  show this screen and exit" << std::endl;
   std::cerr << "-n|--n-terms  number of terms to extract (default: -1 (unlimited))" << std::endl;
   std::cerr << "-k|--k-nearest-neighbors  set the number of neighbors for KNN algorithm" << std::endl;
-  std::cerr << "-L|--no-length-normalize  do not normalize length of word vectors" << std::endl;
+  std::cerr << "-L|--no-length-normalizion  do not normalize length of word vectors" << std::endl;
   std::cerr << "-t|--type  type of expansion algorithm to use:" << std::endl;
-  std::cerr << "           (0 - KNN, 1 - nearest centroids (default), 2 - projection," << std::endl;
+  std::cerr << "           (0 - nearest centroids (default), 1 - KNN, 2 - projection," << std::endl;
   std::cerr << "            3 - projection length, 4 - linear transformation)" << std::endl << std::endl;
   std::cerr << "Exit status:" << std::endl;
-  std::cerr << EXIT_SUCCESS << " on sucess" <<  "non-" << EXIT_SUCCESS << " otherwise" << std::endl;
+  std::cerr << EXIT_SUCCESS << " on sucess, non-" << EXIT_SUCCESS << " otherwise" << std::endl;
   std::exit(a_ret);
 }
 
