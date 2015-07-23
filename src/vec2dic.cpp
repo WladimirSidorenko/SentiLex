@@ -43,6 +43,7 @@ public:
   int knn = 5;
   int n_terms = -1;
   bool no_length_normalize = false;
+  bool no_mean_normalize = false;
   ExpansionType etype = ExpansionType::NC_CLUSTERING;
 
   Option() {}
@@ -61,6 +62,9 @@ public:
 
   ON_OPTION(SHORTOPT('L') || LONGOPT("no-length-normalizion"))
   no_length_normalize = true;
+
+  ON_OPTION(SHORTOPT('M') || LONGOPT("no-mean-normalizion"))
+  no_mean_normalize = true;
 
   ON_OPTION_WITH_ARG(SHORTOPT('t') || LONGOPT("type"))
   int itype = std::atoi(arg);
@@ -130,6 +134,7 @@ static void usage(int a_ret) {
   std::cerr << "-n|--n-terms  number of terms to extract (default: -1 (unlimited))" << std::endl;
   std::cerr << "-k|--k-nearest-neighbors  set the number of neighbors for KNN algorithm" << std::endl;
   std::cerr << "-L|--no-length-normalizion  do not normalize length of word vectors" << std::endl;
+  std::cerr << "-M|--no-mean-normalizion  do not normalize means of word vectors" << std::endl;
   std::cerr << "-t|--type  type of expansion algorithm to use:" << std::endl;
   std::cerr << "           (0 - nearest centroids (default), 1 - KNN, 2 - projection," << std::endl;
   std::cerr << "            3 - projection length, 4 - linear transformation)" << std::endl << std::endl;
@@ -254,14 +259,33 @@ static void _length_normalize(arma::mat *a_nwe) {
 }
 
 /**
+ * Perform mean-normalization of word vectors
+ *
+ * @param a_nwe - Armadillo matrix of word vectors (each word vector
+ *                is a column in this matrix)
+ *
+ * @return \c void
+ */
+static void _mean_normalize(arma::mat *a_nwe) {
+  arma::vec vmean = arma::mean(*a_nwe, 1);
+
+  for (vid_t i = 0; i < vmean.n_rows; ++i) {
+    a_nwe->row(i) -= vmean[i];
+
+  }
+}
+
+/**
  * Read NWE vectors for word terms
  *
  * @param a_ret - exit code for the program
- * @param a_no_length_normalize - do not length-normalize word vectors
+ * @param a_no_length_normalize - do not normalize length of word vectors
+ * @param a_no_mean_normalize - do not normalize means of word vectors
  *
  * @return \c 0 on success, non-\c 0 otherwise
  */
-static int read_vectors(const char *a_fname, const bool a_no_length_normalize) {
+static int read_vectors(const char *a_fname, const bool a_no_length_normalize, \
+			const bool a_no_mean_normalize) {
   float iwght;
   const char *cline;
   std::string iline;
@@ -321,9 +345,13 @@ static int read_vectors(const char *a_fname, const bool a_no_length_normalize) {
     goto error_exit;
   }
   is.close();
-  // length-normalize the word vectors
+  // normalize lengths of word vectors
   if (!a_no_length_normalize)
     _length_normalize(&NWE);
+
+  // normalize means of word vectors
+  if (!a_no_mean_normalize)
+    _mean_normalize(&NWE);
 
   std::cerr << "done (read " << mrows << " rows with " << ncolumns << " columns)" << std::endl;
   return 0;
@@ -426,7 +454,7 @@ int main(int argc, char *argv[]) {
     std::exit(EXIT_FAILURE);
   }
   // read word vectors
-  if ((ret = read_vectors(argv[argused++], opt.no_length_normalize)))
+  if ((ret = read_vectors(argv[argused++], opt.no_length_normalize, opt.no_mean_normalize)))
     return ret;
 
   // read seed sets
