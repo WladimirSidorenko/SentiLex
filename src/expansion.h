@@ -69,20 +69,24 @@ void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const 
 void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, const int a_K = 5);
 
 /**
- * Apply projection to expand seed sets of polar terms
+ * Apply principal component analysis to expand seed sets of polar terms
  *
- * This algorithm first projects all unknown terms on the vector
- * subspace defined by the known polar items and then applies standard
- * clustering algorithm on the projections.
+ * This algorithm applies the PCA algorithm to obtain the subspace of
+ * polar terms and then projects remaining terms on this subspace.
  *
  * @param a_vecid2pol - dictionary mapping known vector id's to the
  *                      polarities of their respective words
  * @param a_nwe - matrix of neural word embeddings
  * @param a_N - number of polar terms to extract
+ * @param a_use_means - take means of vectors belonging to same
+ *              polarity class
+ * @param a_get_best_pc - find principal component with maximum polarity
+ *              deviation
  *
  * @return \c void (`a_vecid2pol` is modified in place)
  */
-void expand_projected(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N);
+void expand_pca(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
+		const bool a_use_means = false, const bool a_get_best_pc = false);
 
 /**
  * Apply projection to expand seed sets of polar terms
@@ -98,7 +102,7 @@ void expand_projected(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N)
  *
  * @return \c void (`a_vecid2pol` is modified in place)
  */
-void expand_projected_length(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N);
+void expand_projected(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N);
 
 /**
  * Derive projection matrix to expand seed sets of polar terms

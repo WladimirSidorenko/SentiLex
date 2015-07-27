@@ -343,7 +343,7 @@ void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const 
 static void _knn_find_nearest(vid_t a_vid, const arma::mat *a_nwe, const v2p_t * const a_vecid2pol, \
 			      vpd_pq_t *a_knn, const int a_K) {
   bool filled = false;
-  size_t added = 0;
+  int added = 0;
 
   // reset KNN vector
   while (! a_knn->empty()) {
@@ -445,11 +445,30 @@ void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, const
   _add_terms(a_vecid2pol, &vpds, i, a_N);
 }
 
-void expand_projected(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
+static vid_t _pca_find_best_pc(const v2p_t *a_vecid2pol, const arma::mat *a_prjctd) {
+  return 0;
+}
+
+void expand_pca(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
+		const bool a_use_means, const bool a_get_best_pc) {
+  // obtain matrix of vectors with known polarities
+  vid_t i = 0;
+  arma::mat pol_mtx (a_nwe->n_rows, a_vecid2pol->size());
+  for (auto &v2p: *a_vecid2pol) {
+    pol_mtx.col(i++) = a_nwe->col(v2p.first);
+  }
+  // obtain PCA coefficients and project the data
+  arma::mat pca_coeff, prjctd;
+  arma::princomp(pca_coeff, prjctd, pol_mtx.t());
+  // look for the principal component with the maximum deviation for
+  // polarity, if asked to
+  vid_t trg_pc = 0;
+  if (a_get_best_pc)
+    trg_pc = _pca_find_best_pc(a_vecid2pol, &prjctd);
 
 }
 
-void expand_projected_length(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
+void expand_projected(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
 
 }
 

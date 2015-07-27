@@ -27,8 +27,8 @@
 enum class ExpansionType: int {
   NC_CLUSTERING = 0,		// Nearest centroids algorithm
     KNN_CLUSTERING,		// K-nearest neighbors
+    PCA_CLUSTERING,		// Proincipal component analysis
     PRJ_CLUSTERING,		// Projection-based clustering
-    PRJ_LENGTH,			// Projection-length
     LIN_TRANSFORM,		// Linear transformation
     MAX_SENTINEL		// Unused type that serves as a sentinel
     };
@@ -136,8 +136,8 @@ static void usage(int a_ret) {
   std::cerr << "-L|--no-length-normalizion  do not normalize length of word vectors" << std::endl;
   std::cerr << "-M|--no-mean-normalizion  do not normalize means of word vectors" << std::endl;
   std::cerr << "-t|--type  type of expansion algorithm to use:" << std::endl;
-  std::cerr << "           (0 - nearest centroids (default), 1 - KNN, 2 - projection," << std::endl;
-  std::cerr << "            3 - projection length, 4 - linear transformation)" << std::endl << std::endl;
+  std::cerr << "           (0 - nearest centroids (default), 1 - KNN, 2 - PCA," << std::endl;
+  std::cerr << "            3 - projection clustering, 4 - linear transformation)" << std::endl << std::endl;
   std::cerr << "Exit status:" << std::endl;
   std::cerr << EXIT_SUCCESS << " on sucess, non-" << EXIT_SUCCESS << " otherwise" << std::endl;
   std::exit(a_ret);
@@ -479,11 +479,11 @@ int main(int argc, char *argv[]) {
   case ExpansionType::KNN_CLUSTERING:
     expand_knn(&vecid2pol, &NWE, opt.n_terms, opt.knn);
     break;
+  case ExpansionType::PCA_CLUSTERING:
+    expand_pca(&vecid2pol, &NWE, opt.n_terms);
+    break;
   case ExpansionType::PRJ_CLUSTERING:
     expand_projected(&vecid2pol, &NWE, opt.n_terms);
-    break;
-  case ExpansionType::PRJ_LENGTH:
-    expand_projected_length(&vecid2pol, &NWE, opt.n_terms);
     break;
   case ExpansionType::LIN_TRANSFORM:
     expand_linear_transform(&vecid2pol, &NWE, opt.n_terms);
