@@ -78,15 +78,10 @@ void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, const
  *                      polarities of their respective words
  * @param a_nwe - matrix of neural word embeddings
  * @param a_N - number of polar terms to extract
- * @param a_use_means - take means of vectors belonging to same
- *              polarity class
- * @param a_get_best_pc - find principal component with maximum polarity
- *              deviation
  *
  * @return \c void (`a_vecid2pol` is modified in place)
  */
-void expand_pca(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
-		const bool a_use_means = false, const bool a_get_best_pc = false);
+void expand_pca(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N);
 
 /**
  * Apply projection to expand seed sets of polar terms

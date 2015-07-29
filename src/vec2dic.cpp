@@ -136,8 +136,8 @@ static void usage(int a_ret) {
   std::cerr << "-L|--no-length-normalizion  do not normalize length of word vectors" << std::endl;
   std::cerr << "-M|--no-mean-normalizion  do not normalize means of word vectors" << std::endl;
   std::cerr << "-t|--type  type of expansion algorithm to use:" << std::endl;
-  std::cerr << "           (0 - nearest centroids (default), 1 - KNN, 2 - PCA," << std::endl;
-  std::cerr << "            3 - projection clustering, 4 - linear transformation)" << std::endl << std::endl;
+  std::cerr << "           (0 - nearest centroids (default), 1 - KNN, 2 - PCA dimension," << std::endl;
+  std::cerr << "            3 - linear projection, 4 - linear transformation)" << std::endl << std::endl;
   std::cerr << "Exit status:" << std::endl;
   std::cerr << EXIT_SUCCESS << " on sucess, non-" << EXIT_SUCCESS << " otherwise" << std::endl;
   std::exit(a_ret);
