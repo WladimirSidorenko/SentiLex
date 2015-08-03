@@ -56,6 +56,33 @@ using vpd_v_t = std::vector<vpd_t>;
     distctance to the centroid */
 using vpd_pq_t = std::priority_queue<vpd_t>;
 
+/** struct comprising means and standard deviations of polarity  */
+using pol_stat_t = struct {
+  vid_t m_dim;			// dimension with the longest distance
+				// between vectors pertaining to
+				// different polarity classes
+
+  size_t m_n_pos;		// number of positive vectors
+  dist_t m_pos_mean;		// mean of positive vectors
+  dist_t m_pos_dev;		// deviation of positive vectors along
+				// the given dimension
+  size_t m_n_neg;		// number of negative vectors
+  dist_t m_neg_mean;		// mean of negative vectors
+  dist_t m_neg_dev;		// deviation of negative vectors along
+				// the given dimension
+  size_t m_n_neut;		// number of neutral vectors
+  dist_t m_neut_mean;		// mean of neutral vectors
+  dist_t m_neut_dev;		// deviation of neutral vectors along
+				// the given dimension
+};
+
+///////////////
+// Constants //
+///////////////
+const vid_t POS_VID = static_cast<vid_t>(Polarity::POSITIVE);
+const vid_t NEG_VID = static_cast<vid_t>(Polarity::NEGATIVE);
+const vid_t NEUT_VID = static_cast<vid_t>(Polarity::NEUTRAL);
+
 /////////////
 // Methods //
 /////////////
@@ -271,7 +298,7 @@ static void _nc_expand(v2p_t *a_vecid2pol, const arma::mat *const a_centroids, \
   int j = 0;
   v2p_t::const_iterator v2p_end = a_vecid2pol->end();
   // populate
-  for (unsigned int i = 0; i < a_nwe->n_cols; ++i) {
+  for (vid_t i = 0; i < a_nwe->n_cols; ++i) {
     if (a_vecid2pol->find(i) != v2p_end)
       continue;
 
@@ -445,82 +472,193 @@ void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, const
   _add_terms(a_vecid2pol, &vpds, i, a_N);
 }
 
-static vid_t _pca_find_best_pc(const v2pi_t *a_vecid2polid, const arma::mat *a_prjctd) {
-  /// means of polarity vectors
-  arma::mat pol_means(a_prjctd.n_cols, static_cast<size_t>(Polarity::MAX_SENTINEL) - 1);
-  /// number of vectors having certain polarity
-  std::vector<double> n_pol(static_cast<size_t>(Polarity::MAX_SENTINEL) - 1, 0.);
-
-  // obtain unnormalized means of polarity vectors
-  for (auto &v2p: *a_vecid2pol) {
-    ++n_pol[v2p.second];
-    pol_means.col(v2p.second) += a_prjctd->row(v2p.first).t();
-  }
-  // normalize means of polarity vectors
-  for (vid_t j = 0; j < pol_means.n_cols; ++j) {
-    pol_means.col(j) /= n_pol[j];
-  }
-  // look for the dimension with the highest difference for different
-  // polarity classes
-  vid_t dim = 0;
-  vid_t pos_j = static_cast<vid_t>(Polarity::POSITIVE);
-  vid_t neg_j = static_cast<vid_t>(Polarity::NEGATIVE);
-  vid_t neu_j = static_cast<vid_t>(Polarity::NEUTRAL);
-  dist_t maxdelta = 0., delta_i, temp_i;
-  arma::rowvec *irow;
-  for (vid_t i = 0; i < pol_means.n_cols; ++i) {
-    irow = &pol_means.row(i);
-    temp_i = (*irow)[pos_j] - (*irow)[neut_j] + (*irow)[neut_j] - (*irow)[neg_j];
-    delta_i = temp_i * temp_i;
-    if (delta_i > max_delta) {
-      max_delta = delta_i;
-      dim = i;
-    }
-  }
-  return dim;
-}
-
 /**
- * Expand polarity sets by adding terms that are closest to centroids
+ * Compute means of polarity vectors along dimension with the biggest
+ * deviation
  *
  * @param a_vecid2pol - mapping from vector id's to polarities
- * @param a_dim - dimension in the projected PCA space which
- *                presumably accounts for polarity
- * @param a_pca_nwe - neural-word embedding matrix projected onto the
- *                    PCA space
- * @param a_N - maximum number of terms to extract (-1 means unlimited)
- * @param a_mid_pos - midway to the medium of positive vectors
- * @param a_mid_neg - midway to the medium of negative vectors
+ * @param a_prjctd - NWE matrix projected on the PCA space
+ * @param a_pol_stat - struct comprising statiscs about polarity
+ *                     vectors
  *
  * @return \c void
  */
-static void _pca_expand(v2p_t *a_vecid2pol, const vid_t a_dim,		\
-			const arma::mat *a_pca_nwe, const int a_N, \
-			const dist_t a_mid_pos, const dist_t a_mid_neg) {
-  // vector of word vector ids, their respective polarities (aka
-  // nearest centroids), and distances to the nearest centroids
+static void _pca_compute_means(const v2pi_t *a_vecid2polid, const arma::mat *a_prjctd, \
+			       pol_stat_t *a_pol_stat) {
+  a_pol_stat->m_n_pos = 0; a_pol_stat->m_n_neg = 0; a_pol_stat->m_n_neut = 0;
+  /// means of polarity vectors
+  arma::mat pol_means(a_prjctd->n_cols, static_cast<size_t>(Polarity::MAX_SENTINEL));
+
+  // obtain unnormalized means of polarity vectors
+  for (auto &v2p: *a_vecid2polid) {
+    switch (v2p.second) {
+    case POS_VID:
+      ++a_pol_stat->m_n_pos;
+      break;
+    case NEG_VID:
+      ++a_pol_stat->m_n_neg;
+      break;
+    default:
+      ++a_pol_stat->m_n_neut;
+      break;
+    }
+    pol_means.col(v2p.second) += a_prjctd->row(v2p.first).t();
+  }
+
+  // normalize means of polarity vectors
+  if (! a_pol_stat->m_n_pos || !a_pol_stat->m_n_neg)
+    return;
+
+  pol_means.col(POS_VID) /= static_cast<double>(a_pol_stat->m_n_pos);
+  pol_means.col(NEG_VID) /= static_cast<double>(a_pol_stat->m_n_neg);
+
+  if (a_pol_stat->m_n_neut)
+    pol_means.col(NEUT_VID) /= static_cast<double>(a_pol_stat->m_n_neut);
+
+  // look for the dimension with the biggest difference for different
+  // polarity classes
+  dist_t max_delta = DBL_MIN;
+  // best dimension is the one which maximizes the equation: `AC -
+  // (AC/2 - B)`, where AC is the distance between positive and
+  // negative means, B is the mean of neutral vectors, and AC/2 is the
+  // point in-between the positive and negative means
+  arma::vec vdelta = pol_means.col(POS_VID) - pol_means.col(NEG_VID);
+  if (a_pol_stat->m_n_neut)
+    vdelta = arma::abs(vdelta) - arma::abs(pol_means.col(POS_VID) - vdelta / 2 - \
+					   pol_means.col(NEUT_VID));
+
+  for (vid_t i = 0; i < vdelta.n_rows; ++i) {
+    if (vdelta(i) > max_delta) {
+      max_delta = vdelta(i);
+      a_pol_stat->m_dim = i;
+    }
+  }
+  a_pol_stat->m_pos_mean = pol_means(a_pol_stat->m_dim, POS_VID);
+  a_pol_stat->m_neg_mean = pol_means(a_pol_stat->m_dim, NEG_VID);
+  a_pol_stat->m_neut_mean = pol_means(a_pol_stat->m_dim, NEUT_VID);
+}
+
+/**
+ * Compute standard deviation of polarity vectors along the dimension
+ * with the biggest distance between different classes
+ *
+ * @param a_vecid2pol - mapping from vector id's to polarities
+ * @param a_prjctd - NWE matrix projected on the PCA space
+ * @param a_pol_stat - struct comprising statiscs about polarity
+ *                     vectors
+ *
+ * @return dimension with the maximal distance between polarity classes
+ */
+static void _pca_compute_dev(const v2pi_t *a_vecid2polid, const arma::mat *a_prjctd, \
+			     pol_stat_t *a_pol_stat) {
+  // obtain unnormalized standard deviations of polarity vectors along
+  // the given dimension
+  dist_t tmp_j;
+  a_pol_stat->m_pos_dev = 0.;
+  a_pol_stat->m_neg_dev = 0.;
+  a_pol_stat->m_neut_dev = 0.;
+  for (auto &v2p: *a_vecid2polid) {
+    tmp_j = (*a_prjctd)(v2p.first, a_pol_stat->m_dim);
+
+    switch (v2p.second) {
+    case POS_VID:
+      tmp_j -= a_pol_stat->m_pos_mean;
+      a_pol_stat->m_pos_dev += tmp_j * tmp_j;
+      break;
+    case NEG_VID:
+      tmp_j -= a_pol_stat->m_neg_mean;
+      a_pol_stat->m_neg_dev += tmp_j * tmp_j;
+      break;
+    default:
+      tmp_j -= a_pol_stat->m_neut_mean;
+      a_pol_stat->m_neut_dev += tmp_j * tmp_j;
+    }
+  }
+  if (a_pol_stat->m_n_pos)
+    a_pol_stat->m_pos_dev /= a_pol_stat->m_n_pos;
+
+  if (a_pol_stat->m_n_neg)
+    a_pol_stat->m_pos_dev /= a_pol_stat->m_n_neg;
+
+  if (a_pol_stat->m_n_neut)
+    a_pol_stat->m_pos_dev /= a_pol_stat->m_n_neut;
+}
+
+/**
+ * Obtain means and deviations of polarity vectors along the dimension
+ * with the biggest spread
+ *
+ * @param a_vecid2pol - mapping from vector id's to polarities
+ * @param a_prjctd - NWE matrix projected on the PCA space
+ * @param a_pol_stat - struct comprising statiscs about polarity
+ *                     vectors
+ *
+ * @return \c void
+ */
+static void _pca_compute_stat(const v2pi_t *a_vecid2polid, const arma::mat *a_prjctd, \
+			       pol_stat_t *a_pol_stat) {
+  _pca_compute_means(a_vecid2polid, a_prjctd, a_pol_stat);
+  std::cerr << "pca means computed" << std::endl;
+  _pca_compute_dev(a_vecid2polid, a_prjctd, a_pol_stat);
+  std::cerr << "pca stddev computed" << std::endl;
+}
+
+/**
+ * Expand polarity sets by adding terms that are farthermost to the
+ * mean of neutral vectors
+ *
+ * @param a_vecid2pol - mapping from vector id's to polarities
+ * @param a_pca_nwe - neural-word embedding matrix projected onto the
+ *                    PCA space
+ * @param a_N - maximum number of terms to extract (-1 means unlimited)
+ * @param a_pol_stat - struct comprising statiscs about polarity
+ *                     vectors
+ *
+ * @return \c void
+ */
+static void _pca_expand(v2p_t *a_vecid2pol, const arma::mat *a_pca_nwe, \
+			const int a_N, const pol_stat_t *a_pol_stat) {
+  // vector of word vector ids, their respective polarities, and
+  // distances to the boundaries
   vpd_v_t vpds;
-  vpds.reserve(a_vecid2pol->size());
+  vpds.reserve(a_pca_nwe->n_rows - a_vecid2pol->size());
+
+  bool neg_is_greater = false;
+  dist_t min = 0., max = 0.;
+  if (a_pol_stat->m_neg_mean < a_pol_stat->m_pos_mean) {
+    min = a_pol_stat->m_neg_mean + a_pol_stat->m_neg_dev;
+    max = a_pol_stat->m_pos_mean - a_pol_stat->m_pos_dev;
+  } else {
+    neg_is_greater = true;
+    min = a_pol_stat->m_pos_mean + a_pol_stat->m_pos_dev;
+    max = a_pol_stat->m_neg_mean - a_pol_stat->m_neg_dev;
+  }
 
   int j = 0;
   pol_t ipol;
-  dist_t idist, dist_j;
-  dist_t min_dist = a_mid_neg < a_mid_pos? a_mid_neg: a_mid_pos;
-  dist_t max_dist = a_mid_neg < a_mid_pos? a_mid_pos: a_mid_neg;
-
+  dist_t idim, idist;
   v2p_t::const_iterator v2p_end = a_vecid2pol->end();
   // populate
-  for (unsigned int i = 0; i < a_nwe->n_rows; ++i) {
+  for (vid_t i = 0; i < a_pca_nwe->n_rows; ++i) {
     if (a_vecid2pol->find(i) != v2p_end)
       continue;
 
-    // obtain polarity class and minimum distance to the nearest
-    // centroid
-    idist = (*a_nwe)(i, a_dim);
+    idim = (*a_pca_nwe)(i, a_pol_stat->m_dim);
+    idist = a_pol_stat->m_neut_mean - idim;
 
-    ipol = _nc_find_cluster(a_centroids, a_nwe->colptr(i), &idist);
-
-    // add new element to the vector
+    if (idim < min) {
+      if (neg_is_greater)
+	ipol = POS_VID;
+      else
+	ipol = NEG_VID;
+    } else if (idim > max) {
+      if (neg_is_greater)
+	ipol = NEG_VID;
+      else
+	ipol = POS_VID;
+    } else {
+      ipol = NEUT_VID;
+    }
     vpds.push_back(VPD {fabs(idist), ipol, i});
     ++j;
   }
@@ -529,7 +667,7 @@ static void _pca_expand(v2p_t *a_vecid2pol, const vid_t a_dim,		\
 
 void expand_pca(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
   // convert polarity enum's to polarity indices
-  vid_t i = 0;
+  size_t polid;
   v2pi_t vecid2polid;
   vecid2polid.reserve(a_vecid2pol->size());
   for (auto &v2p: *a_vecid2pol) {
@@ -539,16 +677,18 @@ void expand_pca(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
 
   // obtain PCA coordinates for the neural word embeddings data
   arma::mat pca_coeff, prjctd;
-  std::cerr << "a_nwe->size() = " << a_nwe.n_rows << 'x' << a_nwe.n_cols << std::endl;
+  std::cerr << "a_nwe->size() = " << a_nwe->n_rows << 'x' << a_nwe->n_cols << std::endl;
   arma::princomp(pca_coeff, prjctd, a_nwe->t());
   std::cerr << "prjctd->size() = " << prjctd.n_rows << 'x' << prjctd.n_cols << std::endl;
 
-  // look for the principal component with the maximum deviation of
-  // polarity vectors
-  dist_t mid_pos, mid_neg;
-  vid_t trg_pc = _pca_find_best_pc(a_vecid2pol, &prjctd);
+  // look for the principal component with the maximum distance
+  // between the means of the vectors pertaining to different
+  // poalarities
+  pol_stat_t pol_stat;
+  _pca_compute_stat(&vecid2polid, &prjctd, &pol_stat);
+  std::cerr << "pca stat computed" << std::endl;
   // add new terms
-  _pca_expand(a_vecid2pol, a_dim, &prjctd, a_N)
+  _pca_expand(a_vecid2pol, &prjctd, a_N, &pol_stat);
 }
 
 void expand_projected(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
