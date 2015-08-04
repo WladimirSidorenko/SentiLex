@@ -63,8 +63,18 @@ namespace ncl {
     class unrecognized_option : public std::invalid_argument {
 
   public:
+    /**
+     * Class constructor
+     *
+     * @param shortopt   name of short option that wasn't recognized
+     */
   unrecognized_option(char shortopt)
     : std::invalid_argument(std::string("-") + shortopt) {}
+    /**
+     * Class constructor
+     *
+     * @param longopt   name of long option that wasn't recognized
+     */
   unrecognized_option(const std::string& longopt)
     : std::invalid_argument(std::string("--") + longopt) {}
   };
@@ -74,23 +84,42 @@ namespace ncl {
    */
   class invalid_value : public std::invalid_argument {
   public:
+    /// Option which triggered the exception
     std::string optionstr;
 
+    /**
+     * Class constructor
+     *
+     * @param message   error description
+     */
   invalid_value(const std::string& message)
     : std::invalid_argument(message) {}
+
+    /**
+     * Class constructor
+     *
+     * @param shortopt  short option character
+     * @param longopt   long option name
+     * @param message   error message
+     */
   invalid_value(char shortopt, const char *longopt, const std::string& message) :
     std::invalid_argument(message),
       optionstr(
 		shortopt ?
-		(std::string("-") + shortopt) : 
+		(std::string("-") + shortopt) :
 		(longopt ? (std::string("--") + longopt) : std::string(""))
 		) {}
 
+    /**
+     * Accessor method
+     *
+     * @return name of the option which triggered the exception
+     */
     const std::string& option() const {return optionstr; }
   };
 
   public:
-  /** Construct. */
+  /** Default constructor */
   optparse() {}
   /** Destruct. */
   virtual ~optparse() {}
@@ -162,11 +191,14 @@ namespace ncl {
    -1 (failed, unrecognized option)
    *	@throws				option_parser_exception
    */
-  virtual int handle_option(char c, const char *longname, const char *arg)
-  {
-    return 0;
-  }
+  virtual int handle_option(char c, const char *longname, const char *arg) = 0;
 
+  /**
+   * Check name of long option with possible argument
+   *	@param	option		pointer to command line option
+   *	@param	longname	long option name
+   *	@return    0 (if names match), non-0 otherwise;
+   */
   int __optstrcmp(const char *option, const char *longname)
   {
     const char *p = std::strchr(option, '=');

@@ -39,11 +39,17 @@ static void usage(int a_ret = EXIT_SUCCESS);
 class Option: public optparse {
 public:
   // Members
+  /// input file containing seed polarity terms
   std::ifstream m_seedfile();
+  /// default number of nearest neighbors to consider by the KNN algorithm
   int knn = 5;
+  /// maximum number of new terms to extract (\c -1 means all new terms)
   int n_terms = -1;
+  /// do not normalize length of the vectors
   bool no_length_normalize = false;
+  /// do not center means of the vectors
   bool no_mean_normalize = false;
+  /// algorithm to use for expansion
   ExpansionType etype = ExpansionType::NC_CLUSTERING;
 
   Option() {}
@@ -78,13 +84,17 @@ public:
 
 /// Pair of c_string and polarity
 typedef struct WP {
+  /// polar word
   const char *m_word;
+  /// polarity class of the word
   Polarity m_polarity;
 
+  /// default constructor
   WP(void):
     m_word {}, m_polarity {}
   {}
 
+  /// \brief class constructor
   WP(const char *a_word, Polarity a_polarity):
     m_word {a_word}, m_polarity {a_polarity}
   {}

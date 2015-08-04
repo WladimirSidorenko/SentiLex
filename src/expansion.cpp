@@ -488,6 +488,7 @@ static void _pca_compute_means(const v2pi_t *a_vecid2polid, const arma::mat *a_p
   a_pol_stat->m_n_pos = 0; a_pol_stat->m_n_neg = 0; a_pol_stat->m_n_neut = 0;
   /// means of polarity vectors
   arma::mat pol_means(a_prjctd->n_cols, static_cast<size_t>(Polarity::MAX_SENTINEL));
+  pol_means.zeros();
 
   // obtain unnormalized means of polarity vectors
   for (auto &v2p: *a_vecid2polid) {
