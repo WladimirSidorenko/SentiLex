@@ -67,9 +67,13 @@ class SWS(object):
         if not os.path.exists(inegative) or not os.path.exists(ipositive):
             raise RuntimeError("SentiWS files not found in directory {:s}".format(a_dir))
         # initialize instance variables
+        ## dictionary mapping lemmas to forms
         self.lemma2forms = dict()
+        ## dictionary of negative Sentiment words
         self.negative = self._read_dict(inegative, NEGATIVE)
+        ## dictionary of positive Sentiment words
         self.positive = self._read_dict(ipositive, POSITIVE)
+        ## dictionary mapping form to lemma
         self.form2lemma = {f: lemma for lemma, forms in self.lemma2forms.iteritems() \
                                for f in forms}
 

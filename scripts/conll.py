@@ -78,8 +78,11 @@ class CONLL:
         @param istring - input string(s) with CONLL data (optional)
 
         """
+        ## list of lines representing meta-information
         self.metainfo = []
+        ## list of all sentences gathered in tree forest
         self.sentences = []
+        ## index of last parsed sentence
         self.s_id      = -1
         self.__eos_seen__ = True
         for iline in istring.splitlines():
@@ -222,8 +225,11 @@ class CONLLSentence:
 
     def __init__(self, iword = ""):
         """Initialize instance variables and parse iline if specified."""
+        ## index of last word in self.words
         self.w_id  = -1
+        ## list of all words belonging to given sentence
         self.words = []
+        ## index of last word in self.words
         self.children = defaultdict(list)
         if iword:
             self.push_word(iword)
@@ -335,15 +341,20 @@ class CONLLWord(object):
 
     """
 
+    ## mapping from attribute name to its position in attribute list
     key2field = {'idx': 0, 'form': 1, 'lemma': 2, 'plemma': 3, 'pos': 4, \
                      'ppos': 5, 'feat': 6, 'pfeat': 7, 'head': 8, 'phead': 9, \
                      'deprel': 10, 'pdeprel': 11, 'fillpred': 12, 'pred': 13}
+    ## number of fields which has to be specified for a word
     REQFIELDS = len(key2field)
 
     def __init__(self, iline = None):
         """Initialize instance variables and parse iline if specified."""
+        ## list of all word's attributes as they are defined in fields
         self.fields = []
+        ## dictionary of features
         self.features = {}
+        ## dictionary of pfeatures
         self.pfeatures = {}
         if iline:
             self.parse_line(iline)
@@ -491,7 +502,7 @@ class ECONLLWord(CONLLWord):
     the class constant REQFIELDS correspondingly.
 
     This class extends:
-    key2field - dictionary holding a mapping from field name to its index
+    w_key2field - dictionary holding a mapping from field name to its index
     REQFIELDS - number of fields allowed in CONLL line
 
     This class overwrites:
@@ -500,6 +511,7 @@ class ECONLLWord(CONLLWord):
     __setitem__() - set ECONLLWord attribute
 
     """
+    ## dictionary holding a mapping from addiional field name to its index
     e_key2field = {'sentiment': 14}
 
     def __init__(self, iline = None):

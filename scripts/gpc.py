@@ -65,10 +65,15 @@ class GPC(object):
                 not os.path.exists(ineutral):
             raise RuntimeError("GPC files not found in directory {:s}".format(a_dir))
         # initialize instance variables
+        ## dictionary mapping lemmas to forms
         self.lemma2forms = dict()
+        ## dictionary of negative sentiment words
         self.negative = dict(); self._read_dict(inegative, NEGATIVE, self.negative)
+        ## dictionary of neutral words
         self.neutral = dict(); self._read_dict(ineutral, NEUTRAL, self.neutral)
+        ## dictionary of positive sentiment words
         self.positive = dict(); self._read_dict(ipositive, POSITIVE, self.positive)
+        ## dictionary mapping form to lemma
         self.form2lemma = {f: lemma for lemma, forms in self.lemma2forms.iteritems() \
                                for f in forms}
 

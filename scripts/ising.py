@@ -59,11 +59,17 @@ class Ising(object):
         @param a_node_wght - default weight to be used for nodes
         @param a_edge_wght - default weight to be used for edges
         """
+        ## default weight to be used for nodes
         self.dflt_node_wght = a_node_wght
+        ## default weight to be used for edges
         self.dflt_edge_wght = a_edge_wght
+        ## dictionary mapping items to their respective node id's
         self.item2nid = dict()
+        ## list of nodes in the model
         self.nodes = []
+        ## number of nodes stored in the model
         self.n_nodes = 0
+        ## external temperature
         self.beta = -1
 
     def __contains__(self, a_item):

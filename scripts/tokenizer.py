@@ -177,7 +177,15 @@ amp = "&amp;"
 # Class
 class Tokenizer:
     def __init__(self, preserve_case = True, return_offsets = False):
+        """
+        Class constructor
+
+        @param preserve_case - keep case of input string unchanged
+        @param return_offsets - return character offsets of split words
+        """
+        ## keep case of input string unchanged
         self.preserve_case  = preserve_case
+        ## return character offsets of split words
         self.return_offsets = return_offsets
 
     def tokenize(self, s):

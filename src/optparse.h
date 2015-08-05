@@ -1,3 +1,11 @@
+/** @file optparse.h
+ *
+ *  @brief An event-driven parser for command-line arguments.
+ *
+ *  This file provides a virtual class for processing command line
+ *  arguments.
+ */
+
 /*
  *		An event-driven parser for command-line arguments.
  *
@@ -181,12 +189,12 @@ namespace ncl {
 
   protected:
   /**
-   * Option handler
+   * Option handler.
    *	This function should be overridden by inheritance class.
-   *	@param	c			short option character, 0 for long option
-   *	@param	longname	long option name
-   *	@param	arg			an argument for the option
-   *	@return				0 (success);
+   *	@param	c		short option character, 0 for long option
+   *	@param	longname	long option name to check against
+   *	@param	arg		an argument for the option
+   *	@return			0 (success);
    1 (success with use of an argument);
    -1 (failed, unrecognized option)
    *	@throws				option_parser_exception
@@ -233,6 +241,7 @@ namespace ncl {
 } else if (test) {				\
     used_args = 0;				\
 
+  /** Check an option with a possible argument */
 #define	ON_OPTION_WITH_ARG(test)		\
   return used_args;				\
 } else if (test) {				\

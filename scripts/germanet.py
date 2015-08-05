@@ -72,11 +72,19 @@ class Germanet(object):
         """
         if not os.path.isdir(a_dir) or not os.access(a_dir, os.R_OK):
             raise RuntimeError("Can't read from directory: {:s}".format(a_dir))
+        ## mapping from synset IDs to synset definitions and examples
         self.synid2defexmp = dict()
-        self.lexid2lex = dict(); self.lex2lexid = dict()
+        ## mapping from lexeme IDs to lexemes
+        self.lexid2lex = dict()
+        ## mapping from lexeme IDs to lexemes
+        self.lex2lexid = dict()
+        ## mapping from lexeme IDs to synset IDs
         self.lexid2synids = defaultdict(set)
+        ## mapping from synset IDs to lexemes
         self.synid2lexids = defaultdict(set)
+        ## adjacency lists of relations between synsets
         self.con_relations = defaultdict(set)
+        ## adjacency lists of relations between lexemes
         self.lex_relations = defaultdict(set)
         # parse synsets
         for ifile in chain.from_iterable(glob.iglob(os.path.join(a_dir, ipos + '*')) \

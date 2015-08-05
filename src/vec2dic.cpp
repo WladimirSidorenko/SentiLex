@@ -1,3 +1,11 @@
+/** @file vec2dic.cpp
+ *
+ *  @brief Generate sentiment lexicons from neural word embeddings.
+ *
+ *  This file provides main method for generating sentiment lexicons
+ *  on the basis of previously computed neural word embeddings.
+ */
+
 //////////////
 // Includes //
 //////////////
@@ -24,6 +32,10 @@
 /////////////
 // Classes //
 /////////////
+
+/**
+ * Type of algorithm to use for lexicon expansion.
+ */
 enum class ExpansionType: int {
   NC_CLUSTERING = 0,		// Nearest centroids algorithm
     KNN_CLUSTERING,		// K-nearest neighbors
@@ -36,14 +48,17 @@ enum class ExpansionType: int {
 // forward declaration of `usage()` method
 static void usage(int a_ret = EXIT_SUCCESS);
 
+/**
+ * Custom option handler
+ */
 class Option: public optparse {
 public:
   // Members
   /// input file containing seed polarity terms
-  std::ifstream m_seedfile();
+  std::ifstream m_seedfile {};
   /// default number of nearest neighbors to consider by the KNN algorithm
   int knn = 5;
-  /// maximum number of new terms to extract (\c -1 means all new terms)
+  /// maximum number of new terms to extract (-1 means all new terms)
   int n_terms = -1;
   /// do not normalize length of the vectors
   bool no_length_normalize = false;
@@ -448,6 +463,15 @@ static int read_seed_set(const char *a_fname) {
 //////////
 // Main //
 //////////
+
+/**
+ * Main method for expanding sentiment lexicons
+ *
+ * @param argc - number of command line arguments
+ * @param argv - array of command line arguments
+ *
+ * @return 0 on success, non-0 otherwise
+ */
 int main(int argc, char *argv[]) {
   int nargs;
   int ret = EXIT_SUCCESS;

@@ -71,7 +71,12 @@ class ZRCH(object):
         if not os.path.exists(ilex):
             raise RuntimeError("Lexicon file not found in directory {:s}".format(a_dir))
         # initialize instance variables
-        self.negative = dict(); self.neutral = dict(); self.positive = dict()
+        ## dictionary of negative sentiment words
+        self.negative = dict()
+        ## dictionary of neutral sentiment words
+        self.neutral = dict()
+        ## dictionary of positive sentiment words
+        self.positive = dict()
         self._read_dict(ilex)
 
     def check_word(self, a_word):

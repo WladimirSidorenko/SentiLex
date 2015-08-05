@@ -1,3 +1,12 @@
+/** @file expansion.h
+ *
+ *  @brief Methods for generating sentiment lexicons from neural word embeddings.
+ *
+ *  This file declares several methods for generating sentiment
+ *  lexicons on the basis of previously computed neural word
+ *  embeddings.
+ */
+
 #ifndef VEC2DIC_EXPANSION_H_
 # define VEC2DIC_EXPANSION_H_ 1
 
@@ -11,11 +20,17 @@
 ///////////
 // Types //
 ///////////
+
+/**
+ * Polarity types.
+ */
 enum class Polarity: char {
-  POSITIVE = 0,
-    NEGATIVE,
-    NEUTRAL,
-    MAX_SENTINEL
+  POSITIVE = 0, 		/** positive lexical polarity */
+    NEGATIVE,			/** negative lexical polarity  */
+    NEUTRAL,			/** neutral lexical polarity */
+    MAX_SENTINEL		/** auxiliary polarity type (used for
+				    determining maximum number of
+				    polarity types) */
 };
 
 /** Integral type for distance measure */
