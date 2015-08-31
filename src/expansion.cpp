@@ -525,8 +525,10 @@ static void _pca_compute_means(const v2pi_t *a_vecid2polid, const arma::mat *a_p
   // point in-between the positive and negative means
   arma::vec vdelta = pol_means.col(POS_VID) - pol_means.col(NEG_VID);
   if (a_pol_stat->m_n_neut)
-    vdelta = arma::abs(vdelta) - arma::abs(pol_means.col(POS_VID) - vdelta / 2 - \
-					   pol_means.col(NEUT_VID));
+    vdelta = arma::abs(vdelta) -  arma::abs(pol_means.col(POS_VID) - vdelta / 2 - \
+					    pol_means.col(NEUT_VID));
+  else
+    vdelta = arma::abs(vdelta)
 
   for (vid_t i = 0; i < vdelta.n_rows; ++i) {
     if (vdelta(i) > max_delta) {
