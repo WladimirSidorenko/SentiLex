@@ -14,10 +14,11 @@ evaluate.py [lemma_file] sentiment_lexicon test_corpus_dir/
 import argparse
 import re
 import sys
+from trie import Trie
 
 ##################################################################
 # Constants and Variables
-LEXICON = dict()
+LEXICON = Trie()
 
 ##################################################################
 # Methods
