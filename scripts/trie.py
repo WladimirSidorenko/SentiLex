@@ -20,6 +20,7 @@ Trie - implementation of Trie data structure
 
 ##################################################################
 # Imports
+from __future__ import unicode_literals
 import re
 
 ##################################################################
@@ -103,7 +104,6 @@ class Trie(object):
     __init__() - class constructor
     add() - add new string to the trie
     match() - compare given string against the trie
-    reset() - purge active states and reset all match counters
     """
 
     def __init__(self, a_ignorecase = False):
@@ -159,4 +159,25 @@ class Trie(object):
         for astate in self.active_states:
             if astate.final:
                 ret |= astate.classes
+        return ret
+
+    def __unicode__(self):
+        """
+        Return a unicode representation of the given trie
+
+        @return unicode object representing the trie in graphviz format
+        """
+        ret = """digraph Trie {
+        size="6,6";
+	node [color=lightblue2, style=filled];\n"""
+        istate = None
+        state_cnt = 0
+        visited_states = set()
+        new_states = [self._init_state]
+        while new_states:
+            istate = new_states.pop()
+            for jchar, jstate in istate.transitions:
+                pass
+            visted_states.add(istate)
+        ret += "}\n"
         return ret

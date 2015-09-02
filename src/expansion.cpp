@@ -521,8 +521,8 @@ static void _pca_compute_means(const v2pi_t *a_vecid2polid, const arma::mat *a_p
   dist_t max_delta = DBL_MIN;
   // best dimension is the one which maximizes the equation: `AC -
   // (AC/2 - B)`, where AC is the distance between positive and
-  // negative means, B is the mean of neutral vectors, and AC/2 is the
-  // point in-between the positive and negative means
+  // negative means, B is the mean of the neutral vectors, and AC/2 is
+  // the point in-between the positive and negative means
   arma::vec vdelta = pol_means.col(POS_VID) - pol_means.col(NEG_VID);
   if (a_pol_stat->m_n_neut)
     vdelta = arma::abs(vdelta) -  arma::abs(pol_means.col(POS_VID) - vdelta / 2 - \
