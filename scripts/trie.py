@@ -26,7 +26,7 @@ import re
 ##################################################################
 # Variable and Constants
 SPACE_RE = re.compile("\s\s+", re.L)
-FINAL_SPACE_RE = re.compile("(:?^\s+|\s+$)", a_string)
+FINAL_SPACE_RE = re.compile("(:?^\s+|\s+$)")
 ANEW = 0
 CONTINUE = 1
 
@@ -40,8 +40,8 @@ class State(object):
     EMPTY_SET - set containing no elements
 
     Instance variables: classes - custom classes associated with a
-    final state final - boolean flag indicating whether state is final
-    or not transitions - set of transitions triggered by the state
+    final - boolean flag indicating whether state is final
+    transitions - set of transitions triggered by the state
 
     Methods:
     __init__() - class constructor
@@ -65,12 +65,11 @@ class State(object):
         self.final = a_final
         self.transitions = dict()
 
-    def add_transition(self, a_char, a_state):
+    def add_transition(self, a_char):
         """
         Add new transition outgoing from that state
 
         @param a_char - character triggerring that trnasition
-        @param a_stat - address of the target state for that transition
 
         @return address of the target state of that transition
         """
@@ -135,7 +134,7 @@ class Trie(object):
         # successively add states
         astate = self._init_state
         for ichar in a_string:
-            astate = astate.add_transition(a_char)
+            astate = astate.add_transition(ichar)
         astate.final = True
         astate.classes.add(a_class)
 
@@ -169,15 +168,29 @@ class Trie(object):
         """
         ret = """digraph Trie {
         size="6,6";
-	node [color=lightblue2, style=filled];\n"""
+        rankdir = "LR";
+        {node [color=black,fillcolor=palegreen,style=filled,forcelabels=true];
+        """
         istate = None
+        scnt = tcnt = rels = ""
         state_cnt = 0
-        visited_states = set()
+        state2cnt = {self._init_state: str(state_cnt)}
         new_states = [self._init_state]
+        visited_states = set()
         while new_states:
             istate = new_states.pop()
-            for jchar, jstate in istate.transitions:
-                pass
-            visted_states.add(istate)
-        ret += "}\n"
+            scnt = state2cnt[istate]
+            if istate.final:
+                ret += '{:s} [shape=box,fillcolor=lightblue,label="{:s}"];\n'.format(scnt, ", ".join(istate.classes))
+            else:
+                ret += "{:s} [shape=circle];\n".format(scnt)
+            for jchar, jstate in istate.transitions.iteritems():
+                if jstate not in state2cnt:
+                    state_cnt += 1
+                    state2cnt[jstate] = str(state_cnt)
+                if jstate not in visited_states:
+                    new_states.append(jstate)
+                rels += scnt + "->" + state2cnt[jstate] + """[label="'{:s}'"];\n""".format(jchar)
+            visited_states.add(istate)
+        ret += "}\n" + rels + "}\n"
         return ret
