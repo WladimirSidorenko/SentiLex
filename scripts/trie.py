@@ -147,6 +147,8 @@ class Trie(object):
 
         @return \c class(es) of the input string or None if there was no match
         """
+        if self.ignorecase:
+            a_string = a_string.lower()
         if a_reset == ANEW:
             self.active_states = set([self._init_state])
         for ichar in a_string:
