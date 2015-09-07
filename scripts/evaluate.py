@@ -98,6 +98,23 @@ def _read_file(a_lexicon, a_fname, a_insert, a_enc = ENCODING):
                 raise
             a_insert(a_lexicon, item1, item2)
 
+def _compute(a_lexicon, a_id_tok):
+    """
+    Compute macro- and micro-averaged F-scores for single file
+
+    @param a_lexicon - lexicon whose quality should be tested
+    @param a_id_tok - sequence of annotated tokens extracted from file
+
+    @return 6-tuple with the number of correct and wrong mathces,
+    total tokens, as well as macro- and micro-averaged F-scores
+    """
+    correct = wrong = total = 0
+    macro_F1 = micro_F1 = 0.
+    print "a_lexicon =", repr(a_lexicon)
+    print "a_id_tok =", repr(a_id_tok)
+    sys.exit(66)
+    return (correct, wrong, total, macro_F1, micro_F1)
+
 def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
     """
     Evaluate sentiment lexicon on a real corpus
@@ -153,7 +170,6 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
         stat.append((icorrect, iwrong, itotal))
         macro_F1.append(imacro_F1)
         micro_F1.append(imicro_F1)
-
 
 def main(argv):
     """

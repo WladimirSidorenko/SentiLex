@@ -31,15 +31,62 @@ ANEW = 0
 CONTINUE = 1
 
 ##################################################################
+# Methods
+def normalize_string(a_string, a_ignorecase = False):
+    """
+    Clean input string and return its normalized version
+
+    @param a_string - string to clean
+    @param a_ignorecase - boolean indication whether string should be lowercased
+
+    @return normalized string
+    """
+    a_string = SPACE_RE.sub(' ', a_string)
+    a_string = FINAL_SPACE_RE.sub("", a_string)
+    if self.ignorecase:
+        a_string = a_string.lower()
+    return a_string
+
+##################################################################
 # Classes
+class MatchObject(object):
+    """
+    Object returned by Trie class on successful match
+
+    Instance variables:
+    start - start index of the match
+    end - end index of the match
+
+    Methods:
+    __init__() - class constructor
+    update() - update end index of match
+    """
+
+    def __init__(self, a_start):
+        """
+        Class constructor
+
+        @param a_start - start index of match
+        """
+        self.start = a_start
+        self.end = -1
+
+    def update(self, a_end):
+        """
+        Class constructor
+
+        @param a_end - new end index of match
+
+        @return \c void
+        """
+        self.end = a_end
+
 class State(object):
     """
-    Single trie state with associated transitions
+    Single Trie state with associated transitions
 
-    Class constants:
-    EMPTY_SET - set containing no elements
-
-    Instance variables: classes - custom classes associated with a
+    Instance variables:
+    classes - custom classes associated with a
     final - boolean flag indicating whether state is final
     transitions - set of transitions triggered by the state
 
@@ -48,8 +95,6 @@ class State(object):
     add_transition() - add new transition from that state
     check() - check transitions associated with the given character
     """
-
-    EMPTY_SET = frozenset()
 
     def __init__(self, a_final = False, a_class = None):
         """
@@ -88,7 +133,7 @@ class State(object):
         """
         if a_char in self.transitions:
             return self.transitions[a_char]
-        return EMPTY_SET
+        return None
 
 class Trie(object):
     """
@@ -97,7 +142,7 @@ class Trie(object):
     Instance variables:
     ignorecase - boolean flag indicating whether the case
                  should be ignored
-    active_state - currently active state
+    active_state - list of currently active Trie states
 
     Methods:
     __init__() - class constructor
@@ -114,8 +159,7 @@ class Trie(object):
         """
         self.ignorecase = a_ignorecase
         self._init_state = State()
-        self.active_states = set([self._init_state])
-        self._working_states = set()
+        self.active_states = []
 
     def add(self, a_string, a_class = 0):
         """
@@ -126,11 +170,8 @@ class Trie(object):
 
         @return \c void
         """
-        # adjust string
-        a_string = SPACE_RE.sub(' ', a_string)
-        a_string = FINAL_SPACE_RE.sub("", a_string)
-        if self.ignorecase:
-            a_string = a_string.lower()
+        # normalize string
+        a_string = normalize_string(a_string, self.ignorecase)
         # successively add states
         astate = self._init_state
         for ichar in a_string:
@@ -138,29 +179,37 @@ class Trie(object):
         astate.final = True
         astate.classes.add(a_class)
 
-    def match(self, a_string, a_reset = ANEW):
+    def match(self, a_strings, a_start = 0, a_reset = ANEW):
         """
-        Comapre given string against the class
+        Compare given strings against the Trie
 
-        @param a_string - string to be added
-        @param a_reset - flag indicating whether search should start anew or continue
+        @param a_strings - list of strings to be matched
+        @param a_start - (optional) start index of the string
+        @param a_reset - (optional) flag indicating whether search
+                         should start anew or continue
 
-        @return \c class(es) of the input string or None if there was no match
+        @return \c True if at least one match succeeded
         """
-        if self.ignorecase:
-            a_string = a_string.lower()
+        a_strings = [normalize_string(istring, self.ignorecase) for istring in a_strings]
         if a_reset == ANEW:
-            self.active_states = set([self._init_state])
-        for ichar in a_string:
-            self._working_states.clear()
-            for astate in self.active_states:
-                self._working_states |= astate.check(ichar)
-            self._working_states, self.active_states = self.active_states, self._working_states
+            self.active_states = [(self._init_state, a_start, -1)]
+        else:
+            self.active_states.append((self._init_state, a_start, -1))
+        # set of tuples with states and associated match objects
         ret = set()
-        for astate in self.active_states:
-            if astate.final:
-                ret |= astate.classes
-        return ret
+        status = False
+        for istring in a_strings:
+            for istate, istart, _ in self.active_states:
+                for ichar in istring:
+                    istate = istate.check(ichar)
+                    if istate is None:
+                        break
+                else:
+                    if istate.final:
+                        status = True
+                    ret.add((istate, istart, a_start))
+        self.active_states = list(ret)
+        return status
 
     def __unicode__(self):
         """
