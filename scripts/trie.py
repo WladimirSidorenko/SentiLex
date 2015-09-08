@@ -43,7 +43,7 @@ def normalize_string(a_string, a_ignorecase = False):
     """
     a_string = SPACE_RE.sub(' ', a_string)
     a_string = FINAL_SPACE_RE.sub("", a_string)
-    if self.ignorecase:
+    if a_ignorecase:
         a_string = a_string.lower()
     return a_string
 
@@ -190,7 +190,8 @@ class Trie(object):
 
         @return \c True if at least one match succeeded
         """
-        a_strings = [normalize_string(istring, self.ignorecase) for istring in a_strings]
+        print repr(a_strings)
+        a_strings = [normalize_string(istring, self.ignorecase) for istring in a_strings if istring is not None]
         if a_reset == ANEW:
             self.active_states = [(self._init_state, a_start, -1)]
         else:

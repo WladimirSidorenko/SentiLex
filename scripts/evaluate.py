@@ -108,10 +108,27 @@ def _compute(a_lexicon, a_id_tok):
     @return 6-tuple with the number of correct and wrong mathces,
     total tokens, as well as macro- and micro-averaged F-scores
     """
-    correct = wrong = total = 0
+    correct = wrong = 0
+    total = sum([len(itok[-1]) or 1 for itok in a_id_tok])
     macro_F1 = micro_F1 = 0.
+    hasmatch = False
     print "a_lexicon =", repr(a_lexicon)
-    print "a_id_tok =", repr(a_id_tok)
+    print "a_id_tok =", repr([itok for itok in a_id_tok[:40]])
+    for i, (_, iform, ilemma, ianno) in enumerate(a_id_tok[:40]): # TODO: do not forget to strip the index
+        hasmatch = a_lexicon.match([iform, ilemma])
+        if hasmatch:
+            for astate in a_lexicon.active_states:
+                istate, istart, iend = astate
+                if not istate.final:
+                    continue
+                for mclass in istate.classes:
+                    if (istart, mclass) in ianno:
+                        correct += 1
+                        ianno.pop((istart, mclass))
+                    else:
+                        wrong += 1
+        print "iform =", repr(iform)
+        print "hasmatch =", repr(hasmatch)
     sys.exit(66)
     return (correct, wrong, total, macro_F1, micro_F1)
 
