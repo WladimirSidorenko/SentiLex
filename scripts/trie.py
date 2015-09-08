@@ -179,7 +179,7 @@ class Trie(object):
         astate.final = True
         astate.classes.add(a_class)
 
-    def match(self, a_strings, a_start = 0, a_reset = ANEW):
+    def match(self, a_strings, a_start = -1, a_reset = ANEW):
         """
         Compare given strings against the Trie
 
@@ -190,17 +190,17 @@ class Trie(object):
 
         @return \c True if at least one match succeeded
         """
-        print repr(a_strings)
-        a_strings = [normalize_string(istring, self.ignorecase) for istring in a_strings if istring is not None]
+        a_strings = [normalize_string(istring, self.ignorecase) \
+                         for istring in a_strings if istring is not None]
         if a_reset == ANEW:
-            self.active_states = [(self._init_state, a_start, -1)]
+            self.active_states = set((self._init_state, a_start, -1))
         else:
-            self.active_states.append((self._init_state, a_start, -1))
+            self.active_states.add((self._init_state, a_start, -1))
         # set of tuples with states and associated match objects
         ret = set()
         status = False
         for istring in a_strings:
-            for istate, istart, _ in self.active_states:
+            for istate, istart, iend in self.active_states:
                 for ichar in istring:
                     istate = istate.check(ichar)
                     if istate is None:
@@ -208,8 +208,8 @@ class Trie(object):
                 else:
                     if istate.final:
                         status = True
-                    ret.add((istate, istart, a_start))
-        self.active_states = list(ret)
+                    ret.add((istate, istart, a_start if a_start >= 0 else iend))
+        self.active_states = ret
         return status
 
     def __unicode__(self):

@@ -13,6 +13,7 @@ evaluate.py [lemma_file] sentiment_lexicon test_corpus_dir/
 # Libraries
 from trie import SPACE_RE, Trie
 
+from collections import defaultdict
 import argparse
 import codecs
 import glob
@@ -23,29 +24,38 @@ import xml.etree.ElementTree as ET
 
 ##################################################################
 # Constants and Variables
-COMMA_SEP = ','
+
 WSPAN_PREFIX = "word_"
 WSPAN_PREFIX_RE = re.compile(WSPAN_PREFIX)
+# regexp matching annotation spans that encompass single word
+WSPAN = re.compile("{:s}(\d+)\Z".format(WSPAN_PREFIX), re.IGNORECASE)
+# regexp matching annotation spans that encompass multiple words
 WMULTISPAN  = re.compile("{:s}(\d+)..+{:s}(\d+)".format(WSPAN_PREFIX, \
                                                             WSPAN_PREFIX), \
                              re.IGNORECASE)
-# regexp matching span encompassing single word
-WSPAN = re.compile("{:s}(\d+)\Z".format(WSPAN_PREFIX), re.IGNORECASE)
 
+COMMA_SEP = ','
+TAB_RE = re.compile("[ ]*\t+[ ]*")
+
+ENCODING = "utf-8"             # default encoding of input files
 WORD = "word"
+POLARITY = "polarity"
 MARKABLE = "markable"
 MMAX_LEVEL = "mmax_level"
 EMOEXPRESSION = "emo-expression"
 WORDS_PTRN = "*.words.xml"     # globbing pattern for word files
 WORDS_PTRN_RE = re.compile(".words.xml")
 MRKBL_PTRN = "_emo-expression_level.xml"     # globbing pattern for annotation files
-POLARITY = "polarity"
-KNOWN_POLARITIES = set(["positive", "negative"])
-ENCODING = "utf-8"             # default encoding of input files
-POSITIVE = 0                   # positive subjectivity
-NEGATIVE = 1                   # negative subjectivity
+
+POSITIVE = "positive"
+NEGATIVE = "negative"
+NEUTRAL = "neutral"
+KNOWN_POLARITIES = set([POSITIVE, NEGATIVE, NEUTRAL])
+
+TRUE_POS = 0                   # index of true positive counts
+FALSE_POS = 1                  # index of false positive counts
+FALSE_NEG = 2                  # index of false negative counts
 COMMENT_RE = re.compile("(?:\A|\s+)# .*$")
-TAB_RE = re.compile("[ ]*\t+[ ]*")
 
 ##################################################################
 # Methods
@@ -98,6 +108,16 @@ def _read_file(a_lexicon, a_fname, a_insert, a_enc = ENCODING):
                 raise
             a_insert(a_lexicon, item1, item2)
 
+def _compute_fscore(a_stat):
+    """
+    Compute macro- and micro-averaged F-scores based on statistics
+
+    @param a_stat - statistics disctionary on single classes
+
+    @return 2-tuple of macro- and micro-averaged F-scores
+    """
+    pass
+
 def _compute(a_lexicon, a_id_tok):
     """
     Compute macro- and micro-averaged F-scores for single file
@@ -105,17 +125,20 @@ def _compute(a_lexicon, a_id_tok):
     @param a_lexicon - lexicon whose quality should be tested
     @param a_id_tok - sequence of annotated tokens extracted from file
 
-    @return 6-tuple with the number of correct and wrong mathces,
+    @return 6-tuple with the number of correct and wrong matches,
     total tokens, as well as macro- and micro-averaged F-scores
     """
-    correct = wrong = 0
-    total = sum([len(itok[-1]) or 1 for itok in a_id_tok])
     macro_F1 = micro_F1 = 0.
+    correct_toks = wrong_toks = 0
+    total_toks = sum([len(itok[-1]) or 1 for itok in a_id_tok])
+    # dictionary used for counting correct and wrong matches of each
+    # class
+    stat = defaultdict(lambda: [0, 0])
+    # iterate over tokens and update statistics accordingly
     hasmatch = False
-    print "a_lexicon =", repr(a_lexicon)
-    print "a_id_tok =", repr([itok for itok in a_id_tok[:40]])
-    for i, (_, iform, ilemma, ianno) in enumerate(a_id_tok[:40]): # TODO: do not forget to strip the index
+    for i, (_, iform, ilemma, ianno) in enumerate(a_id_tok):
         hasmatch = a_lexicon.match([iform, ilemma])
+        # check cases when the lexicon actually matched
         if hasmatch:
             for astate in a_lexicon.active_states:
                 istate, istart, iend = astate
@@ -123,14 +146,27 @@ def _compute(a_lexicon, a_id_tok):
                     continue
                 for mclass in istate.classes:
                     if (istart, mclass) in ianno:
-                        correct += 1
+                        stat[mclass][TRUE_POS] += 1
+                        correct_toks += 1
                         ianno.pop((istart, mclass))
                     else:
-                        wrong += 1
-        print "iform =", repr(iform)
-        print "hasmatch =", repr(hasmatch)
-    sys.exit(66)
-    return (correct, wrong, total, macro_F1, micro_F1)
+                        stat[mclass][FALSE_POS] += 1
+                        wrong_toks += 1
+            wrong_toks += len(ianno)
+            for _, iclass in ianno:
+                stat[iclass][FALSE_NEG] += 1
+        elif not ianno:
+            correct_toks += 1
+            stat[NEUTRAL][TRUE_POS] += 1
+        else:
+            wrong_toks += len(ianno)
+            for _, iclass in ianno:
+                stat[iclass][FALSE_NEG] += 1
+            stat[NEUTRAL][FALSE_POS] += 1
+        # let Trie proceed to the next state
+        a_lexicon.match([' ', None])
+    macro_F1, micro_F1 = _compute_fscore(stat)
+    return (correct_toks, wrong_toks, total_toks, macro_F1, micro_F1)
 
 def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
     """
@@ -213,7 +249,8 @@ def main(argv):
     args = argparser.parse_args(argv)
     # read-in lexicon
     ilex = Trie()
-    _read_file(ilex, args.sentiment_lexicon, a_insert = lambda lex, wrd, cls: lex.add(wrd, cls))
+    _read_file(ilex, args.sentiment_lexicon, a_insert = lambda lex, wrd, cls: \
+                   lex.add(wrd, cls) if cls != NEUTRAL and cls in KNOWN_POLARITIES else None)
     form2lemma = dict()
     if args.lemma_file is not None:
         _read_file(form2lemma, args.lemma_file, a_insert = \
