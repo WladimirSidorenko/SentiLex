@@ -20,8 +20,9 @@ Trie - implementation of Trie data structure
 
 ##################################################################
 # Imports
-from __future__ import unicode_literals
+from __future__ import unicode_literals, print_function
 import re
+import sys
 
 ##################################################################
 # Variable and Constants
@@ -193,13 +194,17 @@ class Trie(object):
         a_strings = [normalize_string(istring, self.ignorecase) \
                          for istring in a_strings if istring is not None]
         if a_reset == ANEW:
-            self.active_states = set((self._init_state, a_start, -1))
+            self.active_states = set([(self._init_state, a_start, -1)])
         else:
             self.active_states.add((self._init_state, a_start, -1))
         # set of tuples with states and associated match objects
         ret = set()
         status = False
+        print("active_states =", repr(self.active_states), file = sys.stderr)
         for istring in a_strings:
+            print("istring =", repr(istring), file = sys.stderr)
+            if istring is None:
+                continue
             for istate, istart, iend in self.active_states:
                 for ichar in istring:
                     istate = istate.check(ichar)
@@ -209,6 +214,7 @@ class Trie(object):
                     if istate.final:
                         status = True
                     ret.add((istate, istart, a_start if a_start >= 0 else iend))
+            print("ret =", repr(ret), file = sys.stderr)
         self.active_states = ret
         return status
 

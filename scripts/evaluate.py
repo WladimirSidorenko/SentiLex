@@ -110,19 +110,20 @@ def _read_file(a_lexicon, a_fname, a_insert, a_enc = ENCODING):
 
 def _compute_fscore(a_stat):
     """
-    Compute macro- and micro-averaged F-scores based on statistics
+    Compute macro- and micro-averaged F-scores
 
     @param a_stat - statistics disctionary on single classes
 
     @return 2-tuple of macro- and micro-averaged F-scores
     """
-    pass
+    print repr(a_stat)
+    sys.exit(66)
 
 def _compute(a_lexicon, a_id_tok):
     """
     Compute macro- and micro-averaged F-scores for single file
 
-    @param a_lexicon - lexicon whose quality should be tested
+    @param a_lexicon - lexicon whose quality should be testedи
     @param a_id_tok - sequence of annotated tokens extracted from file
 
     @return 6-tuple with the number of correct and wrong matches,
@@ -133,10 +134,10 @@ def _compute(a_lexicon, a_id_tok):
     total_toks = sum([len(itok[-1]) or 1 for itok in a_id_tok])
     # dictionary used for counting correct and wrong matches of each
     # class
-    stat = defaultdict(lambda: [0, 0])
+    stat = defaultdict(lambda: [0, 0, 0])
     # iterate over tokens and update statistics accordingly
     hasmatch = False
-    for i, (_, iform, ilemma, ianno) in enumerate(a_id_tok):
+    for i, (_, iform, ilemma, ianno) in enumerate(a_id_tok[:40]):
         hasmatch = a_lexicon.match([iform, ilemma])
         # check cases when the lexicon actually matched
         if hasmatch:
