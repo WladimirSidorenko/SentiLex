@@ -11,6 +11,7 @@ evaluate.py [lemma_file] sentiment_lexicon test_corpus_dir/
 
 ##################################################################
 # Libraries
+from __future__ import print_function
 from trie import SPACE_RE, Trie
 
 from collections import defaultdict
@@ -36,6 +37,7 @@ WMULTISPAN  = re.compile("{:s}(\d+)..+{:s}(\d+)".format(WSPAN_PREFIX, \
 
 COMMA_SEP = ','
 TAB_RE = re.compile("[ ]*\t+[ ]*")
+WORD_RE = re.compile("#?[-\w]*\w[-\w]*$", re.U)
 
 ENCODING = "utf-8"             # default encoding of input files
 WORD = "word"
@@ -59,6 +61,33 @@ COMMENT_RE = re.compile("(?:\A|\s+)# .*$")
 
 ##################################################################
 # Methods
+def _insert_lex(a_lex, a_wrd, a_cls):
+    """
+    Insert new word into polarity lexicon after checking its polarity class
+
+
+    @param a_lex - lexicon in which new term should be inserted
+    @param a_wrd - polar term to insert
+    @param a_cls - polarity class to check
+
+    @return \c void (an Exception is raised if the class is unknown)
+    """
+    if a_cls in KNOWN_POLARITIES:
+        if a_cls != NEUTRAL:
+            a_lex.add(a_wrd, a_cls)
+    else:
+        raise RuntimeError("Unrecognized polarity class: {:s}".format(repr(a_cls)))
+
+def is_word(a_word):
+    """
+    Check if given string forms a valid word
+
+    @param a_word - string to be checked
+
+    @return \c true if this string consists of alphanumeric characters
+    """
+    return (a_word is not None and (WORD_RE.match(a_word) is not None))
+
 def _parse_span(ispan, a_int_fmt = False):
     """Generate and return a list of all word ids encompassed by ispan."""
     ret = []
@@ -104,7 +133,8 @@ def _read_file(a_lexicon, a_fname, a_insert, a_enc = ENCODING):
             try:
                 item1, item2 = TAB_RE.split(iline)
             except ValueError:
-                print >> sys.stderr, "Invalid line format: '{:s}'".format(iline).encode(a_enc)
+                print("Invalid line format: '{:s}'".format(iline).encode(a_enc), \
+                          file = sys.stderr)
                 raise
             a_insert(a_lexicon, item1, item2)
 
@@ -116,7 +146,7 @@ def _compute_fscore(a_stat):
 
     @return 2-tuple of macro- and micro-averaged F-scores
     """
-    print repr(a_stat)
+    print(repr(a_stat), file = sys.stderr)
     sys.exit(66)
 
 def _compute(a_lexicon, a_id_tok):
@@ -137,10 +167,16 @@ def _compute(a_lexicon, a_id_tok):
     stat = defaultdict(lambda: [0, 0, 0])
     # iterate over tokens and update statistics accordingly
     hasmatch = False
-    for i, (_, iform, ilemma, ianno) in enumerate(a_id_tok[:40]):
+    # TODO: remove constraint on the number of tokens
+    for i, (_, iform, ilemma, ianno) in enumerate(a_id_tok[:10]):
+        print("iform =", repr(iform), file = sys.stderr)
+        print("ianno =", repr(ianno), file = sys.stderr)
         hasmatch = a_lexicon.match([iform, ilemma])
+        print("hasmatch =", repr(hasmatch), file = sys.stderr)
         # check cases when the lexicon actually matched
         if hasmatch:
+            print("a_lexicon.active_states =", repr(a_lexicon.active_states), \
+                      file = sys.stderr)
             for astate in a_lexicon.active_states:
                 istate, istart, iend = astate
                 if not istate.final:
@@ -166,6 +202,8 @@ def _compute(a_lexicon, a_id_tok):
             stat[NEUTRAL][FALSE_POS] += 1
         # let Trie proceed to the next state
         a_lexicon.match([' ', None])
+    print("stat =", repr(stat), file = sys.stderr)
+    sys.exit(66)
     macro_F1, micro_F1 = _compute_fscore(stat)
     return (correct_toks, wrong_toks, total_toks, macro_F1, micro_F1)
 
@@ -194,7 +232,7 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
                                      os.path.basename(WORDS_PTRN_RE.sub("", basefname) + \
                                                           MRKBL_PTRN))
         if not os.path.exists(annofname) or not os.access(annofname, os.R_OK):
-            print >> sys.stderr, "Cannot read annotation file '{:s}'".format(annofname)
+            print("Cannot read annotation file '{:s}'".format(annofname), file = sys.stderr)
             continue
         # read tokens
         wid2tid.clear(); del id_tok[:]
@@ -213,12 +251,15 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
             assert ipolarity in KNOWN_POLARITIES, "Unknown polarity value: '{:s}'".format(ipolarity)
             ispan = _parse_span(ianno.get("span"))
             tid = wid2tid[ispan[-1]]
-            print "tid =", repr(tid)
-            print "ipolarity =", repr(ipolarity)
+            print("tid =", repr(tid))
+            print("word =", repr(id_tok[tid][1]))
             # add respective class only to the last term in annotation
             # sequence, but remember which tokens this annotation
             # covered
-            id_tok[tid][-1].append(([wid2tid[iwid] for iwid in ispan], ipolarity))
+            if is_word(id_tok[tid][1]) or is_word(id_tok[tid][2]):
+                id_tok[tid][-1].append(([wid2tid[iwid] for iwid in ispan], ipolarity))
+            print("ipolarity =", repr(id_tok[tid][-1]))
+
         # now, do the actual computation of matched items
         icorrect, iwrong, itotal, imacro_F1, imicro_F1 = _compute(a_lexicon, id_tok)
         stat.append((icorrect, iwrong, itotal))
@@ -250,8 +291,7 @@ def main(argv):
     args = argparser.parse_args(argv)
     # read-in lexicon
     ilex = Trie()
-    _read_file(ilex, args.sentiment_lexicon, a_insert = lambda lex, wrd, cls: \
-                   lex.add(wrd, cls) if cls != NEUTRAL and cls in KNOWN_POLARITIES else None)
+    _read_file(ilex, args.sentiment_lexicon, a_insert = _insert_lex)
     form2lemma = dict()
     if args.lemma_file is not None:
         _read_file(form2lemma, args.lemma_file, a_insert = \

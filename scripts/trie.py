@@ -192,6 +192,7 @@ class Trie(object):
         @return \c True if at least one match succeeded
         """
         a_strings = [normalize_string(istring, self.ignorecase) \
+                         if istring != ' ' else istring \
                          for istring in a_strings if istring is not None]
         if a_reset == ANEW:
             self.active_states = set([(self._init_state, a_start, -1)])
