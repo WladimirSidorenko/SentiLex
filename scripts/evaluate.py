@@ -12,7 +12,7 @@ evaluate.py [lemma_file] sentiment_lexicon test_corpus_dir/
 ##################################################################
 # Libraries
 from __future__ import print_function
-from trie import SPACE_RE, Trie
+from trie import SPACE_RE, CONTINUE, Trie
 
 from collections import defaultdict
 import argparse
@@ -138,16 +138,34 @@ def _read_file(a_lexicon, a_fname, a_insert, a_enc = ENCODING):
                 raise
             a_insert(a_lexicon, item1, item2)
 
-def _compute_fscore(a_stat):
+def _compute_stat(a_stat):
     """
     Compute macro- and micro-averaged F-scores
 
     @param a_stat - statistics disctionary on single classes
 
-    @return 2-tuple of macro- and micro-averaged F-scores
+    @return 2-tuple with macro- and micro-averaged F-scores
     """
-    print(repr(a_stat), file = sys.stderr)
-    sys.exit(66)
+    n_classes = len(a_stat)
+    if n_classes == 0:
+        return (0., 0.)
+    macro_F1 = micro_F1 = iprec = irecall = 0.
+    correct_toks = wrong_toks = total_toks = 0
+    total_tp = total_fp = total_fn = 0
+    # obtain statistics for all classes
+    for _, (tp, fp, fn) in a_stat.iteritems():
+        total_tp += tp; total_fp += fp; total_fn += fn
+        if tp or (fp and fn):
+            iprec = tp / float(tp + fp) if (tp or fp) else 0.
+            ircall = tp / float(tp + fn) if (tp or fn) else 0.
+            macro_F1 += (iprec + ircall) / (iprec * ircall)
+    # compute macro- and micro-averaged scores
+    macro_F1 *= 2 / n_classes
+    if total_tp or (total_fp and total_fn):
+        iprec = total_tp / float(total_tp + total_fp)
+        ircall = total_tp / float(total_tp + total_fn)
+        micro_F1 = 2 * iprec * ircall / (iprec + ircall)
+    return (macro_F1, micro_F1)
 
 def _compute(a_lexicon, a_id_tok):
     """
@@ -156,56 +174,58 @@ def _compute(a_lexicon, a_id_tok):
     @param a_lexicon - lexicon whose quality should be testedи
     @param a_id_tok - sequence of annotated tokens extracted from file
 
-    @return 6-tuple with the number of correct and wrong matches,
-    total tokens, as well as macro- and micro-averaged F-scores
+    @return 2-tuple with macro- and micro-averaged F-scores
     """
     macro_F1 = micro_F1 = 0.
-    correct_toks = wrong_toks = 0
-    total_toks = sum([len(itok[-1]) or 1 for itok in a_id_tok])
+    total_toks = correct_toks = wrong_toks = 0
     # dictionary used for counting correct and wrong matches of each
     # class
     stat = defaultdict(lambda: [0, 0, 0])
     # iterate over tokens and update statistics accordingly
-    hasmatch = False
+    hasmatch = isneutral = False
     # TODO: remove constraint on the number of tokens
     for i, (_, iform, ilemma, ianno) in enumerate(a_id_tok[:10]):
         print("iform =", repr(iform), file = sys.stderr)
         print("ianno =", repr(ianno), file = sys.stderr)
-        hasmatch = a_lexicon.match([iform, ilemma])
-        print("hasmatch =", repr(hasmatch), file = sys.stderr)
+        isneutral = not bool(ianno)
+        hasmatch = a_lexicon.match([iform, ilemma], a_start = i, a_reset = CONTINUE)
+        # print("hasmatch =", repr(hasmatch), file = sys.stderr)
         # check cases when the lexicon actually matched
         if hasmatch:
-            print("a_lexicon.active_states =", repr(a_lexicon.active_states), \
-                      file = sys.stderr)
+            # print("a_lexicon.active_states =", repr(a_lexicon.active_states), \
+            #           file = sys.stderr)
             for astate in a_lexicon.active_states:
-                istate, istart, iend = astate
+                istate, istart, _ = astate
                 if not istate.final:
                     continue
                 for mclass in istate.classes:
                     if (istart, mclass) in ianno:
                         stat[mclass][TRUE_POS] += 1
-                        correct_toks += 1
                         ianno.pop((istart, mclass))
                     else:
                         stat[mclass][FALSE_POS] += 1
-                        wrong_toks += 1
-            wrong_toks += len(ianno)
-            for _, iclass in ianno:
-                stat[iclass][FALSE_NEG] += 1
-        elif not ianno:
-            correct_toks += 1
+                        if istart != i:
+                            stat[NEUTRAL][FALSE_NEG] += 1
+            if ianno:
+                for _, iclass in ianno:
+                    stat[iclass][FALSE_NEG] += 1
+            elif isneutral:
+                stat[NEUTRAL][FALSE_NEG] += 1
+        elif isneutral:
             stat[NEUTRAL][TRUE_POS] += 1
         else:
-            wrong_toks += len(ianno)
+            stat[NEUTRAL][FALSE_POS] += 1
             for _, iclass in ianno:
                 stat[iclass][FALSE_NEG] += 1
-            stat[NEUTRAL][FALSE_POS] += 1
         # let Trie proceed to the next state
-        a_lexicon.match([' ', None])
+        a_lexicon.match([' ', None], a_reset = CONTINUE)
+        print("stat =", repr(stat), file = sys.stderr)
+    a_lexicon.match((None, None)) # reset active states
+    # update statistics
     print("stat =", repr(stat), file = sys.stderr)
-    sys.exit(66)
-    macro_F1, micro_F1 = _compute_fscore(stat)
-    return (correct_toks, wrong_toks, total_toks, macro_F1, micro_F1)
+    macro_F1, micro_F1 = _compute_stat(stat)
+    print("macro_F1, micro_F1 =", macro_F1, micro_F1, file = sys.stderr)
+    return (macro_F1, micro_F1)
 
 def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
     """
@@ -221,7 +241,7 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
     itok = ""
     id_tok = []
     wid2tid = dict()
-    stat = []; macro_F1 = []; micro_F1 = []
+    macro_F1 = []; micro_F1 = []
     wid = tid = imacro_F1 = imicro_F1 = icorrect = iwrong = itotal = -1
     annofname = idoc = ispan = wid = None
     # iterate over
@@ -261,8 +281,7 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
             print("ipolarity =", repr(id_tok[tid][-1]))
 
         # now, do the actual computation of matched items
-        icorrect, iwrong, itotal, imacro_F1, imicro_F1 = _compute(a_lexicon, id_tok)
-        stat.append((icorrect, iwrong, itotal))
+        imacro_F1, imicro_F1 = _compute(a_lexicon, id_tok)
         macro_F1.append(imacro_F1)
         micro_F1.append(imicro_F1)
 
@@ -290,7 +309,7 @@ def main(argv):
                                type = str)
     args = argparser.parse_args(argv)
     # read-in lexicon
-    ilex = Trie()
+    ilex = Trie(a_ignorecase = True)
     _read_file(ilex, args.sentiment_lexicon, a_insert = _insert_lex)
     form2lemma = dict()
     if args.lemma_file is not None:

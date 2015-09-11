@@ -160,7 +160,7 @@ class Trie(object):
         """
         self.ignorecase = a_ignorecase
         self._init_state = State()
-        self.active_states = []
+        self.active_states = set([])
 
     def add(self, a_string, a_class = 0):
         """
@@ -194,28 +194,34 @@ class Trie(object):
         a_strings = [normalize_string(istring, self.ignorecase) \
                          if istring != ' ' else istring \
                          for istring in a_strings if istring is not None]
-        if a_reset == ANEW:
+        if a_reset == ANEW and a_strings:
             self.active_states = set([(self._init_state, a_start, -1)])
         else:
             self.active_states.add((self._init_state, a_start, -1))
         # set of tuples with states and associated match objects
         ret = set()
         status = False
-        print("active_states =", repr(self.active_states), file = sys.stderr)
+        # print("active_states =", repr(self.active_states), file = sys.stderr)
         for istring in a_strings:
-            print("istring =", repr(istring), file = sys.stderr)
+            # print("istring =", repr(istring), file = sys.stderr)
             if istring is None:
                 continue
             for istate, istart, iend in self.active_states:
                 for ichar in istring:
+                    # print("matching char:", repr(ichar), file = sys.stderr)
+                    # print("istate.transitions:", repr(istate.transitions), file = sys.stderr)
                     istate = istate.check(ichar)
                     if istate is None:
                         break
+                    # print("char matched", file = sys.stderr)
+                    # print("istate =", repr(istate), file = sys.stderr)
                 else:
                     if istate.final:
                         status = True
+                    # print("adding istate to ret:", repr(ret), file = sys.stderr)
                     ret.add((istate, istart, a_start if a_start >= 0 else iend))
-            print("ret =", repr(ret), file = sys.stderr)
+                    # print("istate added:", repr(ret), file = sys.stderr)
+            # print("ret =", repr(ret), file = sys.stderr)
         self.active_states = ret
         return status
 
