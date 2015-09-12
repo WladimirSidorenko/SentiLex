@@ -18,6 +18,7 @@ from collections import defaultdict
 import argparse
 import codecs
 import glob
+import numpy as np
 import os
 import re
 import sys
@@ -138,55 +139,63 @@ def _read_file(a_lexicon, a_fname, a_insert, a_enc = ENCODING):
                 raise
             a_insert(a_lexicon, item1, item2)
 
-def _compute_stat(a_stat):
+def _compute_fscores(a_stat, a_fscore_stat):
     """
     Compute macro- and micro-averaged F-scores
 
     @param a_stat - statistics disctionary on single classes
+    @param a_fscore_stat - verbose statistics with F-scores for each
+                      particular class (will be updated in this method)
 
     @return 2-tuple with macro- and micro-averaged F-scores
     """
     n_classes = len(a_stat)
     if n_classes == 0:
         return (0., 0.)
-    macro_F1 = micro_F1 = iprec = irecall = 0.
-    correct_toks = wrong_toks = total_toks = 0
+    macro_F1 = micro_F1 = iF1 = iprec = irecall = 0.
     total_tp = total_fp = total_fn = 0
     # obtain statistics for all classes
-    for _, (tp, fp, fn) in a_stat.iteritems():
+    for iclass, (tp, fp, fn) in a_stat.iteritems():
         total_tp += tp; total_fp += fp; total_fn += fn
         if tp or (fp and fn):
             iprec = tp / float(tp + fp) if (tp or fp) else 0.
             ircall = tp / float(tp + fn) if (tp or fn) else 0.
-            macro_F1 += (iprec + ircall) / (iprec * ircall)
+            if iprec or ircall:
+                iF1 = (iprec * ircall) / (iprec + ircall)
+                macro_F1 += iF1
+            else:
+                iF1 = 0
+        else:
+            iF1 = 0
+        a_fscore_stat[iclass].append(iF1)
     # compute macro- and micro-averaged scores
-    macro_F1 *= 2 / n_classes
+    macro_F1 /= float(n_classes)
     if total_tp or (total_fp and total_fn):
         iprec = total_tp / float(total_tp + total_fp)
         ircall = total_tp / float(total_tp + total_fn)
         micro_F1 = 2 * iprec * ircall / (iprec + ircall)
     return (macro_F1, micro_F1)
 
-def _compute(a_lexicon, a_id_tok):
+def _compute(a_lexicon, a_id_tok, a_fscore_stat):
     """
     Compute macro- and micro-averaged F-scores for single file
 
     @param a_lexicon - lexicon whose quality should be testedи
     @param a_id_tok - sequence of annotated tokens extracted from file
+    @param a_fscore_stat - verbose statistics with F-scores for each
+                      particular class (will be updated in this method)
 
     @return 2-tuple with macro- and micro-averaged F-scores
     """
     macro_F1 = micro_F1 = 0.
-    total_toks = correct_toks = wrong_toks = 0
     # dictionary used for counting correct and wrong matches of each
     # class
     stat = defaultdict(lambda: [0, 0, 0])
     # iterate over tokens and update statistics accordingly
     hasmatch = isneutral = False
-    # TODO: remove constraint on the number of tokens
-    for i, (_, iform, ilemma, ianno) in enumerate(a_id_tok[:10]):
-        print("iform =", repr(iform), file = sys.stderr)
-        print("ianno =", repr(ianno), file = sys.stderr)
+    for i, (_, iform, ilemma, ianno) in enumerate(a_id_tok):
+        # print("iform =", repr(iform), file = sys.stderr)
+        # print("ianno =", repr(ianno), file = sys.stderr)
         isneutral = not bool(ianno)
         hasmatch = a_lexicon.match([iform, ilemma], a_start = i, a_reset = CONTINUE)
         # print("hasmatch =", repr(hasmatch), file = sys.stderr)
@@ -196,12 +205,14 @@ def _compute(a_lexicon, a_id_tok):
             #           file = sys.stderr)
             for astate in a_lexicon.active_states:
                 istate, istart, _ = astate
+                # print("istate, istart =", repr(istate), repr(istart), \
+                #           file = sys.stderr)
                 if not istate.final:
                     continue
                 for mclass in istate.classes:
                     if (istart, mclass) in ianno:
                         stat[mclass][TRUE_POS] += 1
-                        ianno.pop((istart, mclass))
+                        ianno.remove((istart, mclass))
                     else:
                         stat[mclass][FALSE_POS] += 1
                         if istart != i:
@@ -219,12 +230,12 @@ def _compute(a_lexicon, a_id_tok):
                 stat[iclass][FALSE_NEG] += 1
         # let Trie proceed to the next state
         a_lexicon.match([' ', None], a_reset = CONTINUE)
-        print("stat =", repr(stat), file = sys.stderr)
+        # print("stat =", repr(stat), file = sys.stderr)
     a_lexicon.match((None, None)) # reset active states
     # update statistics
-    print("stat =", repr(stat), file = sys.stderr)
-    macro_F1, micro_F1 = _compute_stat(stat)
-    print("macro_F1, micro_F1 =", macro_F1, micro_F1, file = sys.stderr)
+    # print("stat =", repr(stat), file = sys.stderr)
+    macro_F1, micro_F1 = _compute_fscores(stat, a_fscore_stat)
+    # print("macro_F1, micro_F1 =", macro_F1, micro_F1, file = sys.stderr)
     return (macro_F1, micro_F1)
 
 def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
@@ -241,11 +252,13 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
     itok = ""
     id_tok = []
     wid2tid = dict()
+    fscore_stat = defaultdict(list)
     macro_F1 = []; micro_F1 = []
     wid = tid = imacro_F1 = imicro_F1 = icorrect = iwrong = itotal = -1
     annofname = idoc = ispan = wid = None
     # iterate over
     for basefname in glob.iglob(os.path.join(a_base_dir, WORDS_PTRN)):
+        print("Processing file '{:s}'".format(basefname), file = sys.stderr)
         if not os.access(basefname, os.R_OK):
             continue
         annofname = os.path.join(a_anno_dir, \
@@ -261,7 +274,7 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
             wid = iword.attrib["id"]
             itok = SPACE_RE.sub(' ', iword.text.strip()).lower()
             wid2tid[wid] = len(id_tok)
-            id_tok.append((wid, itok, a_form2lemma[itok] if itok in a_form2lemma else None, []))
+            id_tok.append((wid, itok, a_form2lemma[itok] if itok in a_form2lemma else None, set()))
         # enrich tokens with annotations
         idoc = ET.parse(annofname).getroot()
         for ianno in idoc:
@@ -271,19 +284,28 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
             assert ipolarity in KNOWN_POLARITIES, "Unknown polarity value: '{:s}'".format(ipolarity)
             ispan = _parse_span(ianno.get("span"))
             tid = wid2tid[ispan[-1]]
-            print("tid =", repr(tid))
-            print("word =", repr(id_tok[tid][1]))
+            # print("tid =", repr(tid))
+            # print("word =", repr(id_tok[tid][1]))
             # add respective class only to the last term in annotation
             # sequence, but remember which tokens this annotation
             # covered
             if is_word(id_tok[tid][1]) or is_word(id_tok[tid][2]):
-                id_tok[tid][-1].append(([wid2tid[iwid] for iwid in ispan], ipolarity))
-            print("ipolarity =", repr(id_tok[tid][-1]))
+                # for discontinuous spans, simply adding start of span
+                # (`wid2tid[ispan[0]`) might cause problems, but trie
+                # does not match discontinuous spans anyway
+                id_tok[tid][-1].add((wid2tid[ispan[0]], ipolarity))
+            # print("ipolarity =", repr(id_tok[tid][-1]))
 
         # now, do the actual computation of matched items
-        imacro_F1, imicro_F1 = _compute(a_lexicon, id_tok)
-        macro_F1.append(imacro_F1)
-        micro_F1.append(imicro_F1)
+        imacro_F1, imicro_F1 = _compute(a_lexicon, id_tok, fscore_stat)
+        macro_F1.append(imacro_F1); micro_F1.append(imicro_F1)
+    for iclass, fscores in fscore_stat.iteritems():
+        print("F-score ({:s}): {:.2%} (+/- {:.2%})".format(iclass, np.mean(fscores), \
+                                                               np.std(fscores)))
+    print("Macro-averaged F-score: {:.2%} (+/- {:.2%})".format(np.mean(macro_F1), \
+                                                                   np.std(macro_F1)))
+    print("Micro-averaged F-score: {:.2%} (+/- {:.2%})".format(np.mean(micro_F1), \
+                                                                   np.std(micro_F1)))
 
 def main(argv):
     """
