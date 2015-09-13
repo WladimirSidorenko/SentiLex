@@ -19,6 +19,7 @@ SWS - main interface to the SentiWS lexicon
 
 ##################################################################
 # Classes
+from gpc import POSITIVE, NEGATIVE, DELIM, ENCODING
 from generate_lexicon import normalize
 
 import codecs
@@ -148,3 +149,22 @@ class SWS(object):
                         else:
                             ret[iform] = ivalue
         return ret
+
+##################################################################
+# Main
+if __name__ == "__main__":
+    # process arguments
+    import argparse
+    argparser = argparse.ArgumentParser(description = "Merge terms from SWS into a single TSV file.")
+    argparser.add_argument("sws_dir", help = "directory containing SWS files")
+    args = argparser.parse_args()
+
+    # initialize dictionaries
+    sws = SWS(args.sws_dir)
+
+    # output entries in TSV format
+    pos_set = set(sws.positive.keys())
+    neg_set = set(sws.negative.keys())
+    for iset, iclass in ((pos_set, POSITIVE), (neg_set, NEGATIVE)):
+        for iword in sorted(iset):
+            print((iword + DELIM + iclass).encode(ENCODING))
