@@ -21091,7 +21091,8 @@ augenerkrankung	negative
 augenkrankheit	negative
 augenschraube	negative
 augenwischerei	negative
-aus	negative
+# COMMENT: leads to enormous decrease in results
+# aus	negative
 ausarten	negative
 ausbaden	negative
 ausbedingen	negative
@@ -23440,7 +23441,8 @@ delinquentin	negative
 delinquenz	negative
 delirieren	negative
 delirium	negative
-dem	negative
+# COMMENT: leads to enormous decrease in results
+# dem	negative
 demagogie	negative
 demagogisch	negative
 dement	negative
@@ -23520,7 +23522,8 @@ deprimieren	negative
 deprimierend	negative
 deprimiert	negative
 deprimiertheit	negative
-der	negative
+# COMMENT: leads to enormous decrease in results
+# der	negative
 derb	negative
 dermatitis	negative
 desaster	negative
@@ -29258,9 +29261,10 @@ kein stern	negative
 kein strom	negative
 kein support	negative
 kein usb	negative
-keine	negative
-keinen	negative
-keiner	negative
+# COMMENT: leads to enormous decrease in results
+# keine	negative
+# keinen	negative
+# keiner	negative
 keinesfalls	negative
 keineswegs	negative
 kenntnislos	negative
@@ -31915,8 +31919,9 @@ neutralisierte	negative
 neutralisierten	negative
 neutralisiertest	negative
 neutralisiertet	negative
-nicht	negative
-nicht !	negative
+# COMMENT: leads to enormous decrease in results
+# nicht	negative
+# nicht !	negative
 nicht akzeptabel	negative
 nicht annähernd	negative
 nicht anzeigen	negative
@@ -40918,7 +40923,8 @@ warnstreik	negative
 warnung	negative
 warten	negative
 wartete	negative
-was	negative
+# COMMENT: leads to enormous decrease in results
+# was	negative
 wassermangel	negative
 wechselfieber	negative
 wegdiskutieren	negative
@@ -40987,7 +40993,8 @@ weltuntergangsstimmung	negative
 wenig	negative
 weniger	negative
 wenigste	negative
-wer	negative
+# COMMENT: leads to enormous decrease in results
+# wer	negative
 werksspionage	negative
 wermutstropfen	negative
 wermutstropfens	negative
