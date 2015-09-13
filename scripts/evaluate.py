@@ -211,13 +211,21 @@ def _compute(a_lexicon, a_id_tok, a_fscore_stat):
                     continue
                 for mclass in istate.classes:
                     if (istart, mclass) in ianno:
+                        # print("matched iform = {:s} ({:s}) with {:s}".format(\
+                        #         repr(iform), repr(ianno), repr(mclass)), \
+                        #           file = sys.stderr)
                         stat[mclass][TRUE_POS] += 1
                         ianno.remove((istart, mclass))
                     else:
+                        # print("confused iform = {:s} ({:s}) with {:s}".format(\
+                        #         repr(iform), repr(ianno), repr(mclass)), \
+                        #           file = sys.stderr)
                         stat[mclass][FALSE_POS] += 1
                         if istart != i:
                             stat[NEUTRAL][FALSE_NEG] += 1
             if ianno:
+                # print("did not match iform = {:s} ({:s})".format(iform, repr(ianno)), \
+                #           file = sys.stderr)
                 for _, iclass in ianno:
                     stat[iclass][FALSE_NEG] += 1
             elif isneutral:
@@ -226,6 +234,8 @@ def _compute(a_lexicon, a_id_tok, a_fscore_stat):
             stat[NEUTRAL][TRUE_POS] += 1
         else:
             stat[NEUTRAL][FALSE_POS] += 1
+            # print("did not match {:s} ({:s})".format(repr(iform), repr(ianno)), \
+            #           file = sys.stderr)
             for _, iclass in ianno:
                 stat[iclass][FALSE_NEG] += 1
         # let Trie proceed to the next state
@@ -299,6 +309,7 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
         # now, do the actual computation of matched items
         imacro_F1, imicro_F1 = _compute(a_lexicon, id_tok, fscore_stat)
         macro_F1.append(imacro_F1); micro_F1.append(imicro_F1)
+        # sys.exit(66)
     for iclass, fscores in fscore_stat.iteritems():
         print("F-score ({:s}): {:.2%} (+/- {:.2%})".format(iclass, np.mean(fscores), \
                                                                np.std(fscores)))
