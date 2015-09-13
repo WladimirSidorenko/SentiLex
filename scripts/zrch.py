@@ -24,6 +24,9 @@ ZRCH - main interface for the Zurich Polarity lexicon
 ##################################################################
 # Classes
 from __future__ import print_function
+from gpc import DELIM, ENCODING
+from gpc import POSITIVE as iPOSITIVE
+from gpc import NEGATIVE as iNEGATIVE
 from generate_lexicon import normalize
 
 import codecs
@@ -148,3 +151,23 @@ class ZRCH(object):
                         trg_dict[iform] = ivalue
                 else:
                     trg_dict[iform] = ivalue
+
+##################################################################
+# Main
+if __name__ == "__main__":
+    # process arguments
+    import argparse
+    argparser = argparse.ArgumentParser(description = \
+                                            "Merge terms from Zurich lexicon into a single TSV file.")
+    argparser.add_argument("zrch_dir", help = "directory containing Zurich lexicon")
+    args = argparser.parse_args()
+
+    # initialize dictionaries
+    zrch = ZRCH(args.zrch_dir)
+
+    # output entries in TSV format
+    pos_set = set(zrch.positive.keys())
+    neg_set = set(zrch.negative.keys())
+    for iset, iclass in ((pos_set, iPOSITIVE), (neg_set, iNEGATIVE)):
+        for iword in sorted(iset):
+            print((iword + DELIM + iclass).encode(ENCODING))
