@@ -21,6 +21,7 @@ import re
 
 ##################################################################
 # Constants
+DELIM = '\t'
 NEGATIVE = "negative"
 GPC_NEGATIVE = "GermanPolarityClues-Negative-21042012.tsv"
 POSITIVE = "positive"
@@ -152,3 +153,22 @@ class GPC(object):
                                 a_dict[iform] = ivalue
                         else:
                             a_dict[iform] = ivalue
+
+##################################################################
+# Main
+if __name__ == "__main__":
+    # process arguments
+    import argparse
+    argparser = argparse.ArgumentParser(description = "Merge terms from GPC into a single TSV file.")
+    argparser.add_argument("gpc_dir", help = "directory containing German Polarity Clues")
+    args = argparser.parse_args()
+
+    # initialize dictionaries
+    gpc = GPC(args.gpc_dir)
+
+    # output entries in TSV format
+    pos_set = set(gpc.positive.keys())
+    neg_set = set(gpc.negative.keys())
+    for iset, iclass in ((pos_set, POSITIVE), (neg_set, NEGATIVE)):
+        for iword in sorted(iset):
+            print((iword + DELIM + iclass).encode(ENCODING))
