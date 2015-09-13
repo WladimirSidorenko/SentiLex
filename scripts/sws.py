@@ -19,6 +19,7 @@ SWS - main interface to the SentiWS lexicon
 
 ##################################################################
 # Classes
+from __future__ import print_function
 from gpc import POSITIVE, NEGATIVE, DELIM, ENCODING
 from generate_lexicon import normalize
 

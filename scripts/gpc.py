@@ -13,6 +13,7 @@ GPC - main interface for the German Polarity Clues lexicon
 
 ##################################################################
 # Classes
+from __future__ import print_function
 from generate_lexicon import normalize
 
 import codecs
