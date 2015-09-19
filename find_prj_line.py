@@ -34,7 +34,7 @@ def _compute_eucl_distance(a_vec1, a_vec2):
 
     @return squared Euclidean distance between two vectors
     """
-    return sum((a_vec1 - a_vec2)**2)
+    return sum(np.float128((a_vec1 - a_vec2)**2))
 
 def compute_distance(a_vecs1, a_vecs2):
     """Compute Euclidean distance between all pairs of vectors
@@ -58,12 +58,12 @@ def _project_vec(a_vec, a_norm, a_prj_line):
 
     @return a_vec's projection on a_prj_line
     """
-    print("_project_vec: a_vec =", repr(a_vec), file = sys.stderr)
-    print("_project_vec: a_prj_line =", repr(a_prj_line), file = sys.stderr)
-    print("_project_vec: a_norm =", repr(a_norm), file = sys.stderr)
-    print("_project_vec: np.dot() =", repr(np.dot(a_vec, a_prj_line)), file = sys.stderr)
-    print("_project_vec: projection =", \
-              repr((np.dot(a_vec, a_prj_line) / a_norm) * a_prj_line), file = sys.stderr)
+    # print("_project_vec: a_vec =", repr(a_vec), file = sys.stderr)
+    # print("_project_vec: a_prj_line =", repr(a_prj_line), file = sys.stderr)
+    # print("_project_vec: a_norm =", repr(a_norm), file = sys.stderr)
+    # print("_project_vec: np.dot() =", repr(np.dot(a_vec, a_prj_line)), file = sys.stderr)
+    # print("_project_vec: projection =", \
+    #           repr((np.dot(a_vec, a_prj_line) / a_norm) * a_prj_line), file = sys.stderr)
     return (np.dot(a_vec, a_prj_line) / a_norm) * a_prj_line
 
 def _project(a_pos_set, a_neg_set, a_prj_line):
@@ -81,39 +81,45 @@ def _project(a_pos_set, a_neg_set, a_prj_line):
     vecs2 = [_project_vec(ivec, idiv, a_prj_line) for ivec in a_neg_set]
     return (vecs1, vecs2)
 
-def _compute_gradient(a_pos_vecs, a_pos_prjctd, a_neg_vecs, \
-                          a_neg_prjctd, a_prj_line, a_gradient):
+def _compute_gradient(a_pos_vecs, a_neg_vecs, a_prj_line):
     """Compute gradient of distance function wrt projection line
 
     @param a_pos_vecs - set of positive vectors
-    @param a_pos_prjctd - set of projected positive vectors
     @param a_neg_vecs - set of negative vectors
-    @param a_pos_prjctd - set of projected negative vectors
     @param a_prj_line - current projection line
-    @param a_gradient - gradient vector to be updated
 
     @return gradient vector
     """
     # zero-out the gradient vector
-    update = None
+    multi = 0.
+    update = diff_vec = None
+    # prj_squared = a_prj_line ** 2
     idiv = sum(a_prj_line ** 2)
-    idiv_ones = idiv * np.ones(a_prj_line.size)
-    idiv_squared = idiv ** 2
-    prj_squared = a_prj_line ** 2
-    normalized_prj = a_prj_line / idiv
+    # idiv_squared = idiv ** 2
+    # ones = np.ones(a_prj_line.size)
+    # idiv_ones = idiv * ones
+    # normalized_prj = a_prj_line / idiv
     assert idiv != 0, "Projection vector cannot be zero vector."
-    a_gradient = np.array([0 for _ in a_gradient])
-    for pos_vec, pos_prjctd in zip(a_pos_vecs, a_pos_prjctd):
-        for neg_vec, neg_prjctd in zip(a_neg_vecs, a_neg_prjctd):
-            update = pos_prjctd - neg_prjctd
-            update *= (pos_vec * idiv - 2 * np.dot(pos_vec, a_prj_line) * a_prj_line) / idiv_squared + \
-                np.dot(pos_vec, a_prj_line) / idiv - \
-                (neg_vec * idiv - 2 * np.dot(neg_vec, a_prj_line) * a_prj_line) / idiv_squared - \
-                np.dot(neg_vec, a_prj_line) / idiv
-            a_gradient += update
-    # since we have a quadratic function, the gradient has
-    # coefficient two
-    return 2 * a_gradient
+    gradient = np.array([0 for _ in a_prj_line])
+    for pos_vec in a_pos_vecs:
+        for neg_vec in a_neg_vecs:
+            diff_vec = pos_vec - neg_vec
+            # update = pos_prjctd - neg_prjctd
+            multi = np.dot(a_prj_line, diff_vec) / idiv
+            update = multi * (diff_vec - a_prj_line * multi)
+            print("0) update =", repr(update), file = sys.stderr)
+            # update *= (pos_vec * idiv - 2 * np.dot(pos_vec, a_prj_line) * a_prj_line) / idiv_squared + \
+            #     np.dot(pos_vec, a_prj_line) / idiv - \
+            #     (neg_vec * idiv - 2 * np.dot(neg_vec, a_prj_line) * a_prj_line) / idiv_squared - \
+            #     np.dot(neg_vec, a_prj_line) / idiv
+            # update *= (diff_vec * idiv - 2 * np.dot(a_prj_line, diff_vec) * a_prj_line) * a_prj_line / \
+            #     idiv_squared + np.dot(a_prj_line, diff_vec)/idiv * ones
+            print("1) update =", repr(update), file = sys.stderr)
+            gradient += update
+    # since we have a quadratic function, the gradient has coefficient
+    # two
+    print("gradient =", repr(gradient), file = sys.stderr)
+    return 2 * gradient
 
 def find_optimal_prj(a_dim):
     """Find projection line that maximizes distance between vectors
@@ -122,20 +128,20 @@ def find_optimal_prj(a_dim):
 
     @return 2-tuple with projection line and cost
     """
-    DELTA = 1e-10               # cost difference
-    ALPHA = 1                   # learning rate
+    DELTA = np.float128(1e-10)  # cost difference
+    ALPHA = 0.001               # learning rate
     n = 0                       # current iteration
-    max_n = 1000                # maximum number of iterations
+    max_n = 100000              # maximum number of iterations
     inf = float("inf")
     ipos = ineg = None
-    prev_dist = dist = inf
-    prj_line = np.array([1 for _ in a_dim])
+    prev_dist = dist = np.float128(inf)
+    prj_line = np.array([1. for _ in xrange(a_dim)])
     # prj_line = np.array([random() for i in xrange(a_dim)])
-    gradient = np.array([1 for i in xrange(a_dim)])
-    while (prev_dist == inf or prev_dist - dist > DELTA) and n < max_n:
+    # gradient = np.array([1 for i in xrange(a_dim)])
+    while (prev_dist == inf or prev_dist - dist < DELTA) and n < max_n:
         prev_dist = dist
         # normalize length of projection line
-        prj_line /= _get_vec_len(prj_line)
+        # prj_line /= _get_vec_len(prj_line)
         # project word vectors on the guessed polarity line
         # print("POS = ", repr(POS), file = sys.stderr)
         # print("NEG = ", repr(NEG), file = sys.stderr)
@@ -144,13 +150,13 @@ def find_optimal_prj(a_dim):
         # print("ipos = ", repr(ipos), file = sys.stderr)
         # print("ineg = ", repr(ineg), file = sys.stderr)
         dist = compute_distance(ipos, ineg)
-        print("prev_dist = {:f}".format(dist), file = sys.stderr)
+        print("prj_line before = ", prj_line, file = sys.stderr)
+        print("prev_dist = {:f}".format(prev_dist), file = sys.stderr)
         print("dist = {:f}".format(dist), file = sys.stderr)
         # update polarity line
-        prj_line += ALPHA * _compute_gradient(POS.itervalues(), ipos, \
-                                                  NEG.itervalues(), ineg, \
-                                                  prj_line, gradient)
-        print("prj_line = ", prj_line, file = sys.stderr)
+        prj_line += ALPHA * _compute_gradient(POS.itervalues(), NEG.itervalues(), \
+                                                  prj_line)
+        print("prj_line after = ", prj_line, file = sys.stderr)
         n += 1
     return (prj_line, dist)
 
@@ -179,11 +185,11 @@ def parse_vecfile(a_fname):
                 len(toks) - 1)
             if toks[0] in POS:
                 ivec = np.array([float(i) for i in toks[1:]])
-                ivec /= _get_vec_len(ivec)
+                # ivec /= _get_vec_len(ivec)
                 POS[toks[0]] = ivec
             elif toks[0] in NEG:
                 ivec = np.array([float(i) for i in toks[1:]])
-                ivec /= _get_vec_len(ivec)
+                # ivec /= _get_vec_len(ivec)
                 NEG[toks[0]] = ivec
     # prune words for which there were no vectors
     POS = {iword: ivec for iword, ivec in POS.iteritems() if ivec is not None}
