@@ -34,7 +34,7 @@ def _compute_eucl_distance(a_vec1, a_vec2):
 
     @return squared Euclidean distance between two vectors
     """
-    return sum(np.float128((a_vec1 - a_vec2)**2))
+    return sum((a_vec1 - a_vec2)**2)
 
 def compute_distance(a_vecs1, a_vecs2):
     """Compute Euclidean distance between all pairs of vectors
@@ -90,13 +90,14 @@ def _compute_gradient(a_pos_vecs, a_neg_vecs, a_prj_line):
 
     @return gradient vector
     """
+    print("a_prj_line = ", repr(a_prj_line), file = sys.stderr)
     # zero-out the gradient vector
     multi = 0.
-    update = diff_vec = None
+    dot_prod = diff_vec = None
     # prj_squared = a_prj_line ** 2
-    idiv = sum(a_prj_line ** 2)
-    # idiv_squared = idiv ** 2
-    # ones = np.ones(a_prj_line.size)
+    idiv = 1. # np.float128(sum(a_prj_line ** 2))
+    idiv_squared = 1. # idiv ** 2
+    ones = np.ones(a_prj_line.size)
     # idiv_ones = idiv * ones
     # normalized_prj = a_prj_line / idiv
     assert idiv != 0, "Projection vector cannot be zero vector."
@@ -104,18 +105,22 @@ def _compute_gradient(a_pos_vecs, a_neg_vecs, a_prj_line):
     for pos_vec in a_pos_vecs:
         for neg_vec in a_neg_vecs:
             diff_vec = pos_vec - neg_vec
-            # update = pos_prjctd - neg_prjctd
-            multi = np.dot(a_prj_line, diff_vec) / idiv
-            update = multi * (diff_vec - a_prj_line * multi)
-            print("0) update =", repr(update), file = sys.stderr)
+            dot_prod = np.dot(a_prj_line, diff_vec)
+            print("dot_prod = ", repr(dot_prod), file = sys.stderr)
+            print("idiv = ", repr(idiv), file = sys.stderr)
+            print("idiv_squared = ", repr(idiv_squared), file = sys.stderr)
+            # constant 0.5 below is a dirty hack
+            gradient += (dot_prod) * (diff_vec - dot_prod * a_prj_line)
+            # update = multi
+            # print("0) update =", repr(update), file = sys.stderr)
             # update *= (pos_vec * idiv - 2 * np.dot(pos_vec, a_prj_line) * a_prj_line) / idiv_squared + \
             #     np.dot(pos_vec, a_prj_line) / idiv - \
             #     (neg_vec * idiv - 2 * np.dot(neg_vec, a_prj_line) * a_prj_line) / idiv_squared - \
             #     np.dot(neg_vec, a_prj_line) / idiv
             # update *= (diff_vec * idiv - 2 * np.dot(a_prj_line, diff_vec) * a_prj_line) * a_prj_line / \
             #     idiv_squared + np.dot(a_prj_line, diff_vec)/idiv * ones
-            print("1) update =", repr(update), file = sys.stderr)
-            gradient += update
+            # print("1) update =", repr(update), file = sys.stderr)
+            # gradient += update
     # since we have a quadratic function, the gradient has coefficient
     # two
     print("gradient =", repr(gradient), file = sys.stderr)
@@ -129,19 +134,19 @@ def find_optimal_prj(a_dim):
     @return 2-tuple with projection line and cost
     """
     DELTA = 1e-10               # cost difference
-    ALPHA = 0.01                # learning rate
+    ALPHA = 0.00001             # learning rate
     n = 0                       # current iteration
-    max_n = 10000               # maximum number of iterations
+    max_n = 100000              # maximum number of iterations
     inf = float("inf")
     ipos = ineg = None
-    prev_dist = dist = np.float128(inf)
-    prj_line = np.array([1. for _ in xrange(a_dim)])
+    prev_dist = dist = float(inf)
+    prj_line = np.array([np.float128(1.) for _ in xrange(a_dim)])
     # prj_line = np.array([random() for i in xrange(a_dim)])
     # gradient = np.array([1 for i in xrange(a_dim)])
-    while (prev_dist == inf or dist - prev_dist  > DELTA) and n < max_n:
+    while (prev_dist == inf or dist - prev_dist > DELTA) and n < max_n:
         prev_dist = dist
         # normalize length of projection line
-        # prj_line /= _get_vec_len(prj_line)
+        prj_line /= _get_vec_len(prj_line)
         # project word vectors on the guessed polarity line
         # print("POS = ", repr(POS), file = sys.stderr)
         # print("NEG = ", repr(NEG), file = sys.stderr)
@@ -158,6 +163,8 @@ def find_optimal_prj(a_dim):
                                                   prj_line)
         print("prj_line after = ", prj_line, file = sys.stderr)
         n += 1
+    if dist - prev_dist < DELTA:
+        print("Model converged: delta = {}".format(dist - prev_dist), file = sys.stderr)
     return (prj_line, dist)
 
 def parse_vecfile(a_fname):
@@ -184,11 +191,11 @@ def parse_vecfile(a_fname):
             assert (len(toks) - 1) == ndim, "Wrong vector dimension: {:d}".format(\
                 len(toks) - 1)
             if toks[0] in POS:
-                ivec = np.array([float(i) for i in toks[1:]])
+                ivec = np.array([np.float128(i) for i in toks[1:]])
                 # ivec /= _get_vec_len(ivec)
                 POS[toks[0]] = ivec
             elif toks[0] in NEG:
-                ivec = np.array([float(i) for i in toks[1:]])
+                ivec = np.array([np.float128(i) for i in toks[1:]])
                 # ivec /= _get_vec_len(ivec)
                 NEG[toks[0]] = ivec
     # prune words for which there were no vectors
