@@ -128,17 +128,17 @@ def find_optimal_prj(a_dim):
 
     @return 2-tuple with projection line and cost
     """
-    DELTA = np.float128(1e-10)  # cost difference
-    ALPHA = 0.001               # learning rate
+    DELTA = 1e-10               # cost difference
+    ALPHA = 0.01                # learning rate
     n = 0                       # current iteration
-    max_n = 100000              # maximum number of iterations
+    max_n = 10000               # maximum number of iterations
     inf = float("inf")
     ipos = ineg = None
     prev_dist = dist = np.float128(inf)
     prj_line = np.array([1. for _ in xrange(a_dim)])
     # prj_line = np.array([random() for i in xrange(a_dim)])
     # gradient = np.array([1 for i in xrange(a_dim)])
-    while (prev_dist == inf or prev_dist - dist < DELTA) and n < max_n:
+    while (prev_dist == inf or dist - prev_dist  > DELTA) and n < max_n:
         prev_dist = dist
         # normalize length of projection line
         # prj_line /= _get_vec_len(prj_line)
