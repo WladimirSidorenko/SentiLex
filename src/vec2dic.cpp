@@ -18,7 +18,7 @@
 #include <clocale>		// setlocale()
 #include <cmath>		// sqrt()
 #include <cstdio>		// sscanf()
-#include <cstdlib>		// std::exit()
+#include <cstdlib>		// std::exit(), std::strtoul()
 #include <cstring>		// strcmp()
 #include <fstream>		// std::ifstream
 #include <functional>
@@ -41,7 +41,6 @@ enum class ExpansionType: int {
     KNN_CLUSTERING,		// K-nearest neighbors
     PCA_CLUSTERING,		// Proincipal component analysis
     PRJ_CLUSTERING,		// Projection-based clustering
-    LIN_TRANSFORM,		// Linear transformation
     MAX_SENTINEL		// Unused type that serves as a sentinel
     };
 
@@ -60,6 +59,14 @@ public:
   int knn = 5;
   /// maximum number of new terms to extract (-1 means all new terms)
   int n_terms = -1;
+  /// learning rate for gradient methods
+  double alpha = DFLT_ALPHA;
+  /// minimum required improvement for gradient methods
+  double delta = DFLT_DELTA;
+  /// maximum number of gradient updates
+  unsigned long max_iters = MAX_ITERS;
+  /// elongation coefficient for vector lengths (useful for linear transformation)
+  double coefficient = 1.;
   /// do not normalize length of the vectors
   bool no_length_normalize = false;
   /// do not center means of the vectors
@@ -70,22 +77,31 @@ public:
   Option() {}
 
   BEGIN_OPTION_MAP_INLINE()
+  ON_OPTION(SHORTOPT('L') || LONGOPT("no-length-normalizion"))
+  no_length_normalize = true;
+
+  ON_OPTION(SHORTOPT('M') || LONGOPT("no-mean-normalizion"))
+  no_mean_normalize = true;
+
+  ON_OPTION(SHORTOPT('a') || LONGOPT("alpha"))
+  alpha = std::atof(arg);
+
+  ON_OPTION(SHORTOPT('c') || LONGOPT("coefficient"))
+  coefficient = std::atof(arg);
+
   ON_OPTION(SHORTOPT('h') || LONGOPT("help"))
   usage();
 
-  ON_OPTION_WITH_ARG(SHORTOPT('n') || LONGOPT("n-terms"))
-  n_terms = std::atoi(arg);
+  ON_OPTION_WITH_ARG(SHORTOPT('i') || LONGOPT("max-iterations"))
+  max_iters = std::strtoul(arg, nullptr, 10);
 
   ON_OPTION_WITH_ARG(SHORTOPT('k') || LONGOPT("k-nearest-neighbors"))
   knn = std::atoi(arg);
   if (knn < 1)
     throw optparse::invalid_value("k-nearest-neighbors should be >= 1");
 
-  ON_OPTION(SHORTOPT('L') || LONGOPT("no-length-normalizion"))
-  no_length_normalize = true;
-
-  ON_OPTION(SHORTOPT('M') || LONGOPT("no-mean-normalizion"))
-  no_mean_normalize = true;
+  ON_OPTION_WITH_ARG(SHORTOPT('n') || LONGOPT("n-terms"))
+  n_terms = std::atoi(arg);
 
   ON_OPTION_WITH_ARG(SHORTOPT('t') || LONGOPT("type"))
   int itype = std::atoi(arg);
@@ -155,11 +171,15 @@ static void usage(int a_ret) {
   std::cerr << "Usage:" << std::endl;
   std::cerr << "vec2dic [OPTIONS] VECTOR_FILE SEED_FILE" << std::endl << std::endl;
   std::cerr << "Options:" << std::endl;
-  std::cerr << "-h|--help  show this screen and exit" << std::endl;
-  std::cerr << "-n|--n-terms  number of terms to extract (default: -1 (unlimited))" << std::endl;
-  std::cerr << "-k|--k-nearest-neighbors  set the number of neighbors for KNN algorithm" << std::endl;
   std::cerr << "-L|--no-length-normalizion  do not normalize length of word vectors" << std::endl;
   std::cerr << "-M|--no-mean-normalizion  do not normalize means of word vectors" << std::endl;
+  std::cerr << "-a|--alpha  learning rate for gradient methods (default " << DFLT_ALPHA << ")" << std::endl;
+  std::cerr << "-c|--coefficient  elongate vectors by the  coefficient (useful for linear projection, implies -L)" << std::endl;
+  std::cerr << "-d|--delta  learning rate for gradient methods (default " << DFLT_DELTA << ")" << std::endl;
+  std::cerr << "-h|--help  show this screen and exit" << std::endl;
+  std::cerr << "-i|--max-iterations  maximum number of gradient updates (default " << MAX_ITERS << ")" << std::endl;
+  std::cerr << "-k|--k-nearest-neighbors  set the number of neighbors for KNN algorithm" << std::endl;
+  std::cerr << "-n|--n-terms  number of terms to extract (default: -1 (unlimited))" << std::endl;
   std::cerr << "-t|--type  type of expansion algorithm to use:" << std::endl;
   std::cerr << "           (0 - nearest centroids (default), 1 - KNN, 2 - PCA dimension," << std::endl;
   std::cerr << "            3 - linear projection, 4 - linear transformation)" << std::endl << std::endl;
@@ -304,19 +324,20 @@ static void _mean_normalize(arma::mat *a_nwe) {
  * Read NWE vectors for word terms
  *
  * @param a_ret - exit code for the program
- * @param a_no_length_normalize - do not normalize length of word vectors
- * @param a_no_mean_normalize - do not normalize means of word vectors
+ * @param a_option - pointer to user's options
  *
  * @return \c 0 on success, non-\c 0 otherwise
  */
-static int read_vectors(const char *a_fname, const bool a_no_length_normalize, \
-			const bool a_no_mean_normalize) {
+static int read_vectors(const char *a_fname, const Option *a_option) {
   float iwght;
   const char *cline;
   std::string iline;
   size_t space_pos;
   int nchars;
   vid_t mrows = 0, ncolumns = 0, icol = 0, irow = 0;
+  const int coefficient = a_option->coefficient;
+  const bool no_length_normalize = a_option->no_length_normalize;
+  const bool no_mean_normalize = a_option->no_mean_normalize;
   std::cerr << "Reading word vectors ... ";
 
   std::ifstream is(a_fname);
@@ -371,11 +392,15 @@ static int read_vectors(const char *a_fname, const bool a_no_length_normalize, \
   }
   is.close();
   // normalize lengths of word vectors
-  if (!a_no_length_normalize)
+  if (coefficient != 1)
+    NWE *= coefficient;
+
+  // normalize lengths of word vectors
+  if (!no_length_normalize)
     _length_normalize(&NWE);
 
   // normalize means of word vectors
-  if (!a_no_mean_normalize)
+  if (!no_mean_normalize)
     _mean_normalize(&NWE);
 
   std::cerr << "done (read " << mrows << " rows with " << ncolumns << " columns)" << std::endl;
@@ -433,7 +458,7 @@ static int read_seed_set(const char *a_fname) {
     else if (iline.compare(tab_pos, neutral.length(), neutral) == 0)
       ipol = Polarity::NEUTRAL;
     else {
-      std::cerr << "Unrecognized polarity class " << iline.substr(tab_pos) << std::endl;
+      std::cerr << "Unrecognized polarity class at line '" << iline.substr(tab_pos) << "'" << std::endl;
       goto error_exit;
     }
 
@@ -473,8 +498,7 @@ static int read_seed_set(const char *a_fname) {
  * @return 0 on success, non-0 otherwise
  */
 int main(int argc, char *argv[]) {
-  int nargs;
-  int ret = EXIT_SUCCESS;
+  int nargs = 0, ret = EXIT_SUCCESS;
 
   // set appropriate locale
   setlocale(LC_ALL, NULL);
@@ -487,8 +511,12 @@ int main(int argc, char *argv[]) {
       "Type --help to see usage." << std::endl;
     std::exit(EXIT_FAILURE);
   }
+  // clean up options
+  if (opt.coefficient != 1)
+    opt.no_length_normalize = true;
+
   // read word vectors
-  if ((ret = read_vectors(argv[argused++], opt.no_length_normalize, opt.no_mean_normalize)))
+  if ((ret = read_vectors(argv[argused++], &opt)))
     return ret;
 
   // read seed sets
@@ -517,10 +545,7 @@ int main(int argc, char *argv[]) {
     expand_pca(&vecid2pol, &NWE, opt.n_terms);
     break;
   case ExpansionType::PRJ_CLUSTERING:
-    expand_projected(&vecid2pol, &NWE, opt.n_terms);
-    break;
-  case ExpansionType::LIN_TRANSFORM:
-    expand_linear_transform(&vecid2pol, &NWE, opt.n_terms);
+    expand_prjct(&vecid2pol, &NWE, opt.n_terms, opt.alpha, opt.delta, opt.max_iters);
     break;
   default:
     throw std::invalid_argument("Invalid type of seed set expansion algorithm.");

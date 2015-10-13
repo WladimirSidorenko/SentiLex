@@ -51,6 +51,15 @@ using v2p_t = std::unordered_map<vid_t, Polarity>;
 /** Map from vector index to string */
 using v2w_t = std::unordered_map<vid_t, std::string>;
 
+/** Default learning rate for gradient methods */
+extern const double DFLT_ALPHA;
+
+/** Minimum required improvement for gradient methods */
+extern const double DFLT_DELTA;
+
+/** Maximum number of gradient updates */
+extern const unsigned long MAX_ITERS;
+
 /////////////
 // Methods //
 /////////////
@@ -109,26 +118,14 @@ void expand_pca(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N);
  *                      polarities of their respective words
  * @param a_nwe - matrix of neural word embeddings
  * @param a_N - number of polar terms to extract
+ * @param a_alpha - learning rate
+ * @param a_delta - minimum required improvement
+ * @param a_max_iters - maximum number of updates
  *
  * @return \c void (`a_vecid2pol` is modified in place)
  */
-void expand_projected(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N);
-
-/**
- * Derive projection matrix to expand seed sets of polar terms
- *
- * This algorithm tries to derive a projection matrix which makes all
- * known neutral terms the picture of the projection, and maps all
- * known positive and negative terms to vectos (1; 0) and (0; -1)
- * respectively.
- *
- * @param a_vecid2pol - dictionary mapping known vector id's to the
- *                      polarities of their respective words
- * @param a_nwe - matrix of neural word embeddings
- * @param a_N - number of polar terms to extract
- *
- * @return \c void (`a_vecid2pol` is modified in place)
- */
-void expand_linear_transform(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N);
+void expand_prjct(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
+		  const double a_alpha = DFLT_ALPHA, const double a_delta = DFLT_DELTA, \
+		  const unsigned long a_max_iters = MAX_ITERS);
 
 #endif	// VEC2DIC_EXPANSION_H_

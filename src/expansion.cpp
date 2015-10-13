@@ -6,7 +6,7 @@
 #include <algorithm>		// std::swap(), std::sort()
 #include <cassert>		// assert
 #include <cfloat>		// DBL_MAX
-#include <climits>		// UINT_MAX
+#include <climits>		// UINT_MAX, SIZE_MAX
 #include <cmath>		// sqrt(), fabs()
 #include <cstdlib>		// size_t
 #include <cstdint>		// MAX_SIZE
@@ -15,7 +15,7 @@
 #include <queue>		// std::priority_queue
 
 ///////////
-// types //
+// Types //
 ///////////
 
 /** Integral type for polarity id */
@@ -82,6 +82,10 @@ using pol_stat_t = struct {
 const vid_t POS_VID = static_cast<vid_t>(Polarity::POSITIVE);
 const vid_t NEG_VID = static_cast<vid_t>(Polarity::NEGATIVE);
 const vid_t NEUT_VID = static_cast<vid_t>(Polarity::NEUTRAL);
+
+const double DFLT_ALPHA = 1e-5;
+const double DFLT_DELTA = 1e-10;
+const unsigned long MAX_ITERS = 1e10;
 
 /////////////
 // Methods //
@@ -694,10 +698,21 @@ void expand_pca(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
   _pca_expand(a_vecid2pol, &prjctd, a_N, &pol_stat);
 }
 
-void expand_projected(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
+void expand_prjct(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
+		  const double a_alpha, const double a_delta, \
+		  const unsigned long a_max_iters) {
+  // initialize projection line
+  arma::rowvec prjline{a_nwe->n_cols, arma::fill::ones};
 
-}
+  // convert polarity enum's to polarity indices
+  size_t polid;
+  v2pi_t vecid2polid;
+  vecid2polid.reserve(a_vecid2pol->size());
+  for (auto &v2p: *a_vecid2pol) {
+    polid = static_cast<size_t>(v2p.second);
+    vecid2polid[v2p.first] = polid;
+  }
 
-void expand_linear_transform(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
-
+  // successively improve projection line
+  size_t dist = SIZE_MAX, prev_dist = SIZE_MAX;
 }
