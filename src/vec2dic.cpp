@@ -385,9 +385,9 @@ static int read_vectors(const char *a_fname, const Option *a_option) {
     std::cerr << "Failed to read vector file " << a_fname << std::endl;
     goto error_exit;
   }
-  if (irow != mrows) {
-    std::cerr << "Incorrect file format: declared number of rows " << mrows << \
-      " differs from the actual number " << irow << std::endl;
+  if (icol != ncolumns) {
+    std::cerr << "Incorrect file format: declared number of vectors " << ncolumns << \
+      " differs from the actual number " << icol << std::endl;
     goto error_exit;
   }
   is.close();
