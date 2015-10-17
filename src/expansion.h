@@ -14,6 +14,7 @@
 // Includes //
 //////////////
 #include <armadillo>		// arma::mat
+#include <forward_list>		// std::forward_list
 #include <string>		// std::string
 #include <unordered_map>	// std::unordered_map
 
@@ -50,6 +51,9 @@ using v2p_t = std::unordered_map<vid_t, Polarity>;
 
 /** Map from vector index to string */
 using v2w_t = std::unordered_map<vid_t, std::string>;
+
+/** Forward list of vector id's */
+using vid_flist_t = std::forward_list<vid_t>;
 
 /** Default learning rate for gradient methods */
 extern const double DFLT_ALPHA;

@@ -707,7 +707,7 @@ static void _project(arma::mat *a_pos_prjctd, arma::mat *a_neg_prjctd, \
     if (v2p.second == Polarity::POSITIVE)
       a_pos_prjctd->col(pos_i++) = _project_vec(a_nwe->col(v2p.first), *a_prjline);
     else if (v2p.second == Polarity::POSITIVE)
-      a_pos_prjctd->col(neg_i++) = _project_vec(a_nwe->col(v2p.first), *a_prjline);
+      a_neg_prjctd->col(neg_i++) = _project_vec(a_nwe->col(v2p.first), *a_prjline);
   }
 }
 
@@ -720,9 +720,9 @@ static void _project(arma::mat *a_pos_prjctd, arma::mat *a_neg_prjctd, \
  * @return sum of pairwise distances between positive an negative
  * vectors
  */
-static inline double _compute_distance(arma::mat *a_pos_prjctd, \
+static inline dist_t _compute_distance(arma::mat *a_pos_prjctd, \
 				       arma::mat *a_neg_prjctd) {
-  double dist = 0.;
+  dist_t dist = 0.;
   size_t neg_j = 0;
   for (size_t pos_i = 0; pos_i < a_pos_prjctd->n_cols; ++pos_i) {
     for (neg_j = 0; neg_j < a_neg_prjctd->n_cols; ++neg_j) {
@@ -745,22 +745,40 @@ static inline double _compute_distance(arma::mat *a_pos_prjctd, \
  *
  * @return \c void
  */
-static void _compute_prj_gradient(arma::colvec *a_gradient, const v2p_t *a_vecid2pol, \
-				  const arma::mat *a_nwe, const arma::colvec *a_prjline) {
+static void _compute_prj_gradient(arma::colvec *a_gradient, const vid_flist_t *pos_ids, \
+				  const vid_flist_t *neg_ids, const arma::mat *a_nwe, \
+				  const arma::colvec *a_prjline) {
+  // clean up gradient
   a_gradient->fill(0.);
 
+  // compute new gradient
+  dist_t dprod;
+  arma::colvec diff(a_gradient->n_cols);
+  for (auto pos_id: *pos_ids) {
+    for (auto neg_id: *neg_ids) {
+      diff = a_nwe->col(pos_id) - a_nwe->col(neg_id);
+      dprod = arma::dot(diff, *a_prjline);
+
+      (*a_gradient) += dprod * (diff - dprod * (*a_prjline));
+    }
+  }
+  (*a_gradient) *= 2;
 }
 
 void expand_prjct(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
-		  const double a_alpha, const double a_delta, \
+		  const double a_alpha, const dist_t a_delta, \
 		  const unsigned long a_max_iters) {
   // estimate the number of known positive and negative vectors
   size_t n_pos = 0, n_neg = 0;
+  vid_flist_t pos_ids, neg_ids;
   for (auto& v2p: *a_vecid2pol) {
-    if (v2p.second == Polarity::POSITIVE)
+    if (v2p.second == Polarity::POSITIVE) {
+      pos_ids.push_front(v2p.first);
       ++n_pos;
-    else if (v2p.second == Polarity::NEGATIVE)
+    } else if (v2p.second == Polarity::NEGATIVE) {
+      neg_ids.push_front(v2p.first);
       ++n_neg;
+    }
   }
   // initialize matrices for projected vectors
   arma::mat pos_prjctd(a_nwe->n_rows, n_pos);
@@ -773,7 +791,7 @@ void expand_prjct(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
   // successively improve projection line
   unsigned long i = 0;
   // nothing special, just to make sure that we'll enter the loop
-  double dist = std::numeric_limits<double>::max(), prev_dist = 0;
+  dist_t dist = std::numeric_limits<dist_t>::max(), prev_dist = 0;
   // run iteration until convergence criteria are met
   while (i < a_max_iters) {
     prev_dist = dist;
@@ -786,7 +804,7 @@ void expand_prjct(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
     if ((dist - prev_dist) < a_delta)
       break;
     // update projection line
-    _compute_prj_gradient(&update, a_vecid2pol, a_nwe, &prjline);
+    _compute_prj_gradient(&update, &pos_ids, &neg_ids, a_nwe, &prjline);
     prjline += a_alpha * update;
     ++i;
   }
