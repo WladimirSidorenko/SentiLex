@@ -122,12 +122,12 @@ typedef struct WP {
 
   /// default constructor
   WP(void):
-    m_word {}, m_polarity {}
+    m_word(), m_polarity()
   {}
 
-  /// \brief class constructor
+  /// class constructor
   WP(const char *a_word, Polarity a_polarity):
-    m_word {a_word}, m_polarity {a_polarity}
+    m_word(a_word), m_polarity (a_polarity)
   {}
 } wp_t;
 
@@ -138,9 +138,11 @@ typedef std::vector<wp_t> wpv_t;
 // Variables and Constants //
 /////////////////////////////
 
-// String epresenting polarity clases
+/// string representing positive polarity class
 const std::string positive {"positive"};
+/// string representing negative polarity class
 const std::string negative {"negative"};
+/// string representing neutral polarity class
 const std::string neutral {"neutral"};
 
 /// Mapping from Polarity enum to string

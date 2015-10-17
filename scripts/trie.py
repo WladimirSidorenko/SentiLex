@@ -69,7 +69,9 @@ class MatchObject(object):
 
         @param a_start - start index of match
         """
+        ## start index of match
         self.start = a_start
+        ## end index of match
         self.end = -1
 
     def update(self, a_end):
@@ -87,7 +89,7 @@ class State(object):
     Single Trie state with associated transitions
 
     Instance variables:
-    classes - custom classes associated with a
+    classes - custom classes associated with the current state
     final - boolean flag indicating whether state is final
     transitions - set of transitions triggered by the state
 
@@ -105,10 +107,13 @@ class State(object):
                          final or not
         @param a_class - custom class associated with the final state
         """
+        ## custom classes associated with the current state
         self.classes = set([])
         if a_class is not None:
             self.classes.add(a_class)
+        ## boolean flag indicating whether the state is final
         self.final = a_final
+        ## set of transitions triggered by the given state
         self.transitions = dict()
 
     def add_transition(self, a_char):
@@ -143,7 +148,7 @@ class Trie(object):
     Instance variables:
     ignorecase - boolean flag indicating whether the case
                  should be ignored
-    active_state - list of currently active Trie states
+    active_state - set of currently active Trie states
 
     Methods:
     __init__() - class constructor
@@ -158,8 +163,10 @@ class Trie(object):
         @param a_ignorecase - boolean flag indicating whether the case
                               should be ignored
         """
+        ## boolean flag indicating whether character case should be ignored
         self.ignorecase = a_ignorecase
         self._init_state = State()
+        ## set of currently active Trie states
         self.active_states = set([])
 
     def add(self, a_string, a_class = 0):
