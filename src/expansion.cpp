@@ -765,6 +765,31 @@ static void _compute_prj_gradient(arma::colvec *a_gradient, const vid_flist_t *p
   (*a_gradient) *= 2;
 }
 
+/**
+ * Expand polarity sets by adding terms that are farthermost spread on
+ * the projection line
+ *
+ * @param a_vecid2pol - mapping from vector id's to polarities
+ * @param a_nwe - original matrix of neural-word embeddings
+ * @param a_N - maximum number of terms to extract (-1 means unlimited)
+ *
+ * @return \c void (modifies `a_vecid2pol` instead)
+ */
+static void _prjct_expand(v2p_t *a_vecid2pol, const int a_N, \
+			  const arma::mat *a_nwe, const arma::mat *pos_prjctd, \
+			  const arma::mat *neg_prjctd, const arma::colvec  *prjline) {
+  // vector of word vector ids, their respective polarities, and
+  // distances to the boundaries
+  vpd_v_t vpds;
+  vpds.reserve(a_nwe->n_cols - a_vecid2pol->size());
+  // compute mean of projected positive vectors
+  // compute mean of projected negative vectors
+
+  // project each vector with unknown polarity onto the projection
+  // line and determine the polarity class to which this vector is
+  // closest
+}
+
 void expand_prjct(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
 		  const double a_alpha, const dist_t a_delta, \
 		  const unsigned long a_max_iters) {
@@ -808,4 +833,5 @@ void expand_prjct(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
     prjline += a_alpha * update;
     ++i;
   }
+  _prjct_expand(a_vecid2pol, a_N, a_nwe, &pos_prjctd, &neg_prjctd, &prjline);
 }
