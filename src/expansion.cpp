@@ -777,17 +777,42 @@ static void _compute_prj_gradient(arma::colvec *a_gradient, const vid_flist_t *p
  */
 static void _prjct_expand(v2p_t *a_vecid2pol, const int a_N, \
 			  const arma::mat *a_nwe, const arma::mat *pos_prjctd, \
-			  const arma::mat *neg_prjctd, const arma::colvec  *prjline) {
+			  const arma::mat *neg_prjctd, const arma::colvec  *a_prjline) {
   // vector of word vector ids, their respective polarities, and
   // distances to the boundaries
   vpd_v_t vpds;
   vpds.reserve(a_nwe->n_cols - a_vecid2pol->size());
   // compute mean of projected positive vectors
+  arma::colvec pos_mean = arma::sum(*pos_prjctd, 1) / pos_prjctd->n_cols;
   // compute mean of projected negative vectors
-
+  arma::colvec neg_mean = arma::sum(*neg_prjctd, 1) / neg_prjctd->n_cols;
+  // compute median of the projection line
+  arma::colvec median = (pos_mean - neg_mean) / 2;
+  // find the light side of the force (determine whether projection
+  // line points to the positive mean or in the opposite direction)
+  bool pos_is_right = arma::dot(pos_mean - median, *a_prjline) > 0;
   // project each vector with unknown polarity onto the projection
-  // line and determine the polarity class to which this vector is
-  // closest
+  pol_t ipol;
+  size_t j{0};
+  dist_t idist2mean;
+  vid_t nvecs{a_nwe->n_cols};
+  arma::colvec diff_vec(a_nwe->n_rows), vprjctd(a_nwe->n_rows);
+  v2p_t::const_iterator v_not_found = a_vecid2pol->end();
+  for (vid_t i = 0; i < nvecs; ++i) {
+    // skip vectors whose polarity is already known
+    if (a_vecid2pol->find(i) != v_not_found)
+      continue;
+
+    // project vector onto the polarity line
+    vprjctd = _project_vec(a_nwe->col(i), *a_prjline);
+    // compute its distance to the median and polarity class
+    diff_vec = vprjctd - median;
+    idist2mean = arma::norm(diff_vec);
+    ipol = (arma::dot(diff_vec, *a_prjline) > 0) == pos_is_right? POS_VID: NEG_VID;
+    vpds.push_back(VPD {idist2mean, ipol, i});
+    ++j;
+  }
+  _add_terms(a_vecid2pol, &vpds, j, a_N);
 }
 
 void expand_prjct(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
