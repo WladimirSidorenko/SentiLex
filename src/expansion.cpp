@@ -807,7 +807,7 @@ static void _prjct_expand(v2p_t *a_vecid2pol, const int a_N, \
     vprjctd = _project_vec(a_nwe->col(i), *a_prjline);
     // compute its distance to the median and polarity class
     diff_vec = vprjctd - median;
-    idist2mean = arma::norm(diff_vec);
+    idist2mean = arma::norm(diff_vec, 2);
     ipol = (arma::dot(diff_vec, *a_prjline) > 0) == pos_is_right? POS_VID: NEG_VID;
     vpds.push_back(VPD {idist2mean, ipol, i});
     ++j;
@@ -841,7 +841,7 @@ void expand_prjct(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
   // successively improve projection line
   unsigned long i = 0;
   // nothing special, just to make sure that we'll enter the loop
-  dist_t dist = std::numeric_limits<dist_t>::max(), prev_dist = 0;
+  dist_t dist = 0, prev_dist = 0;
   // run iteration until convergence criteria are met
   while (i < a_max_iters) {
     prev_dist = dist;
