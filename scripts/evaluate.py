@@ -176,7 +176,7 @@ def _compute_fscores(a_stat, a_fscore_stat):
         micro_F1 = 2 * iprec * ircall / (iprec + ircall)
     return (macro_F1, micro_F1)
 
-def _compute(a_lexicon, a_id_tok, a_fscore_stat):
+def _compute(a_lexicon, a_id_tok, a_fscore_stat, a_output_errors):
     """
     Compute macro- and micro-averaged F-scores for single file
 
@@ -184,6 +184,8 @@ def _compute(a_lexicon, a_id_tok, a_fscore_stat):
     @param a_id_tok - sequence of annotated tokens extracted from file
     @param a_fscore_stat - verbose statistics with F-scores for each
                       particular class (will be updated in this method)
+    @param a_output_errors - boolean flag indicating whether dictionary errors
+                        should be printed
 
     @return 2-tuple with macro- and micro-averaged F-scores
     """
@@ -217,10 +219,11 @@ def _compute(a_lexicon, a_id_tok, a_fscore_stat):
                         stat[mclass][TRUE_POS] += 1
                         ianno.remove((istart, mclass))
                     else:
-                        # print("confused iform = {:s} ({:s}) with {:s}".format(\
-                        #         repr(iform), repr(ianno), repr(mclass)), \
-                        #           file = sys.stderr)
                         stat[mclass][FALSE_POS] += 1
+                        if a_output_errors:
+                            print("confused iform = {:s} ({:s}) with {:s}".format(\
+                                    repr(iform), repr(ianno), repr(mclass)), \
+                                      file = sys.stderr)
                         if istart != i:
                             stat[NEUTRAL][FALSE_NEG] += 1
             if ianno:
@@ -248,7 +251,7 @@ def _compute(a_lexicon, a_id_tok, a_fscore_stat):
     # print("macro_F1, micro_F1 =", macro_F1, micro_F1, file = sys.stderr)
     return (macro_F1, micro_F1)
 
-def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
+def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma, a_output_errors):
     """
     Evaluate sentiment lexicon on a real corpus
 
@@ -256,6 +259,8 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
     @param a_base_dir - directory containing base files of the MMAX project
     @param a_anno_dir - directory containing annotation files of the MMAX project
     @param a_form2lemma - dictionary mapping word forms to lemmas
+    @param a_output_errors - boolean flag indicating whether dictionary errors
+                        should be printed
 
     @return 6-tuple with macro- and micro-averaged precision, recall, and F-measure
     """
@@ -307,7 +312,7 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
             # print("ipolarity =", repr(id_tok[tid][-1]))
 
         # now, do the actual computation of matched items
-        imacro_F1, imicro_F1 = _compute(a_lexicon, id_tok, fscore_stat)
+        imacro_F1, imicro_F1 = _compute(a_lexicon, id_tok, fscore_stat, a_output_errors)
         macro_F1.append(imacro_F1); micro_F1.append(imicro_F1)
         # sys.exit(66)
     for iclass, fscores in fscore_stat.iteritems():
@@ -333,6 +338,7 @@ def main(argv):
                                default = ENCODING)
     argparser.add_argument("--lemma-file", help = "file containing lemmas of corpus words", \
                                type = str)
+    argparser.add_argument("--output-errors", help = "output missing and superfluous terms")
     argparser.add_argument("sentiment_lexicon", help = "sentiment lexicon to test", type = str)
     argparser.add_argument("corpus_base_dir", help = \
                            "directory containing word files of sentiment corpus in MMAX format", \
@@ -349,7 +355,8 @@ def main(argv):
         _read_file(form2lemma, args.lemma_file, a_insert = \
                       lambda lex, form, lemma: lex.setdefault(form, lemma))
     # evaluate it on corpus
-    eval_lexicon(ilex, args.corpus_base_dir, args.corpus_anno_dir, form2lemma)
+    eval_lexicon(ilex, args.corpus_base_dir, args.corpus_anno_dir, form2lemma, \
+                     args.output_errors)
 
 ##################################################################
 # Main
