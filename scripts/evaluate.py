@@ -11,7 +11,7 @@ evaluate.py [lemma_file] sentiment_lexicon test_corpus_dir/
 
 ##################################################################
 # Libraries
-from __future__ import print_function
+from __future__ import print_function, unicode_literals
 from trie import SPACE_RE, CONTINUE, Trie
 
 from collections import defaultdict
@@ -59,6 +59,9 @@ TRUE_POS = 0                   # index of true positive counts
 FALSE_POS = 1                  # index of false positive counts
 FALSE_NEG = 2                  # index of false negative counts
 COMMENT_RE = re.compile("(?:\A|\s+)# .*$")
+
+PRECISION = 0                   # index of precision field
+RECALL = 1                      # index of recall field
 
 ##################################################################
 # Methods
@@ -176,12 +179,13 @@ def _compute_fscores(a_stat, a_fscore_stat):
         micro_F1 = 2 * iprec * ircall / (iprec + ircall)
     return (macro_F1, micro_F1)
 
-def _compute(a_lexicon, a_id_tok, a_fscore_stat, a_output_errors):
+def _compute(a_lexicon, a_id_tok, a_pr_stat, a_fscore_stat, a_output_errors):
     """
     Compute macro- and micro-averaged F-scores for single file
 
     @param a_lexicon - lexicon whose quality should be testedи
     @param a_id_tok - sequence of annotated tokens extracted from file
+    @param a_pr_stat - verbose statistics with precision and recall
     @param a_fscore_stat - verbose statistics with F-scores for each
                       particular class (will be updated in this method)
     @param a_output_errors - boolean flag indicating whether dictionary errors
@@ -194,6 +198,8 @@ def _compute(a_lexicon, a_id_tok, a_fscore_stat, a_output_errors):
     # class
     stat = defaultdict(lambda: [0, 0, 0])
     # iterate over tokens and update statistics accordingly
+    ientry = frzset = None
+    matched_states = set()
     hasmatch = isneutral = False
     for i, (_, iform, ilemma, ianno) in enumerate(a_id_tok):
         # print("iform =", repr(iform), file = sys.stderr)
@@ -211,6 +217,12 @@ def _compute(a_lexicon, a_id_tok, a_fscore_stat, a_output_errors):
                 #           file = sys.stderr)
                 if not istate.final:
                     continue
+                frzset = frozenset(istate.classes)
+                # skip duplicate states that arise from using lemmas
+                if (istart, frzset) in matched_states:
+                    continue
+                else:
+                    matched_states.add((istart, frzset))
                 for mclass in istate.classes:
                     if (istart, mclass) in ianno:
                         # print("matched iform = {:s} ({:s}) with {:s}".format(\
@@ -221,31 +233,51 @@ def _compute(a_lexicon, a_id_tok, a_fscore_stat, a_output_errors):
                     else:
                         stat[mclass][FALSE_POS] += 1
                         if a_output_errors:
-                            print("confused iform = {:s} ({:s}) with {:s}".format(\
-                                    repr(iform), repr(ianno), repr(mclass)), \
+                            ientry = ' '.join([t[1] for t in a_id_tok[istart:i+1]])
+                            print(">>> excessive: {:s} ({:s})".format(ientry, mclass).encode(ENCODING), \
                                       file = sys.stderr)
                         if istart != i:
                             stat[NEUTRAL][FALSE_NEG] += 1
             if ianno:
                 # print("did not match iform = {:s} ({:s})".format(iform, repr(ianno)), \
                 #           file = sys.stderr)
-                for _, iclass in ianno:
+                for istart, iclass in ianno:
                     stat[iclass][FALSE_NEG] += 1
+                    if a_output_errors:
+                        ientry = ' '.join([t[1] for t in a_id_tok[istart:i+1]])
+                        print("<<< missing: {:s} ({:s})".format(ientry, iclass).encode(ENCODING), \
+                                      file = sys.stderr)
             elif isneutral:
                 stat[NEUTRAL][FALSE_NEG] += 1
+                if a_output_errors:
+                    print("<<< missing: {:s} ({:s})".format(a_id_tok[i][1], \
+                                                                NEUTRAL).encode(ENCODING), \
+                              file = sys.stderr)
+            matched_states.clear()
         elif isneutral:
             stat[NEUTRAL][TRUE_POS] += 1
         else:
             stat[NEUTRAL][FALSE_POS] += 1
-            # print("did not match {:s} ({:s})".format(repr(iform), repr(ianno)), \
-            #           file = sys.stderr)
-            for _, iclass in ianno:
+            for istart, iclass in ianno:
                 stat[iclass][FALSE_NEG] += 1
+                if a_output_errors:
+                    ientry = ' '.join([t[1] for t in a_id_tok[istart:i+1]])
+                    print("<<< missing: {:s} ({:s})".format(ientry, iclass).encode(ENCODING), \
+                              file = sys.stderr)
         # let Trie proceed to the next state
         a_lexicon.match([' ', None], a_reset = CONTINUE)
         # print("stat =", repr(stat), file = sys.stderr)
     a_lexicon.match((None, None)) # reset active states
     # update statistics
+    cstat = None
+    for c in stat:
+        cstat = stat[c]
+        if cstat[TRUE_POS]:
+            a_pr_stat[c][PRECISION].append(cstat[TRUE_POS]/float(cstat[TRUE_POS] + cstat[FALSE_POS]))
+            a_pr_stat[c][RECALL].append(cstat[TRUE_POS]/float(cstat[TRUE_POS] + cstat[FALSE_NEG]))
+        else:
+            a_pr_stat[c][PRECISION].append(0.)
+            a_pr_stat[c][RECALL].append(0.)
     # print("stat =", repr(stat), file = sys.stderr)
     macro_F1, micro_F1 = _compute_fscores(stat, a_fscore_stat)
     # print("macro_F1, micro_F1 =", macro_F1, micro_F1, file = sys.stderr)
@@ -267,6 +299,7 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma, a_output_error
     itok = ""
     id_tok = []
     wid2tid = dict()
+    pr_stat = defaultdict(lambda: [[], []])
     fscore_stat = defaultdict(list)
     macro_F1 = []; micro_F1 = []
     wid = tid = imacro_F1 = imicro_F1 = icorrect = iwrong = itotal = -1
@@ -312,16 +345,21 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma, a_output_error
             # print("ipolarity =", repr(id_tok[tid][-1]))
 
         # now, do the actual computation of matched items
-        imacro_F1, imicro_F1 = _compute(a_lexicon, id_tok, fscore_stat, a_output_errors)
+        imacro_F1, imicro_F1 = _compute(a_lexicon, id_tok, pr_stat, fscore_stat, a_output_errors)
         macro_F1.append(imacro_F1); micro_F1.append(imicro_F1)
         # sys.exit(66)
+    print("{:15s}{:>20s}{:>20s}{:>20s}".format("Class", "Precision", "Recall", "F-score"), \
+              file = sys.stderr)
+    iprec = ircall = None
     for iclass, fscores in fscore_stat.iteritems():
-        print("F-score ({:s}): {:.2%} (+/- {:.2%})".format(iclass, np.mean(fscores), \
-                                                               np.std(fscores)))
-    print("Macro-averaged F-score: {:.2%} (+/- {:.2%})".format(np.mean(macro_F1), \
-                                                                   np.std(macro_F1)))
-    print("Micro-averaged F-score: {:.2%} (+/- {:.2%})".format(np.mean(micro_F1), \
-                                                                   np.std(micro_F1)))
+        iprec, ircall = pr_stat[iclass][PRECISION], pr_stat[iclass][RECALL]
+        print("{:15s}{:>10.2%} (+/- {:6.2%}){:>10.2%} (+/- {:6.2%}){:>10.2%} (+/- {:6.2%})".format(\
+                iclass, np.mean(iprec), np.std(iprec), np.mean(ircall), np.std(ircall), \
+                    np.mean(fscores), np.std(fscores)))
+    print("{:15s}{:>10.2%} (+/- {:6.2%}){:>10.2%} (+/- {:6.2%}){:>10.2%} (+/- {:6.2%})".format(\
+            "Macro-average", np.mean(macro_F1), np.std(macro_F1)))
+    print("{:15s}{:>10.2%} (+/- {:6.2%}){:>10.2%} (+/- {:6.2%}){:>10.2%} (+/- {:6.2%})".format(\
+            "Micro-average", np.mean(micro_F1), np.std(micro_F1)))
 
 def main(argv):
     """
@@ -336,9 +374,10 @@ def main(argv):
                                         """Script for evaluating sentiment lexicon on test corpus.""")
     argparser.add_argument("-e", "--encoding", help = "encoding of input files", type = str, \
                                default = ENCODING)
-    argparser.add_argument("--lemma-file", help = "file containing lemmas of corpus words", \
+    argparser.add_argument("-l", "--lemma-file", help = "file containing lemmas of corpus words", \
                                type = str)
-    argparser.add_argument("--output-errors", help = "output missing and superfluous terms")
+    argparser.add_argument("-v", "--verbose", help = "output missing and excessive terms", \
+                               action = "store_true")
     argparser.add_argument("sentiment_lexicon", help = "sentiment lexicon to test", type = str)
     argparser.add_argument("corpus_base_dir", help = \
                            "directory containing word files of sentiment corpus in MMAX format", \
@@ -356,7 +395,7 @@ def main(argv):
                       lambda lex, form, lemma: lex.setdefault(form, lemma))
     # evaluate it on corpus
     eval_lexicon(ilex, args.corpus_base_dir, args.corpus_anno_dir, form2lemma, \
-                     args.output_errors)
+                     args.verbose)
 
 ##################################################################
 # Main

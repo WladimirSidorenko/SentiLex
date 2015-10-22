@@ -26,6 +26,7 @@ import sys
 
 ##################################################################
 # Variable and Constants
+PUNCT_RE = re.compile("[#,.]")
 SPACE_RE = re.compile("\s\s+", re.L)
 FINAL_SPACE_RE = re.compile("(:?^\s+|\s+$)")
 ANEW = 0
@@ -42,6 +43,7 @@ def normalize_string(a_string, a_ignorecase = False):
 
     @return normalized string
     """
+    a_string = PUNCT_RE.sub("", a_string)
     a_string = SPACE_RE.sub(' ', a_string)
     a_string = FINAL_SPACE_RE.sub("", a_string)
     if a_ignorecase:
@@ -228,6 +230,8 @@ class Trie(object):
                     # print("adding istate to ret:", repr(ret), file = sys.stderr)
                     ret.add((istate, istart, a_start if a_start >= 0 else iend))
                     # print("istate added:", repr(ret), file = sys.stderr)
+            # if ret:
+            #     break
             # print("ret =", repr(ret), file = sys.stderr)
         self.active_states = ret
         return status
