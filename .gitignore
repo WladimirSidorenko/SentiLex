@@ -1,3 +1,4 @@
 *.pyc
 bhtsne/
 bhtsne
+build-debug/
