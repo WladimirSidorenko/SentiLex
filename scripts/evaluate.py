@@ -150,10 +150,11 @@ def _compute_fscores(a_stat, a_fscore_stat):
     @param a_fscore_stat - verbose statistics with F-scores for each
                       particular class (will be updated in this method)
 
-    @return 2-tuple with macro- and micro-averaged F-scores
+    @return 6-tuple with macro- and micro-averaged precision, recall, and F-scores
     """
+    macro_P = micro_P = macro_R = micro_R = macro_F1 = micro_F1 = 0.
     n_classes = len(a_stat)
-    if n_classes == 0:
+    if not n_classes:
         return (0., 0.)
     macro_F1 = micro_F1 = iF1 = iprec = irecall = 0.
     total_tp = total_fp = total_fn = 0
@@ -165,25 +166,25 @@ def _compute_fscores(a_stat, a_fscore_stat):
             ircall = tp / float(tp + fn) if (tp or fn) else 0.
             if iprec or ircall:
                 iF1 = (iprec * ircall) / (iprec + ircall)
-                macro_F1 += iF1
+                macro_P += iprec; macro_R += ircall; macro_F1 += iF1
             else:
                 iF1 = 0
         else:
             iF1 = 0
         a_fscore_stat[iclass].append(iF1)
     # compute macro- and micro-averaged scores
-    macro_F1 /= float(n_classes)
+    macro_P /= float(n_classes); macro_R /= float(n_classes); macro_F1 /= float(n_classes)
     if total_tp or (total_fp and total_fn):
-        iprec = total_tp / float(total_tp + total_fp)
-        ircall = total_tp / float(total_tp + total_fn)
-        micro_F1 = 2 * iprec * ircall / (iprec + ircall)
-    return (macro_F1, micro_F1)
+        micro_P = total_tp / float(total_tp + total_fp)
+        micro_R = total_tp / float(total_tp + total_fn)
+        micro_F1 = 2 * micro_P * micro_R / (micro_P + micro_R)
+    return (macro_P, micro_P, macro_R, micro_R, macro_F1, micro_F1)
 
 def _compute(a_lexicon, a_id_tok, a_pr_stat, a_fscore_stat, a_output_errors):
     """
     Compute macro- and micro-averaged F-scores for single file
 
-    @param a_lexicon - lexicon whose quality should be testedи
+    @param a_lexicon - lexicon whose quality should be tested
     @param a_id_tok - sequence of annotated tokens extracted from file
     @param a_pr_stat - verbose statistics with precision and recall
     @param a_fscore_stat - verbose statistics with F-scores for each
@@ -191,9 +192,9 @@ def _compute(a_lexicon, a_id_tok, a_pr_stat, a_fscore_stat, a_output_errors):
     @param a_output_errors - boolean flag indicating whether dictionary errors
                         should be printed
 
-    @return 2-tuple with macro- and micro-averaged F-scores
+    @return 6-tuple with macro- and micro-averaged precision, recall,
+    and F-scores
     """
-    macro_F1 = micro_F1 = 0.
     # dictionary used for counting correct and wrong matches of each
     # class
     stat = defaultdict(lambda: [0, 0, 0])
@@ -279,9 +280,9 @@ def _compute(a_lexicon, a_id_tok, a_pr_stat, a_fscore_stat, a_output_errors):
             a_pr_stat[c][PRECISION].append(0.)
             a_pr_stat[c][RECALL].append(0.)
     # print("stat =", repr(stat), file = sys.stderr)
-    macro_F1, micro_F1 = _compute_fscores(stat, a_fscore_stat)
+    return _compute_fscores(stat, a_fscore_stat)
     # print("macro_F1, micro_F1 =", macro_F1, micro_F1, file = sys.stderr)
-    return (macro_F1, micro_F1)
+    return (macro_P, micro_P, macro_R, micro_R, macro_F1, micro_F1)
 
 def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma, a_output_errors):
     """
@@ -302,6 +303,7 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma, a_output_error
     pr_stat = defaultdict(lambda: [[], []])
     fscore_stat = defaultdict(list)
     macro_F1 = []; micro_F1 = []
+    macro_P = []; micro_P = []; macro_R = []; micro_R = []
     wid = tid = imacro_F1 = imicro_F1 = icorrect = iwrong = itotal = -1
     annofname = idoc = ispan = wid = None
     # iterate over
@@ -345,10 +347,13 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma, a_output_error
             # print("ipolarity =", repr(id_tok[tid][-1]))
 
         # now, do the actual computation of matched items
-        imacro_F1, imicro_F1 = _compute(a_lexicon, id_tok, pr_stat, fscore_stat, a_output_errors)
+        imacro_P, imicro_P, imacro_R, imicro_R, imacro_F1, imicro_F1 = \
+            _compute(a_lexicon, id_tok, pr_stat, fscore_stat, a_output_errors)
+        macro_P.append(imacro_P); micro_P.append(imicro_P)
+        macro_R.append(imacro_R); micro_R.append(imicro_R)
         macro_F1.append(imacro_F1); micro_F1.append(imicro_F1)
         # sys.exit(66)
-    print("{:15s}{:>20s}{:>20s}{:>20s}".format("Class", "Precision", "Recall", "F-score"), \
+    print("{:15s}{:>20s}{:>20s}{:>24s}".format("Class", "Precision", "Recall", "F-score"), \
               file = sys.stderr)
     iprec = ircall = None
     for iclass, fscores in fscore_stat.iteritems():
@@ -357,9 +362,11 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma, a_output_error
                 iclass, np.mean(iprec), np.std(iprec), np.mean(ircall), np.std(ircall), \
                     np.mean(fscores), np.std(fscores)))
     print("{:15s}{:>10.2%} (+/- {:6.2%}){:>10.2%} (+/- {:6.2%}){:>10.2%} (+/- {:6.2%})".format(\
-            "Macro-average", np.mean(macro_F1), np.std(macro_F1)))
+            "Macro-average", np.mean(macro_P), np.std(macro_P), np.mean(macro_R), np.std(macro_R), \
+                np.mean(macro_F1), np.std(macro_F1)))
     print("{:15s}{:>10.2%} (+/- {:6.2%}){:>10.2%} (+/- {:6.2%}){:>10.2%} (+/- {:6.2%})".format(\
-            "Micro-average", np.mean(micro_F1), np.std(micro_F1)))
+            "Micro-average", np.mean(micro_P), np.std(micro_P), np.mean(micro_R), np.std(micro_R), \
+                np.mean(micro_F1), np.std(micro_F1)))
 
 def main(argv):
     """
