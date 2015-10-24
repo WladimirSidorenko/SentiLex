@@ -74,10 +74,12 @@ class Germanet(object):
             raise RuntimeError("Can't read from directory: {:s}".format(a_dir))
         ## mapping from synset IDs to synset definitions and examples
         self.synid2defexmp = dict()
+        ## mapping from synset IDs to part-of-speech categories
+        self.synid2pos = dict()
         ## mapping from lexeme IDs to lexemes
-        self.lexid2lex = dict()
+        self.lexid2lex = defaultdict(set)
         ## mapping from lexeme IDs to lexemes
-        self.lex2lexid = dict()
+        self.lex2lexid = defaultdict(set)
         ## mapping from lexeme IDs to synset IDs
         self.lexid2synids = defaultdict(set)
         ## mapping from synset IDs to lexemes
@@ -90,8 +92,12 @@ class Germanet(object):
         for ifile in chain.from_iterable(glob.iglob(os.path.join(a_dir, ipos + '*')) \
                                              for ipos in POS):
             self._parse_synsets(ifile)
-
         assert self.lexid2synids, "No synset files found in directory {:s}".format(a_dir)
+        # parse wiktionary paraphrases
+        for ifile in chain.from_iterable(glob.iglob(os.path.join(a_dir, "wiktionaryParaphrases-" \
+                                                                     + ipos[:-1] + ".xml")) \
+                                             for ipos in POS):
+            self._parse_wiktionary(ifile)
         # parse relations
         self._parse_relations(os.path.join(a_dir, "gn_relations.xml"))
 
@@ -108,10 +114,11 @@ class Germanet(object):
         idoc = ET.parse(a_fname).getroot()
         for isynset in idoc.iterfind("synset"):
             synid = isynset.get("id")
+            self.synid2pos[synid] = isynset.get("category")
             iparaphrase = isynset.find("./paraphrase")
             assert synid not in self.synid2defexmp, \
                 "Duplicate description of synset {:s}".format(syn_id)
-            self.synid2defexmp[synid] = (("" if iparaphrase is None else iparaphrase.text), \
+            self.synid2defexmp[synid] = (["" if iparaphrase is None else iparaphrase.text], \
                                              [el.text for el in isynset.iterfind(".//example/text")])
             for ilex in isynset.iterfind("./lexUnit"):
                 lexid = ilex.get("id")
@@ -119,12 +126,22 @@ class Germanet(object):
                 self.synid2lexids[synid].add(lexid)
                 for iform in ilex.iterfind("./orthForm"):
                     lex = normalize(iform.text)
-                    if lexid in self.lexid2lex:
-                        assert lex not in self.lex2lexid, "Multiple lexeme id's specified for lemma {:s}".format(lex)
-                        self.lexid2lex[lexid].add(lex)
-                    else:
-                        self.lexid2lex[lexid] = set([lex])
-                        self.lex2lexid[lex] = lexid
+                    self.lexid2lex[lexid].add(lex)
+                    self.lex2lexid[lex].add(lexid)
+
+    def _parse_wiktionary(self, a_fname):
+        """Parse wiktionary file with synset definitions
+
+        @param a_fname - name of the Wi
+        """
+        ilexid = idef = None
+        itree = ET.parse(a_fname).getroot()
+        for wpara in itree.iterfind("wiktionaryParaphrase"):
+            ilexid = wpara.get("lexUnitId")
+            idef = wpara.get("wiktionarySense")
+            # add definition to relevant synsets
+            for isynid in self.lexid2synids[ilexid]:
+                self.synid2defexmp[isynid][0].append(idef)
 
     def _parse_relations(self, a_fname):
         """
