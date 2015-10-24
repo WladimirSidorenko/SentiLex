@@ -12,7 +12,7 @@ generate_lexicon.py [OPTIONS] [INPUT_FILES]
 ##################################################################
 # Imports
 from __future__ import unicode_literals, print_function
-from germanet import Germanet, normalize
+from germanet import Germanet, normalize, POS
 from ising import Ising, ITEM_IDX, WGHT_IDX, HAS_FXD_WGHT, FXD_WGHT_IDX
 from tokenizer import Tokenizer
 
@@ -24,6 +24,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 import argparse
 import codecs
+from math import floor, ceil
 import numpy as np
 import os
 import re
@@ -39,6 +40,7 @@ SVM = "svm"
 GNET_DIR = "germanet_dir"
 CC_FILE = "cc_file"
 
+VERBOSE = False
 ESULI = "esuli"
 TAKAMURA = "takamura"
 W2V = "w2v"
@@ -94,7 +96,6 @@ def _get_form2lemma(a_fname):
                 FORM2LEMMA[iform] = normalize(ilemma)
             else:
                 STOP_WORDS.add(iform)
-
 
 def _read_set(a_fname):
     """
@@ -160,7 +161,7 @@ def _get_tfidf_vec(a_germanet):
     lexemes = []
     # iterate over all synsets
     for isyn_id, (idef, iexamples) in a_germanet.synid2defexmp.iteritems():
-        lexemes = [lemmatize(iword) for itxt in chain([idef], iexamples) \
+        lexemes = [lemmatize(iword) for itxt in chain(idef, iexamples) \
                        for iword in TOKENIZER.tokenize(itxt)]
         lexemes = [ilex for ilex in lexemes if ilex]
         if lexemes:
@@ -171,20 +172,23 @@ def _get_tfidf_vec(a_germanet):
     ret = {k: _length_normalize(ivectorizer.transform([v])) for k, v in ret.iteritems()}
     return ret
 
-def _lexemes2synset_tfidf(a_germanet, a_synid2tfidf, a_lexemes):
+def _lexemes2synset_tfidf(a_germanet, a_synid2tfidf, a_lexemes, a_pos = None):
     """
     Convert lexemes to tf/idf vectors corresponding to their synsets
 
     @param a_germanet - GermaNet instance
     @param a_synid2tfidf - dictionary mapping synset id's to tf/idf vectors
     @param a_lexemes - set of lexemes for which to extract the synsets
+    @param a_pos - part-od-speech of lexemes to consider (None for no restriction)
 
     @return set of synset id's which contain lexemes along with their definitions
     """
     ret = set((isyn_id, a_synid2tfidf[isyn_id]) \
                   for ilex in a_lexemes \
-                  for isyn_id in a_germanet.lexid2synids.get(a_germanet.lex2lexid.get(ilex, None), []) \
-                  if isyn_id in a_synid2tfidf)
+                  for ilexid in a_germanet.lex2lexid.get(ilex, []) \
+                  for isyn_id in a_germanet.lexid2synids.get(ilexid, []) \
+                  if isyn_id in a_synid2tfidf and (a_pos == None or \
+                                                       a_pos == a_germanet.synid2pos[isyn_id]))
     return ret
 
 def _es_flatten(a_smtx):
@@ -199,7 +203,7 @@ def _es_flatten(a_smtx):
 
 def _es_train_binary(a_clf_pos, a_clf_neg, a_pos, a_neg, a_neut):
     """
-    Private method for training binary classifiers on synset sets
+    Private method for training binary classifiers on synsets
 
     @param a_clf_pos - pointer to positive-vs-all classifier
     @param a_clf_pos - pointer to negative-vs-all classifier
@@ -309,7 +313,8 @@ def _es_synid2lex(a_germanet, *a_sets):
         ret.append(new_set)
     return ret
 
-def _es_expand_sets_binary(a_germanet, a_synid2tfidf, a_clf_pos, a_clf_neg, a_pos, a_neg, a_neut):
+def _es_expand_sets_binary(a_germanet, a_synid2tfidf, a_clf_pos, a_clf_neg, \
+                               a_pos, a_neg, a_neut, a_N):
     """
     Extend sets of polar terms by applying an ensemble of classifiers
 
@@ -320,27 +325,31 @@ def _es_expand_sets_binary(a_germanet, a_synid2tfidf, a_clf_pos, a_clf_neg, a_po
     @param a_pos - set of synset id's and their tf/idf vectors that have positive polarity
     @param a_neg - set of synset id's and their tf/idf vectors that have negative polarity
     @param a_neut - set of synset id's and their tf/idf vectors that have neutral polarity
-    @param a_decfunc - decision function for determining polarity of new terms
+    @param a_N - target number of terms to extract
 
     @return \c True if sets were changed, \c False otherwise
     """
     ret = False
-    pos_candidates = set(); neg_candidates = set(); neut_candidates = set();
+    N = a_N - (len(a_pos) + len(a_neg))
+    if VERBOSE:
+        print("_es_expand_sets_binary: active_synsets = ", a_N - N, file = sys.stderr)
+        print("_es_expand_sets_binary: N = ", N, file = sys.stderr)
+    if N < 1:
+        return ret
+    pos_candidates = set(); neg_candidates = set();
     # obtain potential candidates
     _es_generate_candidates(a_germanet, a_synid2tfidf, a_pos, pos_candidates, neg_candidates)
     _es_generate_candidates(a_germanet, a_synid2tfidf, a_neg, neg_candidates, pos_candidates)
-    # print("pos_candidates before =", repr(pos_candidates), file = sys.stderr)
-    # print("neg_candidates before =", repr(neg_candidates), file = sys.stderr)
-    if pos_candidates or neg_candidates:
-        ret = True
-    else:
-        return False
     # remove from potential candidates items that are already in seed sets
     seeds = a_pos | a_neg | a_neut
     pos_candidates -= seeds; neg_candidates -= seeds;
     seeds.clear()
-    # print("pos_candidates after =", repr(pos_candidates), file = sys.stderr)
-    # print("neg_candidates after =", repr(neg_candidates), file = sys.stderr)
+    if pos_candidates or neg_candidates:
+        ret = True
+    else:
+        if VERBOSE:
+            print("_es_expand_sets_binary: no candidates generated", file = sys.stderr)
+        return False
     # obtain predictions for the potential positive terms
     if pos_candidates:
         pos_pred = a_clf_pos.predict([_es_flatten(iitem) for _, iitem in pos_candidates])
@@ -359,12 +368,32 @@ def _es_expand_sets_binary(a_germanet, a_synid2tfidf, a_clf_pos, a_clf_neg, a_po
                           if ipos != '1' and ineg == '1')
     else:
         new_neg = set()
-    # update positive, negative, and neutral sets
-    a_pos |= new_pos; a_neg |= new_neg
+    # limit the number of positive and negative terms, if we are
+    # reaching the limit
+    if VERBOSE:
+        print("_es_expand_sets_binary: pos_candidates = ", len(pos_candidates), file = sys.stderr)
+        print("_es_expand_sets_binary: new_pos = ", len(new_pos), file = sys.stderr)
+        print("_es_expand_sets_binary: neg_candidates = ", len(neg_candidates), file = sys.stderr)
+        print("_es_expand_sets_binary: new_neg = ", len(new_neg), file = sys.stderr)
+    new_pterms = float(len(new_pos) + len(new_neg))
+    if N < new_pterms:
+        # calculate proportions of each class
+        p_prop = float(len(new_pos)) / new_pterms
+        n_prop = int(ceil(N * (1 - p_prop)))
+        if VERBOSE:
+            print("_es_expand_sets_binary: p_prop =", int(floor(N * p_prop)), file = sys.stderr)
+            print("_es_expand_sets_binary: n_prop =", n_prop, file = sys.stderr)
+        # update sets according to calculated proportions
+        a_pos |= set(list(new_pos)[:int(floor(N * p_prop))])
+        a_neg |= set(list(new_neg)[:n_prop])
+    else:
+        # update positive, negative, and neutral sets
+        a_pos |= new_pos; a_neg |= new_neg
     a_neut |= ((pos_candidates | neg_candidates) - (new_pos | new_neg))
     return ret
 
-def _es_expand_sets_ternary(a_germanet, a_synid2tfidf, a_clf, a_pos, a_neg, a_neut):
+def _es_expand_sets_ternary(a_germanet, a_synid2tfidf, a_clf, \
+                                a_pos, a_neg, a_neut, a_N):
     """
     Extend sets of polar terms by applying an ensemble of classifiers
 
@@ -374,58 +403,71 @@ def _es_expand_sets_ternary(a_germanet, a_synid2tfidf, a_clf, a_pos, a_neg, a_ne
     @param a_pos - set of synsets and their tf/idf vectors that have positive polarity
     @param a_neg - set of synsets and their tf/idf vectors that have negative polarity
     @param a_neut - set of synsets and their tf/idf vectors that have neutral polarity
+    @param a_N - target number of terms to extract
 
     @return \c True if sets were changed, \c False otherwise
     """
     ret = False
-    pos_candidates = set(); neg_candidates = set(); neut_candidates = set();
+    pos_candidates = set(); neg_candidates = set();
+    N = a_N - (len(a_pos) + len(a_neg))
+    if N < 1:
+        return ret
     # obtain potential candidates
     _es_generate_candidates(a_germanet, a_synid2tfidf, a_pos, pos_candidates, neg_candidates)
     _es_generate_candidates(a_germanet, a_synid2tfidf, a_neg, neg_candidates, pos_candidates)
-    if pos_candidates or neg_candidates:
-        ret = True
-    else:
-        return False
     # remove from potential candidates items that are already in seed sets
     seeds = a_pos | a_neg | a_neut
     pos_candidates -= seeds; neg_candidates -= seeds;
     seeds.clear()
-    # obtain predictions for the potential positive terms
+    if pos_candidates or neg_candidates:
+        ret = True
+    else:
+        return False
+    # obtain predictions for potential positive terms
     predicted = []
+    i = 0
     for iset in (pos_candidates, neg_candidates):
         predicted = a_clf.predict([_es_flatten(iitem[-1]) for iitem in iset])
         for iclass, iitem in zip(predicted, iset):
             if iclass == POSITIVE:
                 a_pos.add(iitem)
+                i += 1
             elif iclass == NEGATIVE:
                 a_neg.add(iitem)
+                i += 1
             else:
                 a_neut.add(iitem)
+            if i >= N:
+                break
+        if i >= N:
+            break
     return ret
 
 def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity, \
-                         a_pos, a_neg, a_neut):
+                         a_pos, a_neg, a_neut, a_seed_pos = "none"):
     """
     Method for extending sentiment lexicons using Esuli and Sebastiani method
 
     @param a_germanet - GermaNet instance
-    @param a_N - number of iterations
+    @param a_N - number of new terms to extract
     @param a_clf_type - type of classifiers to use (Rocchio or SVM)
     @param a_clf_arity - arity type of classifier (binary or ternary)
     @param a_pos - set of synsets and their tf/idf vectors that have positive polarity
     @param a_neg - set of synsets and their tf/idf vectors that have negative polarity
     @param a_neut - set of synsets and their tf/idf vectors that have neutral polarity
+    @param a_seed_pos - part-of-speech class of seed synsets ("none" for no restriction)
 
     @return \c void
     """
     # obtain Tf/Idf vector for each synset description
     synid2tfidf = _get_tfidf_vec(a_germanet)
+    if a_seed_pos == "none":
+        a_seed_pos = None
     # convert obtained lexemes to synsets
-    ipos = _lexemes2synset_tfidf(a_germanet, synid2tfidf, a_pos)
-    ineg = _lexemes2synset_tfidf(a_germanet, synid2tfidf, a_neg)
-    ineut = _lexemes2synset_tfidf(a_germanet, synid2tfidf, a_neut)
+    ipos = _lexemes2synset_tfidf(a_germanet, synid2tfidf, a_pos, a_seed_pos)
+    ineg = _lexemes2synset_tfidf(a_germanet, synid2tfidf, a_neg, a_seed_pos)
+    ineut = _lexemes2synset_tfidf(a_germanet, synid2tfidf, a_neut, a_seed_pos)
     # train classifier on each of the sets
-    changed = True
     clf_pos = clf_neg = None
     binary_clf = bool(a_clf_arity == BINARY)
     # initialize classifiers
@@ -440,21 +482,24 @@ def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity, \
     else:
         raise RuntimeError("Unknown classifier type: '{:s}'".format(a_clf_type))
     i = 0
-    # iteratively expand sets
-    while i < a_N:
+    # iteratively expand sets until we reach the required number of terms
+    changed = True
+    while changed:
         print("Iteration #{:d}".format(i), file = sys.stderr)
         i += 1
         # train classifier on each of the sets and expand these sets afterwards
-        if changed:
-            if binary_clf:
-                 _es_train_binary(clf_pos, clf_neg, ipos, ineg, ineut)
-                 changed = _es_expand_sets_binary(a_germanet, synid2tfidf, clf_pos, clf_neg, ipos, ineg, ineut)
-            else:
-                _es_train_ternary(clf_pos, ipos, ineg, ineut)
-                changed = _es_expand_sets_ternary(a_germanet, synid2tfidf, clf_pos, ipos, ineg, ineut)
-        # check if sets were changed
-        if not changed:
-            break
+        if binary_clf:
+            _es_train_binary(clf_pos, clf_neg, ipos, ineg, ineut)
+            changed = _es_expand_sets_binary(a_germanet, synid2tfidf, \
+                                                 clf_pos, clf_neg, \
+                                                 ipos, ineg, ineut, a_N)
+        else:
+            _es_train_ternary(clf_pos, ipos, ineg, ineut)
+            changed = _es_expand_sets_ternary(a_germanet, synid2tfidf, \
+                                                  clf_pos, ipos, ineg, ineut, a_N)
+            if VERBOSE:
+                print("changed = ", changed, file = sys.stderr)
+    print("# of polar synsets: ", len(ipos) + len(ineg), file = sys.stderr)
     # lexicalize sets of synset id's
     ipos, ineg, ineut = _es_synid2lex(a_germanet, ipos, ineg, ineut)
     a_pos |= ipos; a_neg |= ineg; a_neut |= ineut;
@@ -481,7 +526,7 @@ def _tkm_add_germanet(ising, a_germanet):
     def_lexemes = []
     negation_seen = False
     for isynid, (idef, iexamples) in a_germanet.synid2defexmp.iteritems():
-        def_lexemes = [lemmatize(iword, a_prune = False) for itxt in chain([idef], iexamples) \
+        def_lexemes = [lemmatize(iword, a_prune = False) for itxt in chain(idef, iexamples) \
                            for iword in TOKENIZER.tokenize(itxt)]
         def_lexemes = [ilexeme for ilexeme in def_lexemes if ilexeme and ising.item2nid.get(ilexeme, None)]
         if def_lexemes:
@@ -672,11 +717,13 @@ generating sentiment lexicons.""")
                                      choices = [ROCCHIO, SVM], default = SVM)
     subparser_esuli.add_argument("--clf-arity", help = "classifier's arity", \
                                      choices = [BINARY, TERNARY], default = BINARY)
+    subparser_esuli.add_argument("--seed-pos", help = "part-of-speech of seed synsets (\"none\" for no restriction)", \
+                                     choices = ["none"] + [p[:-1] for p in POS], default = "none")
     subparser_esuli.add_argument("--form2lemma", "-l", help = \
                                      """file containing form - lemma correspondences for words occurring in synset definitions""", \
                                      type = str)
-    subparser_esuli.add_argument(GNET_DIR, help = "directory containing GermaNet files")
     subparser_esuli.add_argument("N", help = "number of expansion iterations", type = int)
+    subparser_esuli.add_argument(GNET_DIR, help = "directory containing GermaNet files")
     subparser_esuli.add_argument("seed_set", help = "initial seed set of positive, negative, and neutral terms")
 
     # disabled.  look at the C++ implementation instead.
@@ -707,7 +754,8 @@ generating sentiment lexicons.""")
     # apply requested method
     print("Expanding seed sets... ", file = sys.stderr)
     if args.dmethod == ESULI:
-        esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity, POS_SET, NEG_SET, NEUT_SET)
+        esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity, \
+                             POS_SET, NEG_SET, NEUT_SET, args.seed_pos)
     elif args.dmethod == TAKAMURA:
         new_sets = takamura(igermanet, args.N, getattr(args, CC_FILE), POS_SET, NEG_SET, NEUT_SET, \
                                 a_plot = args.plot or None)
