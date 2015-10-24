@@ -703,7 +703,7 @@ generating sentiment lexicons.""")
     subparsers = argparser.add_subparsers(help = "lexicon expansion method to use", dest = "dmethod")
 
     subparser_takamura = subparsers.add_parser(TAKAMURA, help = "Ising spin model (Takamura, 2005)")
-    subparser_takamura.add_argument("--form2lemma", "-l", help = "file containing form - lemma correspondances", type = str)
+    subparser_takamura.add_argument("--form2lemma", "-l", help = "file containing form - lemma correspondences", type = str)
     subparser_takamura.add_argument("--plot", "-p", \
                                         help = "suffix of files in which to store the plot image", \
                                         type = str, default = "")
