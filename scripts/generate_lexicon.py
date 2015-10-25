@@ -24,7 +24,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 
 import argparse
 import codecs
-from math import floor, ceil
+from math import floor, ceil, isnan
 import numpy as np
 import os
 import re
@@ -680,7 +680,10 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot = None):
     seed_set.clear()
     with open(os.path.join("data", "ising_full.txt"), 'w') as ofile:
         for inode in nodes:
-            print(inode[ITEM_IDX].encode(ENCODING), "\t{:f}".format(nodes[WGHT_IDX]), file = ofile)
+            if isnan(nodes[WGHT_IDX]):
+                print(inode[ITEM_IDX].encode(ENCODING), "\tNaN", file = ofile)
+            else:
+                print(inode[ITEM_IDX].encode(ENCODING), "\t{:f}".format(nodes[WGHT_IDX]), file = ofile)
     nodes = [inode[ITEM_IDX] for inode in nodes]
     # extract additional terms
     if a_N > len(nodes):

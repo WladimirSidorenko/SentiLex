@@ -326,7 +326,7 @@ class Ising(object):
         probs = [exp(x_i * edge_wght - ALPHA * a_node[HAS_FXD_WGHT] * ((x_i - a_node[FXD_WGHT_IDX]) ** 2)) \
                      for x_i in SPIN_DOMAIN]
         norm = float(sum(probs))
-        if norm:
+        if norm and not math.isnan(norm):
             return [iprob / norm for iprob in probs]
         return probs
 
