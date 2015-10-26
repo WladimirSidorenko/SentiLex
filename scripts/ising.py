@@ -116,8 +116,8 @@ class Ising(object):
             return
         if a_weight is None:
             a_weight = self.dflt_node_wght
-        # each node has the form: (item, weight: fixed_weight, edges: {trg: edge_weight})
-        self.nodes.append([a_item, a_weight, 0, a_weight, defaultdict(lambda: 0.)])
+        # each node has the form: (item, wght, has_fxd_wght, fxd_wght, edges: {trg: edge_weight})
+        self.nodes.append([a_item, a_weight, 0 if a_weight is None else 1., a_weight, defaultdict(lambda: 0.)])
         self.item2nid[a_item] = self.n_nodes
         self.n_nodes += 1
 
@@ -190,7 +190,7 @@ class Ising(object):
             energy, magn = self._train(ibeta, a_epsilon)
             print("Energy = {:f}, magnetization = {:f}".format(energy, magn), file = sys.stderr)
             beta2em[ibeta] = (energy, magn)
-            if magn < min_magn:
+            if not math.isnan(magn) and magn < min_magn:
                 min_magn = magn
                 best_beta = ibeta
         # re-train the model with the best parameter setting
@@ -293,6 +293,9 @@ class Ising(object):
             # energy -= (self.beta / 2.) * inode[WGHT_IDX] * \
             #     sum([self.nodes[k][WGHT_IDX] * v for k, v in inode[EDGE_IDX].iteritems()]) - \
             #     q_pos * lq_pos - q_neg * lq_neg
+        print("sum1 =", repr(sum1), file = sys.stderr)
+        print("sum2 =", repr(sum2), file = sys.stderr)
+        print("sum3 =", repr(sum3), file = sys.stderr)
         energy = (sum1 * a_beta / 2.) + sum2 + sum3
         return (energy, magn / float(self.n_nodes))
 
@@ -326,6 +329,8 @@ class Ising(object):
         probs = [exp(x_i * edge_wght - ALPHA * a_node[HAS_FXD_WGHT] * ((x_i - a_node[FXD_WGHT_IDX]) ** 2)) \
                      for x_i in SPIN_DOMAIN]
         norm = float(sum(probs))
+        print("probs =", repr(probs), file = sys.stderr)
+        print("norm =", repr(norm), file = sys.stderr)
         if norm and not math.isnan(norm):
             return [iprob / norm for iprob in probs]
         return probs
@@ -356,132 +361,132 @@ class Ising(object):
 
 ##################################################################
 # Reference Implementation
-Nitt = 1000000  # total number of Monte Carlo steps
-N = 10          # linear dimension of the lattice, lattice-size= N x N
-warm = 1000     # Number of warmup steps
-measure = 100   # How often to take a measurement
+# Nitt = 1000000  # total number of Monte Carlo steps
+# N = 10          # linear dimension of the lattice, lattice-size= N x N
+# warm = 1000     # Number of warmup steps
+# measure = 100   # How often to take a measurement
 
-def CEnergy(latt):
-    "Energy of a 2D Ising lattice at particular configuration"
-    Ene = 0
-    for i in range(len(latt)):
-        for j in range(len(latt)):
-            S = latt[i,j]
-            WF = latt[(i+1)%N, j] + latt[i,(j+1)%N] + latt[(i-1)%N,j] + latt[i,(j-1)%N]
-            Ene += -WF*S # Each neighbor gives energy 1.0
-    return Ene/2. # Each par counted twice
+# def CEnergy(latt):
+#     "Energy of a 2D Ising lattice at particular configuration"
+#     Ene = 0
+#     for i in range(len(latt)):
+#         for j in range(len(latt)):
+#             S = latt[i,j]
+#             WF = latt[(i+1)%N, j] + latt[i,(j+1)%N] + latt[(i-1)%N,j] + latt[i,(j-1)%N]
+#             Ene += -WF*S # Each neighbor gives energy 1.0
+#     return Ene/2. # Each par counted twice
 
-def RandomL(N):
-    "Radom lattice, corresponding to infinite temerature"
-    latt = zeros((N,N), dtype=int)
-    for i in range(N):
-        for j in range(N):
-            latt[i,j] = sign(2*rand()-1)
-    return latt
+# def RandomL(N):
+#     "Radom lattice, corresponding to infinite temerature"
+#     latt = zeros((N,N), dtype=int)
+#     for i in range(N):
+#         for j in range(N):
+#             latt[i,j] = sign(2*rand()-1)
+#     return latt
 
-def SamplePython(Nitt, latt, PW):
-    "Monte Carlo sampling for the Ising model in Pythons"
-    Ene = CEnergy(latt)         # Starting energy
-    Mn = sum(latt)              # Starting magnetization
+# def SamplePython(Nitt, latt, PW):
+#     "Monte Carlo sampling for the Ising model in Pythons"
+#     Ene = CEnergy(latt)         # Starting energy
+#     Mn = sum(latt)              # Starting magnetization
 
-    Naver=0                     # Measurements
-    Eaver=0.0
-    Maver=0.0
+#     Naver=0                     # Measurements
+#     Eaver=0.0
+#     Maver=0.0
 
-    N2 = N*N
-    for itt in range(Nitt):
-        t = int(rand()*N2)
-        (i,j) = (t % N, t/N)
-        S = latt[i,j]
-        WF = latt[(i+1)%N, j] + latt[i,(j+1)%N] + latt[(i-1)%N,j] + latt[i,(j-1)%N]
-        P = PW[4+S*WF]
-        if P>rand(): # flip the spin
-            latt[i,j] = -S
-            Ene += 2*S*WF
-            Mn -= 2*S
+#     N2 = N*N
+#     for itt in range(Nitt):
+#         t = int(rand()*N2)
+#         (i,j) = (t % N, t/N)
+#         S = latt[i,j]
+#         WF = latt[(i+1)%N, j] + latt[i,(j+1)%N] + latt[(i-1)%N,j] + latt[i,(j-1)%N]
+#         P = PW[4+S*WF]
+#         if P>rand(): # flip the spin
+#             latt[i,j] = -S
+#             Ene += 2*S*WF
+#             Mn -= 2*S
 
-        if itt>warm and itt%measure==0:
-            Naver += 1
-            Eaver += Ene
-            Maver += Mn
+#         if itt>warm and itt%measure==0:
+#             Naver += 1
+#             Eaver += Ene
+#             Maver += Mn
 
-    return (Maver/Naver, Eaver/Naver)
-
-
-def SampleCPP(Nitt, latt, PW, T):
-    "The same Monte Carlo sampling in C++"
-    Ene = float(CEnergy(latt))  # Starting energy
-    Mn = float(sum(latt))       # Starting magnetization
-
-    # Measurements
-    aver = zeros(5,dtype=float) # contains: [Naver, Eaver, Maver]
-
-    code="""
-    using namespace std;
-    int N2 = N*N;
-    for (int itt=0; itt<Nitt; itt++){
-        int t = static_cast<int>(drand48()*N2);
-        int i = t % N;
-        int j = t / N;
-        int S = latt(i,j);
-        int WF = latt((i+1)%N, j) + latt(i,(j+1)%N) + latt((i-1+N)%N,j) + latt(i,(j-1+N)%N);
-        double P = PW(4+S*WF);
-        if (P > drand48()){ // flip the spin
-            latt(i,j) = -S;
-            Ene += 2*S*WF;
-            Mn -= 2*S;
-        }
-        if (itt>warm && itt%measure==0){
-            aver(0) += 1;
-            aver(1) += Ene;
-            aver(2) += Mn;
-            aver(3) += Ene*Ene;
-            aver(4) += Mn*Mn;
-        }
-    }
-    """
-    weave.inline(code, ['Nitt','latt','N','PW','Ene','Mn','warm', 'measure', 'aver'],
-                 type_converters = weave.converters.blitz, compiler = 'gcc')
-    aE = aver[1]/aver[0]
-    aM = aver[2]/aver[0]
-    cv = (aver[3]/aver[0]-(aver[1]/aver[0])**2)/T**2
-    chi = (aver[4]/aver[0]-(aver[2]/aver[0])**2)/T
-    return (aM, aE, cv, chi)
+#     return (Maver/Naver, Eaver/Naver)
 
 
-if __name__ == '__main__':
-    latt = RandomL(N)
-    PW = zeros(9, dtype=float)
+# def SampleCPP(Nitt, latt, PW, T):
+#     "The same Monte Carlo sampling in C++"
+#     Ene = float(CEnergy(latt))  # Starting energy
+#     Mn = float(sum(latt))       # Starting magnetization
 
-    wT = linspace(4,0.5,100)
-    wMag=[]
-    wEne=[]
-    wCv=[]
-    wChi=[]
-    for T in wT:
-        # Precomputed exponents
-        PW[4+4] = exp(-4.*2/T)
-        PW[4+2] = exp(-2.*2/T)
-        PW[4+0] = exp(0.*2/T)
-        PW[4-2] = exp( 2.*2/T)
-        PW[4-4] = exp( 4.*2/T)
+#     # Measurements
+#     aver = zeros(5,dtype=float) # contains: [Naver, Eaver, Maver]
 
-        #(maver, eaver) = SamplePython(Nitt, latt, PW)
-        (aM, aE, cv, chi) = SampleCPP(Nitt, latt, PW, T)
-        wMag.append( aM/(N*N) )
-        wEne.append( aE/(N*N) )
-        wCv.append( cv/(N*N) )
-        wChi.append( chi/(N*N) )
+#     code="""
+#     using namespace std;
+#     int N2 = N*N;
+#     for (int itt=0; itt<Nitt; itt++){
+#         int t = static_cast<int>(drand48()*N2);
+#         int i = t % N;
+#         int j = t / N;
+#         int S = latt(i,j);
+#         int WF = latt((i+1)%N, j) + latt(i,(j+1)%N) + latt((i-1+N)%N,j) + latt(i,(j-1+N)%N);
+#         double P = PW(4+S*WF);
+#         if (P > drand48()){ // flip the spin
+#             latt(i,j) = -S;
+#             Ene += 2*S*WF;
+#             Mn -= 2*S;
+#         }
+#         if (itt>warm && itt%measure==0){
+#             aver(0) += 1;
+#             aver(1) += Ene;
+#             aver(2) += Mn;
+#             aver(3) += Ene*Ene;
+#             aver(4) += Mn*Mn;
+#         }
+#     }
+#     """
+#     weave.inline(code, ['Nitt','latt','N','PW','Ene','Mn','warm', 'measure', 'aver'],
+#                  type_converters = weave.converters.blitz, compiler = 'gcc')
+#     aE = aver[1]/aver[0]
+#     aM = aver[2]/aver[0]
+#     cv = (aver[3]/aver[0]-(aver[1]/aver[0])**2)/T**2
+#     chi = (aver[4]/aver[0]-(aver[2]/aver[0])**2)/T
+#     return (aM, aE, cv, chi)
 
-        print(T, aM/(N*N), aE/(N*N), cv/(N*N), chi/(N*N))
 
-    plot(wT, wEne, label='E(T)')
-    plot(wT, wCv, label='cv(T)')
-    plot(wT, wMag, label='M(T)')
-    xlabel('T')
-    legend(loc='best')
-    show()
-    plot(wT, wChi, label='chi(T)')
-    xlabel('T')
-    legend(loc='best')
-    show()
+# if __name__ == '__main__':
+#     latt = RandomL(N)
+#     PW = zeros(9, dtype=float)
+
+#     wT = linspace(4,0.5,100)
+#     wMag=[]
+#     wEne=[]
+#     wCv=[]
+#     wChi=[]
+#     for T in wT:
+#         # Precomputed exponents
+#         PW[4+4] = exp(-4.*2/T)
+#         PW[4+2] = exp(-2.*2/T)
+#         PW[4+0] = exp(0.*2/T)
+#         PW[4-2] = exp( 2.*2/T)
+#         PW[4-4] = exp( 4.*2/T)
+
+#         #(maver, eaver) = SamplePython(Nitt, latt, PW)
+#         (aM, aE, cv, chi) = SampleCPP(Nitt, latt, PW, T)
+#         wMag.append( aM/(N*N) )
+#         wEne.append( aE/(N*N) )
+#         wCv.append( cv/(N*N) )
+#         wChi.append( chi/(N*N) )
+
+#         print(T, aM/(N*N), aE/(N*N), cv/(N*N), chi/(N*N))
+
+#     plot(wT, wEne, label='E(T)')
+#     plot(wT, wCv, label='cv(T)')
+#     plot(wT, wMag, label='M(T)')
+#     xlabel('T')
+#     legend(loc='best')
+#     show()
+#     plot(wT, wChi, label='chi(T)')
+#     xlabel('T')
+#     legend(loc='best')
+#     show()

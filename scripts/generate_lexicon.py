@@ -514,7 +514,7 @@ def _tkm_add_germanet(ising, a_germanet):
     @return \c void
     """
     # add all lemmas from the `FORM2LEMMA` dictionary
-    for ilemma in set(FORM2LEMMA.itervalues()):
+    for ilemma in FORM2LEMMA.itervalues():
         if ilemma not in STOP_WORDS:
             ising.add_node(ilemma)
     # add all lemmas from synsets
@@ -528,7 +528,8 @@ def _tkm_add_germanet(ising, a_germanet):
     for isynid, (idef, iexamples) in a_germanet.synid2defexmp.iteritems():
         def_lexemes = [lemmatize(iword, a_prune = False) for itxt in chain(idef, iexamples) \
                            for iword in TOKENIZER.tokenize(itxt)]
-        def_lexemes = [ilexeme for ilexeme in def_lexemes if ilexeme and ising.item2nid.get(ilexeme, None)]
+        def_lexemes = [ilexeme for ilexeme in def_lexemes if ilexeme and \
+                           ising.item2nid.get(ilexeme, None) is not None]
         if def_lexemes:
             negation_seen = False
             for idef_lex in def_lexemes:
