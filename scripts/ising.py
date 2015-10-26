@@ -326,6 +326,7 @@ class Ising(object):
             a_beta = self.beta
 
         edge_wght = self.beta * sum([self.nodes[k][a_idx] * v for k, v in a_node[EDGE_IDX].iteritems()])
+        print("edge_wght =", repr(edge_wght), file = sys.stderr)
         probs = [exp(x_i * edge_wght - ALPHA * a_node[HAS_FXD_WGHT] * ((x_i - a_node[FXD_WGHT_IDX]) ** 2)) \
                      for x_i in SPIN_DOMAIN]
         norm = float(sum(probs))
