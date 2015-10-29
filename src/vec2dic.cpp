@@ -528,14 +528,26 @@ int main(int argc, char *argv[]) {
   if ((ret = read_seed_set(argv[argused++])))
     return ret;
 
-  // generate mapping from vector id's to the known polarity of
-  // respective words
+  // generate mapping from vector ids to the polarities of respective
+  // words
   v2p_t vecid2pol;
+  int seed_cnt = 0;
   w2v_t::const_iterator vecid, vecend = word2vecid.end();
   for (auto &w2p: word2pol) {
     vecid = word2vecid.find(w2p.first);
-    if (vecid != vecend)
-      vecid2pol.emplace(vecid->second, w2p.second);
+    if (vecid == vecend)
+      continue;
+
+    if (w2p.second != Polarity::NEUTRAL)
+      ++seed_cnt;
+
+    vecid2pol.emplace(vecid->second, w2p.second);
+  }
+
+  if (opt.n_terms > 0) {
+    opt.n_terms -= seed_cnt;
+    if (opt.n_terms < 1)
+      goto print_steps;
   }
 
   // apply the requested expansion algorithm
@@ -556,6 +568,7 @@ int main(int argc, char *argv[]) {
     throw std::invalid_argument("Invalid type of seed set expansion algorithm.");
   }
   // output new terms in sorted alphabetic order
+ print_steps:
   output_terms(std::cout, &vecid2pol);
   return ret;
 }
