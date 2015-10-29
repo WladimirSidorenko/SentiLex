@@ -640,6 +640,11 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot = None):
 
     @return \c 0 on success, non-\c 0 otherwise
     """
+    # estimate the number of terms to extract
+    seed_set = a_pos | a_neg
+    a_N -= len(seed_set)
+    if a_N < 1:
+        return
     # create initial empty network
     ising = Ising()
     # populate network from GermaNet
@@ -672,26 +677,28 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot = None):
             ising.add_node(ineut, 0.)
         ising[ineut][HAS_FXD_WGHT] = 1
     ising.train(a_plot = a_plot)
-    # obtain Ising nodes and sort them according to their spin orientations
-    seed_set = a_pos | a_neg | a_neut
     # nodes = [inode[ITEM_IDX] for inode in sorted(ising.nodes, key = lambda x: x[WGHT_IDX]) \
     #              if inode[ITEM_IDX] not in seed_set]
-    nodes = [inode for inode in sorted(ising.nodes, key = lambda x: x[WGHT_IDX]) \
+    seed_set |= a_neut
+    nodes = [inode for inode in sorted(ising.nodes, key = lambda x: abs(x[WGHT_IDX])) \
                  if inode[ITEM_IDX] not in seed_set]
     seed_set.clear()
+    # populate polarity sets and flush all terms to an external file
+    i = 0
     with open(os.path.join("data", "ising_full.txt"), 'w') as ofile:
         for inode in nodes:
-            if isnan(nodes[WGHT_IDX]):
-                print(inode[ITEM_IDX].encode(ENCODING), "\tNaN", file = ofile)
+            if type(nodes[WGHT_IDX]) != float:
+                print(inode[ITEM_IDX].encode(ENCODING), "\t", nodes[WGHT_IDX], file = ofile)
             else:
+                if i < a_N:
+                    if nodes[WGHT_IDX] > 0:
+                        a_pos.add(inode[ITEM_IDX])
+                    elif nodes[WGHT_IDX] < 0:
+                        a_neg.add(inode[ITEM_IDX])
+                    else:
+                        i -= 1
+                    i += 1
                 print(inode[ITEM_IDX].encode(ENCODING), "\t{:f}".format(nodes[WGHT_IDX]), file = ofile)
-    nodes = [inode[ITEM_IDX] for inode in nodes]
-    # extract additional terms
-    if a_N > len(nodes):
-        a_N = len(nodes)
-    a_N /= 2
-    a_neg.update(nodes[:a_N])
-    a_pos.update(nodes[-a_N:])
 
 def main(a_argv):
     """
