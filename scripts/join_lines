@@ -1,0 +1,21 @@
+#!/usr/bin/awk -f
+
+##################################################################
+BEGIN {
+    if (ARGC != 3) {
+	print "Wrong number of arguments: 2 expected" > "/dev/stderr"
+	exit 1
+    }
+    ifile = ARGV[2];
+    ARGV[2] = ""
+}
+
+##################################################################
+NF {
+    if ((ret = (getline iline < ifile)) <= 0) {
+	print "An error occurred while reading file " ifile > "/dev/stderr"
+	exit 2
+    }
+    gsub(/ +/, "\t", iline)
+    printf("%s\t%s\n", $1, iline)
+}
