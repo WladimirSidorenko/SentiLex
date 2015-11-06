@@ -2,7 +2,6 @@
 
 ##################################################################
 BEGIN {
-    FS = "\t"
     if (ARGC != 4) {
 	printf("Incorrect number of arguments.") > "/sys/stderr"
 	exit 1
@@ -29,9 +28,8 @@ BEGIN {
 	randarr[i] = rand() * wcl + 1
     }
     asorti(randarr, tmparr)
-    delete randarr
-    wcl = WCL / 100
-    for (i = 1; i < WCL; ++i) {
+    wcl = WCL / 1000
+    for (i = 1; i < wcl; ++i) {
 	FNR2SEEK[tmparr[i]] = ""
     }
 }
