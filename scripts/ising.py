@@ -32,6 +32,10 @@ ALPHA = 10
 BETA_RANGE = numpy.linspace(start = 1., stop = 10., num = 10)
 DFLT_EPSILON = 10 ** -5
 SPIN_DOMAIN = (-1., 1.)
+MAX_EDGE_WGHT = 4
+
+MAX_I = sys.float_info.max
+MAX_LOG_I = math.log(MAX_I - 100 if MAX_I > 100 else MAX_I)
 
 ##################################################################
 # Class
@@ -149,8 +153,12 @@ class Ising(object):
             else:
                 raise RuntimeError("Item '{:s}' not found in Ising model".format(repr(a_item2)))
         inid1 = self.item2nid[a_item1]; inid2 = self.item2nid[a_item2]
-        self.nodes[inid1][EDGE_IDX][inid2] += a_wght
-        self.nodes[inid2][EDGE_IDX][inid1] += a_wght
+        new_wght = self.nodes[inid1][EDGE_IDX][inid2] + a_wght
+        if new_wght < MAX_EDGE_WGHT:
+            self.nodes[inid1][EDGE_IDX][inid2] = new_wght
+        new_wght = self.nodes[inid2][EDGE_IDX][inid2] + a_wght
+        if new_wght < MAX_EDGE_WGHT:
+            self.nodes[inid2][EDGE_IDX][inid1] = new_wght
 
     def reweight(self):
         """
@@ -171,8 +179,7 @@ class Ising(object):
                 children[itrg_nid] *= 1. / (src_degree * trg_degree)
 
     def train(self, a_betas = BETA_RANGE, a_epsilon = DFLT_EPSILON, a_plot = None):
-        """
-        Determine spin orientation of the model
+        """Determine spin orientation of the model
 
         @param a_beta - range of beta values to test
         @param a_epsilon - epsilon value to determine convergence
@@ -188,7 +195,7 @@ class Ising(object):
             print("Iteration #{:d}: beta = {:f}".format(i, ibeta), file = sys.stderr)
             # optimize spin orientation of the model
             energy, magn = self._train(ibeta, a_epsilon)
-            print("Energy = {:f}, magnetization = {:f}".format(energy, magn), file = sys.stderr)
+            # print("Energy = {:f}, magnetization = {:f}".format(energy, magn), file = sys.stderr)
             beta2em[ibeta] = (energy, magn)
             if not math.isnan(magn) and magn < min_magn:
                 min_magn = magn
@@ -203,13 +210,13 @@ class Ising(object):
             self._plot(a_plot, beta2em)
 
     def _train(self, a_beta = None, a_epsilon = DFLT_EPSILON):
-        """
-        Helper function for doing single training run with the given beta
+        """Helper function for doing single training run with the given beta
 
         @param a_beta - beta value to use
         @param a_epsilon - epsilon value to determine convergence
 
         @return 2-tuple holding energy and magnetization values
+
         """
         if a_beta is None:
             a_beta = self.beta
@@ -220,11 +227,16 @@ class Ising(object):
         # set initial weights
         self._train_init(a_beta)
         while prev_energy == INFINITY or abs(prev_energy - energy) > a_epsilon:
+            # print("prev_energy =", prev_energy, file = sys.stderr)
+            # print("energy =", energy, file = sys.stderr)
             for inode in self.nodes:
                 # update node's spin orientation (according to Takamura's code,
                 # we do the update reluing on the new spin weights)
                 # was `a_idx = PREV_WGHT_IDX`
                 inode[WGHT_IDX] = self._compute_mean(inode, a_idx = WGHT_IDX, a_beta = a_beta)
+                # print("inode[WGHT_IDX] ({:s}) =".format(repr(inode[ITEM_IDX])), inode[WGHT_IDX], file = sys.stderr)
+                if math.isnan(inode[WGHT_IDX]):
+                    sys.exit(66)
                 # if inode[WGHT_IDX] != inode[PREV_WGHT_IDX]:
                 #     print("1) inode[{:s}] = {:f}".format(repr(inode[ITEM_IDX]), inode[WGHT_IDX]), file = sys.stderr)
                 #     print("2) inode[{:s}] = {:f}".format(repr(inode[ITEM_IDX]), inode[PREV_WGHT_IDX]), file = sys.stderr)
@@ -293,9 +305,9 @@ class Ising(object):
             # energy -= (self.beta / 2.) * inode[WGHT_IDX] * \
             #     sum([self.nodes[k][WGHT_IDX] * v for k, v in inode[EDGE_IDX].iteritems()]) - \
             #     q_pos * lq_pos - q_neg * lq_neg
-        print("sum1 =", repr(sum1), file = sys.stderr)
-        print("sum2 =", repr(sum2), file = sys.stderr)
-        print("sum3 =", repr(sum3), file = sys.stderr)
+        # print("sum1 =", repr(sum1), file = sys.stderr)
+        # print("sum2 =", repr(sum2), file = sys.stderr)
+        # print("sum3 =", repr(sum3), file = sys.stderr)
         energy = (sum1 * a_beta / 2.) + sum2 + sum3
         return (energy, magn / float(self.n_nodes))
 
@@ -310,6 +322,7 @@ class Ising(object):
         @return float representing the mean spin orientation
         """
         probs = self._compute_probs(a_node, a_idx, a_beta)
+        # print("probs {:s} = ".format(repr(a_node[0])), repr(probs), file = sys.stderr)
         return sum([x_i * iprob for x_i, iprob in zip(SPIN_DOMAIN, probs)])
 
     def _compute_probs(self, a_node, a_idx = WGHT_IDX, a_beta = None):
@@ -325,14 +338,26 @@ class Ising(object):
         if a_beta is None:
             a_beta = self.beta
 
-        edge_wght = self.beta * sum([self.nodes[k][a_idx] * v for k, v in a_node[EDGE_IDX].iteritems()])
-        print("edge_wght =", repr(edge_wght), file = sys.stderr)
-        probs = [exp(x_i * edge_wght - ALPHA * a_node[HAS_FXD_WGHT] * ((x_i - a_node[FXD_WGHT_IDX]) ** 2)) \
+        # print("beta =", repr(a_beta), file = sys.stderr)
+        # print("edges =", repr([(self.nodes[k][a_idx], v) for k, v in a_node[EDGE_IDX].iteritems()]), file = sys.stderr)
+        # print("sum =", repr(sum([self.nodes[k][a_idx] * v for k, v in a_node[EDGE_IDX].iteritems()])), file = sys.stderr)
+
+        edge_wght = a_beta * sum([self.nodes[k][a_idx] * v for k, v in a_node[EDGE_IDX].iteritems()])
+        # print("edge_wght =", repr(edge_wght), file = sys.stderr)
+        # prevent overflow
+        probs = [x_i * edge_wght - ALPHA * a_node[HAS_FXD_WGHT] * ((x_i - a_node[FXD_WGHT_IDX]) ** 2) \
                      for x_i in SPIN_DOMAIN]
-        norm = float(sum(probs))
-        print("probs =", repr(probs), file = sys.stderr)
-        print("norm =", repr(norm), file = sys.stderr)
-        if norm and not math.isnan(norm):
+        probs = [exp(x_i) if x_i < MAX_LOG_I else MAX_I for x_i in probs]
+        norm = 0.
+        for iprob in probs:
+            if MAX_I - norm > iprob:
+                norm += iprob
+            else:
+                norm = MAX_I
+                break
+        # print("probs =", repr(probs), file = sys.stderr)
+        # print("norm =", repr(norm), file = sys.stderr)
+        if norm:
             return [iprob / norm for iprob in probs]
         return probs
 
