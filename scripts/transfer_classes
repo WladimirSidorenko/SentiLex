@@ -1,0 +1,34 @@
+#!/usr/bin/awk -f
+
+##################################################################
+BEGIN {
+    FS = OFS = "\t"
+    if (ARGC != 3) {
+	print "Wrong number of arguments: 2 expected" > "/dev/stderr"
+	exit 1
+    }
+    ifile = ARGV[1]; ARGV[1] = "";
+    while ((ret = (getline < ifile)) > 0) {
+	if (!NF)
+	    continue;
+
+	if (NF != 2) {
+	    printf("Incorrect line format: %s", $0) > "/dev/stderr"
+	    exit 2
+	}
+	WORD2POL[$1] = $2 == "positive"? "3": "1";
+    }
+    if (ret != 0) {
+	print "An error occurred while reading file " ifile > "/dev/stderr"
+	exit 3
+    }
+}
+
+##################################################################
+NF {
+    if ($1 in WORD2POL)
+	$4 = WORD2POL[$1]
+    else
+	$4 = "2"
+    print
+}
