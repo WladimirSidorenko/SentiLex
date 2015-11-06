@@ -5,3 +5,5 @@ build-debug/
 SUPPIN
 data/corpus/cc.txt
 img/
+data/vectors.txt
+data/ising_full.txt
