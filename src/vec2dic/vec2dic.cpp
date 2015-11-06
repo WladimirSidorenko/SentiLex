@@ -534,12 +534,12 @@ int main(int argc, char *argv[]) {
   int seed_cnt = 0;
   w2v_t::const_iterator vecid, vecend = word2vecid.end();
   for (auto &w2p: word2pol) {
+    if (w2p.second != Polarity::NEUTRAL)
+      ++seed_cnt;
+
     vecid = word2vecid.find(w2p.first);
     if (vecid == vecend)
       continue;
-
-    if (w2p.second != Polarity::NEUTRAL)
-      ++seed_cnt;
 
     vecid2pol.emplace(vecid->second, w2p.second);
   }
