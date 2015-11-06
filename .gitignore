@@ -3,3 +3,5 @@ bhtsne/
 bhtsne
 build-debug/
 SUPPIN
+data/corpus/cc.txt
+img/
