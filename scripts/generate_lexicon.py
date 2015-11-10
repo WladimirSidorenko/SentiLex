@@ -330,12 +330,9 @@ def _es_expand_sets_binary(a_germanet, a_synid2tfidf, a_clf_pos, a_clf_neg, \
     @return \c True if sets were changed, \c False otherwise
     """
     ret = False
-    N = a_N - (len(a_pos) + len(a_neg))
     if VERBOSE:
         print("_es_expand_sets_binary: active_synsets = ", a_N - N, file = sys.stderr)
         print("_es_expand_sets_binary: N = ", N, file = sys.stderr)
-    if N < 1:
-        return ret
     pos_candidates = set(); neg_candidates = set();
     # obtain potential candidates
     _es_generate_candidates(a_germanet, a_synid2tfidf, a_pos, pos_candidates, neg_candidates)
@@ -409,9 +406,6 @@ def _es_expand_sets_ternary(a_germanet, a_synid2tfidf, a_clf, \
     """
     ret = False
     pos_candidates = set(); neg_candidates = set();
-    N = a_N - (len(a_pos) + len(a_neg))
-    if N < 1:
-        return ret
     # obtain potential candidates
     _es_generate_candidates(a_germanet, a_synid2tfidf, a_pos, pos_candidates, neg_candidates)
     _es_generate_candidates(a_germanet, a_synid2tfidf, a_neg, neg_candidates, pos_candidates)
@@ -504,6 +498,16 @@ def esuli_sebastiani(a_germanet, a_N, a_clf_type, a_clf_arity, \
     ipos, ineg, ineut = _es_synid2lex(a_germanet, ipos, ineg, ineut)
     a_pos |= ipos; a_neg |= ineg; a_neut |= ineut;
 
+def _check_word(a_word):
+    """
+    Check if given word forms a valid lexeme
+
+    @param a_word - word to be checked
+
+    @return \c True if word forms a valid lexeme, \c False otherwise
+    """
+    return WORD_RE.match(a_word) and all(ord(c) < 256 for c in a_word)
+
 def _tkm_add_germanet(ising, a_germanet):
     """
     Add lexical nodes from GermaNet to the Ising spin model
@@ -590,16 +594,6 @@ def _tkm_add_germanet(ising, a_germanet):
         for ilemma1, ilemma2 in combinations(ilexemes, 2):
             ising.add_edge(ilemma1, ilemma2, 1.)
 
-def _check_word(a_word):
-    """
-    Check if given word forms a valid lexeme
-
-    @param a_word - word to be checked
-
-    @return \c True if word forms a valid lexeme, \c False otherwise
-    """
-    return WORD_RE.match(a_word) and all(ord(c) < 256 for c in a_word)
-
 def _tkm_add_corpus(ising, a_cc_file):
     """
     Add lexical nodes from corpus to the Ising spin model
@@ -680,20 +674,20 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot = None):
     # nodes = [inode[ITEM_IDX] for inode in sorted(ising.nodes, key = lambda x: x[WGHT_IDX]) \
     #              if inode[ITEM_IDX] not in seed_set]
     seed_set |= a_neut
-    nodes = [inode for inode in sorted(ising.nodes, key = lambda x: abs(x[WGHT_IDX])) \
+    nodes = [inode for inode in sorted(ising.nodes, key = lambda x: abs(x[WGHT_IDX]), reverse = True) \
                  if inode[ITEM_IDX] not in seed_set]
     seed_set.clear()
     # populate polarity sets and flush all terms to an external file
     i = 0
     with open(os.path.join("data", "ising_full.txt"), 'w') as ofile:
         for inode in nodes:
-            if type(nodes[WGHT_IDX]) != float:
-                print(inode[ITEM_IDX].encode(ENCODING), "\t", nodes[WGHT_IDX], file = ofile)
+            if type(inode[WGHT_IDX]) != float:
+                print(inode[ITEM_IDX].encode(ENCODING), "\t", inode[WGHT_IDX], file = ofile)
             else:
                 if i < a_N:
-                    if nodes[WGHT_IDX] > 0:
+                    if inode[WGHT_IDX] > 0:
                         a_pos.add(inode[ITEM_IDX])
-                    elif nodes[WGHT_IDX] < 0:
+                    elif inode[WGHT_IDX] < 0:
                         a_neg.add(inode[ITEM_IDX])
                     else:
                         i -= 1
@@ -762,15 +756,19 @@ generating sentiment lexicons.""")
     _read_set(args.seed_set)
     print("done", file = sys.stderr)
 
-    # apply requested method
-    print("Expanding seed sets... ", file = sys.stderr)
-    if args.dmethod == ESULI:
-        esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity, \
-                             POS_SET, NEG_SET, NEUT_SET, args.seed_pos)
-    elif args.dmethod == TAKAMURA:
-        new_sets = takamura(igermanet, args.N, getattr(args, CC_FILE), POS_SET, NEG_SET, NEUT_SET, \
-                                a_plot = args.plot or None)
-    print("Expanding seed sets... done", file = sys.stderr)
+    N = a_N - (len(a_pos) + len(a_neg))
+    # only perform expansion if the number of seed terms is less than
+    # the request number of polar items
+    if N > 1:
+        # apply requested method
+        print("Expanding seed sets... ", file = sys.stderr)
+        if args.dmethod == ESULI:
+            esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity, \
+                                 POS_SET, NEG_SET, NEUT_SET, args.seed_pos)
+        elif args.dmethod == TAKAMURA:
+            takamura(igermanet, args.N, getattr(args, CC_FILE), POS_SET, NEG_SET, NEUT_SET, \
+                         a_plot = args.plot or None)
+        print("Expanding seed sets... done", file = sys.stderr)
 
     for iclass, iset in ((POSITIVE, POS_SET), (NEGATIVE, NEG_SET), (NEUTRAL, NEUT_SET)):
         for iitem in sorted(iset):
