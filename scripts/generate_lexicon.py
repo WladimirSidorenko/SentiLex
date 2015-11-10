@@ -756,7 +756,8 @@ generating sentiment lexicons.""")
     _read_set(args.seed_set)
     print("done", file = sys.stderr)
 
-    N = args.N - (len(a_pos) + len(a_neg))
+    N = args.N - (len(POS_SET) + len(NEG_SET))
+
     # only perform expansion if the number of seed terms is less than
     # the request number of polar items
     if N > 1:
