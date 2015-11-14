@@ -93,11 +93,11 @@ def _add_lex(a_lexicon, a_id_tok, a_tree):
     frzset = istate = None
     isneutral = hasmatch = False
     for i, (w_id, iform, ilemma, ianno) in enumerate(a_id_tok):
-        print("iform: {:s}".format(iform).encode(ENCODING), file = sys.stderr)
-        print("ilemma: {:s}".format(ilemma).encode(ENCODING), file = sys.stderr)
+        # print("iform: {:s}".format(iform).encode(ENCODING), file = sys.stderr)
+        # print("ilemma: {:s}".format(ilemma).encode(ENCODING), file = sys.stderr)
         isneutral = not bool(ianno)
         hasmatch = a_lexicon.match([iform, ilemma], a_start = i, a_reset = CONTINUE)
-        print("hasmatch: {:s}".format(str(hasmatch)).encode(ENCODING), file = sys.stderr)
+        # print("hasmatch: {:s}".format(str(hasmatch)).encode(ENCODING), file = sys.stderr)
         if hasmatch:
             for astate in a_lexicon.active_states:
                 istate, istart, iend = astate
@@ -227,7 +227,6 @@ def add_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
         with open(diff_fname, 'w') as ofile:
             ofile.write(XML_HEADER)
             diff_tree.write(ofile, encoding = "UTF-8", xml_declaration = False)
-        sys.exit(66)
 
 def main(argv):
     """
