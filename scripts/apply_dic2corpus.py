@@ -17,17 +17,86 @@ from evaluate import read_file, parse_span, \
     ENCODING, WORDS_PTRN, WORDS_PTRN_RE, MRKBL_PTRN
 from trie import SPACE_RE, CONTINUE, Trie
 
+import sys
+
 ##################################################################
 # Constants and Variables
 DIFF_MRKBL_PTRN = "_diff-emo-expression_level.xml"
+# XML namespace
+MMAX_NS = {"mmax": "www.eml.org/NameSpaces/emo-expression"}
 
 ##################################################################
 # Methods
-def _add_lex(argv):
-    """
+def _add_lex(a_lexicon, a_id_tok, a_tree):
+    """Add missing terms to XML tree with markables
+
+    @param a_lexicon - trie containing polar terms
+    @param a_id_tok - list of tuples containing word ids, tokens,
+                      lemmas, and annotations
+    @param a_tree - target tree to which new terms should be added
+
+    @return \c void
 
     """
-    pass
+    matched_states = set()
+    istart = iend = -1
+    frzset = istate = None
+    isneutral = hasmatch = False
+    for w_id, iform, ilemma, ianno in a_id_tok:
+        isneutral = not bool(ianno)
+        hasmatch = a_lexicon.match([iform, ilemma], a_start = i, a_reset = CONTINUE)
+        if hasmatch:
+            for astate in a_lexicon.active_states:
+                istate, istart, iend = astate
+                if not istate.final:
+                    continue
+                frzset = frozenset(istate.classes)
+                # skip duplicate states that arise from using lemmas
+                if (istart, frzset) in matched_states:
+                    continue
+                else:
+                    matched_states.add((istart, frzset))
+                for mclass in istate.classes:
+                    if (istart, mclass) in ianno:
+                        ianno.remove((istart, mclass))
+                    else:
+                        stat[mclass][FALSE_POS] += 1
+                        if a_output_errors:
+                            ientry = ' '.join([t[1] for t in a_id_tok[istart:i+1]])
+                            print(">>> excessive: {:s} ({:s})".format(ientry, mclass).encode(ENCODING), \
+                                      file = sys.stderr)
+                        if istart != i:
+                            stat[NEUTRAL][FALSE_NEG] += 1
+            if ianno:
+                # print("did not match iform = {:s} ({:s})".format(iform, repr(ianno)), \
+                #           file = sys.stderr)
+                for istart, iclass in ianno:
+                    stat[iclass][FALSE_NEG] += 1
+                    if a_output_errors:
+                        ientry = ' '.join([t[1] for t in a_id_tok[istart:i+1]])
+                        print("<<< missing: {:s} ({:s})".format(ientry, iclass).encode(ENCODING), \
+                                      file = sys.stderr)
+            elif isneutral:
+                stat[NEUTRAL][FALSE_NEG] += 1
+                if a_output_errors:
+                    print("<<< missing: {:s} ({:s})".format(a_id_tok[i][1], \
+                                                                NEUTRAL).encode(ENCODING), \
+                              file = sys.stderr)
+            matched_states.clear()
+        elif isneutral:
+            stat[NEUTRAL][TRUE_POS] += 1
+        else:
+            stat[NEUTRAL][FALSE_POS] += 1
+            for istart, iclass in ianno:
+                stat[iclass][FALSE_NEG] += 1
+                if a_output_errors:
+                    ientry = ' '.join([t[1] for t in a_id_tok[istart:i+1]])
+                    print("<<< missing: {:s} ({:s})".format(ientry, iclass).encode(ENCODING), \
+                              file = sys.stderr)
+        # let Trie proceed to the next state
+        a_lexicon.match([' ', None], a_reset = CONTINUE)
+        # print("stat =", repr(stat), file = sys.stderr)
+    a_lexicon.match((None, None)) # reset active states
 
 def _dcopy_emo_xml(a_srctree):
     """Create a pruned deep copy of annotation XML with emo-expressions
@@ -40,20 +109,17 @@ def _dcopy_emo_xml(a_srctree):
     """
     ret = deepcopy(a_srctree)
     # prune the tree
-    for imrkbl in ret.iterfind():
+    for imrkbl in ret.iterfind("mmax:markable", MMAX_NS):
         ret.remove(imrkbl)
     return ret
 
-def add_lexicon(a_lexicon, a_id_tok, a_pr_stat, a_fscore_stat):
+def add_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
     """Add sentiment lexicon as markables to corpus
 
     @param a_lexicon - lexicon to test (as a Trie)
     @param a_base_dir - directory containing base files of the MMAX project
     @param a_anno_dir - directory containing annotation files of the MMAX project
     @param a_form2lemma - dictionary mapping word forms to lemmas
-    @param a_output_errors - boolean flag indicating whether dictionary errors
-                        should be printed
-    @param a_encoding - encoding of the output file
 
     @return \c void
 
@@ -97,7 +163,9 @@ def add_lexicon(a_lexicon, a_id_tok, a_pr_stat, a_fscore_stat):
                 # does not match discontinuous spans anyway
                 id_tok[tid][-1].add((wid2tid[ispan[0]], ipolarity))
         # create XML tree with difference markables
-        diff_tree = _dcopy_emo_xml(idoc, a_encoding)
+        diff_tree = _dcopy_emo_xml(idoc)
+        # add new terms as difference markables to corpus
+        _add_lex(a_lexicon, id_tok, diff_tree)
         # output generated XML tree to file
         diff_fname = os.path.join(a_anno_dir, \
                                      os.path.basename(WORDS_PTRN_RE.sub("", basefname) + \
