@@ -13,20 +13,70 @@ adddic2corpus.py [lemma_file] sentiment_lexicon test_corpus_dir/
 # Imports
 from __future__ import print_function, unicode_literals
 
-from evaluate import read_file, parse_span, \
-    ENCODING, WORDS_PTRN, WORDS_PTRN_RE, MRKBL_PTRN
+from evaluate import insert_lex, is_word, parse_span, read_file, \
+    ENCODING, EMOEXPRESSION, KNOWN_POLARITIES, MARKABLE, MMAX_LEVEL, \
+    MRKBL_PTRN, POLARITY, WORD, WORDS_PTRN, WORDS_PTRN_RE
 from trie import SPACE_RE, CONTINUE, Trie
 
+from copy import deepcopy
+import argparse
+import glob
+import os
 import sys
+import xml.etree.ElementTree as ET
 
 ##################################################################
 # Constants and Variables
-DIFF_MRKBL_PTRN = "_diff-emo-expression_level.xml"
+ID_PRFX = "markable_500100"
+ID_CNT = -1                     # counter of new markables
+DIFF_EEXPRESSION = "diff-emo-expression"
+DIFF_MRKBL_PTRN = "_{:s}_level.xml".format(DIFF_EEXPRESSION)
 # XML namespace
-MMAX_NS = {"mmax": "www.eml.org/NameSpaces/emo-expression"}
+MMAX_NS_URI = "www.eml.org/NameSpaces/emo-expression"
+MMAX_NS = {"mmax": MMAX_NS_URI}
+ID = "id"
+SPAN = "span"
+POLARITY = "polarity"
+DIFF_TYPE = "diff_type"
+
+XML_HEADER = """\
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE markables SYSTEM "markables.dtd">
+"""
 
 ##################################################################
 # Methods
+def _get_new_id():
+    """Generate new unique markable id
+
+    @return string representing new unique markable id
+
+    """
+    global ID_CNT; ID_CNT += 1
+    return ID_PRFX + str(ID_CNT)
+
+def _add_mrkbl(a_tree, a_attrs):
+    """Add difference markable to XML tree
+
+    @param a_tree - target XML tree to which new markable should be added
+    @param a_attrs - attributes of the new markable
+
+    @return \c void
+
+    """
+    # check if necessary attributes are present
+    assert DIFF_TYPE in a_attrs, "Missing diff type for new diff markable."
+    assert ID in a_attrs, "Missing id for new diff markable."
+    assert POLARITY in a_attrs, "Missing polarity value for new diff markable."
+    assert SPAN in a_attrs, "Missing span for new diff markable."
+    # set default attribute values
+    a_attrs.setdefault("intensity", "medium")
+    a_attrs.setdefault("sarcasm", "false")
+    a_attrs.setdefault("mmax_level", DIFF_EEXPRESSION)
+    a_attrs.setdefault("sentiment_ref", "empty")
+    # add new markable
+    mrkbl = ET.SubElement(a_tree, MARKABLE, a_attrs)
+
 def _add_lex(a_lexicon, a_id_tok, a_tree):
     """Add missing terms to XML tree with markables
 
@@ -42,9 +92,12 @@ def _add_lex(a_lexicon, a_id_tok, a_tree):
     istart = iend = -1
     frzset = istate = None
     isneutral = hasmatch = False
-    for w_id, iform, ilemma, ianno in a_id_tok:
+    for i, (w_id, iform, ilemma, ianno) in enumerate(a_id_tok):
+        print("iform: {:s}".format(iform).encode(ENCODING), file = sys.stderr)
+        print("ilemma: {:s}".format(ilemma).encode(ENCODING), file = sys.stderr)
         isneutral = not bool(ianno)
         hasmatch = a_lexicon.match([iform, ilemma], a_start = i, a_reset = CONTINUE)
+        print("hasmatch: {:s}".format(str(hasmatch)).encode(ENCODING), file = sys.stderr)
         if hasmatch:
             for astate in a_lexicon.active_states:
                 istate, istart, iend = astate
@@ -60,39 +113,34 @@ def _add_lex(a_lexicon, a_id_tok, a_tree):
                     if (istart, mclass) in ianno:
                         ianno.remove((istart, mclass))
                     else:
-                        stat[mclass][FALSE_POS] += 1
-                        if a_output_errors:
-                            ientry = ' '.join([t[1] for t in a_id_tok[istart:i+1]])
-                            print(">>> excessive: {:s} ({:s})".format(ientry, mclass).encode(ENCODING), \
-                                      file = sys.stderr)
-                        if istart != i:
-                            stat[NEUTRAL][FALSE_NEG] += 1
+                        _add_mrkbl(a_tree, {DIFF_TYPE: "missing", ID: _get_new_id(), \
+                                                POLARITY: mclass,  \
+                                                SPAN: w_id if istart == i else \
+                                                a_id_tok[istart][0] + ".." + w_id})
+                        # ientry = ' '.join([t[1] for t in a_id_tok[istart:i+1]])
+                        # print(">>> excessive: {:s} ({:s})".format(ientry, mclass).encode(ENCODING), \
+                        #           file = sys.stderr)
             if ianno:
                 # print("did not match iform = {:s} ({:s})".format(iform, repr(ianno)), \
                 #           file = sys.stderr)
                 for istart, iclass in ianno:
-                    stat[iclass][FALSE_NEG] += 1
-                    if a_output_errors:
-                        ientry = ' '.join([t[1] for t in a_id_tok[istart:i+1]])
-                        print("<<< missing: {:s} ({:s})".format(ientry, iclass).encode(ENCODING), \
-                                      file = sys.stderr)
-            elif isneutral:
-                stat[NEUTRAL][FALSE_NEG] += 1
-                if a_output_errors:
-                    print("<<< missing: {:s} ({:s})".format(a_id_tok[i][1], \
-                                                                NEUTRAL).encode(ENCODING), \
-                              file = sys.stderr)
+                    _add_mrkbl(a_tree, {DIFF_TYPE: "redundant", ID: _get_new_id(), \
+                                            POLARITY: iclass,  \
+                                            SPAN: w_id if istart == i else \
+                                            a_id_tok[istart][0] + ".." + w_id})
+                    # ientry = ' '.join([t[1] for t in a_id_tok[istart:i+1]])
+                    # print("<<< missing: {:s} ({:s})".format(ientry, iclass).encode(ENCODING), \
+                    #           file = sys.stderr)
             matched_states.clear()
-        elif isneutral:
-            stat[NEUTRAL][TRUE_POS] += 1
-        else:
-            stat[NEUTRAL][FALSE_POS] += 1
+        elif not isneutral:
             for istart, iclass in ianno:
-                stat[iclass][FALSE_NEG] += 1
-                if a_output_errors:
-                    ientry = ' '.join([t[1] for t in a_id_tok[istart:i+1]])
-                    print("<<< missing: {:s} ({:s})".format(ientry, iclass).encode(ENCODING), \
-                              file = sys.stderr)
+                _add_mrkbl(a_tree, {DIFF_TYPE: "redundant", ID: _get_new_id(), \
+                                        POLARITY: iclass,  \
+                                        SPAN: w_id if istart == i else \
+                                        a_id_tok[istart][0] + ".." + w_id})
+                # ientry = ' '.join([t[1] for t in a_id_tok[istart:i+1]])
+                # print("<<< missing: {:s} ({:s})".format(ientry, iclass).encode(ENCODING), \
+                #           file = sys.stderr)
         # let Trie proceed to the next state
         a_lexicon.match([' ', None], a_reset = CONTINUE)
         # print("stat =", repr(stat), file = sys.stderr)
@@ -108,9 +156,10 @@ def _dcopy_emo_xml(a_srctree):
 
     """
     ret = deepcopy(a_srctree)
+    root = ret.getroot()
     # prune the tree
-    for imrkbl in ret.iterfind("mmax:markable", MMAX_NS):
-        ret.remove(imrkbl)
+    for imrkbl in root.findall("mmax:markable", MMAX_NS):
+        root.remove(imrkbl)
     return ret
 
 def add_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
@@ -126,7 +175,11 @@ def add_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
     """
     id_tok = []
     wid = tid = -1
+    wid2tid = dict()
+    idoc = iroot = None
     annofname = diff_fname = ""
+
+    ET.register_namespace('', MMAX_NS_URI)
     for basefname in glob.iglob(os.path.join(a_base_dir, WORDS_PTRN)):
         print("Processing file '{:s}'".format(basefname), file = sys.stderr)
         if not os.access(basefname, os.R_OK):
@@ -146,13 +199,14 @@ def add_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
             wid2tid[wid] = len(id_tok)
             id_tok.append((wid, itok, a_form2lemma[itok] if itok in a_form2lemma else None, set()))
         # enrich tokens with annotations
-        idoc = ET.parse(annofname).getroot()
-        for ianno in idoc:
+        idoc = ET.parse(annofname)
+        iroot = idoc.getroot()
+        for ianno in iroot:
             assert ianno.get(MMAX_LEVEL, "").lower() == EMOEXPRESSION, \
                 "Invalid element specified as annotation"
             ipolarity = ianno.get(POLARITY)
             assert ipolarity in KNOWN_POLARITIES, "Unknown polarity value: '{:s}'".format(ipolarity)
-            ispan = _parse_span(ianno.get("span"))
+            ispan = parse_span(ianno.get("span"))
             tid = wid2tid[ispan[-1]]
             # add respective class only to the last term in annotation
             # sequence, but remember which tokens this annotation
@@ -165,13 +219,15 @@ def add_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma):
         # create XML tree with difference markables
         diff_tree = _dcopy_emo_xml(idoc)
         # add new terms as difference markables to corpus
-        _add_lex(a_lexicon, id_tok, diff_tree)
+        _add_lex(a_lexicon, id_tok, diff_tree.getroot())
         # output generated XML tree to file
         diff_fname = os.path.join(a_anno_dir, \
                                      os.path.basename(WORDS_PTRN_RE.sub("", basefname) + \
                                                           DIFF_MRKBL_PTRN))
         with open(diff_fname, 'w') as ofile:
-            diff_tree.write(ofile)
+            ofile.write(XML_HEADER)
+            diff_tree.write(ofile, encoding = "UTF-8", xml_declaration = False)
+        sys.exit(66)
 
 def main(argv):
     """
@@ -185,8 +241,6 @@ def main(argv):
     # parse arguments
     argparser = argparse.ArgumentParser(description = \
                                         "Script for adding missing polar terms to sentiment corpus.")
-    argparser.add_argument("-e", "--encoding", help = "encoding of lexicon files", type = str, \
-                               default = ENCODING)
     argparser.add_argument("-l", "--lemma-file", help = "file containing lemmas of corpus words", \
                                type = str)
     argparser.add_argument("sentiment_lexicon", help = "sentiment lexicon to add", type = str)
@@ -199,13 +253,13 @@ def main(argv):
     args = argparser.parse_args(argv)
     # read-in lexicon
     ilex = Trie(a_ignorecase = True)
-    read_file(ilex, args.sentiment_lexicon, a_insert = _insert_lex)
+    read_file(ilex, args.sentiment_lexicon, a_insert = insert_lex)
     form2lemma = dict()
     if args.lemma_file is not None:
         read_file(form2lemma, args.lemma_file, a_insert = \
                       lambda lex, form, lemma: lex.setdefault(form, lemma))
     # evaluate it on corpus
-    add_lexicon(ilex, args.corpus_base_dir, args.corpus_anno_dir, form2lemma, args.encoding)
+    add_lexicon(ilex, args.corpus_base_dir, args.corpus_anno_dir, form2lemma)
 
 ##################################################################
 # Main
