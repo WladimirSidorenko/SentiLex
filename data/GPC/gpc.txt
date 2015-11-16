@@ -30982,7 +30982,8 @@ seichtestem	negative
 seichtesten	negative
 seichtester	negative
 seichtestes	negative
-sein	negative
+# COMMENT: leads to enormous decrease in results
+# sein	negative
 seitenentzug	negative
 seitensprung	negative
 seitlich	negative

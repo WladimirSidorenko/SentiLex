@@ -64,7 +64,7 @@ RECALL = 1                      # index of recall field
 
 ##################################################################
 # Methods
-def _insert_lex(a_lex, a_wrd, a_cls):
+def insert_lex(a_lex, a_wrd, a_cls):
     """
     Insert new word into polarity lexicon after checking its polarity class
 
@@ -280,8 +280,6 @@ def _compute(a_lexicon, a_id_tok, a_pr_stat, a_fscore_stat, a_output_errors):
             a_pr_stat[c][RECALL].append(0.)
     # print("stat =", repr(stat), file = sys.stderr)
     return _compute_fscores(stat, a_fscore_stat)
-    # print("macro_F1, micro_F1 =", macro_F1, micro_F1, file = sys.stderr)
-    return (macro_P, micro_P, macro_R, micro_R, macro_F1, micro_F1)
 
 def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir, a_form2lemma, a_output_errors):
     """
@@ -395,11 +393,11 @@ def main(argv):
     args = argparser.parse_args(argv)
     # read-in lexicon
     ilex = Trie(a_ignorecase = True)
-    read_file(ilex, args.sentiment_lexicon, a_insert = _insert_lex)
+    read_file(ilex, args.sentiment_lexicon, a_insert = insert_lex)
     form2lemma = dict()
     if args.lemma_file is not None:
         read_file(form2lemma, args.lemma_file, a_insert = \
-                  lambda lex, form, lemma: lex.setdefault(form, lemma))
+                      lambda lex, form, lemma: lex.setdefault(form, lemma))
     # evaluate it on corpus
     eval_lexicon(ilex, args.corpus_base_dir, args.corpus_anno_dir, form2lemma, \
                      args.verbose)
