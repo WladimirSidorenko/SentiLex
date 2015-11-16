@@ -636,9 +636,6 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot = None):
     """
     # estimate the number of terms to extract
     seed_set = a_pos | a_neg
-    a_N -= len(seed_set)
-    if a_N < 1:
-        return
     # create initial empty network
     ising = Ising()
     # populate network from GermaNet
@@ -681,7 +678,9 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot = None):
     i = 0
     with open(os.path.join("data", "ising_full.txt"), 'w') as ofile:
         for inode in nodes:
-            if type(inode[WGHT_IDX]) != float:
+            # print("inode =", repr(inode), file = sys.stderr)
+            # print("type(inode[WGHT_IDX]) =", type(inode[WGHT_IDX]), file = sys.stderr)
+            if isnan(inode[WGHT_IDX]):
                 print(inode[ITEM_IDX].encode(ENCODING), "\t", inode[WGHT_IDX], file = ofile)
             else:
                 if i < a_N:
@@ -692,7 +691,7 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot = None):
                     else:
                         i -= 1
                     i += 1
-                print(inode[ITEM_IDX].encode(ENCODING), "\t{:f}".format(nodes[WGHT_IDX]), file = ofile)
+                print(inode[ITEM_IDX].encode(ENCODING), "\t{:f}".format(inode[WGHT_IDX]), file = ofile)
 
 def main(a_argv):
     """
@@ -764,10 +763,10 @@ generating sentiment lexicons.""")
         # apply requested method
         print("Expanding seed sets... ", file = sys.stderr)
         if args.dmethod == ESULI:
-            esuli_sebastiani(igermanet, args.N, args.clf_type, args.clf_arity, \
+            esuli_sebastiani(igermanet, N, args.clf_type, args.clf_arity, \
                                  POS_SET, NEG_SET, NEUT_SET, args.seed_pos)
         elif args.dmethod == TAKAMURA:
-            takamura(igermanet, args.N, getattr(args, CC_FILE), POS_SET, NEG_SET, NEUT_SET, \
+            takamura(igermanet, N, getattr(args, CC_FILE), POS_SET, NEG_SET, NEUT_SET, \
                          a_plot = args.plot or None)
         print("Expanding seed sets... done", file = sys.stderr)
 

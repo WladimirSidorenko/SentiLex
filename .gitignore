@@ -7,3 +7,4 @@ data/corpus/cc.txt
 img/
 data/vectors.txt
 data/ising_full.txt
+data/corpus/tweets-2013-04-07.tsv.tok
