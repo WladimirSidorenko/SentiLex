@@ -9,3 +9,6 @@ data/vectors.txt
 data/ising_full.txt
 data/corpus/tweets-2013-04-07.tsv.tok
 data/takamura/err.*
+data/WordNet-3.0/
+venv/
+test.lex
