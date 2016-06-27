@@ -165,7 +165,7 @@ def _compute_fscores(a_stat, a_fscore_stat):
     n_classes = len(a_stat)
     if not n_classes:
         return (0., 0.)
-    macro_F1 = micro_F1 = iF1 = iprec = irecall = 0.
+    macro_F1 = micro_F1 = iF1 = iprec = 0.
     total_tp = total_fp = total_fn = 0
     # obtain statistics for all classes
     for iclass, (tp, fp, fn) in a_stat.iteritems():
@@ -176,7 +176,7 @@ def _compute_fscores(a_stat, a_fscore_stat):
             iprec = tp / float(tp + fp) if (tp or fp) else 0.
             ircall = tp / float(tp + fn) if (tp or fn) else 0.
             if iprec or ircall:
-                iF1 = (iprec * ircall) / (iprec + ircall)
+                iF1 = 2 * (iprec * ircall) / (iprec + ircall)
                 macro_P += iprec
                 macro_R += ircall
                 macro_F1 += iF1
@@ -196,9 +196,9 @@ def _compute_fscores(a_stat, a_fscore_stat):
     return (macro_P, micro_P, macro_R, micro_R, macro_F1, micro_F1)
 
 
-def _compute(a_lexicon, a_id_tok, a_pr_stat, a_fscore_stat, a_output_errors):
-    """
-    Compute macro- and micro-averaged F-scores for single file
+def _compute(a_lexicon, a_id_tok, a_pr_stat, a_fscore_stat,
+             a_output_errors, a_full_corpus=False):
+    """Compute macro- and micro-averaged F-scores for single file
 
     @param a_lexicon - lexicon whose quality should be tested
     @param a_id_tok - sequence of annotated tokens extracted from file
@@ -207,9 +207,11 @@ def _compute(a_lexicon, a_id_tok, a_pr_stat, a_fscore_stat, a_output_errors):
                       particular class (will be updated in this method)
     @param a_output_errors - boolean flag indicating whether dictionary errors
                         should be printed
+    @param a_full_corpus - compute scores on the full corpus
 
     @return 6-tuple with macro- and micro-averaged precision, recall,
     and F-scores
+
     """
     # dictionary used for counting correct and wrong matches of each
     # class
@@ -289,9 +291,9 @@ def _compute(a_lexicon, a_id_tok, a_pr_stat, a_fscore_stat, a_output_errors):
         # print("stat =", repr(stat), file = sys.stderr)
     a_lexicon.match((None, None))  # reset active states
     # update statistics
-    cstat = None
-    for c in stat:
-        cstat = stat[c]
+    if a_full_corpus:
+        return stat
+    for c, cstat in stat.iteritems():
         if cstat[TRUE_POS]:
             a_pr_stat[c][PRECISION].append(cstat[TRUE_POS] /
                                            float(cstat[TRUE_POS] +
@@ -307,9 +309,8 @@ def _compute(a_lexicon, a_id_tok, a_pr_stat, a_fscore_stat, a_output_errors):
 
 
 def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir,
-                 a_form2lemma, a_output_errors):
-    """
-    Evaluate sentiment lexicon on a real corpus
+                 a_form2lemma, a_output_errors, a_full_corpus=False):
+    """Evaluate sentiment lexicon on a real corpus.
 
     @param a_lexicon - lexicon to test (as a Trie)
     @param a_base_dir - directory containing base files of the MMAX project
@@ -318,6 +319,7 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir,
     @param a_form2lemma - dictionary mapping word forms to lemmas
     @param a_output_errors - boolean flag indicating whether dictionary errors
                         should be printed
+    @param a_full_corpus - compute scores on the full corpus
 
     @return 6-tuple with macro- and micro-averaged precision,
       recall, and F-measure
@@ -334,8 +336,10 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir,
     micro_P = []
     macro_R = []
     micro_R = []
-    wid = tid = imacro_F1 = imicro_F1 = icorrect = iwrong = itotal = -1
-    annofname = idoc = ispan = wid = None
+    wid = tid = imacro_F1 = imicro_F1 = -1
+    annofname = full_stat = trg_stat = idoc = ispan = wid = None
+    if a_full_corpus:
+        full_stat = defaultdict(lambda: [0, 0, 0])
     # iterate over
     for basefname in glob.iglob(os.path.join(a_base_dir, WORDS_PTRN)):
         print("Processing file '{:s}'".format(basefname), file=sys.stderr)
@@ -369,8 +373,6 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir,
                 "Unknown polarity value: '{:s}'".format(ipolarity)
             ispan = parse_span(ianno.get("span"))
             tid = wid2tid[ispan[-1]]
-            # print("tid =", repr(tid))
-            # print("word =", repr(id_tok[tid][1]))
             # add respective class only to the last term in annotation
             # sequence, but remember which tokens this annotation
             # covered
@@ -379,52 +381,91 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir,
                 # (`wid2tid[ispan[0]`) might cause problems, but trie
                 # does not match discontinuous spans anyway
                 id_tok[tid][-1].add((wid2tid[ispan[0]], ipolarity))
-            # print("ipolarity =", repr(id_tok[tid][-1]))
 
         # now, do the actual computation of matched items
-        imacro_P, imicro_P, imacro_R, imicro_R, imacro_F1, imicro_F1 = \
-            _compute(a_lexicon, id_tok, pr_stat, fscore_stat, a_output_errors)
-        macro_P.append(imacro_P)
-        micro_P.append(imicro_P)
-        macro_R.append(imacro_R)
-        micro_R.append(imicro_R)
-        macro_F1.append(imacro_F1)
-        micro_F1.append(imicro_F1)
-        # sys.exit(66)
+        if a_full_corpus:
+            cstat = _compute(a_lexicon, id_tok, pr_stat, fscore_stat,
+                             a_output_errors, a_full_corpus)
+            for k, v in cstat.iteritems():
+                trg_stat = full_stat[k]
+                for i, j in enumerate(v):
+                    trg_stat[i] += j
+        else:
+            imacro_P, imicro_P, imacro_R, imicro_R, imacro_F1, imicro_F1 = \
+                _compute(a_lexicon, id_tok, pr_stat, fscore_stat,
+                         a_output_errors, a_full_corpus)
+            macro_P.append(imacro_P)
+            micro_P.append(imicro_P)
+            macro_R.append(imacro_R)
+            micro_R.append(imicro_R)
+            macro_F1.append(imacro_F1)
+            micro_F1.append(imicro_F1)
+
     print("{:15s}{:>20s}{:>20s}{:>24s}".format(
         "Class", "Precision", "Recall", "F-score"), file=sys.stderr)
-    iprec = ircall = None
-    for iclass, fscores in fscore_stat.iteritems():
-        iprec, ircall = pr_stat[iclass][PRECISION], pr_stat[iclass][RECALL]
+    iprec = ircall = fscore = 0.
+    if a_full_corpus:
+        total_tp = total_fp = total_fn = 0
+        for iclass, (tp, fp, fn) in full_stat.iteritems():
+            total_tp += tp
+            total_fp += fp
+            total_fn += fn
+            iprec = tp / float(tp + fp) if (tp or fp) else 0.
+            macro_P.append(iprec)
+            ircall = tp / float(tp + fn) if (tp or fn) else 0.
+            macro_R.append(ircall)
+            fscore = 2 * iprec * ircall / ((iprec + ircall) or 1.)
+            macro_F1.append(fscore)
+            print("{:15s}{:>20%} {:>20%}"
+                  " {:>24%}".format(iclass, iprec, ircall,
+                                    fscore))
+        print("{:15s}{:>20%} {:>20%}"
+              " {:>24%}".format(
+                  "Macro-average", np.mean(macro_P), np.mean(macro_R),
+                  np.mean(macro_F1)))
+        micro_P = total_tp / float(total_tp + total_fp) \
+            if (total_tp or total_fp) else 0.
+        micro_R = total_tp / float(total_tp + total_fn) \
+            if (total_tp or total_fn) else 0.
+        micro_F1 = 2 * micro_P * micro_R / ((micro_P + micro_R) or 1.)
+        print("{:15s}{:>20%} {:>20%}"
+              " {:>24%}".format(
+                  "Micro-average", micro_P, micro_R, micro_F1))
+    else:
+        for iclass, fscores in fscore_stat.iteritems():
+            iprec, ircall = pr_stat[iclass][PRECISION], pr_stat[iclass][RECALL]
+            print("{:15s}{:>10.2%} (+/- {:6.2%}){:>10.2%}"
+                  " (+/- {:6.2%}){:>10.2%} (+/- {:6.2%})".format(
+                      iclass, np.mean(iprec), np.std(iprec), np.mean(ircall),
+                      np.std(ircall), np.mean(fscores), np.std(fscores)))
         print("{:15s}{:>10.2%} (+/- {:6.2%}){:>10.2%}"
               " (+/- {:6.2%}){:>10.2%} (+/- {:6.2%})".format(
-                  iclass, np.mean(iprec), np.std(iprec), np.mean(ircall),
-                  np.std(ircall), np.mean(fscores), np.std(fscores)))
-    print("{:15s}{:>10.2%} (+/- {:6.2%}){:>10.2%}"
-          " (+/- {:6.2%}){:>10.2%} (+/- {:6.2%})".format(
-              "Macro-average", np.mean(macro_P), np.std(macro_P),
-              np.mean(macro_R), np.std(macro_R),
-              np.mean(macro_F1), np.std(macro_F1)))
-    print("{:15s}{:>10.2%} (+/- {:6.2%}){:>10.2%}"
-          " (+/- {:6.2%}){:>10.2%} (+/- {:6.2%})".format(
-              "Micro-average", np.mean(micro_P), np.std(micro_P),
-              np.mean(micro_R), np.std(micro_R),
-              np.mean(micro_F1), np.std(micro_F1)))
+                  "Macro-average", np.mean(macro_P), np.std(macro_P),
+                  np.mean(macro_R), np.std(macro_R),
+                  np.mean(macro_F1), np.std(macro_F1)))
+        print("{:15s}{:>10.2%} (+/- {:6.2%}){:>10.2%}"
+              " (+/- {:6.2%}){:>10.2%} (+/- {:6.2%})".format(
+                  "Micro-average", np.mean(micro_P), np.std(micro_P),
+                  np.mean(micro_R), np.std(micro_R),
+                  np.mean(micro_F1), np.std(micro_F1)))
 
 
 def main(argv):
-    """
-    Main method for estimating quality of a sentiment lexicon
+    """Main method for estimating quality of a sentiment lexicon.
 
     @param argv - CLI arguments
 
     @return 0 on success, non-0 otherwise
+
     """
     # parse arguments
     argparser = argparse.ArgumentParser(description="Script for evaluating"
                                         " sentiment lexicon on test corpus.")
     argparser.add_argument("-e", "--encoding", help="encoding of input files",
                            type=str, default=ENCODING)
+    argparser.add_argument("-f", "--full",
+                           help="compute scores on the full corpus",
+                           action="store_true")
     argparser.add_argument("-l", "--lemma-file",
                            help="file containing lemmas of corpus words",
                            type=str)
@@ -451,7 +492,7 @@ def main(argv):
                   lex.setdefault(form, lemma))
     # evaluate it on corpus
     eval_lexicon(ilex, args.corpus_base_dir, args.corpus_anno_dir, form2lemma,
-                 args.verbose)
+                 args.verbose, args.full)
 
 ##################################################################
 # Main
