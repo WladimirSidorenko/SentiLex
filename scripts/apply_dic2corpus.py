@@ -1,8 +1,7 @@
 #!/usr/bin/env python2.7
 # -*- coding: utf-8; -*-
 
-"""
-Script for adding missing polar terms to sentiment corpus.
+"""Script for adding missing polar terms to sentiment corpus.
 
 USAGE:
 adddic2corpus.py [lemma_file] sentiment_lexicon test_corpus_dir/
