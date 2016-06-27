@@ -1,6 +1,8 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 2.8.11)
 
 PROJECT(vec2dic)
+SET(vec2dic_VERSION_MAJOR 0)
+SET(vec2dic_VERSION_MINOR 0)
 
 FIND_PACKAGE(Armadillo)
 FIND_PACKAGE (Threads)
@@ -21,8 +23,10 @@ IF(BUILD_VEC2DIC)
 ENDIF(BUILD_VEC2DIC)
 
 # set variables
-SET(V2D_SRC_DIR src/vec2dic CACHE FILEPATH "Default directory containing vec2dic source files")
-SET(W2V_SRC_DIR src/word2vec CACHE FILEPATH "Default directory containing word2vec source files")
+SET(V2D_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/vec2dic
+  CACHE FILEPATH "Default directory containing vec2dic source files")
+SET(W2V_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/word2vec
+  CACHE FILEPATH "Default directory containing word2vec source files")
 
 # specify target directory
 SET(EXECUTABLE_OUTPUT_PATH bin)
@@ -33,7 +37,7 @@ ADD_EXECUTABLE(vec2dic ${V2D_SOURCES})
 TARGET_INCLUDE_DIRECTORIES(vec2dic PRIVATE ${V2D_SRC_DIR})
 TARGET_LINK_LIBRARIES(vec2dic ${ARMADILLO_LIBRARIES})
 SET_TARGET_PROPERTIES(vec2dic
-                               PROPERTIES COMPILE_FLAGS "-std=c++11")
+  PROPERTIES COMPILE_FLAGS "-std=c++11")
 
 AUX_SOURCE_DIRECTORY(${W2V_SRC_DIR} W2V_SOURCES)
 ADD_EXECUTABLE(word2vec ${W2V_SOURCES})
