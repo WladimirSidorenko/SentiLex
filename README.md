@@ -1,8 +1,5 @@
-Dictionary-, Corpus-, and NWE-based
-===================================
-
-Generation of Sentiment Lexicons
-================================
+Dictionary-, Corpus-, and NWE-based Generation of Sentiment Lexicons
+====================================================================
 
 This project provides scripts and executable files for generating
 sentiment lexicons using `GermaNet` (German equivalent of `WordNet`),
