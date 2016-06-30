@@ -36,6 +36,7 @@ RELTYPES = [CON_REL, LEX_REL]
 SZET_RE = re.compile('ß', re.U)
 SPACE_RE = re.compile('(?:\t| \s)+')
 
+
 ##################################################################
 # Methods
 def normalize(a_string):
@@ -47,6 +48,7 @@ def normalize(a_string):
     @return normalized string version
     """
     return SZET_RE.sub("ss", SPACE_RE.sub(' ', a_string.lower())).strip()
+
 
 ##################################################################
 # Class
@@ -64,7 +66,7 @@ class Germanet(object):
     lex_relations - adjacency lists of relations between lexemes
     """
 
-    def __init__(self, a_dir = os.getcwd()):
+    def __init__(self, a_dir=os.getcwd()):
         """
         Class constructor
 
@@ -89,14 +91,18 @@ class Germanet(object):
         ## adjacency lists of relations between lexemes
         self.lex_relations = defaultdict(set)
         # parse synsets
-        for ifile in chain.from_iterable(glob.iglob(os.path.join(a_dir, ipos + '*')) \
-                                             for ipos in POS):
+        for ifile in chain.from_iterable(
+                glob.iglob(os.path.join(a_dir, ipos + '*'))
+                for ipos in POS):
             self._parse_synsets(ifile)
-        assert self.lexid2synids, "No synset files found in directory {:s}".format(a_dir)
+        assert self.lexid2synids, \
+            "No synset files found in directory {:s}".format(a_dir)
         # parse wiktionary paraphrases
-        for ifile in chain.from_iterable(glob.iglob(os.path.join(a_dir, "wiktionaryParaphrases-" \
-                                                                     + ipos[:-1] + ".xml")) \
-                                             for ipos in POS):
+        for ifile in \
+            chain.from_iterable(
+                glob.iglob(os.path.join(a_dir, "wiktionaryParaphrases-"
+                                        + ipos[:-1] + ".xml"))
+                for ipos in POS):
             self._parse_wiktionary(ifile)
         # parse relations
         self._parse_relations(os.path.join(a_dir, "gn_relations.xml"))
@@ -109,7 +115,9 @@ class Germanet(object):
 
         @return \c void
         """
-        lexid = ""; synid = ""; lex = ""
+        lexid = ""
+        synid = ""
+        lex = ""
         iparaphrase = ilex = iform = None
         idoc = ET.parse(a_fname).getroot()
         for isynset in idoc.iterfind("synset"):
@@ -118,8 +126,11 @@ class Germanet(object):
             iparaphrase = isynset.find("./paraphrase")
             assert synid not in self.synid2defexmp, \
                 "Duplicate description of synset {:s}".format(syn_id)
-            self.synid2defexmp[synid] = (["" if iparaphrase is None else iparaphrase.text], \
-                                             [el.text for el in isynset.iterfind(".//example/text")])
+            self.synid2defexmp[synid] = (["" if iparaphrase is None
+                                          else iparaphrase.text],
+                                         [el.text
+                                          for el in
+                                          isynset.iterfind(".//example/text")])
             for ilex in isynset.iterfind("./lexUnit"):
                 lexid = ilex.get("id")
                 self.lexid2synids[lexid].add(synid)
