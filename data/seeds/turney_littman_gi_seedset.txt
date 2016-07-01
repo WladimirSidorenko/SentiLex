@@ -1,0 +1,4173 @@
+100 pfund	neutral
+12-uhr-	neutral
+1-cent-stück	neutral
+25-cent-stück	neutral
+3-d-objekt	neutral
+45er	neutral
+50-cent-stück	neutral
+5-cent-stück	neutral
+7-meter-wurf	neutral
+96 hours	neutral
+aach	neutral
+aalbutt	neutral
+aalstrich	neutral
+aar	neutral
+aasgeier	neutral
+abänderbar	neutral
+abänderlich	neutral
+abändern	neutral
+abänderungsantrag	neutral
+abandon	neutral
+abarbeitung	neutral
+abartig	neutral
+abart	neutral
+abbalgen	neutral
+abbauen	neutral
+abbaukante	neutral
+abbau	neutral
+abbaustelle	neutral
+abbaustoß	neutral
+abbaustrecke	neutral
+abbau von halden	neutral
+abbeizen	neutral
+abberufung	neutral
+abbiegen	neutral
+abbilden	neutral
+abbild	neutral
+abbildung	neutral
+abbinden	neutral
+abblasen	neutral
+abblättern	neutral
+abbrand	neutral
+abbrechen	neutral
+abbremsen	neutral
+abbremsung	neutral
+abbruch	neutral
+abbuchen	neutral
+abdampfen	neutral
+abdanken	neutral
+abdecken	neutral
+abdeckrosette	neutral
+abdeckung	neutral
+abdichten	neutral
+abdrift	neutral
+abdruck	neutral
+abendbrot	neutral
+abenddämmerung	neutral
+abendessen	neutral
+abendgesellschaft	neutral
+abendkleid	neutral
+abendländer	neutral
+abendländisch	neutral
+abendmahlsbrot	neutral
+abend-	neutral
+abenteuerfahrt	neutral
+aber dafür	neutral
+aberkennung	neutral
+abermals	neutral
+aber nein	neutral
+aber	neutral
+abessinien	neutral
+abfahren	neutral
+abfahrt	neutral
+abfallbehälter	neutral
+abfallen	neutral
+abfallverwertung	neutral
+abfangen	neutral
+abfangscheibe	neutral
+abfärben	neutral
+abfassen	neutral
+abfassung	neutral
+abfertigen	neutral
+abfindungsbetrag	neutral
+abflammen	neutral
+abflauen	neutral
+abfließen lassen	neutral
+abfluchten	neutral
+abfolge	neutral
+abfrage	neutral
+abfragen	neutral
+abfuhr	neutral
+abführung	neutral
+abgabe	neutral
+abgabenpflichtig	neutral
+abgang	neutral
+abgebaut	neutral
+abgeben	neutral
+abgebrannt	neutral
+abgebrüht	neutral
+abgeglitten	neutral
+abgegrenzter teil des speichers	neutral
+abgehalten	neutral
+abgehärmt	neutral
+abgehoben	neutral
+abgekartetes spiel	neutral
+abgekriegt	neutral
+abgeld	neutral
+abgelegene siedlung	neutral
+abgelegen	neutral
+abgelegen von	neutral
+abgemacht	neutral
+abgeordneter	neutral
+abgesackt	neutral
+abgesandter	neutral
+abgesang	neutral
+abgeschickt	neutral
+abgeschieden	neutral
+abgeschreckt	neutral
+abgesehen	neutral
+abgesondert	neutral
+abgestürzt	neutral
+abgetastet	neutral
+abgezogen	neutral
+abgleich	neutral
+abgleiten	neutral
+abgrenzen	neutral
+abgrenzung	neutral
+abgrund	neutral
+abhaken	neutral
+abhalten	neutral
+abhandlung	neutral
+abhängen	neutral
+abhängiger staat	neutral
+abhängiges gebiet	neutral
+abhängig gesteuertes gerät	neutral
+abhängigkeit	neutral
+abhängig	neutral
+abhang	neutral
+abhärten	neutral
+abhauen	neutral
+abheben	neutral
+abhelfen	neutral
+abhilfe	neutral
+abholen	neutral
+abholung	neutral
+abhorchen	neutral
+abhörgerät	neutral
+ab jetzt	neutral
+abkacken	neutral
+abkanten	neutral
+abkappen	neutral
+abketteln	neutral
+abklärung	neutral
+abkomme	neutral
+abkommen	neutral
+abkömmlich	neutral
+abkühlen	neutral
+abkunft	neutral
+abkürzen	neutral
+ablagekasten	neutral
+ablage	neutral
+ablagern lassen	neutral
+ablagern	neutral
+ablagerung	neutral
+ablandig	neutral
+ablassen	neutral
+ablassen von	neutral
+ablästern	neutral
+ablaufen	neutral
+ablauf	neutral
+ablaufplan	neutral
+ablaufschritt	neutral
+ablaufstadium	neutral
+ableben	neutral
+ablegen	neutral
+ableger	neutral
+ableisten	neutral
+ableiten	neutral
+ablenkjoch	neutral
+ablenkung	neutral
+abliefern	neutral
+ablieferung	neutral
+ablöse	neutral
+abmachen	neutral
+abmachung	neutral
+abmessen	neutral
+abmessung	neutral
+abmildern	neutral
+abnahme	neutral
+abnehmen	neutral
+abnehmerin	neutral
+abnehmer	neutral
+ab	neutral
+abolitionismus	neutral
+abonnentin	neutral
+abordnung	neutral
+abortiv	neutral
+abort	neutral
+abrechnen	neutral
+abrechnung	neutral
+abrechnungsbeleg	neutral
+abreiben	neutral
+abrichten	neutral
+abrieb	neutral
+abrinden	neutral
+abriss	neutral
+abrufen	neutral
+abruf	neutral
+abrupt	neutral
+abrüstung	neutral
+absammeln	neutral
+absatteln	neutral
+absatzgebiet	neutral
+absatz	neutral
+absaufen	neutral
+abschaffen	neutral
+abschaltkreis	neutral
+abschattieren	neutral
+abschätzen	neutral
+abschätzung	neutral
+abschicken	neutral
+abschießen	neutral
+abschirmen	neutral
+abschleifen	neutral
+abschleppen	neutral
+abschließend	neutral
+abschließen	neutral
+abschluss eines geschäfts	neutral
+abschlussgrad	neutral
+abschluss	neutral
+abschlussprüfer	neutral
+abschmieren	neutral
+abschneiden	neutral
+abschnitt	neutral
+abschranken	neutral
+abschreckend	neutral
+abschrecken	neutral
+abschreiten	neutral
+abschub	neutral
+abschuppen	neutral
+abschüssig	neutral
+abschussprämie	neutral
+abschwächen	neutral
+abschwenken	neutral
+absehbar	neutral
+abseite	neutral
+absenden	neutral
+absenzenheft	neutral
+absetzen	neutral
+absetzer	neutral
+absetzung	neutral
+absichtlich	neutral
+absicht	neutral
+absolut	neutral
+absolventin	neutral
+absonderlich	neutral
+abspannung	neutral
+absperrband	neutral
+absperrung	neutral
+abspiegeln	neutral
+abspringen	neutral
+abspulen	neutral
+abstammen	neutral
+abstammung	neutral
+abstand	neutral
+abstandsfläche	neutral
+absteckpfahl	neutral
+abstellen	neutral
+abstellgleis	neutral
+absterben	neutral
+abstich	neutral
+abstimmen	neutral
+abstimmung aufeinander	neutral
+abstimmung	neutral
+abstoßen	neutral
+abstreuen	neutral
+abstufen	neutral
+abstürzen	neutral
+absturz	neutral
+absuchen	neutral
+absurd	neutral
+abtasten	neutral
+abtauchen	neutral
+abtausch	neutral
+abteil	neutral
+abteilung	neutral
+abteilungsleiter	neutral
+abtei	neutral
+abtransportieren	neutral
+abtreten	neutral
+abvisieren	neutral
+abwägen	neutral
+abwandeln	neutral
+abwanderung	neutral
+abwandlung	neutral
+abwartend	neutral
+abwarten	neutral
+abwart	neutral
+abwechselnd	neutral
+abwechseln	neutral
+abwehr	neutral
+abweichend davon	neutral
+abweichend	neutral
+abweichung	neutral
+abweichung vom kurs	neutral
+abweisen	neutral
+abwenden	neutral
+abwendung	neutral
+abwettern	neutral
+abwicklung	neutral
+abwiegeln	neutral
+abwiegen	neutral
+abwurfstelle	neutral
+abzählen	neutral
+abzeichen	neutral
+abziehen	neutral
+abzielen	neutral
+abzüglich	neutral
+abzugskanal	neutral
+abzugszüngel	neutral
+access	neutral
+ache	neutral
+achsdruckentlastung	neutral
+achsel	neutral
+achse	neutral
+achtbar	neutral
+achte	neutral
+achter	neutral
+achtgeben auf	neutral
+achtzehn	neutral
+achtzehnte	neutral
+achtzig	neutral
+ackerbaulich	neutral
+ackerbau	neutral
+ackerer	neutral
+acker-	neutral
+acker	neutral
+ackern	neutral
+ackerschlepper	neutral
+ackerschnacker	neutral
+ackersmann	neutral
+action	neutral
+adaptieren	neutral
+adden	neutral
+addieren	neutral
+addierung	neutral
+addiktion	neutral
+additional	neutral
+adeliger herr	neutral
+adelstitel	neutral
+aden	neutral
+adept	neutral
+aderbündel	neutral
+ader	neutral
+adjazent	neutral
+adjudikation	neutral
+adjustierung	neutral
+adlerfarneule	neutral
+administrativ	neutral
+administrator	neutral
+administrieren	neutral
+admiral	neutral
+adoleszent	neutral
+adoptieren	neutral
+adoption	neutral
+adressaten	neutral
+adresse	neutral
+advokatin	neutral
+advokat	neutral
+affäre	neutral
+affekt	neutral
+affe	neutral
+affirmativ	neutral
+afghanistan	neutral
+africa	neutral
+afrikanerin	neutral
+agens	neutral
+agent	neutral
+aggregat	neutral
+agieren	neutral
+agnoszieren	neutral
+ägypten	neutral
+ahndung	neutral
+ahne	neutral
+ahnen	neutral
+ahn	neutral
+ahnung	neutral
+ahornholz	neutral
+air	neutral
+airport	neutral
+akademie	neutral
+akademikerin	neutral
+akademischer beruf	neutral
+akademisches jahr	neutral
+akademisch	neutral
+akkreditivsteller	neutral
+akkumulation	neutral
+akkumulieren	neutral
+akquirieren	neutral
+aktdarstellung	neutral
+aktendeckel	neutral
+akte	neutral
+aktenkladde	neutral
+aktenkundig	neutral
+aktenstück	neutral
+aktenvermerk	neutral
+aktenzeichen	neutral
+akteur	neutral
+aktiengesellschaft	neutral
+aktion	neutral
+aktionsradius	neutral
+aktivistin	neutral
+aktivitäten	neutral
+aktivitätseinschränkung	neutral
+aktiv	neutral
+aktualität	neutral
+aktuell	neutral
+(akustisch) verstehen	neutral
+akut	neutral
+akzeleration	neutral
+akzelerieren	neutral
+akzentsetzung	neutral
+akzentuieren	neutral
+akzeptabel	neutral
+akzeptieren	neutral
+akzidentell	neutral
+alabama	neutral
+alarmieren	neutral
+alarmmäßig starten	neutral
+alaska	neutral
+albanien	neutral
+album	neutral
+alfanzen	neutral
+algerien	neutral
+algier	neutral
+alibi-freundin	neutral
+alien virus - der tod kommt aus der unendlichkeit	neutral
+alignieren	neutral
+alimente	neutral
+alkoholhaltiges mischgetränk	neutral
+alkoholikerin	neutral
+alkoholiker	neutral
+alkoholisches getränk	neutral
+alkohol	neutral
+alkoholzusatz	neutral
+allda	neutral
+alldieweil	neutral
+allee	neutral
+allegieren	neutral
+alleinig	neutral
+allein	neutral
+alleinverkaufsrecht	neutral
+allemal	neutral
+alle	neutral
+allenthalben	neutral
+allerdings	neutral
+allergrößte	neutral
+allerhöchste	neutral
+allerlei	neutral
+aller-	neutral
+allerwelts-	neutral
+alles in allem	neutral
+alles	neutral
+alle tage	neutral
+allfällig	neutral
+allgemein bekannt	neutral
+allgemeine geltung	neutral
+allgemeingültigkeit	neutral
+allgemein gültig	neutral
+allgemein	neutral
+allgemein verbreitet	neutral
+allheilmittel	neutral
+allhier	neutral
+alliiert	neutral
+alljährlich	neutral
+allmählich	neutral
+allmählich wachsen	neutral
+all	neutral
+allokation	neutral
+allonge	neutral
+allstimmigkeit	neutral
+alltäglich	neutral
+allumfassend	neutral
+allusion	neutral
+allwöchentlich	neutral
+allzu	neutral
+allzu sehr vereinfachen	neutral
+allzu starke vereinfachung	neutral
+almosenempfänger	neutral
+als angestellter arbeiten	neutral
+alsdann	neutral
+als da sind / wären	neutral
+als ... erst einmal	neutral
+(als etw.) amtieren	neutral
+als gegengewicht dienen	neutral
+als mittel dienend	neutral
+als nächstes	neutral
+als	neutral
+alsogleich	neutral
+also	neutral
+als passagier fliegen	neutral
+als soldat dienen	neutral
+als zeuge aussagen	neutral
+altbekannt	neutral
+altbewährt	neutral
+alte	neutral
+alterfahren	neutral
+alternative	neutral
+altersschwäche	neutral
+altertümlich	neutral
+altgläubig	neutral
+altmodisch	neutral
+alt	neutral
+altweltkamel	neutral
+aluminium	neutral
+am ältesten	neutral
+am anfang	neutral
+amateur-	neutral
+amateurspieler	neutral
+ambassadeur	neutral
+am besten	neutral
+ambiente	neutral
+ambitioniert	neutral
+ambition	neutral
+ambitus	neutral
+ambulanz	neutral
+ameise	neutral
+amelioration	neutral
+amendieren	neutral
+amen	neutral
+(american) football	neutral
+amerikanerin	neutral
+amerika	neutral
+amerikanischer ginseng	neutral
+amerikanischer kongress	neutral
+amerikanischer monarch	neutral
+amerikanisch	neutral
+am fuß der seite	neutral
+am härtesten	neutral
+am herzen tragen	neutral
+amiland	neutral
+ami	neutral
+am leichtesten	neutral
+am meisten	neutral
+am montag	neutral
+am	neutral
+amortisation	neutral
+am ort	neutral
+am tacho drehen / manipulieren	neutral
+am tag danach	neutral
+am tage vorkommend	neutral
+amt eines bischofs	neutral
+amtierend	neutral
+amtieren	neutral
+amtlich bekanntgeben	neutral
+amtliche bekanntmachung	neutral
+amtliche bescheinigung	neutral
+amtlicher makler	neutral
+amtlich	neutral
+amt	neutral
+amtsbote	neutral
+amtseinführung	neutral
+amtskollege	neutral
+amtsraum	neutral
+amtssitz	neutral
+amtsverweser	neutral
+amtsvorgängerin	neutral
+amtszeit	neutral
+am vollsten	neutral
+am wasser	neutral
+am wenigsten	neutral
+am werk	neutral
+analogie	neutral
+analog	neutral
+analyse	neutral
+analysieren	neutral
+analystin	neutral
+analytisch	neutral
+an anderen orten	neutral
+anbauer	neutral
+anbeten	neutral
+anbieten	neutral
+anbieterin	neutral
+anbinden	neutral
+anbindung	neutral
+anblick	neutral
+an bord	neutral
+anbraten	neutral
+anbringen	neutral
+andauernd	neutral
+andauern	neutral
+andenken	neutral
+an der börse zulassen	neutral
+andere	neutral
+anderenfalls	neutral
+anderer meinung sein	neutral
+an der seite	neutral
+anders	neutral
+an der spitze	neutral
+andeutend	neutral
+andeuten	neutral
+andeutung	neutral
+an die oberfläche bringen	neutral
+an die oberfläche kommen	neutral
+an die stelle setzen	neutral
+andrang	neutral
+andrucken	neutral
+aneignung	neutral
+aneinandergeraten	neutral
+aneinander koppeln	neutral
+aneinander	neutral
+an einem bewerbungsgespräch teilnehmen	neutral
+anekdote	neutral
+anempfehlen	neutral
+anerkennbar	neutral
+anerkennen	neutral
+anerkennung	neutral
+anfahrschalter	neutral
+anfahrt	neutral
+anfallend	neutral
+anfallen	neutral
+anfälligkeit	neutral
+anfällig	neutral
+anfall von schlechter laune	neutral
+anfangend	neutral
+anfangen	neutral
+anfängerin	neutral
+anfänger	neutral
+anfang	neutral
+anfangs-	neutral
+anfassen	neutral
+anfechtbarkeit	neutral
+anfechten	neutral
+anfertigen	neutral
+anfeuchten	neutral
+anfeuernd	neutral
+anfeuerungsruf	neutral
+anforderung	neutral
+anfrage	neutral
+anfragen	neutral
+anfügen	neutral
+anführen	neutral
+anführerin	neutral
+anführer	neutral
+angabe	neutral
+angaben	neutral
+angaffen	neutral
+angängig	neutral
+angebaut	neutral
+angeben	neutral
+angebetete frau	neutral
+angeblich	neutral
+angeboren	neutral
+angebot auf eine ausschreibung	neutral
+angebot	neutral
+angebracht	neutral
+angebrannt	neutral
+angebrochen	neutral
+angeführt	neutral
+angefüllt	neutral
+angegangen	neutral
+angegeben	neutral
+angegriffen	neutral
+angehende	neutral
+angehend	neutral
+angehöriger der königlichen familie	neutral
+angehöriger eines staates	neutral
+angehöriger	neutral
+angehörigkeit	neutral
+angeklammert	neutral
+angelegenheit	neutral
+angelehnt	neutral
+angel	neutral
+angeln	neutral
+angemessen	neutral
+angemessen sein	neutral
+angenähert	neutral
+angenehm	neutral
+angenehm	positive
+angeregt	neutral
+angerissen	neutral
+anger	neutral
+angesagt	neutral
+angeschwollen	neutral
+angesichts dessen, dass	neutral
+angespannt	neutral
+angestaubt	neutral
+angestellter	neutral
+angestrengt	neutral
+angetrauter	neutral
+angetrieben	neutral
+angetroffen	neutral
+angetrunken	neutral
+angewinkelt	neutral
+angewohnheit	neutral
+angleichen	neutral
+(anglikanischer) pfarrer	neutral
+angola	neutral
+angreiferin	neutral
+angreifer	neutral
+angrenzen	neutral
+angriff	neutral
+angriffsziel	neutral
+angsthase-spiel	neutral
+angst	neutral
+angusskanal	neutral
+anhaften	neutral
+anhalten	neutral
+anhaltspunkt	neutral
+anhängen	neutral
+anhänger christi	neutral
+anhänger der englischen staatskirche	neutral
+anhängerin	neutral
+anhänger	neutral
+anhang	neutral
+anhäufen	neutral
+anhäufung	neutral
+anheben	neutral
+anheften	neutral
+anheizen	neutral
+anheuern	neutral
+anhöhe	neutral
+animalisch	neutral
+animation	neutral
+animierdame	neutral
+animo	neutral
+an irgendeinem ort	neutral
+an jdm./etw. vorbei	neutral
+ankämpfen	neutral
+anke	neutral
+anken	neutral
+ankergeschäft	neutral
+anklage	neutral
+anklang	neutral
+ankleiderin	neutral
+anknacksen	neutral
+ankommen	neutral
+(an) kraft verlieren	neutral
+an kraft zunehmen	neutral
+ankündigen	neutral
+ankündigung	neutral
+ankunft	neutral
+anlagefonds	neutral
+anlage-	neutral
+anlage	neutral
+anlagenkomplex	neutral
+anlagenteil	neutral
+an land bringen	neutral
+anlässlich	neutral
+anlass	neutral
+anlauf	neutral
+anläuten	neutral
+anlecken	neutral
+anlegen	neutral
+anlegerin	neutral
+anleihe	neutral
+anleitungen	neutral
+anleitung	neutral
+anlernen	neutral
+anliegen	neutral
+anlieger	neutral
+anmaßung	neutral
+anmelden	neutral
+anmeldung	neutral
+anmerken	neutral
+anmieten	neutral
+anmuten	neutral
+annageln	neutral
+annäherungsversuche	neutral
+annahme	neutral
+annalen	neutral
+annehmbar	neutral
+annehmlichkeit	neutral
+an	neutral
+anniversarium	neutral
+annuität	neutral
+annullieren	neutral
+anonym	neutral
+anordnen	neutral
+anordnung	neutral
+anordnungsbefugnis	neutral
+anpassung	neutral
+anpassungsfähigkeit	neutral
+anpfiff	neutral
+anpiepsen	neutral
+anrainerin	neutral
+anrechnen	neutral
+anregen	neutral
+anregung	neutral
+anreichern	neutral
+anreicherung	neutral
+anruferin	neutral
+anruf	neutral
+ansammeln	neutral
+ansammlung	neutral
+ansatz	neutral
+anschaffungsvorschlag	neutral
+anschauen	neutral
+anschaulich	neutral
+anschauung	neutral
+anscheinend	neutral
+anschein	neutral
+anschießen	neutral
+anschlag	neutral
+anschlagsstärke	neutral
+anschlagstärke	neutral
+anschlagwinkel	neutral
+anschlagzettel	neutral
+anschließend	neutral
+anschluss	neutral
+anschwellung	neutral
+ansehen	neutral
+ansehnlich	neutral
+ansetzen	neutral
+an sich	neutral
+ansicht	neutral
+ansiedler	neutral
+anspitzen	neutral
+ansprache	neutral
+ansprechen	neutral
+ansprechwert	neutral
+anspruch	neutral
+anspruchslosigkeit	neutral
+anstaltlich	neutral
+-anstalt	neutral
+anstalt	neutral
+anstatt dessen	neutral
+ansteckblume	neutral
+ansteigen	neutral
+anstellig	neutral
+anstellung	neutral
+ansteuern	neutral
+ansteuerung	neutral
+anstieg	neutral
+anstößig	neutral
+anstrahlen	neutral
+anstreben	neutral
+anstreicherin	neutral
+anstrengend	neutral
+anstrengen	neutral
+anstrengung	neutral
+anstrichfarbe	neutral
+anstrich	neutral
+antarktika	neutral
+anteilhabe	neutral
+anteilig	neutral
+anteil	neutral
+antizipation	neutral
+antragsschrift	neutral
+antragstellerin	neutral
+antragsteller	neutral
+antreiben	neutral
+antreten	neutral
+antrieb	neutral
+antriebsfeder	neutral
+antriebskraft	neutral
+antwortbrief	neutral
+antwort des angeklagten	neutral
+anvertrauen	neutral
+anverwandt	neutral
+anwachsend	neutral
+anwachsen	neutral
+anwalt an spezialgerichten	neutral
+anwalt	neutral
+anwandlung	neutral
+anwärmen	neutral
+anweisen	neutral
+anweisung	neutral
+anwenden	neutral
+anwenderin	neutral
+anwendungsbereich	neutral
+anwendungswissen	neutral
+anwerben	neutral
+anwerbung	neutral
+anwesend	neutral
+anwesenheit	neutral
+anwesen	neutral
+anzahl	neutral
+anzeichen	neutral
+anzeige	neutral
+anzeigenfeld	neutral
+anzeiger	neutral
+anzetteln	neutral
+anziehungskraft	neutral
+anzug	neutral
+anzünden	neutral
+aparte	neutral
+apartment	neutral
+apart	neutral
+apate	neutral
+apfelsine	neutral
+apostolische kammer	neutral
+apparat	neutral
+appell	neutral
+appetit	neutral
+april	neutral
+araberin	neutral
+arabien	neutral
+arbeiten lassen	neutral
+arbeiten	neutral
+arbeiterkolonne	neutral
+arbeiter	neutral
+arbeiterschaft	neutral
+arbeitgeberin	neutral
+arbeit	neutral
+arbeitsart	neutral
+arbeitseifer	neutral
+arbeitsentgelt	neutral
+arbeitsgemeinschaft	neutral
+arbeitsgerät	neutral
+arbeitskräfte vermitteln	neutral
+arbeitskraft	neutral
+arbeitsleute	neutral
+arbeitslosigkeit	neutral
+arbeits-	neutral
+arbeitsraum	neutral
+arbeitsreich	neutral
+arbeitsschicht	neutral
+arbeitsvermögen	neutral
+arbeitsweise	neutral
+architektin	neutral
+architektur	neutral
+archivierung	neutral
+arena	neutral
+are	neutral
+argentinierin	neutral
+arglos	neutral
+argumentieren	neutral
+argument	neutral
+arid	neutral
+arizona	neutral
+arkansas	neutral
+armaturenbrett	neutral
+armee-	neutral
+armensiedlung	neutral
+armmachen	neutral
+arm	negative
+armselig	negative
+aromatischer geschmacksstoff	neutral
+arrangieren	neutral
+arsch	neutral
+arsenal	neutral
+arterie	neutral
+-artig	neutral
+artikel	neutral
+artikulation	neutral
+artikulieren	neutral
+artistisch	neutral
+artist	neutral
+art-	neutral
+art	neutral
+art und weise	neutral
+arznei	neutral
+arzt für psychiatrie	neutral
+(ärztliche) versorgung	neutral
+arzt	neutral
+asche	neutral
+asia	neutral
+assanierung	neutral
+assekuranz	neutral
+assemblieren	neutral
+assessorin	neutral
+ast	neutral
+astronomie	neutral
+astronomisch	neutral
+aszendent	neutral
+aszendenz	neutral
+atelierwohnung	neutral
+atemhub	neutral
+atemlos	neutral
+atlantikum	neutral
+atlant	neutral
+atomkern	neutral
+atom-	neutral
+attentat	neutral
+attestieren	neutral
+atticus	neutral
+attitüde	neutral
+atze	neutral
+atzen	neutral
+auch etwas	neutral
+auch gleich	neutral
+auch immer	neutral
+auch jetzt noch	neutral
+auch	neutral
+auch nicht	neutral
+aue	neutral
+auf anhieb	neutral
+aufarbeiten	neutral
+aufatmen	neutral
+auf baisse spekulieren	neutral
+aufbauen	neutral
+aufbau	neutral
+aufbereiten	neutral
+aufbereitung	neutral
+aufbesserung	neutral
+aufbewahren	neutral
+aufbewahrung	neutral
+aufblähung	neutral
+aufblasen	neutral
+aufbohren	neutral
+aufbrauchen	neutral
+aufbrechen	neutral
+auf breiter front	neutral
+aufdecken	neutral
+aufdeckung	neutral
+auf dem elektrischen stuhl hingerichtet werden	neutral
+auf dem landweg	neutral
+auf dem wasser notlanden	neutral
+auf den index setzen	neutral
+auf den kopf hauen	neutral
+auf den wohnsitz bezogen	neutral
+auf der anderen seite	neutral
+auf der gegenüberliegenden seite	neutral
+auf der hand liegend	neutral
+auf der kippe	neutral
+auf derselben körperseite	neutral
+auf die gleiche weise	neutral
+auf diese weise	neutral
+auf die tagesordnung setzen	neutral
+aufdotzen	neutral
+aufdringlich	neutral
+aufeinander abstimmen	neutral
+aufeinander einwirken	neutral
+aufeinanderfolgend	neutral
+aufeinander übergreifen	neutral
+auf einen höhepunkt bringen	neutral
+auf ein minimum bringen	neutral
+auf erfahrung beruhend	neutral
+(auf etw.) auswirkungen haben	neutral
+auffahrt	neutral
+auffallend	neutral
+auffassungsgabe	neutral
+auffinden	neutral
+auffordern	neutral
+auffrischen	neutral
+aufführen	neutral
+aufführung	neutral
+aufgabe	neutral
+aufgebaut	neutral
+aufgebot	neutral
+aufgebracht	neutral
+aufgefangen	neutral
+aufgegangen	neutral
+aufgehen	neutral
+auf geld bezogen	neutral
+aufgeräumtheit	neutral
+aufgerichtet	neutral
+aufgerüstet	neutral
+aufgesetzt	neutral
+aufgetürmt	neutral
+aufgewacht	neutral
+aufgeweckt	neutral
+auf gewinn ausgerichtet	neutral
+aufgewühlt	neutral
+aufgezogen	neutral
+aufgliederung	neutral
+aufglühen	neutral
+auf grund laufen	neutral
+aufgrund	neutral
+aufgrund von	neutral
+aufhacker	neutral
+auf halbem wege	neutral
+aufhänger	neutral
+aufhebung der rassentrennung	neutral
+aufhebung	neutral
+auf ... hinauf	neutral
+aufhören	neutral
+aufhüpfen	neutral
+auf jdn./etw. hören	neutral
+auf jeden fall	neutral
+aufkeimen lassen	neutral
+aufklappen	neutral
+aufklettern	neutral
+aufkohlen	neutral
+aufkommen	neutral
+auf kommission verkaufen	neutral
+auf kurze sicht	neutral
+auflagefläche	neutral
+auflagehöhe	neutral
+auflage	neutral
+auflagenfrei	neutral
+auflager	neutral
+auflagerrolle	neutral
+auf lange dauer angelegt	neutral
+auf lange frist	neutral
+auflauf	neutral
+auflehnung	neutral
+aufliegend	neutral
+auflösen	neutral
+auflösung	neutral
+auf mehrere schultern verteilen	neutral
+aufmüpfigkeit	neutral
+aufnäher	neutral
+aufnahmefähigkeit	neutral
+aufnahme	neutral
+aufnehmen	neutral
+aufopfern	neutral
+aufpasser	neutral
+aufpumpen	neutral
+aufputschmittel	neutral
+auf rechnung setzen	neutral
+aufrechterhalten	neutral
+aufrechterhaltung	neutral
+aufribbeln	neutral
+aufrichten	neutral
+aufrichtig	neutral
+aufrührerisch	neutral
+aufruhr	neutral
+aufrüstung	neutral
+aufrütteln	neutral
+aufsatzkranz	neutral
+aufsatz	neutral
+aufschäumen	neutral
+aufschäumung	neutral
+aufschieben	neutral
+auf schienen stellen	neutral
+(auf schiff) verladen	neutral
+aufschließung	neutral
+aufschlüsselung	neutral
+aufschlussreich	neutral
+aufschnitt	neutral
+aufschreien	neutral
+aufschrei	neutral
+aufschrumpfen	neutral
+aufschub	neutral
+aufschwung	neutral
+aufseher	neutral
+aufsetzen	neutral
+aufs geratewohl	neutral
+aufsicht	neutral
+aufsingen	neutral
+aufs	neutral
+aufspaltung	neutral
+aufspannen	neutral
+aufspielen	neutral
+aufstapeln	neutral
+aufsteigen	neutral
+aufstellen	neutral
+aufstellung	neutral
+auf strand laufen	neutral
+auf streife gehen	neutral
+aufsuchen	neutral
+auftakt	neutral
+aufteilen	neutral
+aufteilung	neutral
+auftraggeberin	neutral
+auftraggeber	neutral
+auftragsgeber	neutral
+auftragsmord	neutral
+auftragsvergabe	neutral
+auftrennen	neutral
+auftreten	neutral
+auftretenshäufigkeit	neutral
+auf- und abgehen	neutral
+auf vermutungen beruhend	neutral
+auf versöhnung ausgerichtet	neutral
+auf versuchen aufgebaut	neutral
+aufwachen	neutral
+aufwand	neutral
+aufwartung	neutral
+aufweisen	neutral
+aufweis	neutral
+aufwerfen	neutral
+aufwertung einer währung	neutral
+aufzehrung	neutral
+aufzeigen	neutral
+auf zeit	neutral
+aufzug	neutral
+augenblicklich	neutral
+augenblick	neutral
+augenbraue	neutral
+augenbutter	neutral
+augendeckel	neutral
+augenfällig	neutral
+augenscheinlich	neutral
+augenschlag	neutral
+august	neutral
+auktion	neutral
+ausarbeiten	neutral
+ausbaggern	neutral
+ausbauen	neutral
+ausbessern	neutral
+aus beton	neutral
+ausbeuten	neutral
+ausbilder	neutral
+ausbildungsförderung	neutral
+ausbildungsrichtung	neutral
+ausblenden	neutral
+ausblick	neutral
+ausborgen	neutral
+ausbreitung in neue lebensräume	neutral
+ausbreitung	neutral
+ausbuchsen	neutral
+ausbuchung	neutral
+ausbündig	neutral
+ausdauernd	neutral
+ausdauer	neutral
+ausdehnen	neutral
+ausdehnung	neutral
+aus dem kriegsdienst entlassen	neutral
+ausdenkbar	neutral
+ausdenken	neutral
+ausdeuten	neutral
+ausdeutung	neutral
+ausdifferenzieren	neutral
+ausdörren	neutral
+ausdrücklich	neutral
+ausdruck	neutral
+ausdrucksfähig	neutral
+ausdrucksform	neutral
+ausdünstung	neutral
+aus eigenem antrieb	neutral
+auseinandersetzung	neutral
+auseinandersprengen	neutral
+auserkoren	neutral
+auserlesen	neutral
+ausersehen	neutral
+auserwählen	neutral
+(aus etw.) austreten	neutral
+ausfallmuster	neutral
+ausflucht	neutral
+ausformen	neutral
+ausforschen	neutral
+ausfransen	neutral
+ausführender	neutral
+(ausführendes) organ	neutral
+ausführend	neutral
+ausführer	neutral
+ausführlich	neutral
+ausfuhr-	neutral
+ausfuhr	neutral
+ausführung	neutral
+aus furcht, dass	neutral
+ausgaben einplanen	neutral
+ausgabe	neutral
+ausgabenkürzung	neutral
+ausgang	neutral
+ausgangsebene	neutral
+ausgangston	neutral
+ausgeben	neutral
+ausgebreitet	neutral
+ausgedehnt	neutral
+ausgefegt	neutral
+ausgeglichenheit	neutral
+ausgeglichen	neutral
+ausgehalten	neutral
+ausgehen	neutral
+ausgeklopft	neutral
+ausgeliehen	neutral
+ausgenommen(,) dass	neutral
+ausgereist	neutral
+ausgeschlossen	neutral
+ausgestaltung	neutral
+ausgestanden	neutral
+ausgestattet	neutral
+ausgewiesen	neutral
+ausgezeichnet	positive
+aus glas	neutral
+ausgleichen	neutral
+ausgleich	neutral
+ausgleichsgetriebe	neutral
+ausgreifen	neutral
+aushalten	neutral
+aushandeln	neutral
+aushang	neutral
+aushilfe	neutral
+aus holz	neutral
+aus jüngster zeit	neutral
+auskehlung	neutral
+auskommen	neutral
+aus kontinentaleuropa	neutral
+auskundschaften	neutral
+ausladend	neutral
+ausländer	neutral
+auslands-	neutral
+ausläufer	neutral
+ausleihen	neutral
+ausleseeinheit	neutral
+auslese-	neutral
+ausleuchtung	neutral
+auslösen	neutral
+aus marmor	neutral
+ausmaß	neutral
+ausmitteln	neutral
+ausnahmslos	neutral
+aus	neutral
+ausplündern	neutral
+ausprägen	neutral
+ausprägung	neutral
+ausrangieren	neutral
+ausrechnen	neutral
+ausrechnung	neutral
+ausrede	neutral
+ausreichend	neutral
+ausreisend	neutral
+ausrichtung	neutral
+aus rohem holz	neutral
+ausrollen	neutral
+ausrüsten	neutral
+ausrüstung	neutral
+aussaat	neutral
+aussage	neutral
+aussagen	neutral
+ausschalten	neutral
+ausscheidung	neutral
+ausschelten	neutral
+ausschlagen	neutral
+ausschlaggebend	neutral
+ausschliesslichkeit	neutral
+ausschmelzen	neutral
+ausschmücken	neutral
+ausschnitt	neutral
+aus schottland	neutral
+aus seide	neutral
+außenbezirk	neutral
+außen-	neutral
+außen	neutral
+außenring	neutral
+außenschale	neutral
+außerdem	neutral
+außergewöhnlich	neutral
+außer landes	neutral
+außer	neutral
+außerordentlich	neutral
+außer stande	neutral
+aussicht	neutral
+aussichtslos	neutral
+aussichtspunkt	neutral
+aus silber	neutral
+ausspähen	neutral
+aussprache	neutral
+aussprechen	neutral
+ausspülen	neutral
+ausstaffieren	neutral
+ausstatterin	neutral
+ausstattung	neutral
+ausstehen	neutral
+aussteifen	neutral
+aussteigen	neutral
+ausstellung	neutral
+ausstoßen	neutral
+ausstrahlen	neutral
+austastschulter	neutral
+australien	neutral
+australierin	neutral
+austriakisch	neutral
+ausüben	neutral
+auswählbar	neutral
+ausweg	neutral
+ausweichen	neutral
+ausweis	neutral
+ausweitung der kampfzone	neutral
+auswirkungen haben auf	neutral
+auswirkung	neutral
+auszacken	neutral
+auszahlbar	neutral
+auszahlungsbetrag	neutral
+auszeichnung	neutral
+auszeit	neutral
+autlerin	neutral
+autobahn	neutral
+autobus	neutral
+autocar	neutral
+autofahrer	neutral
+autokino	neutral
+automatikschaltung	neutral
+automobil-	neutral
+automobil	neutral
+auto	neutral
+autonomie	neutral
+autonom	neutral
+autorenhonorar	neutral
+autoreparaturwerkstatt	neutral
+autorin	neutral
+autorisieren	neutral
+autoritär	neutral
+autor	neutral
+autostraße	neutral
+autoverkehr	neutral
+baaz	neutral
+baby-	neutral
+babysitter	neutral
+bach	neutral
+backe	neutral
+backen	neutral
+bäckerin	neutral
+backfisch	neutral
+background	neutral
+backofen	neutral
+bacon	neutral
+badegast	neutral
+badehaus	neutral
+bademeister	neutral
+baden	neutral
+bader	neutral
+badezimmer	neutral
+bad	neutral
+bagatelle	neutral
+bag	neutral
+bahnbrechend	neutral
+bahnbrecher	neutral
+bahngesellschaft	neutral
+bahn	neutral
+bahnräumer	neutral
+bahnsteig	neutral
+bakkalaureus	neutral
+balde	neutral
+baldig	neutral
+balg	neutral
+balgwerk	neutral
+balken	neutral
+balkenträger	neutral
+balkon	neutral
+ballaststoff	neutral
+ballbesitz	neutral
+ballen	neutral
+balletttruppe	neutral
+ballistisch	neutral
+ball	neutral
+ballon	neutral
+ballungszentrum	neutral
+balsam	neutral
+balzen	neutral
+banda	neutral
+bandel	neutral
+bande	neutral
+band	neutral
+bandschleife	neutral
+bangen	neutral
+banker / galopp in gefahr	neutral
+bankettieren	neutral
+bankkassierer	neutral
+bank	neutral
+bann	neutral
+baracke	neutral
+barde	neutral
+barke	neutral
+bar	neutral
+barrel	neutral
+baseball	neutral
+base	neutral
+basis	neutral
+bassin	neutral
+batist	neutral
+bauarbeiter	neutral
+bauch-	neutral
+bauch	neutral
+baudenkmal	neutral
+bauelement	neutral
+bäuerlich	neutral
+-bauer	neutral
+bauer	neutral
+bauernhaus	neutral
+bauern-	neutral
+baulich	neutral
+baumallee	neutral
+baum-	neutral
+baumnuss	neutral
+baumwoll-	neutral
+bau	neutral
+baustoff	neutral
+bayern	neutral
+beabsichtigen	neutral
+beabsichtigt	neutral
+beachten	neutral
+beachtenswert	neutral
+beachtlich	neutral
+beachtung	neutral
+beamtenapparat	neutral
+beamter	neutral
+bean – der ultimative katastrophenfilm	neutral
+beantragen	neutral
+beantwortbar	neutral
+bearbeitung	neutral
+beaufsichtigen	neutral
+beauftragte organisierter interessengruppen	neutral
+beautiful	neutral
+beben	neutral
+becken-	neutral
+becken	neutral
+bedächtig	neutral
+bedacht	neutral
+bedampfen	neutral
+bedarf	neutral
+bedauernswert	negative
+bedeckt	neutral
+bedenken	neutral
+bedeutend	neutral
+bedeutsam	neutral
+bedeutung	neutral
+bedeutungsschwanger	neutral
+bedingen	neutral
+bedingte strafe	neutral
+bedingt freigelassen	neutral
+bedingtheit	neutral
+bedingung	neutral
+bedrückt	neutral
+beefsteak	neutral
+beeindruckend	neutral
+beeinträchtigen	neutral
+beengend	neutral
+beerdigung	neutral
+beerdigungsunternehmer	neutral
+befähigung	neutral
+befangen	neutral
+befehlskette	neutral
+befestigen	neutral
+befeuchten	neutral
+befiedern	neutral
+beförderer	neutral
+befördern	neutral
+beförderungsmittel	neutral
+befragerin	neutral
+befreiung	neutral
+befreiung von einer illusion	neutral
+befriedigung	neutral
+befugnis	neutral
+befund	neutral
+befundung	neutral
+befürwortend	neutral
+befürworten	neutral
+begann	neutral
+begebenheit	neutral
+begeistert	neutral
+begeisterung	neutral
+begierig	neutral
+begießen	neutral
+beglaubigen	neutral
+begleiten	neutral
+begleitumstand	neutral
+begreifen	neutral
+begrenzen	neutral
+begrenzt haltbar	neutral
+begrenzt	neutral
+begrenzung	neutral
+begründbar	neutral
+begründen	neutral
+begründer	neutral
+begünstigen	neutral
+begünstigung	neutral
+begütigen	neutral
+behälter	neutral
+behältnis	neutral
+behandlung	neutral
+behandlungsweise	neutral
+behang	neutral
+beharren	neutral
+behaupten	neutral
+behausung	neutral
+beherrschender gedanke	neutral
+beherrschende stelle	neutral
+beherrschend	neutral
+beherrscher	neutral
+behutsam	neutral
+beibringen	neutral
+bei dem / der / denen	neutral
+beide	neutral
+beidseitig	neutral
+beifügen	neutral
+beigabe	neutral
+beigebracht	neutral
+(bei jdm.) nachbohren	neutral
+beilagescheibe	neutral
+beinahe	neutral
+bei	neutral
+beinhalten	neutral
+bein	neutral
+beirat	neutral
+beirrt	neutral
+beispiellos	neutral
+beispiel	neutral
+beistand	neutral
+beistellung	neutral
+beistimmen	neutral
+bejahrt	neutral
+bekanntgabe	neutral
+bekanntheitsgrad	neutral
+bekehrungstätigkeit	neutral
+bekenner	neutral
+bekenntnis	neutral
+bekleiden	neutral
+bekloppter	neutral
+bekommen	neutral
+bekräftigung	neutral
+bekunden	neutral
+belag	neutral
+belämmert	neutral
+belanglos	neutral
+belästigen	neutral
+belastung eines grundstücks	neutral
+beleg	neutral
+belehrung	neutral
+belgien	neutral
+belgierin	neutral
+beliebig	neutral
+bemängeln	neutral
+bemängelung	neutral
+bemerken	neutral
+benachbart	neutral
+benachrichtigen	neutral
+benachteiligend	neutral
+benamsen	neutral
+beneath	neutral
+benehmen	neutral
+benennen	neutral
+benimmregeln	neutral
+benommen	neutral
+benutzerdefiniert	neutral
+benzin	neutral
+beobachterin	neutral
+bequem	neutral
+beratender arzt	neutral
+beratende versammlung	neutral
+beratend	neutral
+berechenbar	neutral
+berechnung	neutral
+bereich	neutral
+bereit	neutral
+bereitschaft	neutral
+bereits	neutral
+bergarbeiterin	neutral
+bergen	neutral
+berg-	neutral
+bergrücken	neutral
+bergschlucht	neutral
+berichten	neutral
+berichterstatterin	neutral
+berichterstatter	neutral
+berichtet	neutral
+bericht	neutral
+beriechen	neutral
+berlinerisch	neutral
+berücksichtigen	neutral
+berufliche entwicklung	neutral
+(berufliche) höherversetzung	neutral
+beruflich	neutral
+(beruflich) tätig sein	neutral
+berufspendler	neutral
+berufssänger	neutral
+beruhen	neutral
+berühmtheit	neutral
+berührbar	neutral
+besagt	neutral
+besatzung	neutral
+beschädigung	neutral
+beschaffenheit	neutral
+beschaffer	neutral
+beschauer	neutral
+beschaulichkeit	neutral
+beschaulich	neutral
+bescheid	neutral
+beschimpfen	neutral
+beschlagen	neutral
+beschleunigen	neutral
+beschließerin	neutral
+beschluss	neutral
+beschönigen	neutral
+beschreiben	neutral
+beschreibung	neutral
+beschreiten	neutral
+beschriften	neutral
+beschriftung	neutral
+besessener	neutral
+besiedeln	neutral
+besiedlung	neutral
+besiegen	neutral
+besinnung	neutral
+besinnungslos	neutral
+besitzanzeigend	neutral
+besitzbürger	neutral
+besitzen	neutral
+besitzerin	neutral
+besitzer	neutral
+besitz	neutral
+besoldung	neutral
+besondere	neutral
+besondere veranlagung	neutral
+bespiegeln	neutral
+bespringen	neutral
+besser	positive
+besserung	neutral
+beständigkeit	neutral
+beständig	neutral
+bestand	neutral
+bestandsaufnahme	neutral
+bestandsbuch	neutral
+bestätigen	neutral
+bestätigung	neutral
+bestehen aus	neutral
+bestehen bleiben	neutral
+besteuerung	neutral
+bestimmen	neutral
+bestimmgröße	neutral
+bestimmtheit	neutral
+bestimmt	neutral
+bestimmung	neutral
+bestimmungsort	neutral
+bestreiken	neutral
+bestreiten	neutral
+bestürmen	neutral
+bestürzen	neutral
+besucherin	neutral
+beteiligen	neutral
+beteiligter	neutral
+beten	neutral
+beteuern	neutral
+bethaus	neutral
+betonen	neutral
+betrachter	neutral
+betrag	neutral
+betreffen	neutral
+betreff	neutral
+betreiben	neutral
+betreuer	neutral
+betrieblich	neutral
+betrieb	neutral
+betriebsdauer	neutral
+betriebsintern	neutral
+betriebsmittel	neutral
+betroffener	neutral
+betrügen	neutral
+betrüger	neutral
+betrug	neutral
+betrunken	neutral
+betsaal	neutral
+bett-tuch	neutral
+beule	neutral
+beurteilen	neutral
+beurteilung	neutral
+beuschel	neutral
+bevölkern	neutral
+bevollmächtigter	neutral
+bevormundung	neutral
+bevor	neutral
+bevorstehend	neutral
+bewahrend	neutral
+bewährt	neutral
+bewahrung	neutral
+bewandern	neutral
+bewegbar	neutral
+beweger	neutral
+bewegliche sachen	neutral
+beweglich	neutral
+bewegt	neutral
+bewegung	neutral
+bewegungsgröße	neutral
+bewilligen	neutral
+bewirtung	neutral
+bewohner einer kolonie	neutral
+bewohnerin	neutral
+(bewusst) übertrieben	neutral
+bezahlt	neutral
+bezaubern	neutral
+bezeichnend	neutral
+bezeichnen	neutral
+beziehungen	neutral
+beziehungskiste	neutral
+bezirk	neutral
+bezogener	neutral
+bezüglich	neutral
+bezugsmaß	neutral
+bezugssystem	neutral
+bibel	neutral
+biberhut	neutral
+bibliothek	neutral
+biblisch	neutral
+biegen	neutral
+bier	neutral
+bigotterie	neutral
+bilanziell	neutral
+bildersprache	neutral
+bildhauerarbeit	neutral
+bildnis	neutral
+bildschirmfenster	neutral
+bildschirmhintergrund	neutral
+bildung	neutral
+billig im gebrauch	neutral
+billig	neutral
+billion	neutral
+bimbo	neutral
+binär	neutral
+bindend	neutral
+bindig	neutral
+bindung	neutral
+binnenland	neutral
+binnen-	neutral
+binnen	neutral
+binnensee	neutral
+biografie	neutral
+biologikum	neutral
+(biologische) sanierung	neutral
+bio-	neutral
+birmanen	neutral
+birma	neutral
+bischof	neutral
+bis dahin	neutral
+bisherig	neutral
+bisher	neutral
+bis	neutral
+bitumenreich	neutral
+bizeps	neutral
+blaken	neutral
+blank	neutral
+blass	neutral
+-blatt	neutral
+blatt	neutral
+blaubarsch	neutral
+blauer morphofalter	neutral
+blaues auge	neutral
+blaurot	neutral
+blechdose	neutral
+bleistift	neutral
+blende	neutral
+blendenverschluss	neutral
+blicken	neutral
+blickfang	neutral
+blick	neutral
+blitzartig	neutral
+blitzlicht	neutral
+blizzard	neutral
+bloch	neutral
+blockieren	neutral
+block	neutral
+blödigkeit	neutral
+blödmann	neutral
+bloß	neutral
+blühend	neutral
+blume	neutral
+blumenkasten	neutral
+blütezeit	neutral
+blutgier	neutral
+blutschande	neutral
+blutsverwandt	neutral
+blut und gold	neutral
+bocher	neutral
+bock	neutral
+bodenlos	neutral
+böe	neutral
+bogengewölbe	neutral
+bogen	neutral
+bohnern	neutral
+bolivien	neutral
+bolle	neutral
+bollwerk	neutral
+bonbon	neutral
+bootsmann	neutral
+borde	neutral
+bordküche	neutral
+borusse	neutral
+bösartig	neutral
+böse	negative
+bostoner	neutral
+botmäßigkeit	neutral
+botschaftsgebäude	neutral
+bouldern	neutral
+bourgeoisie	neutral
+boxerin	neutral
+brachial	neutral
+brachliegend	neutral
+branche	neutral
+branchenüblich	neutral
+brandmal	neutral
+brandy	neutral
+brasilien	neutral
+brauchbarkeit	neutral
+brauch	neutral
+braunkohle	neutral
+brause	neutral
+brausen	neutral
+braut	neutral
+bravourieren	neutral
+bregen	neutral
+brei	neutral
+breite	neutral
+breitengrad	neutral
+(breite) strasse	neutral
+(breitwürfig) säen	neutral
+brenn-	neutral
+bridge	neutral
+briefe austauschen	neutral
+brise	neutral
+britisch	neutral
+broker	neutral
+bronze-	neutral
+broschüre	neutral
+brot	neutral
+brotzeit	neutral
+brücke	neutral
+bruder-	neutral
+bruderschaft	neutral
+brummspannung	neutral
+brust-	neutral
+brustwarze	neutral
+brutal	neutral
+brutto	neutral
+bua	neutral
+buchbinden	neutral
+buchführung	neutral
+büchse	neutral
+buchstaben-	neutral
+buchstäblich	neutral
+bude	neutral
+budget-	neutral
+büffelochse	neutral
+buganker	neutral
+bugsieren	neutral
+bühnenbild	neutral
+buhne	neutral
+bühne	neutral
+bulgarien	neutral
+bulkware	neutral
+bulle	neutral
+bummeln	neutral
+bummler	neutral
+bumsen	neutral
+bumskneipe	neutral
+bündeln	neutral
+bundeseinheitlich	neutral
+bundes-	neutral
+bund	neutral
+bunkern	neutral
+bunt gefleckt	neutral
+(bunt) zusammengewürfelt	neutral
+bürge	neutral
+bürgerlich	neutral
+bürgermeisterin	neutral
+bürger-	neutral
+bürgerrecht	neutral
+bürgerschaft	neutral
+bürgersteig	neutral
+bürgerwehr	neutral
+burg-	neutral
+burgvogt	neutral
+bürokratisch	neutral
+burundisch	neutral
+(buschiger) schwanz	neutral
+busch	neutral
+businessman	neutral
+büsi	neutral
+busleitung	neutral
+bussard	neutral
+(butter) auslassen	neutral
+buxe	neutral
+café complet	neutral
+calcium	neutral
+campus	neutral
+cannabis	neutral
+canyon	neutral
+carolina – auf der suche nach mr. perfect	neutral
+carry	neutral
+cäsarenherrschaft	neutral
+catcher	neutral
+cent	neutral
+centurie	neutral
+ceylon	neutral
+chairman	neutral
+chancen	neutral
+(charakteristische) eigenschaft	neutral
+charakterzug	neutral
+charten	neutral
+chatten	neutral
+chatterin	neutral
+check	neutral
+chef-	neutral
+chef	neutral
+chemie	neutral
+chemikalie	neutral
+chicagoer	neutral
+chiffre	neutral
+chile	neutral
+china	neutral
+chinese	neutral
+chirurgin	neutral
+choral	neutral
+choristin	neutral
+chormantel	neutral
+chose	neutral
+christenheit	neutral
+christfest	neutral
+christus	neutral
+chronik	neutral
+city-	neutral
+city	neutral
+cloud	neutral
+cockpit-theater	neutral
+cocktail für eine leiche	neutral
+colorado	neutral
+columbia	neutral
+commonwealth	neutral
+componist	neutral
+computer	neutral
+computerprogramm	neutral
+computertastatur	neutral
+connecticut	neutral
+contra	neutral
+cookie	neutral
+copyright	neutral
+corner	neutral
+cornflakes	neutral
+corporation	neutral
+corpus delicti	neutral
+corpus	neutral
+cottage	neutral
+couchgarnitur	neutral
+coup	neutral
+credo	neutral
+creep	neutral
+croupier	neutral
+crystal meth	neutral
+cutterin	neutral
+dabei	neutral
+dachdeckerin	neutral
+dach-	neutral
+dachs	neutral
+daddy	neutral
+dad	neutral
+daher	neutral
+dahintraben	neutral
+dahinvegetierender	neutral
+da ja	neutral
+damalig	neutral
+dame	neutral
+damentoilette	neutral
+dämmmaterial	neutral
+danach	neutral
+dänemark	neutral
+dänisch	neutral
+daran denken	neutral
+daran	neutral
+(darauf) aufmerksam machen	neutral
+daraus folgend	neutral
+daraus	neutral
+darin	neutral
+darüber hinaus	neutral
+darunter	neutral
+dasein	neutral
+das geschlecht bestimmen	neutral
+das	neutral
+das patent	neutral
+das ritual – im bann des bösen	neutral
+dasselbe	neutral
+datenscheibe	neutral
+datenträger	neutral
+datenwort	neutral
+dauerhaft	neutral
+dauer	neutral
+daumen	neutral
+daunendecke	neutral
+dazu bringen, dass	neutral
+dazugehören	neutral
+dazu	neutral
+dazwischenfahren	neutral
+dazwischenliegend	neutral
+dazwischen	neutral
+dechant	neutral
+deckelung	neutral
+defäkieren	neutral
+deformationsfähigkeit	neutral
+degen	neutral
+dehnbar	neutral
+deichsel	neutral
+deiner	neutral
+dein	neutral
+dekade	neutral
+dekadisch	neutral
+delle	neutral
+dem brauch entsprechend	neutral
+dem nachkommen	neutral
+demokratie	neutral
+demokratin	neutral
+demokratisch	neutral
+demokratisierung	neutral
+demo	neutral
+demonstrant	neutral
+demonstration	neutral
+demoralisieren	neutral
+dem vertrag entsprechend	neutral
+(den abzug) abkrümmen	neutral
+den durchschlag herbeiführend	neutral
+denen	neutral
+denkansatz	neutral
+denken	neutral
+denkerin	neutral
+denkweise	neutral
+den	neutral
+dennoch	neutral
+dentist	neutral
+den vorsitz führen	neutral
+den winter verbringen	neutral
+depesche	neutral
+depp	neutral
+der alp	neutral
+derartig	neutral
+derb	neutral
+derby	neutral
+der denver-clan	neutral
+der / die / das ihre	neutral
+der / die / das seine	neutral
+der / die / das unsere	neutral
+deren	neutral
+der ermittler	neutral
+der gegenwart	neutral
+dergleichen	neutral
+der gleichen zeit	neutral
+der grosse kanton	neutral
+(der) irak	neutral
+(der) iran	neutral
+(der) jemen	neutral
+der jüngere	neutral
+der länge nach	neutral
+(der) libanon	neutral
+der liebe gott	neutral
+dermalen	neutral
+der nachkriegszeit	neutral
+der sonne aussetzen	neutral
+derweilen	neutral
+designierter präsident	neutral
+des mittelalters	neutral
+despotie	neutral
+despotin	neutral
+dessert	neutral
+deterministisch	neutral
+(deutlich) zeigen	neutral
+deutsches beefsteak	neutral
+deutsch	neutral
+deutungszusammenhang	neutral
+dezember	neutral
+dezent	neutral
+dezentralisieren	neutral
+dezime	neutral
+dialekt	neutral
+dialogisch	neutral
+diameter	neutral
+diäten	neutral
+diathese	neutral
+dich	neutral
+dich selbst	neutral
+dichtbeilage	neutral
+dichte	neutral
+dichten	neutral
+dichterisch	neutral
+dichter	neutral
+(dicht) gedrängt	neutral
+dichtkunst	neutral
+dicht	neutral
+dichtung	neutral
+dickenhobelmaschine	neutral
+dickkopf	neutral
+dictionnaire	neutral
+diebe	neutral
+die dreharbeiten beenden	neutral
+die eiskönigin – völlig unverfroren	neutral
+die entscheidung	neutral
+die feine gesellschaft	neutral
+die gute stube	neutral
+die kathedrale	neutral
+diele	neutral
+(die) menschheit	neutral
+die nacht über	neutral
+diener	neutral
+die niederlande	neutral
+dienstag	neutral
+dienstbarkeit	neutral
+dienstmagd	neutral
+dienstmann	neutral
+die oberhand erlangen	neutral
+die prophezeiung	neutral
+die rassentrennung aufheben	neutral
+die schwester der braut	neutral
+diese	neutral
+die treppe hinauf	neutral
+die umwelt betreffend	neutral
+differenziertheit	neutral
+diffus	neutral
+digital-	neutral
+diktatorin	neutral
+diligence	neutral
+dingwort	neutral
+diplomatie	neutral
+diplomatisch	neutral
+direktheit	neutral
+direkt	neutral
+direktor	neutral
+diskussionsthema	neutral
+disqualifikation	neutral
+distribuent	neutral
+diver	neutral
+divisionsrest	neutral
+docke	neutral
+dogma	neutral
+dogmatismus	neutral
+doktrin	neutral
+dolch	neutral
+dollar	neutral
+dolly	neutral
+dominicanerin	neutral
+donnern	neutral
+donnerstag	neutral
+doppel-	neutral
+doppelt	neutral
+dorfbewohnerin	neutral
+dörfchen	neutral
+dorf-	neutral
+dorn	neutral
+dort drüben	neutral
+dosieren	neutral
+drall	neutral
+drama	neutral
+dramatisch	neutral
+drangsal	neutral
+drastikum	neutral
+draufgänger	neutral
+drehrund	neutral
+dreidimensional	neutral
+drei	neutral
+dreißig	neutral
+dreistigkeit	neutral
+dreizehn	neutral
+dreizehnte	neutral
+dringlicher fall	neutral
+dringlichkeit	neutral
+dringlichkeitsstufe	neutral
+drink	neutral
+drinnen	neutral
+drittel	neutral
+droschke	neutral
+druck	neutral
+druckvoll	neutral
+drumrum	neutral
+drüse	neutral
+ductus	neutral
+dudelkasten	neutral
+dufte puppe	neutral
+duft	neutral
+duldsam	neutral
+du	neutral
+düngemittel	neutral
+dung	neutral
+dunkelheit	neutral
+dunkel	neutral
+dünnflüssig	neutral
+dunstig	neutral
+duodezime	neutral
+duo	neutral
+duplikation	neutral
+durchaus	neutral
+durchaus nicht	neutral
+durch den gesetzgeber	neutral
+durchdringen	neutral
+durcheinanderkommen	neutral
+durcheinander	neutral
+durcheinander wirbeln	neutral
+(durch etw.) durchschlagen	neutral
+durchfahrt	neutral
+durchführung	neutral
+durchgebrannt	neutral
+durchgedreht	neutral
+durchgehend	neutral
+durchgemacht	neutral
+durchkontaktierung	neutral
+durchkreuzen	neutral
+durchleben	neutral
+durch	neutral
+durchschlagskraft	neutral
+durchspielen	neutral
+durch testament verfügen	neutral
+dürftig	negative
+dutzend	neutral
+dynamik	neutral
+dynamisch	neutral
+dysenterie	neutral
+ebene	neutral
+ebenheit	neutral
+eckladen	neutral
+ecuador	neutral
+edelstein	neutral
+edinburgh	neutral
+editorisch	neutral
+effet	neutral
+ego	neutral
+ehefrauen	neutral
+ehemalig	neutral
+eher	neutral
+eheschließung	neutral
+ehrenamtlicher	neutral
+ehrenmänner	neutral
+ehrenmann	neutral
+ehrfurcht einflößen	neutral
+ehrwürdig	neutral
+eichelmast	neutral
+eichen-	neutral
+eichhörnchen	neutral
+eidgenössisch	neutral
+eidschwur	neutral
+eifersüchtig bedacht	neutral
+eifersucht	neutral
+eigene person	neutral
+eigenstaatlichkeit	neutral
+eigentlich	neutral
+eigentümlich	neutral
+eiland	neutral
+eilen	neutral
+einbau	neutral
+einbeere	neutral
+einbegleitung	neutral
+ein beliebiger	neutral
+einbildung	neutral
+ein bisschen	neutral
+einbürgerung	neutral
+eindeutig	neutral
+eindicken	neutral
+eindringen	neutral
+(eine akte) einsehen	neutral
+(eine bestimmte) politik	neutral
+eine hauptrolle spielen	neutral
+eineiig	neutral
+eine kurznachricht versenden	neutral
+(eine) markierung anbringen	neutral
+eine medaille gewinnen	neutral
+einem	neutral
+einen dollar für die unschuld	neutral
+einen fehler begehen	neutral
+einen gegensatz bilden	neutral
+einen	neutral
+einen schwarm bilden	neutral
+einen totalschaden verursachen	neutral
+einen tunnel graben	neutral
+einen vortrag halten	neutral
+einer meinung	neutral
+einer selbst	neutral
+(eine schleifscheibe) abziehen	neutral
+(eine strafe) ausfassen	neutral
+eine volkszählung durchführen	neutral
+eine weile	neutral
+einfach	neutral
+einfahrt	neutral
+einfallsreich	neutral
+einfamilienhaus	neutral
+einfassen	neutral
+einfluss	neutral
+einflussreich	neutral
+eingebaut	neutral
+eingeben	neutral
+eingebildet	neutral
+(eingedickter) fleischsud	neutral
+eingefahren	neutral
+eingefallen	neutral
+eingefleischt	neutral
+eingegangen	neutral
+eingekauft	neutral
+eingeklemmt	neutral
+ein gespräch führen	neutral
+eingeweiht	neutral
+eingewöhnen	neutral
+einigung	neutral
+(ein jahresgehalt von € 10000) beziehen	neutral
+ein jeglicher	neutral
+ein kind erziehen	neutral
+einklang	neutral
+einkommensschwach	neutral
+ein lamm werfen	neutral
+einleitend	neutral
+einlochen	neutral
+ein loch geschlagen	neutral
+einmummen	neutral
+ein nickerchen machen	neutral
+(ein pferd) abhängen	neutral
+(ein pferd) beschlagen	neutral
+einpökeln	neutral
+einreiben	neutral
+einreisebehörde	neutral
+einsalzen	neutral
+einsargen	neutral
+einsatz	neutral
+einschließen	neutral
+einschüchtern	neutral
+einsegnen	neutral
+einsehbar	neutral
+einsparung	neutral
+einstellung	neutral
+einstern	neutral
+(ein stück) ausbrechen	neutral
+einstweilen	neutral
+einstweilig	neutral
+ein tausendstel dollar	neutral
+eintel	neutral
+eintreten	neutral
+einwanderer	neutral
+einwandern	neutral
+einwärts	neutral
+ein zeichen geben	neutral
+einzeln	neutral
+einzigartig	neutral
+eirund	neutral
+eisig	neutral
+eisschrank	neutral
+eitler geck	neutral
+eizelle	neutral
+ekelerregend	negative
+ekelhaft	negative
+ekelig	negative
+ekklesiastisch	neutral
+elefanten	neutral
+elektrisch	neutral
+elektrisch positiv	neutral
+elektrizität	neutral
+elektronik	neutral
+(elektronische) banküberweisung	neutral
+elektronisch	neutral
+elektron	neutral
+elementar	neutral
+elf	neutral
+elitedenken	neutral
+elle	neutral
+elongiert	neutral
+elterlich	neutral
+emotional gefärbt	neutral
+empfänger	neutral
+empirisch	neutral
+emporwerfen	neutral
+endgültig	neutral
+endlichkeit	neutral
+endlich	neutral
+(endlose) geschichte	neutral
+endlos	neutral
+endpunkt	neutral
+energielos	neutral
+engelsflammen	neutral
+england	neutral
+en gros verkaufen	neutral
+enkelkinder	neutral
+enkelkind	neutral
+enkel	neutral
+enorm	neutral
+entbindung	neutral
+entdecker	neutral
+entdeckungsreise	neutral
+enteignung	neutral
+entfalten	neutral
+entfesselt	neutral
+entfremden	neutral
+entfremdung	neutral
+enthalten	neutral
+enthaltsamkeit üben	neutral
+enthaltsam	neutral
+entkörnen	neutral
+entmannen	neutral
+entropie	neutral
+entschädigung	neutral
+entscheidend	neutral
+entschlusslos	neutral
+entsprechend	neutral
+entsprechen	neutral
+entsprechung	neutral
+entstehung	neutral
+entwicklungsmäßig	neutral
+entwicklungstendenz	neutral
+entzweibrechen	neutral
+epoche	neutral
+erbarmen	neutral
+erbbiologisch	neutral
+erbe	neutral
+erbittern	neutral
+erblickt	neutral
+erbse	neutral
+erdball	neutral
+erdenrund	neutral
+erdhälfte	neutral
+erdkundlich	neutral
+erdverlegt	neutral
+erdwall	neutral
+erfahrender	neutral
+erfindung	neutral
+erfolg	neutral
+erforderlichkeit	neutral
+erforderlich	neutral
+erfordernis	neutral
+erforschend	neutral
+erforschen	neutral
+erfüllung	neutral
+ergänzend	neutral
+ergebnis	neutral
+ergrauen	neutral
+erhitzer	neutral
+erhöhen	neutral
+erholungsurlaub	neutral
+erkennbar	neutral
+erkenntnis	neutral
+erlangbar	neutral
+erleiden	neutral
+ermahnen	neutral
+ernährung	neutral
+ernährungsweise	neutral
+erneuerer	neutral
+erneuern	neutral
+erneuerung	neutral
+(erneut) bekräftigen	neutral
+erneute erwägung	neutral
+erneut in betracht ziehen	neutral
+er	neutral
+ernsteste	neutral
+ernst	neutral
+eroberungsgrenze	neutral
+erreichen	neutral
+ersatz	neutral
+erscheinungen	neutral
+erscheinung	neutral
+erschreckt	neutral
+erschüttern	neutral
+erschwingen	neutral
+er selbst	neutral
+erstatten	neutral
+erstaunt blicken	neutral
+erste	neutral
+erster	neutral
+erste steigerung	neutral
+erstschrift	neutral
+erstsemester	neutral
+erwachen	neutral
+erwartung	neutral
+erzählung	neutral
+erzeuger	neutral
+erzieher	neutral
+erz	neutral
+es hat	neutral
+eskadron	neutral
+esplanade	neutral
+essen	neutral
+essenz	neutral
+esser	neutral
+etc.	neutral
+ethnisch	neutral
+ethos	neutral
+et	neutral
+etwa	neutral
+(etw.) annehmen	neutral
+(etw.) auflegen	neutral
+(etw.) aussalzen	neutral
+(etw.) binden	neutral
+(etw.) buchen	neutral
+(etw.) dörren	neutral
+(etw.) escapen	neutral
+(etw.) essen	neutral
+(etw.) gewinnen	neutral
+(etw.) herbsten	neutral
+(etw.) kugeln	neutral
+(etw.) lesen	neutral
+(etw.) sagen	neutral
+(etw.) schlucken	neutral
+(etw.) ständig wiederholen	neutral
+(etw.) telegraphieren	neutral
+(etw.) üben	neutral
+(etw.) übertreiben	neutral
+(etw.) wählen	neutral
+(etw.) zimmern	neutral
+euch selbst	neutral
+(eurasische) wasseramsel	neutral
+europäerin	neutral
+europa	neutral
+euter	neutral
+evangelisch	neutral
+evangelium	neutral
+eventuell	neutral
+ever	neutral
+examen	neutral
+examinator	neutral
+expedition kongo	neutral
+experimentatorin	neutral
+experimentieren	neutral
+explosion in cuba	neutral
+extrapolation	neutral
+extrapolieren	neutral
+extreme steigerung	neutral
+extrem	neutral
+fabrikmäßig	neutral
+facharbeiterin	neutral
+fach-	neutral
+fachsemester	neutral
+fahnder	neutral
+fahrender	neutral
+fahren	neutral
+fahrrinne	neutral
+fahrstrecke	neutral
+fahrt	neutral
+fahrzeugpark	neutral
+faktion	neutral
+faktum	neutral
+fallschirm	neutral
+falls	neutral
+falsch behandeln	neutral
+falsche behandlung	neutral
+fälschen	neutral
+falsch	negative
+fälschung	neutral
+falter	neutral
+familiär	neutral
+farbkörper	neutral
+farbton	neutral
+farmer	neutral
+farm	neutral
+faser	neutral
+fassbar	neutral
+fassungslos	neutral
+fasten	neutral
+fatum	neutral
+favoritin	neutral
+feber	neutral
+federführung	neutral
+federvieh	neutral
+fehler	neutral
+fehlleiten	neutral
+fehlsteuerung	neutral
+feierliches versprechen	neutral
+feier	neutral
+feigenbaum	neutral
+feige	neutral
+feingliedrig	neutral
+feldwebel	neutral
+felsenfest	neutral
+felsig	neutral
+felsvorsprung	neutral
+feminin	neutral
+feriengast	neutral
+ferner	neutral
+fern	neutral
+fernsehen	neutral
+fernsehgesellschaft	neutral
+festigkeit	neutral
+festigung	neutral
+festland	neutral
+fest	neutral
+festung	neutral
+fetzen	neutral
+feuchte	neutral
+feuchter umschlag	neutral
+feuchtigkeit	neutral
+feudalherrschaft	neutral
+feuerstein	neutral
+feurig	neutral
+fiberglas	neutral
+fieber	neutral
+(fiebrige) erkältung	neutral
+fies	negative
+filmentwickler	neutral
+film-	neutral
+finanziell	neutral
+finanzministerium	neutral
+finanz-	neutral
+fingerbreit	neutral
+fingerspitzengefühl	neutral
+finken	neutral
+firmen-	neutral
+firmenzentrale	neutral
+fiskus	neutral
+fispern	neutral
+flaschenzug	neutral
+flaschner	neutral
+flattern	neutral
+fleischerin	neutral
+fleisch	neutral
+flieger	neutral
+fließen	neutral
+flimmern	neutral
+flink	neutral
+flitz	neutral
+florida	neutral
+flöten	neutral
+flotten-	neutral
+flucht	neutral
+flügel	neutral
+flugkörper	neutral
+flugmaschine	neutral
+fluktuieren	neutral
+fluse	neutral
+flüssigkeit	neutral
+föderieren	neutral
+fohlen	neutral
+folgewidrig	neutral
+folklore	neutral
+formel	neutral
+formschön	neutral
+forsch	neutral
+forschung	neutral
+forschungsstätte	neutral
+forstbetrieb	neutral
+försterin	neutral
+fortfahren	neutral
+fortlaufend	neutral
+fortune	neutral
+forum	neutral
+fossilisieren	neutral
+fotografisch	neutral
+frachten	neutral
+fragebogen	neutral
+fragerin	neutral
+fraglos	neutral
+frala	neutral
+französisch	neutral
+frappieren	neutral
+frauchen	neutral
+frauen-	neutral
+frauensperson	neutral
+frau	neutral
+freierdings	neutral
+freier makler	neutral
+freigeben	neutral
+freikorporal	neutral
+freilassung	neutral
+frei	neutral
+freitag	neutral
+freizügigkeit	neutral
+fremd	neutral
+fresse	neutral
+freudig	neutral
+freunderlwirtschaft	neutral
+freundin	neutral
+freundlichkeit	neutral
+freundlich	positive
+freundschaft	neutral
+friedensmäßig	neutral
+friedfertig	neutral
+friktion	neutral
+frischrasen-weißfleckeule	neutral
+frist	neutral
+frontscheibe	neutral
+frontscheinwerfer	neutral
+frostempfindlich	neutral
+früher	neutral
+frühgeboren	neutral
+früh	neutral
+fuchsig	neutral
+fuchs	neutral
+fuchzehn	neutral
+fuchzig	neutral
+fügsamkeit	neutral
+fügung	neutral
+fühler	neutral
+führen	neutral
+fuhrmann	neutral
+führung	neutral
+führungshilfe	neutral
+führungs-	neutral
+fuhrwerk	neutral
+fülle	neutral
+fundament	neutral
+fünfeck	neutral
+fünfer	neutral
+fünfte	neutral
+fünfzehnte	neutral
+fünfzigste	neutral
+funkmeßtechnik	neutral
+funktion	neutral
+funktionseinheit	neutral
+(für den markt bestimmtes) gemüse	neutral
+(für eine anzahl von personen) platz haben	neutral
+fürstin	neutral
+fürst	neutral
+fürwahr	neutral
+fusionierung	neutral
+fußgänger	neutral
+fuß	neutral
+fußtruppe	neutral
+gabelfrühstück	neutral
+gab	neutral
+gabun	neutral
+gallone	neutral
+gambia	neutral
+gangart	neutral
+ganz gleich wer	neutral
+ganz	neutral
+ganzrandig	neutral
+ganztags	neutral
+garderobe	neutral
+garen	neutral
+garteln	neutral
+gartenbaukunst	neutral
+gartenkürbis / garten-kürbis	neutral
+garten	neutral
+gärtnerin	neutral
+gasflasche	neutral
+gasse	neutral
+gastfreundin	neutral
+gasthaus	neutral
+gastwirt	neutral
+gattung	neutral
+gattungsgruppe	neutral
+gaul	neutral
+gebärfähigkeit	neutral
+gebärmutter	neutral
+gebender	neutral
+gebet	neutral
+gebietsmäßig	neutral
+gebietsschema	neutral
+gebissen	neutral
+geboren	neutral
+gebracht	neutral
+gebräuchlich	neutral
+gebrauchsanweisung	neutral
+gebräu	neutral
+geburi	neutral
+geburtshaus	neutral
+gedankengut	neutral
+gedanklich	neutral
+gedicht	neutral
+geduckte haltung	neutral
+geduldspiel	neutral
+geeifert	neutral
+gefährden	neutral
+gefedert	neutral
+gefeuert	neutral
+geflogen	neutral
+gefreiter	neutral
+gefressen	neutral
+gefühl	neutral
+gegangen	neutral
+gegebenheiten	neutral
+gegenanklagen vorbringen	neutral
+gegend	neutral
+gegeneinanderhalten	neutral
+gegenseitige abhängigkeit	neutral
+gegenseitig	neutral
+gegenstimme	neutral
+gegenwärtig	neutral
+gehabt	neutral
+gehalten	neutral
+gehalt	neutral
+gehaltsabrechnung	neutral
+gehandelt	neutral
+geheim-	neutral
+geheimnisvoll	neutral
+geheiratet	neutral
+gehölz	neutral
+gehör	neutral
+gehört	neutral
+geige	neutral
+geister-	neutral
+geistig	neutral
+geistlicher	neutral
+geiz	neutral
+geklautes auto	neutral
+gekniet	neutral
+gekörnt	neutral
+gekrakel	neutral
+gekrochen	neutral
+gelassen	neutral
+geld-	neutral
+geld	neutral
+geldschuld	neutral
+gelegen	neutral
+gelegentlich	neutral
+gelehrter	neutral
+gemach	neutral
+gemeinde-	neutral
+gemeinde	neutral
+(gemeine) klaffmuschel	neutral
+gemeiner wimpelfisch	neutral
+gemein	negative
+(gemeinsame) aktion	neutral
+gemeinsamkeit	neutral
+gemeinsam	neutral
+gemeinwirtschaft	neutral
+gemelk	neutral
+gemischt	neutral
+gemurmel	neutral
+gemütsart	neutral
+genaue prüfung	neutral
+gendarmerie	neutral
+generaldirektor	neutral
+generalisieren	neutral
+generalisierung	neutral
+genf	neutral
+gen westen	neutral
+geometrie	neutral
+georgia	neutral
+gepäck	neutral
+gerade erst	neutral
+geradheit	neutral
+geräuschlos	neutral
+geredet	neutral
+geregeltheit	neutral
+gerichtlich	neutral
+gerichtshof	neutral
+gerichtsverfahren	neutral
+geringfügig	neutral
+gering	neutral
+geringstmaß	neutral
+geringwertig	negative
+gesamtheit	neutral
+gesang	neutral
+geschaffenes	neutral
+geschäftemacher	neutral
+geschäftskarte	neutral
+geschäftsleute	neutral
+geschäftsmann	neutral
+geschäftswesen	neutral
+geschaukelt	neutral
+geschichtlich	neutral
+geschichtsforscher	neutral
+geschlafen	neutral
+geschlechtlich	neutral
+geschlossen	neutral
+geschmissen	neutral
+geschrieben	neutral
+(geschweifte) klammer	neutral
+geschworener	neutral
+gesellig	neutral
+(gesellschaftlicher) rang	neutral
+gesellschaftskundlich	neutral
+gesessen	neutral
+gesetze	neutral
+gesetzesbestimmung	neutral
+gesetzgebende gewalt	neutral
+gesetzlich festgelegt	neutral
+gesichtskreis	neutral
+gesichts-	neutral
+gesichtspunkt	neutral
+gesichtsschleier	neutral
+gesiegt	neutral
+gespräch	neutral
+gesprochen	neutral
+gestern	neutral
+gestrickt	neutral
+gestürzt	neutral
+gesundheitsdienst für alte leute	neutral
+gesundheits-	neutral
+gesungen	neutral
+geträumt	neutral
+gewährleisten	neutral
+gewaltig	neutral
+gewalt	neutral
+gewäsch	neutral
+gewebe	neutral
+geweckt	neutral
+geweihträger	neutral
+geweint	neutral
+gewerblich	neutral
+gewerk	neutral
+gewesen	neutral
+gewinner	neutral
+gewissheit	neutral
+gewohnheitsmäßig	neutral
+gezackt	neutral
+(gezapftes) bier	neutral
+ghana	neutral
+gicht	neutral
+giganten	neutral
+gitarre	neutral
+glaubender	neutral
+glauben	neutral
+glaubensbote	neutral
+glaubhaft	neutral
+gleichbedeutend	neutral
+(gleichberechtigter) teilnehmer	neutral
+gleichbleibend	neutral
+gleichen	neutral
+gleichheit	neutral
+gleichmäßig	neutral
+gleichmut	neutral
+gleichordnung	neutral
+(gleichwertiger) ersatzmann	neutral
+glimmstängel	neutral
+glucken	neutral
+glücklich	positive
+golf	neutral
+gondel	neutral
+göpel	neutral
+grammatik	neutral
+granate	neutral
+granatwerfer	neutral
+grasebene	neutral
+grätzel	neutral
+grau	neutral
+gravidität	neutral
+gravitations-	neutral
+gravitieren	neutral
+greek	neutral
+grenzenlos	neutral
+griechenland	neutral
+grins	neutral
+grippaler infekt	neutral
+(grobes) leinen	neutral
+(grobes) mehl	neutral
+grob	neutral
+grosi	neutral
+gros	neutral
+großbritannien	neutral
+(großer) anfangsbuchstabe	neutral
+größer sein als	neutral
+(großer) stein	neutral
+großflächig	neutral
+großgewachsen	neutral
+großkaufmann	neutral
+großlandschaft sudan	neutral
+großmama	neutral
+großpapa	neutral
+großreich	neutral
+großstadtbewohner	neutral
+großstadt	neutral
+größtmöglich	neutral
+grübeln	neutral
+grundlos	neutral
+grund-	neutral
+gruppe der geschworenen	neutral
+guatemala	neutral
+guinea	neutral
+(gut) ankommen	neutral
+(gute) gelegenheit	neutral
+(guter) ruf	neutral
+gute stube	neutral
+gutgläubigkeit	neutral
+gut	neutral
+gut	positive
+gymnastisch	neutral
+gymnast	neutral
+haar-	neutral
+habituell	neutral
+hablich	neutral
+hafer	neutral
+haiti	neutral
+halber inch	neutral
+halbinsel	neutral
+halbkugelig	neutral
+halm	neutral
+halt	neutral
+haltung	neutral
+hammelfleisch	neutral
+hämoglobin	neutral
+hampshire	neutral
+handelnder	neutral
+handeln	neutral
+handelsverkehr	neutral
+handgelenk	neutral
+handkoffer	neutral
+händler	neutral
+handschuh	neutral
+hand voll	neutral
+handwerker	neutral
+hängematte	neutral
+häresie	neutral
+hartkeks	neutral
+hartleibig	neutral
+hase	neutral
+hässlich	negative
+hat	neutral
+hat nicht	neutral
+häufig	neutral
+hauptsächlich	neutral
+haushälter	neutral
+haus	neutral
+hausrinder	neutral
+hawaii	neutral
+heckbalken	neutral
+heeresabteilung	neutral
+heftig	neutral
+heft	neutral
+hegemonie	neutral
+heiligkeit	neutral
+heilig	neutral
+heil	neutral
+heimatliebe	neutral
+heimisch	neutral
+heimlich	neutral
+heimwärts	neutral
+helfer	neutral
+helltasten	neutral
+hemdbluse	neutral
+hengst	neutral
+henkelkrug	neutral
+henne	neutral
+hepar	neutral
+heranwachsender	neutral
+heraus	neutral
+herber	neutral
+herbst-	neutral
+herde	neutral
+heroin	neutral
+herren	neutral
+herrgott	neutral
+herr	neutral
+herrschaft	neutral
+herrscherin der wüste	neutral
+herumgehen	neutral
+herzchen	neutral
+herzkammer	neutral
+herzlichst	neutral
+heuen	neutral
+heute abend	neutral
+heutig	neutral
+hierarchie	neutral
+hiermit	neutral
+himmel	neutral
+himmelsgegend	neutral
+himmelsstrich	neutral
+hindin	neutral
+hingezogen	neutral
+hinunterschlingen	neutral
+hirten-	neutral
+(histologische) schnitte anfertigen	neutral
+historisch	neutral
+(hoch) aufsteigen	neutral
+hochschule	neutral
+höchstpersönlich	neutral
+höherwertig	positive
+hohes haus	neutral
+holland	neutral
+holzwaschmaschine	neutral
+honduras	neutral
+hörer	neutral
+horizontal	neutral
+horizont	neutral
+hospital	neutral
+hübsch	positive
+hüftgelenk	neutral
+hügelgrab	neutral
+hügelig	neutral
+hülle	neutral
+hülsdorn	neutral
+hülsenfrucht	neutral
+hunderter	neutral
+hundertste	neutral
+hundewelpe	neutral
+hupen	neutral
+hurenkind	neutral
+hurra	neutral
+hurrikan	neutral
+hut	neutral
+hütte	neutral
+ich bin	neutral
+ich	neutral
+ich selbst	neutral
+idaho	neutral
+ideenlehre	neutral
+ideologisch	neutral
+ihm	neutral
+ihrerseits	neutral
+illinois	neutral
+illusion	neutral
+(im einzelhandel) verkaufen	neutral
+im gange	neutral
+immateriell	neutral
+immatrikulieren	neutral
+(immer während) fortsetzen	neutral
+immer wenn	neutral
+imperialismus	neutral
+imperialistisch	neutral
+imperial	neutral
+implausibel	neutral
+impotent	neutral
+im schlaf	neutral
+im städtischen außenbezirk	neutral
+inadäquatheit	neutral
+inch	neutral
+in denen	neutral
+inderin	neutral
+in der mundhöhle	neutral
+indiana	neutral
+indien	neutral
+in die schweiz	neutral
+indifferent	neutral
+indirekt	neutral
+individualität	neutral
+individuum	neutral
+indonesien	neutral
+industrialisieren	neutral
+industrialismus	neutral
+ineinander greifen	neutral
+(in einen zustand) versetzen	neutral
+infaust	neutral
+inflationistisch	neutral
+inhaltsangabe	neutral
+in ... hinein	neutral
+inkomplett	neutral
+inmitten	neutral
+innen-	neutral
+(innere) einkehr	neutral
+(innerparteiliche) vorwahl	neutral
+innerstädtisch	neutral
+inning	neutral
+insekt	neutral
+instinktiv	neutral
+(in strömen) gießen	neutral
+instrument	neutral
+(in stücke) zerlegen	neutral
+intakt	neutral
+intermittierend	neutral
+international	neutral
+internatsschüler	neutral
+interpersonell	neutral
+interplanetar	neutral
+interpolation	neutral
+intoleranz	neutral
+in unkenntnis	neutral
+in worten	neutral
+in würfel schneiden	neutral
+in zahlen ausgedrückt	neutral
+iowa	neutral
+irdisch	neutral
+irgendeiner	neutral
+irgendjemand	neutral
+irgendwie	neutral
+irgendwo	neutral
+irisch	neutral
+irland	neutral
+ironisch	neutral
+irreal	neutral
+irrig	negative
+island	neutral
+isolationismus	neutral
+israel	neutral
+ist	neutral
+ist nicht imstande	neutral
+italienerin	neutral
+italien	neutral
+jahrelang	neutral
+jahreszahl	neutral
+jamaika	neutral
+januar	neutral
+japanerin	neutral
+japanlack	neutral
+jawohl	neutral
+(jdm.) antworten	neutral
+(jdm.) lichthupe geben	neutral
+(jdn.) bohnern	neutral
+(jdn./etw.) anhalten	neutral
+jdn./etw. antreiben	neutral
+jdn./etw. befördern	neutral
+jdn./etw. darstellen	neutral
+(jdn./etw.) ermüden	neutral
+jdn./etw. kleinmachen	neutral
+(jdn. im amt) ablösen	neutral
+jede	neutral
+jeep	neutral
+jeglicher art	neutral
+jenste	neutral
+jersey	neutral
+joker	neutral
+jordanien	neutral
+journalisten	neutral
+jude	neutral
+jüdisch	neutral
+jugendliche	neutral
+jugendlich	neutral
+jugend-	neutral
+jugoslawien	neutral
+julei	neutral
+jumbosandwich	neutral
+jünger	neutral
+junges	neutral
+juni	neutral
+junta	neutral
+kaffeebraun	neutral
+kakao	neutral
+kalender	neutral
+kalifornien	neutral
+kaliko	neutral
+kambodscha	neutral
+kamerad	neutral
+kamerun	neutral
+kammer	neutral
+kam	neutral
+kampflos	neutral
+kanada	neutral
+kansas	neutral
+kanu fahren	neutral
+kanzelrede	neutral
+kanzlerin	neutral
+kapitalismus	neutral
+kapitänleutnant	neutral
+kartätsche	neutral
+kartellfeindlich	neutral
+kartell-	neutral
+kassenführerin	neutral
+kaum	neutral
+kaum zu erkennen	neutral
+kausal	neutral
+kavallerie	neutral
+kehle	neutral
+keine	neutral
+keiner	neutral
+keller	neutral
+kenia	neutral
+kentucky	neutral
+kerne	neutral
+kerze	neutral
+kettengeflecht	neutral
+khat	neutral
+kiel	neutral
+kilometer	neutral
+kinderlein	neutral
+kinder-	neutral
+kinderzeit	neutral
+kindhaft	neutral
+kinn	neutral
+kissen	neutral
+kläger	neutral
+klangkörper	neutral
+(klar) gegliedert	neutral
+klassenraum	neutral
+klassenzimmer	neutral
+klassifiziert	neutral
+-klässler	neutral
+kleben	neutral
+(kleine) bucht	neutral
+(kleiner) berg	neutral
+(kleiner) tropfen	neutral
+(kleines) privatzimmer	neutral
+(kleines) tablett	neutral
+kleingebäck	neutral
+kleingläubig	neutral
+kleinstädter	neutral
+klingelte	neutral
+klischee	neutral
+klitzeklein	neutral
+klopfer	neutral
+klosett	neutral
+knechtschaft	neutral
+knick	neutral
+knien	neutral
+koinzidieren	neutral
+kolben	neutral
+kollektivismus	neutral
+kolporteur	neutral
+kombination	neutral
+komisch	neutral
+kommender	neutral
+kommissmäßig	neutral
+kommunismus	neutral
+kommunistin	neutral
+komparabel	neutral
+kondensation	neutral
+konfession	neutral
+kongress-	neutral
+königreich	neutral
+königszeit	neutral
+konjunkturell	neutral
+könnte	neutral
+konsequent	neutral
+konservatismus	neutral
+konservativer	neutral
+konservenfabrik	neutral
+konsolation	neutral
+kontinuum	neutral
+kontrolluhr	neutral
+konvertieren	neutral
+(kopfüber) stürzen	neutral
+koreanerin	neutral
+körnig	neutral
+(körperliche) ertüchtigung	neutral
+(körperlich und geistig) nachlassen	neutral
+korrekt	positive
+korsika	neutral
+kosename	neutral
+kosmisch	neutral
+kracherl	neutral
+(kräfte) aufnehmen	neutral
+(kräftiger) bindfaden	neutral
+(kräftiger) schluck	neutral
+(kräftiger) schubs	neutral
+kräftig	neutral
+kreml	neutral
+kreta	neutral
+kreuzung	neutral
+krieger	neutral
+kriegsflotte	neutral
+kriegsmaterial	neutral
+kriegs-	neutral
+kriegsschiff	neutral
+kriegswichtig	neutral
+kriminal	neutral
+kriterien	neutral
+kritischer augenblick	neutral
+kubanerin	neutral
+kubik-	neutral
+kubismus	neutral
+küchen-	neutral
+kufe	neutral
+kultur-	neutral
+kultur	neutral
+kultus	neutral
+-kundlerin	neutral
+kunst des verkaufens	neutral
+(kunsthandwerklich) gestalten	neutral
+(künstlerische) leistung	neutral
+kunststoff	neutral
+kupfer-	neutral
+kuratel	neutral
+kurfürstlich	neutral
+kurfürst	neutral
+kuriosität	neutral
+kurs	neutral
+(kurze) phase	neutral
+(kurze) reise	neutral
+(kürzlich) verstorben	neutral
+küste	neutral
+kuwait	neutral
+laboratorium	neutral
+(la) grande nation	neutral
+landschaftlich gestalten	neutral
+landsfrau	neutral
+langfristig	neutral
+laos	neutral
+latent	neutral
+laufzeit	neutral
+launenhaft	neutral
+lauter ruf	neutral
+laut	neutral
+lautsprecher	neutral
+lebendes inventar	neutral
+lebenslage	neutral
+lebensmüde	neutral
+lebewohl	neutral
+ledern	neutral
+(leere) patronenhülsen	neutral
+legion	neutral
+lehre	neutral
+lehrzögling	neutral
+(leibliche) nachkommenschaft	neutral
+(leichter) schlag	neutral
+leider	neutral
+leidig	neutral
+leninismus	neutral
+leu	neutral
+leute	neutral
+liberia	neutral
+libyen	neutral
+licht der öffentlichkeit	neutral
+lieb	positive
+lieferung	neutral
+lief	neutral
+likelihood	neutral
+limone	neutral
+limousine	neutral
+linguistin	neutral
+links überholen	neutral
+lohn	neutral
+londoner	neutral
+losbinden	neutral
+löten	neutral
+lotrechte	neutral
+louisiana	neutral
+löwin	neutral
+lunch	neutral
+lyrik	neutral
+machte nichtig	neutral
+madagaskar	neutral
+magic – eine unheimliche liebesgeschichte	neutral
+magierin	neutral
+mahagonibaum	neutral
+maine	neutral
+makler	neutral
+malaysia	neutral
+mali	neutral
+malnehmen	neutral
+malta	neutral
+mama	neutral
+mangelhaft	negative
+man	neutral
+mannhaft	neutral
+mannigfach	neutral
+(männliche) vorstandsvorsitzende	neutral
+manöver	neutral
+mare	neutral
+marineinfanterist	neutral
+maritim	neutral
+marokkoleder	neutral
+marschland	neutral
+marsch	neutral
+marxismus	neutral
+maryland	neutral
+maschine	neutral
+massachusetts	neutral
+massen	neutral
+mast	neutral
+maternal	neutral
+mater	neutral
+mathematik	neutral
+mathematisch	neutral
+mauritius	neutral
+mäuse	neutral
+mediator	neutral
+mediterran	neutral
+meeres-	neutral
+meer	neutral
+mehrbetrag	neutral
+mehrfach	neutral
+mehr	neutral
+meile	neutral
+meine liebe	neutral
+meine	neutral
+meinungsverschiedenheit	neutral
+meisterschütze	neutral
+melodisch	neutral
+mengenbezogen	neutral
+messer	neutral
+metall-	neutral
+metaphysik	neutral
+metaphysisch	neutral
+metaqualon	neutral
+meteorit	neutral
+meteor	neutral
+methode	neutral
+methodisch	neutral
+mexikanerin	neutral
+mexiko	neutral
+michigan	neutral
+mieterin	neutral
+(militärisches) einsatzgebiet	neutral
+millionen	neutral
+millionstel	neutral
+minderheits-	neutral
+minderwertig	negative
+mineralisch	neutral
+mineralöl	neutral
+minister	neutral
+minnesota	neutral
+mischen	neutral
+mississippi	neutral
+misslich	negative
+missouri	neutral
+misstrauen	neutral
+mitbewohnerin	neutral
+(mit daten) befüllen	neutral
+(mit dem auto) fahren	neutral
+(mit dem staubsauger) reinigen	neutral
+(mit den armen) schlenkern	neutral
+(mit drogen) betäuben	neutral
+(miteinander) korrelieren	neutral
+(mit einem schläger) schlagen	neutral
+mit einer pistole schießen	neutral
+mitempfinden	neutral
+mitgewirkt	neutral
+mitglieder des amerikanischen repräsentantenhauses	neutral
+mit guter vorbildung	neutral
+(mit jdm.) schäkern	neutral
+mitsubishi a6m	neutral
+mittagsland	neutral
+mitternacht	neutral
+mittwoch	neutral
+(mit vorsicht) äußern	neutral
+modernisierung	neutral
+möglichkeit	neutral
+mohrenland	neutral
+molekular-	neutral
+monat	neutral
+mond-	neutral
+mongolei	neutral
+montana	neutral
+mordgeselle	neutral
+morgender tag	neutral
+morgenländisch	neutral
+morgenland	neutral
+morgen	neutral
+mosambik	neutral
+moskau	neutral
+motel	neutral
+(motivische) zelle	neutral
+motiv	neutral
+mucke	neutral
+muhme	neutral
+müllerin	neutral
+mumm	neutral
+(mündlicher) verfahrensantrag	neutral
+munition	neutral
+museal	neutral
+musikantin	neutral
+muskulär	neutral
+mutmaßlich	neutral
+mythe	neutral
+(nach außen) darstellen	neutral
+nachgeordnet	neutral
+nachgießen	neutral
+nachher	neutral
+nachjustierung	neutral
+nachlasspfleger	neutral
+(nach luft) japsen	neutral
+nachmittags-	neutral
+nach norden	neutral
+nachprüfen	neutral
+nachrangig	negative
+nachsprechen	neutral
+nachstellen	neutral
+nacht-	neutral
+nachtragend	neutral
+nachtzug	neutral
+nach westen	neutral
+nagend	neutral
+nähen	neutral
+(näher) bestimmen	neutral
+nashorn	neutral
+nationalismus	neutral
+nationalistin	neutral
+nationalistisch	neutral
+nationalität	neutral
+nation	neutral
+naturnotwendig	neutral
+naturwissenschafter	neutral
+naturwissenschaftlich	neutral
+'nauf	neutral
+nautik	neutral
+(nautischer) faden	neutral
+nebraska	neutral
+neffe	neutral
+negativ	negative
+neger	neutral
+'nen	neutral
+nepal	neutral
+nerven	neutral
+nest	neutral
+nett	positive
+neu aktivieren	neutral
+neuartig	neutral
+neuaufbau	neutral
+neue formulierung	neutral
+neu einführen	neutral
+neu einteilen	neutral
+neugeborener	neutral
+neu gestalten	neutral
+neugestaltung	neutral
+neugründen	neutral
+neugründung	neutral
+neun	neutral
+neuntel	neutral
+neunzehnte	neutral
+neunzig	neutral
+neunzigstel	neutral
+neuordnung	neutral
+neurose	neutral
+neutralismus	neutral
+neutralität	neutral
+nevada	neutral
+nibeln	neutral
+nicaragua	neutral
+nicht angegeben	neutral
+nicht aufgeteilt	neutral
+nicht auseinanderzuhalten	neutral
+nicht befahrbar	neutral
+nicht bekannt	neutral
+nicht benutzbar	neutral
+nicht berechenbar	neutral
+nicht berichtet	neutral
+nicht definiert	neutral
+nicht denkbar	neutral
+nicht eingedämmt	neutral
+nichteinmischung	neutral
+nicht entschieden	neutral
+nicht festgelegt	neutral
+nicht hinterfragt	neutral
+nichts	neutral
+nicht spezifisch	neutral
+nicht teilbar	neutral
+nicht verbal	neutral
+nichtverbreitung	neutral
+nicht zu bestreiten	neutral
+nigeria	neutral
+nihilismus	neutral
+nihilistisch	neutral
+nirgendhin	neutral
+njassaland	neutral
+nochmals zurückkommen auf	neutral
+noch mehr	neutral
+(noch) nicht fest umrissen	neutral
+noch unentschlossen sein	neutral
+(nord-) amerikanischer präriewolf	neutral
+nordländisch	neutral
+nördlich	neutral
+nordost	neutral
+nordwest	neutral
+norwegen	neutral
+november	neutral
+'nunter	neutral
+(nur) dem namen nach	neutral
+nur gelegentlich	neutral
+(oben) auf	neutral
+oben	neutral
+oberst	neutral
+obige	neutral
+obligatorisch	neutral
+ob	neutral
+obwohl	neutral
+ochsen	neutral
+offenkundig	neutral
+(öffentliche) kutsche	neutral
+(öffentlich) verkünden	neutral
+oheim	neutral
+ohio	neutral
+ohne	neutral
+ohne zusicherung	neutral
+oklahoma	neutral
+oktober	neutral
+ökumenisch	neutral
+operationssaal	neutral
+opern-	neutral
+orator	neutral
+ordination	neutral
+oregon	neutral
+(örtliche) gebietskörperschaft	neutral
+ossi	neutral
+oster-	neutral
+österreich	neutral
+otter	neutral
+pakistan	neutral
+palais	neutral
+paletot	neutral
+panama	neutral
+panamerikanisch	neutral
+papa	neutral
+papst	neutral
+paraguay	neutral
+parlamentarisch	neutral
+parteigänger	neutral
+partikel	neutral
+pass	neutral
+pastorin	neutral
+paternal	neutral
+pennsylvania	neutral
+(periodische) wiederkehr	neutral
+permanent	neutral
+perserkatze	neutral
+persien	neutral
+(personelle) besetzung	neutral
+peru	neutral
+perzent	neutral
+pfingstrose	neutral
+phantasieren	neutral
+philadelphia	neutral
+philippinen	neutral
+philosophin	neutral
+physikerin	neutral
+physik	neutral
+pilgerfahrt	neutral
+planer	neutral
+planet	neutral
+platonismus	neutral
+polarisieren	neutral
+polen	neutral
+politikerin	neutral
+politiker	neutral
+politik	neutral
+politisch	neutral
+polizeibeamter	neutral
+(polizeiliches) kennzeichen	neutral
+polizisten	neutral
+portugal	neutral
+portugiese	neutral
+positiv	positive
+postkutsche	neutral
+pott	neutral
+prädominant	neutral
+präsidentenposten	neutral
+präsidentschaft-	neutral
+predigen	neutral
+prediger	neutral
+preisen	neutral
+prekär	neutral
+preußen	neutral
+privatgemach	neutral
+privatmann	neutral
+probabilität	neutral
+probierend	neutral
+prognose	neutral
+prognostizieren	neutral
+programmheft	neutral
+programmiererin	neutral
+(programm) übersetzen	neutral
+prompt	neutral
+promulgieren	neutral
+prophetin	neutral
+prophylaktisch	neutral
+prosaisch	neutral
+prozedural	neutral
+prozessführende partei	neutral
+psychisch	neutral
+psychologe	neutral
+psychologie	neutral
+quarte	neutral
+quartett	neutral
+querschnittlich	neutral
+quieken	neutral
+radioaktiv	neutral
+rar	neutral
+(rasch) eindunkeln	neutral
+raser	neutral
+rationalisieren	neutral
+rauste	neutral
+realismus	neutral
+rebensaft	neutral
+rechtfertigen	neutral
+redner	neutral
+reflexartig	neutral
+regen-	neutral
+regionalisierung	neutral
+registrant	neutral
+reglementierung	neutral
+regress nehmen	neutral
+rehabilitieren	neutral
+rein gedanklich	neutral
+reisbranntwein	neutral
+reisige	neutral
+reis	neutral
+religion	neutral
+religionswissenschaft	neutral
+repetition	neutral
+repressalie	neutral
+republikanerin	neutral
+republik	neutral
+resultante	neutral
+reußisch	neutral
+rheinland	neutral
+rhein	neutral
+rhodesien	neutral
+rhodesierin	neutral
+rhythmik	neutral
+richter am schiedsgericht	neutral
+richter	neutral
+richtig	positive
+rippe	neutral
+rohr	neutral
+rom	neutral
+roter	neutral
+rots	neutral
+rouge auflegen	neutral
+ruanda	neutral
+rückständig	neutral
+rudel	neutral
+rumänien	neutral
+russland	neutral
+sachbuch-	neutral
+salamiwurst	neutral
+salinenbetrieb	neutral
+samstag	neutral
+(sanftes) klatschen	neutral
+sardinien	neutral
+satire	neutral
+saw	neutral
+schädlich	negative
+schaf-	neutral
+schalltrichter	neutral
+schaltafel	neutral
+schattenbild	neutral
+schematisch	neutral
+scheusslich	negative
+scheußlich	negative
+schiffbau	neutral
+schilddrüse	neutral
+schildkröte	neutral
+schlange	neutral
+schlecht	negative
+schlimm	negative
+(schnell) rennen	neutral
+schnellstraße	neutral
+schön	neutral
+schön	positive
+schottland	neutral
+schreinerin	neutral
+schrumpfte	neutral
+(schützende) begleitung	neutral
+schwach	negative
+schwach	neutral
+schwamm	neutral
+schwanken	neutral
+(schwarzer) diener	neutral
+schweden	neutral
+schwinden	neutral
+sechser	neutral
+sechstel	neutral
+sechzehn	neutral
+sechzehnte	neutral
+sechzig	neutral
+seeland	neutral
+seeleute	neutral
+(sehr) lockerer stuhlgang	neutral
+selber	neutral
+selbstbestimmtheit	neutral
+semantisch	neutral
+senat	neutral
+senatorin	neutral
+senegal	neutral
+(senkrechter) zwischenraum	neutral
+sensibel	neutral
+september	neutral
+septime	neutral
+serum	neutral
+setter	neutral
+(sich) anpatzen	neutral
+(sich) ausrasten	neutral
+(sich) entscheiden	neutral
+(sich) entschuldigend	neutral
+sich erklären	neutral
+(sich) furchen	neutral
+sich jdn./etw. vorstellen	neutral
+(sich) jdn./etw. zum feind / feinde machen	neutral
+(sich) locken	neutral
+(sich) potenzieren	neutral
+sich sehnen	neutral
+(sich) suizidieren	neutral
+(sich) verfilzen	neutral
+(sich) verkrusten	neutral
+(sich) wagen	neutral
+(sich) warm einpacken	neutral
+(sich) weiten	neutral
+sich wiederholen	neutral
+(sich) zanken	neutral
+(sich) zeigen	neutral
+sich zieren	neutral
+sich zurückholen	neutral
+sieben	neutral
+siebzehnte	neutral
+siebzig	neutral
+signatar	neutral
+sinfonie	neutral
+sinfonisch	neutral
+singapur	neutral
+sohnemann	neutral
+soldaten	neutral
+sollen	neutral
+somalia	neutral
+sonder zahl	neutral
+sonnenbrand	neutral
+sonnenlicht	neutral
+sonnenuntergang	neutral
+sonntag	neutral
+sowie	neutral
+sowjetisch	neutral
+(sozialer) stand	neutral
+sozialistin	neutral
+soziologie	neutral
+spaltung	neutral
+spanien	neutral
+spanisch	neutral
+spannung	neutral
+spezialisierung	neutral
+spickzettel	neutral
+sprach-	neutral
+sprachschatz	neutral
+sprecher	neutral
+staatenkunde	neutral
+(staatlicher) herrschaftsapparat	neutral
+staatsmänner	neutral
+städtebildung	neutral
+staffel	neutral
+stahl-	neutral
+stammes-	neutral
+(ständiger) aufenthaltsort	neutral
+(starr) in eine richtung blicken	neutral
+statistisch	neutral
+steppen	neutral
+stereoanlage	neutral
+steuerpflichtiger	neutral
+stiege	neutral
+(stillschweigende / selbstverständliche) folgerung	neutral
+(stimmen) auf sich vereinigen	neutral
+stockend	neutral
+störungsfrei	neutral
+(strom) aufnehmen	neutral
+studentin vor dem ersten akademischen grad	neutral
+stunde	neutral
+subjektiv	neutral
+suchender	neutral
+südländerin	neutral
+süd-	neutral
+südosten	neutral
+südwesten	neutral
+sultan	neutral
+summieren	neutral
+supranational	neutral
+suriname	neutral
+(süßer) seim	neutral
+symbolik	neutral
+syrien	neutral
+tabakpflanze	neutral
+tag	neutral
+taiwan	neutral
+taktik	neutral
+taktisch	neutral
+tanganjika	neutral
+tänzerarm	neutral
+tausend	neutral
+tausendstel	neutral
+(technische) vorrichtung	neutral
+technisch	neutral
+tennessee	neutral
+tennis	neutral
+testament	neutral
+teufe	neutral
+texas	neutral
+thailand	neutral
+theologisch	neutral
+therapeutin	neutral
+tochterprodukt	neutral
+togo	neutral
+totalitarismus	neutral
+totalitaristin	neutral
+totem	neutral
+traditionalistin	neutral
+trägerin	neutral
+transferenz	neutral
+transformation	neutral
+tropen-	neutral
+tschechei	neutral
+tscheche	neutral
+tunesien	neutral
+tunswort	neutral
+türken	neutral
+türkis-	neutral
+twelve	neutral
+typografie	neutral
+tyrannisch	neutral
+übel	negative
+überbelegung	neutral
+(über etw.) wütend sein	neutral
+-übergreifend	neutral
+(überhaupt) nicht eingehen auf	neutral
+überirdisch	neutral
+überlegen	positive
+überragend	positive
+(überraschende) wendung	neutral
+überseeisch	neutral
+übertragen	neutral
+überzeugt	neutral
+uganda	neutral
+umfassen	neutral
+unabgeschlossenheit	neutral
+unablässig	neutral
+unabweisbar	neutral
+unanfechtbarkeit	neutral
+unanfechtbar	neutral
+unangemeldet	neutral
+unangenehm	negative
+unangetastet	neutral
+unartikuliert	neutral
+unbesiegbar	neutral
+unbilligkeit	neutral
+unbillig	neutral
+unbrauchbar	neutral
+uneinheitlichkeit	neutral
+unentschuldbar	neutral
+unerfreulich	negative
+unermesslich	neutral
+unermüdlich	neutral
+unerschrocken	neutral
+unerschütterlich	neutral
+unfertigkeit	neutral
+ungarn	neutral
+ungeändert	neutral
+ungebrochen	neutral
+ungerechtigkeit	neutral
+ungewiss	neutral
+unglaublichkeit	neutral
+ungleich	neutral
+unglücklich	negative
+ungünstig	negative
+unhintergehbarkeit	neutral
+unklar	neutral
+unmäßig	neutral
+unmöglichkeit	neutral
+unpassend	neutral
+unrecht	negative
+unschlüssigkeit	neutral
+unser	neutral
+unsicherheit	neutral
+unterlegen	negative
+unternommen	neutral
+(unterschiede) beseitigen	neutral
+unterzeichner	neutral
+unterzog sich	neutral
+unüberbietbar	neutral
+unvergänglich	neutral
+unvermögen	neutral
+unvorbereitet	neutral
+unwahrscheinlichkeit	neutral
+unwahrscheinlich	neutral
+unzählbar	neutral
+uran	neutral
+utah	neutral
+utopisch	neutral
+vektor	neutral
+venezuela	neutral
+veranda	neutral
+(verantwortung) abschieben	neutral
+(verbale) auseinandersetzung	neutral
+verblüffung	neutral
+verdiener	neutral
+verdorben	negative
+verführen	neutral
+vergalt	neutral
+vergangen	neutral
+vergessen	neutral
+vergleichsweise	neutral
+verkäuferin	neutral
+verkauft	neutral
+-verleih	neutral
+vermont	neutral
+verpflichtet	neutral
+versteckt	neutral
+verwundern	neutral
+verzahnung	neutral
+verzinken	neutral
+vielzählig	neutral
+vier	neutral
+vierzehn	neutral
+vierzig	neutral
+vietnam	neutral
+virginia	neutral
+viskosität	neutral
+vitamin	neutral
+vizepräsidentin	neutral
+volkstümliche erzählungen	neutral
+vorangehen	neutral
+vorausschauen	neutral
+vorbote	neutral
+(vor etw.) erschauern	neutral
+vorkriegs-	neutral
+(vorwärts) drängen	neutral
+vorzugswürdig	neutral
+wachsam	neutral
+waffenruhe	neutral
+wählerin	neutral
+wahrscheinlichkeit	neutral
+waldung	neutral
+ward	neutral
+wäre	neutral
+wäsche	neutral
+washington	neutral
+wasserstoff	neutral
+weekend	neutral
+wegweiser	neutral
+weißer	neutral
+(weit) abgeschlagen	neutral
+(weit) ausgreifend	neutral
+weizen	neutral
+weltumfassend	neutral
+wenige	neutral
+-wesen	neutral
+whisky	neutral
+widerlich	negative
+widerwärtig	negative
+(wie) aus einem guss	neutral
+wiederaufrüstung	neutral
+wieder einsetzen	neutral
+(wieder) gesund werden	neutral
+wiedervereinigen	neutral
+wiedervereinigung	neutral
+(wie) in einer prozession gehen	neutral
+wildnis	neutral
+(wissenschaftliche) arbeit	neutral
+witmann	neutral
+wo auch immer	neutral
+(wohnhaft) allhier	neutral
+wolle	neutral
+worin	neutral
+(wörtlich) anführen	neutral
+wuchs	neutral
+wyoming	neutral
+zacke	neutral
+zehner	neutral
+(zeitlich) näher rücken	neutral
+zen	neutral
+zerstören	neutral
+zerstörerin	neutral
+ziegen-	neutral
+zivilisation	neutral
+zivilisieren	neutral
+zog	neutral
+(zu etw.) hinneigen	neutral
+(zum appell) antreten lassen	neutral
+(zu staub) zerfallen	neutral
+(zuvor) festlegen	neutral
+zwanzig	neutral
+zwanzigstel	neutral
+zween	neutral
+zweifelsohne	neutral
+zwischenzeit	neutral
+zypern	neutral

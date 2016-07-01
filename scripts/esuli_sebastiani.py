@@ -63,7 +63,9 @@ class Rocchio(NearestCentroid):
         check_is_fitted(self, 'centroids_')
         X = check_array(X, accept_sparse='csr')
         y = pairwise_distances(
-            X, self.centroids_, metric=self.metric)
+            X, self.centroids_, metric=self.metric
+        )
+        y = np.sum(y) - y
         return y / np.sum(y)
 
 
@@ -266,9 +268,10 @@ def _expand_seeds(a_germanet, a_synid2tfidf, a_pos, a_neg, a_neut):
     _expand_synsets(a_germanet, a_synid2tfidf,
                     a_neg, neg_candidates, pos_candidates)
     # remove from potential candidates items that are already in seed sets
-    seeds = a_pos | a_neg | a_neut
+    seeds = a_pos | a_neg
     pos_candidates -= seeds
     neg_candidates -= seeds
+    neg_candidates -= pos_candidates
     seeds.clear()
     if not pos_candidates and not neg_candidates:
         print(" done (not changed)", file=sys.stderr)
@@ -276,7 +279,8 @@ def _expand_seeds(a_germanet, a_synid2tfidf, a_pos, a_neg, a_neut):
     # merge positive and negative sets
     a_pos |= pos_candidates
     a_neg |= neg_candidates
-    print(" done", file=sys.stderr)
+    print(" done (pos = {:d}, neg = {:d})".format(len(a_pos), len(a_neg)),
+          file=sys.stderr)
     return True
 
 
@@ -319,7 +323,7 @@ def _expand_pol_lists(a_clfs, a_germanet, a_synid2tfidf,
 
     """
     assert a_clfs and a_clfs[0], \
-        "'a_clfs' should be a non-empty list of classifiers."
+        "'a_clfs' must be a non-empty list of classifiers."
     idx2cls = a_clfs[0][0].classes_
     # check that all classifiers have the same classes
     for clf1, clf2 in a_clfs:
@@ -380,10 +384,16 @@ def esuli_sebastiani(a_germanet, a_pos, a_neg, a_neut, a_seed_pos="none"):
         a_seed_pos = None
     # convert obtained lexemes to synsets
     ipos = _lexemes2synset_tfidf(a_germanet, synid2tfidf, a_pos, a_seed_pos)
+    print("# of positive synsets =", len(ipos), file=sys.stderr)
     ineg = _lexemes2synset_tfidf(a_germanet, synid2tfidf, a_neg, a_seed_pos)
+    ineg -= ipos
+    print("# of negative synsets =", len(ineg), file=sys.stderr)
     ineut = _lexemes2synset_tfidf(a_germanet, synid2tfidf, a_neut, a_seed_pos)
+    ineut -= ipos
+    ineut -= ineg
+    print("# of neutral synsets =", len(ineut), file=sys.stderr)
     # train two classifiers (SVC and Rocchio) on each expansion step
-    clfs = [(LinearSVC(), Rocchio()) for _ in ITERS]
+    clfs = [(LinearSVC(class_weight="balanced"), Rocchio()) for _ in ITERS]
 
     # expand seed sets and train classifiers
     prev_i = 0
@@ -394,6 +404,8 @@ def esuli_sebastiani(a_germanet, a_pos, a_neg, a_neut, a_seed_pos="none"):
                                     ipos, ineg, ineut)
             if not changed:
                 break
+            ineut -= ipos
+            ineut -= ineg
         # exit if the set could not be expanded
         if not changed:
             break
@@ -405,6 +417,6 @@ def esuli_sebastiani(a_germanet, a_pos, a_neg, a_neut, a_seed_pos="none"):
     assert j > 1, "No classifier was trained."
     clfs = clfs[:j]
     # expand resulting lists
-    seeds = set(synid_vec[0] for synid_vec in chain(ipos, ineg, ineut))
+    seeds = set(synid_vec[0] for synid_vec in chain(ipos, ineg))
     return _expand_pol_lists(clfs, a_germanet, synid2tfidf,
                              a_pos, a_neg, a_neut, seeds)

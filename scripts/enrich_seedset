@@ -1,0 +1,101 @@
+#!/usr/bin/awk -f
+
+##################################################################
+BEGIN {
+    ecode = 0
+
+    if (ARGC < 4) {
+	print "Incorrect number of arguments." > "/dev/stderr"
+	print "USAGE:" > "/dev/stderr"
+	print "enrich_seedset inquirer dict seedset" > "/dev/stderr"
+	ecode = 1
+	exit
+    }
+    # read General Inquirer
+    tok = cat = ""
+    split("", toks)
+    while ((ret = (getline < ARGV[1])) > 0) {
+	sub(/#.*$/, "", $1)
+	tok = tolower($1)
+	cat = tolower($3)
+	if (cat == "pos" || cat == "neg") {
+	    gi_pol_terms[tok] == ""
+	    if (tok in gi_candidates)
+		delete gi_candidates[tok]
+	} else if (NF && !(tok in gi_pol_terms))
+	    gi_candidates[tok] = ""
+    }
+    if (ret != 0) {
+	ecode = 2
+	exit
+    }
+    ARGV[1] = ""
+    # read DE-EN dictionary
+    de = en = ""
+    while ((ret = (getline < ARGV[2])) > 0) {
+	if (!NF || $0 ~ /^[[:space:]]*#/)
+	    continue
+
+	# clean string
+	sub(/^[[:space:]]+/, "", $0)
+	gsub(/ +<[^>]+>/, "", $0)
+	gsub(/ +\{[^}]+\}/, "", $0)
+	gsub(/ +\[[^]]+\]/, "", $0)
+	gsub(/ +sb\.\>/, "", $0)
+	gsub(/ +sth\.\>/, "", $0)
+	gsub(/sb.\/sth. +/, "", $0)
+	gsub(/ +sb.\/sth./, "", $0)
+	gsub(/jd.\/etw. +/, "", $0)
+	gsub(/ +jd.\/etw./, "", $0)
+	gsub(/ +\([^)]+\)/, "", $0)
+	$0 = tolower($0)
+	split($0, toks, /\t+/)
+	de = toks[1]
+	en = toks[2]
+	sub(/^to +/, "", en)
+
+	if (!en || !de)
+	    continue
+
+	if (en in en2de)
+	    en2de[en] = en2de[en] SUBSEP de
+	else
+	    en2de[en] = de
+
+    }
+    if (ret != 0) {
+	ecode = 3
+	exit
+    }
+    ARGV[2] = ""
+    split("", toks)
+}
+
+##################################################################
+NF {
+    # read and original seed set
+    print $0
+    sub(/\t.*$/, "", $0)
+    iseed = tolower($0)
+
+    if (iseed in gi_candidates)
+	delete gi_candidates[iseed]
+}
+
+##################################################################
+END {
+    if (ecode)
+	exit ecode
+
+    max_i = 0
+    split("", trans)
+    for (icand in gi_candidates) {
+	if (!(icand in en2de)) {
+	    print "No translation found for the term '" icand "'" >> "/dev/stderr"
+	    continue
+	}
+	max_i = split(en2de[icand], trans, SUBSEP)
+	for (i = 1; i <= 1; ++i)
+	    print trans[i] "\tneutral"
+    }
+}

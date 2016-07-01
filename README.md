@@ -14,8 +14,23 @@ you should envoke the following command:
 
 ```shell
 
-./scripts/generate_lexicon.py esuli
---form2lemma=data/GermaNet_v9.0/gn_form2lemma.txt
-data/turney_littman_seedset.txt data/GermaNet_v9.0/
+./scripts/generate_lexicon.py esuli \
+--form2lemma=data/GermaNet_v9.0/gn_form2lemma.txt \
+data/seeds/turney_littman_gi_seedset.txt data/GermaNet_v9.0/ > \
+data/es/esuli_sebastiani_tlg_seedset.txt
+
+```
+
+Evaluation
+----------
+
+You can evaluate the resulting sentiment lexicon by issuing the
+following command:
+
+```shell
+
+./scripts/evaluate.py -l data/form2lemma.txt \
+	data/es/esuli_sebastiani_tlg_seedset.txt \
+	../PotTS/corpus/basedata/ ../PotTS/corpus/annotator-2/markables/
 
 ```
