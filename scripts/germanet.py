@@ -53,17 +53,18 @@ def normalize(a_string):
 ##################################################################
 # Class
 class Germanet(object):
-    """
-    Class for reading and pocessing GermaNet files
+    """Class for reading and pocessing GermaNet files
 
     Instance variables:
-    lexid2lex - mapping from lexeme IDs to lexemes
-    lex2lexid - mapping from lexemes to lexeme IDs
-    lexid2synids - mapping from lexeme IDs to synset IDs
-    synid2lexids - mapping from synset IDs to lexemes
-    synid2defexmp - mapping from synset IDs to synset definitions and examples
-    con_relations - adjacency lists of relations between synsets
-    lex_relations - adjacency lists of relations between lexemes
+      lexid2lex - mapping from lexeme IDs to lexemes
+      lex2lexid - mapping from lexemes to lexeme IDs
+      lexid2synids - mapping from lexeme IDs to synset IDs
+      synid2lexids - mapping from synset IDs to lexemes
+      synid2defexmp - mapping from synset IDs to synset definitions
+        and examples
+      con_relations - adjacency lists of relations between synsets
+      lex_relations - adjacency lists of relations between lexemes
+
     """
 
     def __init__(self, a_dir=os.getcwd()):
