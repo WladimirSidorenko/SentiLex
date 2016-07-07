@@ -15,7 +15,7 @@ For generating a sentiment lexicon using the method of
 
 ./scripts/generate_lexicon.py hu \
 --form2lemma=data/GermaNet_v9.0/gn_form2lemma.txt \
-data/seeds/turney_littman_gi_seedset.txt data/GermaNet_v9.0
+data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0
 
 ```
 
