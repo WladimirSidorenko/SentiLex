@@ -19,7 +19,7 @@ data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0
 
 ```
 
-### Esuli and Sebastiani (2004)
+### Esuli and Sebastiani (2006)
 
 To generate a sentiment lexicon using the `SentiWordNet` method of
 [Esuli and Sebastiani (2006)](http://ontotext.fbk.eu/Publications/sentiWN-TR.pdf),
@@ -37,7 +37,8 @@ Evaluation
 ----------
 
 You can evaluate the resulting sentiment lexicon by issuing the
-following command:
+following command, providing a valid path to the downloaded
+[PotTS](https://github.com/WladimirSidorenko/PotTS) corpus:
 
 ```shell
 
