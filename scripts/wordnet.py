@@ -156,7 +156,7 @@ class Wordnet(object):
                     # print("trg_pos =",
                     #       repr(trg_pos), file=sys.stderr)
                     trg_id = (trg_synid, trg_pos)
-                    self.relations[syn_id].add((RELSYM2NAME[ptr_sym], trg_id))
+                    self.relations[syn_id].add((trg_id, RELSYM2NAME[ptr_sym]))
                 i += rel_cnt * 4
                 # print("i =", repr(i), file=sys.stderr)
                 if pos == 'v':

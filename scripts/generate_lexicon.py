@@ -16,6 +16,7 @@ from common import lemmatize, _lemmatize, ANTIRELS, SYNRELS, TOKENIZER, \
     POSITIVE, NEGATIVE, NEUTRAL
 
 from esuli_sebastiani import esuli_sebastiani
+from hu_liu import hu_liu
 from germanet import Germanet, normalize, POS
 from ising import Ising, ITEM_IDX, WGHT_IDX, HAS_FXD_WGHT, FXD_WGHT_IDX
 
@@ -35,7 +36,13 @@ GNET_DIR = "germanet_dir"
 CC_FILE = "cc_file"
 
 VERBOSE = False
+
+AWDALLAH = "awdallah"
+BG = "bg"
 ESULI = "esuli"
+HU = "hu"
+KIM = "kim"
+RAO = "rao"
 TAKAMURA = "takamura"
 W2V = "w2v"
 
@@ -57,6 +64,30 @@ FORM2LEMMA = dict()
 
 ##################################################################
 # Main
+def _add_cmn_opts(a_parser):
+    """Add options common to all option parsers.
+
+    @param a_parser - argument parser to add options to
+
+    @return \c void
+
+    """
+    a_parser.add_argument("--seed-pos",
+                          help="part-of-speech of seed synsets"
+                          " ('none' for no restriction)",
+                          choices=["none"] + [p[:-1] for p in POS],
+                          default="none"
+                          )
+    a_parser.add_argument("--form2lemma", "-l",
+                          help="file containing form-lemma"
+                          " correspondences", type=str)
+    a_parser.add_argument("seed_set",
+                          help="initial seed set of positive,"
+                          " negative, and neutral terms")
+    a_parser.add_argument(GNET_DIR,
+                          help="directory containing GermaNet files")
+
+
 def _get_form2lemma(a_fname):
     """Read file containing form/lemma correspodences
 
@@ -347,50 +378,33 @@ def main(a_argv):
         help="lexicon expansion method to use", dest="dmethod"
     )
 
+    subparser_hu = subparsers.add_parser(HU,
+                                         help="Hu/Liu model"
+                                         " (Hu and Liu, 2004)")
+    subparser_hu.add_argument("--use-syn-rels",
+                              help="use expanded set of synonymous relations",
+                              action="store_true")
+    _add_cmn_opts(subparser_hu)
+
+    subparser_esuli = subparsers.add_parser(ESULI,
+                                            help="SentiWordNet model"
+                                            " (Esuli and Sebastiani, 2005)")
+    _add_cmn_opts(subparser_esuli)
+
     subparser_takamura = subparsers.add_parser(TAKAMURA,
                                                help="Ising spin model"
                                                " (Takamura, 2005)")
-    subparser_takamura.add_argument("--form2lemma", "-l",
-                                    help="file containing form-lemma"
-                                    " correspondences", type=str)
     subparser_takamura.add_argument("--plot", "-p",
                                     help="suffix of files in"
                                     " which to store the plot image",
                                     type=str, default="")
-    subparser_takamura.add_argument(GNET_DIR,
-                                    help="directory containing GermaNet files")
+    _add_cmn_opts(subparser_takamura)
     subparser_takamura.add_argument(CC_FILE,
                                     help="file containing coordinatively"
                                     "conjoined phrases")
     subparser_takamura.add_argument("N",
                                     help="final number of additional"
                                     " terms to extract", type=int)
-    subparser_takamura.add_argument("seed_set",
-                                    help="initial seed set of positive,"
-                                    " negative, and neutral terms")
-
-    subparser_esuli = subparsers.add_parser(ESULI,
-                                            help="SentiWordNet model"
-                                            " (Esuli and Sebastiani, 2005)")
-    subparser_esuli.add_argument("--seed-pos",
-                                 help="part-of-speech of seed synsets"
-                                 " ('none' for no restriction)",
-                                 choices=["none"] + [p[:-1] for p in POS],
-                                 default="none"
-                                 )
-    subparser_esuli.add_argument("--form2lemma", "-l",
-                                 help="file containing form-lemma"
-                                 " correspondences for words occurring"
-                                 " in synset definitions",
-                                 type=str
-                                 )
-    subparser_esuli.add_argument("seed_set",
-                                 help="initial seed set of positive, negative,"
-                                 " and neutral terms"
-                                 )
-    subparser_esuli.add_argument(GNET_DIR,
-                                 help="directory containing GermaNet files"
-                                 )
 
     # disabled.  look at the C++ implementation instead.
     # subparser_w2v = subparsers.add_parser(W2V, help = "word2vec model
@@ -427,12 +441,17 @@ def main(a_argv):
     if args.dmethod == ESULI:
         new_terms = esuli_sebastiani(igermanet, POS_SET, NEG_SET, NEUT_SET,
                                      args.seed_pos)
+    elif args.dmethod == HU:
+        new_terms = hu_liu(igermanet, POS_SET, NEG_SET, NEUT_SET,
+                           args.seed_pos, args.use_syn_rels)
     elif args.dmethod == TAKAMURA:
         N = args.N - (len(POS_SET) + len(NEG_SET))
         if N > 1:
             new_terms = takamura(igermanet, N, getattr(args, CC_FILE),
                                  POS_SET, NEG_SET, NEUT_SET,
                                  a_plot=args.plot or None)
+    else:
+        raise NotImplementedError
     print("Expanding polarity sets... done", file=sys.stderr)
 
     for iterm, itag, _ in new_terms:

@@ -29,10 +29,6 @@ import sys
 
 ##################################################################
 # Constants
-BINARY = "binary"
-TERNARY = "ternary"
-ROCCHIO = "rocchio"
-SVM = "svm"
 ITERS = (0, 2, 4, 6)
 
 

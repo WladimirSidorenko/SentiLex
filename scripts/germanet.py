@@ -136,7 +136,8 @@ class Germanet(object):
                 lexid = ilex.get("id")
                 self.lexid2synids[lexid].add(synid)
                 self.synid2lexids[synid].add(lexid)
-                for iform in ilex.iterfind("./orthForm"):
+                for iform in chain(ilex.iterfind("./orthForm"),
+                                   ilex.iterfind("./orthVar")):
                     lex = normalize(iform.text)
                     self.lexid2lex[lexid].add(lex)
                     self.lex2lexid[lex].add(lexid)
@@ -145,6 +146,7 @@ class Germanet(object):
         """Parse wiktionary file with synset definitions
 
         @param a_fname - name of the Wi
+
         """
         ilexid = idef = None
         itree = ET.parse(a_fname).getroot()
