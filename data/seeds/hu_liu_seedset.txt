@@ -1,5 +1,4 @@
 böse	negative
-cool	positive
 dumm	negative
 elektrisch	neutral
 fantastisch	positive
