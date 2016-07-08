@@ -16,8 +16,12 @@ from tokenizer import Tokenizer
 POSITIVE = "positive"
 NEGATIVE = "negative"
 NEUTRAL = "neutral"
+POL2OPPOSITE = {POSITIVE: NEGATIVE,
+                NEGATIVE: POSITIVE}
 
-ANTIRELS = set(["has_antonym"])
+ANTONYM = "has_antonym"
+SYNONYM = "has_synonym"
+ANTIRELS = set([ANTONYM])
 SYNRELS = set(["is_related_to", "has_participle", "has_pertainym",
                "has_hyponym", "entails", "is_entailed_by"])
 

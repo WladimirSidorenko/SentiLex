@@ -9,15 +9,15 @@
 # Imports
 from __future__ import unicode_literals, print_function
 
-from common import ANTIRELS, SYNRELS, POSITIVE, NEGATIVE, NEUTRAL
+from common import ANTIRELS, SYNRELS, POSITIVE, NEGATIVE, NEUTRAL, \
+    ANTONYM, POL2OPPOSITE
 
+import logging
 import sys
 
 ##################################################################
 # Constants
-ANTONYM = "has_antonym"
-POL2OPPOSITE = {POSITIVE: NEGATIVE,
-                NEGATIVE: POSITIVE}
+# logging.basicConfig(level=logging.DEBUG)
 
 
 ##################################################################
@@ -104,19 +104,25 @@ def _add_lexemes(a_germanet, a_synid, a_pol, a_wght,
     @return \c void
 
     """
-    ipolterm = None
-    for ilexid in a_germanet.synid2lexids[a_synid]:
-        # print("*** considering term: {:s}".format(
-        #     repr(a_germanet.lexid2lex[ilexid])), file=sys.stderr)
-        ipolterm = PolarTerm(ilexid, a_pol, a_wght)
-        if ipolterm in a_pol_terms:
-            # print("*** synonym {:s} is already known".format(
-            #     repr(ipolterm)), file=sys.stderr)
-            continue
-        # print("*** adding synonym {:s}".format(
-        #     repr(ipolterm)), file=sys.stderr)
-        a_new_terms.add(ipolterm)
-        a_pol_terms.add(ipolterm)
+    same_pos = True
+    ipolterm = trg_synid = trg_pos = None
+    src_pos = a_germanet.synid2pos[a_synid]
+    for src_lexid in a_germanet.synid2lexids[a_synid]:
+        same_pos = True
+        # need this mapping, since the same word might have multiple lex ids
+        for src_lex in a_germanet.lexid2lex[src_lexid]:
+            for trg_lexid in a_germanet.lex2lexid[src_lex]:
+                for trg_synid in a_germanet.lexid2synids[trg_lexid]:
+                    if a_germanet.synid2pos[trg_synid] != src_pos:
+                        same_pos = False
+                        break
+                if not same_pos:
+                    break
+                ipolterm = PolarTerm(trg_lexid, a_pol, a_wght)
+                if ipolterm in a_pol_terms:
+                    continue
+                a_new_terms.add(ipolterm)
+                a_pol_terms.add(ipolterm)
 
 
 def _analyze_term(a_germanet, a_lexid, a_pol, a_wght,
@@ -135,12 +141,13 @@ def _analyze_term(a_germanet, a_lexid, a_pol, a_wght,
     @return \c void
 
     """
-    # print("*** analyzing term {:s} with polarity {:s}".format(
-    #     a_lexid, a_pol), file=sys.stderr)
+    logging.debug("analyzing term {:s} "
+                  "with polarity {:s}".format(
+                      a_lexid, a_pol))
     # add synonyms to the set with the same polarity
     for src_synid in a_germanet.lexid2synids[a_lexid]:
-        # print("*** considering synset: {:s}".format(
-        #     repr(src_synid)), file=sys.stderr)
+        logging.debug("considering synset: {:s}".format(
+            repr(src_synid)))
         _add_lexemes(a_germanet, src_synid, a_pol, a_wght,
                      a_new_terms, a_pol_terms)
         if a_expanded_syn_rels:
@@ -152,19 +159,19 @@ def _analyze_term(a_germanet, a_lexid, a_pol, a_wght,
     if a_pol == NEUTRAL:
         return
     ipolterm = None
-    # print("*** lex_relations = {:s}".format(
-    #     repr(a_germanet.lex_relations[a_lexid])), file=sys.stderr)
+    logging.debug("*** lex_relations = {:s}".format(
+        repr(a_germanet.lex_relations[a_lexid])))
     for ito, ireltype in a_germanet.lex_relations[a_lexid]:
         if not ireltype in ANTIRELS:
             continue
         ipolterm = PolarTerm(ito, POL2OPPOSITE[a_pol], a_wght)
         if ipolterm in a_pol_terms:
-            # print("*** antonym {:s} is already known".format(
-            #     repr(ipolterm)), file=sys.stderr)
+            logging.debug("antonym {:s} is already known".format(
+                repr(ipolterm)), file=sys.stderr)
             continue
         else:
-            # print("*** adding antonym {:s}".format(
-            #     repr(ipolterm)), file=sys.stderr)
+            logging.debug("*** adding antonym {:s}".format(
+                repr(ipolterm)))
             a_new_terms.add(ipolterm)
             a_pol_terms.add(ipolterm)
 

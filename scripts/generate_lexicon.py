@@ -436,7 +436,10 @@ def main(a_argv):
     # the request number of polar items
         # apply requested method
     print("Expanding polarity sets... ", file=sys.stderr)
-    if args.dmethod == ESULI:
+    if args.dmethod == AWDALLAH:
+        new_terms = awdallah(igermanet, POS_SET, NEG_SET, NEUT_SET,
+                             args.seed_pos, args.ext_syn_rels)
+    elif args.dmethod == ESULI:
         new_terms = esuli_sebastiani(igermanet, POS_SET, NEG_SET, NEUT_SET,
                                      args.seed_pos)
     elif args.dmethod == HU:
