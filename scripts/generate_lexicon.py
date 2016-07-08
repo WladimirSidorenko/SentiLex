@@ -15,6 +15,7 @@ from __future__ import unicode_literals, print_function
 from common import lemmatize, _lemmatize, ANTIRELS, SYNRELS, TOKENIZER, \
     POSITIVE, NEGATIVE, NEUTRAL
 
+from awdallah import awdallah
 from esuli_sebastiani import esuli_sebastiani
 from hu_liu import hu_liu
 from germanet import Germanet, normalize, POS
@@ -364,12 +365,12 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot=None):
 
 
 def main(a_argv):
-    """
-    Main method for generating sentiment lexicons
+    """Main method for generating sentiment lexicons
 
     @param a_argv - command-line arguments
 
     @return \c 0 on success, non-\c 0 otherwise
+
     """
     argparser = argparse.ArgumentParser(
         description="Script for generating sentiment lexicons.")
@@ -378,11 +379,16 @@ def main(a_argv):
         help="lexicon expansion method to use", dest="dmethod"
     )
 
+    subparser_awdallah = subparsers.add_parser(AWDALLAH,
+                                               help="Awdallah's model"
+                                               " (Awdallah et al., 2011)")
+    _add_cmn_opts(subparser_awdallah)
+
     subparser_hu = subparsers.add_parser(HU,
                                          help="Hu/Liu model"
                                          " (Hu and Liu, 2004)")
-    subparser_hu.add_argument("--use-syn-rels",
-                              help="use expanded set of synonymous relations",
+    subparser_hu.add_argument("--ext-syn-rels",
+                              help="use extended set of synonymous relations",
                               action="store_true")
     _add_cmn_opts(subparser_hu)
 
@@ -405,14 +411,6 @@ def main(a_argv):
     subparser_takamura.add_argument("N",
                                     help="final number of additional"
                                     " terms to extract", type=int)
-
-    # disabled.  look at the C++ implementation instead.
-    # subparser_w2v = subparsers.add_parser(W2V, help = "word2vec model
-    # (Mikolov, 2013)")
-    # subparser_w2v.add_argument("N", help = "final number of terms to
-    # extract", type = int)
-    # subparser_w2v.add_argument("seed_set", help = "initial seed set of
-    # positive, negative, and neutral terms")
     args = argparser.parse_args(a_argv)
 
     # initialize GermaNet, if needed
@@ -443,7 +441,7 @@ def main(a_argv):
                                      args.seed_pos)
     elif args.dmethod == HU:
         new_terms = hu_liu(igermanet, POS_SET, NEG_SET, NEUT_SET,
-                           args.seed_pos, args.use_syn_rels)
+                           args.seed_pos, args.ext_syn_rels)
     elif args.dmethod == TAKAMURA:
         N = args.N - (len(POS_SET) + len(NEG_SET))
         if N > 1:

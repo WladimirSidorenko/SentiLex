@@ -3,9 +3,6 @@
 
 """Module for generating sentiment lexicon using Hu and Liu's method (2004).
 
-USAGE:
-esuli_sebstiani.py [OPTIONS] [INPUT_FILES]
-
 """
 
 ##################################################################
@@ -203,9 +200,15 @@ def _polterms2lexemes(a_germanet, a_polterms):
     @return list of 3-tuples: (lexeme, polarity, weight)
 
     """
-    return [(ilex, iterm.pol, iterm.wght)
-            for iterm in a_polterms
-            for ilex in a_germanet.lexid2lex[iterm.term_id]]
+    ret = []
+    seen_lexes = set()
+    for iterm in a_polterms:
+        for ilex in a_germanet.lexid2lex[iterm.term_id]:
+            if ilex in seen_lexes or iterm.pol == NEUTRAL:
+                continue
+            seen_lexes.add(ilex)
+            ret.append((ilex, iterm.pol, iterm.wght))
+    return ret
 
 
 def hu_liu(a_germanet, a_pos, a_neg, a_neut, a_seed_pos, a_expanded_syn_rels):
