@@ -9,7 +9,8 @@ corpora, and neural word embeddings.
 ### Hu and Liu (2004)
 
 For generating a sentiment lexicon using the method of
-[Hu and Liu (2004)](), you should use the following command:
+[Hu and Liu (2004)](https://www.cs.uic.edu/~liub/publications/kdd04-revSummary.pdf),
+you should use the following command:
 
 ```shell
 
