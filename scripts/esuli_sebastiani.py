@@ -3,9 +3,6 @@
 
 """Module for generating sentiment lexicon using Esuli/Sebstiani.
 
-USAGE:
-esuli_sebstiani.py [OPTIONS] [INPUT_FILES]
-
 """
 
 ##################################################################
