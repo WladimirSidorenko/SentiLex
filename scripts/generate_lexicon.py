@@ -382,6 +382,14 @@ def main(a_argv):
     subparser_awdallah = subparsers.add_parser(AWDALLAH,
                                                help="Awdallah's model"
                                                " (Awdallah et al., 2011)")
+    subparser_awdallah.add_argument("--ext-syn-rels",
+                                    help="use extended set of synonymous"
+                                    " relations",
+                                    action="store_true")
+    subparser_awdallah.add_argument("--teleport",
+                                    help="probability of a random"
+                                    " teleport transition",
+                                    type=float, default=0.)
     _add_cmn_opts(subparser_awdallah)
 
     subparser_hu = subparsers.add_parser(HU,
@@ -438,7 +446,7 @@ def main(a_argv):
     print("Expanding polarity sets... ", file=sys.stderr)
     if args.dmethod == AWDALLAH:
         new_terms = awdallah(igermanet, POS_SET, NEG_SET, NEUT_SET,
-                             args.seed_pos, args.ext_syn_rels)
+                             args.seed_pos, args.ext_syn_rels, args.teleport)
     elif args.dmethod == ESULI:
         new_terms = esuli_sebastiani(igermanet, POS_SET, NEG_SET, NEUT_SET,
                                      args.seed_pos)

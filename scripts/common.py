@@ -16,8 +16,7 @@ from tokenizer import Tokenizer
 POSITIVE = "positive"
 NEGATIVE = "negative"
 NEUTRAL = "neutral"
-POL2OPPOSITE = {POSITIVE: NEGATIVE,
-                NEGATIVE: POSITIVE}
+POL2OPPOSITE = {POSITIVE: NEGATIVE, NEGATIVE: POSITIVE}
 
 ANTONYM = "has_antonym"
 SYNONYM = "has_synonym"

@@ -35,6 +35,7 @@ LEX_REL = "lex_rel"
 RELTYPES = [CON_REL, LEX_REL]
 SZET_RE = re.compile('ß', re.U)
 SPACE_RE = re.compile('(?:\t| \s)+')
+N_WALKERS = 17
 
 
 ##################################################################
