@@ -3,9 +3,6 @@
 
 """Module for generating lexicon using Awadallah and Radev's method (2010).
 
-USAGE:
-esuli_sebstiani.py [OPTIONS] [INPUT_FILES]
-
 """
 
 ##################################################################
@@ -17,8 +14,6 @@ from common import ANTIRELS, SYNRELS, POSITIVE, NEGATIVE, NEUTRAL, \
 
 from bisect import bisect_left
 from collections import defaultdict
-from Queue import Queue
-from threading import Thread
 
 import numpy as np
 import sys
@@ -30,8 +25,8 @@ np.random.seed()
 CNT_IDX = 0
 PROB_IDX = 1
 THRSHLD = 0.5
-MAX_STEPS = 10
-N_WALKERS = 17
+MAX_STEPS = 17
+N_WALKERS = 7
 TELEPORT = "***TELEPORT***"
 
 
@@ -58,6 +53,8 @@ class Graph(object):
         self._nsamples = defaultdict(list)
         for isynid, ipos in self.germanet.synid2pos.iteritems():
             self._add_edges(isynid, ipos, a_ext_rel)
+        self._node_keys = self.nodes.keys()
+        self._n_nodes = len(self.nodes)
         # compute probabilities of edges and create sampling scales
         self._sample_pos2node = defaultdict(dict)
         self._finalize_nodes(a_teleport)
@@ -131,43 +128,39 @@ class Graph(object):
         iscore = 0.
         walkers = []
         iwalker = None
-        iqueue = Queue(N_WALKERS)
+        N = len(self.nodes)
+        iscores = np.zeros(N_WALKERS)
         # start each walker in a separate thread
-        for inode in self.nodes.iterkeys():
+        print("Processing nodes... started", file=sys.stderr)
+        for i, inode in enumerate(self.nodes.iterkeys()):
+            # print("{:d} of {:d}".format(i, N), end="\r", file=sys.stderr)
             # send walkers
             for i in xrange(N_WALKERS):
-                iwalker = Thread(None, self._rndm_walk_helper,
-                                 str(i), (a_rndm_gen, inode,
-                                          iqueue, MAX_STEPS))
-                iwalker.start()
-                walkers.append(iwalker)
-            # join walkers
-            for iwalker in walkers:
-                iwalker.join()
-                assert not iwalker.isAlive(), \
-                    "Thread #{:s} exited abnormally.".format(iwalker.name)
-            # compute the polarity score of the term
-            iscore = 0.
-            while not iqueue.empty():
-                iscore += iqueue.get()
+                self._rndm_walk_helper(a_rndm_gen, inode,
+                                       iscores, i, MAX_STEPS)
             # obtain the mean of all scores
-            # print("iscore =", repr(iscore), file=sys.stderr)
-            iscore /= N_WALKERS
+            iscore = iscores.mean()
+            print("iscore =", repr(iscore), file=sys.stderr)
+            iscores *= 0.
             if iscore > THRSHLD:
                 ret[inode] = (iscore, POSITIVE)
             elif -iscore > THRSHLD:
                 ret[inode] = (iscore, NEGATIVE)
             else:
                 ret[inode] = (iscore, NEUTRAL)
+            sys.exit(66)
+        print("Processing nodes... done", file=sys.stderr)
         return ret
 
     def _rndm_walk_helper(self, a_rndm_gen, a_node,
-                          a_queue, a_max_steps):
+                          a_scores, a_i, a_max_steps):
         """Perform single random walk from the given nodes to the first seed.
 
         @param a_rndm_gen - generator of random numbers
         @param a_node - node to start the random walk from
-        @param a_queue - result queue to be updated
+        @param a_scores - result list of scores to be updated
+        @param a_i - index in the score list at which the result should be
+          stored
         @param a_max_steps - maximum number of steps to be made
 
         @return \c void (updates a_queue in place)
@@ -178,6 +171,9 @@ class Graph(object):
         ipos = ret = 0
         # print("_rndm_walk_helper: a_node", repr(a_node), file=sys.stderr)
         # print("_rndm_walk_helper: a_queue", repr(a_queue), file=sys.stderr)
+        if a_node in self._seeds:
+            ret = self._seeds[a_node]
+            a_max_steps = 0
         for i in xrange(a_max_steps):
             # print("_rndm_walk_helper: self._nsamples[a_node]",
             #       repr(self._nsamples[a_node]), file=sys.stderr)
@@ -190,20 +186,20 @@ class Graph(object):
             #       repr(sample), file=sys.stderr)
             # print("_rndm_walk_helper: ipos =",
             #       repr(ipos), file=sys.stderr)
-
+            # break out if no transitions are left
             if ipos >= len(self._sample_pos2node[a_node]):
                 break
             a_node = self._sample_pos2node[a_node][ipos]
             # print("_rndm_walk_helper: trg_node =",
             #       repr(a_node), file=sys.stderr)
             if a_node == TELEPORT:
-                raise NotImplementedError
-            elif a_node in self._seeds:
+                # teleport to a random node
+                ipos = np.random.choice(self._n_nodes)
+                a_node = self._node_keys[ipos]
+            if a_node in self._seeds:
                 ret = self._seeds[a_node]
                 break
-        a_queue.put(ret)
-        # print("_rndm_walk_helper: modified a_queue", repr(a_queue),
-        #       file=sys.stderr)
+        a_scores[a_i] = ret
 
     def _finalize_nodes(self, a_teleport):
         """Compute probabilities of transitions.
@@ -233,7 +229,7 @@ class Graph(object):
 # Methods
 def awdallah(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
              a_ext_syn_rels, a_teleport):
-    """Extend sentiment lexicons using the  method of Hu and Liu (2004).
+    """Extend sentiment lexicons using the  method of Awdallah (2010).
 
     @param a_germanet - GermaNet instance
     @param a_pos - set of lexemes with positive polarity
@@ -244,7 +240,7 @@ def awdallah(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
     @param a_ext_syn_rels - use extended set of synonymous relations
     @param a_teleport - probability of a random teleport transition
 
-    @return \c void
+    @return list of polar terms, their polarities, and scores
 
     """
     sgraph = Graph(a_germanet, a_ext_syn_rels, a_teleport)
@@ -260,6 +256,6 @@ def awdallah(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
     for ((iterm, _), (iscore, ipol)) in pterms.iteritems():
         if ipol != NEUTRAL:
             ret.append((iterm, ipol, iscore))
-    # convert obtained lex ids back to lexemes
+    # sort obtained lexemes by their scores
     ret.sort(key=lambda el: abs(el[-1]), reverse=True)
     return ret
