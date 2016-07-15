@@ -263,22 +263,61 @@ def _blair_goldensohn(a_germanet, a_pos, a_neg, a_neut,
                 for ilexid in a_germanet.synid2lexids[isynid]
                 for ilex in a_germanet.lexid2lex[ilexid]
                 )
+    assert ("kilometerlang", "adj") in terms
+    assert ("zugverkehr", "nomen") in terms
+    assert ("bewirken", "verben") in terms
     terms2idx = {iterm: i for i, iterm in enumerate(terms)}
+    assert ("kilometerlang", "adj") in terms2idx
+    assert ("zugverkehr", "nomen") in terms2idx
+    assert ("bewirken", "verben") in terms2idx
     # construct term vector
     v = sparse.lil_matrix((len(terms), 1), dtype=np.float32)
+    assert v.shape == ((len(terms), 1))
     sign_correct(v, terms2idx, a_pos, a_neg, a_neut)
-    # convert term vector to csc_matrix for more efficient arithmetic
-    # operations
+    assert np.all(v[terms2idx[iterm]] > 0.
+                  for iterm in a_pos)
+    assert np.all(v[terms2idx[iterm]] < 0.
+                  for iterm in a_neg)
+    assert np.all(np.isclose(v[terms2idx[iterm]], 0.)
+                  for iterm in a_neut)
+    # convert term vector to csc_matrix for a more efficient arithmetic
     v = v.tocsc()
-
-    # build the adjacency matrix
+    # build adjacency matrix
     M = _build_mtx(a_germanet, terms2idx, a_neut,
                    a_ext_syn_rels, len(terms))
-    print("M =", repr(M), file=sys.stderr)
+    i = np.random.randint(0, len(terms))
+    assert np.isclose(M[i, i], [1. + LAMBDA])
+    i = terms2idx[("negativ", "adj")]
+    j = terms2idx[("positiv", "adj")]
+    assert np.isclose(M[i, j], [-LAMBDA])
+    assert np.isclose(M[j, i], [-LAMBDA])
+    j = terms2idx[("schlecht", "adj")]
+    assert np.isclose(M[j, i], [LAMBDA])
+    assert np.isclose(M[i, j], [LAMBDA])
+    if a_ext_syn_rels:
+        j, i = i, terms2idx[("unglücklich", "adj")]
+        assert np.isclose(M[i, j], [LAMBDA])
+        assert not np.isclose(M[j, i], [LAMBDA])
+        i, j = terms2idx[("unförmig", "adj")], \
+            terms2idx[("form", "nomen")]
+        assert M[j, i] == 0.
+        i, j = terms2idx[("lohnend", "adj")], \
+            terms2idx[("lohnen", "verben")]
+        assert np.isclose(M[j, i], [LAMBDA])
     # propagate the polarity values
+    test_val = test_val_prev = 0.
     for _ in xrange(MAX_ITERS):
+        test_val_prev = v[terms2idx[("übel", "adj")]]
         v = M.dot(v)
+        test_val = v[terms2idx[("übel", "adj")]]
+        assert test_val_prev > test_val
         sign_correct(v, terms2idx, a_pos, a_neg, a_neut)
+    assert np.all(v[terms2idx[iterm]] > 0.
+                  for iterm in a_pos)
+    assert np.all(v[terms2idx[iterm]] < 0.
+                  for iterm in a_neg)
+    assert np.all(np.isclose(v[terms2idx[iterm]], 0.)
+                  for iterm in a_neut)
     # free the matrix
     del M
     v = v.toarray()
