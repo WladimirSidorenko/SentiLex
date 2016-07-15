@@ -63,6 +63,7 @@ class Germanet(object):
       synid2lexids - mapping from synset IDs to lexemes
       synid2defexmp - mapping from synset IDs to synset definitions
         and examples
+      synid2pos - mapping from synset id to part-of-speech
       con_relations - adjacency lists of relations between synsets
       lex_relations - adjacency lists of relations between lexemes
 

@@ -16,6 +16,7 @@ from common import lemmatize, _lemmatize, ANTIRELS, SYNRELS, TOKENIZER, \
     POSITIVE, NEGATIVE, NEUTRAL
 
 from awdallah import awdallah
+from blair_goldensohn import blair_goldensohn
 from esuli_sebastiani import esuli_sebastiani
 from hu_liu import hu_liu
 from germanet import Germanet, normalize, POS
@@ -39,7 +40,7 @@ CC_FILE = "cc_file"
 VERBOSE = False
 
 AWDALLAH = "awdallah"
-BG = "bg"
+BG = "blair-goldensohn"
 ESULI = "esuli"
 HU = "hu"
 KIM = "kim"
@@ -392,6 +393,15 @@ def main(a_argv):
                                     type=float, default=0.)
     _add_cmn_opts(subparser_awdallah)
 
+    subparser_bg = subparsers.add_parser(BG,
+                                         help="Blair-Goldensohn's model"
+                                         " (Blair-Goldensohn et al., 2008)")
+    subparser_bg.add_argument("--ext-syn-rels",
+                              help="use extended set of synonymous"
+                              " relations",
+                              action="store_true")
+    _add_cmn_opts(subparser_bg)
+
     subparser_hu = subparsers.add_parser(HU,
                                          help="Hu/Liu model"
                                          " (Hu and Liu, 2004)")
@@ -447,6 +457,9 @@ def main(a_argv):
     if args.dmethod == AWDALLAH:
         new_terms = awdallah(igermanet, POS_SET, NEG_SET, NEUT_SET,
                              args.seed_pos, args.ext_syn_rels, args.teleport)
+    elif args.dmethod == BG:
+        new_terms = blair_goldensohn(igermanet, POS_SET, NEG_SET, NEUT_SET,
+                                     args.seed_pos, args.ext_syn_rels)
     elif args.dmethod == ESULI:
         new_terms = esuli_sebastiani(igermanet, POS_SET, NEG_SET, NEUT_SET,
                                      args.seed_pos)

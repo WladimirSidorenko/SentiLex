@@ -97,7 +97,7 @@ class Graph(object):
         @param a_terms - list of polar terms
         @param a_terms - list of polar terms
 
-        @return
+        @return \c void
 
         """
         if a_pol == POSITIVE:
