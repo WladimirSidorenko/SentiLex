@@ -6,17 +6,17 @@ corpora, and neural word embeddings.
 
 ## Examples
 
-### Hu and Liu (2004)
+### Hassan (2010)
 
-For generating a sentiment lexicon using the method of
-[Hu and Liu (2004)](https://www.cs.uic.edu/~liub/publications/kdd04-revSummary.pdf),
+To generate a sentiment lexicon using the method of
+[Hassan and Radev (2010)](https://www.aclweb.org/anthology/P/P10/P10-1041.pdf),
 you should use the following command:
 
 ```shell
 
-./scripts/generate_lexicon.py hu \
---form2lemma=data/GermaNet_v9.0/gn_form2lemma.txt \
-data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0
+./scripts/generate_lexicon.py awdallah --ext-syn-rels \
+--seed-pos=adj --form2lemma=data/GermaNet_v9.0/gn_form2lemma.txt \
+data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0/
 
 ```
 
@@ -34,6 +34,20 @@ data/seeds/turney_littman_gi_seedset.txt data/GermaNet_v9.0
 
 ```
 
+### Hu and Liu (2004)
+
+For generating a sentiment lexicon using the method of
+[Hu and Liu (2004)](https://www.cs.uic.edu/~liub/publications/kdd04-revSummary.pdf),
+you should use the following command:
+
+```shell
+
+./scripts/generate_lexicon.py hu \
+--form2lemma=data/GermaNet_v9.0/gn_form2lemma.txt \
+data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0
+
+```
+
 Evaluation
 ----------
 
@@ -45,6 +59,6 @@ following command, providing a valid path to the downloaded
 
 ./scripts/evaluate.py -l data/form2lemma.txt \
 	data/es/esuli_sebastiani_tlg_seedset.txt \
-	../PotTS/corpus/basedata/ ../PotTS/corpus/annotator-2/markables/
+	${PATH_TO_PotTS}/corpus/basedata/ ${PATH_TO_PotTS}/corpus/annotator-2/markables/
 
 ```
