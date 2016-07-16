@@ -6,6 +6,22 @@ corpora, and neural word embeddings.
 
 ## Examples
 
+### Blair-Goldensohn (2008)
+
+For generating a sentiment lexicon using the method of
+[Blair-Goldensohn et
+al. (2008)](http://www.australianscience.com.au/research/google/34368.pdf),
+use the following command:
+
+```shell
+
+./scripts/generate_lexicon.py blair-goldensohn \
+ --ext-syn-rels --seed-pos=adj \
+ --form2lemma=data/GermaNet_v9.0/gn_form2lemma.txt \
+ data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0/
+
+```
+
 ### Hassan (2010)
 
 To generate a sentiment lexicon using the method of
@@ -22,9 +38,9 @@ data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0/
 
 ### Esuli and Sebastiani (2006)
 
-To generate a sentiment lexicon using the `SentiWordNet` method of
+For generating a sentiment lexicon using the method of
 [Esuli and Sebastiani (2006)](http://ontotext.fbk.eu/Publications/sentiWN-TR.pdf),
-you should envoke the following command:
+you should use the following command:
 
 ```shell
 
@@ -36,9 +52,9 @@ data/seeds/turney_littman_gi_seedset.txt data/GermaNet_v9.0
 
 ### Hu and Liu (2004)
 
-For generating a sentiment lexicon using the method of
+To generate a sentiment lexicon using the `SentiWordNet` method of
 [Hu and Liu (2004)](https://www.cs.uic.edu/~liub/publications/kdd04-revSummary.pdf),
-you should use the following command:
+you should envoke the following command:
 
 ```shell
 
