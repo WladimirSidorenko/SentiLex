@@ -67,9 +67,10 @@ data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0
 Evaluation
 ----------
 
-You can evaluate the resulting sentiment lexicon by issuing the
-following command, providing a valid path to the downloaded
-[PotTS](https://github.com/WladimirSidorenko/PotTS) corpus:
+You can evaluate the resulting sentiment lexicon on the
+[PotTS](https://github.com/WladimirSidorenko/PotTS) dataset by using
+the following command and providing a valid path to the downloaded
+corpus files:
 
 ```shell
 
