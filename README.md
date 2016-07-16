@@ -70,7 +70,7 @@ Evaluation
 You can evaluate the resulting sentiment lexicon on the
 [PotTS](https://github.com/WladimirSidorenko/PotTS) dataset by using
 the following command and providing a valid path to the downloaded
-corpus files:
+corpus data:
 
 ```shell
 
