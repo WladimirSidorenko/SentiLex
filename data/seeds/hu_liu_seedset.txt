@@ -5,7 +5,6 @@ fantastisch	positive
 grimmig	negative
 grossartig	positive
 großartig	positive
-gut	positive
 hervorragend	positive
 hübsch	positive
 kompliziert	negative
