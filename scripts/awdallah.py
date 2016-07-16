@@ -14,6 +14,7 @@ from common import ANTIRELS, SYNRELS, POSITIVE, NEGATIVE, NEUTRAL, \
 
 from bisect import bisect_left
 from collections import defaultdict
+from itertools import chain
 
 import numpy as np
 import sys
@@ -53,11 +54,31 @@ class Graph(object):
         self._nsamples = defaultdict(list)
         for isynid, ipos in self.germanet.synid2pos.iteritems():
             self._add_edges(isynid, ipos, a_ext_rel)
+        assert self.nodes[("beachtlich", "adj")][("erklecklich", "adj")] == 1.
+        assert self.nodes[("hinsetzen",
+                           "verben")][("niedersetzen", "verben")] == 2.
+        assert self.nodes[("zweiteilung",
+                           "nomen")][("dichotomie", "nomen")] == 1.
+        if a_ext_rel:
+            assert self.nodes[("hünenhaft",
+                               "adj")][("hüne", "nomen")] == 1.
+            assert ("sonderbar", "adj") \
+                not in self.nodes[("kafkaesk", "adj")]
+            assert self.nodes[("sonderbar",
+                               "adj")][("kafkaesk", "adj")] == 1.
+
         self._node_keys = self.nodes.keys()
         self._n_nodes = len(self.nodes)
         # compute probabilities of edges and create sampling scales
         self._sample_pos2node = defaultdict(dict)
         self._finalize_nodes(a_teleport)
+        idx = 0
+        for inode in self.nodes.iterkeys():
+            assert not self._nsamples[inode] or \
+                np.isclose(self._nsamples[inode][-1], [1.])
+            idx = len(self._nsamples[inode]) - 1
+            assert not a_teleport \
+                or self._sample_pos2node[inode][idx] == TELEPORT
 
     def _add_edges(self, a_synid, a_pos, a_ext_rel):
         """Add edges to the node's adjacency matrix.
@@ -80,15 +101,28 @@ class Graph(object):
                         for ilex in self.germanet.lexid2lex[ilexid]:
                             trg_nodes.add((ilex, trg_pos))
         # add target nodes to each lexeme pertaining to the given synset
+        trg_pos = ""
+        ext_syn_nodes = []
         for ilexid in self.germanet.synid2lexids[a_synid]:
+            if a_ext_rel:
+                for trg_lexid, rel_type in self.germanet.lex_relations[ilexid]:
+                    trg_pos = ""
+                    for isyn_id in self.germanet.lexid2synids[trg_lexid]:
+                        trg_pos = self.germanet.synid2pos[isyn_id]
+                        break
+                    if rel_type in SYNRELS:
+                        for ilex in self.germanet.lexid2lex[trg_lexid]:
+                            ext_syn_nodes.append((ilex, trg_pos))
             for ilex in self.germanet.lexid2lex[ilexid]:
                 # each edge has the form:
                 # src_node => trg_node => cnt
                 # (we don't differentiate between edge types)
                 isrc_node = (ilex, a_pos)
-                for itrg_node in trg_nodes:
+                for itrg_node in chain(trg_nodes, ext_syn_nodes):
                     if isrc_node != itrg_node:
                         self.nodes[isrc_node][itrg_node] += 1
+            if ext_syn_nodes:
+                del ext_syn_nodes[:]
 
     def add_seeds(self, a_terms, a_pol, a_pos):
         """Add polar terms.
@@ -139,16 +173,18 @@ class Graph(object):
                 self._rndm_walk_helper(a_rndm_gen, inode,
                                        iscores, i, MAX_STEPS)
             # obtain the mean of all scores
+            assert inode != ("mau", "adj") or np.any(iscore == -1.
+                                                     for iscore in iscores)
             iscore = iscores.mean()
-            print("iscore =", repr(iscore), file=sys.stderr)
             iscores *= 0.
+            assert inode != ("schlecht", "adj") or iscore == -1.
+            assert inode != ("gut", "adj") or iscore == 1.
             if iscore > THRSHLD:
                 ret[inode] = (iscore, POSITIVE)
             elif -iscore > THRSHLD:
                 ret[inode] = (iscore, NEGATIVE)
             else:
                 ret[inode] = (iscore, NEUTRAL)
-            sys.exit(66)
         print("Processing nodes... done", file=sys.stderr)
         return ret
 
@@ -250,6 +286,8 @@ def awdallah(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
     sgraph.add_seeds(a_pos, POSITIVE, a_seed_pos)
     sgraph.add_seeds(a_neg, NEGATIVE, a_seed_pos)
     sgraph.add_seeds(a_neut, NEUTRAL, a_seed_pos)
+    assert sgraph._seeds[("gut", "adj")] == 1.
+    assert sgraph._seeds[("schlecht", "adj")] == -1.
     # perform random walk
     ret = []
     pterms = sgraph.rndm_walk(np.random.uniform)

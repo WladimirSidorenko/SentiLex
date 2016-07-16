@@ -21,7 +21,8 @@ POL2OPPOSITE = {POSITIVE: NEGATIVE, NEGATIVE: POSITIVE}
 ANTONYM = "has_antonym"
 SYNONYM = "has_synonym"
 ANTIRELS = set([ANTONYM])
-SYNRELS = set(["is_related_to", "has_participle", "has_pertainym",
+# excluded `is_related_to' as it connected `Form' and `unförmig'
+SYNRELS = set(["has_participle", "has_pertainym",
                "has_hyponym", "entails", "is_entailed_by"])
 
 TOKENIZER = Tokenizer()
