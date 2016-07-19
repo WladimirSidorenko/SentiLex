@@ -1,8 +1,8 @@
 # Dictionary-, Corpus-, and NWE-based Generation of Sentiment Lexicons
 
 This project provides scripts and executable files for generating
-sentiment lexicons using `GermaNet` (German equivalent of `WordNet`),
-corpora, and neural word embeddings.
+sentiment lexicons from `GermaNet` (a German equivalent of `WordNet`),
+raw text corpora, and neural word embeddings.
 
 ## Examples
 

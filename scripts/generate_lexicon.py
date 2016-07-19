@@ -14,23 +14,25 @@ from __future__ import unicode_literals, print_function
 
 from common import lemmatize, _lemmatize, ANTIRELS, SYNRELS, TOKENIZER, \
     POSITIVE, NEGATIVE, NEUTRAL
+from germanet import Germanet, normalize, POS
 
 from awdallah import awdallah
 from blair_goldensohn import blair_goldensohn
 from esuli_sebastiani import esuli_sebastiani
 from hu_liu import hu_liu
-from germanet import Germanet, normalize, POS
+from rao import rao_min_cut, rao_label_propagation
+
 from ising import Ising, ITEM_IDX, WGHT_IDX, HAS_FXD_WGHT, FXD_WGHT_IDX
 
 from itertools import chain, combinations
+from math import isnan
 import argparse
 import codecs
-from math import floor, ceil, isnan
 import numpy as np
 import os
 import re
-import sys
 import string
+import sys
 
 ##################################################################
 # Imports
@@ -44,7 +46,8 @@ BG = "blair-goldensohn"
 ESULI = "esuli"
 HU = "hu"
 KIM = "kim"
-RAO = "rao"
+RAO_MIN_CUT = "rao-min-cut"
+RAO_LBL_PROP = "rao-lbl-prop"
 TAKAMURA = "takamura"
 W2V = "w2v"
 
@@ -415,6 +418,22 @@ def main(a_argv):
                                             " (Esuli and Sebastiani, 2005)")
     _add_cmn_opts(subparser_esuli)
 
+    subparser_rao_min_cut = subparsers.add_parser(
+        RAO_MIN_CUT, help="Rao/Ravichandran's min-cut model"
+        " (Rao and Ravichandran, 2009)")
+    subparser_rao_min_cut.add_argument("--ext-syn-rels",
+                                       help="use extended set of synonymous"
+                                       " relations", action="store_true")
+    _add_cmn_opts(subparser_rao_min_cut)
+
+    subparser_rao_lbl_prop = subparsers.add_parser(
+        RAO_LBL_PROP, help="Rao/Ravichandran's label propagation model"
+        " (Rao and Ravichandran, 2009)")
+    subparser_rao_lbl_prop.add_argument("--ext-syn-rels",
+                                        help="use extended set of synonymous"
+                                        " relations", action="store_true")
+    _add_cmn_opts(subparser_rao_lbl_prop)
+
     subparser_takamura = subparsers.add_parser(TAKAMURA,
                                                help="Ising spin model"
                                                " (Takamura, 2005)")
@@ -466,6 +485,9 @@ def main(a_argv):
     elif args.dmethod == HU:
         new_terms = hu_liu(igermanet, POS_SET, NEG_SET, NEUT_SET,
                            args.seed_pos, args.ext_syn_rels)
+    elif args.dmethod == RAO_MIN_CUT:
+        new_terms = rao_min_cut(igermanet, POS_SET, NEG_SET, NEUT_SET,
+                                args.seed_pos, args.ext_syn_rels)
     elif args.dmethod == TAKAMURA:
         N = args.N - (len(POS_SET) + len(NEG_SET))
         if N > 1:
