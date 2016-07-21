@@ -20,7 +20,8 @@ from awdallah import awdallah
 from blair_goldensohn import blair_goldensohn
 from esuli_sebastiani import esuli_sebastiani
 from hu_liu import hu_liu
-from rao import rao_min_cut, rao_label_propagation
+from kim_hovy import kim_hovy
+from rao import rao_min_cut, rao_lbl_prop
 
 from ising import Ising, ITEM_IDX, WGHT_IDX, HAS_FXD_WGHT, FXD_WGHT_IDX
 
@@ -488,6 +489,9 @@ def main(a_argv):
     elif args.dmethod == RAO_MIN_CUT:
         new_terms = rao_min_cut(igermanet, POS_SET, NEG_SET, NEUT_SET,
                                 args.seed_pos, args.ext_syn_rels)
+    elif args.dmethod == RAO_LBL_PROP:
+        new_terms = rao_lbl_prop(igermanet, POS_SET, NEG_SET, NEUT_SET,
+                                 args.seed_pos, args.ext_syn_rels)
     elif args.dmethod == TAKAMURA:
         N = args.N - (len(POS_SET) + len(NEG_SET))
         if N > 1:

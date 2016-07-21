@@ -151,7 +151,7 @@ def _get_con_rels(a_germanet, a_syn_id, a_term2idx):
     return ret
 
 
-def _build_mtx(a_germanet, a_term2idx, a_neut, a_ext_rels, a_nterms):
+def build_mtx(a_germanet, a_term2idx, a_neut, a_ext_rels, a_nterms):
     """Construct adjacency matrix of GermaNet terms.
 
     @param a_germanet - GermaNet instance
@@ -283,8 +283,8 @@ def _blair_goldensohn(a_germanet, a_pos, a_neg, a_neut,
     # convert term vector to csc_matrix for a more efficient arithmetic
     v = v.tocsc()
     # build adjacency matrix
-    M = _build_mtx(a_germanet, terms2idx, a_neut,
-                   a_ext_syn_rels, len(terms))
+    M = build_mtx(a_germanet, terms2idx, a_neut,
+                  a_ext_syn_rels, len(terms))
     i = np.random.randint(0, len(terms))
     assert np.isclose(M[i, i], [1. + LAMBDA])
     i = terms2idx[("negativ", "adj")]
