@@ -195,7 +195,7 @@ def build_mtx(a_germanet, a_term2idx, a_neut, a_ext_rels, a_nterms):
                     if i != j:
                         M[i, j] = LAMBDA
                 # add con relations from the GermaNet (it's intended to reverse
-                # from and to here)
+                # `from' and `to' here)
                 for j, jval in isrc_nodes:
                     if i != j:
                         M[j, i] = jval
