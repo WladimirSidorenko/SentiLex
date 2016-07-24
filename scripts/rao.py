@@ -9,7 +9,7 @@
 # Imports
 from __future__ import unicode_literals, print_function
 
-from blair_goldensohn import build_mtx, _seeds2seedpos
+from blair_goldensohn import build_mtx, seeds2seedpos
 from common import POSITIVE, NEGATIVE, NEUTRAL
 from graph import Graph
 
@@ -26,7 +26,7 @@ NEG_IDX = 1
 NEUT_IDX = 2
 POL_IDX = 1
 SCORE_IDX = 2
-MAX_I = 3  # 300
+MAX_I = 300
 IDX2CLS = {POS_IDX: POSITIVE, NEG_IDX: NEGATIVE, NEUT_IDX: NEUTRAL}
 
 
@@ -220,9 +220,9 @@ def rao_lbl_prop(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
         a_seed_pos = ["adj", "nomen", "verben"]
     else:
         a_seed_pos = [a_seed_pos]
-    a_pos = _seeds2seedpos(a_pos, a_seed_pos)
-    a_neg = _seeds2seedpos(a_neg, a_seed_pos)
-    a_neut = _seeds2seedpos(a_neut, a_seed_pos)
+    a_pos = seeds2seedpos(a_pos, a_seed_pos)
+    a_neg = seeds2seedpos(a_neg, a_seed_pos)
+    a_neut = seeds2seedpos(a_neut, a_seed_pos)
     # obtain and row-normalize the adjacency matrix
     terms = set((ilex, ipos)
                 for isynid, ipos in a_germanet.synid2pos.iteritems()

@@ -46,7 +46,7 @@ AWDALLAH = "awdallah"
 BG = "blair-goldensohn"
 ESULI = "esuli"
 HU = "hu"
-KIM = "kim"
+KIM = "kim-hovy"
 RAO_MIN_CUT = "rao-min-cut"
 RAO_LBL_PROP = "rao-lbl-prop"
 TAKAMURA = "takamura"
@@ -419,6 +419,13 @@ def main(a_argv):
                                             " (Esuli and Sebastiani, 2005)")
     _add_cmn_opts(subparser_esuli)
 
+    subparser_kim = subparsers.add_parser(
+        KIM, help="Kim's method (Kim and Hovy, 2004)")
+    subparser_kim.add_argument("--ext-syn-rels",
+                               help="use extended set of synonymous"
+                               " relations", action="store_true")
+    _add_cmn_opts(subparser_kim)
+
     subparser_rao_min_cut = subparsers.add_parser(
         RAO_MIN_CUT, help="Rao/Ravichandran's min-cut model"
         " (Rao and Ravichandran, 2009)")
@@ -486,6 +493,9 @@ def main(a_argv):
     elif args.dmethod == HU:
         new_terms = hu_liu(igermanet, POS_SET, NEG_SET, NEUT_SET,
                            args.seed_pos, args.ext_syn_rels)
+    elif args.dmethod == KIM:
+        new_terms = kim_hovy(igermanet, POS_SET, NEG_SET, NEUT_SET,
+                             args.seed_pos, args.ext_syn_rels)
     elif args.dmethod == RAO_MIN_CUT:
         new_terms = rao_min_cut(igermanet, POS_SET, NEG_SET, NEUT_SET,
                                 args.seed_pos, args.ext_syn_rels)

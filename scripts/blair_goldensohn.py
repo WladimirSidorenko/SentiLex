@@ -27,7 +27,7 @@ THRSHLD = 0.
 
 ##################################################################
 # Methods
-def _seeds2seedpos(a_seeds, a_pos):
+def seeds2seedpos(a_seeds, a_pos):
     """Convert set of seed terms to a set with seed terms and PoS.
 
     @param a_seeds - set of seed terms
@@ -343,9 +343,9 @@ def blair_goldensohn(a_germanet, a_pos, a_neg, a_neut,
         a_seed_pos = ["adj", "nomen", "verben"]
     else:
         a_seed_pos = [a_seed_pos]
-    a_pos = _seeds2seedpos(a_pos, a_seed_pos)
-    a_neg = _seeds2seedpos(a_neg, a_seed_pos)
-    a_neut = _seeds2seedpos(a_neut, a_seed_pos)
+    a_pos = seeds2seedpos(a_pos, a_seed_pos)
+    a_neg = seeds2seedpos(a_neg, a_seed_pos)
+    a_neut = seeds2seedpos(a_neut, a_seed_pos)
     # expand seed sets
     ret = _blair_goldensohn(a_germanet, a_pos, a_neg, a_neut,
                             a_ext_syn_rels)
