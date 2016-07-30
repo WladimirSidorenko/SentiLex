@@ -211,7 +211,7 @@ def kim_hovy(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
     # check
     assert np.max(np.max(scores, axis=1), axis=0) <= 1., \
         "Ivalid maximum probability value."
-    assert np.min(np.min(scores, axis=1), axis=0) >= 0., \
+    assert np.min(np.min(scores, axis=1), axis=0) > 0., \
         "Ivalid minimum probability value."
     # determine classes
     idx = 0
@@ -219,6 +219,7 @@ def kim_hovy(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
     lex2lidx = {}
     classes = np.argmax(scores, axis=0)
     for (ilex, ipos), idx in term2idx.iteritems():
+
         if classes[idx] == POS_IDX:
             ipol = POSITIVE
             iscore = scores[POS_IDX, idx]
@@ -226,6 +227,8 @@ def kim_hovy(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
             ipol = NEGATIVE
             iscore = scores[NEG_IDX, idx]
         else:
+            continue
+        if iscore == 0.:
             continue
         if ilex in lex2lidx:
             idx = lex2lidx[ilex]
