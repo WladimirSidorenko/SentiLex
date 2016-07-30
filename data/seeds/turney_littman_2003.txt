@@ -1,0 +1,34 @@
+### Pwords = {good, nice, excellent, positive, fortunate, correct, and superior}
+### Nwords = {bad, nasty, poor, negative, unfortunate, wrong, and inferior}
+ausgezeichnet	positive
+glücklich	positive
+gut	positive
+hochwertig	positive
+korrekt	positive
+nett	positive
+positiv	positive
+richtig	positive
+schön	positive
+überlegen	positive
+
+arm	negative
+ekelhaft	negative
+falsch	negative
+gemein	negative
+hässlich	negative
+lästig	negative
+minderwertig	negative
+negativ	negative
+schlecht	negative
+unglücklich	negative
+
+neutral	neutral
+sachlich	neutral
+technisch	neutral
+chemisch	neutral
+physisch	neutral
+materiell	neutral
+körperlich	neutral
+finanziell	neutral
+theoretisch	neutral
+praktisch	neutral

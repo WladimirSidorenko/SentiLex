@@ -17,7 +17,11 @@ import sys
 
 ##################################################################
 # Constants
-# logging.basicConfig(level=logging.DEBUG)
+LOGGER = logging
+# The below does not work with Python version older than 2.7.7
+# LOGGER = logging.getLogger("Hu-Liu")
+# LOGGER.setLevel(logging.DEBUG)
+# LOGGER.addHandler(logging.StreamHandler())
 
 
 ##################################################################
@@ -95,7 +99,7 @@ def _add_lexemes(a_germanet, a_synid, a_pol, a_wght,
     """Add lexemes pertaining to the given synset.
 
     @param a_germanet - GermaNet instance
-    @param a_synid - id of the lexical term being analyzed
+    @param a_synid - id of the synonym being analyzed
     @param a_pol - polarity of the lexical term being analyzed
     @param a_wght - weight for the new terms
     @param a_new_terms - set of newly added terms (to be enriched)
@@ -141,48 +145,56 @@ def _analyze_term(a_germanet, a_lexid, a_pol, a_wght,
     @return \c void
 
     """
-    logging.debug("analyzing term {:s} "
-                  "with polarity {:s}".format(
-                      a_lexid, a_pol))
+    LOGGER.debug("analyzing term {:s} "
+                 "with polarity {:s}".format(
+                     a_lexid, a_pol))
     # add synonyms to the set with the same polarity
+    # print("a_lexid =", repr(a_lexid), file=sys.stderr)
+    ipolterm = None
     for src_synid in a_germanet.lexid2synids[a_lexid]:
-        logging.debug("considering synset: {:s}".format(
+        # print("src_synid =", repr(src_synid), file=sys.stderr)
+        LOGGER.debug("considering synset: {:s}".format(
             repr(src_synid)))
         _add_lexemes(a_germanet, src_synid, a_pol, a_wght,
                      a_new_terms, a_pol_terms)
         if a_expanded_syn_rels:
             for trg_synid, rel_type in a_germanet.con_relations[src_synid]:
                 if rel_type in SYNRELS:
-                    _add_lexemes(a_germanet, trg_synid, a_pol, a_wght,
-                                 a_new_terms, a_pol_terms)
+                    for ilex_id in a_germanet.synid2lexids[trg_synid]:
+                        ipolterm = PolarTerm(ilex_id, a_pol, a_wght)
+                        a_new_terms.add(ipolterm)
+                        a_pol_terms.add(ipolterm)
     # add antonyms to the set with the opposite polarity
-    if a_pol == NEUTRAL:
+    if a_pol == NEUTRAL and not a_expanded_syn_rels:
         return
     ipolterm = None
-    logging.debug("*** lex_relations = {:s}".format(
+    LOGGER.debug("*** lex_relations = {:s}".format(
         repr(a_germanet.lex_relations[a_lexid])))
     for ito, ireltype in a_germanet.lex_relations[a_lexid]:
-        if not ireltype in ANTIRELS:
+        if a_pol != NEUTRAL and ireltype in ANTIRELS:
+            ipolterm = PolarTerm(ito, POL2OPPOSITE[a_pol], a_wght)
+        # elif a_expanded_syn_rels and ireltype in SYNRELS:
+        #     ipolterm = PolarTerm(ito, a_pol, a_wght)
+        else:
             continue
-        ipolterm = PolarTerm(ito, POL2OPPOSITE[a_pol], a_wght)
         if ipolterm in a_pol_terms:
-            logging.debug("antonym {:s} is already known".format(
+            LOGGER.debug("antonym {:s} is already known".format(
                 repr(ipolterm)), file=sys.stderr)
             continue
         else:
-            logging.debug("*** adding antonym {:s}".format(
+            LOGGER.debug("*** adding antonym {:s}".format(
                 repr(ipolterm)))
             a_new_terms.add(ipolterm)
             a_pol_terms.add(ipolterm)
 
 
-def _expand_set(a_germanet, a_seeds, a_polar_terms, a_i,
+def _expand_set(a_germanet, a_polar_terms, a_seeds, a_i,
                 a_expanded_syn_rels):
     """Expand set of known polar terms.
 
     @param a_germanet - GermaNet instance
-    @param a_seeds - seed polar terms to start from
     @param a_polar_terms - target set of known polar terms
+    @param a_seeds - seed polar terms to start from
     @param a_i - weight of new terms
     @param a_expanded_syn_rels - use expanded set of synonymous
       relations
@@ -257,10 +269,10 @@ def hu_liu(a_germanet, a_pos, a_neg, a_neut, a_seed_pos, a_expanded_syn_rels):
 
     i, n = 1., len(new_terms)
     # expand seed sets
-    while n > 0:
+    while n:
         i /= 2.
         prev_n = n
-        new_terms = _expand_set(a_germanet, new_terms, polar_terms, i,
+        new_terms = _expand_set(a_germanet, polar_terms, new_terms, i,
                                 a_expanded_syn_rels)
         n = len(new_terms)
     # convert obtained lex ids back to lexemes

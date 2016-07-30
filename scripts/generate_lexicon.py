@@ -37,6 +37,7 @@ import sys
 
 ##################################################################
 # Imports
+COMMENT = "###"
 GNET_DIR = "germanet_dir"
 CC_FILE = "cc_file"
 
@@ -45,7 +46,7 @@ VERBOSE = False
 AWDALLAH = "awdallah"
 BG = "blair-goldensohn"
 ESULI = "esuli"
-HU = "hu"
+HU = "hu-liu"
 KIM = "kim-hovy"
 RAO_MIN_CUT = "rao-min-cut"
 RAO_LBL_PROP = "rao-lbl-prop"
@@ -136,6 +137,9 @@ def _read_set(a_fname):
         for iline in ifile:
             iline = iline.strip()
             if not iline:
+                continue
+            elif iline.startswith(COMMENT):
+                # maybe, we will later introduce some special comments
                 continue
             fields = TAB_RE.split(iline)
             if fields[-1] == POSITIVE:
