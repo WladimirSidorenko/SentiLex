@@ -74,6 +74,7 @@ REL2LABEL = {
     "has_participle": "participle",
     "has_pertainym": "pertainym",
     "has_hypernym": "hypernym",
+    "has_hyponym": "hyponym",
     "is_related_to": "related_to",
     # WordNet
     "Hyponym": "hyponym",
@@ -121,10 +122,10 @@ _POS2Y = {"adj": 0, "a": 0,
           "nomen": 1, "n": 1.5,
           "verben": 0, "v": 0,
           "r": 2.5, "s": 0.35}
-DE_REL_RELS = ["has_hypernym", "has_antonym",
+DE_REL_RELS = ["has_hyponym", "has_antonym",
                "has_pertainym", "is_related_to",
                "has_participle"]
-EN_REL_RELS = ["Hypernym", "Instance Hypernym", "Antonym",
+EN_REL_RELS = ["Hyponym", "Instance Hyponym", "Antonym",
                "Derived from adjective", "Derivationally related form",
                "Participle of verb"]
 
@@ -189,8 +190,9 @@ def main(a_argv):
     # add nodes to the graph
     x = y = 0.
     invsigma = 2.
-    assert ("00704270", "s") in inet.synid2pos, \
-        "('00704270', 's') is missing"
+    if args.wntype == WORDNET:
+        assert ("00704270", "s") in inet.synid2pos, \
+            "('00704270', 's') is missing"
     for i, (isynid, ipos) in enumerate(inet.synid2pos.iteritems()):
         # print("isynid =", repr(isynid), file=sys.stderr)
         # sys.exit(66)
