@@ -22,7 +22,7 @@ import sys
 # Constants
 LAMBDA = 0.2
 MAX_ITERS = 5
-THRSHLD = 0.
+THRSHLD = 0.5
 
 
 ##################################################################
@@ -227,8 +227,9 @@ def _vec2pollist(a_terms2vidx, a_v, a_pos, a_neg, a_neut):
             iscore = imax
         elif iterm in a_neg:
             iscore = imin
-        if iterm in a_neut or iscore == 0.:
+        if iterm in a_neut or iscore == 0. or abs(iscore) < THRSHLD:
             continue
+        # leave terms whose abs values are greater than threshold
         # determine polarity class
         if iscore > 0.:
             ipol = POSITIVE
@@ -237,7 +238,7 @@ def _vec2pollist(a_terms2vidx, a_v, a_pos, a_neg, a_neut):
         # only replace an existing entry, if the new absolute score is higher
         if ilex in lex2lidx:
             ret_idx = lex2lidx[ilex]
-            if abs(ret[ret_idx][-1]) < iscore:
+            if abs(ret[ret_idx][-1]) < abs(iscore):
                 ret[ret_idx] = (ilex, ipol, iscore)
         else:
             lex2lidx[ilex] = len(ret)

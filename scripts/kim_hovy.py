@@ -11,7 +11,6 @@ from __future__ import unicode_literals, print_function
 
 from blair_goldensohn import seeds2seedpos
 from common import NEGATIVE, POSITIVE, SYNRELS
-from graph import Graph
 from rao import POS_IDX, NEG_IDX, NEUT_IDX, POL_IDX, SCORE_IDX
 
 import numpy as np
@@ -37,7 +36,7 @@ def seeds2synids(a_germanet, a_terms, a_pos):
     for ilex in a_terms:
         for ilexid in a_germanet.lex2lexid[ilex]:
             for isynid in a_germanet.lexid2synids[ilexid]:
-                if a_pos is None or a_germanet.synid2pos[isynid] == a_pos:
+                if a_pos is None or a_germanet.synid2pos[isynid] in a_pos:
                     ret.add(isynid)
     return ret
 
@@ -75,8 +74,8 @@ def _add_syn(a_scores, a_idx, a_synid, a_germanet, a_term2idx):
     @note modifies a_scores in place
 
     """
-    ipos = a_germanet.synid2pos[isynid]
-    for ilexid in a_germanet.synid2lexids[isynid]:
+    ipos = a_germanet.synid2pos[a_synid]
+    for ilexid in a_germanet.synid2lexids[a_synid]:
         for ilex in a_germanet.lexid2lex[ilexid]:
             iterm = (ilex, ipos)
             idx = a_term2idx[iterm]
@@ -118,7 +117,7 @@ def _compute_numerator(a_scores, a_idx, a_seed_synids, a_seed_lexidpos,
     @param a_term2idx - mapping from (term, pos) to matrix index
     @param a_ext_rel - use an extended set of synonymous relations
 
-    @return void
+    @return \c void
 
     @note modifies a_scores in place
 
@@ -161,9 +160,13 @@ def kim_hovy(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
 
     """
     # construct a graph from GermaNet
-    sgraph = Graph(a_germanet, a_ext_syn_rels)
-    # estimate prior polarities of classes
-    Z = float(len(sgraph.nodes))
+    nodes = set((ilex, ipos)
+                for isynid, ipos in a_germanet.synid2pos.iteritems()
+                for ilexid in a_germanet.synid2lexids[isynid]
+                for ilex in a_germanet.lexid2lex[ilexid]
+                )
+    # estimate prior polarities of the classes
+    Z = float(len(nodes))
     if a_seed_pos == "none":
         a_seed_pos = ["adj", "nomen", "verben"]
     else:
@@ -194,7 +197,7 @@ def kim_hovy(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
     neut_synids = seeds2synids(a_germanet, a_neut, a_seed_pos)
 
     # estimate conditional probabilities of terms given classes
-    term2idx = {iterm: i for i, iterm in enumerate(sgraph.nodes)}
+    term2idx = {iterm: i for i, iterm in enumerate(nodes)}
     scores = np.zeros((3, len(term2idx)))
     # compute the number of synsets intersecting with the seeds
     # normalize probability scores
@@ -211,15 +214,15 @@ def kim_hovy(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
     # check
     assert np.max(np.max(scores, axis=1), axis=0) <= 1., \
         "Ivalid maximum probability value."
-    assert np.min(np.min(scores, axis=1), axis=0) > 0., \
-        "Ivalid minimum probability value."
+    assert np.min(np.min(scores, axis=1), axis=0) >= 0., \
+        "Ivalid minimum probability value: {:f}.".format(
+            np.min(np.min(scores, axis=1), axis=0))
     # determine classes
     idx = 0
     ret = []
     lex2lidx = {}
     classes = np.argmax(scores, axis=0)
     for (ilex, ipos), idx in term2idx.iteritems():
-
         if classes[idx] == POS_IDX:
             ipol = POSITIVE
             iscore = scores[POS_IDX, idx]
@@ -237,5 +240,5 @@ def kim_hovy(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
                 ret[idx][SCORE_IDX] = iscore
         else:
             lex2lidx[ilex] = len(ret)
-            ret.append((ilex, ipol, iscore))
+            ret.append([ilex, ipol, iscore])
     return ret

@@ -45,7 +45,7 @@ VERBOSE = False
 
 AWDALLAH = "awdallah"
 BG = "blair-goldensohn"
-ESULI = "esuli"
+ESULI = "esuli-sebastiani"
 HU = "hu-liu"
 KIM = "kim-hovy"
 RAO_MIN_CUT = "rao-min-cut"
@@ -71,10 +71,11 @@ FORM2LEMMA = dict()
 
 ##################################################################
 # Main
-def _add_cmn_opts(a_parser):
+def _add_cmn_opts(a_parser, a_add_ext_opts=True):
     """Add options common to all option parsers.
 
     @param a_parser - argument parser to add options to
+    @param a_add_ext_opts - add an option for extended synonym relations
 
     @return \c void
 
@@ -93,6 +94,10 @@ def _add_cmn_opts(a_parser):
                           " negative, and neutral terms")
     a_parser.add_argument(GNET_DIR,
                           help="directory containing GermaNet files")
+    if a_add_ext_opts:
+        a_parser.add_argument("--ext-syn-rels",
+                              help="use extended set of synonymous"
+                              " relations", action="store_true")
 
 
 def _get_form2lemma(a_fname):
@@ -391,10 +396,6 @@ def main(a_argv):
     subparser_awdallah = subparsers.add_parser(AWDALLAH,
                                                help="Awdallah's model"
                                                " (Awdallah et al., 2011)")
-    subparser_awdallah.add_argument("--ext-syn-rels",
-                                    help="use extended set of synonymous"
-                                    " relations",
-                                    action="store_true")
     subparser_awdallah.add_argument("--teleport",
                                     help="probability of a random"
                                     " teleport transition",
@@ -404,18 +405,11 @@ def main(a_argv):
     subparser_bg = subparsers.add_parser(BG,
                                          help="Blair-Goldensohn's model"
                                          " (Blair-Goldensohn et al., 2008)")
-    subparser_bg.add_argument("--ext-syn-rels",
-                              help="use extended set of synonymous"
-                              " relations",
-                              action="store_true")
     _add_cmn_opts(subparser_bg)
 
     subparser_hu = subparsers.add_parser(HU,
                                          help="Hu/Liu model"
                                          " (Hu and Liu, 2004)")
-    subparser_hu.add_argument("--ext-syn-rels",
-                              help="use extended set of synonymous relations",
-                              action="store_true")
     _add_cmn_opts(subparser_hu)
 
     subparser_esuli = subparsers.add_parser(ESULI,
@@ -425,25 +419,16 @@ def main(a_argv):
 
     subparser_kim = subparsers.add_parser(
         KIM, help="Kim's method (Kim and Hovy, 2004)")
-    subparser_kim.add_argument("--ext-syn-rels",
-                               help="use extended set of synonymous"
-                               " relations", action="store_true")
     _add_cmn_opts(subparser_kim)
 
     subparser_rao_min_cut = subparsers.add_parser(
         RAO_MIN_CUT, help="Rao/Ravichandran's min-cut model"
         " (Rao and Ravichandran, 2009)")
-    subparser_rao_min_cut.add_argument("--ext-syn-rels",
-                                       help="use extended set of synonymous"
-                                       " relations", action="store_true")
     _add_cmn_opts(subparser_rao_min_cut)
 
     subparser_rao_lbl_prop = subparsers.add_parser(
         RAO_LBL_PROP, help="Rao/Ravichandran's label propagation model"
         " (Rao and Ravichandran, 2009)")
-    subparser_rao_lbl_prop.add_argument("--ext-syn-rels",
-                                        help="use extended set of synonymous"
-                                        " relations", action="store_true")
     _add_cmn_opts(subparser_rao_lbl_prop)
 
     subparser_takamura = subparsers.add_parser(TAKAMURA,
@@ -453,7 +438,7 @@ def main(a_argv):
                                     help="suffix of files in"
                                     " which to store the plot image",
                                     type=str, default="")
-    _add_cmn_opts(subparser_takamura)
+    _add_cmn_opts(subparser_takamura, False)
     subparser_takamura.add_argument(CC_FILE,
                                     help="file containing coordinatively"
                                     "conjoined phrases")
@@ -482,7 +467,7 @@ def main(a_argv):
     print("done", file=sys.stderr)
 
     # only perform expansion if the number of seed terms is less than
-    # the request number of polar items
+    # the requested number of polar items
         # apply requested method
     print("Expanding polarity sets... ", file=sys.stderr)
     if args.dmethod == AWDALLAH:
@@ -493,7 +478,7 @@ def main(a_argv):
                                      args.seed_pos, args.ext_syn_rels)
     elif args.dmethod == ESULI:
         new_terms = esuli_sebastiani(igermanet, POS_SET, NEG_SET, NEUT_SET,
-                                     args.seed_pos)
+                                     args.seed_pos, args.ext_syn_rels)
     elif args.dmethod == HU:
         new_terms = hu_liu(igermanet, POS_SET, NEG_SET, NEUT_SET,
                            args.seed_pos, args.ext_syn_rels)

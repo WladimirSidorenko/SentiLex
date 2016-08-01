@@ -223,11 +223,11 @@ class Graph(object):
         for ilexid in self.germanet.synid2lexids[a_synid]:
             if a_ext_rel:
                 for trg_lexid, rel_type in self.germanet.lex_relations[ilexid]:
-                    trg_pos = ""
-                    for isyn_id in self.germanet.lexid2synids[trg_lexid]:
-                        trg_pos = self.germanet.synid2pos[isyn_id]
-                        break
                     if rel_type in SYNRELS:
+                        trg_pos = ""
+                        for isyn_id in self.germanet.lexid2synids[trg_lexid]:
+                            trg_pos = self.germanet.synid2pos[isyn_id]
+                            break
                         for ilex in self.germanet.lexid2lex[trg_lexid]:
                             ext_syn_nodes.append((ilex, trg_pos))
             for ilex in self.germanet.lexid2lex[ilexid]:

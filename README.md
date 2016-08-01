@@ -6,6 +6,34 @@ raw text corpora, and neural word embeddings.
 
 ## Examples
 
+### Hu and Liu (2004)
+
+To generate a sentiment lexicon using the `SentiWordNet` method of
+[Hu and Liu (2004)](https://www.cs.uic.edu/~liub/publications/kdd04-revSummary.pdf),
+you should envoke the following command:
+
+```shell
+
+./scripts/generate_lexicon.py hu \
+--form2lemma=data/GermaNet_v9.0/gn_form2lemma.txt \
+data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0
+
+```
+
+### Esuli and Sebastiani (2006)
+
+For generating a sentiment lexicon using the method of
+[Esuli and Sebastiani (2006)](http://ontotext.fbk.eu/Publications/sentiWN-TR.pdf),
+you should use the following command:
+
+```shell
+
+./scripts/generate_lexicon.py esuli \
+--form2lemma=data/GermaNet_v9.0/gn_form2lemma.txt \
+data/seeds/turney_littman_gi_seedset.txt data/GermaNet_v9.0
+
+```
+
 ### Blair-Goldensohn (2008)
 
 For generating a sentiment lexicon using the method of
@@ -33,34 +61,6 @@ you should use the following command:
 ./scripts/generate_lexicon.py awdallah --ext-syn-rels \
 --seed-pos=adj --form2lemma=data/GermaNet_v9.0/gn_form2lemma.txt \
 data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0/
-
-```
-
-### Esuli and Sebastiani (2006)
-
-For generating a sentiment lexicon using the method of
-[Esuli and Sebastiani (2006)](http://ontotext.fbk.eu/Publications/sentiWN-TR.pdf),
-you should use the following command:
-
-```shell
-
-./scripts/generate_lexicon.py esuli \
---form2lemma=data/GermaNet_v9.0/gn_form2lemma.txt \
-data/seeds/turney_littman_gi_seedset.txt data/GermaNet_v9.0
-
-```
-
-### Hu and Liu (2004)
-
-To generate a sentiment lexicon using the `SentiWordNet` method of
-[Hu and Liu (2004)](https://www.cs.uic.edu/~liub/publications/kdd04-revSummary.pdf),
-you should envoke the following command:
-
-```shell
-
-./scripts/generate_lexicon.py hu \
---form2lemma=data/GermaNet_v9.0/gn_form2lemma.txt \
-data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0
 
 ```
 

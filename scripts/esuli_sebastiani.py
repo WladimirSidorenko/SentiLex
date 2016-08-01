@@ -191,7 +191,7 @@ def _train(a_clfs, a_pos, a_neg, a_neut):
 
 
 def _expand_synsets(a_germanet, a_synid2tfidf, a_seeds,
-                    a_new_same, a_new_opposite):
+                    a_new_same, a_new_opposite, a_ext_syn_rels):
     """Extend sets of polar terms by applying custom decision function
 
     @param a_germanet - GermaNet instance
@@ -199,6 +199,7 @@ def _expand_synsets(a_germanet, a_synid2tfidf, a_seeds,
     @param a_seeds - set of candidate synsets
     @param a_new_same - new potential items of the same class
     @param a_new_opposite - new potential items of the opposite class
+    @param a_ext_syn_rels - use extended set of synonymous relations
 
     @return \c void
 
@@ -209,7 +210,7 @@ def _expand_synsets(a_germanet, a_synid2tfidf, a_seeds,
         # obtain new synsets by following the links
         for itrg_id, irelname in a_germanet.con_relations.get(isrc_id,
                                                               [(None, None)]):
-            if irelname in SYNRELS:
+            if a_ext_syn_rels and irelname in SYNRELS:
                 trg_set = a_new_same
             elif irelname in ANTIRELS:
                 trg_set = a_new_opposite
@@ -223,7 +224,7 @@ def _expand_synsets(a_germanet, a_synid2tfidf, a_seeds,
             # connected to
             for ilex_trg_id, irelname in \
                     a_germanet.lex_relations.get(ilex_src_id, [(None, None)]):
-                if irelname in SYNRELS:
+                if a_ext_syn_rels and irelname in SYNRELS:
                     trg_set = a_new_same
                 elif irelname in ANTIRELS:
                     trg_set = a_new_opposite
@@ -234,9 +235,14 @@ def _expand_synsets(a_germanet, a_synid2tfidf, a_seeds,
                 for itrg_id in a_germanet.lexid2synids[ilex_trg_id]:
                     if itrg_id in a_synid2tfidf:
                         trg_set.add((itrg_id, a_synid2tfidf[itrg_id]))
+            if not a_ext_syn_rels:
+                for isynid in a_germanet.lexid2synids[ilex_src_id]:
+                    if isynid in a_synid2tfidf:
+                        a_new_samed.add((isynid, a_synid2tfidf[isynid]))
 
 
-def _expand_seeds(a_germanet, a_synid2tfidf, a_pos, a_neg, a_neut):
+def _expand_seeds(a_germanet, a_synid2tfidf, a_pos, a_neg, a_neut,
+                  a_ext_syn_rels):
     """Extend seed sets of polar terms by following syn/ant links.
 
     @param a_germanet - GermaNet instance
@@ -248,6 +254,7 @@ def _expand_seeds(a_germanet, a_synid2tfidf, a_pos, a_neg, a_neut):
       polarity
     @param a_neut - set of synsets and their tf/idf vectors that have neutral
       polarity
+    @param a_ext_syn_rels - use extended set of synonymous relations
 
     @return \c True if sets were changed, \c False otherwise
 
@@ -257,9 +264,9 @@ def _expand_seeds(a_germanet, a_synid2tfidf, a_pos, a_neg, a_neut):
     neg_candidates = set()
     # obtain new synsets
     _expand_synsets(a_germanet, a_synid2tfidf,
-                    a_pos, pos_candidates, neg_candidates)
+                    a_pos, pos_candidates, neg_candidates, a_ext_syn_rels)
     _expand_synsets(a_germanet, a_synid2tfidf,
-                    a_neg, neg_candidates, pos_candidates)
+                    a_neg, neg_candidates, pos_candidates, a_ext_syn_rels)
     # remove from potential candidates items that are already in seed sets
     seeds = a_pos | a_neg
     pos_candidates -= seeds
@@ -358,7 +365,8 @@ def _expand_pol_lists(a_clfs, a_germanet, a_synid2tfidf,
     return new_terms
 
 
-def esuli_sebastiani(a_germanet, a_pos, a_neg, a_neut, a_seed_pos="none"):
+def esuli_sebastiani(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
+                     a_ext_syn_rels):
     """Extend sentiment lexicons using the  method of Esuli and Sebastiani.
 
     @param a_germanet - GermaNet instance
@@ -367,6 +375,7 @@ def esuli_sebastiani(a_germanet, a_pos, a_neg, a_neut, a_seed_pos="none"):
     @param a_neut - set of lexemes with neutral polarity
     @param a_seed_pos - part-of-speech class of seed synsets ("none" for no
       restriction)
+    @param a_ext_syn_rels - use extended set of synonymous relations
 
     @return \c void
 
@@ -394,7 +403,7 @@ def esuli_sebastiani(a_germanet, a_pos, a_neg, a_neut, a_seed_pos="none"):
     for j, (i, iclfs) in enumerate(zip(ITERS, clfs)):
         for _ in xrange(i - prev_i):
             changed = _expand_seeds(a_germanet, synid2tfidf,
-                                    ipos, ineg, ineut)
+                                    ipos, ineg, ineut, a_ext_syn_rels)
             if not changed:
                 break
             ineut -= ipos
