@@ -285,6 +285,7 @@ class Graph(object):
             if a_teleport:
                 assert istart < 1., \
                     "No probability mass left for teleport transition."
+                i = len(self._nsamples[src_node])
                 self._nsamples[src_node].append(1.)
                 self._sample_pos2node[src_node][i] = TELEPORT
 
