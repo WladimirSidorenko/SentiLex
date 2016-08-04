@@ -8,7 +8,7 @@ raw text corpora, and neural word embeddings.
 
 ### Hu and Liu (2004)
 
-To generate a sentiment lexicon using the `SentiWordNet` method of
+To generate a sentiment lexicon using the method of
 [Hu and Liu (2004)](https://www.cs.uic.edu/~liub/publications/kdd04-revSummary.pdf),
 you should envoke the following command:
 
@@ -22,7 +22,7 @@ data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0
 
 ### Esuli and Sebastiani (2006)
 
-For generating a sentiment lexicon using the method of
+For generating a sentiment lexicon using the `SentiWordNet` method of
 [Esuli and Sebastiani (2006)](http://ontotext.fbk.eu/Publications/sentiWN-TR.pdf),
 you should use the following command:
 
