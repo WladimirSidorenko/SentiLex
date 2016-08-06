@@ -207,7 +207,7 @@ def _expand_synsets(a_germanet, a_synid2tfidf, a_seeds,
     trg_set = None
     # iterate over each synset in the seed set
     for isrc_id, _ in a_seeds:
-        # obtain new synsets by following the links
+        # obtain new synsets by following the inter-synset links
         for itrg_id, irelname in a_germanet.con_relations.get(isrc_id,
                                                               [(None, None)]):
             if a_ext_syn_rels and irelname in SYNRELS:
@@ -218,7 +218,7 @@ def _expand_synsets(a_germanet, a_synid2tfidf, a_seeds,
                 continue
             if itrg_id in a_synid2tfidf:
                 trg_set.add((itrg_id, a_synid2tfidf[itrg_id]))
-        # iterate over each lexeme pertaining to the source synset
+        # iterate over each lexeme in the seed synset
         for ilex_src_id in a_germanet.synid2lexids[isrc_id]:
             # iterate over all target lexemes which the given source lexeme is
             # connected to
@@ -236,9 +236,12 @@ def _expand_synsets(a_germanet, a_synid2tfidf, a_seeds,
                     if itrg_id in a_synid2tfidf:
                         trg_set.add((itrg_id, a_synid2tfidf[itrg_id]))
             if not a_ext_syn_rels:
-                for isynid in a_germanet.lexid2synids[ilex_src_id]:
-                    if isynid in a_synid2tfidf:
-                        a_new_samed.add((isynid, a_synid2tfidf[isynid]))
+                for ilex in a_germanet.lexid2lex[ilex_src_id]:
+                    for ilex_id in a_germanet.lex2lexid[ilex]:
+                        for isyn_id in a_germanet.lexid2synids[ilex_id]:
+                            if isyn_id in a_synid2tfidf:
+                                a_new_same.add((isyn_id,
+                                                a_synid2tfidf[isyn_id]))
 
 
 def _expand_seeds(a_germanet, a_synid2tfidf, a_pos, a_neg, a_neut,

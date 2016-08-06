@@ -57,7 +57,7 @@ KNOWN_POLARITIES = set([POSITIVE, NEGATIVE, NEUTRAL])
 TRUE_POS = 0                   # index of true positive counts
 FALSE_POS = 1                  # index of false positive counts
 FALSE_NEG = 2                  # index of false negative counts
-COMMENT_RE = re.compile("(?:\A|\s+)# .*$")
+COMMENT_RE = re.compile("(?:\A|\s+)#(?:\s|#).*$")
 
 PRECISION = 0                   # index of precision field
 RECALL = 1                      # index of recall field
