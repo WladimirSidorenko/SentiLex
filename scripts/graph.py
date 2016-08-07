@@ -47,8 +47,7 @@ class Graph(object):
         self.germanet = a_germanet
         # nodes have the structure:
         # src_node => trg_node => cnt
-        self.nodes = defaultdict(lambda:
-                                 defaultdict(int))
+        self.nodes = defaultdict(lambda: defaultdict(int))
         self._nsamples = defaultdict(list)
         for isynid, ipos in self.germanet.synid2pos.iteritems():
             self._add_edges(isynid, ipos, a_ext_rel)
