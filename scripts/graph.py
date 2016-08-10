@@ -111,6 +111,17 @@ class Graph(object):
         """
         return self._bfs(self.nodes, a_start, a_end, a_parents)
 
+    def get_mean_degree(self):
+        """Compute mean out-degree of the nodes in the graph.
+
+        @return average out-degree of the graph nodes
+        @type float
+
+        """
+        out_cnt = float(sum(len(trg_nodes)
+                            for trg_nodes in self.nodes.itervalues()))
+        return out_cnt / float(len(self.nodes) or 1.)
+
     def rndm_walk(self, a_rndm_gen):
         """Perform random walk from all nodes to the seeds.
 
