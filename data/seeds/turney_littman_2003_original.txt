@@ -1,0 +1,15 @@
+good	positive
+nice	positive
+excellent	positive
+positive	positive
+fortunate	positive
+correct	positive
+superior	positive
+
+bad 	negative
+nasty 	negative
+poor 	negative
+negative 	negative
+unfortunate 	negative
+wrong 	negative
+inferior 	negative
