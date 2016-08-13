@@ -1,13 +1,16 @@
 böse	negative
+chemisch	neutral
 dumm	negative
 elektrisch	neutral
 fantastisch	positive
+finanziell	neutral
 grimmig	negative
 grossartig	positive
 großartig	positive
 hervorragend	positive
 hübsch	positive
 kompliziert	negative
+körperlich	neutral
 langsam	negative
 langweilig	negative
 lieb	positive
@@ -16,8 +19,11 @@ materiell	neutral
 mechanisch	neutral
 nachtragend	negative
 nett	positive
+neutral	neutral
 objektiv	neutral
 phantastisch	positive
+physisch	neutral
+praktisch	neutral
 prima	positive
 sachlich	neutral
 schlecht	negative
@@ -29,6 +35,8 @@ schwierig	negative
 schön	positive
 stark	positive
 sympathisch	positive
+technisch	neutral
+theoretisch	neutral
 wütend	negative
 zornig	negative
 ärgerlich	negative
