@@ -135,8 +135,8 @@ def read_file(a_lexicon, a_fname, a_insert, a_enc=ENCODING):
     item1 = item2 = None
     with codecs.open(a_fname, 'r', a_enc) as ifile:
         for iline in ifile:
-            iline = iline.strip()
             iline = COMMENT_RE.sub("", iline)
+            iline = iline.strip()
             if not iline:
                 continue
             iline.lower()

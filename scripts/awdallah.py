@@ -45,8 +45,10 @@ def awdallah(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
     sgraph.add_seeds(a_pos, POSITIVE, a_seed_pos)
     sgraph.add_seeds(a_neg, NEGATIVE, a_seed_pos)
     sgraph.add_seeds(a_neut, NEUTRAL, a_seed_pos)
-    assert sgraph._seeds[("gut", "adj")] == 1.
-    assert sgraph._seeds[("schlecht", "adj")] == -1.
+    if "gut" in a_pos:
+        assert sgraph._seeds[("gut", "adj")] == 1.
+    if "schlecht" in a_neg:
+        assert sgraph._seeds[("schlecht", "adj")] == -1.
     # perform random walk
     ret = []
     pterms = sgraph.rndm_walk(np.random.uniform)

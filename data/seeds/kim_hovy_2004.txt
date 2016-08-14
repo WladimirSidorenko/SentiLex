@@ -23,6 +23,7 @@ faszinierend	positive
 freundlich	positive
 froh	positive
 glücklich	positive
+großartig	positive
 grossartig	positive
 gut	positive
 hervorragend	positive
@@ -119,7 +120,7 @@ verderben	negative
 verderben	negative
 vergewaltigen	negative
 vernichten	negative
-zerstören
+zerstören	negative
 
 akustisch	neutral
 alternativ	neutral
