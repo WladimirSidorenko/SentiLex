@@ -1,6 +1,5 @@
 schwach	negative
 hervorragend	positive
-lieb	positive
 liebevoll	positive
 phantastisch	positive
 fantastisch	positive
@@ -9,9 +8,10 @@ böse	negative
 bös	negative
 sympathisch	positive
 prima	positive
+lieb	positive
 langsam	negative
-schwierig	negative
 kompliziert	negative
+schwierig	negative
 schnell	positive
 schlecht	negative
 dumm	negative
@@ -69,6 +69,7 @@ kraftvoll	positive
 kräftig	positive
 zäh	positive
 widerstandsfähig	positive
+sehschwach	negative
 matt	negative
 mau	negative
 flau	negative
@@ -87,7 +88,6 @@ wirtschaftsschwach	negative
 rauchschwach	negative
 willensschwach	negative
 verkehrsschwach	negative
-sehschwach	negative
 mitgliederschwach	negative
 überstark	positive
 fuchsig	negative
@@ -940,7 +940,7 @@ wasserfest	positive
 bestimmt	positive
 beinhart	positive
 eisenhart	positive
-vorherbestimmt	positive
+knallhart	positive
 flügge	positive
 stumpf	negative
 eitrig	negative
@@ -1025,6 +1025,7 @@ neonfarben	positive
 leuchtendrot	positive
 zerbeult	negative
 betriebssicher	positive
+explosionsgefährlich	negative
 rasend	positive
 sportlich	positive
 rechtschaffen	positive
@@ -1051,8 +1052,6 @@ semiarid	negative
 virtuos	positive
 kunstfertig	positive
 unfruchtbar	negative
-arbeitsfreudig	positive
-arbeitswillig	positive
 mündelsicher	positive
 verleumderisch	negative
 eindrücklich	positive
@@ -1132,7 +1131,6 @@ phlegmatisch	negative
 federleicht	negative
 luftig	negative
 strapaziös	positive
-explosionsgefährlich	negative
 brandgefährlich	negative
 verfassungswidrig	negative
 ruinös	negative
@@ -1180,6 +1178,7 @@ gesellschaftsverträglich	positive
 wirtschaftsverträglich	positive
 sozialverträglich	positive
 naturverträglich	positive
+vorherbestimmt	positive
 reibungslos	negative
 problemfrei	negative
 abriebfest	positive
@@ -1216,6 +1215,8 @@ morastig	positive
 entbehrungsreich	positive
 vehement	positive
 schweisstreibend	positive
+arbeitsfreudig	positive
+arbeitswillig	positive
 unzweifelhaft	positive
 undurchlässig	positive
 fabelhaft	positive
@@ -1379,7 +1380,6 @@ ruhmvoll	positive
 glorreich	positive
 umweltbelastend	negative
 hochgefährlich	negative
-knallhart	positive
 arid	negative
 gewiss	positive
 verschwitzt	negative
@@ -1627,7 +1627,6 @@ stocksteif	positive
 unbefleckt	positive
 subtil	positive
 abgründig	positive
-kleinadelig	positive
 kleinadlig	positive
 leck	negative
 löchrig	negative
@@ -1677,13 +1676,14 @@ tragbar	positive
 hochglänzend	positive
 steuergünstig	positive
 soft	negative
+determiniert	positive
 wichtig	positive
 blank	positive
 nachprüfbar	positive
 unelastisch	positive
 zweifelnd	negative
 seelsorglich	positive
-strahlend	negative
+strahlend	positive
 glückstrahlend	positive
 haltbar	positive
 überglücklich	positive
@@ -1699,8 +1699,6 @@ starr	positive
 regierungsfähig	positive
 erstrangig	positive
 warm	negative
-sperrig	negative
-unpraktisch	negative
 vielfältig	positive
 wohltätig	positive
 caritativ	positive
@@ -1736,7 +1734,6 @@ drastisch	positive
 drakonisch	positive
 strikt	positive
 schalldicht	positive
-lichtundurchlässig	positive
 wasserundurchlässig	positive
 doll	positive
 rennend	positive
@@ -1750,12 +1747,10 @@ semipermeabel	negative
 temperaturbeständig	positive
 wechselseitig	positive
 fruchtbar	positive
-unternehmungslustig	positive
 workoholic	negative
 befestigt	positive
 wehrhaft	positive
 human	positive
-unhandlich	negative
 glanzvoll	positive
 glänzend	positive
 elendig	negative
@@ -1828,7 +1823,6 @@ wehrtauglich	positive
 lebensfähig	positive
 dicht	positive
 eigen	negative
-determiniert	positive
 schicksalhaft	positive
 karmisch	positive
 bucklig	negative
@@ -1905,6 +1899,7 @@ beschwerlich	positive
 blödsinnig	negative
 glückselig	positive
 findig	positive
+unternehmungslustig	positive
 luftdicht	positive
 arbeitsunwillig	negative
 unlesbar	negative
@@ -1939,6 +1934,7 @@ zeitunabhängig	positive
 leistungsabhängig	negative
 flüssig	negative
 hautfreundlich	positive
+kleinadelig	positive
 verhältnismässig	negative
 heillos	negative
 kopflos	negative
@@ -2202,6 +2198,7 @@ anbaufähig	positive
 immobil	positive
 exemplarisch	positive
 luftundurchlässig	positive
+lichtundurchlässig	positive
 gefährdend	negative
 gewagt	negative
 verknallt	negative
@@ -2240,7 +2237,6 @@ feuerflüssig	negative
 schmelzflüssig	negative
 leichtflüssig	negative
 kabarettistisch	positive
-ambivalent	negative
 verschwommen	negative
 begehbar	positive
 flauschig	negative
@@ -2288,7 +2284,7 @@ verdruckst	negative
 unvorstellbar	negative
 signifikant	positive
 undefiniert	negative
-glasig	negative
+selbstironisch	negative
 gesucht	positive
 lebensbejahend	positive
 lebenslustig	positive
@@ -2338,7 +2334,6 @@ gewienert	positive
 grauweiss	negative
 ungeschliffen	negative
 unverdorben	positive
-druckreif	negative
 verschlagen	negative
 zweiflerisch	negative
 link	negative
@@ -2390,6 +2385,7 @@ beweglich	negative
 mobil	negative
 elastisch	negative
 notwendig	positive
+druckreif	negative
 essenzial	positive
 essential	positive
 schwarzrotgolden	positive
@@ -2441,6 +2437,7 @@ türkisfarben	positive
 grau	positive
 arbeitsscheu	negative
 sortenrein	positive
+unhandlich	negative
 kitschig	positive
 fixiert	positive
 indefinit	negative
@@ -2540,6 +2537,7 @@ zimmerwarm	negative
 hysterisch	positive
 hypernervös	positive
 notorisch	positive
+finster	negative
 zweithöchste	positive
 wiederaufladbar	positive
 dritthöchste	positive
@@ -2702,7 +2700,6 @@ extremistisch	positive
 fundamentalistisch	positive
 technokratisch	positive
 duster	negative
-finster	negative
 wohlverdient	positive
 scheinbar	negative
 raubeinig	negative
@@ -2925,6 +2922,7 @@ widersprüchlich	negative
 mehrdeutig	negative
 gespalten	negative
 zwiespältig	negative
+ambivalent	negative
 doppeldeutig	negative
 janusköpfig	negative
 adipös	positive
@@ -2935,7 +2933,7 @@ lernfähig	positive
 wertvoll	positive
 kostbar	positive
 teuer	negative
-selbstironisch	negative
+glasig	negative
 interpretierbar	positive
 putzmunter	positive
 bearbeitbar	positive
@@ -3149,6 +3147,7 @@ zartgrün	positive
 lichtgrün	positive
 strohgelb	positive
 orangegelb	positive
+siebzigprozentig	negative
 lustbetont	positive
 erlöst	positive
 beruhigt	positive
@@ -3189,8 +3188,7 @@ gelbgrün	positive
 eisblau	positive
 blassgrün	positive
 smaragdgrün	positive
-offenstehend	positive
-offen stehend	positive
+fern	negative
 unterkühlt	positive
 isomorph	positive
 fünfprozentig	negative
@@ -3241,6 +3239,7 @@ richtungweisend	positive
 programmatisch	positive
 zielweisend	positive
 massgebend	positive
+sperrig	negative
 gleichlautend	positive
 neuronal	positive
 niveaugleich	positive
@@ -3297,6 +3296,7 @@ diagonal	negative
 verwunderlich	negative
 wundersam	negative
 wunderlich	negative
+olivgrau	positive
 feldgrau	positive
 stahlgrau	positive
 kompositorisch	positive
@@ -3386,7 +3386,8 @@ sonstig	negative
 gleichartig	positive
 offengelassen	positive
 offen gelassen	positive
-fern	negative
+offenstehend	positive
+offen stehend	positive
 offen geblieben	positive
 offengeblieben	positive
 befreit	positive
@@ -3401,7 +3402,6 @@ hochpreisig	negative
 frech	negative
 brav	positive
 artig	positive
-olivgrau	positive
 lichtgrau	positive
 hechtgrau	positive
 schwarzgrau	positive
@@ -3462,7 +3462,7 @@ hochgelegen	positive
 melodisch	positive
 wohlklingend	positive
 karg	negative
-komatös	negative
+fahrbar	positive
 dingfest	negative
 festgefangen	negative
 entführt	negative
@@ -3476,7 +3476,6 @@ wechselhaft-regnerisch	positive
 interpretationsfähig	negative
 trüb	negative
 rustikal	negative
-sentimental	negative
 betrüblich	negative
 zutreffend	positive
 umweltfreundlich	positive
@@ -3500,7 +3499,6 @@ morsch	negative
 mürb	negative
 neunzigprozentig	negative
 sechzigprozentig	negative
-siebzigprozentig	negative
 züchtig	positive
 beunruhigend	negative
 alptraumhaft	negative
@@ -3612,7 +3610,6 @@ flächengrösste	positive
 siebtgrösste	positive
 achtgrösste	positive
 irrelevant	negative
-unmassgeblich	negative
 einschlägig	positive
 unwesentlich	negative
 illuster	positive
@@ -3675,7 +3672,6 @@ steingrau	positive
 rauchgrau	positive
 mausgrau	positive
 grüngrau	positive
-analog	positive
 schikanös	negative
 humorvoll	negative
 vorhanden	positive
@@ -3817,15 +3813,13 @@ hellgrau	positive
 dunkelgelb	positive
 bläulich	positive
 bräunlich	positive
-aufwändig	negative
-aufwendig	negative
 untröstlich	negative
 begossen	negative
 gelackmeiert	negative
 botmässig	positive
 unverrückbar	positive
 flächengross	positive
-fahrbar	positive
+komatös	negative
 salonfähig	positive
 gesellschaftsfähig	positive
 anderweitig	negative
@@ -3846,7 +3840,6 @@ kontrafaktisch	negative
 homophob	negative
 habituell	positive
 kapital	positive
-tennisballgross	positive
 gebändert	positive
 gleichrangig	positive
 gleichbedeutend	positive
@@ -3916,6 +3909,7 @@ dunkelblau	positive
 tiefblau	positive
 zimtfarben	positive
 normativ	positive
+tennisballgross	positive
 knusprig	positive
 knackig	positive
 zimtfarbig	positive
@@ -3961,6 +3955,8 @@ goldähnlich	positive
 fischähnlich	positive
 sirupähnlich	positive
 totenähnlich	positive
+aufwändig	negative
+aufwendig	negative
 unklar	negative
 runzelig	positive
 runzlig	positive
@@ -3977,7 +3973,7 @@ knetbar	positive
 modellierbar	positive
 formbar	positive
 subtropisch	negative
-kleinkariert	negative
+kleinkariert	positive
 wolkenfrei	positive
 holografisch	positive
 abschlägig	negative
@@ -4045,6 +4041,7 @@ lasterhaft	negative
 entartet	negative
 dekadent	negative
 heruntergekommen	negative
+schludrig	negative
 glibberig	negative
 wortarm	negative
 wahlweise	negative
@@ -4070,6 +4067,7 @@ längs gestreift	positive
 längsgestreift	positive
 regelgerecht	positive
 verbockt	negative
+eigenmächtig	negative
 plattig	negative
 eigensinnig	negative
 überzeugend	positive
@@ -4144,7 +4142,6 @@ aktenkundig	positive
 betreffend	positive
 verrückt	negative
 quer	negative
-unmanierlich	negative
 dunkelviolett	positive
 mitgliederstark	positive
 berufsmässig	positive
@@ -4160,7 +4157,6 @@ lila	positive
 fliederfarben	positive
 leichtfüssig	positive
 umfassend	positive
-frohgemut	positive
 einspurig	positive
 launig	positive
 gut aufgelegt	positive
@@ -4177,7 +4173,7 @@ tabu	negative
 mehrmalig	positive
 hochkarätig	positive
 unmissverständlich	positive
-zig	positive
+unmassgeblich	negative
 heiratswillig	positive
 überbreit	positive
 eirund	positive
@@ -4207,7 +4203,7 @@ zweierlei	negative
 unvergleichbar	negative
 restlos	positive
 denkbar	positive
-überproportional	positive
+zeitlos	positive
 autoritativ	positive
 taktvoll	positive
 langatmig	positive
@@ -4215,8 +4211,6 @@ kompromissbereit	positive
 biedermeierlich	negative
 fatal	negative
 respektabel	positive
-graduell	positive
-schludrig	negative
 gleichlang	positive
 endlos	positive
 unaufhörlich	positive
@@ -4229,6 +4223,7 @@ steuerpflichtig	positive
 unhöflich	negative
 despektierlich	negative
 verächtlich	negative
+unmanierlich	negative
 ungebührlich	negative
 unbotmässig	negative
 beherrscht	negative
@@ -4265,10 +4260,11 @@ pinkfarben	positive
 altrosa	positive
 pink	positive
 altrosafarben	positive
+verrottet	negative
 reichlich	positive
-schimmelig	negative
 bockig	negative
 ewig	positive
+ungeschminkt	positive
 unvergänglich	positive
 winzigklein	negative
 stur	negative
@@ -4298,8 +4294,6 @@ mehrheitlich	positive
 maximal	positive
 gering	negative
 voll	positive
-sehnsüchtig	negative
-sehnsuchtsvoll	negative
 wahr	positive
 bestreitbar	negative
 einkommenssteuerpflichtig	positive
@@ -4326,7 +4320,9 @@ erquicklich	positive
 niederschmetternd	negative
 unabsehbar	negative
 lebensnah	positive
-verrottet	negative
+verfallen	negative
+analog	positive
+schimmelig	negative
 verschimmelt	negative
 schmackhaft	negative
 knapp	negative
@@ -4392,7 +4388,7 @@ ellenlang	positive
 überlang	positive
 seitenlang	positive
 mittellang	positive
-humorig	positive
+humorig	negative
 existent	positive
 vorliegend	positive
 bestehend	positive
@@ -4410,6 +4406,7 @@ vollspurig	positive
 breitspurig	positive
 mehrspurig	positive
 täuschend	negative
+frohgemut	positive
 konspirativ	negative
 verschwörerisch	negative
 stillschweigend	negative
@@ -4450,6 +4447,8 @@ konsensfähig	positive
 gnomenhaft	negative
 geringfügig	negative
 winzig	negative
+quer gestreift	positive
+quergestreift	positive
 pygmäenhaft	negative
 zwergenhaft	negative
 zusammen	positive
@@ -4487,7 +4486,6 @@ kolossal	positive
 froh gelaunt	positive
 frohgelaunt	positive
 ununterscheidbar	positive
-eigenmächtig	negative
 zirkular	positive
 kreisförmig	positive
 zirkulär	positive
@@ -4500,8 +4498,6 @@ schlafwandlerisch	negative
 gleichgelagert	positive
 gleich gelagert	positive
 gräulich	negative
-quer gestreift	positive
-quergestreift	positive
 kalkhaltig	negative
 weitreichend	positive
 weitgehend	positive
@@ -4534,7 +4530,7 @@ solo	negative
 ganzheitlich	positive
 integral	positive
 immerwährend	positive
-zeitlos	positive
+überproportional	positive
 fortdauernd	positive
 schlüpfrig	negative
 unkenntlich	negative
@@ -4547,11 +4543,9 @@ unfolgsam	negative
 gespielt	negative
 peripher	negative
 homolog	positive
-rührselig	negative
 nonkonformistisch	positive
 splendid	positive
 wolkenlos	positive
-verfallen	negative
 konkret	negative
 durchschlagend	positive
 akzessorisch	negative
@@ -4575,6 +4569,7 @@ reichhaltig	positive
 etlich	positive
 zahlreich	positive
 zahllos	positive
+zig	positive
 verhaltensgestört	negative
 dement	negative
 durcheinander	negative
@@ -4617,7 +4612,7 @@ verfassungsgemäss	positive
 staatskonform	positive
 verfassungskonform	positive
 verwirrt	negative
-diesig	negative
+nebligtrüb	negative
 blühend	positive
 sozialliberal	positive
 kilometerweit	positive
@@ -4672,16 +4667,13 @@ spasshaft	positive
 spassig	positive
 komisch	positive
 fakultativ	negative
-zeitraubend	negative
 kniefrei	negative
-ungeschminkt	positive
 skeptisch	negative
 schmalspurig	negative
 unantastbar	negative
 wunschgemäss	positive
 still	negative
 konzis	negative
-exhibitionistisch	positive
 nicht staatlich	negative
 nichtstaatlich	negative
 persönlich	negative
@@ -4704,6 +4696,7 @@ bundesstaatlich	positive
 arm	negative
 manierlich	positive
 inoffiziell	negative
+exhibitionistisch	positive
 hochverräterisch	positive
 allein stehend	negative
 alleinstehend	negative
@@ -4734,7 +4727,7 @@ genannt	positive
 erwähnt	positive
 thematisiert	positive
 bekloppt	negative
-narrenhaft	positive
+narrenhaft	negative
 jeck	negative
 fünffach	positive
 5-fach	positive
@@ -4749,6 +4742,10 @@ einzelstehend	negative
 exklusiv	negative
 ausschliesslich	negative
 szenetypisch	positive
+sechsspurig	positive
+vierspurig	positive
+achtspurig	positive
+zweispurig	positive
 allumfassend	positive
 zwölffach	positive
 12-fach	positive
@@ -4770,8 +4767,8 @@ seeamtlich	positive
 bahnamtlich	positive
 bauamtlich	positive
 regelkonform	positive
+unzensiert	positive
 urdeutsch	positive
-nachhaltig	positive
 unermüdlich	negative
 geringelt	positive
 nachdenklich	negative
@@ -4787,6 +4784,7 @@ aufgeregt	positive
 erdenklich	positive
 begehrt	positive
 gefragt	positive
+übersinnlich	negative
 stichprobenartig	negative
 schief	positive
 abgeschrägt	positive
@@ -4794,6 +4792,8 @@ windschief	positive
 bar	positive
 singulär	negative
 wasserreich	positive
+graduell	positive
+zeitraubend	negative
 übersät	negative
 zotig	negative
 hauptamtlich	positive
@@ -4803,6 +4803,7 @@ hauptberuflich	positive
 nebenberuflich	positive
 gebührend	positive
 wach	negative
+nachhaltig	positive
 gedrängt	negative
 erfahrungsgemäss	positive
 beständig	positive
@@ -4856,15 +4857,12 @@ lässig	positive
 nonchalent	positive
 uneitel	positive
 ungezwungen	positive
-sechsspurig	positive
-vierspurig	positive
-zweispurig	positive
 rückzahlbar	positive
 oftmalig	positive
 asphaltiert	negative
 spleenig	negative
 missmutig	negative
-unzensiert	positive
+föderiert	positive
 zünftig	positive
 minder	negative
 minimal	negative
@@ -4873,7 +4871,6 @@ vitaminreich	positive
 übervoll	positive
 überfüllt	positive
 verstopft	positive
-nostalgisch	negative
 wahrhaft	positive
 unbeträchtlich	negative
 hochgesteckt	positive
@@ -4902,8 +4899,6 @@ ausgebucht	positive
 sachgemäss	positive
 sachgerecht	positive
 witzig	positive
-dunstig	negative
-nebligtrüb	negative
 nationalliberal	positive
 nominell	negative
 plebejisch	negative
@@ -4917,7 +4912,6 @@ malvenfarben	positive
 2-fach	positive
 zweifach	positive
 x-fach	positive
-sehnlich	negative
 standesgemäss	positive
 statthaft	positive
 nachahmenswert	positive
@@ -5008,7 +5002,6 @@ dreispurig	positive
 verwirrend	negative
 fehlleitend	negative
 spartanisch	negative
-übersinnlich	negative
 paranormal	negative
 unpaarig	negative
 millionenfach	positive
@@ -5035,7 +5028,6 @@ freischaffend	positive
 berufsbegleitend	positive
 pathetisch	positive
 schwülstig	positive
-achtspurig	positive
 zollamtlich	positive
 standesamtlich	positive
 krustig	negative
@@ -5125,7 +5117,6 @@ nationalstaatlich	positive
 detailreich	positive
 nährstoffreich	positive
 ominös	negative
-föderiert	positive
 unvergesslich	positive
 unvergessen	positive
 unsterblich	positive
@@ -5141,6 +5132,8 @@ wohlproportioniert	positive
 gewellt	positive
 schräg	positive
 veterinäramtlich	positive
+dunstig	negative
+diesig	negative
 verkürzt	negative
 weitgefächert	positive
 immediat	positive
@@ -5269,7 +5262,6 @@ lasch	positive
 leger	positive
 nominal	negative
 buchstäblich	positive
-gegnerisch	negative
 geknickt	positive
 nutzungsberechtigt	positive
 meistgenannt	positive
@@ -5297,6 +5289,7 @@ wertbeständig	positive
 altersgerecht	positive
 reizbar	positive
 müde	positive
+aufgesetzt	negative
 rohstoffarm	negative
 kalorienarm	negative
 apodiktisch	positive
@@ -5366,7 +5359,7 @@ schnellstmöglich	negative
 vielgefragt	positive
 viel gefragt	positive
 weitverbreitet	positive
-aufgesetzt	negative
+landesgeschichtlich	positive
 naturgeschichtlich	positive
 sprachgeschichtlich	positive
 musikgeschichtlich	positive
@@ -5392,7 +5385,6 @@ fettarm	negative
 verschlüsselt	negative
 personal	negative
 personenbezogen	negative
-landesgeschichtlich	positive
 urig	positive
 unterschwellig	negative
 latent	negative
@@ -5568,18 +5560,12 @@ kryptografisch	negative
 rechtwinkelig	positive
 rechtwinklig	positive
 symbolhaltig	negative
-dissident	negative
 renovierungsbedürftig	negative
 naturbedingt	positive
 global	positive
 landläufig	positive
 metabolisch	negative
 kontrolliert	negative
-konträr	negative
-oppositionell	negative
-umstürzlerisch	negative
-subversiv	negative
-umstürzend	negative
 gebrochen	positive
 atypisch	negative
 hinlänglich	positive
@@ -5593,7 +5579,6 @@ westpreussisch	positive
 südpreussisch	positive
 burlesk	positive
 antizyklisch	positive
-kompetitiv	negative
 epikureisch	negative
 kultig	positive
 letztinstanzlich	positive

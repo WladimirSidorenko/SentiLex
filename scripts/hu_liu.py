@@ -123,10 +123,9 @@ def _add_lexemes(a_germanet, a_synid, a_pol, a_wght,
                 if not same_pos:
                     break
                 ipolterm = PolarTerm(trg_lexid, a_pol, a_wght)
-                if ipolterm in a_pol_terms:
-                    continue
-                a_new_terms.add(ipolterm)
-                a_pol_terms.add(ipolterm)
+                if ipolterm not in a_pol_terms:
+                    a_new_terms.add(ipolterm)
+                    a_pol_terms.add(ipolterm)
 
 
 def _analyze_term(a_germanet, a_lexid, a_pol, a_wght,
@@ -162,8 +161,9 @@ def _analyze_term(a_germanet, a_lexid, a_pol, a_wght,
                 if rel_type in SYNRELS:
                     for ilex_id in a_germanet.synid2lexids[trg_synid]:
                         ipolterm = PolarTerm(ilex_id, a_pol, a_wght)
-                        a_new_terms.add(ipolterm)
-                        a_pol_terms.add(ipolterm)
+                        if ipolterm not in a_pol_terms:
+                            a_new_terms.add(ipolterm)
+                            a_pol_terms.add(ipolterm)
     # add antonyms to the set with the opposite polarity
     if a_pol == NEUTRAL and not a_expanded_syn_rels:
         return
@@ -184,8 +184,9 @@ def _analyze_term(a_germanet, a_lexid, a_pol, a_wght,
         else:
             LOGGER.debug("*** adding antonym {:s}".format(
                 repr(ipolterm)))
-            a_new_terms.add(ipolterm)
-            a_pol_terms.add(ipolterm)
+            if ipolterm not in a_pol_terms:
+                a_new_terms.add(ipolterm)
+                a_pol_terms.add(ipolterm)
 
 
 def _expand_set(a_germanet, a_polar_terms, a_seeds, a_i,
