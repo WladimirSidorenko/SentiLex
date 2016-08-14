@@ -146,7 +146,7 @@ class Graph(object):
                                                      for iscore in iscores)
             iscore = iscores.mean()
             iscores *= 0.
-            assert inode != ("schlecht", "adj") or iscore == -1.
+            # assert inode != ("schlecht", "adj") or iscore == -1.
             # assert inode != ("gut", "adj") or iscore == 1.
             if iscore > THRSHLD:
                 ret[inode] = (iscore, POSITIVE)

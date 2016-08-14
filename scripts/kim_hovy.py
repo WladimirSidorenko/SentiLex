@@ -52,7 +52,7 @@ def seedpos_chck(a_germanet, a_term, a_pos):
 
     """
     ipos = None
-    for lexid in a_germanet.lex2lexid.get(a_term):
+    for lexid in a_germanet.lex2lexid.get(a_term, []):
         for isynid in a_germanet.lexid2synids[lexid]:
             ipos = a_germanet.synid2pos[isynid]
             if ipos == a_pos:
