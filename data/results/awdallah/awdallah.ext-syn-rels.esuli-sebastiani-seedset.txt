@@ -57,13 +57,14 @@ irrig	negative
 irrtümlich	negative
 ekelhaft	negative
 hübsch	positive
-kärglich	negative
+zweitrangig	negative
 ekel erregend	negative
+sekundär	negative
+wirklich	positive
+ungemach	negative
+ärmlich	negative
 nutzlos	negative
-schwindlig	negative
-unnütz	negative
 trouble	negative
 müssig	negative
-nichtsnutzig	negative
-zweitrangig	negative
-kläglich	negative
+nebensächlich	negative
+überflüssig	negative
