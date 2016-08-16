@@ -191,7 +191,8 @@ def rao_min_cut(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
           file=sys.stderr)
     # remove edges belonging to the min cut (i.e., cut the graph)
     for isrc, itrg in cut_edges:
-        sgraph.nodes[isrc].pop(itrg, None)
+        if isrc in sgraph.nodes:
+            sgraph.nodes[isrc].pop(itrg, None)
     # separate the graph into positive and negative terms
     mcs, _, pos, neg = sgraph.min_cut(a_pos, a_neg, a_seed_pos)
     print("min_cut_score (pos. vs. neg.) = {:d}".format(mcs),

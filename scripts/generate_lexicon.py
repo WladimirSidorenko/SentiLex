@@ -470,6 +470,8 @@ def main(a_argv):
     # the requested number of polar items
         # apply requested method
     print("Expanding polarity sets... ", file=sys.stderr)
+    if args.seed_pos and args.seed_pos.lower() == "none":
+        args.seed_pos = None
     if args.dmethod == AWDALLAH:
         new_terms = awdallah(igermanet, POS_SET, NEG_SET, NEUT_SET,
                              args.seed_pos, args.ext_syn_rels, args.teleport)

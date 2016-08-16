@@ -191,20 +191,34 @@ class Graph(object):
             # min-cut the graph
             mcs, cut_edges, ret1, ret2 = self._min_cut(a_nodes1, a_nodes2)
             assert a_nodes1 in ret1, \
-                "Source node not found in the first partition."
+                "Source nodes not found in the first partition."
+            assert a_nodes2 not in ret1, \
+                "Opposite sink nodes found in the first partition."
             # print("a_nodes2 =", repr(a_nodes2), file=sys.stderr)
             # print("ret2 =", repr(ret2), file=sys.stderr)
             assert a_nodes2 in ret2, \
-                "Sink node not found in the second partition."
+                "Sink nodes not found in the second partition."
+            assert a_nodes1 not in ret2, \
+                "Opposite sink nodes found in the second partition."
             # replace artificial hyper-nodes with their original equivalents
             ret1.remove(a_nodes1)
             ret1.update(a_nodes1)
+            assert a_nodes1 not in ret1, \
+                "Source nodes not resolved in the first partition."
             ret2.remove(a_nodes2)
             ret2.update(a_nodes2)
+            assert a_nodes2 not in ret2, \
+                "Source nodes not resolved in the second partition."
         finally:
             # replace hyper-nodes with the original vertices
-            self._hypernode2nodes(hypnode1, orig_edges1)
-            self._hypernode2nodes(hypnode2, orig_edges2)
+            self._hypernode2nodes(hypnode1, orig_edges1, hypnode2)
+            self._hypernode2nodes(hypnode2, orig_edges2, hypnode1)
+            assert hypnode1 not in self.nodes, \
+                "Hypernode one not restored."
+            assert hypnode2 not in self.nodes, \
+                "Hypernode two not restored."
+
+        # print("ret1 =", repr(ret1), file=sys.stderr)
         return (mcs, cut_edges, ret1, ret2)
 
     def _add_edges(self, a_synid, a_pos, a_ext_rel):
@@ -299,11 +313,12 @@ class Graph(object):
                 self._nsamples[src_node].append(1.)
                 self._sample_pos2node[src_node][i] = TELEPORT
 
-    def _hypernode2nodes(self, a_hypnode, a_orig_edges):
+    def _hypernode2nodes(self, a_hypnode, a_orig_edges, a_hypnode1=None):
         """Split a hyper-node into atomic nodes.
 
         @param a_hypnode - hyper-node to split
         @param a_orig_edges - original graph edges
+        @param a_hypnode1 - another hyper-node to avoid
 
         @return \c void
 
@@ -312,7 +327,11 @@ class Graph(object):
             return
         self.nodes.pop(a_hypnode)
         for isrc, iedges in a_orig_edges.iteritems():
+            if isrc == a_hypnode or isrc == a_hypnode1:
+                continue
             for itrg, iwght in iedges.iteritems():
+                if itrg == a_hypnode or itrg == a_hypnode1:
+                    continue
                 self.nodes[isrc][itrg] = iwght
             if a_hypnode in self.nodes[isrc]:
                 self.nodes[isrc].pop(a_hypnode)
@@ -388,13 +407,13 @@ class Graph(object):
         if not isinstance(a_nodes, frozenset):
             a_nodes = frozenset(a_nodes)
         orig_edges = defaultdict(lambda: defaultdict(int))
-        # relink all edges outgoing from ``a_nodes`` to the new hyper-node
+        # relink all edges outgoing from ``a_nodes'' to the new hyper-node
         for inode in a_nodes:
             for itrg, iwght in self.nodes[inode].iteritems():
                 self.nodes[a_nodes][itrg] += iwght
             orig_edges[inode] = self.nodes[inode]
             self.nodes.pop(inode)
-        # relink all edges incident to any of the ``a_nodes`` to the new
+        # relink all edges incident to any of the ``a_nodes'' to the new
         # hyper-node
         for inode in self.nodes:
             # first, remember the original links
