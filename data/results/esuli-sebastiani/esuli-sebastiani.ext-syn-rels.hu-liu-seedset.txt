@@ -1097,8 +1097,8 @@ anführung	positive
 erhoffen	positive
 komplexität	positive
 vielschichtigkeit	positive
-schlossern	positive
 fass	positive
+schlossern	positive
 weiterspielen	positive
 metaphysik	positive
 joggen	positive
@@ -1135,8 +1135,8 @@ stampfen	negative
 tempo	positive
 klage	positive
 klageschrift	positive
-naturalismus	positive
 wissenschaft	positive
+naturalismus	positive
 dreist	negative
 hinterlassenschaft	positive
 hereinkommen	positive
@@ -2527,9 +2527,9 @@ verfügbarkeit	positive
 etwaig	positive
 allfällig	positive
 eventuell	positive
+vergleichbarkeit	positive
 meiler	positive
 kohlenmeiler	positive
-vergleichbarkeit	positive
 erschiessen	positive
 rasanz	positive
 anthropologie	positive
@@ -2545,11 +2545,11 @@ notarztwagen	positive
 rettungswagen	positive
 gespür	positive
 sommern	negative
-schulhof	positive
-pausenhof	positive
 treppenhaus	positive
 stiegenhaus	positive
 hausflur	positive
+schulhof	positive
+pausenhof	positive
 entschlafen	negative
 verteidigungsfall	positive
 wissenschaftlich	positive
@@ -2638,13 +2638,13 @@ nachschieben	positive
 grossmarkt	positive
 tageszeit	positive
 kategorie	positive
+reich	positive
+vermögend	positive
 offenkundig	positive
 offenbar	positive
 offensichtlich	positive
 manifest	positive
 sichtlich	positive
-reich	positive
-vermögend	positive
 wesen	positive
 führerschein	positive
 fischmesser	positive
@@ -2914,10 +2914,10 @@ greifvogel	positive
 raubvogel	positive
 zweckgebunden	positive
 zweckdienlich	positive
-streifen	positive
-band	positive
 flegel	positive
 dreschflegel	positive
+streifen	positive
+band	positive
 nachgeben	negative
 trendsetter	positive
 beitreten	positive
@@ -2934,9 +2934,9 @@ verknüpfung	positive
 verweis	positive
 kante	positive
 link	positive
+kinetik	positive
 exaltiert	positive
 überkandidelt	positive
-kinetik	positive
 achtung	positive
 schätzung	positive
 respekt	positive
@@ -3968,8 +3968,8 @@ stückpreis	positive
 nachhaltigkeit	positive
 klotz	positive
 sonate	positive
-halb	negative
 vorbeugen	positive
+halb	negative
 mitwirken	positive
 mitgestalten	positive
 mittun	positive
@@ -4417,10 +4417,10 @@ zwerg	positive
 kleinwüchsiger	positive
 jüdin	positive
 jude	positive
-scheit	positive
-holzscheit	positive
 fallschirmspringer	positive
 fallschirmspringerin	positive
+scheit	positive
+holzscheit	positive
 zurückbleiben	positive
 untreue	positive
 randfigur	negative
@@ -4450,9 +4450,9 @@ schweinerei	positive
 sauerei	positive
 vorausgehen	positive
 vorauslaufen	positive
-dress	positive
 servieren	positive
 kellnern	positive
+dress	positive
 oktett	positive
 falke	positive
 blaugrün	positive
@@ -4732,9 +4732,9 @@ marmorkuchen	positive
 autorisieren	positive
 berechtigen	positive
 bevollmächtigen	positive
-belohnen	positive
 schuhladen	positive
 schuhgeschäft	positive
+belohnen	positive
 langgezogen	positive
 langatmig	positive
 mutter	positive
@@ -4763,8 +4763,8 @@ beförderungsmittel	positive
 transportmittel	positive
 fortbewegungsmittel	positive
 verkehrsmittel	positive
-teppichstange	positive
 bärtierchen	positive
+teppichstange	positive
 speer	positive
 langen	positive
 reichen	positive
@@ -4915,11 +4915,11 @@ vertreten	positive
 wedeln	positive
 ersetzen	negative
 gasen	positive
-golfklub	positive
-golfclub	positive
 glucose	positive
 traubenzucker	positive
 glukose	positive
+golfklub	positive
+golfclub	positive
 schleudertrauma	positive
 wringen	positive
 unaufhörlich	negative
@@ -5117,9 +5117,9 @@ dimensionieren	positive
 schutzgeld	positive
 indonesien	positive
 grasfläche	positive
+talk	positive
 trostlos	negative
 trist	negative
-talk	positive
 manier	positive
 cookie	positive
 pazifistin	positive
@@ -5532,8 +5532,8 @@ kontemplation	positive
 rhododendron	positive
 leerräumung	positive
 räumung	positive
-romantik	positive
 feucht	positive
+romantik	positive
 reinziehen	positive
 taxon	positive
 leiter	positive
@@ -5665,9 +5665,9 @@ rolle	positive
 part	positive
 metzgerin	positive
 metzger	positive
+gedenken	positive
 bordeaux	positive
 bordeauxwein	positive
-gedenken	positive
 kriechen	positive
 gedränge	positive
 ansturm	positive
@@ -5783,8 +5783,8 @@ dame	positive
 moralphilosophie	positive
 ethik	positive
 meinungsmache	positive
-lustig	positive
 mitgliedschaft	positive
+lustig	positive
 eiferin	positive
 eiferer	positive
 pappbecher	positive
@@ -6249,10 +6249,10 @@ kapo	positive
 unteroffizierin	positive
 unteroffizier	positive
 bewirtung	positive
-krümeln	negative
-bröseln	negative
 bundesstaat	positive
 gazelle	positive
+krümeln	negative
+bröseln	negative
 gerstenkorn	positive
 verschnaufen	positive
 geschäftsordnung	positive
@@ -6487,8 +6487,8 @@ nachsehen	positive
 totenmaske	positive
 unterricht	positive
 unterrichtstätigkeit	positive
-einfallen	negative
 protokoll	positive
+einfallen	negative
 kompass	positive
 ostpreussen	positive
 brennbar	positive
@@ -6607,9 +6607,9 @@ zulangen	positive
 gemüse	positive
 heranbringen	negative
 langeweile	negative
-kölschen	negative
 quotierung	positive
 quotenregelung	positive
+kölschen	negative
 beschuldigen	positive
 anschuldigen	positive
 bekleiden	positive
@@ -6747,9 +6747,9 @@ flippig	negative
 ausgeflippt	negative
 durchgeknallt	negative
 überkreuzen	positive
-grösse	positive
 sprecherin	positive
 sprecher	positive
+grösse	positive
 wiederholen	positive
 anlegen	positive
 migrationsbewegung	positive
@@ -6794,8 +6794,8 @@ dschungel	positive
 bulgarisch	positive
 angreifen	positive
 kopfhörer	positive
-donnerwetter	negative
 sprengung	positive
+donnerwetter	negative
 nepalesisch	positive
 benennen	positive
 glocke	positive
@@ -6826,10 +6826,10 @@ vorbesprechung	positive
 wirtschaftsbeziehung	positive
 aussenhandelsbeziehung	positive
 atemweg	positive
-verkomplizieren	negative
 cotton	positive
 baumwolle	positive
 baumwollstoff	positive
+verkomplizieren	negative
 ausschweigen	positive
 wicht	positive
 knirps	positive
@@ -7417,8 +7417,8 @@ mitglied des bundestages	positive
 m.d.b.	positive
 mdb	positive
 schmachten	positive
-galerie	positive
 kurzschliessen	positive
+galerie	positive
 entlassen	positive
 freilassen	positive
 streichinstrument	positive
@@ -8571,11 +8571,11 @@ hintergrund	positive
 extremität	positive
 gliedmasse	positive
 nationalpark	positive
+käuferin	positive
+käufer	positive
 konfus	negative
 konzeptionslos	negative
 planlos	negative
-käuferin	positive
-käufer	positive
 abo	positive
 abonnement	positive
 vorausbestellung	positive
@@ -8673,8 +8673,8 @@ halbjährig	positive
 sechsmonatig	positive
 stahlrohr	positive
 haarersatz	positive
-schalter	positive
 schulter	positive
+schalter	positive
 seidenschwanz	positive
 hotelzimmer	positive
 fremdenzimmer	positive
@@ -9897,9 +9897,9 @@ stählern	positive
 zollgebühr	positive
 zoll	positive
 geheimtext	positive
-aufstossen	positive
 sprengen	positive
 galoppieren	positive
+aufstossen	positive
 parkverbot	positive
 totensonntag	positive
 okkultismus	positive
@@ -10151,10 +10151,10 @@ schlendern	negative
 übersiedeln	positive
 hermelin	positive
 tür	positive
+känguru	positive
 zutreffen	negative
 hinkommen	negative
 stimmen	negative
-känguru	positive
 flame	positive
 frisieren	positive
 kontaktfreudig	positive
@@ -10328,11 +10328,11 @@ xylem	positive
 meuterei	positive
 personalausweis	positive
 achtzig	positive
+presseerklärung	positive
+pressekonferenz	positive
 längengrad	positive
 längenkreis	positive
 meridian	positive
-presseerklärung	positive
-pressekonferenz	positive
 zubinden	positive
 wackeln	positive
 rumwackeln	positive
@@ -10621,8 +10621,8 @@ herzitieren	positive
 blechblasinstrument	positive
 jak	positive
 yak	positive
-verbieten	positive
 durchschaubar	positive
+verbieten	positive
 kommunalisieren	positive
 offenbaren	positive
 periodikum	positive
@@ -11192,8 +11192,8 @@ austoben	positive
 verbraucher	positive
 auskühlen	negative
 vorschlaghammer	positive
-misshandeln	negative
 piepsen	positive
+misshandeln	negative
 gotteshaus	positive
 kirchenbau	positive
 kirchbau	positive
@@ -11206,16 +11206,16 @@ halbstürmer	positive
 halbstürmerin	positive
 mittelstürmerin	positive
 bestätigen	positive
-abgehen	negative
 klapperdürr	positive
 spindeldürr	positive
 rappeldürr	positive
 klapprig	positive
 aktualität	positive
 neuigkeit	positive
+abgehen	negative
 bildung	positive
-beforschen	positive
 anleihe	positive
+beforschen	positive
 textabschnitt	positive
 malawi	positive
 mindestgehalt	positive
@@ -11586,11 +11586,11 @@ verknallen	positive
 verschiessen	positive
 verlieben	positive
 auswringen	positive
-ungeduldig	negative
 arbeiterschaft	positive
 arbeiterklasse	positive
 proletariat	positive
 arbeiterschicht	positive
+ungeduldig	negative
 abgeordnetenhaus	positive
 parlament	positive
 volksvertretung	positive
@@ -12077,8 +12077,8 @@ papiergeld	positive
 zeitlichkeit	negative
 vergänglichkeit	negative
 herausheben	positive
-umschreiten	negative
 wegräumen	positive
+umschreiten	negative
 denkmal	positive
 kaufen	positive
 ergreifung	positive
@@ -12090,11 +12090,11 @@ verhaftung	positive
 geruchsstoff	positive
 beheben	negative
 schwyz	positive
+kette	positive
+halsband	positive
 unbeständig	negative
 veränderlich	negative
 wandelbar	negative
-kette	positive
-halsband	positive
 beruhen	positive
 tektonik	positive
 verkehrsweg	positive
@@ -12231,8 +12231,8 @@ dope	positive
 bescheinigen	positive
 amphora	positive
 amphore	positive
-abbuchung	positive
 milz	positive
+abbuchung	positive
 beförderung	positive
 flattern	positive
 eheleute	positive
@@ -12499,10 +12499,10 @@ möbelgeschäft	positive
 eingangstür	positive
 generalsekretärin	positive
 generalsekretär	positive
-schnellverfahren	negative
 signieren	positive
 unterschreiben	positive
 unterzeichnen	positive
+schnellverfahren	negative
 webforum	positive
 onlineforum	positive
 forum	positive
@@ -12570,9 +12570,9 @@ verplaudern	positive
 verquasseln	positive
 verquatschen	positive
 sichelklee	positive
-fröhlichkeit	negative
 spanische marine	positive
 armada	positive
+fröhlichkeit	negative
 aushub	positive
 ertrag	positive
 holm	positive
@@ -12897,9 +12897,9 @@ tunika	positive
 nuntius	positive
 sachertorte	positive
 entwickler	positive
-vollbad	positive
 ausleben	positive
 ausagieren	positive
+vollbad	positive
 hochhalten	positive
 rabe	positive
 rabenvogel	positive
@@ -13064,13 +13064,13 @@ schaumwein	positive
 skilift	positive
 fernsehzuschauerin	positive
 fernsehzuschauer	positive
+raubkatze	positive
+katze	positive
 foltern	negative
 martern	negative
 quälen	negative
 traktieren	negative
 peinigen	negative
-raubkatze	positive
-katze	positive
 yin	positive
 konsumentenschutzgesetz	positive
 kschg	positive
@@ -13184,8 +13184,8 @@ tintenkiller	positive
 unterbreiten	positive
 avatar	positive
 rattenschwanz	positive
-richten	negative
 magnetismus	positive
+richten	negative
 abhandeln	positive
 kardinal	positive
 rezipieren	positive
@@ -13202,9 +13202,9 @@ herschauen	positive
 hergucken	positive
 hersehen	positive
 herkucken	positive
-überkommen	negative
 klippe	positive
 felsklippe	positive
+überkommen	negative
 devot	positive
 demütig	positive
 kriecherisch	positive
@@ -14609,9 +14609,9 @@ wolke	positive
 blank reiben	positive
 wienern	positive
 blankreiben	positive
+amtsgericht	positive
 leerstelle	positive
 lücke	positive
-amtsgericht	positive
 talk-show	positive
 talkshow	positive
 sonnenblumenöl	positive
@@ -14844,9 +14844,9 @@ hirsepflanze	positive
 hirse	positive
 umbilden	positive
 schritt	positive
+cern	positive
 irdisch	positive
 terrestrisch	positive
-cern	positive
 absolvent	positive
 absolventin	positive
 quertreiben	positive
@@ -15259,8 +15259,8 @@ rabatz	positive
 siebenschläfer	positive
 flugzeug	positive
 flieger	positive
-überleben	negative
 bezüge	positive
+überleben	negative
 perlmutt	positive
 perlmutter	positive
 gehstock	positive
@@ -15439,9 +15439,9 @@ getreide	positive
 o-beinig	positive
 erliegen	positive
 fussbank	negative
-arbeitszeit	negative
 implementation	positive
 implementierung	positive
+arbeitszeit	negative
 europastrasse	positive
 leistungsspektrum	positive
 pfütze	positive
@@ -15622,8 +15622,8 @@ verknittern	negative
 eckdatum	positive
 richtschnur	positive
 anhaltspunkt	positive
-ausrenken	negative
 arbeitsagentur	positive
+ausrenken	negative
 uri	positive
 intonation	positive
 indoktrination	positive
@@ -15729,9 +15729,9 @@ dehnfuge	positive
 dehnungsfuge	positive
 omega	positive
 erythrozyt	positive
+vorrätig	positive
 anfall	negative
 attacke	negative
-vorrätig	positive
 zeitlauf	positive
 zeitablauf	positive
 tonga	positive
@@ -15786,13 +15786,13 @@ abwehren	negative
 treten	positive
 kriechtier	positive
 reptil	positive
-tasteninstrument	positive
 schifffahrtsunternehmerin	positive
 schiffseigner	positive
 schiffseignerin	positive
 reeder	positive
 reederin	positive
 schifffahrtsunternehmer	positive
+tasteninstrument	positive
 mitführen	positive
 melange	positive
 nationalfeiertag	positive
@@ -15913,9 +15913,9 @@ unabänderbar	negative
 irreversibel	negative
 sammelsteinfrucht	positive
 edelweiss	positive
-kommunikationsprotokoll	positive
 ambiente	positive
 atmosphäre	positive
+kommunikationsprotokoll	positive
 emigrant	positive
 emigrantin	positive
 auswanderer	positive
@@ -16086,8 +16086,8 @@ promenadenmischung	negative
 bastard	negative
 ernsthaftigkeit	positive
 seriosität	positive
-standfestigkeit	positive
 bundestagswahlkampf	positive
+standfestigkeit	positive
 wunderland	positive
 zauberland	positive
 differentialgleichung	positive
@@ -16200,8 +16200,8 @@ zerkrumpeln	negative
 bucht	positive
 kassibern	positive
 rendering	positive
-zerschrammen	negative
 schnauben	negative
+zerschrammen	negative
 bayern	positive
 bavaria	positive
 rektal	positive
@@ -16289,8 +16289,8 @@ zigeunerin	positive
 zigeuner	positive
 zerdreschen	positive
 streiken	negative
-zufälligkeit	positive
 nachsuchen	positive
+zufälligkeit	positive
 kletterpflanze	negative
 backfisch	positive
 nachformen	positive
@@ -16470,8 +16470,8 @@ niederlande	positive
 synonym	positive
 herschieben	positive
 einsperren	positive
-piercen	positive
 entwidmen	positive
+piercen	positive
 rom	positive
 read only memory	positive
 cascading style sheet	positive
@@ -16978,8 +16978,8 @@ umgiessen	negative
 amtssitz	positive
 achillesferse	positive
 zuklappen	positive
-haushalten	negative
 hinziehen	positive
+haushalten	negative
 kampfplatz	positive
 jonglieren	positive
 ultimo	positive
@@ -17121,8 +17121,8 @@ unberechtigt	positive
 unautorisiert	positive
 unbefugt	positive
 abluchsen	positive
-landeklappe	positive
 nagelschere	positive
+landeklappe	positive
 faustschlag	positive
 boxschlag	positive
 abart	positive
@@ -17188,9 +17188,9 @@ zusammenzucken	positive
 gleichnis	positive
 allegorie	positive
 wahlabend	positive
+skizzieren	positive
 beeumeln	positive
 beölen	positive
-skizzieren	positive
 verstimmen	negative
 präparieren	positive
 popmusik	positive
@@ -17425,8 +17425,8 @@ autobahn	positive
 glaubwürdigkeit	positive
 plausibilität	positive
 supraleiter	positive
-blut	positive
 befragung	positive
+blut	positive
 bühnenhimmel	positive
 emergieren	positive
 volt	positive
@@ -17694,9 +17694,9 @@ umdribbeln	negative
 weiterforschen	positive
 aufbleiben	negative
 meise	positive
+germanisieren	positive
 zuballern	negative
 zuknallen	negative
-germanisieren	positive
 wegdrehen	negative
 sonnenfinsternis	positive
 entpolitisieren	positive
@@ -18325,12 +18325,12 @@ schifffahrtsgesellschaft	positive
 braunkehlchen	positive
 sino-tibetische sprache	positive
 sino-tibetisch	positive
-schillern	negative
 eule	positive
 nachtschwärmer	positive
 nachtschwärmerin	positive
 mystikerin	positive
 mystiker	positive
+schillern	negative
 gebärde	positive
 giesserei	positive
 ächten	positive
@@ -18417,8 +18417,8 @@ surrealismus	positive
 polieren	negative
 magermilch	positive
 verkettung	positive
-fiebern	negative
 wein	positive
+fiebern	negative
 abwarten	positive
 brunnen	positive
 satzung	positive
@@ -18467,9 +18467,9 @@ bänker	positive
 bankier	positive
 bankangestellter	positive
 banker	positive
+zusammenfliessen	positive
 wettmachen	negative
 gutmachen	negative
-zusammenfliessen	positive
 vertüten	positive
 eintüten	positive
 lipid	positive
@@ -18563,15 +18563,15 @@ vorbote	positive
 misstrauensvotum	positive
 fünfzehn	positive
 begutachten	negative
-tag der offenen tür	positive
 patientin	positive
 patient	positive
+tag der offenen tür	positive
 riemen	positive
 verheizen	positive
 aneinandergeraten	positive
 levante	positive
-sprachkritik	positive
 erzeigen	positive
+sprachkritik	positive
 ermächtigen	positive
 verweinen	positive
 batiken	positive
@@ -18833,8 +18833,8 @@ kapitän	positive
 kapitänin	positive
 schiffskapitän	positive
 schiffskapitänin	positive
-zurückfahren	negative
 glasauge	positive
+zurückfahren	negative
 beschleichen	negative
 bettflasche	positive
 wärmflasche	positive
@@ -18866,9 +18866,9 @@ hindurchzwängen	negative
 busch	positive
 seiltanzen	positive
 seil tanzen	positive
-klamotte	negative
 rechtsanwältin	positive
 rechtsanwalt	positive
+klamotte	negative
 steinkauz	positive
 käuzchen	positive
 totenvogel	positive
@@ -19189,15 +19189,15 @@ neurologe	positive
 neurologin	positive
 folgen	negative
 pritsche	positive
-autismus	negative
 schwarz-gelb	positive
 christliberal	positive
+autismus	negative
 hitze	negative
 action	positive
 schwindlerin	positive
 schwindler	positive
-gestank	negative
 drahtseil	positive
+gestank	negative
 regenwurm	positive
 hauchen	positive
 beweiden	positive
@@ -19258,9 +19258,9 @@ provision	positive
 entpuppen	negative
 bahnbrechend	positive
 speerwerfer	positive
+speerwerferin	positive
 diskuswerfer	positive
 diskuswerferin	positive
-speerwerferin	positive
 zuhilfenahme	positive
 öffnen	negative
 frass	positive
@@ -19636,9 +19636,9 @@ unsumme	negative
 unzahl	negative
 unmasse	negative
 strategie	positive
+evangelisieren	positive
 insel	negative
 eiland	negative
-evangelisieren	positive
 heuen	negative
 skoren	positive
 scoren	positive
@@ -19933,8 +19933,8 @@ gürtelrose	positive
 okapi	positive
 unterweisung	positive
 ansetzen	negative
-truthuhn	positive
 philodendron	positive
+truthuhn	positive
 vergötterung	positive
 verherrlichung	positive
 anbetung	positive
@@ -20131,8 +20131,8 @@ wähnen	positive
 mutmassen	positive
 vermuten	positive
 tastatur	positive
-versetzen	negative
 schmettern	positive
+versetzen	negative
 exzellenz	positive
 kleingriffel	positive
 einblatt	positive
@@ -20179,12 +20179,12 @@ insekt	positive
 thesis	positive
 abwerten	negative
 wildtier	positive
-klebenbleiben	negative
-kleben bleiben	negative
 selbsteinschätzung	positive
 selbstverständnis	positive
 selbstdefinition	positive
 selbstbild	positive
+klebenbleiben	negative
+kleben bleiben	negative
 schlagzeilen	positive
 titeln	positive
 tschechien	positive
@@ -20222,10 +20222,10 @@ durchströmen	positive
 schwindelfrei	positive
 nordstern	positive
 polarstern	positive
-kostenpflichtig	negative
-gebührenpflichtig	negative
 beurlauben	positive
 suspendieren	positive
+kostenpflichtig	negative
+gebührenpflichtig	negative
 maskulinum	positive
 falte	positive
 falz	positive
@@ -20243,8 +20243,8 @@ gefecht	positive
 platinieren	positive
 anfressen	negative
 anknabbern	negative
-verwachsen	negative
 birkenzeisig	positive
+verwachsen	negative
 hirtentäschel	positive
 verlesen	positive
 bottleneck	positive
@@ -20304,17 +20304,17 @@ applet	positive
 sense	positive
 schachspieler	positive
 schachspielerin	positive
-durchklingen	negative
 plündrerin	positive
 plünderer	positive
 plündrer	positive
 plünderin	positive
+durchklingen	negative
 eskalation	positive
 mitnehmen	negative
 prozessieren	negative
 ölzeug	positive
-elektroherd	positive
 primfaktor	positive
+elektroherd	positive
 preisgeben	positive
 kurzarbeit	positive
 demarkieren	positive
@@ -20574,9 +20574,9 @@ unfruchtbar	negative
 pfaffenhütchen	positive
 spindelbaum	positive
 knistern	positive
-sanskrit	negative
 geländewagen	positive
 jeep	positive
+sanskrit	negative
 gewogen	positive
 empfänglich	positive
 geneigt	positive
@@ -20769,8 +20769,8 @@ spaten	positive
 orang-utan	positive
 fränkisch	positive
 ausschneiden	negative
-einsargen	positive
 verschallen	positive
+einsargen	positive
 erschöpfung	positive
 erschöpfungszustand	positive
 verausgabung	positive
@@ -20803,10 +20803,10 @@ nichtdirektionale bewegung	negative
 einstudieren	positive
 befreiung	positive
 futur	positive
+kathedrale	positive
 neuling	positive
 newbie	positive
 frischling	positive
-kathedrale	positive
 holzig	positive
 leistung	positive
 sonnenstrahl	positive
@@ -20926,9 +20926,9 @@ nepal	positive
 bharat	positive
 indien	positive
 löwenzahn	positive
-karieren	positive
 ölbaum	positive
 olivenbaum	positive
+karieren	positive
 sträuben	positive
 unvergänglichkeit	positive
 unendlichkeit	positive
@@ -20939,18 +20939,18 @@ goldfisch	positive
 coachen	positive
 stadtviertel	positive
 stuttgart	positive
-abschiessen	negative
-abknallen	negative
 abholung	positive
 abtransport	positive
 abfuhr	positive
+abschiessen	negative
+abknallen	negative
 türkisch	positive
 palme	positive
 palmengewächs	positive
 günstig	negative
 billig	negative
-wildnis	negative
 klappern	positive
+wildnis	negative
 zeigen	negative
 entzündung	positive
 mongolei	positive
@@ -21146,9 +21146,9 @@ anreichern	positive
 werkstück	positive
 event	positive
 foulelfmeter	positive
-schneebedeckt	negative
 kescher	positive
 käscher	positive
+schneebedeckt	negative
 chemiker	positive
 chemikerin	positive
 reihe	positive
@@ -21221,11 +21221,11 @@ paralympics	positive
 passieren	negative
 ereignen	negative
 zusammenziehen	negative
-sondermüll	negative
 bergrücken	positive
 bergkamm	positive
 hügelrücken	positive
 gebirgskamm	positive
+sondermüll	negative
 lügnerin	positive
 lügner	positive
 wintergoldhähnchen	positive
@@ -21243,10 +21243,10 @@ wasserverschmutzung	positive
 andorra	positive
 episodenfilm	positive
 serial	positive
-siezen	negative
 zyklus	positive
 zeitperiode	positive
 turnus	positive
+siezen	negative
 anfechten	negative
 fachlich	positive
 fachbezogen	positive
@@ -21278,9 +21278,9 @@ hellenische sprache	positive
 hellenisch	positive
 griechische sprache	positive
 griechisch	positive
+adverb	positive
 fehleinschätzen	negative
 verschätzen	negative
-adverb	positive
 hospitalisieren	positive
 hinzugesellen	positive
 exliebe	positive
@@ -21938,12 +21938,12 @@ bleiben lassen	negative
 bleibenlassen	negative
 seinlassen	negative
 sein lassen	negative
+deutsche	positive
+deutscher	positive
 schauvitrine	positive
 glasvitrine	positive
 glaskasten	positive
 vitrine	positive
-deutsche	positive
-deutscher	positive
 heidelberg	positive
 dazustellen	positive
 crew	positive
@@ -21953,9 +21953,9 @@ schlagfertig	positive
 interkulturell	positive
 safari	positive
 stofftuch	positive
-samurai	positive
 average	positive
 havarie	positive
+samurai	positive
 dienststelle	positive
 mollig	positive
 dicklich	positive
@@ -21971,9 +21971,9 @@ meldung	negative
 regierungsstelle	positive
 glasfenster	positive
 fensterscheibe	positive
-abweiden	negative
 boutique	positive
 butike	positive
+abweiden	negative
 schlacht	positive
 ysop	positive
 einzelhandelskauffrau	negative
@@ -22130,9 +22130,9 @@ dreizehenmöwe	positive
 südamerika	positive
 polarisieren	positive
 mitbekommen	positive
+verabsolutieren	positive
 einzelhandelskaufmann	negative
 einzelhändler	negative
-verabsolutieren	positive
 hindeuten	positive
 hinzeigen	positive
 bürste	positive
@@ -22590,9 +22590,9 @@ wellen	positive
 weiblichkeit	positive
 wegkommen	positive
 hinwegkommen	positive
+beinwell	positive
 unsinn	positive
 unsinnigkeit	positive
-beinwell	positive
 bremsen	positive
 stiefmutter	positive
 gegenwind	negative
@@ -22634,18 +22634,18 @@ oktanzahl	positive
 feuerkampf	positive
 schusswechsel	positive
 schiesserei	positive
+pimp	positive
+zuhälter	positive
+lude	positive
 anekeln	negative
 degoutieren	negative
 ekeln	negative
 outen	negative
-pimp	positive
-zuhälter	positive
-lude	positive
 einhauen	negative
-verhören	negative
-vernehmen	negative
 zeichenkette	positive
 string	positive
+verhören	negative
+vernehmen	negative
 kreuzotter	positive
 yuppie	positive
 multiplizieren	positive
@@ -22682,9 +22682,9 @@ radiotechnik	positive
 öffentlich	positive
 bedrohen	negative
 gruppentheorie	positive
+feinmechanik	positive
 festschrauben	positive
 anschrauben	positive
-feinmechanik	positive
 abstiegsplatz	positive
 geissel	positive
 einschläfern	positive
@@ -22802,12 +22802,12 @@ zähflüssig	positive
 besichtigen	positive
 besehen	positive
 magisch	positive
-fettauge	positive
 ausbedingen	positive
+fettauge	positive
 grubenstempel	positive
-transferieren	positive
 mitbestimmen	positive
 entbieten	positive
+transferieren	positive
 lotion	positive
 crème	positive
 creme	positive
@@ -22937,12 +22937,12 @@ verkehrsschild	positive
 lese-rechtschreib-schwäche	positive
 legasthenie	positive
 kaolinisieren	positive
-vorsehen	negative
 heimtücke	positive
 tücke	positive
 arglistigkeit	positive
 arg	positive
 arglist	positive
+vorsehen	negative
 deduktiv	positive
 staubsaugen	positive
 staub saugen	positive
@@ -23016,14 +23016,14 @@ sparmassnahme	positive
 durcheinander werfen	negative
 durcheinanderwerfen	negative
 schwärmen	positive
-grenzen	negative
-angrenzen	negative
-anstossen	negative
-aneinandergrenzen	negative
 schweinehund	positive
 lumpenhund	positive
 lump	positive
 sauhund	positive
+grenzen	negative
+angrenzen	negative
+anstossen	negative
+aneinandergrenzen	negative
 anbelangen	positive
 jägerin	positive
 jäger	positive
@@ -23341,9 +23341,9 @@ wieder anlegen	positive
 umgangssprache	positive
 pfeifkonzert	positive
 relaxen	negative
-baustein	negative
 homo	positive
 homosexueller	positive
+baustein	negative
 gewächs	positive
 pflanze	positive
 mokieren	positive
@@ -23430,10 +23430,10 @@ aufbringen	negative
 trosse	positive
 aufquellen	positive
 handhaben	positive
+repertoire	positive
 steuern	negative
 steuer	negative
 steuerlast	negative
-repertoire	positive
 türrahmen	positive
 quietschen	positive
 abendfüllend	positive
@@ -23588,10 +23588,10 @@ milchstrasse	positive
 galaxis	positive
 tundra	positive
 lederriemen	positive
-epitaph	positive
-epitaphium	positive
 gemeiner liguster	positive
 liguster	positive
+epitaph	positive
+epitaphium	positive
 hirsch	positive
 ziehtochter	positive
 pflegetochter	positive
@@ -23700,8 +23700,8 @@ miteinander	positive
 gemeinschaft	positive
 hänger	positive
 ellipse	positive
-verbunkern	negative
 immobilie	positive
+verbunkern	negative
 madagaskar-franc	positive
 personenschaden	negative
 herausholen	positive
@@ -23883,8 +23883,8 @@ ausfuhr	positive
 export	positive
 dirham	positive
 bespiegeln	positive
-freude	negative
 vermakeln	positive
+freude	negative
 sendeanstalt	positive
 rundfunkanstalt	positive
 funkhaus	positive
@@ -24027,9 +24027,9 @@ abschneiden	negative
 dom	positive
 domkirche	positive
 zäumen	positive
+hieroglyphe	positive
 deutsche sprache	negative
 deutsch	negative
-hieroglyphe	positive
 pandemie	positive
 mühlengebäude	positive
 südteil	positive
@@ -24074,7 +24074,6 @@ prospekt	positive
 explosionsgefahr	positive
 erhitzen	positive
 echtzeit	positive
-behagen	negative
 kassenwartin	positive
 kassenverwalter	positive
 kassenwart	positive
@@ -24082,6 +24081,7 @@ schatzmeister	positive
 schatzmeisterin	positive
 kassenverwalterin	positive
 knautschen	positive
+behagen	negative
 braunkohlekraftwerk	positive
 blattachsel	positive
 hinterlegen	positive
@@ -24173,8 +24173,8 @@ bärlapp	positive
 umfliessen	positive
 gerundivum	positive
 atemzug	positive
-beteiligen	negative
 dauern	positive
+beteiligen	negative
 vergrossstädtern	positive
 brutzeln	positive
 komponente	positive
@@ -24207,8 +24207,8 @@ passau	positive
 orthopäde	positive
 orthopädin	positive
 lang	positive
-überstürzen	negative
 augapfel	positive
+überstürzen	negative
 spreu	positive
 kaff	positive
 erleben	positive
@@ -24287,8 +24287,8 @@ gruppierung	positive
 kreuzgewölbe	positive
 spielfarbe	positive
 apparatur	positive
-flut	negative
 marrakesch	positive
+flut	negative
 ausreissergruppe	positive
 düker	positive
 patentieren	positive
@@ -24383,9 +24383,9 @@ aalmutter	positive
 ergrübeln	positive
 zerdreschen	negative
 wundmal	positive
+sportlich	positive
 überfrachten	negative
 überladen	negative
-sportlich	positive
 bestimmung	negative
 absäbeln	negative
 humpeln	positive
@@ -24553,10 +24553,10 @@ glashaus	negative
 gewächshaus	negative
 drucken	negative
 frostig	positive
+tintenfass	positive
 zend	negative
 avestische sprache	negative
 avestisch	negative
-tintenfass	positive
 polsterung	positive
 erwachsener	positive
 erwachsene	positive
@@ -24790,9 +24790,9 @@ lebenspartnerschaftsgesetz	positive
 drohn	positive
 drohne	positive
 geräusch	positive
+tonart	positive
 frusten	negative
 frustrieren	negative
-tonart	positive
 umströmen	positive
 belauschen	positive
 behorchen	positive
@@ -25031,8 +25031,8 @@ menge	negative
 ansammlung	negative
 grundfrequenz	positive
 genieren	negative
-schacholympiade	positive
 vernaschen	positive
+schacholympiade	positive
 abchasische sprache	positive
 abchasisch	positive
 krankheit	positive
@@ -25374,10 +25374,10 @@ erscheinen	negative
 abwicklung	positive
 nachlässig	negative
 säumig	negative
-märzenbecher	positive
-frühlingsknotenblume	positive
 aufheiterung	positive
 aufmunterung	positive
+märzenbecher	positive
+frühlingsknotenblume	positive
 georgisch	positive
 erklügeln	positive
 lama	positive
@@ -25496,8 +25496,8 @@ entmenschlichen	positive
 entmenschen	positive
 schlichtheit	positive
 deduktion	positive
-niederschlagung	negative
 walken	positive
+niederschlagung	negative
 verkaufen	negative
 emphase	positive
 schlagsahne	positive
@@ -25533,8 +25533,8 @@ retournieren	positive
 antun	negative
 hegemonial	positive
 hegemonisch	positive
-internieren	negative
 definieren	positive
+internieren	negative
 zusammensinken	positive
 zusammensacken	positive
 absendung	positive
@@ -25885,9 +25885,9 @@ sublimieren	positive
 ersehen	positive
 abiturient	positive
 abiturientin	positive
+abbrennen	positive
 rappel	negative
 koller	negative
-abbrennen	positive
 fortjagen	negative
 taxieren	positive
 vervielfachung	positive
@@ -26062,10 +26062,10 @@ stärkemehl	positive
 bierflasche	positive
 weibchen	positive
 marokko	positive
+verstossen	positive
 valutieren	negative
 wertstellen	negative
 gutschreiben	negative
-verstossen	positive
 mitgift	positive
 aussteuer	positive
 meteorit	positive
@@ -26084,9 +26084,9 @@ obligat	negative
 obligatorisch	negative
 mixen	positive
 schnapsflasche	positive
+vorladen	positive
 tussi	negative
 tusnelda	negative
-vorladen	positive
 verschüchtern	positive
 einschüchtern	positive
 abfotografieren	negative
@@ -26250,8 +26250,8 @@ brezel	positive
 steinobst	positive
 vokalzeichen	positive
 steinalt	positive
-wulst	positive
 maulbeere	positive
+wulst	positive
 unglücklich	positive
 labern	positive
 depot	positive
@@ -26299,9 +26299,9 @@ initial	positive
 initiale	positive
 anfangsbuchstabe	positive
 grölen	negative
+nordkorea	positive
 güterwagen	negative
 güterwaggon	negative
-nordkorea	positive
 laminieren	positive
 sitzen	negative
 palais	positive
@@ -26397,8 +26397,8 @@ töpfererde	positive
 phantasieren	positive
 fantasieren	positive
 galopp	positive
-dokumentation	negative
 voraussichtlich	positive
+dokumentation	negative
 wägen	positive
 papierherstellung	positive
 kentern	positive
@@ -26538,10 +26538,10 @@ gemeinschaftssinn	positive
 landbrücke	positive
 landenge	positive
 isthmus	positive
-entspanntheit	negative
-ausgeglichenheit	negative
 amüsieren	positive
 verlustieren	positive
+entspanntheit	negative
+ausgeglichenheit	negative
 zusammenrücken	positive
 grabinschrift	positive
 ausschweifung	positive
@@ -26560,8 +26560,8 @@ durchmessen	negative
 drittel	positive
 vermarken	positive
 exkommunizieren	positive
-tröpfchen	negative
 defekt	positive
+tröpfchen	negative
 wimmern	positive
 regenmantel	positive
 frauenarbeit	positive
@@ -26601,8 +26601,8 @@ taschenrechner	positive
 erbfolge	positive
 thronfolge	positive
 tand	positive
-abspannen	negative
 bewohnen	positive
+abspannen	negative
 bulletin	positive
 nachrichtenblatt	positive
 anzeiger	positive
@@ -26800,8 +26800,8 @@ heideröschen	positive
 rosmarin-seidelbast	positive
 stauchen	negative
 sonnenschutzmittel	positive
-anbölken	positive
 wegführen	positive
+anbölken	positive
 empfindsam	positive
 empfindlich	positive
 bereinigen	negative
@@ -27016,29 +27016,158 @@ abwasserleitung	positive
 gelehrt	positive
 sprechgesang	positive
 nord	positive
+titelblatt	positive
+russischer rubel	positive
+sioux	positive
+kinderreich	positive
+vox	positive
+schlafstelle	positive
+haken	positive
+befristet	positive
+zwergfledermaus	positive
+notunterkunft	positive
+toastbrot	positive
+thronraub	positive
+tesa	positive
+trank	positive
+jiu-jitsu	positive
+nok	positive
+trancezustand	positive
+provinzialismus	positive
+notquartier	positive
+terrorakt	positive
+zeitfolge	positive
+foid	positive
+scotch	positive
+sonntagsruhe	positive
+gewölbe	positive
+khanat	positive
+grabbau	positive
+notunterbringung	positive
+hirtenbrief	positive
+unangreifbar	positive
+verkümmert	positive
+anatolische sprache	positive
+rubel	positive
+feindseligkeit	positive
+rot	positive
+jongleur	positive
+sessel	positive
+kraftfutter	positive
+aufwind	positive
+anatolisch	positive
+gemeinsamkeit	positive
+geburtenstark	positive
+beinfrei	positive
+pinguin	positive
+rasselbande	positive
+stroh	positive
+höfisch	positive
+zeitenfolge	positive
+häkchen	positive
+taschenschirm	positive
+ba	positive
+zuckerpass	positive
+lindwurm	positive
+minnesang	positive
+übergangslager	positive
+deckblatt	positive
+sucher	positive
+thallus	positive
+beziehungskiste	positive
+wortnetz	positive
+opium	positive
+bildlichkeit	positive
+soldateska	positive
+krebszelle	positive
+überschuldung	positive
+impulsiv	positive
+lockstoff	positive
+fries	positive
+höflich	positive
+beutekunst	positive
+klebefilm	positive
+dauergenuss	positive
+volksschule	positive
+körpereigen	positive
+konzession	positive
+chanat	positive
+jongleurin	positive
+nationales olympisches komitee	positive
+übergangsquartier	positive
+spätzle	positive
+morast	positive
+aex index	positive
+getränk	positive
+animosität	positive
+trance	positive
+austrian traded index	positive
+dauerkonsum	positive
+kappes	positive
+usurpation	positive
+neuer zloty	positive
+rosig	positive
+sioux-sprache	positive
+parka	positive
+vergeudung	positive
+zloty	positive
+matschig	positive
+grappa	positive
+betrügerei	positive
+dink	positive
+diskutabel	positive
+canberra	positive
+verschleudert	positive
+instrument als vehikel	positive
+obdach	positive
+tesafilm	positive
+atx	positive
+froschlurch	positive
+ehrung	positive
+chromatik	positive
+amaretto	positive
+feldspatoid	positive
+körperimmanent	positive
+ilo	positive
+eierschwamm	positive
+traumpass	positive
+gesteinsglas	positive
+verschwendung	positive
+trunk	positive
+griess	positive
+terroranschlag	positive
+skandinavisch	positive
+psychodrama	positive
+zusammengehörigkeit	positive
+gleichmacherei	positive
+elba	positive
+baukunst	positive
+british airways	positive
+satrap	positive
+feiertagsruhe	positive
+esperanto	positive
+lingvo internacia	positive
+transistor	positive
+hochgenuss	positive
+tamtam	positive
+aspektuell	positive
+habseligkeiten	positive
 kurios	positive
 salzhaltig	positive
 restrisiko	positive
 stratifikation	positive
 blutarm	positive
 chair	positive
-titelblatt	positive
 etrurien	positive
 weltkarte	positive
-russischer rubel	positive
-sioux	positive
 herrschsüchtig	positive
 gottlose	positive
-kinderreich	positive
 tyrannisch	positive
 geschnetzelt	positive
 kernzerfall	positive
 reorganisation	positive
 seligkeit	positive
-vox	positive
-schlafstelle	positive
 malabo	positive
-haken	positive
 dummy	positive
 wirtschaftslage	positive
 titan-erz	positive
@@ -27050,33 +27179,20 @@ routiniert	positive
 andorra la vella	positive
 pier	positive
 änderbar	positive
-befristet	positive
 evidenz	positive
-zwergfledermaus	positive
-notunterkunft	positive
 heidin	positive
 professionell	positive
 kranzkuchen	positive
 ausruf	positive
-toastbrot	positive
 tantal-erz	positive
 forschungsreise	positive
-thronraub	positive
 maximum	positive
-tesa	positive
 powerfrau	positive
 medizin	positive
-trank	positive
-jiu-jitsu	positive
-nok	positive
 körnung	positive
 männerrock	positive
-trancezustand	positive
 deutscher aktienindex	positive
 möglich	positive
-provinzialismus	positive
-notquartier	positive
-terrorakt	positive
 mehrfarbig	positive
 heros	positive
 übermutter	positive
@@ -27085,9 +27201,7 @@ aussenstände	positive
 truhe	positive
 bürgermiliz	positive
 farm	positive
-zeitfolge	positive
 finanzverwaltung	positive
-foid	positive
 oberst	positive
 tanzball	positive
 einschränkend	positive
@@ -27096,31 +27210,21 @@ forschungsexpedition	positive
 hatianerin	positive
 interferenz	positive
 maximalwert	positive
-scotch	positive
 yen	positive
 jupiter	positive
-sonntagsruhe	positive
 kaufhalle	positive
 frequenz	positive
 e-commerce	positive
 sacharin	positive
-gewölbe	positive
 karambolage	positive
 minuskel	positive
 niob-erz	positive
 verneigung	positive
-khanat	positive
-grabbau	positive
 keule	positive
 militäraktion	positive
-notunterbringung	positive
 bockwurst	positive
-hirtenbrief	positive
-unangreifbar	positive
 minimalwert	positive
 chefredaktion	positive
-verkümmert	positive
-anatolische sprache	positive
 einkünfte	positive
 sendegerät	positive
 zeichengeber	positive
@@ -27129,42 +27233,30 @@ rabensohn	positive
 watte	positive
 trinkglas	positive
 schulterfrei	positive
-rubel	positive
 innere zustandsveränderung	positive
 stillschweigend	positive
-feindseligkeit	positive
 hofgut	positive
 zersäbelt	positive
 attacke	positive
 kernreaktor	positive
-rot	positive
 computersystem	positive
-jongleur	positive
 tschechische krone	positive
-sessel	positive
-kraftfutter	positive
-aufwind	positive
 statue	positive
 verbeugung	positive
 untergeschoss	positive
 neugriechisch	positive
-anatolisch	positive
 grimasse	positive
 asmara	positive
 dandy	positive
 bluesmusik	positive
-gemeinsamkeit	positive
 eisprung	positive
 belarus-rubel	positive
 gegenbild	positive
 mitstudent	positive
-geburtenstark	positive
 lilongwe	positive
-beinfrei	positive
 monrovia	positive
 nulltarif	positive
 grandseigneur	positive
-pinguin	positive
 geber	positive
 altvater	positive
 visualisierung	positive
@@ -27176,20 +27268,14 @@ surferin	positive
 untertanin	positive
 chiffonnier	positive
 hampelmann	positive
-rasselbande	positive
 rabenmutter	positive
 anämisch	positive
-stroh	positive
-höfisch	positive
-zeitenfolge	positive
 banjul	positive
-häkchen	positive
 verdrossen	positive
 privatmann	positive
 lufthansa	positive
 umbildung	positive
 porto novo	positive
-taschenschirm	positive
 ureigen	positive
 talkum	positive
 massgeblich	positive
@@ -27197,7 +27283,6 @@ entwürdigend	positive
 allgemeine ortskrankenkasse	positive
 anständigkeit	positive
 konsulin	positive
-ba	positive
 kavaliersdelikt	positive
 schwedische krone	positive
 kuala lumpur	positive
@@ -27209,7 +27294,6 @@ pc-system	positive
 modifizierbar	positive
 charakteristikum	positive
 einräumung	positive
-zuckerpass	positive
 zugeständnis	positive
 mitstudentin	positive
 gedankenverloren	positive
@@ -27219,12 +27303,8 @@ einkäufe	positive
 gesteinsablagerung	positive
 arbeitstitel	positive
 kommilitone	positive
-lindwurm	positive
-minnesang	positive
 tariflohn	positive
 ovulation	positive
-übergangslager	positive
-deckblatt	positive
 häufigkeit	positive
 holländischer gulden	positive
 atempause	positive
@@ -27239,43 +27319,34 @@ desorganisation	positive
 grössenrelation	positive
 bischkek	positive
 bujumbura	positive
-sucher	positive
 landfrau	positive
 weisskraut	positive
 ratte	positive
 lauterkeit	positive
 vergnüglich	positive
 landstrich	positive
-thallus	positive
 karamell	positive
 eigenbetrieb	positive
 klappstuhl	positive
 seriell	positive
-beziehungskiste	positive
 tnt	positive
 spagetti	positive
 deutlichkeit	positive
 fortbildung	positive
 pflasterstein	positive
-wortnetz	positive
 modifikation	positive
 kellergeschoss	positive
 samt	positive
-opium	positive
-bildlichkeit	positive
 trikolore	positive
-soldateska	positive
 surfer	positive
 conte	positive
 fusspedal	positive
 reorganisierung	positive
-krebszelle	positive
 servicehotline	positive
 mummenschanz	positive
 freetown	positive
 umorganisation	positive
 variabel	positive
-überschuldung	positive
 haitianer	positive
 süssstoff	positive
 appell	positive
@@ -27286,7 +27357,6 @@ addis abeba	positive
 kirchengemeinde	positive
 repressiv	positive
 kalligraphie	positive
-impulsiv	positive
 wechselwirkung	positive
 aufwärtsentwicklung	positive
 brenzlig	positive
@@ -27296,13 +27366,11 @@ bewusstlosigkeit	positive
 vorläuferin	positive
 gulden	positive
 diplomzeugnis	positive
-lockstoff	positive
 chairman	positive
 tagesstätte	positive
 exklusiv	positive
 vorläufer	positive
 derwisch	positive
-fries	positive
 athen	positive
 amüsant	positive
 maske	positive
@@ -27311,22 +27379,17 @@ souterrain	positive
 verkehrskarambolage	positive
 tohuwabohu	positive
 kirchgemeinde	positive
-höflich	positive
 gedankenversunken	positive
-beutekunst	positive
 weisskohl	positive
 klamm	positive
 kalligrafie	positive
 glücksgöttin	positive
-klebefilm	positive
 modifizierung	positive
 apokalypse	positive
-dauergenuss	positive
 druide	positive
 rosine	positive
 kommilitonin	positive
 klimax	positive
-volksschule	positive
 schleudersitz	positive
 objektdatenbank	positive
 heu	positive
@@ -27339,36 +27402,25 @@ algier	positive
 aeroflot	positive
 serviceline	positive
 geltung	positive
-körpereigen	positive
 santiago de compostela	positive
 spaghetti	positive
 weiterbildung	positive
-konzession	positive
-chanat	positive
 lampenfassung	positive
 maputo	positive
 konifere	positive
 buntfarbig	positive
-jongleurin	positive
 wto	positive
 vw	positive
 feme	positive
 frühgeborene	positive
-nationales olympisches komitee	positive
-übergangsquartier	positive
-spätzle	positive
 unverheiratete	positive
 metapher	positive
-morast	positive
 flugkörper	positive
 welthandelsorganisation	positive
 servicetelefon	positive
-aex index	positive
-getränk	positive
 uniform	positive
 konsekutiv	positive
 fluffig	positive
-animosität	positive
 razzia	positive
 gemengelage	positive
 volkswagen	positive
@@ -27379,8 +27431,6 @@ bauchfrei	positive
 ausschliesslich	positive
 standbild	positive
 tunis	positive
-trance	positive
-austrian traded index	positive
 dominant	positive
 unmissverständlichkeit	positive
 tripolis	positive
@@ -27395,7 +27445,6 @@ sonderschicht	positive
 gegenseite	positive
 konvertierung	positive
 schuh	positive
-dauerkonsum	positive
 gradient	positive
 luanda	positive
 farbenreich	positive
@@ -27405,16 +27454,11 @@ gen bewegart	positive
 tnt-sprengstoff	positive
 diplomabschluss	positive
 vorquartal	positive
-kappes	positive
 verschiedenfarbig	positive
 anschlusstreffer	positive
 schnellstmöglich	positive
-usurpation	positive
 altersgründe	positive
-neuer zloty	positive
 umgehend	positive
-rosig	positive
-sioux-sprache	positive
 sultan	positive
 direktionale bewegung	positive
 miliz	positive
@@ -27426,7 +27470,6 @@ restriktiv	positive
 klar	positive
 moped	positive
 selbstherrscher	positive
-parka	positive
 anwärterbezüge	positive
 zerschnitten	positive
 heldisch	positive
@@ -27434,15 +27477,12 @@ junggesellin	positive
 unart	positive
 untertan	positive
 campus	positive
-vergeudung	positive
 wirre	positive
 puck	positive
 eindeutigkeit	positive
 zertifikat	positive
 trägerschaft	positive
 niederländischer gulden	positive
-zloty	positive
-matschig	positive
 aussergewöhnlich	positive
 schuhwerk	positive
 planstelle	positive
@@ -27451,29 +27491,20 @@ alptraum	positive
 unausgesprochen	positive
 gegenstück	positive
 kondensat	positive
-grappa	positive
 shrimp	positive
 polylateral	positive
 gutshof	positive
 universitätscampus	positive
 barcelona	positive
-betrügerei	positive
 conakry	positive
-dink	positive
-diskutabel	positive
 weitläufig	positive
 sufi	positive
 stringtanga	positive
-canberra	positive
 handknöchel	positive
 dänische krone	positive
-verschleudert	positive
-instrument als vehikel	positive
 ornat	positive
 proskription	positive
-obdach	positive
 pendant	positive
-tesafilm	positive
 black panther bewegung	positive
 pedal	positive
 heldenhaft	positive
@@ -27484,25 +27515,18 @@ rabenvater	positive
 obrist	positive
 chansonier	positive
 helsinki	positive
-atx	positive
 mürrisch	positive
 kraut	positive
 kommunikation	positive
-froschlurch	positive
 ächtung	positive
-ehrung	positive
 papiertaschentuch	positive
 huambo	positive
 diseuse	positive
-chromatik	positive
-amaretto	positive
 mops	positive
 maximal	positive
 schönschreiben	positive
 gültigkeit	positive
-feldspatoid	positive
 artistik	positive
-körperimmanent	positive
 libera	positive
 atomzerfall	positive
 begegnung	positive
@@ -27511,36 +27535,26 @@ auster	positive
 gaborone	positive
 lebemann	positive
 neugestaltung	positive
-ilo	positive
 giebel	positive
 kleinkraftrad	positive
 giftpilz	positive
-eierschwamm	positive
 feldmark	positive
 aok	positive
-traumpass	positive
 professional	positive
 ordination	positive
-gesteinsglas	positive
-verschwendung	positive
 deiktische bewegung	positive
 knöchel	positive
-trunk	positive
 reservoir	positive
 albtraum	positive
 einfluss	positive
 multilateral	positive
 häufigkeitsrate	positive
-griess	positive
 inkongruenz	positive
 schrimp	positive
 telefonhotline	positive
 poem	positive
 tour de france	positive
-terroranschlag	positive
-skandinavisch	positive
 drucktype	positive
-psychodrama	positive
 despotisch	positive
 entdeckungsreise	positive
 dressman	positive
@@ -27550,40 +27564,29 @@ lobeshymne	positive
 herzlichkeit	positive
 raiffeisenbank	positive
 tarifgehalt	positive
-zusammengehörigkeit	positive
 temperatur	positive
 originell	positive
 bruder	positive
 maskenfest	positive
-gleichmacherei	positive
 heroisch	positive
-elba	positive
 cardigan	positive
 schwimmkörper	positive
 verfemung	positive
-baukunst	positive
-british airways	positive
 klüngelkerl	positive
 selbstherrscherin	positive
 vollkorn	positive
-satrap	positive
 dax	positive
 tiefstwert	positive
 ohnmacht	positive
-feiertagsruhe	positive
 norwegische krone	positive
 fehlbetrag	positive
 bunt	positive
-esperanto	positive
-lingvo internacia	positive
-transistor	positive
 fusshebel	positive
 fiskus	positive
 datenerhebung	positive
 bukarest	positive
 beschränkend	positive
 umformung	positive
-hochgenuss	positive
 konjunktur	positive
 freigericht	positive
 machete	positive
@@ -27597,10 +27600,7 @@ ahnherr	positive
 konsultation	positive
 angelsächsin	positive
 repartitionssteuer	positive
-tamtam	positive
 katechismus	positive
-aspektuell	positive
-habseligkeiten	positive
 strickjacke	positive
 geschwindigkeit spez	positive
 gemeindeschwester	positive
@@ -27728,9 +27728,9 @@ samstagabend	positive
 sonntagabend	positive
 montagabend	positive
 hinunterschlingen	positive
-unordnung	negative
 g8-gipfel	positive
 gruppe der acht	positive
+unordnung	negative
 dickicht	positive
 zarin	positive
 zar	positive
@@ -27811,17 +27811,17 @@ tunneln	positive
 koreaner	positive
 koreanerin	positive
 allerheiligen	positive
+verschicken	positive
 royal	positive
 königlich	positive
-verschicken	positive
 stetigkeit	positive
 persistenz	positive
 auswägen	positive
 ausbalancieren	positive
 luzern	positive
-hell	negative
 slowake	positive
 slowakin	positive
+hell	negative
 soap	negative
 seifenoper	negative
 soap opera	negative
@@ -27832,11 +27832,11 @@ verknipsen	positive
 republikanerin	positive
 republikaner	positive
 atomstrom	positive
-abzeichnen	negative
 cpu	positive
 hauptprozessor	positive
 zentraleinheit	positive
 central processing unit	positive
+abzeichnen	negative
 bologna	positive
 disponentin	positive
 disponent	positive
@@ -27913,8 +27913,8 @@ flach	positive
 trupp	positive
 ersparen	negative
 sparen	negative
-appellieren	positive
 hinweisen	positive
+appellieren	positive
 einzahl	positive
 singular	positive
 singularform	positive
@@ -28023,8 +28023,8 @@ mediamix	positive
 kommunikationsmix	positive
 donnern	negative
 durchlesen	positive
-zurückdrängen	negative
 einbrocken	positive
+zurückdrängen	negative
 zerteilen	negative
 standuhr	positive
 runden	negative
@@ -28091,8 +28091,8 @@ grabstein	positive
 kaffeetrinken	positive
 kaffeetafel	positive
 kaffeeklatsch	positive
-bronchitis	negative
 vorstandschaft	positive
+bronchitis	negative
 kniescheibe	positive
 patella	positive
 schlagzeugspielerin	positive
@@ -28259,18 +28259,18 @@ grammatisch	positive
 rangerhöhung	positive
 versorgungsschiff	positive
 aymara	positive
-anpflanzen	positive
 ausgeburt	positive
+anpflanzen	positive
 subtraktion	positive
 minusrechnen	positive
 reifen	negative
 massregeln	positive
 anblöken	negative
 cookinseln	positive
-bolivianerin	positive
-bolivianer	positive
 chilene	positive
+bolivianerin	positive
 venezolaner	positive
+bolivianer	positive
 peruanerin	positive
 chilenin	positive
 peruaner	positive
@@ -28305,8 +28305,8 @@ verbraten	negative
 tscheche	positive
 tschechin	positive
 fixieren	positive
-demonstrieren	positive
 theaterbühne	positive
+demonstrieren	positive
 usurpieren	positive
 duo	negative
 verqualmen	negative
@@ -28427,9 +28427,9 @@ desertieren	positive
 stillstehen	positive
 fata morgana	positive
 jahreszeit	positive
-öl	negative
 kriegsmarine	positive
 seestreitkraft	positive
+öl	negative
 abstauben	negative
 entstauben	negative
 vorstossen	positive
@@ -28742,9 +28742,9 @@ lorbeerstrauch	positive
 lorbeer	positive
 lorbeerbaum	positive
 zwischenfall	positive
+dazustossen	negative
 pökeln	negative
 einpökeln	negative
-dazustossen	negative
 ätiologie	positive
 krabbeln	positive
 asche	positive
@@ -28779,9 +28779,9 @@ volkstümelei	positive
 vagina	positive
 muschi	positive
 möse	positive
-betriebsmittel	positive
 grafik	positive
 graphik	positive
+betriebsmittel	positive
 auferlegen	negative
 entkernen	positive
 kinderzeit	positive
@@ -28810,8 +28810,8 @@ schöpfung	negative
 geschöpf	negative
 gallierin	positive
 gallier	positive
-schopf	negative
 lagune	positive
+schopf	negative
 bruchbude	positive
 lachen	positive
 papua-neuguinea	positive
@@ -28897,21 +28897,21 @@ recke	positive
 klagen	negative
 gespann	positive
 baum	positive
+reiterei	positive
+kavallerie	positive
 kapriziös	positive
 launenhaft	positive
 launisch	positive
-reiterei	positive
-kavallerie	positive
 largo	negative
 pumpern	positive
 klopfen	positive
 auspeitschen	positive
 aufklärung	positive
 freistaat	positive
-beschleuniger	negative
-katalysator	negative
 rückrufen	positive
 zurückrufen	positive
+beschleuniger	negative
+katalysator	negative
 respektieren	positive
 fahnden	positive
 novial	positive
@@ -28939,7 +28939,6 @@ kanalisieren	positive
 ringbahn	positive
 errichtung	positive
 verwinden	positive
-natürliche sprache	negative
 neuerburg	positive
 saarburg	positive
 zweibrücken	positive
@@ -28949,6 +28948,7 @@ pirmasens	positive
 ludwigshafen	positive
 kaiserslautern	positive
 ausschaltung	positive
+natürliche sprache	negative
 computerkode	positive
 computercode	positive
 darmverschluss	positive
@@ -29140,10 +29140,10 @@ ruckeln	positive
 schuckeln	positive
 rütteln	positive
 menschengedenken	negative
+eifel	positive
 fragilität	negative
 zerbrechlichkeit	negative
 zartheit	negative
-eifel	positive
 tonika	positive
 grundton	positive
 anonymisieren	negative
@@ -29317,9 +29317,9 @@ sinndeutung	positive
 bilanzieren	positive
 aufwandsentschädigung	positive
 entjungfern	positive
-triefen	negative
 malteserin	positive
 malteser	positive
+triefen	negative
 zementieren	positive
 lamentieren	positive
 austragen	negative
@@ -29329,9 +29329,9 @@ lärm	negative
 abreagieren	negative
 quitte	positive
 loslegen	positive
-domizilieren	negative
 anarchismus	positive
 anarchie	positive
+domizilieren	negative
 abknapsen	positive
 absparen	positive
 abzweigen	positive
@@ -29349,10 +29349,10 @@ neumond	positive
 anpflanzung	positive
 entasten	negative
 lokalzeitung	positive
-abpumpen	negative
-pumpen	negative
 schmuggler	positive
 schmugglerin	positive
+abpumpen	negative
+pumpen	negative
 laienprediger	negative
 laienpredigerin	negative
 bruder	negative
@@ -29378,8 +29378,8 @@ ausbildungsstätte	positive
 ausbildungsbetrieb	positive
 festknüpfen	negative
 anknüpfen	negative
-abschirmen	negative
 bemerken	positive
+abschirmen	negative
 unix-system	positive
 unix-betriebssystem	positive
 unix	positive
@@ -29461,9 +29461,9 @@ transformieren	positive
 salzstock	positive
 davonjagen	positive
 erhärten	positive
-eichen	negative
 grafit	positive
 graphit	positive
+eichen	negative
 pflichtübung	positive
 duktus	positive
 ductus	positive
@@ -29560,8 +29560,8 @@ anheimgeben	positive
 anheimstellen	positive
 genuesin	positive
 genuese	positive
-abkauen	negative
 ruine	positive
+abkauen	negative
 hörbuch	positive
 evangelisch	positive
 evangelisch-lutherisch	positive
@@ -29715,9 +29715,9 @@ fest	negative
 slip	negative
 höschen	negative
 schlüpfer	negative
-öffentlichkeit	positive
 afghane	positive
 afghanin	positive
+öffentlichkeit	positive
 rumoren	negative
 teileinheit	positive
 entsenden	positive
@@ -29964,9 +29964,9 @@ niger-kongo	positive
 afroasiatische sprache	positive
 hamitosemitische sprache	positive
 hamitisch-semitisch	positive
-verzögern	negative
 goldfarbig	positive
 goldfarben	positive
+verzögern	negative
 germanistik	positive
 malochen	negative
 fell	positive
@@ -29989,8 +29989,8 @@ dakka	positive
 politisieren	negative
 fotoplatte	positive
 liberalisierung	positive
-verfolgen	negative
 nahostkonflikt	positive
+verfolgen	negative
 vollumfänglich	positive
 allumfassend	positive
 binde	positive
@@ -30285,9 +30285,9 @@ seoul	positive
 quito	positive
 e-sport	positive
 bundesbank	positive
+krisensituation	positive
 zurückerlangen	negative
 wiedererlangen	negative
-krisensituation	positive
 engländer	positive
 engländerin	positive
 weismachen	negative
@@ -30522,10 +30522,10 @@ exot	positive
 sacht	negative
 sachte	negative
 vw golf	positive
+giftstachel	positive
 beherzt	negative
 mutig	negative
 couragiert	negative
-giftstachel	positive
 zusammenlegen	positive
 partikel	negative
 gasse	positive
@@ -30575,13 +30575,13 @@ delikatesse	positive
 leckerbissen	positive
 köstlichkeit	positive
 feinkost	positive
-herumdrucksen	negative
-drucksen	negative
 chinesin	positive
 pakistani	positive
 pakistanerin	positive
 chinese	positive
 pakistaner	positive
+herumdrucksen	negative
+drucksen	negative
 stören	positive
 albe	negative
 alb	negative
@@ -30606,8 +30606,8 @@ wachturm	positive
 beobachtungsturm	positive
 wachtturm	positive
 giessen	negative
-verspiegeln	negative
 kniff	positive
+verspiegeln	negative
 faksimilieren	positive
 nachdrucken	positive
 säubern	positive
@@ -30701,8 +30701,8 @@ racker	positive
 schlingel	positive
 bengel	positive
 holzkohle	negative
-herausfliessen	negative
 aufspalten	positive
+herausfliessen	negative
 urbanisierung	positive
 notschlachten	positive
 inderin	positive
@@ -30899,9 +30899,9 @@ draufhaben	negative
 ruhig	positive
 raucherin	positive
 raucher	positive
-individualisieren	negative
 kurpfuscher	positive
 kurpfuscherin	positive
+individualisieren	negative
 osko-umbrisch	negative
 oskisch	negative
 osko-umbrische sprache	negative
@@ -31022,11 +31022,11 @@ philatelistin	positive
 abwiegeln	negative
 aussenseite	positive
 niederlegen	positive
+doppelschnepfe	positive
 gemeinplatz	negative
 plattitüde	negative
 platitude	negative
 allgemeinplatz	negative
-doppelschnepfe	positive
 überbelegen	negative
 subkultur	negative
 ginkgobaum	positive
@@ -31137,10 +31137,10 @@ zeitungsleserin	positive
 föhr	positive
 verbrecherbande	negative
 gang	negative
-besetzt	negative
-belegt	negative
 coversong	positive
 remix	positive
+besetzt	negative
+belegt	negative
 mittelwert	negative
 mittelmass	negative
 handfeger	positive
@@ -31254,9 +31254,9 @@ mob	negative
 gesindel	negative
 brut	negative
 abschaum	negative
+sprachregelung	positive
 abschlaffen	negative
 erschlaffen	negative
-sprachregelung	positive
 lava	positive
 austauschen	negative
 gelüsten	positive
@@ -31283,8 +31283,8 @@ dementi	positive
 konnotation	positive
 didaktik	positive
 unterrichtslehre	positive
-verwurzeln	negative
 blind	positive
+verwurzeln	negative
 affe	positive
 einbruch	negative
 straffällig	positive
@@ -31342,11 +31342,11 @@ korrumpieren	positive
 umreissen	negative
 niederreissen	negative
 stromstärke	positive
-piktogramm	positive
 definition	positive
 begriffsbestimmung	positive
 begriffserklärung	positive
 begriffsdefinition	positive
+piktogramm	positive
 pulverisieren	positive
 aurora	positive
 abrupt	positive
@@ -31403,8 +31403,8 @@ schmelztiegel	positive
 besonnen	negative
 urbanisieren	positive
 protoplasma	positive
-kürzlich	negative
 sprachbarriere	positive
+kürzlich	negative
 russen	negative
 überschätzen	positive
 replikation	positive
@@ -31622,14 +31622,14 @@ riss	positive
 kristallisation	positive
 kristallbildung	positive
 treiber	positive
-entwickeln	negative
 bohrerin	positive
+entwickeln	negative
 vorstrecken	negative
 beseligen	positive
 monatelang	positive
 kinderkrankheit	positive
-zuschneiden	negative
 scharren	positive
+zuschneiden	negative
 unterbuttern	positive
 dozent	negative
 dozentin	negative
@@ -31833,12 +31833,12 @@ quäken	negative
 quaken	negative
 absägen	positive
 verspinnen	positive
+gemenge	positive
 erkrankung	negative
 krankwerden	negative
-gemenge	positive
 zücken	positive
-tagelang	positive
 umfunktionieren	positive
+tagelang	positive
 indogermanische sprache	positive
 indogermanisch	positive
 sichergehen	negative
@@ -32159,8 +32159,8 @@ grad fahrenheit	positive
 celsius	positive
 grad celsius	positive
 grad kelvin	positive
-sorglos	negative
 bepinseln	positive
+sorglos	negative
 gelblich	negative
 spekulation	positive
 schweifen	positive
@@ -32283,13 +32283,13 @@ weigern	positive
 allbekannt	positive
 notorisch	positive
 zusammenstellen	negative
+ionosphäre	positive
 plunder	negative
 ramsch	negative
 kram	negative
 bettel	negative
 klimbim	negative
 krempel	negative
-ionosphäre	positive
 passagiermaschine	positive
 passagierjet	positive
 passagierflugzeug	positive
@@ -32434,8 +32434,8 @@ erdbeere	positive
 kentucky	positive
 losstechen	positive
 talkumieren	positive
-zusammendrängen	negative
 entlangfahren	positive
+zusammendrängen	negative
 inka	positive
 wabbeln	negative
 schwabbeln	negative
@@ -32491,8 +32491,8 @@ zicken	positive
 anbinden	positive
 festbinden	positive
 zurückverfolgen	positive
-belehrung	negative
 süss	positive
+belehrung	negative
 lückenbüsser	positive
 lückenbüsserin	positive
 gewöhnungsbedürftig	positive
@@ -32538,8 +32538,8 @@ abgucken	positive
 abkucken	positive
 analysieren	positive
 enteilen	negative
-trauma	negative
 pomadisieren	positive
+trauma	negative
 zurückstrahlen	negative
 telugu	positive
 eistanzen	positive
@@ -32628,8 +32628,8 @@ mathematiklehrer	positive
 mathematiklehrerin	positive
 abdecken	negative
 anrücken	negative
-keltern	negative
 vokalharmonie	positive
+keltern	negative
 intrigieren	positive
 blasenentzündung	positive
 flexibilisieren	negative
@@ -32691,8 +32691,8 @@ nordrhein-westfälisch	positive
 canapé	positive
 überschreiten	positive
 unterteilen	positive
-verzahnen	negative
 wehmut	positive
+verzahnen	negative
 zentral	positive
 verstürzen	positive
 achillessehne	negative
@@ -32747,8 +32747,8 @@ meissen	positive
 grossenhain	positive
 werdau	positive
 stollberg	positive
-obhut	negative
 gruppen spez	positive
+obhut	negative
 erheben	negative
 naturschutz	positive
 verehelichen	positive
@@ -32770,12 +32770,11 @@ match	positive
 photon	positive
 foton	positive
 durchmischen	positive
-verwittern	positive
 transportmaschine	positive
+verwittern	positive
 obacht	negative
 wilderer	positive
 banane	positive
-losreissen	negative
 cloppenburg	positive
 emden	positive
 jever	positive
@@ -32792,6 +32791,7 @@ stadthagen	positive
 celle	positive
 stade	positive
 osnabrück	positive
+losreissen	negative
 filmgenuss	positive
 desinfizieren	negative
 dozieren	negative
@@ -32826,12 +32826,12 @@ flegeln	positive
 lungern	positive
 fläzen	positive
 lümmeln	positive
+haiti	positive
 verunklären	negative
 verundeutlichen	negative
 verunklaren	negative
-haiti	positive
-umschmeicheln	negative
 vorbeiwerfen	positive
+umschmeicheln	negative
 anschlagen	negative
 danebenliegen	positive
 schiefliegen	positive
@@ -32922,11 +32922,11 @@ schermaus	positive
 vorhandensein	positive
 dasein	positive
 existenz	positive
+widerstreben	positive
 nichtstuer	negative
 taugenichts	negative
 nichtsnutz	negative
 tagedieb	negative
-widerstreben	positive
 ausschwitzen	positive
 obst	positive
 falten	negative
@@ -33008,9 +33008,9 @@ verhökern	positive
 veräussern	positive
 wanderfalke	positive
 überstimmen	positive
-sponsern	negative
 assistent	positive
 assistentin	positive
+sponsern	negative
 erbosen	negative
 trillern	positive
 hochsteigen	positive
@@ -33035,9 +33035,9 @@ interagieren	positive
 ass	negative
 einsparen	positive
 bibernelle	positive
+mehlbeere	positive
 abschälen	negative
 schälen	negative
-mehlbeere	positive
 geminieren	positive
 umbau	negative
 durchweichen	negative
@@ -33133,8 +33133,8 @@ lehnen	negative
 stifteln	positive
 freikirche	positive
 attest	positive
-zusammenschluss	negative
 leuchter	positive
+zusammenschluss	negative
 deeskalieren	positive
 vergütet	positive
 dotiert	positive
@@ -33419,8 +33419,8 @@ schnupfen	positive
 landeskriminalamt	positive
 tranchieren	positive
 kanton	positive
-austricksen	negative
 nisten	positive
+austricksen	negative
 schlosserhammer	positive
 zurückziehung	negative
 rückzug	negative
@@ -33456,18 +33456,18 @@ interessengruppe	negative
 partei	negative
 interessensgruppe	negative
 einbestellen	positive
+enden	positive
 regisseurin	negative
 regisseur	negative
-enden	positive
 kreuchen	positive
 krauchen	positive
 plakatieren	positive
 verschwitzen	negative
 gummihammer	positive
 anbrechen	positive
+steissbein	positive
 dekade	negative
 jahrzehnt	negative
-steissbein	positive
 filetieren	positive
 weiden	negative
 kläranlage	positive
@@ -33489,8 +33489,8 @@ aussprengen	negative
 setzen	negative
 einweisung	negative
 einführung	negative
-aufhaben	negative
 freihafen	positive
+aufhaben	negative
 tetanus	positive
 starrkrampf	positive
 wundstarrkrampf	positive
@@ -33835,8 +33835,8 @@ paramilitärisch	negative
 belebt	positive
 stau	positive
 stauung	positive
-postieren	positive
 vorverlegen	positive
+postieren	positive
 ausklamüsern	positive
 herausklamüsern	positive
 nachbestellen	positive
@@ -33943,8 +33943,8 @@ ziegenmilch	positive
 zwergenaufstand	negative
 schminke	negative
 make-up	negative
-standardisieren	negative
 bituminieren	negative
+standardisieren	negative
 eingemeinden	positive
 annektieren	positive
 festketten	negative
@@ -33970,8 +33970,8 @@ verschlicken	positive
 verschneiden	positive
 verpanschen	positive
 panschen	positive
-aufkaufen	negative
 zuwachs	positive
+aufkaufen	negative
 betrachtungsweise	positive
 blickrichtung	positive
 betrachtungswinkel	positive
@@ -34013,8 +34013,8 @@ bürokratieabbau	negative
 atmen	negative
 kläger	negative
 klägerin	negative
-erschallen	negative
 ausspülen	positive
+erschallen	negative
 herankämpfen	positive
 beschauen	negative
 mannigfach	positive
@@ -34279,8 +34279,8 @@ waschbär	positive
 abspeisen	negative
 abfertigen	negative
 beschwingen	positive
-überrennen	negative
 degoutieren	positive
+überrennen	negative
 formulierung	positive
 nutzniessen	positive
 einheitspartei	positive
@@ -34338,8 +34338,8 @@ gleichschalten	positive
 gleichstellen	positive
 tintenschnecke	positive
 kopffüsser	positive
-verfehlen	negative
 vorformulieren	positive
+verfehlen	negative
 plagiieren	negative
 vertrauensfrage	positive
 grenzfluss	negative
@@ -34429,8 +34429,8 @@ gleichgültigkeit	negative
 befrachten	positive
 überhören	positive
 dienstreise	negative
-lostreten	negative
 herausräumen	positive
+lostreten	negative
 kanteln	positive
 nesteln	negative
 materialisieren	positive
@@ -34597,8 +34597,8 @@ sonnenschein	negative
 sonne	negative
 anwerben	positive
 pulverschnee	negative
-hineinzerren	negative
 katholisieren	positive
+hineinzerren	negative
 rausfeuern	negative
 rauspfeffern	negative
 herausbekommen	negative
@@ -34655,9 +34655,9 @@ spriessen	negative
 anlanden	positive
 verzaubern	positive
 getümmel	negative
+zerschreddern	positive
 lossägen	negative
 absägen	negative
-zerschreddern	positive
 perlen	negative
 baugerüst	positive
 hispanisieren	negative
@@ -34678,8 +34678,8 @@ rempler	negative
 schubs	negative
 heranmachen	negative
 atom	negative
-labil	negative
 fluchen	positive
+labil	negative
 widerspruch	negative
 milchglas	positive
 solaranlage	positive
@@ -34917,13 +34917,13 @@ festung	negative
 arktis	positive
 gnu	positive
 brutalisieren	negative
+belauben	positive
 zerfransen	negative
 ausfransen	negative
-belauben	positive
 balancieren	positive
 modul	negative
-hochhalten	negative
 schädelknochen	positive
+hochhalten	negative
 darlehen	positive
 kredit	positive
 zebrastreifen	positive
@@ -34991,8 +34991,8 @@ rattern	negative
 entwurzeln	negative
 zusammenhaben	negative
 beisammenhaben	negative
-defizit	negative
 gelben	positive
+defizit	negative
 ute	positive
 maniküren	positive
 französische sprache	positive
@@ -35102,11 +35102,11 @@ herunterspielen	negative
 bagatellisieren	negative
 verharmlosen	negative
 neuschnee	negative
+demokratisch	positive
 verleihfirma	positive
 verleih	positive
 vermieter	positive
 vermietung	positive
-demokratisch	positive
 unhöflich	positive
 frech	positive
 regnen	negative
@@ -35117,12 +35117,12 @@ windanlage	positive
 gurken	negative
 niederknien	positive
 elegie	negative
+blitzableiter	positive
 zeitweilig	positive
 sporadisch	positive
 gelegentlich	positive
 temporär	positive
 zeitweise	positive
-blitzableiter	positive
 vabanquespiel	positive
 wagnis	positive
 nervenkitzel	positive
@@ -35267,8 +35267,8 @@ wahrung	negative
 erhalt	negative
 erhaltung	negative
 epilepsie	negative
-titrieren	negative
 aufdampfen	positive
+titrieren	negative
 handbewegung	negative
 schuften	positive
 fronen	positive
@@ -35451,8 +35451,8 @@ deutschlehrerin	positive
 biene	positive
 gelbsperre	positive
 rotsperre	positive
-verständigen	negative
 auflösen	positive
+verständigen	negative
 hintergrundprozess	positive
 background	positive
 gelegenheit	negative
@@ -35591,8 +35591,8 @@ weidenkätzchen	positive
 dogmatisieren	positive
 verschludern	negative
 rupfen	negative
-entsteigen	negative
 umwehen	positive
+entsteigen	negative
 nobilitieren	negative
 adeln	negative
 mangold	positive
@@ -35717,8 +35717,8 @@ lein	positive
 saatlein	positive
 ablösung	negative
 neutralisieren	positive
-leer kaufen	negative
 verwehen	positive
+leer kaufen	negative
 vergemeinschaften	negative
 jamaikanisch	positive
 kubanisch	positive
@@ -35904,7 +35904,6 @@ magnet	positive
 magnetstein	positive
 gefieder	negative
 federkleid	negative
-stauben	negative
 trunksucht	positive
 alkoholabhängigkeit	positive
 trinksucht	positive
@@ -35912,14 +35911,15 @@ alkoholismus	positive
 alkoholsucht	positive
 alkoholkrankheit	positive
 alkoholmissbrauch	positive
+stauben	negative
 aufkeimen	positive
+aufrauchen	positive
 elamitisch	negative
 kassitische sprache	negative
 kassitisch	negative
 susisch	negative
 elamitische sprache	negative
 susische sprache	negative
-aufrauchen	positive
 westgermanisch	positive
 westgermanische sprache	positive
 verwickeln	positive
@@ -36085,8 +36085,8 @@ libelle	positive
 verbellen	negative
 mohawk	positive
 perkussion	positive
-befürchtung	negative
 auseinanderfallen	positive
+befürchtung	negative
 verkehrsstau	positive
 tauwasser	negative
 schmelzwasser	negative
@@ -36278,8 +36278,8 @@ beangaben	positive
 vorläufig	negative
 servierkraft	negative
 bedienung	negative
-verschleudern	negative
 obstipation	positive
+verschleudern	negative
 rippen	positive
 befriedigen	positive
 hinauskommen	positive
@@ -36344,9 +36344,9 @@ brasilianisch	positive
 apostroph	positive
 vereitern	positive
 dezimieren	positive
-vollfressen	negative
 binsenwahrheit	positive
 binsenweisheit	positive
+vollfressen	negative
 kriegsgewinnler	positive
 anzählen	negative
 mallorca	negative
@@ -36479,15 +36479,15 @@ trotzphase	positive
 verdämmern	positive
 bebauung	negative
 straffen	negative
+bereinigung	positive
 automatisch	negative
 selbsttätig	negative
-bereinigung	positive
 wellenbereich	positive
 frequenzbereich	positive
 diagramm	positive
 ladung	negative
-fertig machen	positive
 telefonie	positive
+fertig machen	positive
 kämmen	positive
 arbeitslosengeld	positive
 alg	positive
@@ -36812,11 +36812,11 @@ hautfarbe	negative
 yue	positive
 cantonesisch	positive
 kantonesisch	positive
-nachwirken	positive
 bickbeere	positive
 blaubeere	positive
 schwarzbeere	positive
 heidelbeere	positive
+nachwirken	positive
 koppe	negative
 kulm	negative
 kuppe	negative
@@ -36888,9 +36888,9 @@ lethargie	positive
 befahren	positive
 flössen	negative
 triften	negative
+oberstufe	positive
 maler	negative
 malerin	negative
-oberstufe	positive
 drechseln	positive
 inspizierung	positive
 ulme	negative
@@ -36952,9 +36952,9 @@ dateityp	negative
 datenformat	negative
 dateiformat	negative
 schlaf	negative
-krätze	negative
 kälbern	positive
 kalbern	positive
+krätze	negative
 schulkind	negative
 überfischen	positive
 leer stehend	negative
@@ -37001,9 +37001,9 @@ würdigen	negative
 ethnie	positive
 serbisch	negative
 serbische sprache	negative
+entdemokratisieren	positive
 losschneiden	negative
 lossäbeln	negative
-entdemokratisieren	positive
 altenpfleger	positive
 altenpflegerin	positive
 gemeindeamt	positive
@@ -37074,8 +37074,8 @@ göre	positive
 vibrieren	positive
 kochherd	positive
 küchenherd	positive
-bombardieren	negative
 kolportieren	positive
+bombardieren	negative
 sägen	positive
 erweichen	positive
 daliegen	positive
@@ -37123,8 +37123,8 @@ amorbach	negative
 bayreuth	negative
 landshut	negative
 königsberg	negative
-beregnen	negative
 heidnisch	positive
+beregnen	negative
 douglasie	positive
 laubbaum	positive
 selen	positive
@@ -37159,9 +37159,9 @@ kühlung	negative
 auffassung	negative
 vorstellung	negative
 säbel	negative
-buddhismus	negative
 kornische sprache	positive
 kornisch	positive
+buddhismus	negative
 säumen	positive
 umgruppieren	negative
 elektrochemie	negative
@@ -37219,8 +37219,8 @@ lettische sprache	negative
 lettisch	negative
 schneeglöckchen	positive
 alkylieren	negative
-schwärzen	negative
 einprogrammieren	positive
+schwärzen	negative
 veto	negative
 einspruch	negative
 einsprache	negative
@@ -37542,10 +37542,10 @@ ansteckung	positive
 infektion	positive
 infizierung	positive
 ausrichten	negative
+anlaufen	negative
 haarkleid	negative
 fell	negative
 tierfell	negative
-anlaufen	negative
 zerquirlen	negative
 kakaobutter	negative
 verklumpen	positive
@@ -37648,9 +37648,9 @@ delfin	positive
 epilieren	positive
 zurückfliegen	negative
 fang	negative
+bundesrepublik	positive
 entlangtorkeln	negative
 entlangtaumeln	negative
-bundesrepublik	positive
 rückführung	positive
 traube	negative
 weintraube	negative
@@ -37864,14 +37864,14 @@ wohnungssuche	positive
 unwohlsein	positive
 übelkeit	positive
 sonnenbrand	negative
+festklemmen	positive
+anklemmen	positive
 therapeutikum	negative
 präparat	negative
 arznei	negative
 medizin	negative
 medikament	negative
 arzneimittel	negative
-festklemmen	positive
-anklemmen	positive
 kleinod	negative
 umstapeln	negative
 verplomben	negative
@@ -37892,9 +37892,9 @@ nairobi	positive
 harare	positive
 abstrich	negative
 gewebeabstrich	negative
+tannenbaum	positive
 hawaiianisch	negative
 hawaiisch	negative
-tannenbaum	positive
 auszählen	negative
 graugans	positive
 verflüssigen	negative
@@ -38447,8 +38447,8 @@ seriennummer	negative
 zurückwirken	negative
 bebauungsplan	positive
 kornelkirsche	positive
-vernieten	negative
-nieten	negative
+vernieten	positive
+nieten	positive
 gasifizieren	negative
 liberaldemokratisch	positive
 anhaltend	positive
@@ -38630,9 +38630,9 @@ frequenzspektrum	positive
 realistisch	negative
 jetzig	positive
 derzeitig	positive
+bremse	negative
 verkarten	negative
 kartieren	negative
-bremse	negative
 basieren	positive
 nitrogenium	positive
 stickstoff	positive
