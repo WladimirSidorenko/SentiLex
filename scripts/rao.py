@@ -95,7 +95,7 @@ def _mtx2tlist(a_Y, a_term2idx):
                     ret[lidx][SCORE_IDX] = iscore
             else:
                 lex2lidx[iword] = len(ret)
-                ret.append((iword, ipol, iscore))
+                ret.append([iword, ipol, iscore])
     return ret
 
 
@@ -217,7 +217,7 @@ def rao_lbl_prop(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
     @return list of polar terms, their polarities, and scores
 
     """
-    if a_seed_pos == "none":
+    if a_seed_pos is None:
         a_seed_pos = ["adj", "nomen", "verben"]
     else:
         a_seed_pos = [a_seed_pos]
