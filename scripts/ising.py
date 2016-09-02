@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-"""
-Implementation of the Ising spin model
+"""Implementation of the Ising spin model.
+
 """
 
 ##################################################################
@@ -10,7 +10,6 @@ from __future__ import print_function
 
 from collections import defaultdict
 from scipy import *
-from scipy import weave
 from pylab import *
 
 import math
@@ -30,13 +29,15 @@ EDGE_IDX = 4
 INFINITY = float("inf")
 ALPHA = 10
 # BETA_RANGE = numpy.linspace(start = 0.1, stop = 2., num = 20)
-BETA_RANGE = numpy.linspace(start = 1., stop = 10., num = 10)
-DFLT_EPSILON = 10 ** -5
+BETA_RANGE = numpy.linspace(start=1., stop=10., num=10)
+DFLT_EPSILON = 10 ** -4
+MAX_CNT = 5 * 10 ** 3
 SPIN_DOMAIN = (-1., 1.)
 MAX_EDGE_WGHT = 4
 
 MAX_I = sys.float_info.max
 MAX_LOG_I = math.log(MAX_I - 100 if MAX_I > 100 else MAX_I)
+
 
 ##################################################################
 # Class
@@ -57,7 +58,7 @@ class Ising(object):
     reweight - re-estimate weights of undirected links
     """
 
-    def __init__(self, a_node_wght = 0., a_edge_wght = 1.):
+    def __init__(self, a_node_wght=0., a_edge_wght=1.):
         """
         Class constructor
 
@@ -108,7 +109,7 @@ class Ising(object):
         ret = self.nodes[self.item2nid[a_item]] = a_value
         return ret
 
-    def add_node(self, a_item, a_weight = None):
+    def add_node(self, a_item, a_weight=None):
         """
         Add node to the ising spin model
 
@@ -121,25 +122,30 @@ class Ising(object):
             return
         if a_weight is None:
             a_weight = self.dflt_node_wght
-        # each node has the form: (item, wght, has_fxd_wght, fxd_wght, edges: {trg: edge_weight})
-        self.nodes.append([a_item, a_weight, 0 if a_weight is None else 1., a_weight, defaultdict(lambda: 0.)])
+        # each node has the form: (item, wght, has_fxd_wght, fxd_wght, edges:
+        # {trg: edge_weight})
+
+        self.nodes.append([a_item, a_weight,
+                           0 if a_weight is None else 1.,
+                           a_weight, defaultdict(lambda: 0.)])
         self.item2nid[a_item] = self.n_nodes
         self.n_nodes += 1
 
-    def add_edge(self, a_item1, a_item2, a_wght, a_allow_self_links = False, \
-                     a_add_missing = False):
-        """
-        Connect two nodes via an undirected link
+    def add_edge(self, a_item1, a_item2, a_wght, a_allow_self_links=False,
+                 a_add_missing=False):
+        """Connect two nodes via an undirected link
 
         @param a_item1 - first item which should be connected via a link
         @param a_item2 - second item which should be connected via a link
         @param a_wght - initial weight associated with the edge
         @param a_allow_self_links - boolean indicating whether cyclic links to
                       the same node should be allowed
-        @param a_add_missing - boolean flag indicating whether missing nodes should
-                      be added
+
+        @param a_add_missing - boolean flag indicating whether missing nodes
+                      should be added
 
         @return \c void
+
         """
         if not a_allow_self_links and a_item1 == a_item2:
             return
@@ -147,13 +153,18 @@ class Ising(object):
             if a_add_missing:
                 self.add_node(a_item1)
             else:
-                raise RuntimeError("Item '{:s}' not found in Ising model".format(repr(a_item1)))
+                raise RuntimeError(
+                    "Item '{:s}' not found in Ising model".format(
+                        repr(a_item1)))
         if a_item2 not in self.item2nid:
             if a_add_missing:
                 self.add_node(a_item2)
             else:
-                raise RuntimeError("Item '{:s}' not found in Ising model".format(repr(a_item2)))
-        inid1 = self.item2nid[a_item1]; inid2 = self.item2nid[a_item2]
+                raise RuntimeError(
+                    "Item '{:s}' not found in Ising model".format(
+                        repr(a_item2)))
+        inid1 = self.item2nid[a_item1]
+        inid2 = self.item2nid[a_item2]
         new_wght = self.nodes[inid1][EDGE_IDX][inid2] + a_wght
         if new_wght < MAX_EDGE_WGHT:
             self.nodes[inid1][EDGE_IDX][inid2] = new_wght
@@ -170,47 +181,54 @@ class Ising(object):
         @return \c void
         """
         children = []
-        src_degree = 0.; trg_degree = 0.
+        src_degree = 0.
+        trg_degree = 0.
         for isrc_nid in xrange(self.n_nodes):
             children = self.nodes[isrc_nid][EDGE_IDX]
             src_degree = math.sqrt(float(len(children)))
             for itrg_nid in children:
                 # multiply edge weight with 1/sqrt(d(i) * d(j))
-                trg_degree = math.sqrt(float(len(self.nodes[itrg_nid][EDGE_IDX])))
+                trg_degree = math.sqrt(
+                    float(len(self.nodes[itrg_nid][EDGE_IDX])))
                 children[itrg_nid] *= 1. / (src_degree * trg_degree)
 
-    def train(self, a_betas = BETA_RANGE, a_epsilon = DFLT_EPSILON, a_plot = None):
+    def train(self, a_betas=BETA_RANGE, a_epsilon=DFLT_EPSILON, a_plot=None):
         """Determine spin orientation of the model
 
         @param a_beta - range of beta values to test
         @param a_epsilon - epsilon value to determine convergence
-        @param a_plot - boolean flag indicating whether the energy changes should be plotted
+        @param a_plot - boolean flag indicating whether the energy changes
+          should be plotted
 
         @return \c void
+
         """
         beta2em = dict()
         ibeta = best_beta = -1
         energy = magn = min_magn = INFINITY
         # iterate over all specified beta values
         for i, ibeta in enumerate(a_betas):
-            print("Iteration #{:d}: beta = {:f}".format(i, ibeta), file = sys.stderr)
+            print("Iteration #{:d}: beta = {:f}".format(i, ibeta),
+                  file=sys.stderr)
             # optimize spin orientation of the model
             energy, magn = self._train(ibeta, a_epsilon)
-            # print("Energy = {:f}, magnetization = {:f}".format(energy, magn), file = sys.stderr)
+            # print("Energy = {:f}, magnetization = {:f}".format(energy, magn),
+            # file=sys.stderr)
             beta2em[ibeta] = (energy, magn)
             if not math.isnan(magn) and magn < min_magn:
                 min_magn = magn
                 best_beta = ibeta
         # re-train the model with the best parameter setting
         if best_beta != ibeta:
-            print("Final iteration: beta = {:f}".format(best_beta), file = sys.stderr)
+            print("Final iteration: beta = {:f}".format(best_beta),
+                  file=sys.stderr)
             self.beta = best_beta
             self._train(best_beta, a_epsilon)
         # plot energy/magnetization development, if asked to do so
         if a_plot is not None:
             self._plot(a_plot, beta2em)
 
-    def _train(self, a_beta = None, a_epsilon = DFLT_EPSILON):
+    def _train(self, a_beta=None, a_epsilon=DFLT_EPSILON):
         """Helper function for doing single training run with the given beta
 
         @param a_beta - beta value to use
@@ -227,26 +245,27 @@ class Ising(object):
         prev_energy = prev_magn = INFINITY
         # set initial weights
         self._train_init(a_beta)
-        while prev_energy == INFINITY or abs(prev_energy - energy) > a_epsilon:
-            # print("prev_energy =", prev_energy, file = sys.stderr)
-            # print("energy =", energy, file = sys.stderr)
+        while (prev_energy == INFINITY
+               or abs(prev_energy - energy) > a_epsilon) \
+                and cnt < MAX_CNT:
             for inode in self.nodes:
                 # update node's spin orientation (according to Takamura's code,
-                # we do the update reluing on the new spin weights)
+                # we do the update relying on the new spin weights)
                 # was `a_idx = PREV_WGHT_IDX`
-                inode[WGHT_IDX] = self._compute_mean(inode, a_idx = WGHT_IDX, a_beta = a_beta)
-                # print("inode[WGHT_IDX] ({:s}) =".format(repr(inode[ITEM_IDX])), inode[WGHT_IDX], file = sys.stderr)
-                if math.isnan(inode[WGHT_IDX]):
-                    sys.exit(66)
-                # if inode[WGHT_IDX] != inode[PREV_WGHT_IDX]:
-                #     print("1) inode[{:s}] = {:f}".format(repr(inode[ITEM_IDX]), inode[WGHT_IDX]), file = sys.stderr)
-                #     print("2) inode[{:s}] = {:f}".format(repr(inode[ITEM_IDX]), inode[PREV_WGHT_IDX]), file = sys.stderr)
+                inode[WGHT_IDX] = self._compute_mean(inode,
+                                                     a_idx=WGHT_IDX,
+                                                     a_beta=a_beta)
+                assert not math.isnan(inode[WGHT_IDX]), \
+                    "Infinite weight on node '{:s}'".format(
+                        repr(inode[ITEM_IDX]))
             # re-estimate energy and magnetization
             prev_energy, prev_magn = energy, magn
-            energy, magn = self._measure(a_beta = a_beta)
-            print("Run #{:d}: energy = {:f}, magnetization = {:f}".format(cnt, energy, magn), file = sys.stderr)
+            energy, magn = self._measure(a_beta=a_beta)
+            print("Run #{:d}: energy = {:f}, magnetization = {:f}".format(
+                cnt, energy, magn), file=sys.stderr)
             # after all nodes have been processed, remember the newly computed
-            # node weights as the old ones (commented out according to Takamura's code)
+            # node weights as the old ones (commented out according to
+            # Takamura's code)
             # for inode in self.nodes:
             #     inode[PREV_WGHT_IDX] = inode[WGHT_IDX]
 
@@ -270,13 +289,13 @@ class Ising(object):
             else:
                 inode[WGHT_IDX] = 0.
 
-    def _measure(self, a_beta = None):
-        """
-        Measure energy and magnetization of the current model
+    def _measure(self, a_beta=None):
+        """Measure energy and magnetization of the current model
 
         @param a_beta - beta value to use
 
         @return 2-tuple holding energy and magnetization
+
         """
         if a_beta is None:
             a_beta = self.beta
@@ -285,26 +304,30 @@ class Ising(object):
         energy = magn = sum1 = sum2 = sum3 = node_wght = 0.
         for inode in self.nodes:
             node_wght = inode[WGHT_IDX]
-            edge_wght = sum([self.nodes[k][WGHT_IDX] * v for k, v in inode[EDGE_IDX].iteritems()])
+            edge_wght = sum([self.nodes[k][WGHT_IDX] * v
+                             for k, v in inode[EDGE_IDX].iteritems()])
             probs = self._compute_probs(inode, WGHT_IDX, a_beta)
 
-            magn += node_wght # raw spin orientation
-            # magn += sum([x_i * iprob for x_i, iprob in zip(SPIN_DOMAIN, probs)]) # model expectation
+            magn += node_wght  # raw spin orientation
+            # magn += sum([x_i * iprob
+            # for x_i, iprob in zip(SPIN_DOMAIN, probs)]) # model expectation
 
             sum1 -= node_wght * edge_wght
             # entropy
-            sum2 -= sum([iprob * math.log(iprob, 2.) for iprob in probs if iprob])
+            sum2 -= sum([iprob * math.log(iprob, 2.)
+                         for iprob in probs if iprob])
             # penalty
             if inode[HAS_FXD_WGHT]:
-                sum3 += sum([iprob * (x_i - inode[FXD_WGHT_IDX])**2 for iprob, x_i in \
-                                zip(probs, SPIN_DOMAIN)])
+                sum3 += sum([iprob * (x_i - inode[FXD_WGHT_IDX])**2
+                             for iprob, x_i in zip(probs, SPIN_DOMAIN)])
             # mean = self._compute_mean(inode)
             # # mean = inode[WGHT_IDX]
             # q_pos = (1. + mean) / 2.; q_neg = (1. - mean) / 2.
             # lq_pos = log(q_pos) if q_pos else 0.
             # lq_neg = log(q_neg) if q_neg else 0.
             # energy -= (self.beta / 2.) * inode[WGHT_IDX] * \
-            #     sum([self.nodes[k][WGHT_IDX] * v for k, v in inode[EDGE_IDX].iteritems()]) - \
+            #     sum([self.nodes[k][WGHT_IDX] * v
+            #     for k, v in inode[EDGE_IDX].iteritems()]) - \
             #     q_pos * lq_pos - q_neg * lq_neg
         # print("sum1 =", repr(sum1), file = sys.stderr)
         # print("sum2 =", repr(sum2), file = sys.stderr)
@@ -312,7 +335,7 @@ class Ising(object):
         energy = (sum1 * a_beta / 2.) + sum2 + sum3
         return (energy, magn / float(self.n_nodes))
 
-    def _compute_mean(self, a_node, a_idx = WGHT_IDX, a_beta = None):
+    def _compute_mean(self, a_node, a_idx=WGHT_IDX, a_beta=None):
         """
         Compute mean of spin orientation of the given node
 
@@ -323,10 +346,11 @@ class Ising(object):
         @return float representing the mean spin orientation
         """
         probs = self._compute_probs(a_node, a_idx, a_beta)
-        # print("probs {:s} = ".format(repr(a_node[0])), repr(probs), file = sys.stderr)
+        # print("probs {:s} = ".format(
+        # repr(a_node[0])), repr(probs), file=sys.stderr)
         return sum([x_i * iprob for x_i, iprob in zip(SPIN_DOMAIN, probs)])
 
-    def _compute_probs(self, a_node, a_idx = WGHT_IDX, a_beta = None):
+    def _compute_probs(self, a_node, a_idx=WGHT_IDX, a_beta=None):
         """
         Compute probabilities of spin orientations for the given node
 
@@ -340,14 +364,18 @@ class Ising(object):
             a_beta = self.beta
 
         # print("beta =", repr(a_beta), file = sys.stderr)
-        # print("edges =", repr([(self.nodes[k][a_idx], v) for k, v in a_node[EDGE_IDX].iteritems()]), file = sys.stderr)
-        # print("sum =", repr(sum([self.nodes[k][a_idx] * v for k, v in a_node[EDGE_IDX].iteritems()])), file = sys.stderr)
+        # print("edges =", repr([(self.nodes[k][a_idx], v)
+        # for k, v in a_node[EDGE_IDX].iteritems()]), file = sys.stderr)
+        # print("sum =", repr(sum([self.nodes[k][a_idx] * v
+        # for k, v in a_node[EDGE_IDX].iteritems()])), file = sys.stderr)
 
-        edge_wght = a_beta * sum([self.nodes[k][a_idx] * v for k, v in a_node[EDGE_IDX].iteritems()])
+        edge_wght = a_beta * sum([self.nodes[k][a_idx] * v
+                                  for k, v in a_node[EDGE_IDX].iteritems()])
         # print("edge_wght =", repr(edge_wght), file = sys.stderr)
         # prevent overflow
-        probs = [x_i * edge_wght - ALPHA * a_node[HAS_FXD_WGHT] * ((x_i - a_node[FXD_WGHT_IDX]) ** 2) \
-                     for x_i in SPIN_DOMAIN]
+        probs = [x_i * edge_wght - ALPHA * a_node[HAS_FXD_WGHT]
+                 * ((x_i - a_node[FXD_WGHT_IDX]) ** 2)
+                 for x_i in SPIN_DOMAIN]
         probs = [exp(x_i) if x_i < MAX_LOG_I else MAX_I for x_i in probs]
         norm = 0.
         for iprob in probs:
@@ -362,29 +390,32 @@ class Ising(object):
             return [iprob / norm for iprob in probs]
         return probs
 
-    def _plot(self, a_fname, a_beta2em):
-        """
-        Plot the development of energy/magnetization
+    def _plot(self, a_plot, a_beta2em):
+        """Plot the development of energy/magnetization
 
-        @param a_fname - name of the file in which new plot should be saved
-        @param a_beta2em - dictionary mapping beta vaules to free energy/magnetization
+        @param a_plot - extension of the file in which new plot should be saved
+        @param a_beta2em - dictionary mapping beta vaules to free
+        energy/magnetization
 
         @return \c void
+
         """
-        betas = []; energy = []; magnetization = []
+        betas = []
+        energy = []
+        magnetization = []
         for ibeta, (ienergy, imagnet) in a_beta2em.iteritems():
             betas.append(ibeta)
             energy.append(ienergy)
             magnetization.append(imagnet)
         figure(num=None, figsize=(8, 6), dpi=120, facecolor='w', edgecolor='k')
-        rc("text", usetex = True)
-        plot(betas, energy, label = r"E($\beta$)")
+        rc("text", usetex=True)
+        plot(betas, energy, label=r"E($\beta$)")
         xlabel(r"$\beta$")
-        savefig("energy-" + a_fname)
+        savefig("takamura-energy." +  + a_plot, format=a_plot)
         clf()
-        plot(betas, magnetization, label = r"M($\beta$)")
+        plot(betas, magnetization, label=r"M($\beta$)")
         xlabel(r"$\beta$")
-        savefig("magnetization-" + a_fname)
+        savefig("takamura-magnetization." + a_plot, format=a_plot)
 
 ##################################################################
 # Reference Implementation
@@ -399,7 +430,8 @@ class Ising(object):
 #     for i in range(len(latt)):
 #         for j in range(len(latt)):
 #             S = latt[i,j]
-#             WF = latt[(i+1)%N, j] + latt[i,(j+1)%N] + latt[(i-1)%N,j] + latt[i,(j-1)%N]
+#             WF = latt[(i+1)%N, j] + latt[i,(j+1)%N] \
+#                  + latt[(i-1)%N,j] + latt[i,(j-1)%N]
 #             Ene += -WF*S # Each neighbor gives energy 1.0
 #     return Ene/2. # Each par counted twice
 
@@ -425,7 +457,8 @@ class Ising(object):
 #         t = int(rand()*N2)
 #         (i,j) = (t % N, t/N)
 #         S = latt[i,j]
-#         WF = latt[(i+1)%N, j] + latt[i,(j+1)%N] + latt[(i-1)%N,j] + latt[i,(j-1)%N]
+#         WF = latt[(i+1)%N, j] + latt[i,(j+1)%N] \
+#              + latt[(i-1)%N,j] + latt[i,(j-1)%N]
 #         P = PW[4+S*WF]
 #         if P>rand(): # flip the spin
 #             latt[i,j] = -S
@@ -456,7 +489,8 @@ class Ising(object):
 #         int i = t % N;
 #         int j = t / N;
 #         int S = latt(i,j);
-#         int WF = latt((i+1)%N, j) + latt(i,(j+1)%N) + latt((i-1+N)%N,j) + latt(i,(j-1+N)%N);
+#         int WF = latt((i+1)%N, j) + latt(i,(j+1)%N) \
+#             + latt((i-1+N)%N,j) + latt(i,(j-1+N)%N);
 #         double P = PW(4+S*WF);
 #         if (P > drand48()){ // flip the spin
 #             latt(i,j) = -S;
@@ -472,7 +506,8 @@ class Ising(object):
 #         }
 #     }
 #     """
-#     weave.inline(code, ['Nitt','latt','N','PW','Ene','Mn','warm', 'measure', 'aver'],
+#     weave.inline(code, ['Nitt','latt','N','PW','Ene',
+#     'Mn','warm', 'measure', 'aver'],
 #                  type_converters = weave.converters.blitz, compiler = 'gcc')
 #     aE = aver[1]/aver[0]
 #     aM = aver[2]/aver[0]

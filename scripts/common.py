@@ -10,13 +10,23 @@
 from germanet import normalize
 from tokenizer import Tokenizer
 
+import re
+
 ##################################################################
 # Constants
+TAB_RE = re.compile(' *\t+ *')
+WORD_RE = re.compile('^[-.\w]+$')
+ENCODING = "utf-8"
+
 # not sure whether "has_hypernym" should be added to SYNRELS
 POSITIVE = "positive"
 NEGATIVE = "negative"
 NEUTRAL = "neutral"
 POL2OPPOSITE = {POSITIVE: NEGATIVE, NEGATIVE: POSITIVE}
+
+NEGATORS = set(["nicht", "keine", "kein", "keines", "keinem", "keinen"])
+STOP_WORDS = set()
+FORM2LEMMA = dict()
 
 ANTONYM = "has_antonym"
 SYNONYM = "has_synonym"
