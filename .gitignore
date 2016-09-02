@@ -12,3 +12,8 @@ data/takamura/err.*
 data/WordNet-3.0/
 venv/
 test.lex
+.emacs.desktop*
+data/corpus/cc_*
+data/dictcc/
+*.log
+*.png
