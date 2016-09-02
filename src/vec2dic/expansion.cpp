@@ -3,13 +3,14 @@
 //////////////
 #include "expansion.h"
 
-#include <algorithm>		// std::swap(), std::sort()
-#include <cassert>		// assert
-#include <cmath>		// sqrt(), fabs()
-#include <cstdlib>		// size_t
-#include <iostream>		// std::cerr
-#include <unordered_set>	// std::unordered_set
-#include <queue>		// std::priority_queue
+#include <algorithm>                    // std::swap(), std::sort()
+#include <cassert>                      // assert
+#include <cmath>                        // sqrt(), fabs()
+#include <cstdlib>                      // size_t
+#include <cstdint>                      // uint64_t
+#include <iostream>                     // std::cerr
+#include <unordered_set>                // std::unordered_set
+#include <queue>                        // std::priority_queue
 
 ///////////
 // Types //
@@ -55,22 +56,22 @@ using vpd_pq_t = std::priority_queue<vpd_t>;
 
 /** struct comprising means and standard deviations of polarity  */
 using pol_stat_t = struct {
-  vid_t m_dim = 0;		// dimension with the longest distance
-				// between vectors pertaining to
-				// different polarity classes
+  vid_t m_dim = 0;        // dimension with the longest distance
+                // between vectors pertaining to
+                // different polarity classes
 
-  size_t m_n_pos = 0;		// number of positive vectors
-  dist_t m_pos_mean = 0.;	// mean of positive vectors
-  dist_t m_pos_dev = 0.;	// deviation of positive vectors along
-				// the given dimension
-  size_t m_n_neg = 0;		// number of negative vectors
-  dist_t m_neg_mean = 0.;	// mean of negative vectors
-  dist_t m_neg_dev = 0.;	// deviation of negative vectors along
-				// the given dimension
-  size_t m_n_neut = 0;		// number of neutral vectors
-  dist_t m_neut_mean = 0.;	// mean of neutral vectors
-  dist_t m_neut_dev = 0.;	// deviation of neutral vectors along
-				// the given dimension
+  size_t m_n_pos = 0;        // number of positive vectors
+  dist_t m_pos_mean = 0.;    // mean of positive vectors
+  dist_t m_pos_dev = 0.;    // deviation of positive vectors along
+                // the given dimension
+  size_t m_n_neg = 0;        // number of negative vectors
+  dist_t m_neg_mean = 0.;    // mean of negative vectors
+  dist_t m_neg_dev = 0.;    // deviation of negative vectors along
+                // the given dimension
+  size_t m_n_neut = 0;        // number of neutral vectors
+  dist_t m_neut_mean = 0.;    // mean of neutral vectors
+  dist_t m_neut_dev = 0.;    // deviation of neutral vectors along
+                // the given dimension
 };
 
 ///////////////
@@ -82,7 +83,7 @@ const vid_t NEUT_VID = static_cast<vid_t>(Polarity::NEUTRAL);
 
 const double DFLT_ALPHA = 1e-5;
 const double DFLT_DELTA = 1e-10;
-const unsigned long MAX_ITERS = 1e10;
+const uint64_t MAX_ITERS = 1e10;
 
 /////////////
 // Methods //
@@ -97,7 +98,8 @@ const unsigned long MAX_ITERS = 1e10;
  * @return \c true if both matrices are equal, \c false otherwise
  */
 static bool _cmp_mat(const arma::mat *a_mat1, const arma::mat *a_mat2) {
-  bool ret = ((a_mat1->n_rows == a_mat2->n_rows) && (a_mat1->n_cols == a_mat2->n_cols));
+  bool ret = ((a_mat1->n_rows == a_mat2->n_rows) \
+              && (a_mat1->n_cols == a_mat2->n_cols));
   if (!ret)
     return ret;
 
@@ -105,7 +107,7 @@ static bool _cmp_mat(const arma::mat *a_mat1, const arma::mat *a_mat2) {
   for (i = 0; i < a_mat1->n_cols; ++i) {
     for (j = 0; j < a_mat1->n_rows; ++j) {
       if (!(ret = ((*a_mat1)(j, i) == (*a_mat2)(j, i))))
-	return ret;
+    return ret;
     }
   }
   return ret;
@@ -120,7 +122,9 @@ static bool _cmp_mat(const arma::mat *a_mat1, const arma::mat *a_mat2) {
  *
  * @return unnormaized Euclidean distance between vectors
  */
-static inline dist_t _unnorm_eucl_distance(const dist_t *a_vec1, const dist_t *a_vec2, size_t a_N) {
+static inline dist_t _unnorm_eucl_distance(const dist_t *a_vec1,
+                                           const dist_t *a_vec2,
+                                           size_t a_N) {
   dist_t tmp_i = 0., idistance = 0;
 
   for (size_t i = 0; i < a_N; ++i) {
@@ -140,14 +144,18 @@ static inline dist_t _unnorm_eucl_distance(const dist_t *a_vec1, const dist_t *a
  *
  * @return \c void
  */
-static inline void _add_terms(v2p_t *a_vecid2pol, vpd_v_t *a_vpds, const int a_j, const int a_N) {
+static inline void _add_terms(v2ps_t *a_vecid2pol,
+                              vpd_v_t *a_vpds, const int a_j, const int a_N) {
   // sort vpds according to their distances to the centroids
   std::sort(a_vpds->begin(), a_vpds->end());
   // add new terms to the dictionary
   vpd_t *ivpd;
   for (int i = 0; (a_N < 0 || i < a_N) && i < a_j; ++i) {
     ivpd = &(*a_vpds)[i];
-    a_vecid2pol->emplace(ivpd->m_vecid, static_cast<Polarity>(ivpd->m_polarity));
+    a_vecid2pol->emplace(ivpd->m_vecid,
+                         std::make_pair(
+                                        static_cast<Polarity>(ivpd->m_polarity),
+                                        ivpd->m_distance));
   }
 }
 
@@ -160,9 +168,9 @@ static inline void _add_terms(v2p_t *a_vecid2pol, vpd_v_t *a_vpds, const int a_j
  *                  Euclidean distance to the vector should be stored
  * @return id of the cluster with the nearest centroid
  */
-static pol_t _nc_find_cluster(const arma::mat *a_centroids,	\
-			       const double *a_vec,		\
-			       dist_t *a_dist = nullptr) {
+static pol_t _nc_find_cluster(const arma::mat *a_centroids,
+                              const double *a_vec,
+                              dist_t *a_dist = nullptr) {
   pol_t ret = 0;
   const double *centroid;
   dist_t idistance = 1., mindistance = std::numeric_limits<double>::max();
@@ -193,7 +201,7 @@ static pol_t _nc_find_cluster(const arma::mat *a_centroids,	\
  * @return \c true if clusters changed, \c false otherwise
  */
 static bool _nc_assign(pi2v_t *a_polid2vecids, v2pi_t *a_vecid2polid, \
-		       const arma::mat *a_centroids, const arma::mat *a_nwe) {
+               const arma::mat *a_centroids, const arma::mat *a_nwe) {
   bool ret = false;
   bool is_absent = false, differs = false;
   pol_t polid;
@@ -210,12 +218,12 @@ static bool _nc_assign(pi2v_t *a_polid2vecids, v2pi_t *a_vecid2polid, \
     if ((is_absent = (it == it_end)) || (differs = (it->second != polid))) {
       // remove word vector from the previous polarity class
       if (differs) {
-	v_id_pos = (*a_polid2vecids)[it->second].find(vecid);
-	// obtain position of the vector id in its previous class set
-	if (v_id_pos != (*a_polid2vecids)[it->second].end())
-	  (*a_polid2vecids)[it->second].erase(v_id_pos);
+    v_id_pos = (*a_polid2vecids)[it->second].find(vecid);
+    // obtain position of the vector id in its previous class set
+    if (v_id_pos != (*a_polid2vecids)[it->second].end())
+      (*a_polid2vecids)[it->second].erase(v_id_pos);
 
-	differs = false;
+    differs = false;
       }
       (*a_vecid2polid)[vecid] = polid;
       (*a_polid2vecids)[polid].insert(vecid);
@@ -235,22 +243,24 @@ static bool _nc_assign(pi2v_t *a_polid2vecids, v2pi_t *a_vecid2polid, \
  *
  * @return \c true if centroids changed, \c false otherwise
  */
-static bool _nc_compute_centroids(arma::mat *a_new_centroids, const arma::mat *a_old_centroids, \
-				  const pi2v_t *a_pol2vecids, const arma::mat *a_nwe) {
+static bool _nc_compute_centroids(arma::mat *a_new_centroids,
+                                  const arma::mat *a_old_centroids,
+                                  const pi2v_t *a_pol2vecids,
+                                  const arma::mat *a_nwe) {
   // zero-out new centroids
   a_new_centroids->zeros();
   // compute new centroids
   pol_t c_id;
-  for (auto& p2v: *a_pol2vecids) {
+  for (auto& p2v : *a_pol2vecids) {
     c_id = p2v.first;
     // sum-up coordinates of all the vectors pertaining to the given
     // polarity
-    for (auto& vecid: p2v.second) {
+    for (auto& vecid : p2v.second) {
       a_new_centroids->col(c_id) += a_nwe->col(vecid);
     }
     // take the mean of the new centroid
     if (p2v.second.size())
-      a_new_centroids->col(c_id) /= float(p2v.second.size());
+      a_new_centroids->col(c_id) /= static_cast<float>(p2v.second.size());
   }
 
   return !_cmp_mat(a_new_centroids, a_old_centroids);
@@ -266,12 +276,16 @@ static bool _nc_compute_centroids(arma::mat *a_new_centroids, const arma::mat *a
  *
  * @return \c true if clusters changes, \c false otherwise
  */
-static inline bool _nc_run(arma::mat *a_new_centroids, arma::mat *a_old_centroids, \
-			   pi2v_t *a_polid2vecids, v2pi_t *a_vecid2polid, \
-			   const arma::mat *a_nwe) {
+static inline bool _nc_run(arma::mat *a_new_centroids,
+                           arma::mat *a_old_centroids,
+                           pi2v_t *a_polid2vecids,
+                           v2pi_t *a_vecid2polid,
+                           const arma::mat *a_nwe) {
   bool ret = false;
   // calculate centroids
-  if ((ret = _nc_compute_centroids(a_new_centroids, a_old_centroids, a_polid2vecids, a_nwe)))
+  if ((ret = _nc_compute_centroids(a_new_centroids,
+                                   a_old_centroids,
+                                   a_polid2vecids, a_nwe)))
     // assign new items to their new nearest centroids (can return
     // `ret =` here, but then remove assert from )
     _nc_assign(a_polid2vecids, a_vecid2polid, a_new_centroids, a_nwe);
@@ -287,8 +301,8 @@ static inline bool _nc_run(arma::mat *a_new_centroids, arma::mat *a_old_centroid
  *
  * @return id of the cluster with the nearest centroid
  */
-static void _nc_expand(v2p_t *a_vecid2pol, const arma::mat *const a_centroids, \
-		       const arma::mat *a_nwe, const int a_N) {
+static void _nc_expand(v2ps_t *a_vecid2pol, const arma::mat *const a_centroids,
+                       const arma::mat *a_nwe, const int a_N) {
   // vector of word vector ids, their respective polarities (aka
   // nearest centroids), and distances to the nearest centroids
   vpd_v_t vpds;
@@ -297,7 +311,7 @@ static void _nc_expand(v2p_t *a_vecid2pol, const arma::mat *const a_centroids, \
   dist_t idist;
   pol_t ipol;
   int j = 0;
-  v2p_t::const_iterator v2p_end = a_vecid2pol->end();
+  v2ps_t::const_iterator v2p_end = a_vecid2pol->end();
   // populate
   for (vid_t i = 0; i < a_nwe->n_cols; ++i) {
     if (a_vecid2pol->find(i) != v2p_end)
@@ -314,8 +328,10 @@ static void _nc_expand(v2p_t *a_vecid2pol, const arma::mat *const a_centroids, \
   _add_terms(a_vecid2pol, &vpds, j, a_N);
 }
 
-void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
-			      const bool a_early_break) {
+void expand_nearest_centroids(v2ps_t *a_vecid2pol,
+                              const arma::mat *a_nwe,
+                              const int a_N,
+                              const bool a_early_break) {
   // determine the number of clusters
   size_t n_clusters = static_cast<size_t>(Polarity::MAX_SENTINEL);
   // create two matrices for storing centroids
@@ -328,14 +344,15 @@ void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const 
   polid2vecids.reserve(n_clusters);
   v2pi_t vecid2polid;
   vecid2polid.reserve(a_nwe->n_cols);
-  for (auto &v2p: *a_vecid2pol) {
-    polid = static_cast<size_t>(v2p.second);
+  for (auto &v2p : *a_vecid2pol) {
+    polid = static_cast<size_t>(v2p.second.first);
     polid2vecids[polid].insert(v2p.first);
     vecid2polid[v2p.first] = polid;
   }
   int i = 0;
   // run the algorithm until convergence
-  while (_nc_run(centroids, new_centroids, &polid2vecids, &vecid2polid, a_nwe)) {
+  while (_nc_run(centroids, new_centroids,
+                 &polid2vecids, &vecid2polid, a_nwe)) {
     std::cerr << "Run #" << i++ << '\r';
     // early break
     if (a_early_break) {
@@ -368,13 +385,15 @@ void expand_nearest_centroids(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const 
  *
  * @return \c void
  */
-static void _knn_find_nearest(vid_t a_vid, const arma::mat *a_nwe, const v2p_t * const a_vecid2pol, \
-			      vpd_pq_t *a_knn, const int a_K) {
+static void _knn_find_nearest(vid_t a_vid,
+                              const arma::mat *a_nwe,
+                              const v2ps_t * const a_vecid2pol,
+                              vpd_pq_t *a_knn, const int a_K) {
   bool filled = false;
   int added = 0;
 
   // reset KNN vector
-  while (! a_knn->empty()) {
+  while (!a_knn->empty()) {
     a_knn->pop();
   }
 
@@ -382,7 +401,7 @@ static void _knn_find_nearest(vid_t a_vid, const arma::mat *a_nwe, const v2p_t *
   const dist_t *ivec = a_nwe->colptr(a_vid);
   const size_t n_rows = a_nwe->n_rows;
   // iterate over each known vector and find K nearest ones
-  for (auto& v2p: *a_vecid2pol) {
+  for (auto& v2p : *a_vecid2pol) {
     // compute distance between
     idistance = _unnorm_eucl_distance(ivec, a_nwe->colptr(v2p.first), n_rows);
 
@@ -395,7 +414,8 @@ static void _knn_find_nearest(vid_t a_vid, const arma::mat *a_nwe, const v2p_t *
     else
       filled = (++added == a_K);
 
-    a_knn->push(VPD {idistance, static_cast<pol_t>(v2p.second), v2p.first});
+    a_knn->push(VPD {idistance,
+          static_cast<pol_t>(v2p.second.first), v2p.first});
     mindistance = a_knn->top().m_distance;
   }
 }
@@ -411,17 +431,16 @@ static void _knn_find_nearest(vid_t a_vid, const arma::mat *a_nwe, const v2p_t *
  * @return \c void
  */
 static void _knn_add(vpd_t *a_vpd, const vid_t a_vid, vpd_pq_t *a_knn, \
-		     vpd_v_t *a_workbench) {
-
+             vpd_v_t *a_workbench) {
   // reset workbench
-  for (auto& vpd: *a_workbench) {
-    vpd.m_vecid = 0;		// will serve as neighbor counter
-    vpd.m_distance = 0.;	// will store the sum of the distances
+  for (auto& vpd : *a_workbench) {
+    vpd.m_vecid = 0;        // will serve as neighbor counter
+    vpd.m_distance = 0.;    // will store the sum of the distances
   }
 
   const vpd_t *vpd;
   // iterate over neighbors
-  while (! a_knn->empty()) {
+  while (!a_knn->empty()) {
     vpd = &a_knn->top();
     ++(*a_workbench)[vpd->m_polarity].m_vecid;
     (*a_workbench)[vpd->m_polarity].m_distance += vpd->m_distance;
@@ -448,7 +467,9 @@ static void _knn_add(vpd_t *a_vpd, const vid_t a_vid, vpd_pq_t *a_knn, \
   *a_vpd = VPD {maxdistance, pol, a_vid};
 }
 
-void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, const int a_K) {
+void expand_knn(v2ps_t *a_vecid2pol,
+                const arma::mat *a_nwe,
+                const int a_N, const int a_K) {
   vpd_v_t vpds;
   vpds.reserve(a_nwe->n_cols);
   vpd_v_t _knn(a_K);
@@ -457,7 +478,7 @@ void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, const
 
   vpd_t ivpd;
   size_t i = 0;
-  v2p_t::const_iterator v2p_end = a_vecid2pol->end();
+  v2ps_t::const_iterator v2p_end = a_vecid2pol->end();
 
   // iterate over each word vector and find k-nearest neigbors for it
   for (vid_t vid = 0; vid < a_nwe->n_cols; ++vid) {
@@ -485,7 +506,7 @@ void expand_knn(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, const
  * @return \c void
  */
 static void _pca_compute_means(const v2pi_t *a_vecid2polid, const arma::mat *a_prjctd, \
-			       pol_stat_t *a_pol_stat) {
+                   pol_stat_t *a_pol_stat) {
   a_pol_stat->m_n_pos = 0; a_pol_stat->m_n_neg = 0; a_pol_stat->m_n_neut = 0;
   /// means of polarity vectors
   arma::mat pol_means(a_prjctd->n_cols, static_cast<size_t>(Polarity::MAX_SENTINEL));
@@ -527,7 +548,7 @@ static void _pca_compute_means(const v2pi_t *a_vecid2polid, const arma::mat *a_p
   arma::vec vdelta = pol_means.col(POS_VID) - pol_means.col(NEG_VID);
   if (a_pol_stat->m_n_neut)
     vdelta = arma::abs(vdelta) -  arma::abs(pol_means.col(POS_VID) - vdelta / 2 - \
-					    pol_means.col(NEUT_VID));
+                        pol_means.col(NEUT_VID));
   else
     vdelta = arma::abs(vdelta);
 
@@ -554,7 +575,7 @@ static void _pca_compute_means(const v2pi_t *a_vecid2polid, const arma::mat *a_p
  * @return dimension with the maximal distance between polarity classes
  */
 static void _pca_compute_dev(const v2pi_t *a_vecid2polid, const arma::mat *a_prjctd, \
-			     pol_stat_t *a_pol_stat) {
+                 pol_stat_t *a_pol_stat) {
   // obtain unnormalized standard deviations of polarity vectors along
   // the given dimension
   dist_t tmp_j;
@@ -600,7 +621,7 @@ static void _pca_compute_dev(const v2pi_t *a_vecid2polid, const arma::mat *a_prj
  * @return \c void
  */
 static void _pca_compute_stat(const v2pi_t *a_vecid2polid, const arma::mat *a_prjctd, \
-			       pol_stat_t *a_pol_stat) {
+                   pol_stat_t *a_pol_stat) {
   _pca_compute_means(a_vecid2polid, a_prjctd, a_pol_stat);
   std::cerr << "pca means computed" << std::endl;
   _pca_compute_dev(a_vecid2polid, a_prjctd, a_pol_stat);
@@ -620,8 +641,8 @@ static void _pca_compute_stat(const v2pi_t *a_vecid2polid, const arma::mat *a_pr
  *
  * @return \c void
  */
-static void _pca_expand(v2p_t *a_vecid2pol, const arma::mat *a_pca_nwe, \
-			const int a_N, const pol_stat_t *a_pol_stat) {
+static void _pca_expand(v2ps_t *a_vecid2pol, const arma::mat *a_pca_nwe, \
+            const int a_N, const pol_stat_t *a_pol_stat) {
   // vector of word vector ids, their respective polarities, and
   // distances to the boundaries
   vpd_v_t vpds;
@@ -641,7 +662,7 @@ static void _pca_expand(v2p_t *a_vecid2pol, const arma::mat *a_pca_nwe, \
   int j = 0;
   pol_t ipol;
   dist_t idim, idist;
-  v2p_t::const_iterator v2p_end = a_vecid2pol->end();
+  v2ps_t::const_iterator v2p_end = a_vecid2pol->end();
   // populate
   for (vid_t i = 0; i < a_pca_nwe->n_rows; ++i) {
     if (a_vecid2pol->find(i) != v2p_end)
@@ -652,14 +673,14 @@ static void _pca_expand(v2p_t *a_vecid2pol, const arma::mat *a_pca_nwe, \
 
     if (idim < min) {
       if (neg_is_greater)
-	ipol = POS_VID;
+    ipol = POS_VID;
       else
-	ipol = NEG_VID;
+    ipol = NEG_VID;
     } else if (idim > max) {
       if (neg_is_greater)
-	ipol = NEG_VID;
+    ipol = NEG_VID;
       else
-	ipol = POS_VID;
+    ipol = POS_VID;
     } else {
       ipol = NEUT_VID;
     }
@@ -669,13 +690,13 @@ static void _pca_expand(v2p_t *a_vecid2pol, const arma::mat *a_pca_nwe, \
   _add_terms(a_vecid2pol, &vpds, j, a_N);
 }
 
-void expand_pca(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
+void expand_pca(v2ps_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
   // convert polarity enum's to polarity indices
   size_t polid;
   v2pi_t vecid2polid;
   vecid2polid.reserve(a_vecid2pol->size());
-  for (auto &v2p: *a_vecid2pol) {
-    polid = static_cast<size_t>(v2p.second);
+  for (auto &v2p : *a_vecid2pol) {
+    polid = static_cast<size_t>(v2p.second.first);
     vecid2polid[v2p.first] = polid;
   }
 
@@ -694,20 +715,24 @@ void expand_pca(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
 
 
 static arma::colvec _project_vec(const arma::colvec& a_src_vec, \
-				   const arma::colvec& a_prjline) {
+                   const arma::colvec& a_prjline) {
   // we assume that `a_prjline` is normalized
   return arma::dot(a_src_vec, a_prjline) * a_prjline;
 }
 
 static void _project(arma::mat *a_pos_prjctd, arma::mat *a_neg_prjctd, \
-		     const arma::mat *a_nwe, const v2p_t *a_vecid2pol, \
-		     const arma::colvec *a_prjline) {
+             const arma::mat *a_nwe, const v2ps_t *a_vecid2pol, \
+             const arma::colvec *a_prjline) {
   size_t pos_i = 0, neg_i = 0;
-  for (auto& v2p: *a_vecid2pol) {
-    if (v2p.second == Polarity::POSITIVE)
-      a_pos_prjctd->col(pos_i++) = _project_vec(a_nwe->col(v2p.first), *a_prjline);
-    else if (v2p.second == Polarity::POSITIVE)
-      a_neg_prjctd->col(neg_i++) = _project_vec(a_nwe->col(v2p.first), *a_prjline);
+  for (auto& v2p : *a_vecid2pol) {
+    if (v2p.second.first == Polarity::POSITIVE)
+      a_pos_prjctd->col(pos_i++) = _project_vec(
+                                                a_nwe->col(v2p.first),
+                                                *a_prjline);
+    else if (v2p.second.first == Polarity::POSITIVE)
+      a_neg_prjctd->col(neg_i++) = _project_vec(
+                                                a_nwe->col(v2p.first),
+                                                *a_prjline);
   }
 }
 
@@ -721,7 +746,7 @@ static void _project(arma::mat *a_pos_prjctd, arma::mat *a_neg_prjctd, \
  * vectors
  */
 static inline dist_t _compute_distance(arma::mat *a_pos_prjctd, \
-				       arma::mat *a_neg_prjctd) {
+                       arma::mat *a_neg_prjctd) {
   dist_t dist = 0.;
   size_t neg_j = 0;
   for (size_t pos_i = 0; pos_i < a_pos_prjctd->n_cols; ++pos_i) {
@@ -746,8 +771,8 @@ static inline dist_t _compute_distance(arma::mat *a_pos_prjctd, \
  * @return \c void
  */
 static void _compute_prj_gradient(arma::colvec *a_gradient, const vid_flist_t *pos_ids, \
-				  const vid_flist_t *neg_ids, const arma::mat *a_nwe, \
-				  const arma::colvec *a_prjline) {
+                  const vid_flist_t *neg_ids, const arma::mat *a_nwe, \
+                  const arma::colvec *a_prjline) {
   // clean up gradient
   a_gradient->fill(0.);
 
@@ -775,9 +800,9 @@ static void _compute_prj_gradient(arma::colvec *a_gradient, const vid_flist_t *p
  *
  * @return \c void (modifies `a_vecid2pol` instead)
  */
-static void _prjct_expand(v2p_t *a_vecid2pol, const int a_N, \
-			  const arma::mat *a_nwe, const arma::mat *pos_prjctd, \
-			  const arma::mat *neg_prjctd, const arma::colvec  *a_prjline) {
+static void _prjct_expand(v2ps_t *a_vecid2pol, const int a_N, \
+              const arma::mat *a_nwe, const arma::mat *pos_prjctd, \
+              const arma::mat *neg_prjctd, const arma::colvec  *a_prjline) {
   // vector of word vector ids, their respective polarities, and
   // distances to the boundaries
   vpd_v_t vpds;
@@ -797,7 +822,7 @@ static void _prjct_expand(v2p_t *a_vecid2pol, const int a_N, \
   dist_t idist2mean;
   vid_t nvecs{a_nwe->n_cols};
   arma::colvec diff_vec(a_nwe->n_rows), vprjctd(a_nwe->n_rows);
-  v2p_t::const_iterator v_not_found = a_vecid2pol->end();
+  v2ps_t::const_iterator v_not_found = a_vecid2pol->end();
   for (vid_t i = 0; i < nvecs; ++i) {
     // skip vectors whose polarity is already known
     if (a_vecid2pol->find(i) != v_not_found)
@@ -808,24 +833,25 @@ static void _prjct_expand(v2p_t *a_vecid2pol, const int a_N, \
     // compute its distance to the median and polarity class
     diff_vec = vprjctd - median;
     idist2mean = arma::norm(diff_vec, 2);
-    ipol = (arma::dot(diff_vec, *a_prjline) > 0) == pos_is_right? POS_VID: NEG_VID;
+    ipol = (arma::dot(diff_vec, *a_prjline) > 0) == pos_is_right? \
+      POS_VID: NEG_VID;
     vpds.push_back(VPD {idist2mean, ipol, i});
     ++j;
   }
   _add_terms(a_vecid2pol, &vpds, j, a_N);
 }
 
-void expand_prjct(v2p_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N, \
-		  const double a_alpha, const dist_t a_delta, \
-		  const unsigned long a_max_iters) {
+void expand_prjct(v2ps_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N,
+                  const double a_alpha, const dist_t a_delta,
+                  const unsigned long a_max_iters) {
   // estimate the number of known positive and negative vectors
   size_t n_pos = 0, n_neg = 0;
   vid_flist_t pos_ids, neg_ids;
-  for (auto& v2p: *a_vecid2pol) {
-    if (v2p.second == Polarity::POSITIVE) {
+  for (auto& v2p : *a_vecid2pol) {
+    if (v2p.second.first == Polarity::POSITIVE) {
       pos_ids.push_front(v2p.first);
       ++n_pos;
-    } else if (v2p.second == Polarity::NEGATIVE) {
+    } else if (v2p.second.first == Polarity::NEGATIVE) {
       neg_ids.push_front(v2p.first);
       ++n_neg;
     }

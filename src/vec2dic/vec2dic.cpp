@@ -9,25 +9,26 @@
 //////////////
 // Includes //
 //////////////
-#include "expansion.h"
-#include "optparse.h"
+#include "src/vec2dic/expansion.h"
+#include "src/vec2dic/optparse.h"
+
+#include <clocale>        // setlocale()
+#include <cmath>          // sqrt()
+#include <cstdio>         // sscanf()
+#include <cstdlib>        // std::exit(), std::strtoul()
+#include <cstring>        // strcmp(), strlen()
 
 #include <algorithm>
-#include <armadillo>		// arma::mat
-#include <cctype>		// std::isspace()
-#include <clocale>		// setlocale()
-#include <cmath>		// sqrt()
-#include <cstdio>		// sscanf()
-#include <cstdlib>		// std::exit(), std::strtoul()
-#include <cstring>		// strcmp()
-#include <fstream>		// std::ifstream
+#include <armadillo>      // arma::mat
+#include <cctype>         // std::isspace()
+#include <fstream>        // std::ifstream
 #include <functional>
-#include <iostream>		// std::cerr, std::cout
+#include <iostream>       // std::cerr, std::cout
 #include <locale>
-#include <stdexcept>		// std::domain_error()
-#include <string>		// std::string
-#include <unordered_map>	// std::unordered_map
-#include <utility>		// std::make_pair
+#include <stdexcept>      // std::domain_error()
+#include <string>         // std::string
+#include <unordered_map>  // std::unordered_map
+#include <utility>        // std::make_pair
 
 /////////////
 // Classes //
@@ -37,11 +38,11 @@
  * Type of algorithm to use for lexicon expansion.
  */
 enum class ExpansionType: int {
-  NC_CLUSTERING = 0,		// Nearest centroids algorithm
-    KNN_CLUSTERING,		// K-nearest neighbors
-    PCA_CLUSTERING,		// Proincipal component analysis
-    PRJ_CLUSTERING,		// Projection-based clustering
-    MAX_SENTINEL		// Unused type that serves as a sentinel
+  NC_CLUSTERING = 0,        // Nearest centroids algorithm
+    KNN_CLUSTERING,        // K-nearest neighbors
+    PCA_CLUSTERING,        // Proincipal component analysis
+    PRJ_CLUSTERING,        // Projection-based clustering
+    MAX_SENTINEL        // Unused type that serves as a sentinel
     };
 
 // forward declaration of `usage()` method
@@ -119,18 +120,21 @@ public:
 /// Pair of c_string and polarity
 typedef struct WP {
   /// polar word
-  const char *m_word;
+  const char *m_word = nullptr;
   /// polarity class of the word
-  Polarity m_polarity;
+  Polarity m_polarity = Polarity::NEUTRAL;
+  /// polarity score of the word
+  dist_t m_score = 0.;
 
-  /// default constructor
-  WP(void):
-    m_word(), m_polarity()
+  /// copy constructor
+  WP(const char *a_word, const Polarity a_polarity,
+     dist_t a_score):
+      m_word(a_word), m_polarity(a_polarity), m_score(a_score)
   {}
 
-  /// class constructor
-  WP(const char *a_word, Polarity a_polarity):
-    m_word(a_word), m_polarity (a_polarity)
+  /// copy constructor
+  WP(const char *a_word, const ps_t *a_ps):
+      m_word(a_word), m_polarity(a_ps->first), m_score(a_ps->second)
   {}
 } wp_t;
 
@@ -142,20 +146,18 @@ typedef std::vector<wp_t> wpv_t;
 /////////////////////////////
 
 /// string representing positive polarity class
-const std::string positive {"positive"};
+const char *positive  = "positive";
 /// string representing negative polarity class
-const std::string negative {"negative"};
+const char *negative = "negative";
 /// string representing neutral polarity class
-const std::string neutral {"neutral"};
+const char *neutral = "neutral";
 
-/// Mapping from Polarity enum to string
-static const std::string pol2pol[] {positive, negative, neutral};
 /// Mapping from words to the index of their NWE vector
 static w2v_t word2vecid;
 /// Mapping from the index of NWE vectors to their respective words
 static v2w_t vecid2word;
 /// Mapping from word to its polarity
-static w2p_t word2pol;
+static w2ps_t word2polscore;
 /// Matrix of neural word embeddings
 static arma::mat NWE;
 
@@ -171,25 +173,37 @@ static arma::mat NWE;
  * @return \c void
  */
 static void usage(int a_ret) {
-  std::cerr << "Expand initial seed set of subjective terms by applying clustering" << std::endl;
+  std::cerr << "Expand initial seed set of subjective terms by"
+      " applying clustering" << std::endl;
   std::cerr << "to neural word embeddings." << std::endl << std::endl;
   std::cerr << "Usage:" << std::endl;
-  std::cerr << "vec2dic [OPTIONS] VECTOR_FILE SEED_FILE" << std::endl << std::endl;
+  std::cerr << "vec2dic [OPTIONS] VECTOR_FILE SEED_FILE"
+            << std::endl << std::endl;
   std::cerr << "Options:" << std::endl;
-  std::cerr << "-L|--no-length-normalizion  do not normalize length of word vectors" << std::endl;
-  std::cerr << "-M|--no-mean-normalizion  do not normalize means of word vectors" << std::endl;
-  std::cerr << "-a|--alpha  learning rate for gradient methods (default " << DFLT_ALPHA << ")" << std::endl;
-  std::cerr << "-c|--coefficient  elongate vectors by the  coefficient (useful for linear projection, implies -L)" << std::endl;
-  std::cerr << "-d|--delta  learning rate for gradient methods (default " << DFLT_DELTA << ")" << std::endl;
+  std::cerr << "-L|--no-length-normalizion  do not normalize length"
+      " of word vectors" << std::endl;
+  std::cerr << "-M|--no-mean-normalizion  do not normalize means"
+      " of word vectors" << std::endl;
+  std::cerr << "-a|--alpha  learning rate for gradient methods"
+      " (default " << DFLT_ALPHA << ")" << std::endl;
+  std::cerr << "-c|--coefficient  elongate vectors by the"
+      " coefficient (useful for linear projection, implies -L)" << std::endl;
+  std::cerr << "-d|--delta  learning rate for gradient methods"
+      " (default " << DFLT_DELTA << ")" << std::endl;
   std::cerr << "-h|--help  show this screen and exit" << std::endl;
-  std::cerr << "-i|--max-iterations  maximum number of gradient updates (default " << MAX_ITERS << ")" << std::endl;
-  std::cerr << "-k|--k-nearest-neighbors  set the number of neighbors for KNN algorithm" << std::endl;
-  std::cerr << "-n|--n-terms  number of terms to extract (default: -1 (unlimited))" << std::endl;
+  std::cerr << "-i|--max-iterations  maximum number of gradient"
+      " updates (default " << MAX_ITERS << ")" << std::endl;
+  std::cerr << "-k|--k-nearest-neighbors  set the number of neighbors"
+      " for KNN algorithm" << std::endl;
+  std::cerr << "-n|--n-terms  number of terms to extract (default:"
+      " -1 (unlimited))" << std::endl;
   std::cerr << "-t|--type  type of expansion algorithm to use:" << std::endl;
-  std::cerr << "           (0 - nearest centroids (default), 1 - KNN, 2 - PCA dimension," << std::endl;
+  std::cerr << "           (0 - nearest centroids (default), "
+      "1 - KNN, 2 - PCA dimension," << std::endl;
   std::cerr << "            3 - linear projection)" << std::endl << std::endl;
   std::cerr << "Exit status:" << std::endl;
-  std::cerr << EXIT_SUCCESS << " on sucess, non-" << EXIT_SUCCESS << " otherwise" << std::endl;
+  std::cerr << EXIT_SUCCESS << " on sucess, non-" << EXIT_SUCCESS
+            << " otherwise" << std::endl;
   std::exit(a_ret);
 }
 
@@ -197,45 +211,44 @@ static void usage(int a_ret) {
  * Output polar terms in sorted alphabetic order
  *
  * @param a_stream - output stream to use
- * @param a_vecid2pol - mapping from vector id's to their respective polarities
+ * @param a_vecid2polscore - mapping from vector id's to their respective polarities
  *
  * @return \c void
  */
-static void output_terms(std::ostream &a_stream, const v2p_t *a_vecid2pol) {
-  // add new words to `word2pol` map
+static void output_terms(std::ostream &a_stream,
+                         const v2ps_t *a_vecid2polscore) {
+  // add new words to `word2polscore` map
   v2w_t::iterator v2w_it;
-  w2p_t::iterator w2p_it;
-  w2p_t::const_iterator w2p_end = word2pol.end();
 
-  for (auto &v2p: *a_vecid2pol) {
+  for (auto &v2ps : *a_vecid2polscore) {
     // we assume that the word is always found
-    v2w_it = vecid2word.find(v2p.first);
-    word2pol.emplace(v2w_it->second, v2p.second);
+    v2w_it = vecid2word.find(v2ps.first);
+    word2polscore.emplace(v2w_it->second, v2ps.second);
   }
 
   // populate word/polarity vector
   wpv_t wpv;
-  wpv.reserve(word2pol.size());
-  for (auto &w2p: word2pol) {
-    wpv.push_back(WP {w2p.first.c_str(), w2p.second});
+  wpv.reserve(word2polscore.size());
+  for (auto &w2p : word2polscore) {
+    wpv.push_back(WP {w2p.first.c_str(), &w2p.second});
   }
   // sort words
   std::sort(wpv.begin(), wpv.end(), [](const wp_t& wp1, const wp_t& wp2) \
-	    {return strcmp(wp1.m_word, wp2.m_word) < 0;});
+        {return strcmp(wp1.m_word, wp2.m_word) < 0;});
 
   // output sorted dict to the requested stream
-  for (auto &wp: wpv) {
+  for (auto &wp : wpv) {
     a_stream << wp.m_word << '\t';
     switch (wp.m_polarity) {
       case Polarity::POSITIVE:
-	a_stream << positive;
-	break;
+    a_stream << positive;
+    break;
       case Polarity::NEGATIVE:
-	a_stream << negative;
-	break;
+    a_stream << negative;
+    break;
       case Polarity::NEUTRAL:
-	a_stream << neutral;
-	break;
+    a_stream << neutral;
+    break;
     default:
       throw std::domain_error("Unknown polarity type");
     }
@@ -380,7 +393,7 @@ static int read_vectors(const char *a_fname, const Option *a_option) {
     }
     if (irow != mrows) {
       std::cerr << "Incorrect line format: '" << iline << " :declared vector size " << mrows << \
-	" differs from the actual size " << irow << std::endl;
+    " differs from the actual size " << irow << std::endl;
       goto error_exit;
     }
     ++icol;
@@ -412,7 +425,7 @@ static int read_vectors(const char *a_fname, const Option *a_option) {
   return 0;
 
  error_exit:
-  is.close();			// basic guarantee
+  is.close();            // basic guarantee
   word2vecid.clear();
   vecid2word.clear();
   NWE.reset();
@@ -434,7 +447,7 @@ static int read_seed_set(const char *a_fname) {
   std::cerr << "Reading seed set file ...";
 
   std::ifstream is(a_fname);
-  if (! is) {
+  if (!is) {
     std::cerr << "Cannot open file " << a_fname << std::endl;
     goto error_exit;
   }
@@ -451,29 +464,35 @@ static int read_seed_set(const char *a_fname) {
     tab_pos_orig = tab_pos;
     // skip leading whitespaces
     while (iline[++tab_pos] && std::isspace(iline[tab_pos])) {}
-    if (tab_pos == std::string::npos || ! iline[tab_pos]) {
-      std::cerr << "Incorrect line format (missing polarity): " << iline << std::endl;
+    if (tab_pos == std::string::npos || !iline[tab_pos]) {
+      std::cerr << "Incorrect line format (missing polarity): "
+                << iline << std::endl;
       goto error_exit;
     }
     // determine polarity class
-    if (iline.compare(tab_pos, positive.length(), positive) == 0)
+    if (iline.compare(tab_pos, strlen(positive), positive) == 0)
       ipol = Polarity::POSITIVE;
-    else if (iline.compare(tab_pos, negative.length(), negative) == 0)
+    else if (iline.compare(tab_pos, strlen(negative), negative) == 0)
       ipol = Polarity::NEGATIVE;
-    else if (iline.compare(tab_pos, neutral.length(), neutral) == 0)
+    else if (iline.compare(tab_pos, strlen(neutral), neutral) == 0)
       ipol = Polarity::NEUTRAL;
     else {
-      std::cerr << "Unrecognized polarity class at line '" << iline.substr(tab_pos) << "'" << std::endl;
+      std::cerr << "Unrecognized polarity class at line '"
+                << iline.substr(tab_pos) << "'" << std::endl;
       goto error_exit;
     }
 
-    while (tab_pos_orig > 0 && std::isspace(iline[tab_pos_orig])) {--tab_pos_orig;}
+    while (tab_pos_orig > 0
+           && std::isspace(iline[tab_pos_orig])) {--tab_pos_orig;}
     if (tab_pos_orig == 0 && std::isspace(iline[tab_pos_orig])) {
-      std::cerr << "Incorrect line format (missing word): " << iline << std::endl;
+      std::cerr << "Incorrect line format (missing word): "
+                << iline << std::endl;
       goto error_exit;
     }
     ++tab_pos_orig;
-    word2pol.emplace(std::move(iline.substr(0, tab_pos_orig)), std::move(ipol));
+    word2polscore.emplace(
+        std::move(iline.substr(0, tab_pos_orig)),
+        std::make_pair(ipol, MAX_DIST));
   }
 
   if (!is.eof() && is.fail()) {
@@ -481,12 +500,13 @@ static int read_seed_set(const char *a_fname) {
     goto error_exit;
   }
   is.close();
-  std::cerr << "done (read " << word2pol.size() << " entries)" << std::endl;
+  std::cerr << "done (read " << word2polscore.size() << " entries)"
+            << std::endl;
   return 0;
 
  error_exit:
-  is.close();		// basic guarantee
-  word2pol.clear();
+  is.close();        // basic guarantee
+  word2polscore.clear();
   return 1;
 }
 
@@ -530,18 +550,18 @@ int main(int argc, char *argv[]) {
 
   // generate mapping from vector ids to the polarities of respective
   // words
-  v2p_t vecid2pol;
+  v2ps_t vecid2polscore;
   int seed_cnt = 0;
   w2v_t::const_iterator vecid, vecend = word2vecid.end();
-  for (auto &w2p: word2pol) {
-    if (w2p.second != Polarity::NEUTRAL)
+  for (auto &w2p : word2polscore) {
+    if (w2p.second.first != Polarity::NEUTRAL)
       ++seed_cnt;
 
     vecid = word2vecid.find(w2p.first);
     if (vecid == vecend)
       continue;
 
-    vecid2pol.emplace(vecid->second, w2p.second);
+    vecid2polscore.emplace(vecid->second, w2p.second);
   }
 
   if (opt.n_terms > 0) {
@@ -553,22 +573,24 @@ int main(int argc, char *argv[]) {
   // apply the requested expansion algorithm
   switch (opt.etype) {
   case ExpansionType::NC_CLUSTERING:
-    expand_nearest_centroids(&vecid2pol, &NWE, opt.n_terms);
+    expand_nearest_centroids(&vecid2polscore, &NWE, opt.n_terms);
     break;
   case ExpansionType::KNN_CLUSTERING:
-    expand_knn(&vecid2pol, &NWE, opt.n_terms, opt.knn);
+    expand_knn(&vecid2polscore, &NWE, opt.n_terms, opt.knn);
     break;
   case ExpansionType::PCA_CLUSTERING:
-    expand_pca(&vecid2pol, &NWE, opt.n_terms);
+    expand_pca(&vecid2polscore, &NWE, opt.n_terms);
     break;
   case ExpansionType::PRJ_CLUSTERING:
-    expand_prjct(&vecid2pol, &NWE, opt.n_terms, opt.alpha, opt.delta, opt.max_iters);
+    expand_prjct(&vecid2polscore, &NWE, opt.n_terms,
+                 opt.alpha, opt.delta, opt.max_iters);
     break;
   default:
-    throw std::invalid_argument("Invalid type of seed set expansion algorithm.");
+    throw std::invalid_argument("Invalid type of seed set"
+                                " expansion algorithm.");
   }
   // output new terms in sorted alphabetic order
  print_steps:
-  output_terms(std::cout, &vecid2pol);
+  output_terms(std::cout, &vecid2polscore);
   return ret;
 }
