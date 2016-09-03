@@ -89,7 +89,7 @@ corpus data:
 ```shell
 
 ./scripts/evaluate.py -l data/form2lemma.txt \
-	data/es/esuli_sebastiani_tlg_seedset.txt \
+	data/results/esuli-sebastiani/esuli-sebastiani.ext-syn-rels.turney-littman-seedset.txt \
 	${PATH_TO_PotTS}/corpus/basedata/ ${PATH_TO_PotTS}/corpus/annotator-2/markables/
 
 ```
