@@ -15,7 +15,6 @@
 //////////////
 #include <armadillo>      // arma::mat
 #include <forward_list>   // std::forward_list
-#include <limits>         // std::numeric_limits
 #include <string>         // std::string
 #include <unordered_map>  // std::unordered_map
 #include <utility>        // std::pair
@@ -39,7 +38,6 @@ char {
 
 /** Integral type for distance measure */
 using dist_t = double;
-const dist_t MAX_DIST = std::numeric_limits<double>::max();
 
 /** Integral type for vector id */
 using vid_t = unsigned int;

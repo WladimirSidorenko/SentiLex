@@ -13,7 +13,7 @@
 #include "src/vec2dic/optparse.h"
 
 #include <clocale>        // setlocale()
-#include <cmath>          // sqrt()
+#include <cmath>          // sqrt(), fabs()
 #include <cstdio>         // sscanf()
 #include <cstdlib>        // std::exit(), std::strtoul()
 #include <cstring>        // strcmp(), strlen()
@@ -129,12 +129,12 @@ typedef struct WP {
   /// copy constructor
   WP(const char *a_word, const Polarity a_polarity,
      dist_t a_score):
-      m_word(a_word), m_polarity(a_polarity), m_score(a_score)
+    m_word(a_word), m_polarity(a_polarity), m_score(fabs(a_score))
   {}
 
   /// copy constructor
   WP(const char *a_word, const ps_t *a_ps):
-      m_word(a_word), m_polarity(a_ps->first), m_score(a_ps->second)
+    m_word(a_word), m_polarity(a_ps->first), m_score(fabs(a_ps->second))
   {}
 } wp_t;
 
@@ -234,21 +234,19 @@ static void output_terms(std::ostream &a_stream,
   }
   // sort words
   std::sort(wpv.begin(), wpv.end(), [](const wp_t& wp1, const wp_t& wp2) \
-        {return strcmp(wp1.m_word, wp2.m_word) < 0;});
+            {return wp1.m_score < wp2.m_score;});
 
   // output sorted dict to the requested stream
   for (auto &wp : wpv) {
-    a_stream << wp.m_word << '\t';
     switch (wp.m_polarity) {
       case Polarity::POSITIVE:
-    a_stream << positive;
-    break;
+        a_stream << wp.m_word << '\t' << positive;
+        break;
       case Polarity::NEGATIVE:
-    a_stream << negative;
-    break;
+        a_stream << wp.m_word << '\t' << negative;
+        break;
       case Polarity::NEUTRAL:
-    a_stream << neutral;
-    break;
+        continue;
     default:
       throw std::domain_error("Unknown polarity type");
     }
@@ -263,8 +261,10 @@ static void output_terms(std::ostream &a_stream,
  *
  * @return reference to the original string with leading blanks truncated
  */
-static inline std::string &ltrim(std::string &s) {
-  s.erase(s.begin(), std::find_if(s.begin(), s.end(), std::not1(std::ptr_fun<int, int>(std::isspace))));
+static inline std::string *ltrim(std::string *s) {
+  s->erase(s->begin(),
+           std::find_if(s->begin(), s->end(),
+                        std::not1(std::ptr_fun<int, int>(std::isspace))));
   return s;
 }
 
@@ -275,8 +275,10 @@ static inline std::string &ltrim(std::string &s) {
  *
  * @return reference to the original string with trailing blanks truncated
  */
-static inline std::string &rtrim(std::string &s) {
-  s.erase(std::find_if(s.rbegin(), s.rend(), std::not1(std::ptr_fun<int, int>(std::isspace))).base(), s.end());
+static inline std::string *rtrim(std::string *s) {
+  s->erase(std::find_if(s->rbegin(), s->rend(),
+                        std::not1(std::ptr_fun<int, int>(std::isspace))).base(),
+           s->end());
   return s;
 }
 
@@ -287,11 +289,11 @@ static inline std::string &rtrim(std::string &s) {
  *
  * @return original string with leading and trailing blanks removed
  */
-static inline std::string &normalize(std::string &s) {
+static inline std::string *normalize(std::string *s) {
   // strip leading and trailing whitespaces
   ltrim(rtrim(s));
   // downcase the string
-  std::transform(s.begin(), s.end(), s.begin(), ::tolower);;
+  std::transform(s->begin(), s->end(), s->begin(), ::tolower);;
   return s;
 }
 
@@ -454,11 +456,11 @@ static int read_seed_set(const char *a_fname) {
 
   // read input file
   while (std::getline(is, iline)) {
-    if (iline.empty())
+    if (iline.empty() || iline.compare(0, 3, "###") == 0)
       continue;
 
     // remove leading and trailing whitespaces
-    normalize(iline);
+    normalize(&iline);
     // find first tab character
     tab_pos = iline.find_first_of('\t');
     tab_pos_orig = tab_pos;
@@ -492,7 +494,7 @@ static int read_seed_set(const char *a_fname) {
     ++tab_pos_orig;
     word2polscore.emplace(
         std::move(iline.substr(0, tab_pos_orig)),
-        std::make_pair(ipol, MAX_DIST));
+        std::make_pair(ipol, 0.));
   }
 
   if (!is.eof() && is.fail()) {
@@ -529,10 +531,11 @@ int main(int argc, char *argv[]) {
   setlocale(LC_ALL, NULL);
 
   Option opt {};
-  int argused = 1 + opt.parse(&argv[1], argc-1); // Skip argv[0].
+  int argused = 1 + opt.parse(&argv[1], argc-1);  // Skip argv[0].
 
   if ((nargs = argc - argused) != 2) {
-    std::cerr << "Incorrect number of arguments " << nargs << " (2 arguments expected).  " \
+    std::cerr << "Incorrect number of arguments "
+              << nargs << " (2 arguments expected).  "  \
       "Type --help to see usage." << std::endl;
     std::exit(EXIT_FAILURE);
   }

@@ -41,6 +41,9 @@ using vpd_t = struct VPD {
     m_distance{a_distance}, m_polarity{a_polarity}, m_vecid{a_vecid}
   {}
 
+  // be careful with this operator as it only makes sense for sorting
+  // centroid vectors (since vectors that are closer to centroids will
+  // be at the beginning of the list)
   bool operator <(const VPD& rhs) const {
     return m_distance < rhs.m_distance;
   }
