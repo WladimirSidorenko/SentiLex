@@ -132,6 +132,7 @@ def read_file(a_lexicon, a_fname, a_insert, a_enc=ENCODING):
 
     @return \c void
     """
+    prfx = ""
     fields = item1 = item2 = None
     with codecs.open(a_fname, 'r', a_enc) as ifile:
         for iline in ifile:
@@ -140,9 +141,15 @@ def read_file(a_lexicon, a_fname, a_insert, a_enc=ENCODING):
             if not iline:
                 continue
             iline.lower()
-            print("iline =", repr(iline), file=sys.stderr)
             try:
+                if prfx:
+                    iline = prfx + iline
+                    prfx = ""
                 fields = TAB_RE.split(iline)
+                # to account for the '' symbol
+                if len(fields) < 2:
+                    prfx = prfx + iline
+                    continue
                 item1, item2 = fields[:2]
             except ValueError:
                 print(
