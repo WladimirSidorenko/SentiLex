@@ -132,7 +132,7 @@ def read_file(a_lexicon, a_fname, a_insert, a_enc=ENCODING):
 
     @return \c void
     """
-    item1 = item2 = None
+    fields = item1 = item2 = None
     with codecs.open(a_fname, 'r', a_enc) as ifile:
         for iline in ifile:
             iline = COMMENT_RE.sub("", iline)
@@ -140,11 +140,14 @@ def read_file(a_lexicon, a_fname, a_insert, a_enc=ENCODING):
             if not iline:
                 continue
             iline.lower()
+            print("iline =", repr(iline), file=sys.stderr)
             try:
-                item1, item2 = TAB_RE.split(iline)
+                fields = TAB_RE.split(iline)
+                item1, item2 = fields[:2]
             except ValueError:
                 print(
-                    "Invalid line format: '{:s}'".format(iline).encode(a_enc),
+                    "Invalid line format: '{:s}' ({:s})".format(
+                        iline, repr(fields)).encode(a_enc),
                     file=sys.stderr)
                 raise
             a_insert(a_lexicon, item1, item2)
