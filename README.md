@@ -20,6 +20,21 @@ data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0
 
 ```
 
+### Takamura et al. (2005)
+
+To generate a sentiment lexicon using the method of [Takamura et
+al. (2005)](http://delivery.acm.org/10.1145/1220000/1219857/p133-takamura.pdf?ip=77.179.90.234&id=1219857&acc=OPEN&key=4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E4D4702B0C3E38B35%2E6D218144511F3437&CFID=830128042&CFTOKEN=27668650&__acm__=1472910085_b90c7157c9757c8c7e7ccacc73a39bb5),
+you should use the following command (note that the file
+`data/corpus/cc.txt` is not included in this repository due to its big
+size):
+
+```shell
+
+./scripts/generate_lexicon.py takamura --plot=png \
+    data/seeds/turney_littman_2003.txt data/GermaNet_v9.0/ data/corpus/cc.txt -1
+
+```
+
 ### Esuli and Sebastiani (2006)
 
 For generating a sentiment lexicon using the `SentiWordNet` method of
@@ -36,9 +51,8 @@ data/seeds/turney_littman_gi_seedset.txt data/GermaNet_v9.0
 
 ### Blair-Goldensohn (2008)
 
-For generating a sentiment lexicon using the method of
-[Blair-Goldensohn et
-al. (2008)](http://www.australianscience.com.au/research/google/34368.pdf),
+To generate a sentiment lexicon using the method of
+[Blair-Goldensohn et al. (2008)](http://www.australianscience.com.au/research/google/34368.pdf),
 use the following command:
 
 ```shell
