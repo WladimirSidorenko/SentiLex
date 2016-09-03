@@ -240,10 +240,10 @@ static void output_terms(std::ostream &a_stream,
   for (auto &wp : wpv) {
     switch (wp.m_polarity) {
       case Polarity::POSITIVE:
-        a_stream << wp.m_word << '\t' << positive;
+        a_stream << wp.m_word << '\t' << positive << '\t' << wp.m_score;
         break;
       case Polarity::NEGATIVE:
-        a_stream << wp.m_word << '\t' << negative;
+        a_stream << wp.m_word << '\t' << negative << '\t' << wp.m_score;
         break;
       case Polarity::NEUTRAL:
         continue;
