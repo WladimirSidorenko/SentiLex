@@ -134,7 +134,7 @@ def read_file(a_lexicon, a_fname, a_insert, a_enc=ENCODING):
     """
     prfx = ""
     fields = item1 = item2 = None
-    with codecs.open(a_fname, 'r', a_enc) as ifile:
+    with codecs.open(a_fname, 'r', a_enc, errors='replace') as ifile:
         for iline in ifile:
             iline = COMMENT_RE.sub("", iline)
             iline = iline.strip()
