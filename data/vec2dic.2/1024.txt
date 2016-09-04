@@ -1,3 +1,0 @@
-
-error: Mat::init(): out of memory
-
