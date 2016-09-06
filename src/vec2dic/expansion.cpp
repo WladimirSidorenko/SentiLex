@@ -863,7 +863,7 @@ static void _prjct_expand(v2ps_t *a_vecid2pol, const int a_N, \
     idist2mean = arma::norm(diff_vec, 2);
     ipol = (arma::dot(diff_vec, *a_prjline) > 0) == pos_is_right? \
       POS_VID: NEG_VID;
-    vpds.push_back(VPD {-fabs(idist2mean), ipol, i});
+    vpds.push_back(VPD {1000./idist2mean, ipol, i});
     ++j;
   }
   _add_terms(a_vecid2pol, &vpds, j, a_N);
