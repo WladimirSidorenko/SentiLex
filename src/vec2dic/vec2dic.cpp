@@ -12,6 +12,7 @@
 #include "src/vec2dic/expansion.h"
 #include "src/vec2dic/optparse.h"
 
+#include <cctype>         // std::isspace()
 #include <clocale>        // setlocale()
 #include <cmath>          // sqrt(), fabs()
 #include <cstdio>         // sscanf()
@@ -20,7 +21,6 @@
 
 #include <algorithm>
 #include <armadillo>      // arma::mat
-#include <cctype>         // std::isspace()
 #include <fstream>        // std::ifstream
 #include <functional>
 #include <iostream>       // std::cerr, std::cout

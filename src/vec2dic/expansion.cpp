@@ -1,13 +1,13 @@
 //////////////
 // Includes //
 //////////////
-#include "expansion.h"
+#include "src/vec2dic/expansion.h"
+
+#include <cassert>                      // assert
 
 #include <algorithm>                    // std::swap(), std::sort()
-#include <cassert>                      // assert
 #include <cmath>                        // sqrt(), fabs()
 #include <cstdlib>                      // size_t
-#include <cstdint>                      // uint64_t
 #include <iostream>                     // std::cerr
 #include <unordered_set>                // std::unordered_set
 #include <queue>                        // std::priority_queue
@@ -80,13 +80,14 @@ using pol_stat_t = struct {
 ///////////////
 // Constants //
 ///////////////
+const double DFLT_ALPHA = 1e-5;
+const double DFLT_DELTA = 1e-10;
+const int MAX_ITERS = 1e6;
+
 const vid_t POS_VID = static_cast<vid_t>(Polarity::POSITIVE);
 const vid_t NEG_VID = static_cast<vid_t>(Polarity::NEGATIVE);
 const vid_t NEUT_VID = static_cast<vid_t>(Polarity::NEUTRAL);
-
-const double DFLT_ALPHA = 1e-5;
-const double DFLT_DELTA = 1e-10;
-const uint64_t MAX_ITERS = 1e10;
+const pol_t NEUT_POL = static_cast<pol_t>(Polarity::NEUTRAL);
 
 /////////////
 // Methods //
@@ -138,7 +139,7 @@ static inline dist_t _unnorm_eucl_distance(const dist_t *a_vec1,
 }
 
 /**
- * Add newly extracted terms to the polarity lexicon
+ * Add newly extracted terms to the polarity lexicon.
  *
  * @param a_vecid2pol - target dictionary mapping vector id's to polarities
  * @param a_vpds - source vector of NWE ids, their polarities, and distances
@@ -148,22 +149,29 @@ static inline dist_t _unnorm_eucl_distance(const dist_t *a_vec1,
  * @return \c void
  */
 static inline void _add_terms(v2ps_t *a_vecid2pol,
-                              vpd_v_t *a_vpds, const int a_j, const int a_N) {
+                              vpd_v_t *a_vpds,
+                              const int a_j, const int a_N) {
   // sort vpds according to their distances to the centroids
   std::sort(a_vpds->begin(), a_vpds->end());
   // add new terms to the dictionary
   vpd_t *ivpd;
-  for (int i = 0; (a_N < 0 || i < a_N) && i < a_j; ++i) {
+  // `i' is the actual number of added terms and `j' is the total
+  // counter
+  for (int i = 0, j = 0; (a_N < 0 || i < a_N) && j < a_j; ++j) {
     ivpd = &(*a_vpds)[i];
+    if (ivpd->m_polarity == NEUT_POL)
+      continue;
+
     a_vecid2pol->emplace(ivpd->m_vecid,
                          std::make_pair(
                                         static_cast<Polarity>(ivpd->m_polarity),
                                         ivpd->m_distance));
+    ++i;
   }
 }
 
 /**
- * Find cluster whose centroid is nearest to the given word vector
+ * Find cluster whose centroid is nearest to the given word vector.
  *
  * @param a_centroids - matrix of pre-computed cluster centroids
  * @param a_vec - word vector whose nearest cluster should be found
@@ -323,6 +331,8 @@ static void _nc_expand(v2ps_t *a_vecid2pol, const arma::mat *const a_centroids,
     // obtain polarity class and minimum distance to the nearest
     // centroid
     ipol = _nc_find_cluster(a_centroids, a_nwe->colptr(i), &idist);
+    if (ipol == NEUT_POL)
+      continue;
 
     // add new element to the vector
     vpds.push_back(VPD {idist, ipol, i});
@@ -450,7 +460,7 @@ static void _knn_add(vpd_t *a_vpd, const vid_t a_vid,
     a_knn->pop();
   }
 
-   dist_t idistance, maxdistance = 0.;
+  dist_t idistance, maxdistance = 0.;
   pol_t pol = 0, maxpol = static_cast<pol_t>(Polarity::MAX_SENTINEL);
   for (pol_t ipol = 0; ipol < maxpol; ++ipol) {
     if ((*a_workbench)[ipol].m_distance == 0)
@@ -729,8 +739,8 @@ void expand_pca(v2ps_t *a_vecid2polscore,
 }
 
 
-static arma::colvec _project_vec(const arma::colvec& a_src_vec, \
-                   const arma::colvec& a_prjline) {
+static arma::colvec _project_vec(const arma::colvec &a_src_vec, \
+                   const arma::colvec &a_prjline) {
   // we assume that `a_prjline` is normalized
   return arma::dot(a_src_vec, a_prjline) * a_prjline;
 }
@@ -767,8 +777,9 @@ static inline dist_t _compute_distance(arma::mat *a_pos_prjctd, \
   for (size_t pos_i = 0; pos_i < a_pos_prjctd->n_cols; ++pos_i) {
     for (neg_j = 0; neg_j < a_neg_prjctd->n_cols; ++neg_j) {
       // it's not mathematically correct as we don't compute the
-      // Euclidean length of the difference vector, but it correspons
-      dist += arma::sum(arma::square(a_pos_prjctd->col(pos_i) - a_neg_prjctd->col(neg_j)));
+      // Euclidean length of the difference vector, but it corresponds
+      dist += arma::sum(arma::square(a_pos_prjctd->col(pos_i)
+                                     - a_neg_prjctd->col(neg_j)));
     }
   }
   return dist;
@@ -809,7 +820,7 @@ static void _compute_prj_gradient(arma::colvec *a_gradient,
 
 /**
  * Expand polarity sets by adding terms that are farthermost spread on
- * the projection line
+ * the projection line.
  *
  * @param a_vecid2pol - mapping from vector id's to polarities
  * @param a_nwe - original matrix of neural-word embeddings
@@ -824,25 +835,25 @@ static void _prjct_expand(v2ps_t *a_vecid2pol, const int a_N, \
   // distances to the boundaries
   vpd_v_t vpds;
   vpds.reserve(a_nwe->n_cols - a_vecid2pol->size());
-  // compute mean of projected positive vectors
+  // compute the mean of the projected positive vectors
   arma::colvec pos_mean = arma::sum(*pos_prjctd, 1) / pos_prjctd->n_cols;
-  // compute mean of projected negative vectors
+  // compute the mean of the projected negative vectors
   arma::colvec neg_mean = arma::sum(*neg_prjctd, 1) / neg_prjctd->n_cols;
-  // compute median of the projection line
+  // compute the median of the projection line
   arma::colvec median = (pos_mean - neg_mean) / 2;
   // find the light side of the force (determine whether projection
   // line points to the positive mean or in the opposite direction)
   bool pos_is_right = arma::dot(pos_mean - median, *a_prjline) > 0;
+  assert(pos_is_right != (arma::dot(neg_mean - median, *a_prjline) > 0));
   // project each vector with unknown polarity onto the projection
   pol_t ipol;
   size_t j{0};
   dist_t idist2mean;
   vid_t nvecs{a_nwe->n_cols};
   arma::colvec diff_vec(a_nwe->n_rows), vprjctd(a_nwe->n_rows);
-  v2ps_t::const_iterator v_not_found = a_vecid2pol->end();
   for (vid_t i = 0; i < nvecs; ++i) {
     // skip vectors whose polarity is already known
-    if (a_vecid2pol->find(i) != v_not_found)
+    if (a_vecid2pol->find(i) != a_vecid2pol->end())
       continue;
 
     // project vector onto the polarity line
@@ -852,7 +863,7 @@ static void _prjct_expand(v2ps_t *a_vecid2pol, const int a_N, \
     idist2mean = arma::norm(diff_vec, 2);
     ipol = (arma::dot(diff_vec, *a_prjline) > 0) == pos_is_right? \
       POS_VID: NEG_VID;
-    vpds.push_back(VPD {idist2mean, ipol, i});
+    vpds.push_back(VPD {-fabs(idist2mean), ipol, i});
     ++j;
   }
   _add_terms(a_vecid2pol, &vpds, j, a_N);
@@ -860,7 +871,7 @@ static void _prjct_expand(v2ps_t *a_vecid2pol, const int a_N, \
 
 void expand_prjct(v2ps_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N,
                   const double a_alpha, const dist_t a_delta,
-                  const unsigned long a_max_iters) {
+                  const int a_max_iters) {
   // estimate the number of known positive and negative vectors
   size_t n_pos = 0, n_neg = 0;
   vid_flist_t pos_ids, neg_ids;
@@ -881,14 +892,13 @@ void expand_prjct(v2ps_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N,
   arma::colvec prjline(a_nwe->n_rows), update(a_nwe->n_rows);
   prjline.fill(1.);
 
-  // successively improve projection line
-  unsigned long i = 0;
-  // nothing special, just to make sure that we'll enter the loop
+  // nothing special, just make sure that we'll enter the loop
+  int i = 0;
   dist_t dist = 0, prev_dist = 0;
   // run iteration until convergence criteria are met
-  while (i < a_max_iters) {
+  for (; i < a_max_iters; ++i) {
     prev_dist = dist;
-    // normalize length of projection line
+    // normalize the length of the projection line
     prjline /= arma::norm(prjline, 2);
     // project points with known polarities onto the projection line
     _project(&pos_prjctd, &neg_prjctd, a_nwe, a_vecid2pol, &prjline);
@@ -900,6 +910,13 @@ void expand_prjct(v2ps_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N,
     _compute_prj_gradient(&update, &pos_ids, &neg_ids, a_nwe, &prjline);
     prjline += a_alpha * update;
     ++i;
+  }
+  // normalize the length of the projection line the last time
+  if (i == a_max_iters) {
+    // normalize the length of the projection line
+    prjline /= arma::norm(prjline, 2);
+    // project points with known polarities onto the projection line
+    _project(&pos_prjctd, &neg_prjctd, a_nwe, a_vecid2pol, &prjline);
   }
   _prjct_expand(a_vecid2pol, a_N, a_nwe, &pos_prjctd, &neg_prjctd, &prjline);
 }

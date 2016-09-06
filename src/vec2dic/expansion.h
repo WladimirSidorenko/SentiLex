@@ -70,7 +70,7 @@ extern const double DFLT_ALPHA;
 extern const double DFLT_DELTA;
 
 /** Maximum number of gradient updates */
-extern const unsigned long MAX_ITERS;
+extern const int MAX_ITERS;
 
 /////////////
 // Methods //
@@ -143,6 +143,6 @@ void expand_prjct(v2ps_t *a_vecid2polscore,
                   const arma::mat *a_nwe, const int a_N,
                   const double a_alpha = DFLT_ALPHA,
                   const double a_delta = DFLT_DELTA,
-                  const unsigned long a_max_iters = MAX_ITERS);
+                  const int a_max_iters = MAX_ITERS);
 
 #endif    // VEC2DIC_EXPANSION_H_
