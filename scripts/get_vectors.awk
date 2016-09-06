@@ -18,17 +18,22 @@ BEGIN {
 	    printf("Incorrect line format: %s", $0) > "/sys/stderr"
 	    exit 2
 	}
+        $1 = lower($1)
+        if ($1 in WORD2SEEK)
+          continue
+
 	WORD2SEEK[$1] = ""
+        ++w_cnt
     }
     ARGV[1] = ARGV[2] = ""
     # obtain random line numbers to fetch
     srand()
-    wcl = WCL - 1
+    wcl = WCL > 1? WCL - 1: 0
     for (i = 1; i < WCL; ++i) {
 	randarr[i] = rand() * wcl + 1
     }
     asorti(randarr, tmparr)
-    wcl = WCL / 1000
+    wcl = WCL / 500
     for (i = 1; i < wcl; ++i) {
 	FNR2SEEK[tmparr[i]] = ""
     }
