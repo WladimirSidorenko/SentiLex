@@ -6,7 +6,7 @@
 #include <cassert>                      // assert
 
 #include <algorithm>                    // std::swap(), std::sort()
-#include <cmath>                        // sqrt(), fabs()
+#include <cmath>                        // sqrt()
 #include <cstdlib>                      // size_t
 #include <iostream>                     // std::cerr
 #include <unordered_set>                // std::unordered_set
@@ -703,7 +703,7 @@ static void _pca_expand(v2ps_t *a_vecid2pol, const arma::mat *a_pca_nwe, \
     } else {
       continue;
     }
-    vpds.push_back(VPD {-fabs(idist), ipol, i});
+    vpds.push_back(VPD {1000./idist2mean, ipol, i});
     ++j;
   }
   _add_terms(a_vecid2pol, &vpds, j, a_N);
