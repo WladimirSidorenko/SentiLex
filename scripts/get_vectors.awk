@@ -14,11 +14,11 @@ BEGIN {
     while ((ret = (getline < ifile)) > 0) {
 	if (!NF)
 	    continue
-	else if (NF != 2) {
-	    printf("Incorrect line format: %s", $0) > "/sys/stderr"
-	    exit 2
-	}
-        $1 = lower($1)
+	# else if (NF != 2) {
+	#     printf("Incorrect line format: %s", $0) > "/sys/stderr"
+	#     exit 2
+	# }
+        $1 = tolower($1)
         if ($1 in WORD2SEEK)
           continue
 
