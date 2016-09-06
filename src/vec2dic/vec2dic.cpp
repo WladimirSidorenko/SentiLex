@@ -38,11 +38,11 @@
  * Type of algorithm to use for lexicon expansion.
  */
 enum class ExpansionType: int {
-  NC_CLUSTERING = 0,        // Nearest centroids algorithm
-    KNN_CLUSTERING,        // K-nearest neighbors
-    PCA_CLUSTERING,        // Proincipal component analysis
-    PRJ_CLUSTERING,        // Projection-based clustering
-    MAX_SENTINEL        // Unused type that serves as a sentinel
+  NC_CLUSTERING = 0,          // Nearest centroids algorithm
+    KNN_CLUSTERING,           // K-nearest neighbors
+    PCA_CLUSTERING,           // Proincipal component analysis
+    PRJ_CLUSTERING,           // Projection-based clustering
+    MAX_SENTINEL              // Unused type that serves as a sentinel
     };
 
 // forward declaration of `usage()` method
@@ -336,12 +336,11 @@ static void _mean_normalize(arma::mat *a_nwe) {
 
   for (vid_t i = 0; i < vmean.n_rows; ++i) {
     a_nwe->row(i) -= vmean[i];
-
   }
 }
 
 /**
- * Read NWE vectors for word terms
+ * Read NWE vectors for words.
  *
  * @param a_ret - exit code for the program
  * @param a_option - pointer to user's options
@@ -361,7 +360,7 @@ static int read_vectors(const char *a_fname, const Option *a_option) {
   std::cerr << "Reading word vectors ... ";
 
   std::ifstream is(a_fname);
-  if (! is) {
+  if (!is) {
     std::cerr << "Cannot open file " << a_fname << std::endl;
     goto error_exit;
   }
@@ -369,7 +368,8 @@ static int read_vectors(const char *a_fname, const Option *a_option) {
   while (std::getline(is, iline) && iline.empty()) {}
   // initialize matrix (columns represent words, rows are coordinates)
   if (sscanf(iline.c_str(), "%u %u", &ncolumns, &mrows) != 2) {
-    std::cerr << "Incorrect declaration line format: '" << iline.c_str() << std::endl;
+    std::cerr << "Incorrect declaration line format: '"
+              << iline.c_str() << std::endl;
     goto error_exit;
   }
 
@@ -380,8 +380,9 @@ static int read_vectors(const char *a_fname, const Option *a_option) {
   while (icol < ncolumns && std::getline(is, iline)) {
     space_pos = iline.find_first_of(' ');
     while (space_pos > 0 && std::isspace(iline[space_pos])) {--space_pos;}
-    if (space_pos == 0  && std::isspace(iline[space_pos])) {
-      std::cerr << "Incorrect line format (missing word): " << iline << std::endl;
+    if (space_pos == 0 && std::isspace(iline[space_pos])) {
+      std::cerr << "Incorrect line format (missing word): "
+                << iline << std::endl;
       goto error_exit;
     }
     ++space_pos;
@@ -389,13 +390,15 @@ static int read_vectors(const char *a_fname, const Option *a_option) {
     vecid2word.emplace(std::move(icol), std::move(iline.substr(0, space_pos)));
 
     cline = &(iline.c_str()[space_pos]);
-    for (irow = 0; irow < mrows && sscanf(cline, " %f%n", &iwght, &nchars) == 1; ++irow) {
+    for (irow = 0; irow < mrows
+           && sscanf(cline, " %f%n", &iwght, &nchars) == 1; ++irow) {
       NWE(irow, icol) = iwght;
       cline += nchars;
     }
     if (irow != mrows) {
-      std::cerr << "Incorrect line format: '" << iline << " :declared vector size " << mrows << \
-    " differs from the actual size " << irow << std::endl;
+      std::cerr << "Incorrect line format: '"
+                << iline << " :declared vector size " << mrows
+                << " differs from the actual size " << irow << std::endl;
       goto error_exit;
     }
     ++icol;
@@ -406,8 +409,9 @@ static int read_vectors(const char *a_fname, const Option *a_option) {
     goto error_exit;
   }
   if (icol != ncolumns) {
-    std::cerr << "Incorrect file format: declared number of vectors " << ncolumns << \
-      " differs from the actual number " << icol << std::endl;
+    std::cerr << "Incorrect file format: declared number of vectors "
+              << ncolumns << " differs from the actual number "
+              << icol << std::endl;
     goto error_exit;
   }
   is.close();
@@ -423,7 +427,8 @@ static int read_vectors(const char *a_fname, const Option *a_option) {
   if (!no_mean_normalize)
     _mean_normalize(&NWE);
 
-  std::cerr << "done (read " << mrows << " rows with " << ncolumns << " columns)" << std::endl;
+  std::cerr << "done (read " << mrows << " rows with "
+            << ncolumns << " columns)" << std::endl;
   return 0;
 
  error_exit:
@@ -472,13 +477,13 @@ static int read_seed_set(const char *a_fname) {
       goto error_exit;
     }
     // determine polarity class
-    if (iline.compare(tab_pos, strlen(positive), positive) == 0)
+    if (iline.compare(tab_pos, strlen(positive), positive) == 0) {
       ipol = Polarity::POSITIVE;
-    else if (iline.compare(tab_pos, strlen(negative), negative) == 0)
+    } else if (iline.compare(tab_pos, strlen(negative), negative) == 0) {
       ipol = Polarity::NEGATIVE;
-    else if (iline.compare(tab_pos, strlen(neutral), neutral) == 0)
+    } else if (iline.compare(tab_pos, strlen(neutral), neutral) == 0) {
       ipol = Polarity::NEUTRAL;
-    else {
+    } else {
       std::cerr << "Unrecognized polarity class at line '"
                 << iline.substr(tab_pos) << "'" << std::endl;
       goto error_exit;

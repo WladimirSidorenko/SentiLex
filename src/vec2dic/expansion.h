@@ -1,6 +1,7 @@
 /** @file expansion.h
  *
- *  @brief Methods for generating sentiment lexicons from neural word embeddings.
+ *  @brief methods for generating sentiment lexicons from neural word
+ *  embeddings.
  *
  *  This file declares several methods for generating sentiment
  *  lexicons on the basis of previously computed neural word
@@ -15,6 +16,7 @@
 //////////////
 #include <armadillo>      // arma::mat
 #include <forward_list>   // std::forward_list
+#include <limits>         // std::numeric_limits
 #include <string>         // std::string
 #include <unordered_map>  // std::unordered_map
 #include <utility>        // std::pair
@@ -38,6 +40,7 @@ char {
 
 /** Integral type for distance measure */
 using dist_t = double;
+const dist_t MAX_DIST = std::numeric_limits<dist_t>::max();
 
 /** Integral type for vector id */
 using vid_t = unsigned int;

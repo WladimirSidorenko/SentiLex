@@ -57,7 +57,7 @@ using vpd_v_t = std::vector<vpd_t>;
     distctance to the centroid */
 using vpd_pq_t = std::priority_queue<vpd_t>;
 
-/** struct comprising means and standard deviations of polarity  */
+/** struct comprising means and variances of polarity vectors  */
 using pol_stat_t = struct {
   vid_t m_dim = 0;        // dimension with the longest distance
                 // between vectors pertaining to
@@ -65,16 +65,16 @@ using pol_stat_t = struct {
 
   size_t m_n_pos = 0;        // number of positive vectors
   dist_t m_pos_mean = 0.;    // mean of positive vectors
-  dist_t m_pos_dev = 0.;    // deviation of positive vectors along
-                // the given dimension
+  dist_t m_pos_var = 0.;     // variance of positive vectors along
+                                        // the given dimension
   size_t m_n_neg = 0;        // number of negative vectors
   dist_t m_neg_mean = 0.;    // mean of negative vectors
-  dist_t m_neg_dev = 0.;    // deviation of negative vectors along
-                // the given dimension
+  dist_t m_neg_var = 0.;     // variance of negative vectors along
+                                        // the given dimension
   size_t m_n_neut = 0;        // number of neutral vectors
   dist_t m_neut_mean = 0.;    // mean of neutral vectors
-  dist_t m_neut_dev = 0.;    // deviation of neutral vectors along
-                // the given dimension
+  dist_t m_neut_var = 0.;     // variance of neutral vectors along
+                                        // the given dimension
 };
 
 ///////////////
@@ -392,8 +392,8 @@ static void _knn_find_nearest(vid_t a_vid,
                               const arma::mat *a_nwe,
                               const v2ps_t * const a_vecid2pol,
                               vpd_pq_t *a_knn, const int a_K) {
-  bool filled = false;
   int added = 0;
+  bool filled = false;
 
   // reset KNN vector
   while (!a_knn->empty()) {
@@ -424,7 +424,7 @@ static void _knn_find_nearest(vid_t a_vid,
 }
 
 /**
- * Compute most probable polarity class for given item from its K neighbors
+ * Compute most probable polarity class from K neighbors.
  *
  * @param a_vpd - element in which to store the result
  * @param a_vid - id of the vector in question
@@ -433,8 +433,8 @@ static void _knn_find_nearest(vid_t a_vid,
  *
  * @return \c void
  */
-static void _knn_add(vpd_t *a_vpd, const vid_t a_vid, vpd_pq_t *a_knn, \
-             vpd_v_t *a_workbench) {
+static void _knn_add(vpd_t *a_vpd, const vid_t a_vid,
+                     vpd_pq_t *a_knn, vpd_v_t *a_workbench) {
   // reset workbench
   for (auto& vpd : *a_workbench) {
     vpd.m_vecid = 0;        // will serve as neighbor counter
@@ -450,7 +450,7 @@ static void _knn_add(vpd_t *a_vpd, const vid_t a_vid, vpd_pq_t *a_knn, \
     a_knn->pop();
   }
 
-  dist_t idistance, maxdistance = 0.;
+   dist_t idistance, maxdistance = 0.;
   pol_t pol = 0, maxpol = static_cast<pol_t>(Polarity::MAX_SENTINEL);
   for (pol_t ipol = 0; ipol < maxpol; ++ipol) {
     if ((*a_workbench)[ipol].m_distance == 0)
@@ -485,8 +485,6 @@ void expand_knn(v2ps_t *a_vecid2pol,
 
   // iterate over each word vector and find k-nearest neigbors for it
   for (vid_t vid = 0; vid < a_nwe->n_cols; ++vid) {
-    a_vecid2pol->find(vid);
-
     // skip vector if its polarity is already known
     if (a_vecid2pol->find(vid) != v2p_end)
       continue;
@@ -499,7 +497,7 @@ void expand_knn(v2ps_t *a_vecid2pol,
 
 /**
  * Compute means of polarity vectors along dimension with the biggest
- * deviation
+ * deviation.
  *
  * @param a_vecid2pol - mapping from vector id's to polarities
  * @param a_prjctd - NWE matrix projected on the PCA space
@@ -508,15 +506,19 @@ void expand_knn(v2ps_t *a_vecid2pol,
  *
  * @return \c void
  */
-static void _pca_compute_means(const v2pi_t *a_vecid2polid, const arma::mat *a_prjctd, \
+static void _pca_compute_means(const v2pi_t *a_vecid2polid,
+                               const arma::mat *a_prjctd,
                    pol_stat_t *a_pol_stat) {
-  a_pol_stat->m_n_pos = 0; a_pol_stat->m_n_neg = 0; a_pol_stat->m_n_neut = 0;
+  a_pol_stat->m_n_pos = 0;
+  a_pol_stat->m_n_neg = 0;
+  a_pol_stat->m_n_neut = 0;
   /// means of polarity vectors
-  arma::mat pol_means(a_prjctd->n_cols, static_cast<size_t>(Polarity::MAX_SENTINEL));
+  arma::mat pol_means(a_prjctd->n_cols,
+                      static_cast<size_t>(Polarity::MAX_SENTINEL));
   pol_means.zeros();
 
   // obtain unnormalized means of polarity vectors
-  for (auto &v2p: *a_vecid2polid) {
+  for (auto &v2p : *a_vecid2polid) {
     switch (v2p.second) {
     case POS_VID:
       ++a_pol_stat->m_n_pos;
@@ -532,7 +534,7 @@ static void _pca_compute_means(const v2pi_t *a_vecid2polid, const arma::mat *a_p
   }
 
   // normalize means of polarity vectors
-  if (! a_pol_stat->m_n_pos || !a_pol_stat->m_n_neg)
+  if (!a_pol_stat->m_n_pos || !a_pol_stat->m_n_neg)
     return;
 
   pol_means.col(POS_VID) /= static_cast<double>(a_pol_stat->m_n_pos);
@@ -550,8 +552,9 @@ static void _pca_compute_means(const v2pi_t *a_vecid2polid, const arma::mat *a_p
   // the point in-between the positive and negative means
   arma::vec vdelta = pol_means.col(POS_VID) - pol_means.col(NEG_VID);
   if (a_pol_stat->m_n_neut)
-    vdelta = arma::abs(vdelta) -  arma::abs(pol_means.col(POS_VID) - vdelta / 2 - \
-                        pol_means.col(NEUT_VID));
+    vdelta = arma::abs(vdelta)
+      - arma::abs(pol_means.col(POS_VID)
+                  - vdelta / 2 - pol_means.col(NEUT_VID));
   else
     vdelta = arma::abs(vdelta);
 
@@ -567,8 +570,8 @@ static void _pca_compute_means(const v2pi_t *a_vecid2polid, const arma::mat *a_p
 }
 
 /**
- * Compute standard deviation of polarity vectors along the dimension
- * with the biggest distance between different classes
+ * Compute varianc of polarity vectors along the dimension with the
+ * biggest distance between different classes
  *
  * @param a_vecid2pol - mapping from vector id's to polarities
  * @param a_prjctd - NWE matrix projected on the PCA space
@@ -577,39 +580,40 @@ static void _pca_compute_means(const v2pi_t *a_vecid2polid, const arma::mat *a_p
  *
  * @return dimension with the maximal distance between polarity classes
  */
-static void _pca_compute_dev(const v2pi_t *a_vecid2polid, const arma::mat *a_prjctd, \
-                 pol_stat_t *a_pol_stat) {
-  // obtain unnormalized standard deviations of polarity vectors along
+static void _pca_compute_var(const v2pi_t *a_vecid2polid,
+                             const arma::mat *a_prjctd,
+                             pol_stat_t *a_pol_stat) {
+  // obtain unnormalized variances of polarity vectors along
   // the given dimension
   dist_t tmp_j;
-  a_pol_stat->m_pos_dev = 0.;
-  a_pol_stat->m_neg_dev = 0.;
-  a_pol_stat->m_neut_dev = 0.;
-  for (auto &v2p: *a_vecid2polid) {
+  a_pol_stat->m_pos_var = 0.;
+  a_pol_stat->m_neg_var = 0.;
+  a_pol_stat->m_neut_var = 0.;
+  for (auto &v2p : *a_vecid2polid) {
     tmp_j = (*a_prjctd)(v2p.first, a_pol_stat->m_dim);
 
     switch (v2p.second) {
     case POS_VID:
       tmp_j -= a_pol_stat->m_pos_mean;
-      a_pol_stat->m_pos_dev += tmp_j * tmp_j;
+      a_pol_stat->m_pos_var += tmp_j * tmp_j;
       break;
     case NEG_VID:
       tmp_j -= a_pol_stat->m_neg_mean;
-      a_pol_stat->m_neg_dev += tmp_j * tmp_j;
+      a_pol_stat->m_neg_var += tmp_j * tmp_j;
       break;
     default:
       tmp_j -= a_pol_stat->m_neut_mean;
-      a_pol_stat->m_neut_dev += tmp_j * tmp_j;
+      a_pol_stat->m_neut_var += tmp_j * tmp_j;
     }
   }
   if (a_pol_stat->m_n_pos)
-    a_pol_stat->m_pos_dev /= a_pol_stat->m_n_pos;
+    a_pol_stat->m_pos_var /= a_pol_stat->m_n_pos;
 
   if (a_pol_stat->m_n_neg)
-    a_pol_stat->m_pos_dev /= a_pol_stat->m_n_neg;
+    a_pol_stat->m_pos_var /= a_pol_stat->m_n_neg;
 
   if (a_pol_stat->m_n_neut)
-    a_pol_stat->m_pos_dev /= a_pol_stat->m_n_neut;
+    a_pol_stat->m_pos_var /= a_pol_stat->m_n_neut;
 }
 
 /**
@@ -623,12 +627,13 @@ static void _pca_compute_dev(const v2pi_t *a_vecid2polid, const arma::mat *a_prj
  *
  * @return \c void
  */
-static void _pca_compute_stat(const v2pi_t *a_vecid2polid, const arma::mat *a_prjctd, \
-                   pol_stat_t *a_pol_stat) {
+static void _pca_compute_stat(const v2pi_t *a_vecid2polid,
+                              const arma::mat *a_prjctd,
+                              pol_stat_t *a_pol_stat) {
   _pca_compute_means(a_vecid2polid, a_prjctd, a_pol_stat);
   std::cerr << "pca means computed" << std::endl;
-  _pca_compute_dev(a_vecid2polid, a_prjctd, a_pol_stat);
-  std::cerr << "pca stddev computed" << std::endl;
+  _pca_compute_var(a_vecid2polid, a_prjctd, a_pol_stat);
+  std::cerr << "pca variance computed" << std::endl;
 }
 
 /**
@@ -654,19 +659,20 @@ static void _pca_expand(v2ps_t *a_vecid2pol, const arma::mat *a_pca_nwe, \
   bool neg_is_greater = false;
   dist_t min = 0., max = 0.;
   if (a_pol_stat->m_neg_mean < a_pol_stat->m_pos_mean) {
-    min = a_pol_stat->m_neg_mean + a_pol_stat->m_neg_dev;
-    max = a_pol_stat->m_pos_mean - a_pol_stat->m_pos_dev;
+    min = a_pol_stat->m_neg_mean + a_pol_stat->m_neg_var;
+    max = a_pol_stat->m_pos_mean - a_pol_stat->m_pos_var;
   } else {
     neg_is_greater = true;
-    min = a_pol_stat->m_pos_mean + a_pol_stat->m_pos_dev;
-    max = a_pol_stat->m_neg_mean - a_pol_stat->m_neg_dev;
+    min = a_pol_stat->m_pos_mean + a_pol_stat->m_pos_var;
+    max = a_pol_stat->m_neg_mean - a_pol_stat->m_neg_var;
   }
 
   int j = 0;
   pol_t ipol;
   dist_t idim, idist;
   v2ps_t::const_iterator v2p_end = a_vecid2pol->end();
-  // populate
+  // populate (since we are sorting the terms in the ascending order
+  // of their distances, we use negative values here)
   for (vid_t i = 0; i < a_pca_nwe->n_rows; ++i) {
     if (a_vecid2pol->find(i) != v2p_end)
       continue;
@@ -676,44 +682,50 @@ static void _pca_expand(v2ps_t *a_vecid2pol, const arma::mat *a_pca_nwe, \
 
     if (idim < min) {
       if (neg_is_greater)
-    ipol = POS_VID;
+        ipol = POS_VID;
       else
-    ipol = NEG_VID;
+        ipol = NEG_VID;
     } else if (idim > max) {
       if (neg_is_greater)
-    ipol = NEG_VID;
+        ipol = NEG_VID;
       else
-    ipol = POS_VID;
+        ipol = POS_VID;
     } else {
-      ipol = NEUT_VID;
+      continue;
     }
-    vpds.push_back(VPD {fabs(idist), ipol, i});
+    vpds.push_back(VPD {-fabs(idist), ipol, i});
     ++j;
   }
   _add_terms(a_vecid2pol, &vpds, j, a_N);
 }
 
-void expand_pca(v2ps_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N) {
+void expand_pca(v2ps_t *a_vecid2polscore,
+                const arma::mat *a_nwe, const int a_N) {
   // convert polarity enum's to polarity indices
   size_t polid;
   v2pi_t vecid2polid;
-  vecid2polid.reserve(a_vecid2pol->size());
-  for (auto &v2p : *a_vecid2pol) {
+  vecid2polid.reserve(a_vecid2polscore->size());
+  for (auto &v2p : *a_vecid2polscore) {
     polid = static_cast<size_t>(v2p.second.first);
     vecid2polid[v2p.first] = polid;
   }
 
   // obtain PCA coordinates for the neural word embeddings data
   arma::mat pca_coeff, prjctd;
+  // `a_nwe` elements are stored in column-major format, i.e., each
+  // word corresponds to a column. `princomp()`, however, requires
+  // that columns represent variables and rows are observations
+  // (``Each row of X is an observation and each column is a
+  // variable'').  Therefore, we transpose the embedding matrix.
   arma::princomp(pca_coeff, prjctd, a_nwe->t());
 
   // look for the principal component with the maximum distance
   // between the means of the vectors pertaining to different
-  // poalarities
+  // polarities
   pol_stat_t pol_stat;
   _pca_compute_stat(&vecid2polid, &prjctd, &pol_stat);
   // add new terms
-  _pca_expand(a_vecid2pol, &prjctd, a_N, &pol_stat);
+  _pca_expand(a_vecid2polscore, &prjctd, a_N, &pol_stat);
 }
 
 
@@ -724,10 +736,10 @@ static arma::colvec _project_vec(const arma::colvec& a_src_vec, \
 }
 
 static void _project(arma::mat *a_pos_prjctd, arma::mat *a_neg_prjctd, \
-             const arma::mat *a_nwe, const v2ps_t *a_vecid2pol, \
+             const arma::mat *a_nwe, const v2ps_t *a_vecid2polscore, \
              const arma::colvec *a_prjline) {
   size_t pos_i = 0, neg_i = 0;
-  for (auto& v2p : *a_vecid2pol) {
+  for (auto& v2p : *a_vecid2polscore) {
     if (v2p.second.first == Polarity::POSITIVE)
       a_pos_prjctd->col(pos_i++) = _project_vec(
                                                 a_nwe->col(v2p.first),
@@ -773,17 +785,19 @@ static inline dist_t _compute_distance(arma::mat *a_pos_prjctd, \
  *
  * @return \c void
  */
-static void _compute_prj_gradient(arma::colvec *a_gradient, const vid_flist_t *pos_ids, \
-                  const vid_flist_t *neg_ids, const arma::mat *a_nwe, \
-                  const arma::colvec *a_prjline) {
+static void _compute_prj_gradient(arma::colvec *a_gradient,
+                                  const vid_flist_t *pos_ids,
+                                  const vid_flist_t *neg_ids,
+                                  const arma::mat *a_nwe,
+                                  const arma::colvec *a_prjline) {
   // clean up gradient
   a_gradient->fill(0.);
 
   // compute new gradient
   dist_t dprod;
   arma::colvec diff(a_gradient->n_cols);
-  for (auto pos_id: *pos_ids) {
-    for (auto neg_id: *neg_ids) {
+  for (auto pos_id : *pos_ids) {
+    for (auto neg_id : *neg_ids) {
       diff = a_nwe->col(pos_id) - a_nwe->col(neg_id);
       dprod = arma::dot(diff, *a_prjline);
 
