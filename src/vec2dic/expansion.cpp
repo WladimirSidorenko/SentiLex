@@ -703,7 +703,7 @@ static void _pca_expand(v2ps_t *a_vecid2pol, const arma::mat *a_pca_nwe, \
     } else {
       continue;
     }
-    vpds.push_back(VPD {1000./idist2mean, ipol, i});
+    vpds.push_back(VPD {1000./idist, ipol, i});
     ++j;
   }
   _add_terms(a_vecid2pol, &vpds, j, a_N);
