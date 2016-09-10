@@ -23,6 +23,7 @@ from hu_liu import hu_liu
 from kim_hovy import kim_hovy
 from rao import rao_min_cut, rao_lbl_prop
 from takamura import takamura
+from velikovich import velikovich, DFLT_T
 
 import argparse
 import codecs
@@ -34,6 +35,7 @@ import sys
 ##################################################################
 # Imports
 COMMENT = "###"
+CORPUS_FILES = "corpus_files"
 GNET_DIR = "germanet_dir"
 CC_FILE = "cc_file"
 
@@ -47,6 +49,7 @@ KIM = "kim-hovy"
 RAO_MIN_CUT = "rao-min-cut"
 RAO_LBL_PROP = "rao-lbl-prop"
 TAKAMURA = "takamura"
+VELIKOVICH = "velikovich"
 W2V = "w2v"
 
 W_DELIM_RE = re.compile('(?:\s|{:s})+'.format(
@@ -76,7 +79,7 @@ def _add_cmn_opts(a_parser, a_add_ext_opts=True):
                           default="none"
                           )
     a_parser.add_argument("--form2lemma", "-l",
-                          help="file containing form-lemma"
+                          help="file containing Germanet form-lemma"
                           " correspondences", type=str)
     a_parser.add_argument("seed_set",
                           help="initial seed set of positive,"
@@ -214,6 +217,20 @@ def main(a_argv):
     subparser_takamura.add_argument("N",
                                     help="final number of additional"
                                     " terms to extract", type=int)
+    subparser_velikovich = subparsers.add_parser(VELIKOVICH,
+                                                 help="Velikovich's model"
+                                                 " (Velikovich et al., 2010)")
+    subparser_velikovich.add_argument("seed_set",
+                                      help="initial seed set of positive,"
+                                      " negative, and neutral terms")
+    subparser_velikovich.add_argument("N",
+                                      help="final number of additional"
+                                      " terms to extract", type=int)
+    subparser_velikovich.add_argument("-t",
+                                      help="maximum number of iterations",
+                                      type=int, default=DFLT_T)
+    subparser_velikovich.add_argument(CORPUS_FILES, nargs='+',
+                                      help="files of the original raw corpus")
     args = argparser.parse_args(a_argv)
 
     # initialize GermaNet, if needed
@@ -239,7 +256,8 @@ def main(a_argv):
     # the requested number of polar items
         # apply requested method
     print("Expanding polarity sets... ", file=sys.stderr)
-    if args.seed_pos and args.seed_pos.lower() == "none":
+    if hasattr(args, "seed_pos") and args.seed_pos \
+       and args.seed_pos.lower() == "none":
         args.seed_pos = None
     if args.dmethod == AWDALLAH:
         new_terms = awdallah(igermanet, POS_SET, NEG_SET, NEUT_SET,
@@ -268,6 +286,11 @@ def main(a_argv):
             new_terms = takamura(igermanet, N, getattr(args, CC_FILE),
                                  POS_SET, NEG_SET, NEUT_SET,
                                  a_plot=args.plot or None)
+    elif args.dmethod == VELIKOVICH:
+        N = args.N - (len(POS_SET) + len(NEG_SET))
+        if N != 0:
+            new_terms = velikovich(N, args.t, getattr(args, CORPUS_FILES),
+                                   POS_SET, NEG_SET, NEUT_SET)
     else:
         raise NotImplementedError
     print("Expanding polarity sets... done", file=sys.stderr)

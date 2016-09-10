@@ -1,7 +1,7 @@
 #!/usr/bin/env python2.7
 # -*- mode: python; coding: utf-8; -*-
 
-"""Module for generating lexicon using Blair-Goldensohn's method (2008).
+"""Module for generating lexicon using Takamura's method (2005).
 
 """
 
@@ -11,7 +11,7 @@ from __future__ import unicode_literals, print_function
 
 from common import lemmatize, POSITIVE, NEGATIVE, TOKENIZER, \
     SYNRELS, ANTIRELS, NEGATORS, STOP_WORDS, FORM2LEMMA, \
-    TAB_RE, WORD_RE, ENCODING
+    TAB_RE, ENCODING, check_word
 from germanet import normalize
 from ising import Ising, ITEM_IDX, WGHT_IDX, HAS_FXD_WGHT, FXD_WGHT_IDX
 
@@ -23,17 +23,6 @@ import sys
 
 ##################################################################
 # Methods
-def _check_word(a_word):
-    """Check if given word forms a valid lexeme
-
-    @param a_word - word to be checked
-
-    @return \c True if word forms a valid lexeme, \c False otherwise
-
-    """
-    return WORD_RE.match(a_word) and all(ord(c) < 256 for c in a_word)
-
-
 def _tkm_add_germanet(ising, a_germanet):
     """Add lexical nodes from GermaNet to the Ising spin model
 
@@ -152,7 +141,7 @@ def _tkm_add_corpus(ising, a_cc_file):
             if len(ifields) != 3:
                 continue
             ilemma1, ilemma2, iwght = ifields
-            if _check_word(ilemma1) and _check_word(ilemma2):
+            if check_word(ilemma1) and check_word(ilemma2):
                 ising.add_edge(normalize(ilemma1),
                                normalize(ilemma2), float(iwght),
                                a_add_missing=True)

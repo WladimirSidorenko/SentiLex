@@ -29,7 +29,7 @@ EDGE_IDX = 4
 INFINITY = float("inf")
 ALPHA = 10
 # BETA_RANGE = numpy.linspace(start = 0.1, stop = 2., num = 20)
-BETA_RANGE = numpy.linspace(start=1., stop=10., num=10)
+BETA_RANGE = numpy.linspace(start=0.1, stop=1., num=10)
 DFLT_EPSILON = 10 ** -4
 MAX_CNT = 5 * 10 ** 3
 SPIN_DOMAIN = (-1., 1.)
@@ -411,7 +411,7 @@ class Ising(object):
         rc("text", usetex=True)
         plot(betas, energy, label=r"E($\beta$)")
         xlabel(r"$\beta$")
-        savefig("takamura-energy." +  + a_plot, format=a_plot)
+        savefig("takamura-energy." + a_plot, format=a_plot)
         clf()
         plot(betas, magnetization, label=r"M($\beta$)")
         xlabel(r"$\beta$")

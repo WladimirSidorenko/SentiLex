@@ -15,7 +15,10 @@ import re
 ##################################################################
 # Constants
 TAB_RE = re.compile(' *\t+ *')
-WORD_RE = re.compile('^[-.\w]+$')
+# the `#' character was only added later for the NWE and corpus methods, when I
+# discovered that hashtags were skipped during processing that hastags were
+# skipped from processing
+WORD_RE = re.compile('^[-#.\w]+$')
 ENCODING = "utf-8"
 
 # not sure whether "has_hypernym" should be added to SYNRELS
@@ -57,3 +60,14 @@ def _lemmatize(a_form, a_prune=True):
     if a_form in FORM2LEMMA:
         return FORM2LEMMA[a_form]
     return a_form
+
+
+def check_word(a_word):
+    """Check if given word forms a valid lexeme
+
+    @param a_word - word to be checked
+
+    @return \c True if word forms a valid lexeme, \c False otherwise
+
+    """
+    return WORD_RE.match(a_word) and all(ord(c) < 256 for c in a_word)
