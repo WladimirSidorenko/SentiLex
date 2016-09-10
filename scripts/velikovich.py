@@ -27,7 +27,7 @@ import sys
 ENCODING = "utf-8"
 TOK_WINDOW = 4                  # it actually corresponds to six
 MAX_NGHBRS = 25
-FASTMODE = True
+FASTMODE = False
 FMAX = sys.float_info.max
 FMIN = -FMAX
 DFLT_T = 10
