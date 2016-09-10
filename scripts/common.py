@@ -15,10 +15,10 @@ import re
 ##################################################################
 # Constants
 TAB_RE = re.compile(' *\t+ *')
-# the `#' character was only added later for the NWE and corpus methods, when I
-# discovered that hashtags were skipped during processing that hastags were
-# skipped from processing
-WORD_RE = re.compile('^[-#.\w]+$')
+# the `#' and `,' characters were only added later for the NWE and corpus
+# methods, when I discovered that hashtags were skipped during processing that
+# hastags were skipped from processing
+WORD_RE = re.compile('^[-#.,\w]+$')
 ENCODING = "utf-8"
 
 # not sure whether "has_hypernym" should be added to SYNRELS

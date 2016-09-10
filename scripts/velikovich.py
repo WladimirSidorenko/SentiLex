@@ -72,7 +72,7 @@ def _read_files(a_crp_files):
                 itok = word2vecid[itok]
                 for ptok in prev_toks:
                     tok_stat[(ptok, itok)] += 1
-                if len(prev_toks) > TOK_WINDOW:
+                while len(prev_toks) > TOK_WINDOW:
                     prev_toks.pop(0)
                 prev_toks.append(itok)
         del prev_toks[:]
@@ -107,6 +107,25 @@ def _tokstat2mtx(a_max_vecid, a_tok_stat):
     return M.tocsr()
 
 
+def _prune_vec(a_M, a_i, a_j2dot):
+    """Remove all pointers to other vectors except for the top MAX_NGHBRS.
+
+    @param a_M - source matrix to be modified
+    @param a_i - index of a_M row which should be changed
+    @param a_j2dot - row of a_M which should be changed
+
+    @return \c void
+
+    """
+    if len(a_j2dot) > MAX_NGHBRS:
+        min_score = sorted(a_j2dot.itervalues(),
+                           reverse=True)[MAX_NGHBRS - 1]
+        for j, jdot in a_j2dot.iteritems():
+            if jdot < min_score:
+                a_M[a_i, j] = 0
+    a_j2dot.clear()
+
+
 def _prune_mtx(a_M):
     """Make each row contain at most top MAX_NGHBRS neighbours.
 
@@ -135,25 +154,6 @@ def _prune_mtx(a_M):
     _prune_vec(a_M, prev_i, j2dot)
     a_M.eliminate_zeros()
     a_M.prune()
-
-
-def _prune_vec(a_M, a_i, a_j2dot):
-    """Remove all pointers to other vectors except for the top MAX_NGHBRS.
-
-    @param a_M - source matrix to be modified
-    @param a_i - index of a_M row which should be changed
-    @param a_j2dot - row of a_M which should be changed
-
-    @return \c void
-
-    """
-    if len(a_j2dot) > MAX_NGHBRS:
-        min_score = sorted(a_j2dot.itervalues(),
-                           reverse=True)[MAX_NGHBRS - 1]
-        for j, jdot in a_j2dot.iteritems():
-            if jdot < min_score:
-                a_M[a_i, j] = 0
-    a_j2dot.clear()
 
 
 def _crp2mtx(a_crp_files, a_pos, a_neg):
@@ -226,7 +226,7 @@ def _velikovich(a_p, a_ids, a_M, a_T):
                 krow = a_M.getrow(k)
                 for _, j in zip(*krow.nonzero()):
                     alpha[(i, j)] = max(alpha[(i, j)],
-                                        alpha[(i, k)] * krow[0, j]
+                                        (alpha[(i, k)] or 1.) * krow[0, j]
                                         )
                     nset.add(j)
             sset |= nset
@@ -263,9 +263,8 @@ def velikovich(a_N, a_T, a_crp_files, a_pos, a_neg, a_neut):
     _velikovich(p_pos, pos_ids, M, a_T)
     _velikovich(p_neg, neg_ids, M, a_T)
 
-    beta = sum(float(p)/float(n)
-               for p, n in zip(p_pos, p_neg)
-               if n)
+    beta = float(p_pos.sum()) / float(p_neg.sum() or 1.)
+
     ret = []
     w_score = 0.
     for w, w_id in word2vecid.iteritems():
