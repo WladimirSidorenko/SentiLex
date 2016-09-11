@@ -175,6 +175,7 @@ def _crp2mtx(a_crp_files, a_pos, a_neg):
         if w not in word2vecid:
             word2vecid[w] = max_vecid
             max_vecid += 1
+    # free memory, occupied by FORM2LEMMA
     FORM2LEMMA.clear()
     # convert cooccurrence statistics to a sparse matrix
     M = _tokstat2mtx(max_vecid, tok_stat)

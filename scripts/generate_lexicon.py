@@ -220,15 +220,19 @@ def main(a_argv):
     subparser_velikovich = subparsers.add_parser(VELIKOVICH,
                                                  help="Velikovich's model"
                                                  " (Velikovich et al., 2010)")
+    a_parser.add_argument("--form2lemma", "-l",
+                          help="file containing form-lemma correspondences"
+                          " for corpus tokens",
+                          type=str)
+    subparser_velikovich.add_argument("-t",
+                                      help="maximum number of iterations",
+                                      type=int, default=DFLT_T)
     subparser_velikovich.add_argument("seed_set",
                                       help="initial seed set of positive,"
                                       " negative, and neutral terms")
     subparser_velikovich.add_argument("N",
                                       help="final number of additional"
                                       " terms to extract", type=int)
-    subparser_velikovich.add_argument("-t",
-                                      help="maximum number of iterations",
-                                      type=int, default=DFLT_T)
     subparser_velikovich.add_argument(CORPUS_FILES, nargs='+',
                                       help="files of the original raw corpus")
     args = argparser.parse_args(a_argv)
