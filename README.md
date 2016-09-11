@@ -30,8 +30,8 @@ size):
 
 ```shell
 
-./scripts/generate_lexicon.py takamura --plot=png \
-    data/seeds/turney_littman_2003.txt data/GermaNet_v9.0/ data/corpus/cc.txt -1
+./scripts/generate_lexicon.py takamura --form2lemma=data/GermaNet_v9.0/gn_form2lemma.txt \
+    --plot=png data/seeds/turney_littman_2003.txt data/GermaNet_v9.0/ data/corpus/cc.txt -1
 
 ```
 
