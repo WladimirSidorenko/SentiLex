@@ -9,9 +9,9 @@
 # Imports
 from __future__ import unicode_literals, print_function
 
-from common import lemmatize, POSITIVE, NEGATIVE, \
-    TAB_RE, ENCODING, check_word
-from germanet import normalize
+from common import ENCODING, FORM2LEMMA, \
+    POSITIVE, NEGATIVE, \
+    TAB_RE, check_word, lemmatize
 
 from collections import Counter, defaultdict
 from itertools import chain
@@ -165,6 +165,7 @@ def _crp2mtx(a_crp_files, a_pos, a_neg):
     and adjacency matrix
 
     """
+    global FORM2LEMMA
     # gather one-direction co-occurrence statistics
     max_vecid, word2vecid, tok_stat = _read_files(a_crp_files)
     for w in chain(a_pos, a_neg):
@@ -174,6 +175,7 @@ def _crp2mtx(a_crp_files, a_pos, a_neg):
         if w not in word2vecid:
             word2vecid[w] = max_vecid
             max_vecid += 1
+    FORM2LEMMA.clear()
     # convert cooccurrence statistics to a sparse matrix
     M = _tokstat2mtx(max_vecid, tok_stat)
     # iterate over the matrix and keep top 25 vectors with the highest cosine
