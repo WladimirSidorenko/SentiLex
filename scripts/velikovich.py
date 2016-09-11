@@ -9,8 +9,7 @@
 # Imports
 from __future__ import unicode_literals, print_function
 
-from common import lemmatize, POSITIVE, NEGATIVE, TOKENIZER, \
-    SYNRELS, ANTIRELS, NEGATORS, STOP_WORDS, FORM2LEMMA, \
+from common import lemmatize, POSITIVE, NEGATIVE, \
     TAB_RE, ENCODING, check_word
 from germanet import normalize
 
@@ -24,7 +23,6 @@ import sys
 
 ##################################################################
 # Constants
-ENCODING = "utf-8"
 TOK_WINDOW = 4                  # it actually corresponds to six
 MAX_NGHBRS = 25
 FASTMODE = False
@@ -64,7 +62,8 @@ def _read_files(a_crp_files):
                     del prev_toks[:]
                     continue
                 itok = TAB_RE.split(iline)[0].strip()
-                if not check_word(itok):
+                itok = lemmatize(itok)
+                if itok is None or not check_word(itok):
                     continue
                 if itok not in word2vecid:
                     word2vecid[itok] = max_vecid
@@ -136,7 +135,6 @@ def _prune_mtx(a_M):
     @note modifies `a_M' in place
 
     """
-    idot = min_score = 0.
     j2dot = {}
     irow = None
     prev_i = -1
@@ -170,6 +168,9 @@ def _crp2mtx(a_crp_files, a_pos, a_neg):
     # gather one-direction co-occurrence statistics
     max_vecid, word2vecid, tok_stat = _read_files(a_crp_files)
     for w in chain(a_pos, a_neg):
+        w = lemmatize(w)
+        if w is None:
+            continue
         if w not in word2vecid:
             word2vecid[w] = max_vecid
             max_vecid += 1

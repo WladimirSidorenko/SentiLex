@@ -239,11 +239,14 @@ def main(a_argv):
         print("Reading GermaNet synsets... ",
               end="", file=sys.stderr)
         igermanet = Germanet(getattr(args, GNET_DIR))
-        if "form2lemma" in args and args.form2lemma is not None:
-            # global lemmatize
-            # lemmatize = _lemmatize
-            _get_form2lemma(args.form2lemma)
         print("done", file=sys.stderr)
+    # For Takamura's method, `form2lemma' will contain lemmas of words
+    # appearing in Germanet glosses.  For corpus based approaches, it will
+    # contain lemmas of words contained in the corpus.
+    if "form2lemma" in args and args.form2lemma is not None:
+        # global lemmatize
+        # lemmatize = _lemmatize
+        _get_form2lemma(args.form2lemma)
 
     # obtain lists of conjoined terms, if needed
 
@@ -256,7 +259,7 @@ def main(a_argv):
     # the requested number of polar items
         # apply requested method
     print("Expanding polarity sets... ", file=sys.stderr)
-    if hasattr(args, "seed_pos") and args.seed_pos \
+    if "seed_pos" in args and args.seed_pos \
        and args.seed_pos.lower() == "none":
         args.seed_pos = None
     if args.dmethod == AWDALLAH:

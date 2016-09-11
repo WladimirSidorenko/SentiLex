@@ -141,6 +141,10 @@ def _tkm_add_corpus(ising, a_cc_file):
             if len(ifields) != 3:
                 continue
             ilemma1, ilemma2, iwght = ifields
+            if ilemma1 in FORM2LEMMA:
+                ilemma1 = FORM2LEMMA[ilemma1]
+            if ilemma2 in FORM2LEMMA:
+                ilemma2 = FORM2LEMMA[ilemma2]
             if check_word(ilemma1) and check_word(ilemma2):
                 ising.add_edge(normalize(ilemma1),
                                normalize(ilemma2), float(iwght),
