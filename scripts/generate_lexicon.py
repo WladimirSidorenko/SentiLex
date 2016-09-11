@@ -290,7 +290,7 @@ def main(a_argv):
         N = args.N - (len(POS_SET) + len(NEG_SET))
         if N != 0:
             new_terms = velikovich(N, args.t, getattr(args, CORPUS_FILES),
-                                   POS_SET, NEG_SET, NEUT_SET)
+                                   POS_SET, NEG_SET)
     else:
         raise NotImplementedError
     print("Expanding polarity sets... done", file=sys.stderr)

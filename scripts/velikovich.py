@@ -238,7 +238,7 @@ def _velikovich(a_p, a_ids, a_M, a_T):
         a_p[j] = sum(alpha[i, j] for i in a_ids)
 
 
-def velikovich(a_N, a_T, a_crp_files, a_pos, a_neg, a_neut):
+def velikovich(a_N, a_T, a_crp_files, a_pos, a_neg):
     """Method for generating sentiment lexicons using Velikovich's approach.
 
     @param a_N - number of terms to extract
@@ -246,7 +246,6 @@ def velikovich(a_N, a_T, a_crp_files, a_pos, a_neg, a_neut):
     @param a_crp_files - files of the original corpus
     @param a_pos - initial set of positive terms to be expanded
     @param a_neg - initial set of negative terms to be expanded
-    @param a_neut - initial set of neutral terms to be expanded
 
     @return list of terms sorted according to their polarities
 
