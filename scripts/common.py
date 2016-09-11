@@ -39,12 +39,11 @@ SYNRELS = set(["has_participle", "has_pertainym",
                "has_hyponym", "entails", "is_entailed_by"])
 
 TOKENIZER = Tokenizer()
-lemmatize = lambda x, a_prune = True: normalize(x)
 
 
 ##################################################################
 # Imports
-def _lemmatize(a_form, a_prune=True):
+def lemmatize(a_form, a_prune=True):
     """
     Convert word form to its lemma
 

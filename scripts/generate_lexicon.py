@@ -244,8 +244,6 @@ def main(a_argv):
     # appearing in Germanet glosses.  For corpus based approaches, it will
     # contain lemmas of words contained in the corpus.
     if "form2lemma" in args and args.form2lemma is not None:
-        # global lemmatize
-        # lemmatize = _lemmatize
         _get_form2lemma(args.form2lemma)
 
     # obtain lists of conjoined terms, if needed
