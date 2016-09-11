@@ -14,6 +14,8 @@ import re
 
 ##################################################################
 # Constants
+ESC_CHAR = ''
+SENT_END_RE = re.compile("\s*<\s*sentence\s*/\s*>\s*$")
 TAB_RE = re.compile(' *\t+ *')
 # the `#' and `,' characters were only added later for the NWE and corpus
 # methods, when I discovered that hashtags were skipped during processing that
@@ -25,6 +27,7 @@ ENCODING = "utf-8"
 POSITIVE = "positive"
 NEGATIVE = "negative"
 NEUTRAL = "neutral"
+INFORMATIVE_TAGS = set(["AD", "FM", "NE", "NN", "VV"])
 POL2OPPOSITE = {POSITIVE: NEGATIVE, NEGATIVE: POSITIVE}
 
 NEGATORS = set(["nicht", "keine", "kein", "keines", "keinem", "keinen"])

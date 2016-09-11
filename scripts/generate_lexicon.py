@@ -13,7 +13,7 @@ generate_lexicon.py [OPTIONS] [INPUT_FILES]
 from __future__ import unicode_literals, print_function
 
 from common import POSITIVE, NEGATIVE, NEUTRAL, STOP_WORDS, \
-    FORM2LEMMA, TAB_RE, ENCODING
+    FORM2LEMMA, INFORMATIVE_TAGS, TAB_RE, ENCODING
 from germanet import Germanet, normalize, POS
 
 from awdallah import awdallah
@@ -57,8 +57,6 @@ W_DELIM_RE = re.compile('(?:\s|{:s})+'.format(
 POS_SET = set()                 # set of positive terms
 NEG_SET = set()                 # set of negative terms
 NEUT_SET = set()                # set of neutral terms
-
-INFORMATIVE_TAGS = set(["AD", "FM", "NE", "NN", "VV"])
 
 
 ##################################################################
@@ -220,10 +218,6 @@ def main(a_argv):
     subparser_velikovich = subparsers.add_parser(VELIKOVICH,
                                                  help="Velikovich's model"
                                                  " (Velikovich et al., 2010)")
-    subparser_velikovich.add_argument("--form2lemma", "-l",
-                                      help="file containing form-lemma"
-                                      " correspondences for corpus tokens",
-                                      type=str)
     subparser_velikovich.add_argument("-t",
                                       help="maximum number of iterations",
                                       type=int, default=DFLT_T)
@@ -234,7 +228,8 @@ def main(a_argv):
                                       help="final number of additional"
                                       " terms to extract", type=int)
     subparser_velikovich.add_argument(CORPUS_FILES, nargs='+',
-                                      help="files of the original raw corpus")
+                                      help="tagged lemmatized files of the"
+                                      " original corpus")
     args = argparser.parse_args(a_argv)
 
     # initialize GermaNet, if needed

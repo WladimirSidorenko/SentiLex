@@ -9,9 +9,10 @@
 # Imports
 from __future__ import unicode_literals, print_function
 
-from common import ENCODING, FORM2LEMMA, \
-    POSITIVE, NEGATIVE, \
-    TAB_RE, check_word, lemmatize
+from common import ENCODING, ESC_CHAR, FORM2LEMMA, \
+    INFORMATIVE_TAGS, NEGATIVE, POSITIVE, SENT_END_RE, \
+    TAB_RE, check_word
+from germanet import normalize
 
 from collections import Counter, defaultdict
 from itertools import chain
@@ -23,7 +24,7 @@ import sys
 
 ##################################################################
 # Constants
-TOK_WINDOW = 4                  # it actually corresponds to six
+TOK_WINDOW = 4                  # it actually corresponds to a window of six
 MAX_NGHBRS = 25
 FASTMODE = False
 FMAX = sys.float_info.max
@@ -45,36 +46,45 @@ def _read_files(a_crp_files):
     """
     print("Reading corpus...", end="", file=sys.stderr)
     i = 0
-    itok = ""
+    itag = ilemma = ""
     max_vecid = 0
-    prev_toks = []
+    prev_lemmas = []
     tok_stat = Counter()
     word2vecid = {}
     for ifname in a_crp_files:
         with codecs.open(ifname, 'r', ENCODING) as ifile:
             for iline in ifile:
                 iline = iline.strip().lower()
-                if not iline:
+                if not iline or SENT_END_RE.match(iline) \
+                   or iline[0] == ESC_CHAR:
                     if FASTMODE:
                         i += 1
                         if i > 300:
                             break
-                    del prev_toks[:]
+                    if prev_lemmas:
+                        del prev_lemmas[:]
                     continue
-                itok = TAB_RE.split(iline)[0].strip()
-                itok = lemmatize(itok)
-                if itok is None or not check_word(itok):
+                try:
+                    _, itag, ilemma = TAB_RE.split(iline)
+                except:
+                    print("Invalid line format at line: {:s}".format(
+                        repr(iline)), file=sys.stderr
+                    )
                     continue
-                if itok not in word2vecid:
-                    word2vecid[itok] = max_vecid
+                ilemma = normalize(ilemma)
+                if itag[:2] not in INFORMATIVE_TAGS \
+                   or not check_word(ilemma):
+                    continue
+                if ilemma not in word2vecid:
+                    word2vecid[ilemma] = max_vecid
                     max_vecid += 1
-                itok = word2vecid[itok]
-                for ptok in prev_toks:
-                    tok_stat[(ptok, itok)] += 1
-                while len(prev_toks) > TOK_WINDOW:
-                    prev_toks.pop(0)
-                prev_toks.append(itok)
-        del prev_toks[:]
+                ilemma = word2vecid[ilemma]
+                for plemma in prev_lemmas:
+                    tok_stat[(plemma, ilemma)] += 1
+                while len(prev_lemmas) > TOK_WINDOW:
+                    prev_lemmas.pop(0)
+                prev_lemmas.append(ilemma)
+        del prev_lemmas[:]
     print(" done", file=sys.stderr)
     return (max_vecid, word2vecid, tok_stat)
 
@@ -169,9 +179,7 @@ def _crp2mtx(a_crp_files, a_pos, a_neg):
     # gather one-direction co-occurrence statistics
     max_vecid, word2vecid, tok_stat = _read_files(a_crp_files)
     for w in chain(a_pos, a_neg):
-        w = lemmatize(w)
-        if w is None:
-            continue
+        w = normalize(w)
         if w not in word2vecid:
             word2vecid[w] = max_vecid
             max_vecid += 1
