@@ -220,10 +220,10 @@ def main(a_argv):
     subparser_velikovich = subparsers.add_parser(VELIKOVICH,
                                                  help="Velikovich's model"
                                                  " (Velikovich et al., 2010)")
-    a_parser.add_argument("--form2lemma", "-l",
-                          help="file containing form-lemma correspondences"
-                          " for corpus tokens",
-                          type=str)
+    subparser_velikovich.add_argument("--form2lemma", "-l",
+                                      help="file containing form-lemma"
+                                      " correspondences for corpus tokens",
+                                      type=str)
     subparser_velikovich.add_argument("-t",
                                       help="maximum number of iterations",
                                       type=int, default=DFLT_T)
