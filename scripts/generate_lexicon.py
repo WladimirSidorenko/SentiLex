@@ -46,11 +46,11 @@ BG = "blair-goldensohn"
 ESULI = "esuli-sebastiani"
 HU = "hu-liu"
 KIM = "kim-hovy"
-RAO_MIN_CUT = "rao-min-cut"
+KIRITCHENKO = "kiritchenko"
 RAO_LBL_PROP = "rao-lbl-prop"
+RAO_MIN_CUT = "rao-min-cut"
 TAKAMURA = "takamura"
 VELIKOVICH = "velikovich"
-W2V = "w2v"
 
 W_DELIM_RE = re.compile('(?:\s|{:s})+'.format(
     '|'.join([re.escape(c) for c in string.punctuation])))
@@ -191,6 +191,21 @@ def main(a_argv):
         KIM, help="Kim's method (Kim and Hovy, 2004)")
     _add_cmn_opts(subparser_kim)
 
+    subparser_kiritchenko = subparsers.add_parser(
+        KIRITCHENKO, help="Kiritchenko's method (Kiritchenko et al., 2014)")
+    subparser_kiritchenko.add_argument("--form2lemma", "-l",
+                                       help="file containing form-lemma"
+                                       " correspondences for corpus tokens",
+                                       type=str)
+    subparser_kiritchenko.add_argument("seed_set",
+                                       help="initial seed set of positive,"
+                                       " negative, and neutral terms")
+    subparser_kiritchenko.add_argument("N",
+                                       help="final number of additional"
+                                       " terms to extract", type=int)
+    subparser_kiritchenko.add_argument(CORPUS_FILES, nargs='+',
+                                       help="tagged corpus files")
+
     subparser_rao_min_cut = subparsers.add_parser(
         RAO_MIN_CUT, help="Rao/Ravichandran's min-cut model"
         " (Rao and Ravichandran, 2009)")
@@ -274,6 +289,9 @@ def main(a_argv):
     elif args.dmethod == KIM:
         new_terms = kim_hovy(igermanet, POS_SET, NEG_SET, NEUT_SET,
                              args.seed_pos, args.ext_syn_rels)
+    elif args.dmethod == KIRITCHENKO:
+        new_terms = kiritchenko(N, getattr(args, CORPUS_FILES),
+                                POS_SET, NEG_SET)
     elif args.dmethod == RAO_MIN_CUT:
         new_terms = rao_min_cut(igermanet, POS_SET, NEG_SET, NEUT_SET,
                                 args.seed_pos, args.ext_syn_rels)
