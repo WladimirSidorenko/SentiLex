@@ -27,7 +27,8 @@ ENCODING = "utf-8"
 POSITIVE = "positive"
 NEGATIVE = "negative"
 NEUTRAL = "neutral"
-INFORMATIVE_TAGS = set(["AD", "FM", "NE", "NN", "VV"])
+INFORMATIVE_TAGS = set(["AD", "FM", "NE", "NN", "VV",
+                        "ad", "fm", "ne", "nn", "vv"])
 POL2OPPOSITE = {POSITIVE: NEGATIVE, NEGATIVE: POSITIVE}
 
 NEGATORS = set(["nicht", "keine", "kein", "keines", "keinem", "keinen"])

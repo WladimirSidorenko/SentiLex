@@ -57,7 +57,7 @@ def _read_files(a_crp_files):
                 iline = iline.strip().lower()
                 if not iline or SENT_END_RE.match(iline) \
                    or iline[0] == ESC_CHAR:
-                    if FASTMODE:
+                    if FASTMODE and prev_lemmas:
                         i += 1
                         if i > 300:
                             break
