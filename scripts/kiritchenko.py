@@ -115,7 +115,8 @@ def _stat2scores(a_stat, a_n_pos, a_n_neg):
     ret = []
     iscore = 0.
     for iterm, (ipos, ineg) in a_stat.iteritems():
-        iscore = log(ipos * a_n_neg / (ineg * a_n_pos or 1.), 2)
+        iscore = log(ipos * a_n_neg / (ineg * a_n_pos or 1.) or 1.,
+                     2)
         ret.append((iterm,
                     POSITIVE if iscore > 0. else NEGATIVE,
                     iscore))
@@ -136,7 +137,7 @@ def kiritchenko(a_N, a_crp_files, a_pos, a_neg):
     a_pos = set(normalize(w) for w in a_pos)
     a_neg = set(normalize(w) for w in a_neg)
 
-    stat = defaultdict(lambda x: [0, 0])
+    stat = defaultdict(lambda: [0, 0])
     n_pos, n_neg = _read_files(stat, a_crp_files, a_pos, a_neg)
     ret = _stat2scores(stat, n_pos, n_neg)
     ret.sort(key=lambda el: abs(el[-1]), reverse=True)

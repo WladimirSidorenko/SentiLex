@@ -21,6 +21,7 @@ from blair_goldensohn import blair_goldensohn
 from esuli_sebastiani import esuli_sebastiani
 from hu_liu import hu_liu
 from kim_hovy import kim_hovy
+from kiritchenko import kiritchenko
 from rao import rao_min_cut, rao_lbl_prop
 from takamura import takamura
 from velikovich import velikovich, DFLT_T
@@ -88,6 +89,20 @@ def _add_cmn_opts(a_parser, a_add_ext_opts=True):
         a_parser.add_argument("--ext-syn-rels",
                               help="use extended set of synonymous"
                               " relations", action="store_true")
+
+
+def _get_dflt_lexicon(a_pos, a_neg):
+    """Generate default lexicon by putting in it terms from seed set.
+
+    @param a_pos - set of positive terms
+    @param a_neg - set of negative terms
+
+    @return list(3-tuple) - list of seed set terms with uniform scores and
+      polarities
+
+    """
+    return [(w, POSITIVE, 1.) for w in POS_SET] \
+        + [(w, NEGATIVE, -1.) for w in NEG_SET]
 
 
 def _get_form2lemma(a_fname):
@@ -193,10 +208,6 @@ def main(a_argv):
 
     subparser_kiritchenko = subparsers.add_parser(
         KIRITCHENKO, help="Kiritchenko's method (Kiritchenko et al., 2014)")
-    subparser_kiritchenko.add_argument("--form2lemma", "-l",
-                                       help="file containing form-lemma"
-                                       " correspondences for corpus tokens",
-                                       type=str)
     subparser_kiritchenko.add_argument("seed_set",
                                        help="initial seed set of positive,"
                                        " negative, and neutral terms")
@@ -204,7 +215,8 @@ def main(a_argv):
                                        help="final number of additional"
                                        " terms to extract", type=int)
     subparser_kiritchenko.add_argument(CORPUS_FILES, nargs='+',
-                                       help="tagged corpus files")
+                                       help="tagged and lemmatzied corpus"
+                                       " files")
 
     subparser_rao_min_cut = subparsers.add_parser(
         RAO_MIN_CUT, help="Rao/Ravichandran's min-cut model"
@@ -290,8 +302,12 @@ def main(a_argv):
         new_terms = kim_hovy(igermanet, POS_SET, NEG_SET, NEUT_SET,
                              args.seed_pos, args.ext_syn_rels)
     elif args.dmethod == KIRITCHENKO:
-        new_terms = kiritchenko(N, getattr(args, CORPUS_FILES),
-                                POS_SET, NEG_SET)
+        N = args.N - (len(POS_SET) + len(NEG_SET))
+        if N == 0:
+            new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
+        else:
+            new_terms = kiritchenko(N, getattr(args, CORPUS_FILES),
+                                    POS_SET, NEG_SET)
     elif args.dmethod == RAO_MIN_CUT:
         new_terms = rao_min_cut(igermanet, POS_SET, NEG_SET, NEUT_SET,
                                 args.seed_pos, args.ext_syn_rels)
@@ -300,13 +316,17 @@ def main(a_argv):
                                  args.seed_pos, args.ext_syn_rels)
     elif args.dmethod == TAKAMURA:
         N = args.N - (len(POS_SET) + len(NEG_SET))
-        if N != 0:
+        if N == 0:
+            new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
+        else:
             new_terms = takamura(igermanet, N, getattr(args, CC_FILE),
                                  POS_SET, NEG_SET, NEUT_SET,
                                  a_plot=args.plot or None)
     elif args.dmethod == VELIKOVICH:
         N = args.N - (len(POS_SET) + len(NEG_SET))
-        if N != 0:
+        if N == 0:
+            new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
+        else:
             new_terms = velikovich(N, args.t, getattr(args, CORPUS_FILES),
                                    POS_SET, NEG_SET)
     else:
