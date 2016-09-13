@@ -60,14 +60,17 @@ def _prune_stat(a_tok_stat):
 
     @param a_tok_stat - statistics on term occurrences
 
-    @return modified `a_tok_stat'
+    @return \c void
+
+    @note modifies `a_tok_stat' in place
 
     """
-    a_tok_stat = {w: cnts
-                  for w, cnts in a_tok_stat.iteritems()
-                  if sum(cnts) >= MIN_TOK_CNT
-                  }
-    return a_tok_stat
+    w2delete = set()
+    for w, cnts in a_tok_stat.iteritems():
+        if sum(cnts) < MIN_TOK_CNT:
+            w2delete.add(w)
+    for w in w2delete:
+        del a_tok_stat[w]
 
 
 def _read_files(a_stat, a_crp_files, a_pos, a_neg):
@@ -116,7 +119,8 @@ def _read_files(a_stat, a_crp_files, a_pos, a_neg):
             _update_stat(a_stat, tweet_stat, tlemmas, a_pos, a_neg)
     print(" done", file=sys.stderr)
     # remove words with fewer occurrences than the minimum threshold
-    return _prune_stat(tweet_stat)
+    _prune_stat(a_stat)
+    return tweet_stat
 
 
 def _stat2scores(a_stat, a_n_pos, a_n_neg):
