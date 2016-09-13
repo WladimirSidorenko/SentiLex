@@ -77,13 +77,14 @@ def _read_files(a_stat, a_crp_files, a_pos, a_neg):
         with codecs.open(ifname, 'r', ENCODING) as ifile:
             for iline in ifile:
                 iline = iline.strip().lower()
-                if not iline or SENT_END_RE.match(iline) \
-                   or iline[0] == ESC_CHAR:
+                if iline[0] == ESC_CHAR:
                     if FASTMODE:
                         i += 1
                         if i > 300:
                             break
                     _update_stat(a_stat, tweet_stat, tlemmas, a_pos, a_neg)
+                    continue
+                elif not iline or SENT_END_RE.match(iline):
                     continue
                 try:
                     _, itag, ilemma = TAB_RE.split(iline)
