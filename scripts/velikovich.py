@@ -24,20 +24,23 @@ import sys
 
 ##################################################################
 # Constants
-TOK_WINDOW = 4                  # it actually corresponds to a window of six
-MAX_NGHBRS = 25
+DFLT_T = 10
 FASTMODE = False
 FMAX = sys.float_info.max
 FMIN = -FMAX
-DFLT_T = 10
+MAX_NGHBRS = 25
+MIN_CNT = 4
+TOK_WINDOW = 4                  # it actually corresponds to a window of six
 
 
 ##################################################################
 # Methods
-def _read_files(a_crp_files):
+def _read_files(a_crp_files, a_pos, a_neg):
     """Read corpus files and populate one-directional co-occurrences.
 
     @param a_crp_files - files of the original corpus
+    @param a_pos - initial set of positive terms
+    @param a_neg - initial set of negative terms
 
     @return (max_vecid, word2vecid, tok_stat)
 
@@ -47,10 +50,9 @@ def _read_files(a_crp_files):
     print("Reading corpus...", end="", file=sys.stderr)
     i = 0
     itag = ilemma = ""
-    max_vecid = 0
     prev_lemmas = []
     tok_stat = Counter()
-    word2vecid = {}
+    word2cnt = Counter()
     for ifname in a_crp_files:
         with codecs.open(ifname, 'r', ENCODING) as ifile:
             for iline in ifile:
@@ -75,10 +77,7 @@ def _read_files(a_crp_files):
                 if itag[:2] not in INFORMATIVE_TAGS \
                    or not check_word(ilemma):
                     continue
-                if ilemma not in word2vecid:
-                    word2vecid[ilemma] = max_vecid
-                    max_vecid += 1
-                ilemma = word2vecid[ilemma]
+                word2cnt[ilemma] += 1
                 for plemma in prev_lemmas:
                     tok_stat[(plemma, ilemma)] += 1
                 while len(prev_lemmas) > TOK_WINDOW:
@@ -86,6 +85,19 @@ def _read_files(a_crp_files):
                 prev_lemmas.append(ilemma)
         del prev_lemmas[:]
     print(" done", file=sys.stderr)
+    max_vecid = 0
+    word2vecid = {}
+    # convert words to vector ids if their counters are big enough
+    for w, cnt in word2cnt.iteritems():
+        if cnt > MIN_CNT or w in a_pos or w in a_neg:
+            word2vecid[w] = max_vecid
+            max_vecid += 1
+    word2cnt.clear()
+    # convert words to vector ids in context counter
+    tok_stat = {(word2vecid[w1], word2vecid[w2]): cnt
+                for (w1, w2), cnt in tok_stat.iteritems()
+                if w1 in word2vecid and w2 in word2vecid
+                }
     return (max_vecid, word2vecid, tok_stat)
 
 
@@ -177,7 +189,7 @@ def _crp2mtx(a_crp_files, a_pos, a_neg):
     """
     global FORM2LEMMA
     # gather one-direction co-occurrence statistics
-    max_vecid, word2vecid, tok_stat = _read_files(a_crp_files)
+    max_vecid, word2vecid, tok_stat = _read_files(a_crp_files, a_pos, a_neg)
     for w in chain(a_pos, a_neg):
         w = normalize(w)
         if w not in word2vecid:
