@@ -328,6 +328,13 @@ def main(a_argv):
     elif args.dmethod == RAO_LBL_PROP:
         new_terms = rao_lbl_prop(igermanet, POS_SET, NEG_SET, NEUT_SET,
                                  args.seed_pos, args.ext_syn_rels)
+    elif args.dmethod == SEVERYN:
+        N = args.N - (len(POS_SET) + len(NEG_SET))
+        if N == 0:
+            new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
+        else:
+            new_terms = severyn(N, getattr(args, CORPUS_FILES),
+                                POS_SET, NEG_SET)
     elif args.dmethod == TAKAMURA:
         N = args.N - (len(POS_SET) + len(NEG_SET))
         if N == 0:
