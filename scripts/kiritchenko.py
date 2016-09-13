@@ -11,7 +11,7 @@ from __future__ import unicode_literals, print_function
 
 from common import ENCODING, ESC_CHAR, \
     INFORMATIVE_TAGS, NEGATIVE, POSITIVE, SENT_END_RE, \
-    TAB_RE, check_word, normalize
+    TAB_RE, MIN_TOK_CNT, check_word, normalize
 
 from collections import defaultdict
 from math import log
@@ -53,6 +53,21 @@ def _update_stat(a_tok_stat, a_tweet_stat, a_lemmas, a_pos, a_neg):
         for ilemma in a_lemmas:
             a_tok_stat[ilemma][NEG_IDX] += 1
     a_lemmas.clear()
+
+
+def _prune_stat(a_tok_stat):
+    """Remove words with fewer occurrences than the minimum threshold.
+
+    @param a_tok_stat - statistics on term occurrences
+
+    @return modified `a_tok_stat'
+
+    """
+    a_tok_stat = {w: cnts
+                  for w, cnts in a_tok_stat.iteritems()
+                  if sum(cnts) >= MIN_TOK_CNT
+                  }
+    return a_tok_stat
 
 
 def _read_files(a_stat, a_crp_files, a_pos, a_neg):
@@ -100,7 +115,8 @@ def _read_files(a_stat, a_crp_files, a_pos, a_neg):
                 tlemmas.add(ilemma)
             _update_stat(a_stat, tweet_stat, tlemmas, a_pos, a_neg)
     print(" done", file=sys.stderr)
-    return tweet_stat
+    # remove words with fewer occurrences than the minimum threshold
+    return _prune_stat(tweet_stat)
 
 
 def _stat2scores(a_stat, a_n_pos, a_n_neg):
