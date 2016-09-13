@@ -77,7 +77,7 @@ def _read_files(a_stat, a_crp_files, a_pos, a_neg):
         with codecs.open(ifname, 'r', ENCODING) as ifile:
             for iline in ifile:
                 iline = iline.strip().lower()
-                if iline[0] == ESC_CHAR:
+                if iline and iline[0] == ESC_CHAR:
                     if FASTMODE:
                         i += 1
                         if i > 300:
