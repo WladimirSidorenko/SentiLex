@@ -11,8 +11,9 @@ from __future__ import unicode_literals, print_function
 
 from common import ENCODING, ESC_CHAR, \
     INFORMATIVE_TAGS, NEGATIVE, POSITIVE, SENT_END_RE, \
-    TAB_RE, check_word, normalize
+    TAB_RE, MIN_TOK_CNT, check_word, normalize
 
+from itertools import chain
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.pipeline import Pipeline
 from sklearn.svm import LinearSVC
@@ -65,6 +66,28 @@ def _update_ts(a_ts_x, a_ts_y, a_tweet_toks, a_pos, a_neg):
     a_tweet_toks.clear()
 
 
+def _prune_ts(a_ts_x, a_ts_y):
+    """Remove fetures with too low frequency.
+
+    @param a_ts_x - list of extracted features
+    @param a_ts_y - list of gold instance classes
+
+    @return 2-tuple - pruned copies of `a_ts_x' and `a_ts_y'
+
+    """
+    tokstat = Counter(chain(x.iterkeys() for x in a_ts_x))
+    ts_x = []
+    ts_y = []
+    for x, y in zip(a_ts_x, ):
+        x = {k, v for k, v in x.iteritems()
+             if tokstat[k] >= MIN_TOK_CNT
+             }
+        if x:
+            ts_x.append(x)
+            ts_y.append(y)
+    return (ts_x, ts_y)
+
+
 def _read_files(a_crp_files, a_pos, a_neg):
     """Read corpus files and populate one-directional co-occurrences.
 
@@ -113,7 +136,7 @@ def _read_files(a_crp_files, a_pos, a_neg):
                     tweet_toks.add((prev_lemma, ilemma))
             _update_ts(ts_x, ts_y, tweet_toks, a_pos, a_neg)
     print(" done", file=sys.stderr)
-    return (ts_x, ts_y)
+    return _prune_ts(ts_x, ts_y)
 
 
 def severyn(a_N, a_crp_files, a_pos, a_neg):
