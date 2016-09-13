@@ -11,7 +11,7 @@ from __future__ import unicode_literals, print_function
 
 from common import ENCODING, ESC_CHAR, FORM2LEMMA, \
     INFORMATIVE_TAGS, NEGATIVE, POSITIVE, SENT_END_RE, \
-    TAB_RE, check_word
+    TAB_RE, MIN_TOK_CNT, check_word
 from germanet import normalize
 
 from collections import Counter, defaultdict
@@ -29,7 +29,6 @@ FASTMODE = False
 FMAX = sys.float_info.max
 FMIN = -FMAX
 MAX_NGHBRS = 25
-MIN_CNT = 4
 TOK_WINDOW = 4                  # it actually corresponds to a window of six
 
 
@@ -89,7 +88,7 @@ def _read_files(a_crp_files, a_pos, a_neg):
     word2vecid = {}
     # convert words to vector ids if their counters are big enough
     for w, cnt in word2cnt.iteritems():
-        if cnt > MIN_CNT or w in a_pos or w in a_neg:
+        if cnt > MIN_TOK_CNT or w in a_pos or w in a_neg:
             word2vecid[w] = max_vecid
             max_vecid += 1
     word2cnt.clear()

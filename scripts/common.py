@@ -31,6 +31,8 @@ INFORMATIVE_TAGS = set(["AD", "FM", "NE", "NN", "VV",
                         "ad", "fm", "ne", "nn", "vv"])
 POL2OPPOSITE = {POSITIVE: NEGATIVE, NEGATIVE: POSITIVE}
 
+MIN_TOK_CNT = 4
+
 NEGATORS = set(["nicht", "keine", "kein", "keines", "keinem", "keinen"])
 STOP_WORDS = set()
 FORM2LEMMA = dict()
