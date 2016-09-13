@@ -1,5 +1,7 @@
 # Dictionary-, Corpus-, and NWE-based Generation of Sentiment Lexicons
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+
 This project provides scripts and executable files for generating
 sentiment lexicons from `GermaNet` (a German equivalent of `WordNet`),
 raw text corpora, and neural word embeddings.

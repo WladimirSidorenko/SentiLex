@@ -23,6 +23,7 @@ from hu_liu import hu_liu
 from kim_hovy import kim_hovy
 from kiritchenko import kiritchenko
 from rao import rao_min_cut, rao_lbl_prop
+from severyn import severyn
 from takamura import takamura
 from velikovich import velikovich, DFLT_T
 
@@ -50,6 +51,7 @@ KIM = "kim-hovy"
 KIRITCHENKO = "kiritchenko"
 RAO_LBL_PROP = "rao-lbl-prop"
 RAO_MIN_CUT = "rao-min-cut"
+SEVERYN = "severyn"
 TAKAMURA = "takamura"
 VELIKOVICH = "velikovich"
 
@@ -227,6 +229,18 @@ def main(a_argv):
         RAO_LBL_PROP, help="Rao/Ravichandran's label propagation model"
         " (Rao and Ravichandran, 2009)")
     _add_cmn_opts(subparser_rao_lbl_prop)
+
+    subparser_severyn = subparsers.add_parser(
+        SEVERYN, help="Severyn's method (Severyn and Moschitti, 2014)")
+    subparser_severyn.add_argument("seed_set",
+                                   help="initial seed set of positive,"
+                                   " negative, and neutral terms")
+    subparser_severyn.add_argument("N",
+                                   help="final number of additional"
+                                   " terms to extract", type=int)
+    subparser_severyn.add_argument(CORPUS_FILES, nargs='+',
+                                   help="tagged and lemmatzied corpus"
+                                   " files")
 
     subparser_takamura = subparsers.add_parser(TAKAMURA,
                                                help="Ising spin model"

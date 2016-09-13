@@ -350,7 +350,5 @@ def blair_goldensohn(a_germanet, a_pos, a_neg, a_neut,
     # expand seed sets
     ret = _blair_goldensohn(a_germanet, a_pos, a_neg, a_neut,
                             a_ext_syn_rels)
-    # perform random walk
-    # convert obtained lex ids back to lexemes
     ret.sort(key=lambda el: abs(el[-1]), reverse=True)
     return ret
