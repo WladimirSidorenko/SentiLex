@@ -426,11 +426,11 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir,
             macro_R.append(ircall)
             fscore = 2 * iprec * ircall / ((iprec + ircall) or 1.)
             macro_F1.append(fscore)
-            print("{:15s}{:>20%} {:>20%}"
-                  " {:>24%}".format(iclass, iprec, ircall,
+            print("{:15s}{:>20f} {:>20f}"
+                  " {:>24f}".format(iclass, iprec, ircall,
                                     fscore))
-        print("{:15s}{:>20%} {:>20%}"
-              " {:>24%}".format(
+        print("{:15s}{:>20f} {:>20f}"
+              " {:>24f}".format(
                   "Macro-average", np.mean(macro_P), np.mean(macro_R),
                   np.mean(macro_F1)))
         micro_P = total_tp / float(total_tp + total_fp) \
@@ -438,23 +438,23 @@ def eval_lexicon(a_lexicon, a_base_dir, a_anno_dir,
         micro_R = total_tp / float(total_tp + total_fn) \
             if (total_tp or total_fn) else 0.
         micro_F1 = 2 * micro_P * micro_R / ((micro_P + micro_R) or 1.)
-        print("{:15s}{:>20%} {:>20%}"
-              " {:>24%}".format(
+        print("{:15s}{:>20f} {:>20f}"
+              " {:>24f}".format(
                   "Micro-average", micro_P, micro_R, micro_F1))
     else:
         for iclass, fscores in fscore_stat.iteritems():
             iprec, ircall = pr_stat[iclass][PRECISION], pr_stat[iclass][RECALL]
-            print("{:15s}{:>10.2%} (+/- {:6.2%}){:>10.2%}"
-                  " (+/- {:6.2%}){:>10.2%} (+/- {:6.2%})".format(
+            print("{:15s}{:>10.2f} (+/- {:6.2f}){:>10.2f}"
+                  " (+/- {:6.2f}){:>10.2f} (+/- {:6.2f})".format(
                       iclass, np.mean(iprec), np.std(iprec), np.mean(ircall),
                       np.std(ircall), np.mean(fscores), np.std(fscores)))
-        print("{:15s}{:>10.2%} (+/- {:6.2%}){:>10.2%}"
-              " (+/- {:6.2%}){:>10.2%} (+/- {:6.2%})".format(
+        print("{:15s}{:>10.2f} (+/- {:6.2f}){:>10.2f}"
+              " (+/- {:6.2f}){:>10.2f} (+/- {:6.2f})".format(
                   "Macro-average", np.mean(macro_P), np.std(macro_P),
                   np.mean(macro_R), np.std(macro_R),
                   np.mean(macro_F1), np.std(macro_F1)))
-        print("{:15s}{:>10.2%} (+/- {:6.2%}){:>10.2%}"
-              " (+/- {:6.2%}){:>10.2%} (+/- {:6.2%})".format(
+        print("{:15s}{:>10.2f} (+/- {:6.2f}){:>10.2f}"
+              " (+/- {:6.2f}){:>10.2f} (+/- {:6.2f})".format(
                   "Micro-average", np.mean(micro_P), np.std(micro_P),
                   np.mean(micro_R), np.std(micro_R),
                   np.mean(micro_F1), np.std(micro_F1)))
