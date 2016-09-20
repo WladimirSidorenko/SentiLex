@@ -79,7 +79,7 @@ def _prune_ts(a_ts_x, a_ts_y):
     ts_x = []
     ts_y = []
     for x, y in zip(a_ts_x, ):
-        x = {k, v for k, v in x.iteritems()
+        x = {k: v for k, v in x.iteritems()
              if tokstat[k] >= MIN_TOK_CNT
              }
         if x:
