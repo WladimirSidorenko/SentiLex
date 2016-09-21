@@ -33,7 +33,7 @@ def _update_stat(a_tok_stat, a_tweet_stat, a_lemmas, a_pos, a_neg):
 
     @param a_tok_stat - statistics on term occurrences
     @param a_tweet_stat - statistics on tweets
-    @param a_lemmas - lemmas foun in tweet
+    @param a_lemmas - lemmas found in tweet
     @param a_pos - initial set of positive terms to be expanded
     @param a_neg - initial set of negative terms to be expanded
 

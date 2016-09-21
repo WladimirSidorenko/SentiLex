@@ -13,6 +13,7 @@ from common import ENCODING, ESC_CHAR, \
     INFORMATIVE_TAGS, NEGATIVE, POSITIVE, SENT_END_RE, \
     TAB_RE, MIN_TOK_CNT, check_word, normalize
 
+from collections import Counter
 from itertools import chain
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.pipeline import Pipeline
@@ -75,15 +76,19 @@ def _prune_ts(a_ts_x, a_ts_y):
     @return 2-tuple - pruned copies of `a_ts_x' and `a_ts_y'
 
     """
-    tokstat = Counter(chain(x.iterkeys() for x in a_ts_x))
+    tokstat = Counter(x_i
+                      for x in a_ts_x
+                      for x_i in x.iterkeys()
+                      )
+    x_ = None
     ts_x = []
     ts_y = []
-    for x, y in zip(a_ts_x, ):
-        x = {k: v for k, v in x.iteritems()
-             if tokstat[k] >= MIN_TOK_CNT
-             }
-        if x:
-            ts_x.append(x)
+    for x, y in zip(a_ts_x, a_ts_y):
+        x_ = {k: v for k, v in x.iteritems()
+              if tokstat[k] >= MIN_TOK_CNT
+              }
+        if x_:
+            ts_x.append(x_)
             ts_y.append(y)
     return (ts_x, ts_y)
 

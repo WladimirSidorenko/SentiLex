@@ -354,8 +354,8 @@ def main(a_argv):
         raise NotImplementedError
     print("Expanding polarity sets... done", file=sys.stderr)
 
-    for iterm, itag, _ in new_terms:
-        print("{:s}\t{:s}".format(iterm, itag).encode(ENCODING))
+    for iterm, itag, iscore in new_terms:
+        print("{:s}\t{:s}\t{:f}".format(iterm, itag, iscore).encode(ENCODING))
 
 ##################################################################
 # Main
