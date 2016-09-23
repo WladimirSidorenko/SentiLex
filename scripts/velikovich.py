@@ -9,7 +9,7 @@
 # Imports
 from __future__ import unicode_literals, print_function
 
-from common import ENCODING, ESC_CHAR, FORM2LEMMA, \
+from common import ENCODING, ESC_CHAR, \
     INFORMATIVE_TAGS, NEGATIVE, POSITIVE, SENT_END_RE, \
     TAB_RE, MIN_TOK_CNT, check_word
 from germanet import normalize
@@ -111,7 +111,7 @@ def _tokstat2mtx(a_max_vecid, a_tok_stat):
     """
     # lil is better for construction
     M = sparse.lil_matrix((a_max_vecid, a_max_vecid),
-                          dtype=np.float32)
+                          dtype=np.float64)
     # for faster matrix construction, we sort the keys
     toks = sorted(a_tok_stat.iterkeys())
     icnt = 0
@@ -119,7 +119,13 @@ def _tokstat2mtx(a_max_vecid, a_tok_stat):
         icnt = a_tok_stat[(itok1, itok2)]
         # the counter is mutual, so let's see whether we can go with
         M[itok1, itok2] += icnt
+        assert np.isfinite(M[itok1, itok2]), \
+            "Numerical overflow for matrix cell [{:d}, {:d}]".format(
+                itok1, itok2)
         M[itok2, itok1] += icnt
+        assert np.isfinite(M[itok2, itok1]), \
+            "Numerical overflow for matrix cell [{:d}, {:d}]".format(
+                itok2, itok1)
     # free memory
     a_tok_stat.clear()
     del toks[:]
@@ -162,6 +168,7 @@ def _prune_mtx(a_M):
     for i, j in zip(*a_M.nonzero()):
         if i != prev_i:
             if prev_i >= 0:
+                row = a_M.getrow(prev_i)
                 _prune_vec(a_M, prev_i, j2dot)
             irow = a_M.getrow(i).transpose()
             prev_i = i
@@ -170,6 +177,9 @@ def _prune_mtx(a_M):
             a_M[i, j] == 0.
             continue
         j2dot[j] = a_M.getrow(j).dot(irow)[0, 0]
+        assert np.isfinite(j2dot[j]), \
+            "Numerical overflow in dot product of rows {:d} and {:d}".format(
+                itok1, itok2)
     _prune_vec(a_M, prev_i, j2dot)
     a_M.eliminate_zeros()
     a_M.prune()
@@ -186,7 +196,6 @@ def _crp2mtx(a_crp_files, a_pos, a_neg):
     and adjacency matrix
 
     """
-    global FORM2LEMMA
     # gather one-direction co-occurrence statistics
     max_vecid, word2vecid, tok_stat = _read_files(a_crp_files, a_pos, a_neg)
     for w in chain(a_pos, a_neg):
@@ -194,14 +203,12 @@ def _crp2mtx(a_crp_files, a_pos, a_neg):
         if w not in word2vecid:
             word2vecid[w] = max_vecid
             max_vecid += 1
-    # free memory, occupied by FORM2LEMMA
-    FORM2LEMMA.clear()
     # convert cooccurrence statistics to a sparse matrix
     M = _tokstat2mtx(max_vecid, tok_stat)
     # iterate over the matrix and keep top 25 vectors with the highest cosine
     # similarity
     _prune_mtx(M)
-    return (max_vecid, word2vecid, M)
+    return (max_vecid, word2vecid, M.log1p())
 
 
 def _p_init(a_N, a_word2vecid, a_seedset, a_seed_val=1.):
@@ -241,7 +248,7 @@ def _velikovich(a_p, a_ids, a_M, a_T):
     for i in a_ids:
         sset.add(i)
         print("seed term: {:d}".format(i),
-              end="\r", file=sys.stderr)
+              end="\r\n", file=sys.stderr)
         for t in xrange(a_T):
             print("iteration: {:d}".format(t),
                   end="\r", file=sys.stderr)
@@ -249,8 +256,11 @@ def _velikovich(a_p, a_ids, a_M, a_T):
                 krow = a_M.getrow(k)
                 for _, j in zip(*krow.nonzero()):
                     alpha[(i, j)] = max(alpha[(i, j)],
-                                        (alpha[(i, k)] or 1.) * krow[0, j]
+                                        alpha[(i, k)] + krow[0, j]
                                         )
+                    assert np.isfinite(alpha[(i, j)]), \
+                        "Numerical overflow occurred when computing" \
+                        " alpha[{:d}, {:d}]".format(i, j)
                     nset.add(j)
             sset |= nset
             nset.clear()
@@ -259,6 +269,9 @@ def _velikovich(a_p, a_ids, a_M, a_T):
     N = a_M.shape[0]
     for j in xrange(N):
         a_p[j] = sum(alpha[i, j] for i in a_ids)
+        assert np.isfinite(a_p[j]), \
+            "Numerical overflow occurred when computing" \
+            " a_p[{:d}]".format(j)
 
 
 def velikovich(a_N, a_T, a_crp_files, a_pos, a_neg):
