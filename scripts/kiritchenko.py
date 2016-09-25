@@ -129,16 +129,20 @@ def _stat2scores(a_stat, a_n_pos, a_n_neg):
     @param a_stat - statistics on terms
     @param a_n_pos - total number of positive tweets
     @param a_n_neg - total number of negative tweets
+    @param a_pos - initial set of positive terms to be expanded
+    @param a_neg - initial set of negative terms to be expanded
 
     @return list of terms, their polarities, and scores
 
     """
     ret = []
     iscore = 0.
+    print("*** a_n_pos =", repr(a_n_pos), file=sys.stderr)
+    print("*** a_n_neg =", repr(a_n_neg), file=sys.stderr)
     for iterm, (ipos, ineg) in a_stat.iteritems():
-        if iterm in a_n_pos:
+        if iterm in a_pos:
             iscore = FMAX
-        elif iterm in a_n_neg:
+        elif iterm in a_neg:
             iscore = FMIN
         else:
             iscore = log(ipos * a_n_neg / (ineg * a_n_pos or 1.) or 1.,
@@ -165,6 +169,6 @@ def kiritchenko(a_N, a_crp_files, a_pos, a_neg):
 
     stat = defaultdict(lambda: [0, 0])
     n_pos, n_neg = _read_files(stat, a_crp_files, a_pos, a_neg)
-    ret = _stat2scores(stat, n_pos, n_neg)
+    ret = _stat2scores(stat, n_pos, n_neg, a_pos, a_neg)
     ret.sort(key=lambda el: abs(el[-1]), reverse=True)
     return ret
