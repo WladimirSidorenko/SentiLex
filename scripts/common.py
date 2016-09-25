@@ -11,9 +11,13 @@ from germanet import normalize
 from tokenizer import Tokenizer
 
 import re
+import sys
 
 ##################################################################
 # Constants
+FMAX = sys.float_info.max
+FMIN = -FMAX
+
 ESC_CHAR = ''
 SENT_END_RE = re.compile("\s*<\s*sentence\s*/\s*>\s*$")
 TAB_RE = re.compile(' *\t+ *')

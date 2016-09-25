@@ -136,8 +136,13 @@ def _stat2scores(a_stat, a_n_pos, a_n_neg):
     ret = []
     iscore = 0.
     for iterm, (ipos, ineg) in a_stat.iteritems():
-        iscore = log(ipos * a_n_neg / (ineg * a_n_pos or 1.) or 1.,
-                     2)
+        if iterm in a_n_pos:
+            iscore = FMAX
+        elif iterm in a_n_neg:
+            iscore = FMIN
+        else:
+            iscore = log(ipos * a_n_neg / (ineg * a_n_pos or 1.) or 1.,
+                         2)
         ret.append((iterm,
                     POSITIVE if iscore > 0. else NEGATIVE,
                     iscore))

@@ -9,7 +9,7 @@
 # Imports
 from __future__ import unicode_literals, print_function
 
-from common import ENCODING, ESC_CHAR, \
+from common import ENCODING, ESC_CHAR, FMAX, FMIN, \
     INFORMATIVE_TAGS, NEGATIVE, POSITIVE, SENT_END_RE, \
     TAB_RE, MIN_TOK_CNT, check_word
 from germanet import normalize
@@ -26,8 +26,6 @@ import sys
 # Constants
 DFLT_T = 10
 FASTMODE = False
-FMAX = sys.float_info.max
-FMIN = -FMAX
 MAX_NGHBRS = 25
 TOK_WINDOW = 4                  # it actually corresponds to a window of six
 
