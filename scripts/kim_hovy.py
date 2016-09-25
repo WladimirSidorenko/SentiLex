@@ -176,7 +176,7 @@ def kim_hovy(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
                          seeds2seedpos(a_pos, a_seed_pos))
     N_pos = float(len(pos_seedpos))
     P_pos = N_pos / Z
-    assert 0. < P_pos <= 1., \
+    assert 0. <= P_pos <= 1., \
         "Invalid value of prior positive probability: {:f}".format(P_pos)
     pos_synids = seeds2synids(a_germanet, a_pos, a_seed_pos)
 
@@ -184,16 +184,16 @@ def kim_hovy(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
                          seeds2seedpos(a_neg, a_seed_pos))
     N_neg = float(len(neg_seedpos))
     P_neg = N_neg / Z
-    assert 0. < P_neg <= 1., \
-        "Invalid value of prior positive probability: {:f}".format(P_neg)
+    assert 0. <= P_neg <= 1., \
+        "Invalid value of prior negative probability: {:f}".format(P_neg)
     neg_synids = seeds2synids(a_germanet, a_neg, a_seed_pos)
 
     neut_seedpos = filter(lambda x: seedpos_chck(a_germanet, *x),
                           seeds2seedpos(a_neut, a_seed_pos))
     N_neut = float(len(neut_seedpos))
     P_neut = N_neut / Z
-    assert 0. < P_neut <= 1., \
-        "Invalid value of prior positive probability: {:f}".format(P_neut)
+    assert 0. <= P_neut <= 1., \
+        "Invalid value of prior neutral probability: {:f}".format(P_neut)
     neut_synids = seeds2synids(a_germanet, a_neut, a_seed_pos)
 
     # estimate conditional probabilities of terms given classes
@@ -219,10 +219,13 @@ def kim_hovy(a_germanet, a_pos, a_neg, a_neut, a_seed_pos,
             np.min(np.min(scores, axis=1), axis=0))
     # determine classes
     idx = 0
-    ret = []
-    lex2lidx = {}
+    ret = [(w, POSITIVE, FMAX) for w in a_pos] \
+        + [(w, NEGATIVE, FMIN) for w in a_neg]
+    lex2lidx = {el[0]: i for i, el in enumerate(ret)}
     classes = np.argmax(scores, axis=0)
     for (ilex, ipos), idx in term2idx.iteritems():
+        if ilex in a_pos or ilex in a_neg:
+            continue
         if classes[idx] == POS_IDX:
             ipol = POSITIVE
             iscore = scores[POS_IDX, idx]
