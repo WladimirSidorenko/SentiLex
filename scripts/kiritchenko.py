@@ -9,7 +9,7 @@
 # Imports
 from __future__ import unicode_literals, print_function
 
-from common import ENCODING, ESC_CHAR, \
+from common import ENCODING, ESC_CHAR, FMAX, FMIN, \
     INFORMATIVE_TAGS, NEGATIVE, POSITIVE, SENT_END_RE, \
     TAB_RE, MIN_TOK_CNT, check_word, normalize
 
