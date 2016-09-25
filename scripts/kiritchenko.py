@@ -139,7 +139,7 @@ def _stat2scores(a_stat, a_n_pos, a_n_neg, a_pos, a_neg):
     print("*** a_n_pos =", repr(a_n_pos), file=sys.stderr)
     print("*** a_n_neg =", repr(a_n_neg), file=sys.stderr)
     ret = [(w, POSITIVE, FMAX) for w in a_pos] \
-        + [(w, NEGATIVE, FMIN) for w in a_pos]
+        + [(w, NEGATIVE, FMIN) for w in a_neg]
     for iterm, (ipos, ineg) in a_stat.iteritems():
         if iterm in a_pos or iterm in a_neg:
             continue

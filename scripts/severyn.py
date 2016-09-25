@@ -166,7 +166,7 @@ def severyn(a_N, a_crp_files, a_pos, a_neg):
     model.fit(X, Y)
 
     ret = [(w, POSITIVE, FMAX) for w in a_pos] \
-        + [(w, NEGATIVE, FMIN) for w in a_pos]
+        + [(w, NEGATIVE, FMIN) for w in a_neg]
     coefs = clf.coef_[0]
     for f_name, f_score in zip(vectorizer.get_feature_names(),
                                coefs
