@@ -9,7 +9,7 @@
 # Imports
 from __future__ import unicode_literals, print_function
 
-from common import ENCODING, ESC_CHAR, \
+from common import ENCODING, ESC_CHAR, FMAX, FMIN, \
     INFORMATIVE_TAGS, NEGATIVE, POSITIVE, SENT_END_RE, \
     TAB_RE, MIN_TOK_CNT, check_word, normalize
 
@@ -165,11 +165,14 @@ def severyn(a_N, a_crp_files, a_pos, a_neg):
     X, Y = _read_files(a_crp_files, a_pos, a_neg)
     model.fit(X, Y)
 
-    ret = []
+    ret = [(w, POSITIVE, FMAX) for w in a_pos] \
+        + [(w, NEGATIVE, FMIN) for w in a_pos]
     coefs = clf.coef_[0]
     for f_name, f_score in zip(vectorizer.get_feature_names(),
                                coefs
                                ):
+        if f_name in a_pos or f_name in a_neg:
+            continue
         ret.append((f_name,
                     POSITIVE if f_score > 0. else NEGATIVE,
                     f_score))

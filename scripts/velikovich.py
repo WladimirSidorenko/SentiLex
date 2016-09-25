@@ -301,9 +301,9 @@ def velikovich(a_N, a_T, a_crp_files, a_pos, a_neg):
     ret = []
     w_score = 0.
     for w, w_id in word2vecid.iteritems():
-        if w_id in pos_ids:
+        if w in a_pos:
             w_score = FMAX
-        elif w_id in neg_ids:
+        elif w in a_neg:
             w_score = FMIN
         else:
             w_score = p_pos[w_id] - beta * p_neg[w_id]
