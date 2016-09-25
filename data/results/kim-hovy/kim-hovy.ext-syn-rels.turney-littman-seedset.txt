@@ -1,356 +1,356 @@
-anrüchig	negative
-unecht	negative
-irregulär	negative
-wünschenswert	positive
-drittklassig	negative
-sinnlich	positive
-unprofessionell	negative
-abgeschlagen	negative
-gefällig	positive
-mustergültig	positive
-unrecht	negative
-unangemessen	negative
-sagenhaft	positive
-vitaminarm	negative
-neuwertig	positive
-schlecht	negative
-edel	positive
-gemein	negative
-bettelarm	negative
-gewissenhaft	positive
-nutzbringend	positive
-lausig	negative
-feingeschnitten	positive
-ungünstig	negative
-qualitätsvoll	positive
-zweitklassig	negative
-fair	positive
-blank	negative
-angriffslustig	negative
-froh gestimmt	positive
-fälschlich	negative
-beispielhaft	positive
-regelgemäss	positive
-unfreundlich	negative
-ordnungsliebend	positive
-verschlagen	negative
-berauschend	positive
-chancenlos	negative
-erfolgreich	positive
-gutherzig	positive
-beknackt	negative
-lieb	positive
-nützlich	positive
-gehoben	positive
-begrüssenswert	positive
-glimpflich	positive
-negativ	negative
-friedliebend	positive
-unglücklich	negative
-peinlich	positive
-boshaft	negative
-tugendlich	positive
-unnütz	negative
-bedürftig	negative
-schadenfroh	negative
-irrtümlich	negative
-unedel	negative
-gutartig	positive
-glücklos	negative
-herzensgut	positive
-freundlich	positive
-verlogen	negative
-graziös	positive
-frohgestimmt	positive
-endgeil	positive
-tugendreich	positive
-eiweissarm	negative
-sensationell	positive
-zweckfrei	negative
-charakterlos	negative
-fettarm	negative
-wohlgeformt	positive
-sittlich	positive
-friedlich	positive
-mythisch	positive
-fein geschnitten	positive
-unvorteilhaft	negative
-vorbildlich	positive
-perfekt	positive
-nutzlos	negative
-mau	negative
-pickelig	negative
-himmlisch	positive
-entstellt	negative
-unattraktiv	negative
-stümperhaft	negative
-gerecht	positive
-legendär	positive
-böse	negative
-laienhaft	negative
-glückstrahlend	positive
-phantastisch	positive
-chancenreich	positive
-elendig	negative
-preisgekrönt	positive
-schurkisch	negative
-grundfalsch	negative
-anmutig	positive
-ekelhaft	negative
-gewalttätig	negative
-gelungen	positive
-sinnhaft	positive
-prima	positive
-unkorrekt	negative
-vorbildhaft	positive
-unfehlbar	positive
-märchenhaft	positive
-deformiert	negative
-nichtsnutzig	negative
-geraten	positive
-schön	positive
-stilsicher	positive
-okay	positive
-edelmütig	positive
-fantastisch	positive
-bös	negative
-exzeptionell	positive
-eifrig	positive
-penibel	positive
-glückreich	positive
-richtig	positive
-imageträchtig	positive
-genehm	positive
-unzweckmässig	negative
-adäquat	positive
-vermeintlich	negative
-seelig	positive
-ungerecht	negative
-stilgerecht	positive
-idyllisch	positive
-pejorativ	negative
-verarmt	negative
-blutarm	negative
-ungut	negative
-zwecklos	negative
-feinschmeckerisch	positive
-sorgsam	positive
-grandios	positive
-irrig	negative
-günstig	positive
-erstklassig	positive
-gut	positive
-matt	negative
-mistig	negative
-regulär	positive
-bedenkenswert	positive
-fleischarm	negative
-legendenhaft	positive
-paradigmatisch	positive
-unakzeptabel	negative
-bildschön	positive
-faul	negative
-wasserarm	negative
-kampfeslustig	negative
-regelrecht	positive
-unästhetisch	negative
-umgekehrt	negative
-ausserordentlich	positive
-kampflustig	negative
-achtsam	positive
-traumhaft	positive
-zweckmässig	positive
-lügnerisch	negative
-bestmöglich	positive
-spitzenmässig	positive
-erfolgversprechend	positive
-leidig	negative
-prächtig	positive
-grossherzig	positive
-spitze	positive
-schwindlig	negative
-korrekt	positive
-viertklassig	negative
-übel	negative
-unschädlich	positive
-nährstoffarm	negative
-unfair	negative
-herrlich	positive
-klasse	positive
-geschmackvoll	positive
-meisterhaft	positive
-unschuldig	positive
-fragwürdig	negative
-flau	negative
-oll	negative
-unsinnig	negative
-elefantös	positive
-erfolglos	negative
-insolvent	negative
-verformt	negative
-nichtig	negative
-herausragend	positive
-bitterarm	negative
-tüchtig	positive
-garstig	negative
-regelgerecht	positive
-hübsch	positive
-richtiggehend	positive
-hochklassig	positive
-arbeitsam	positive
-ätzend	negative
-verdorben	negative
-ruiniert	negative
-schädigend	negative
-beschissen	negative
-hässlich	negative
-strahlend	positive
-ideal	positive
-förmlich	positive
-wunderschön	positive
-besser	positive
-ineffektiv	negative
-meisterlich	positive
-ordentlich	positive
-nett	positive
-glücklich	positive
-widerwärtig	negative
-verdriesslich	negative
-fehlerhaft	negative
-potthässlich	negative
-erbärmlich	negative
-minderwertig	negative
-prestigeträchtig	positive
-pleite	negative
-vorschriftsmässig	positive
-bescheiden	negative
-sinnlos	negative
-verlebt	negative
-unförmig	negative
-unaufrichtig	negative
-ordnungsgemäss	positive
-eingängig	positive
-schmuck	positive
-armselig	negative
-unübertrefflich	positive
-zufrieden	positive
-positiv	positive
-ekelerregend	negative
-ausgezeichnet	positive
-ergebnisreich	positive
-unwahr	negative
-qualitätvoll	positive
-zuträglich	positive
-kalorienarm	negative
-ergebnislos	negative
-widrig	negative
-exzellent	positive
-moralisch	positive
-superior	positive
-wohl geformt	positive
-ekel erregend	negative
-paradiesisch	positive
-hervorragend	positive
-intrigant	negative
-unansehnlich	negative
-sinnvoll	positive
-grottig	negative
-tugendhaft	positive
-misslungen	negative
-brutal	negative
-schlimm	negative
-ehrenvoll	positive
-inadäquat	negative
-unnützlich	negative
-grauslich	negative
-zutreffend	positive
-ehrlos	negative
-unrichtig	negative
-verträglich	positive
-lästig	negative
-blendend	positive
-übermächtig	positive
-sinnig	positive
-inakzeptabel	negative
-kulinarisch	positive
-läppisch	negative
-kriminell	negative
-überglücklich	positive
-strafwürdig	negative
-froh	positive
-elend	negative
-arm	negative
-grossartig	positive
-schäbig	negative
-unehrenhaft	negative
-anziehend	positive
-angeblich	negative
-abträglich	negative
-optimal	positive
-widerlich	negative
-grottenschlecht	negative
-scheiss	negative
-schädlich	negative
-überlegen	positive
-fies	negative
-amoralisch	negative
-falsch	negative
-fleissig	positive
-recht	positive
-akzeptabel	positive
-wertig	positive
-ethisch	positive
-dekorativ	positive
-hochwertig	positive
-schuldig	negative
-dilettantisch	negative
-erfolg versprechend	positive
-überragend	positive
-kontrafaktisch	negative
-verfehlt	negative
-unzutreffend	negative
-wahr	positive
-miserabel	negative
-niederträchtig	negative
-erledigt	negative
-gutmütig	positive
-phänomenal	positive
-nervig	negative
-pedantisch	positive
-link	negative
-rohstoffarm	negative
-angemessen	positive
-nervtötend	negative
-aussergewöhnlich	positive
-verbraucht	negative
-wundervoll	positive
-barmherzig	positive
-attraktiv	positive
-geringwertig	negative
-angenehm	positive
-prachtvoll	positive
-zahlungsunfähig	negative
-unschön	negative
-stilvoll	positive
-leid	negative
-emsig	positive
-verkehrt	negative
-bankrott	negative
-ärmlich	negative
-fein	positive
-wunderbar	positive
-mies	negative
-verteufelt	negative
-ungeeignet	negative
-glückselig	positive
-schwarz	negative
-ungetrübt	positive
-abgebrannt	negative
-sorgfältig	positive
-sinnreich	positive
-preussisch	positive
-toll	positive
-vorschriftsgemäss	positive
-missraten	negative
-geeignet	positive
-aggressiv	negative
+überlegen	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+ausgezeichnet	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+glücklich	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+schön	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+positiv	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+korrekt	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+richtig	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+gut	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+hochwertig	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+nett	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+ekelhaft	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+unglücklich	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+negativ	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+schlecht	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+lästig	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+hässlich	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+minderwertig	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+gemein	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+falsch	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+arm	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+anrüchig	negative	0.000007
+unecht	negative	0.000007
+irregulär	negative	0.000007
+drittklassig	negative	0.000007
+sinnlich	positive	0.000007
+unprofessionell	negative	0.000007
+abgeschlagen	negative	0.000007
+gefällig	positive	0.000007
+mustergültig	positive	0.000007
+unrecht	negative	0.000007
+hervorragend	positive	0.000007
+unangemessen	negative	0.000007
+sagenhaft	positive	0.000007
+vitaminarm	negative	0.000007
+neuwertig	positive	0.000007
+edel	positive	0.000014
+bettelarm	negative	0.000007
+gewissenhaft	positive	0.000007
+nutzbringend	positive	0.000007
+lausig	negative	0.000007
+feingeschnitten	positive	0.000007
+ungünstig	negative	0.000007
+qualitätsvoll	positive	0.000007
+zweitklassig	negative	0.000007
+fair	positive	0.000007
+blank	negative	0.000007
+angriffslustig	negative	0.000007
+froh gestimmt	positive	0.000007
+fälschlich	negative	0.000007
+beispielhaft	positive	0.000007
+regelgemäss	positive	0.000007
+unfreundlich	negative	0.000007
+ordnungsliebend	positive	0.000007
+verschlagen	negative	0.000007
+berauschend	positive	0.000007
+chancenlos	negative	0.000007
+erfolgreich	positive	0.000007
+gutherzig	positive	0.000007
+beknackt	negative	0.000007
+lieb	positive	0.000007
+nützlich	positive	0.000007
+gehoben	positive	0.000007
+begrüssenswert	positive	0.000007
+glimpflich	positive	0.000007
+friedliebend	positive	0.000007
+peinlich	positive	0.000007
+boshaft	negative	0.000007
+tugendlich	positive	0.000007
+unnütz	negative	0.000007
+schurkisch	negative	0.000007
+bedürftig	negative	0.000007
+schadenfroh	negative	0.000007
+irrtümlich	negative	0.000007
+unedel	negative	0.000007
+gutartig	positive	0.000007
+glücklos	negative	0.000007
+herzensgut	positive	0.000007
+freundlich	positive	0.000007
+verlogen	negative	0.000007
+graziös	positive	0.000007
+frohgestimmt	positive	0.000007
+endgeil	positive	0.000007
+tugendreich	positive	0.000007
+eiweissarm	negative	0.000007
+sensationell	positive	0.000007
+zweckfrei	negative	0.000007
+charakterlos	negative	0.000007
+fettarm	negative	0.000007
+wohlgeformt	positive	0.000007
+sittlich	positive	0.000007
+friedlich	positive	0.000007
+mythisch	positive	0.000007
+fein geschnitten	positive	0.000007
+unvorteilhaft	negative	0.000007
+vorbildlich	positive	0.000007
+perfekt	positive	0.000007
+nutzlos	negative	0.000007
+mau	negative	0.000014
+pickelig	negative	0.000007
+himmlisch	positive	0.000007
+entstellt	negative	0.000007
+unattraktiv	negative	0.000007
+stümperhaft	negative	0.000007
+gerecht	positive	0.000007
+legendär	positive	0.000007
+böse	negative	0.000007
+laienhaft	negative	0.000007
+glückstrahlend	positive	0.000007
+phantastisch	positive	0.000007
+chancenreich	positive	0.000007
+elendig	negative	0.000007
+preisgekrönt	positive	0.000007
+grundfalsch	negative	0.000007
+anmutig	positive	0.000007
+gewalttätig	negative	0.000007
+gelungen	positive	0.000007
+prima	positive	0.000007
+unkorrekt	negative	0.000007
+vorbildhaft	positive	0.000007
+unfehlbar	positive	0.000007
+märchenhaft	positive	0.000007
+deformiert	negative	0.000007
+nichtsnutzig	negative	0.000007
+geraten	positive	0.000007
+stilsicher	positive	0.000007
+okay	positive	0.000007
+edelmütig	positive	0.000007
+bös	negative	0.000007
+exzeptionell	positive	0.000007
+eifrig	positive	0.000007
+sinnhaft	positive	0.000007
+penibel	positive	0.000007
+glückreich	positive	0.000007
+imageträchtig	positive	0.000007
+genehm	positive	0.000007
+unzweckmässig	negative	0.000007
+adäquat	positive	0.000007
+vermeintlich	negative	0.000007
+seelig	positive	0.000007
+ekel erregend	negative	0.000007
+ungerecht	negative	0.000007
+stilgerecht	positive	0.000007
+idyllisch	positive	0.000007
+pejorativ	negative	0.000007
+verarmt	negative	0.000007
+blutarm	negative	0.000007
+ungut	negative	0.000007
+zwecklos	negative	0.000007
+feinschmeckerisch	positive	0.000007
+grandios	positive	0.000007
+irrig	negative	0.000007
+günstig	positive	0.000007
+erstklassig	positive	0.000007
+matt	negative	0.000007
+mistig	negative	0.000007
+regulär	positive	0.000007
+bedenkenswert	positive	0.000007
+wünschenswert	positive	0.000007
+fleischarm	negative	0.000007
+legendenhaft	positive	0.000007
+paradigmatisch	positive	0.000007
+unakzeptabel	negative	0.000007
+bildschön	positive	0.000007
+faul	negative	0.000007
+wasserarm	negative	0.000007
+kampfeslustig	negative	0.000007
+fantastisch	positive	0.000007
+regelrecht	positive	0.000007
+umgekehrt	negative	0.000007
+ausserordentlich	positive	0.000007
+kampflustig	negative	0.000007
+achtsam	positive	0.000007
+traumhaft	positive	0.000007
+zweckmässig	positive	0.000007
+lügnerisch	negative	0.000007
+bestmöglich	positive	0.000007
+spitzenmässig	positive	0.000007
+schwindlig	negative	0.000007
+leidig	negative	0.000007
+prächtig	positive	0.000014
+spitze	positive	0.000007
+viertklassig	negative	0.000007
+übel	negative	0.000014
+unschädlich	positive	0.000007
+nährstoffarm	negative	0.000007
+unfair	negative	0.000007
+herrlich	positive	0.000007
+klasse	positive	0.000007
+geschmackvoll	positive	0.000007
+meisterhaft	positive	0.000007
+unschuldig	positive	0.000007
+fragwürdig	negative	0.000007
+erfolgversprechend	positive	0.000007
+flau	negative	0.000007
+oll	negative	0.000007
+unsinnig	negative	0.000007
+elefantös	positive	0.000007
+erfolglos	negative	0.000007
+insolvent	negative	0.000007
+verformt	negative	0.000007
+nichtig	negative	0.000007
+herausragend	positive	0.000007
+bitterarm	negative	0.000007
+garstig	negative	0.000007
+regelgerecht	positive	0.000007
+hübsch	positive	0.000007
+richtiggehend	positive	0.000007
+hochklassig	positive	0.000007
+arbeitsam	positive	0.000007
+ätzend	negative	0.000007
+verdorben	negative	0.000007
+ruiniert	negative	0.000007
+schädigend	negative	0.000007
+beschissen	negative	0.000007
+strahlend	positive	0.000007
+ideal	positive	0.000007
+förmlich	positive	0.000007
+wunderschön	positive	0.000007
+besser	positive	0.000007
+ineffektiv	negative	0.000007
+meisterlich	positive	0.000007
+ordentlich	positive	0.000007
+widerwärtig	negative	0.000007
+verdriesslich	negative	0.000007
+fehlerhaft	negative	0.000007
+potthässlich	negative	0.000007
+erbärmlich	negative	0.000007
+prestigeträchtig	positive	0.000007
+pleite	negative	0.000007
+vorschriftsmässig	positive	0.000007
+bescheiden	negative	0.000007
+sinnlos	negative	0.000007
+verlebt	negative	0.000007
+unförmig	negative	0.000007
+unaufrichtig	negative	0.000007
+ordnungsgemäss	positive	0.000007
+eingängig	positive	0.000007
+schmuck	positive	0.000007
+armselig	negative	0.000007
+unübertrefflich	positive	0.000007
+zufrieden	positive	0.000007
+ekelerregend	negative	0.000007
+ergebnisreich	positive	0.000007
+unwahr	negative	0.000007
+qualitätvoll	positive	0.000007
+zuträglich	positive	0.000007
+kalorienarm	negative	0.000007
+ergebnislos	negative	0.000007
+widrig	negative	0.000007
+exzellent	positive	0.000014
+moralisch	positive	0.000007
+superior	positive	0.000007
+wohl geformt	positive	0.000007
+paradiesisch	positive	0.000007
+intrigant	negative	0.000007
+unansehnlich	negative	0.000007
+grottig	negative	0.000007
+tugendhaft	positive	0.000007
+misslungen	negative	0.000007
+brutal	negative	0.000007
+schlimm	negative	0.000007
+ehrenvoll	positive	0.000007
+inadäquat	negative	0.000007
+unnützlich	negative	0.000007
+grauslich	negative	0.000007
+zutreffend	positive	0.000007
+ehrlos	negative	0.000007
+unrichtig	negative	0.000007
+verträglich	positive	0.000007
+blendend	positive	0.000007
+übermächtig	positive	0.000007
+sinnig	positive	0.000007
+inakzeptabel	negative	0.000007
+kulinarisch	positive	0.000007
+wahr	positive	0.000007
+strafwürdig	negative	0.000007
+läppisch	negative	0.000007
+kriminell	negative	0.000007
+überglücklich	positive	0.000007
+froh	positive	0.000007
+elend	negative	0.000007
+grossartig	positive	0.000007
+schäbig	negative	0.000007
+unehrenhaft	negative	0.000007
+sinnvoll	positive	0.000007
+anziehend	positive	0.000007
+angeblich	negative	0.000007
+abträglich	negative	0.000007
+optimal	positive	0.000007
+widerlich	negative	0.000007
+grottenschlecht	negative	0.000007
+scheiss	negative	0.000007
+schädlich	negative	0.000007
+fies	negative	0.000007
+amoralisch	negative	0.000007
+fleissig	positive	0.000007
+recht	positive	0.000007
+akzeptabel	positive	0.000007
+wertig	positive	0.000007
+ethisch	positive	0.000007
+dekorativ	positive	0.000007
+schuldig	negative	0.000007
+dilettantisch	negative	0.000007
+erfolg versprechend	positive	0.000007
+überragend	positive	0.000007
+kontrafaktisch	negative	0.000007
+verfehlt	negative	0.000007
+unzutreffend	negative	0.000007
+tüchtig	positive	0.000007
+miserabel	negative	0.000007
+niederträchtig	negative	0.000007
+erledigt	negative	0.000007
+gutmütig	positive	0.000007
+phänomenal	positive	0.000007
+nervig	negative	0.000007
+pedantisch	positive	0.000007
+link	negative	0.000007
+rohstoffarm	negative	0.000007
+unästhetisch	negative	0.000007
+angemessen	positive	0.000007
+grossherzig	positive	0.000007
+nervtötend	negative	0.000007
+aussergewöhnlich	positive	0.000007
+verbraucht	negative	0.000007
+wundervoll	positive	0.000007
+barmherzig	positive	0.000007
+attraktiv	positive	0.000014
+geringwertig	negative	0.000007
+angenehm	positive	0.000007
+prachtvoll	positive	0.000014
+zahlungsunfähig	negative	0.000007
+unschön	negative	0.000007
+sorgsam	positive	0.000007
+stilvoll	positive	0.000007
+leid	negative	0.000007
+emsig	positive	0.000007
+verkehrt	negative	0.000007
+bankrott	negative	0.000007
+ärmlich	negative	0.000007
+fein	positive	0.000014
+wunderbar	positive	0.000007
+mies	negative	0.000007
+verteufelt	negative	0.000007
+ungeeignet	negative	0.000007
+glückselig	positive	0.000007
+schwarz	negative	0.000007
+ungetrübt	positive	0.000007
+abgebrannt	negative	0.000007
+sorgfältig	positive	0.000007
+sinnreich	positive	0.000007
+preussisch	positive	0.000007
+toll	positive	0.000007
+vorschriftsgemäss	positive	0.000007
+missraten	negative	0.000007
+geeignet	positive	0.000007
+aggressiv	negative	0.000007
