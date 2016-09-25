@@ -10,7 +10,7 @@
 from __future__ import unicode_literals, print_function
 
 from blair_goldensohn import seeds2seedpos
-from common import NEGATIVE, POSITIVE, SYNRELS
+from common import FMAX, FMIN, NEGATIVE, POSITIVE, SYNRELS
 from rao import POS_IDX, NEG_IDX, NEUT_IDX, POL_IDX, SCORE_IDX
 
 import numpy as np
