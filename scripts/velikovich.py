@@ -94,6 +94,7 @@ def _read_files(a_crp_files, a_pos, a_neg):
     tok_stat = {(word2vecid[w1], word2vecid[w2]): cnt
                 for (w1, w2), cnt in tok_stat.iteritems()
                 if w1 in word2vecid and w2 in word2vecid
+                and cnt >= MIN_TOK_CNT
                 }
     return (max_vecid, word2vecid, tok_stat)
 
