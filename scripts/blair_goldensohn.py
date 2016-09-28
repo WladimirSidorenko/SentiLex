@@ -222,6 +222,8 @@ def _vec2pollist(a_terms2vidx, a_v, a_pos, a_neg, a_neut):
     for iterm, ivdx in a_terms2vidx.iteritems():
         (ilex, ipos) = iterm
         iscore = a_v[ivdx]
+        if isinstance(iscore, np.ndarray):
+            iscore = iscore[0]
         # let seed terms have the maximum possible scores
         if iterm in a_pos:
             iscore = imax
@@ -308,10 +310,10 @@ def _blair_goldensohn(a_germanet, a_pos, a_neg, a_neut,
     # propagate the polarity values
     test_val = test_val_prev = 0.
     for _ in xrange(MAX_ITERS):
-        test_val_prev = v[terms2idx[("übel", "adj")]]
+        test_val_prev = v[terms2idx[("übel", "adj")]][(0, 0)]
         v = M.dot(v)
-        test_val = v[terms2idx[("übel", "adj")]]
-        assert test_val_prev > test_val
+        test_val = v[terms2idx[("übel", "adj")]][(0, 0)]
+        assert test_val_prev >= test_val
         sign_correct(v, terms2idx, a_pos, a_neg, a_neut)
     assert np.all(v[terms2idx[iterm]] > 0.
                   for iterm in a_pos)
@@ -340,7 +342,7 @@ def blair_goldensohn(a_germanet, a_pos, a_neg, a_neut,
     @return list of polar terms, their polarities, and scores
 
     """
-    if a_seed_pos == "none":
+    if a_seed_pos is None:
         a_seed_pos = ["adj", "nomen", "verben"]
     else:
         a_seed_pos = [a_seed_pos]
