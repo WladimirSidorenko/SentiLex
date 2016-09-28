@@ -1,0 +1,102 @@
+#!/bin/sh
+
+set -e
+
+##################################################################
+# Methods
+usage() (
+    cat <<EOF  >&2
+Evaluate sentiment lexicon generation methods on different seed sets.
+
+SYNOPSIS:
+$(basename $0) [OPTIONS]
+
+OPTIONS:
+-h|--help	show this screen and exit
+-c|--corpus-based	evaluate corpus-based approaches
+
+EOF
+)
+
+##################################################################
+# Args
+DICT_BASED=1
+SLG_HOME=${SLG_HOME:?"Variable is not set, set it to the path to SentiLex project."}
+POTTS_HOME=${POTTS_HOME:?"Variable is not set, set it to the path to PotTS project."}
+ODIR="${SLG_HOME}/ssresults"
+
+while test $# -gt 0; do
+    case $1 in
+	-h|--help)
+	    usage
+	    exit 0;;
+	-c|--corpus-based)
+	    DICT_BASED=0
+	    exit 0;;
+	--)
+	    shift
+	    break;;
+	*)
+	    echo "Invalid argument $1.  Type --help to see usage." >&2
+	    exit 2;;
+    esac
+    shift
+done
+
+##################################################################
+# Variables and Constants
+if test ${DICT_BASED} -eq 1; then
+    SLG_METHODS='hu-liu blair-goldensohn kim-hovy esuli-sebastiani
+rao-min-cut rao-lbl-prop awdallah'
+    SLG_ADD_OPTS="--ext-syn-rels
+ --form2lemma=${SLG_HOME}/data/GermaNet_v9.0/gn_form2lemma.txt"
+else
+    SLG_METHODS='takamura kiritchenko severyn velikovich'
+    SLG_ADD_OPTS=''
+fi
+
+ES_SEED_SET="${SLG_HOME}/data/seeds/esuli_sebastiani_gi_seedset.txt"
+HL_SEED_SET="${SLG_HOME}/data/seeds/hu_liu_seedset.txt"
+KH_SEED_SET="${SLG_HOME}/data/seeds/kim_hovy_2004.txt"
+RR_SEED_SET="${SLG_HOME}/data/seeds/remus_seedset.txt"
+
+SEED_SETS="\
+ ${HL_SEED_SET}\
+ ${KH_SEED_SET}\
+ ${ES_SEED_SET}\
+ ${RR_SEED_SET}"
+
+##################################################################
+# Main
+SGL_OPTS=''
+for slg in ${SLG_METHODS}; do
+    for sset in ${SEED_SETS}; do
+	case "${sset}" in
+	    "${ES_SEED_SET}")
+		SGL_OPTS="--seed-pos=none"
+		OFNAME="${ODIR}/${slg}.ext-syn-rels.esuli-sebastiani-seedset.txt";;
+	    "${KH_SEED_SET}")
+		SGL_OPTS="--seed-pos=none"
+		OFNAME="${ODIR}/${slg}.ext-syn-rels.kim-hovy-seedset.txt";;
+	    "${HL_SEED_SET}")
+		SGL_OPTS="--seed-pos=adj"
+		OFNAME="${ODIR}/${slg}.ext-syn-rels.hu-liu-seedset.txt";;
+	    "${RR_SEED_SET}")
+		SGL_OPTS="--seed-pos=adj"
+		OFNAME="${ODIR}/${slg}.ext-syn-rels.remus-seedset.txt";;
+	    *)
+		echo "Unknown seed set $sset." >&2;
+		exit 2;;
+	esac
+	echo "${slg}"
+	echo "${sset}"
+	"${SLG_HOME}/scripts/generate_lexicon.py" ${slg} ${SLG_OPTS} \
+	    ${SLG_ADD_OPTS} "${sset}" "${SLG_HOME}/data/GermaNet_v9.0" \
+	    > "${OFNAME}" 2> "${ODIR}/${slg}.$(basename ${sset%_*}).log"
+	"${SLG_HOME}/scripts/evaluate.py" -f -l "${SLG_HOME}/data/form2lemma.txt" \
+	    "${OFNAME}" "${POTTS_HOME}/corpus/basedata/" \
+	    "${POTTS_HOME}/corpus/annotator-2/markables/" \
+	    2> "${ODIR}/${slg}.$(basename ${sset%_*}).eval.log" | \
+	    awk '/^Macro-average/ {print $NF}'
+    done
+done
