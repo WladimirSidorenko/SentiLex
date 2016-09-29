@@ -246,11 +246,7 @@ def _velikovich(a_p, a_ids, a_M, a_T):
 
     for i in a_ids:
         sset.add(i)
-        print("seed term: {:d}".format(i),
-              end="\r\n", file=sys.stderr)
         for t in xrange(a_T):
-            print("iteration: {:d}".format(t),
-                  end="\r", file=sys.stderr)
             for k in sset:
                 krow = a_M.getrow(k)
                 for _, j in zip(*krow.nonzero()):
