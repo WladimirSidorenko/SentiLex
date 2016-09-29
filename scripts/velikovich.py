@@ -24,7 +24,7 @@ import sys
 
 ##################################################################
 # Constants
-DFLT_T = 10
+DFLT_T = 20
 FASTMODE = False
 MAX_NGHBRS = 25
 TOK_WINDOW = 4                  # it actually corresponds to a window of six
