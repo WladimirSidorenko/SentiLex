@@ -73,16 +73,24 @@ for slg in ${SLG_METHODS}; do
     for sset in ${SEED_SETS}; do
 	case "${sset}" in
 	    "${ES_SEED_SET}")
-		SGL_OPTS="--seed-pos=none"
+		if test ${DICT_BASED} -eq 1; then
+		    SGL_OPTS="--seed-pos=none"
+		fi
 		OFNAME="${ODIR}/${slg}.ext-syn-rels.esuli-sebastiani-seedset.txt";;
 	    "${KH_SEED_SET}")
-		SGL_OPTS="--seed-pos=none"
+		if test ${DICT_BASED} -eq 1; then
+		    SGL_OPTS="--seed-pos=none"
+		fi
 		OFNAME="${ODIR}/${slg}.ext-syn-rels.kim-hovy-seedset.txt";;
 	    "${HL_SEED_SET}")
-		SGL_OPTS="--seed-pos=adj"
+		if test ${DICT_BASED} -eq 1; then
+		    SGL_OPTS="--seed-pos=adj"
+		fi
 		OFNAME="${ODIR}/${slg}.ext-syn-rels.hu-liu-seedset.txt";;
 	    "${RR_SEED_SET}")
-		SGL_OPTS="--seed-pos=adj"
+		if test ${DICT_BASED} -eq 1; then
+		    SGL_OPTS="--seed-pos=adj"
+		fi
 		OFNAME="${ODIR}/${slg}.ext-syn-rels.remus-seedset.txt";;
 	    *)
 		echo "Unknown seed set $sset." >&2;
