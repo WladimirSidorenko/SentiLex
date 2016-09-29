@@ -24,6 +24,7 @@ DICT_BASED=1
 SLG_HOME=${SLG_HOME:?"Variable is not set, set it to the path to SentiLex project."}
 POTTS_HOME=${POTTS_HOME:?"Variable is not set, set it to the path to PotTS project."}
 ODIR="${SLG_HOME}/ssresults"
+POTTS_FORM2LEMMA="${SLG_HOME}/data/form2lemma.txt"
 
 while test $# -gt 0; do
     case $1 in
@@ -31,8 +32,7 @@ while test $# -gt 0; do
 	    usage
 	    exit 0;;
 	-c|--corpus-based)
-	    DICT_BASED=0
-	    exit 0;;
+	    DICT_BASED=0;;
 	--)
 	    shift
 	    break;;
@@ -51,6 +51,7 @@ rao-min-cut rao-lbl-prop awdallah'
     SLG_ADD_OPTS="--ext-syn-rels
  --form2lemma=${SLG_HOME}/data/GermaNet_v9.0/gn_form2lemma.txt"
 else
+    TSNAPSHOT_HOME=${TSNAPSHOT_HOME:?"Variable is not set, set it to the path to Twitter snapshot."}
     SLG_METHODS='takamura kiritchenko severyn velikovich'
     SLG_ADD_OPTS=''
 fi
@@ -98,13 +99,42 @@ for slg in ${SLG_METHODS}; do
 	esac
 	echo "${slg}"
 	echo "${sset}"
-	"${SLG_HOME}/scripts/generate_lexicon.py" ${slg} ${SLG_OPTS} \
-	    ${SLG_ADD_OPTS} "${sset}" "${SLG_HOME}/data/GermaNet_v9.0" \
-	    > "${OFNAME}" 2> "${ODIR}/${slg}.$(basename ${sset%_*}).log"
-	"${SLG_HOME}/scripts/evaluate.py" -f -l "${SLG_HOME}/data/form2lemma.txt" \
-	    "${OFNAME}" "${POTTS_HOME}/corpus/basedata/" \
-	    "${POTTS_HOME}/corpus/annotator-2/markables/" \
-	    2> "${ODIR}/${slg}.$(basename ${sset%_*}).eval.log" | \
-	    awk '/^Macro-average/ {print $NF}'
+	if test ${DICT_BASED} -eq 1; then
+	    "${SLG_HOME}/scripts/generate_lexicon.py" ${slg} ${SLG_OPTS} \
+		${SLG_ADD_OPTS} "${sset}" "${SLG_HOME}/data/GermaNet_v9.0" \
+		> "${OFNAME}" 2> "${ODIR}/${slg}.$(basename ${sset%_*}).log"
+	    "${SLG_HOME}/scripts/evaluate.py" -f -l "${POTTS_FORM2LEMMA}" \
+		"${OFNAME}" "${POTTS_HOME}/corpus/basedata/" \
+		"${POTTS_HOME}/corpus/annotator-2/markables/" \
+		2> "${ODIR}/${slg}.$(basename ${sset%_*}).eval.log" | \
+		awk '/^Macro-average/ {print $NF}'
+	else
+	    if test "${slg}" = 'takamura'; then
+		"${SLG_HOME}/scripts/generate_lexicon.py" "${slg}" "${sset}" \
+		    "${SLG_HOME}/data/GermaNet_v9.0" \
+		    "${SLG_HOME}/data/corpus/cc.txt" -1 > "${OFNAME}" \
+		    2> "${ODIR}/${slg}.$(basename ${sset%_*}).log"
+	    else
+		"${SLG_HOME}/scripts/generate_lexicon.py" ${slg} "${sset}" -1 \
+		    "${TSNAPSHOT_HOME}"/*.tagged > "${OFNAME}" \
+		    2> "${ODIR}/${slg}.$(basename ${sset%_*}).log"
+	    fi
+	    # determine the optimal number of terms for that method
+	    MAX_MAV_F1=0
+	    MAX_MAV_F1_I=0
+	    for i in $(seq 40 20 5120); do
+		head -$i "${OFNAME}" > "${OFNAME}.$i"
+		MAX_MAV_F1_I=$("${SLG_HOME}/scripts/evaluate.py" -f -l "${POTTS_FORM2LEMMA}" \
+		    "${OFNAME}.$i" "${POTTS_HOME}/corpus/basedata/" \
+		    "${POTTS_HOME}/corpus/annotator-2/markables/" \
+		    2> "${ODIR}/${slg}.$(basename ${sset%_*}).eval.log" | \
+		    awk '/^Macro-average/ {print $NF}')
+		rm "${OFNAME}.$i"
+		if test $(awk "BEGIN {print (${MAX_MAV_F1_I} > ${MAX_MAV_F1})}") = '1'; then
+		    MAX_MAV_F1=${MAX_MAV_F1_I}
+		fi
+	    done
+	    echo ${MAX_MAV_F1}
+	fi
     done
 done
