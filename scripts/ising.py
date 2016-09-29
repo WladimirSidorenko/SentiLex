@@ -28,9 +28,9 @@ EDGE_IDX = 4
 
 INFINITY = float("inf")
 ALPHA = 10
-# BETA_RANGE = numpy.linspace(start = 0.1, stop = 2., num = 20)
-BETA_RANGE = numpy.linspace(start=0.1, stop=1., num=10)
-DFLT_EPSILON = 10 ** -4
+# BETA_RANGE = numpy.linspace(start = 0.1, stop = 1., num = 10)
+BETA_RANGE = [0.8]
+DFLT_EPSILON = 10 ** -3
 MAX_CNT = 5 * 10 ** 3
 SPIN_DOMAIN = (-1., 1.)
 MAX_EDGE_WGHT = 4
