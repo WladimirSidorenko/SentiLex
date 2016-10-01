@@ -115,37 +115,45 @@ EXACT_MATCH = 4
 
 statistics = {}
 
+
 ##################################################################
 # Methods
-def _compute_kappa(a_overlap1, a_total1, a_overlap2, a_total2, a_total_tkns, a_cmp):
-    """
-    Compute Cohen's Kappa.
+def _compute_kappa(a_overlap1, a_total1, a_overlap2, a_total2,
+                   a_total_tkns, a_cmp):
+    """Compute Cohen's Kappa.
 
-    @param a_overlap1 - number of overlapping annotations in the 1-st annotation
+    @param a_overlap1 - number of overlapping annotations in the 1-st
+      annotation
     @param a_total1  - total number of markables in the 1-st annotation
-    @param a_overlap2 - number of overlapping annotations in the 2-nd annotation
+    @param a_overlap2 - number of overlapping annotations in the 2-nd
+      annotation
     @param a_total2 - total number of markables in the 2-nd annotation
     @param a_total_tkns - total number of tokens in file
     @param a_cmp - scheme used for comparison
 
     @return float
+
     """
     assert a_overlap1 <= a_total1, \
-        "The numer of matched annotation in the 1-st file exceeds the total number of markables."
+        "The numer of matched annotation in the 1-st file" \
+        " exceeds the total number of markables."
     assert a_overlap2 <= a_total2, \
-        "The numer of matched annotation in the 2-nd file exceeds the total number of markables."
+        "The numer of matched annotation in the 2-nd file" \
+        " exceeds the total number of markables."
     assert a_overlap1 == a_overlap2 or a_cmp & BINARY_OVERLAP, \
         "Different numbers of overlapping tokens for two annotators."
     # compute chance agreement
     if a_total_tkns == 0.0:
         return 0.0
-    agreement = float(a_total_tkns - a_total1 + a_overlap1 - a_total2 + a_overlap2) / a_total_tkns
+    agreement = float(a_total_tkns - a_total1 + a_overlap1
+                      - a_total2 + a_overlap2) / a_total_tkns
     # chances that the first/second annotator randomly annotated a token with
     # that markable
     chance1 = float(a_total1) / a_total_tkns
     chance2 = float(a_total2) / a_total_tkns
     chance = chance1 * chance2 + (1.0 - chance1) * (1.0 - chance2)
-    assert chance <= 1.0, "Invalid value of chance agreement: '{:.2f}'".format(kappa)
+    assert chance <= 1.0, \
+        "Invalid value of chance agreement: '{:.2f}'".format(kappa)
     # compute Cohen's Kappa
     if chance < 1.0:
         kappa = (agreement - chance) / (1.0 - chance)
@@ -153,6 +161,7 @@ def _compute_kappa(a_overlap1, a_total1, a_overlap2, a_total2, a_total_tkns, a_c
         kappa = 0.0
     assert kappa <= 1.0, "Invalid kappa value: '{:.4f}'".format(kappa)
     return kappa
+
 
 def _markables2tuples(a_t):
     """
@@ -178,7 +187,7 @@ def _markables2tuples(a_t):
         if not mspan:
             continue
         # get id's of all words covered by the given span
-        span_w_ids = parse_span(mspan, a_int_fmt = True)
+        span_w_ids = parse_span(mspan, a_int_fmt=True)
         assert span_w_ids, "Markable span is empty"
         # obtain the name of the markable
         mname = mark.get("mmax_level")
@@ -193,7 +202,8 @@ def _markables2tuples(a_t):
         retlist.append([span_w_ids, mname, mattrs])
     # return list of markables sorted by the starting and ending positions of
     # the spans
-    return sorted(retlist, key = lambda e: (e[0][0], e[0][-1]))
+    return sorted(retlist, key=lambda e: (e[0][0], e[0][-1]))
+
 
 def _w_id2span(a_w_ids):
     """
@@ -220,7 +230,8 @@ def _w_id2span(a_w_ids):
             assert r_start >= 0, "Invalid range start: {:d}".format(rng_start)
             # append range, if previous word id is other than range start
             if prev_w_id != r_start:
-                ret_list.append(WRD_PRFX + str(r_start) + WRD_RANGE_SEP + WRD_PRFX + str(prev_w_id))
+                ret_list.append(WRD_PRFX + str(r_start) + WRD_RANGE_SEP
+                                + WRD_PRFX + str(prev_w_id))
             else:
                 ret_list.append(WRD_PRFX + str(r_start))
             # new range start is the current word id
@@ -228,20 +239,22 @@ def _w_id2span(a_w_ids):
         prev_w_id = w_id
     # append the final span
     if prev_w_id != r_start:
-        ret_list.append(WRD_PRFX + str(r_start) + WRD_RANGE_SEP + WRD_PRFX + str(prev_w_id))
+        ret_list.append(WRD_PRFX + str(r_start) + WRD_RANGE_SEP
+                        + WRD_PRFX + str(prev_w_id))
     else:
         ret_list.append(WRD_PRFX + str(r_start))
     # join separate words and ranges by commas
     return WRD_SEP.join(ret_list)
 
-def _make_attrs(a_attrs, a_update_ids = True):
-    """
-    Convert a list of attribute name/value pairs to dictionary.
+
+def _make_attrs(a_attrs, a_update_ids=True):
+    """Convert a list of attribute name/value pairs to dictionary.
 
     @param a_attrs - list of attribute name/value pairs
     @param a_update_ids - boolean flag indicating whether ids should be renamed
 
     @return dictionary of attributes
+
     """
     retdict = dict(a_attrs)
     # change markable ids if necessary
@@ -250,9 +263,9 @@ def _make_attrs(a_attrs, a_update_ids = True):
             retdict[k] = MRKBL_ID_RE.sub(r"\g<0>100500", v)
     return retdict
 
+
 def _add_markable(a_prnt, a_tpl, **a_attrs):
-    """
-    Convert markables in XML tree to tuples.
+    """Convert markables in XML tree to tuples.
 
     @param a_prnt - parent XML element to which new element should be appended
     @param a_tpl - tuple containing information about markable
@@ -271,15 +284,17 @@ def _add_markable(a_prnt, a_tpl, **a_attrs):
     mrkbl.attrib.update(a_attrs)
     return mrkbl
 
+
 def _is_smiley(a_word):
-    """
-    Check if given word is a smiley
+    """Check if given word is a smiley
 
     @param a_word - word to be checked
 
     @return \c true if the word is a smile \c false otherwise
+
     """
     return bool(SMILEY_RE.match(a_word))
+
 
 def _is_emoticon(a_w_ids, a_wid2word):
     """
@@ -292,26 +307,28 @@ def _is_emoticon(a_w_ids, a_wid2word):
     """
     return all([_is_smiley(a_wid2word[float(w_id)]) for w_id in a_w_ids])
 
-def _update_stat(a_t1, a_t2, a_n, a_diff1_pos, a_diff1_neg, a_diff2_pos, a_diff2_neg, \
-                     a_wid2word, a_cmp = BINARY_OVERLAP):
-    """
-    Compare annotations present in two XML trees.
+
+def _update_stat(a_t1, a_t2, a_n, a_diff1_pos, a_diff1_neg,
+                 a_diff2_pos, a_diff2_neg, a_wid2word,
+                 a_cmp=BINARY_OVERLAP):
+    """Compare annotations present in two XML trees.
 
     @param a_t1 - first XML tree to compare
     @param a_t2 - second XML tree to compare
     @param a_n - total number of tokens
-    @param a_diff1_pos - list for storing agreement statistics about positive emo-expressions
-                  in the 1-st annotation
-    @param a_diff1_neg - list for storing agreement statistics about negative emo-expressions
-                  in the 1-st annotation
-    @param a_diff1_pos - list for storing agreement statistics about positive emo-expressions
-                  in the 2-nd annotation
-    @param a_diff1_neg - list for storing agreement statistics about negative emo-expressions
-                  in the 2-nd annotation
+    @param a_diff1_pos - list for storing agreement statistics about positive
+                  emo-expressions in the 1-st annotation
+    @param a_diff1_neg - list for storing agreement statistics about negative
+                  emo-expressions in the 1-st annotation
+    @param a_diff1_pos - list for storing agreement statistics about positive
+                  emo-expressions in the 2-nd annotation
+    @param a_diff1_neg - list for storing agreement statistics about negative
+                  emo-expressions in the 2-nd annotation
     @param a_wid2word - dictionary mapping word indices to words
     @param a_cmp - mode for comparing two spans
 
     @return \c updated total number of tokens
+
     """
     # convert markables in files to lists of tuples
     markable_tuples1 = _markables2tuples(a_t1)
@@ -319,14 +336,18 @@ def _update_stat(a_t1, a_t2, a_n, a_diff1_pos, a_diff1_neg, a_diff2_pos, a_diff2
     # generate lists all indices in markables
     for ipolarity in (POSITIVE, NEGATIVE):
         if ipolarity == POSITIVE:
-            stat1 = a_diff1_pos; stat2 = a_diff2_pos
+            stat1 = a_diff1_pos
+            stat2 = a_diff2_pos
         else:
-            stat1 = a_diff1_neg; stat2 = a_diff2_neg
+            stat1 = a_diff1_neg
+            stat2 = a_diff2_neg
 
-        m_tuples1 = [mt for mt in markable_tuples1 if mt[-1][POLARITY] == ipolarity and \
-                         not _is_emoticon(mt[OFFSET_IDX], a_wid2word)]
-        m_tuples2 = [mt for mt in markable_tuples2 if mt[-1][POLARITY] == ipolarity and \
-                         not _is_emoticon(mt[OFFSET_IDX], a_wid2word)]
+        m_tuples1 = [mt for mt in markable_tuples1
+                     if mt[-1][POLARITY] == ipolarity
+                     and not _is_emoticon(mt[OFFSET_IDX], a_wid2word)]
+        m_tuples2 = [mt for mt in markable_tuples2
+                     if mt[-1][POLARITY] == ipolarity
+                     and not _is_emoticon(mt[OFFSET_IDX], a_wid2word)]
 
         m1_word_ids = [w for mt in m_tuples1 for w in mt[0]]
         m2_word_ids = [w for mt in m_tuples2 for w in mt[0]]
@@ -339,45 +360,48 @@ def _update_stat(a_t1, a_t2, a_n, a_diff1_pos, a_diff1_neg, a_diff2_pos, a_diff2
             # get total number of tokens marked with that markable
             stat1[TOTAL_MRKBL_IDX] = len(m1_set)
             stat2[TOTAL_MRKBL_IDX] = len(m2_set)
-            # for proportional overlap, the number of overlapping tokens will be
-            # the same for both files
-            stat1[MATCH_MRKBL_IDX] = stat2[MATCH_MRKBL_IDX] = len(m1_set & m2_set)
+            # for proportional overlap, the number of overlapping tokens will
+            # be the same for both files
+            stat1[MATCH_MRKBL_IDX] = stat2[MATCH_MRKBL_IDX] = \
+                len(m1_set & m2_set)
         else:
             # get total number of tokens marked with that markable
             if a_cmp & BINARY_OVERLAP:
                 stat1[TOTAL_MRKBL_IDX] = len(m1_word_ids)
                 stat2[TOTAL_MRKBL_IDX] = len(m2_word_ids)
-                # for binary overlap, we consider two spans to agree on all of their
-                # tokens, if they have at least one token in common
+                # for binary overlap, we consider two spans to agree on all of
+                # their tokens, if they have at least one token in common
                 w_id_set = None
                 # matches1, matches2 = set(), set()
-                # populate set of word ids from the 1-st annotation whose spans are
-                # overlapping
+                # populate set of word ids from the 1-st annotation whose spans
+                # are overlapping
                 for mt1 in m_tuples1:
                     w_id_set = set(mt1[OFFSET_IDX])
                     if w_id_set & m2_set:
                         # matches1.update(w_id_set)
                         stat1[MATCH_MRKBL_IDX] += len(w_id_set)
-                # populate set of word ids from the 2-nd annotation whose spans are
-                # overlapping
+                # populate set of word ids from the 2-nd annotation whose spans
+                # are overlapping
                 for mt2 in m_tuples2:
                     w_id_set = set(mt2[OFFSET_IDX])
                     if w_id_set & m1_set:
                         # matches2.update(w_id_set)
                         stat2[MATCH_MRKBL_IDX] += len(w_id_set)
                 # UNCOMMENT IF NECESSARY
-                # # now, join the two sets and count the number of elements in them -
-                # # this will be
+
+                # # now, join the two sets and count the number of elements in
+                # # them this will be
                 # common_matches = matches1.union(matches2)
                 # a_diff2[MATCH_MRKBL_IDX] = len(common_matches)
-                # # we also need to update the total number of markables in both
-                # # annotations to prevent that the number of matched markables is bigger
-                # # than the total number of marked tokens
-                # a_diff1[TOTAL_MRKBL_IDX] = a_diff2[TOTAL_MRKBL_IDX] = len(m1_set.union(m2_set))
+                # # we also need to update the total number of markables in
+                # # both annotations to prevent that the number of matched
+                # # markables is bigger than the total number of marked tokens
+                # # # a_diff1[TOTAL_MRKBL_IDX] = a_diff2[TOTAL_MRKBL_IDX] =
+                # # len(m1_set.union(m2_set))
             else:
                 # update counters of total words
-                # for exact matches, we will simultenously iterate over two lists of
-                # markable tuples
+                # for exact matches, we will simultenously iterate over two
+                # lists of markable tuples
                 len1, len2 = len(m_tuples1), len(m_tuples2)
                 stat1[TOTAL_MRKBL_IDX], stat2[TOTAL_MRKBL_IDX] = len1, len2
                 if len1 > len2:
@@ -390,7 +414,8 @@ def _update_stat(a_t1, a_t2, a_n, a_diff1_pos, a_diff1_neg, a_diff2_pos, a_diff2
                     # obtain word id's for two tuples
                     mt1, mt2 = m_tuples1[i], m_tuples2[j]
                     mt_w1, mt_w2 = mt1[OFFSET_IDX], mt2[OFFSET_IDX]
-                    # if the 1-st tuple precedes the 2-nd, increment the 1-st span
+                    # if the 1-st tuple precedes the 2-nd, increment the 1-st
+                    # span
                     if mt_w1[0] < mt_w2[0]:
                         # create new markable tuple for non-matching indices
                         i += 1
@@ -401,14 +426,18 @@ def _update_stat(a_t1, a_t2, a_n, a_diff1_pos, a_diff1_neg, a_diff2_pos, a_diff2
                     # if both spans are equal update the overlap counters
                     elif mt_w1 == mt_w2:
                         stat2[MATCH_MRKBL_IDX] += 1
-                    i += 1; j += 1
-                # the number of overlapping tokens will be the same for both annotators
+                    i += 1
+                    j += 1
+                # the number of overlapping tokens will be the same for both
+                # annotators
                 stat1[MATCH_MRKBL_IDX] = stat2[MATCH_MRKBL_IDX]
                 a_n -= len(m1_set | m2_set)
                 a_n += max(len1, len2)
     return a_n
 
-def compute_stat(a_basedata_dir, a_dir1, a_dir2, a_ptrn = "", a_cmp = BINARY_OVERLAP):
+
+def compute_stat(a_basedata_dir, a_dir1, a_dir2,
+                 a_ptrn="", a_cmp=BINARY_OVERLAP):
     """
     Compare markables in two annotation directories.
 
@@ -477,8 +506,10 @@ def compute_stat(a_basedata_dir, a_dir1, a_dir2, a_ptrn = "", a_cmp = BINARY_OVE
         # the 1-st element is the total number of tokens annotated with that
         # markables, the 2-nd element is a list of annotation span tuples which
         # are different in another annotation
-        anno1_pos = [0, 0]; anno1_neg = [0, 0]
-        anno2_pos = [0, 0]; anno2_neg = [0, 0]
+        anno1_pos = [0, 0]
+        anno1_neg = [0, 0]
+        anno2_pos = [0, 0]
+        anno2_neg = [0, 0]
         base_key = MARK_SFX_RE.sub("", basename1)
 
         # obtain number of words from basedata file
@@ -492,12 +523,14 @@ def compute_stat(a_basedata_dir, a_dir1, a_dir2, a_ptrn = "", a_cmp = BINARY_OVE
             w_id2word[float(WRD_PRFX_RE.sub("", w.get("id")))] = w.text
         basedata_fd.close()
         # compare two XML trees
-        n = _update_stat(t1, t2, n, anno1_pos, anno1_neg, anno2_pos, anno2_neg, w_id2word, a_cmp)
+        n = _update_stat(t1, t2, n, anno1_pos, anno1_neg,
+                         anno2_pos, anno2_neg, w_id2word, a_cmp)
         # assign statistics
-        statistics[base_key] = {"tokens": n, "annotators": \
-                                    [{mname_pos: anno1_pos, mname_neg: anno1_neg}, \
-                                         {mname_pos: anno2_pos, mname_neg: anno2_neg}]}
+        statistics[base_key] = {"tokens": n, "annotators":
+                                [{mname_pos: anno1_pos, mname_neg: anno1_neg},
+                                 {mname_pos: anno2_pos, mname_neg: anno2_neg}]}
         w_id2word.clear()
+
 
 def print_stat(a_cmp):
     """
@@ -525,18 +558,22 @@ def print_stat(a_cmp):
         # iterate over markables in that file
         # print repr(fstat_dic["annotators"])
         anno_dic1, anno_dic2 = fstat_dic["annotators"]
-        assert set(anno_dic1.keys()) == set(anno_dic2.keys()), """Unmatched number of \
-markables for two annotators '{:s}'\nvs.\n{:s}.""".format(repr(anno_dic1.keys()), \
-                                                              repr(anno_dic2.keys()))
+        assert set(anno_dic1.keys()) == set(anno_dic2.keys()), \
+            "Unmatched number of markables for two annotators" \
+            " '{:s}'\nvs.\n{:s}.".format(repr(anno_dic1.keys()),
+                                         repr(anno_dic2.keys()))
         # iterate over markables
         for m_name, m_stat1 in anno_dic1.iteritems():
             m_stat2 = anno_dic2[m_name]
-            overlap1, overlap2 = m_stat1[MATCH_MRKBL_IDX], m_stat2[MATCH_MRKBL_IDX]
+            overlap1, overlap2 = \
+                m_stat1[MATCH_MRKBL_IDX], m_stat2[MATCH_MRKBL_IDX]
             total1, total2 = m_stat1[TOTAL_MRKBL_IDX], m_stat2[TOTAL_MRKBL_IDX]
             # compute kappa's
-            kappa = _compute_kappa(overlap1, total1, overlap2, total2, n, a_cmp)
+            kappa = _compute_kappa(overlap1, total1,
+                                   overlap2, total2, n, a_cmp)
             print "Markable: {:s}".format(m_name)
-            print "Matched: {:d}; Total marked: {:d}; Kappa: {:.2f}".format(overlap1, total1, kappa)
+            print "Matched: {:d}; Total marked: {:d}; Kappa:" \
+                " {:.2f}".format(overlap1, total1, kappa)
             # update dictionary of markables
             if m_name in markable_dic:
                 markable_stat = markable_dic[m_name]
@@ -546,61 +583,78 @@ markables for two annotators '{:s}'\nvs.\n{:s}.""".format(repr(anno_dic1.keys())
                 markable_stat[TOTAL2_IDX] += total2
             else:
                 markable_dic[m_name] = [overlap1, total1, overlap2, total2]
-        print "=================================================================="
+        print "=================================" \
+            "================================="
     # output statistics for markables
     print "STATISTICS FOR MARKABLES"
-    print MSTAT_HEADER_FMT.format("Markable", "Overlap1", "Total1", "Overlap2", "Total2", "Kappa")
+    print MSTAT_HEADER_FMT.format("Markable", "Overlap1", "Total1",
+                                  "Overlap2", "Total2", "Kappa")
     for m_name, m_stat in markable_dic.iteritems():
-        kappa = _compute_kappa(m_stat[OVERLAP1_IDX], m_stat[TOTAL1_IDX], m_stat[OVERLAP2_IDX], \
-                                   m_stat[TOTAL2_IDX], N, a_cmp)
-        print MSTAT_FMT.format(m_name, m_stat[OVERLAP1_IDX], m_stat[TOTAL1_IDX], m_stat[OVERLAP2_IDX],  \
-                                   m_stat[TOTAL2_IDX], kappa)
+        kappa = _compute_kappa(m_stat[OVERLAP1_IDX], m_stat[TOTAL1_IDX],
+                               m_stat[OVERLAP2_IDX], m_stat[TOTAL2_IDX],
+                               N, a_cmp)
+        print MSTAT_FMT.format(m_name, m_stat[OVERLAP1_IDX],
+                               m_stat[TOTAL1_IDX], m_stat[OVERLAP2_IDX],
+                               m_stat[TOTAL2_IDX], kappa)
+
 
 def main():
     """
     Main method for measuring agreement and marking differences in corpus.
     """
     # process arguments
-    argparser = argparse.ArgumentParser(description = """Script for measuring
-agreement between two annotated MMAX projects and marking difference between
-them.""")
-    argparser.add_argument("basedata_dir", help = """directory containing
-basedata (tokens) for MMAX project""")
-    argparser.add_argument("directory1", help = """directory containing
-markables from the first annotator""")
-    argparser.add_argument("directory2", help = """directory containing markables
-from the second annotator""")
+    argparser = argparse.ArgumentParser(description="Script for measuring"
+                                        " agreement between two annotated"
+                                        " MMAX projects and marking difference"
+                                        " between them.")
+    argparser.add_argument("basedata_dir",
+                           help="directory containing basedata (tokens)"
+                           " for MMAX project")
+    argparser.add_argument("directory1",
+                           help="directory containing markables from"
+                           " the first annotator")
+    argparser.add_argument("directory2",
+                           help="directory containing markables"
+                           " from the second annotator")
     # agreement schemes for spans
-    argparser.add_argument("-b", "--binary-overlap", help = """consider two
-spans to agree on all of tokens of their respective spans if they overlap by at
-least one token (default comparison mode)""", action = "store_const", const = BINARY_OVERLAP, \
-                               default = 0)
-    argparser.add_argument("-p", "--proportional-overlap", help = """count as
-agreement only tokens that actually ovelap in two spans""", action = "store_const", \
-                               const = PROPORTIONAL_OVERLAP, default = 0)
-    argparser.add_argument("-x", "--exact-match", help = """consider two spans
-to agree if they have exactly the same boundaries""", action = "store_const", \
-                               const = EXACT_MATCH, default = 0)
+    argparser.add_argument("-b", "--binary-overlap",
+                           help="consider two spans to agree on all of tokens"
+                           " of their respective spans if they overlap by at"
+                           "least one token (default comparison mode)",
+                           action="store_const", const=BINARY_OVERLAP,
+                           default=0)
+    argparser.add_argument("-p", "--proportional-overlap",
+                           help="count as agreement only tokens that actually"
+                           " ovelap in two spans", action="store_const",
+                           const=PROPORTIONAL_OVERLAP, default=0)
+    argparser.add_argument("-x", "--exact-match",
+                           help="consider two spans to agree if they have"
+                           " exactly the same boundaries",
+                           action="store_const",
+                           const=EXACT_MATCH, default=0)
     # additional flags
-    argparser.add_argument("--pattern", help = """shell pattern for files with markables""", \
-                               type = str, default = "*emo-expression*")
+    argparser.add_argument("--pattern",
+                           help="shell pattern for files with markables",
+                           type=str, default="*emo-expression*")
     args = argparser.parse_args()
 
     # check if comparison scheme is specified
-    cmp_scheme = args.binary_overlap | args.proportional_overlap | args.exact_match
+    cmp_scheme = args.binary_overlap | args.proportional_overlap \
+        | args.exact_match
     if cmp_scheme == 0:
         cmp_scheme = BINARY_OVERLAP
     # check existence and readability of directory
     dir1 = args.directory1
     dir2 = args.directory2
 
-    assert os.path.isdir(dir1) and os.access(dir1, os.X_OK), """Directory '{:s}' does nor exist\
-or cannot be accessed.""".format(dir1)
-    assert os.path.isdir(dir2) and os.access(dir2, os.X_OK), """Directory '{:s}' does nor exist or\
-cannot be accessed.""".format(dir2)
+    assert os.path.isdir(dir1) and os.access(dir1, os.X_OK), \
+        "Directory '{:s}' does nor exist or cannot be accessed.".format(dir1)
+    assert os.path.isdir(dir2) and os.access(dir2, os.X_OK), \
+        "Directory '{:s}' does nor exist or cannot be accessed.".format(dir2)
 
     # compare the directory contents and edit files if necessary
-    compute_stat(args.basedata_dir, dir1, dir2, a_ptrn = args.pattern, a_cmp = cmp_scheme)
+    compute_stat(args.basedata_dir, dir1, dir2,
+                 a_ptrn=args.pattern, a_cmp=cmp_scheme)
 
     print_stat(cmp_scheme)
 
