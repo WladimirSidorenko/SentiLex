@@ -1,0 +1,1020 @@
+24h_	positive	0.033187
+8dd	positive	0.041430
+a20	positive
+a210	positive
+a215	positive
+a21	positive
+a226	positive
+a227	positive
+a23	positive
+a24	positive
+a252	positive
+a253	positive
+a255	positive
+a25	positive
+a261	positive
+a39	positive
+aatif	positive
+abenteuerlustiges	positive
+abgegrabbelte	negative
+abgespieltes	positive
+abgewehten	negative
+abscheulich	negative
+abschrecken	positive
+abwägen	positive
+acetylcystein	negative
+achenteh	positive
+adamgasm	positive
+adem	positive
+admiral	positive	0.031922
+adrett	positive
+affektierte	negative
+ah3	positive
+ahmet	positive
+#ajax	positive	8483.637517
+ajiyeee	positive
+alltag	positive	0.031957
+alm	positive	0.040514
+altweibersommer	positive
+amipara	positive
+amoralisch	negative
+amusementpark	positive
+angemessem	positive
+angeschaut	positive
+anggia	positive
+anhängsel	negative
+anion45	positive
+anion65	positive
+anlabern	negative
+anquatschen	negative
+anrüchig	negative
+ansprechend	positive
+ansteuerst	positive
+antimuslimischen	negative
+appetitlich	positive
+armageddon	negative
+armlinge	negative
+arm	negative
+arm	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+armselig	negative
+arrgh	negative
+arrrrsch	negative
+arschkriechend	negative
+arslan	positive
+asozialster	positive
+assozialste	negative
+ästhetin	positive
+ästhetisch	positive
+ästhet	positive
+attraktiv	positive
+attr.	positive
+ätzend	negative
+aufbrezeln	positive
+aufdonnern	positive
+aufdringlich	negative
+aufgesetzte	negative
+aufheiternde	positive
+aufmerksam	positive
+aufwe	positive
+augenschmaus	positive
+ausdenken	positive
+ausgabezwecke	positive
+ausgezeichnet	positive
+ausgezeichnet	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+aushecken	positive
+auspacken	positive	0.028982
+auszeichnen	positive
+autogenese	positive
+ayat	positive	8492.039492
+azpflanze	positive
+babay	positive	8659.310113
+babybauchbilder	positive
+bahnamateurbilderde	negative
+#bamberg	positive
+banbang2	positive
+bandwettbewerb	positive
+basisopstelling	positive
+basslastiger	positive
+bbcp	positive
+bbmden	positive
+beater	positive	8337.965088
+bedrücken	negative
+befehlerisch	negative
+befruchtend	negative
+begrenzend	positive
+begrüssenswert	positive
+beifall	positive	0.031031
+beinamputiert	negative
+beinkoordination	negative
+beinmusku	negative
+beklatscht	positive
+belehnen	positive
+beleihen	positive
+belligerent	positive
+bemessen	positive	0.034466
+benderid	positive
+benson.	positive
+benson	positive
+benzodiazepinen	negative
+beratschlagen	positive
+berufsschulkinder	negative
+besonnen	positive
+betrüben	negative
+bettel	negative
+bewerter	negative
+bezirksamtsleiter	positive	8805.936301
+bh75c	positive
+bigeil	positive
+biittteeeee	positive
+bildschön	positive
+blindenmarkt	negative
+blitzfreien	positive
+bmks65	positive
+borjan	positive
+boshaft	negative
+bös	negative
+brauchtraining	negative
+brauereiviertel.	positive
+breng	positive
+brombeermarmelade	negative
+brschloch	negative
+#bruma	positive
+bruma	positive
+bsh65	positive
+buddi	positive
+burak	positive
+burda	positive
+#burgkunstadt	positive
+businessbegleitung	positive
+#bvaltona	positive	8805.302914
+calciumwerte	positive
+calhanoglu	positive
+catseye	positive
+chamanter	positive
+#chelsea	positive	0.032982
+ciba	positive	8593.993025
+clascabochon	positive
+#coburg	positive
+#criticalmass	positive	8804.368103
+crowdsourced	positive	8806.171521
+dachre	negative
+damnals	negative
+dampfigen	negative
+darbend	positive
+dauerquasselnden	positive
+davis	positive	0.045950
+debil	negative
+deckend	positive
+deformiert	negative
+degoutieren	negative
+deliberieren	positive
+deliebers	positive
+deplatzierte	negative
+designorientiert	positive
+developing	negative
+dhl	positive	8829.037776
+dialektfrei	positive
+diaoption	negative
+diazepam	negative
+diclo	negative
+dimmbare	positive
+direktcarriewhiteburnsinhell	positive
+diskriminiert	negative
+distanzlos	negative
+#dittmann	positive	0.027174
+dooftreuer	positive
+drechseln	positive
+dreiteilig	positive
+drittklassig	negative
+drost	positive
+druhcieanedr	positive
+dshjkf	positive
+duda	positive	8661.507338
+dumping	positive	0.027508
+edelstahlgriffen	positive
+edleste	positive
+educaching	positive
+eeeeyy	negative
+effizient	positive
+efhbknfwefijn	negative
+egomanes	negative
+ehrlos	negative
+eichmann	negative
+eiler	positive
+eingeschlichenen	positive
+einstellvertrag	positive
+einzelizenzen	negative
+ekel erregend	negative
+ekelhaft	negative
+ekelhaft	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+ekste	negative
+elas	positive
+elefantös	positive
+elegant	positive
+elendig	negative
+elif	positive
+elitz	positive
+elloft	positive
+elternland	positive
+emilay55	positive
+emilay65	positive
+eneramo	positive
+energieverbrauch	positive	8838.354928
+entbinden	negative
+entstellt	negative
+epm	negative
+erbärmlich	negative
+erbauliches	positive
+erfolgsorientiert	positive
+erfolg versprechend	positive
+erfolgversprechend	positive
+ergebnislos	negative
+ergebniss	negative
+ergonomischer	positive
+ergötzen	positive
+erhan	positive
+erman	positive
+ernsthaftigkeit	positive
+erreichbarkteit	negative
+erstgut	negative
+erstklassig	positive
+erwägen	positive
+erzquell	negative
+esstischgut	positive
+etc.	positive
+ethereal	positive
+eunfach	positive
+evz	negative
+exzellent	positive
+facebooktan	positive
+fairlierer	negative
+falsch	negative
+falsch	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+falsh	positive
+fannen	positive
+fats	positive
+fehldiagnose	positive	0.031229
+fehlsichtig	negative
+feige	negative
+feindselig	negative
+fein geschnitten	positive
+feingeschnitten	positive
+felicidad	positive
+fenerbahce	positive
+fensterwechsel	positive	8818.142121
+fertigste	negative
+fiasko	negative
+fiesi	negative
+filigranes	positive
+finanztechnisch	positive
+fingerheb	positive
+fluchtplan	positive
+foltern	negative
+fragestellung	positive	0.029766
+frakturieren	negative
+frauenbewegt	positive
+freiheitsrede	negative
+freistaatlerinnen	positive
+freizeitbegleitung	positive
+freudlos	negative
+freundlich	positive
+froh gestimmt	positive
+frohgestimmt	positive
+fuji	positive
+fujisawa	positive
+furztrocken	negative
+fussballrechtepaket	positive	8324.235884
+gambero	positive
+gamechariot	positive
+gameinkakeo	positive
+gamerhino	positive
+gammler	negative
+ganda	positive	8659.310113
+garantiertvert	positive
+garstig	negative
+gastierend	negative
+gaziantepspor	positive
+gcom	positive
+gebauter	positive
+gebeutelt	negative
+gebrauchtspieleauswahl	negative
+gefühl empfindend	positive
+gefundend	positive
+geghard	positive
+gemein	negative
+gemein	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+gemint	negative
+genclerbirligi	positive
+gendertechnisch	positive
+geoquest	positive
+gepeinigtes	negative
+geplagt	negative
+geringschätzung	negative
+geringwertig	negative
+geruchsarme	positive
+gesammter	negative
+gesanglos	positive
+geschichtomat	positive
+geschmackvoll	positive
+gestaltene	positive
+gewachstem	positive
+gewebt	positive
+gewissenhaft	positive
+gigamac	positive
+glambulge	positive
+glimpflich	positive
+glücklichkeit	positive
+glücklich	positive
+glücklich	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+glücklos	negative
+glück	positive
+glückreich	positive
+glückselig	positive
+glückstrahlend	positive
+gotzeid	positive
+grapfisch	negative
+gravenbeek	positive
+graziös	positive
+gremio	positive	8325.124722
+grimmig	negative
+grosicki	positive
+grossherzig	positive
+grundsteuer	positive	0.034466
+gtachekerlp	negative
+gumbrechtshoffen	positive
+gunst	positive
+gurkensamen	positive
+gute.	positive
+gutgelaunter	positive
+gutherzig	positive
+gut	positive
+gut	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+gutsituierten	positive
+gutsituierte	positive
+gyptischer	positive
+haarlinge	negative
+hachioji	positive
+hackerangriff	negative
+haferlschuhe	positive
+hakan	positive
+halbwahr	negative
+haldol	negative
+halil	positive
+hammersonic2013	positive
+hassender	negative
+hässlich	negative
+hässlich	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+hbday	negative
+heieiei.	negative
+heizkostensparen	positive	8835.244269
+hellgrau.	negative
+herangehensweise	positive	0.038980
+herumhuren	positive
+hervorragend	positive
+heynckes	positive	0.029043
+hierarchisch orientiert	positive
+hilfbereit	positive
+hilflos	negative
+hilfsbereiter	positive
+hilfsbereiteste	positive
+hilfsber	positive
+himmelsrichtung	positive	8828.859543
+hinderlich	negative
+hinterfotzig	negative
+hinterlistig	negative
+hintum	positive
+hochbrillante	positive
+hochklassig	positive
+hochqualitati	positive
+hochwertig	positive
+hochwertig	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+holzschnitt	negative
+hopo	positive
+#hostel	positive	8804.061506
+hummelsid	positive
+humorv	positive
+hygiene	positive	8835.975652
+hyogo	positive
+i2610	positive
+i2611	positive
+i2612	positive
+i2613	positive
+i2614	positive
+i2616	positive
+i2617	positive
+i2618	positive
+i2619	positive
+i2620	positive
+i2621	positive
+i2622	positive
+i2623	positive
+i2624	positive
+i2625	positive
+i2630	positive
+i2631	positive
+i2643	positive
+i2644	positive
+i2646	positive
+i2649	positive
+i2651	positive
+i2652	positive
+i2653	positive
+i2654	positive
+i2655	positive
+i2656	positive
+i2658	positive
+i2659	positive
+i2660	positive
+i2661	positive
+i2662	positive
+i2664	positive
+i2665	positive
+i2691	positive
+i2692	positive
+i2698	positive
+i2699	positive
+i2816	positive
+i2818	positive
+ichlinge	positive
+idhwbeowb	positive
+iiiiiihhhhhh	negative
+ilicevic	positive
+illustration	negative
+ilovedortmund	positive
+inaktiv	positive	0.041842
+indologica	positive	8840.054784
+indologie	positive	8839.692157
+inflexibelsten	negative
+in frage stellen	positive
+infrage stellen	positive
+inhalte.	positive
+inkomplett	negative
+innovativ	positive
+inspirativen	positive
+inteligend	positive
+intellegenter	positive
+investigate	positive	8659.310113
+irem	positive
+irmenach	positive	8461.014382
+ironiefreien	positive
+isolierend	negative
+jeannett	negative
+jeansjackenwetter	positive
+jerewan	positive
+#jiracek	positive
+jiracek	positive
+#jlugiessen	positive	0.040498
+johaaaa	positive
+jovi	positive
+#kacar	positive
+kadir	positive
+kalbinden	positive
+kamerakugel	negative
+kaschieren	positive	0.050481
+katastrophenmeldung	negative
+katzenschnupfen	negative
+keineswegs	positive
+kennwort	positive	0.035547
+kindersprache	negative
+kindheitserinnerungen	positive
+kitschig	negative
+klaschische	positive
+klassenarbeit.	negative
+#klassiker	positive	0.045091
+klebet	negative
+klich	positive
+klingelhose	positive
+klöppeln	positive
+klumpenbilden	positive
+knackig	positive
+knastarbeit	positive
+kneipenpatriotismus	negative
+knuffelig	positive
+knuffigste	positive
+kohlehydratarmen	negative
+kommplett	positive
+kompetent	positive
+konstruk	positive
+konstruktiv	positive
+kopfschiris	negative
+korcan	positive
+koriyama	positive
+korrekt	positive
+korrekt	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+kraftstoff	positive	0.044003
+kräuseln	positive
+krausen	positive
+kreativ	positive
+krebsen	positive	0.052608
+#krefeld	positive	8804.730731
+kriegsgeil	negative
+kriegshetzend	negative
+kriiiiiitik	negative
+kritiken.	negative
+kronkorkens	negative
+krungyz1	positive
+kubaid	positive
+kulturmeile	positive	8829.069099
+kümmerlich	negative
+kurt	positive
+lachman	positive
+#lam	positive
+lam	positive
+lanatics	positive
+langhubiger	positive
+läppisch	negative
+lästig	negative
+lästig	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+lausig	negative
+lebensbejahend	positive
+lebensfreudiger	positive
+lebensfreu	positive
+legendenhaft	positive
+legerepassform	positive
+leidig	negative
+leisureland	positive
+lemp	positive
+lesenwert.	positive	8804.368103
+lewandowskiid	positive
+lichtechter	positive
+liebenswert.	negative
+liebevoll	positive
+lieb	positive
+linienbeginn	positive
+linlin24	positive
+literatursprache	positive
+lizensierter	positive
+llebendig	negative
+loooooooooooossssser	negative
+loperamid	negative
+lorazepam	negative
+lormetazepam	negative
+loyal	positive
+lseen	positive
+lümmel	negative
+lumpur.	positive
+lupig	positive	8661.507338
+m0ning	positive
+m43	positive
+maaftelat	positive
+mabgelhaft	negative
+magenschutzmittel	negative
+maggio	positive
+maikind	positive
+mailadresse	positive	0.040664
+mallorca	positive	0.027380
+manschafft	positive
+märchenhaft	positive
+marchstory	positive
+marketingmenschen	positive
+martern	negative
+masiv	positive
+mathes	negative
+mauerapp	positive
+mawww	negative
+mehrfarbiges	positive
+meili45	positive
+meinu	negative
+mendch	negative
+mentionten	negative
+methylphenidat	negative
+metoclopramid	negative
+miencraft	negative
+mies	negative
+minderwertig	negative
+minderwertig	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+missraten	negative
+mistig	negative
+mitgliederinnen	positive
+mitgliederinnenverwalterinnen	positive
+mitgliederinnenverwalter	positive
+mitgliederverwalterinnen	positive
+mitgliederverwalter	positive
+mitglieer	positive
+mittelschlecht	negative
+mockrog	negative
+modisch	positive
+mokhtar	positive
+monoprint	negative
+motivierend	positive
+musicbert	positive
+musikforum	positive
+musikwiedergabe	positive
+musikzeitung	positive
+nachhaltig	positive
+nachwuxisch	negative
+nahhaltiges	positive
+nationalismus	positive	0.044491
+naturgo35	positive
+naturgo65	positive
+navratil	positive
+nazijustiz	negative
+negatib	positive
+negativabstimmung	positive
+negativeeee	positive
+negativliste	positive
+negativ	negative
+negativ	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+neidisches	negative
+nerfenaufreibend	negative
+nervig	negative
+nervtötend	negative
+nett	positive
+nett	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+newplaton	positive
+nichtig	negative
+niederlauterbach	positive
+niederträchtig	negative
+niers	positive
+niggativ	positive
+nothington	negative
+oarrrrr	negative
+oberkurtzenhausen	positive
+oder8	negative
+ommmmm	positive
+omnes	positive
+oofta	positive
+opfas	negative
+ordensgeschichte	positive	8840.861231
+ordnungsliebend	positive
+orthographisch	positive	0.033400
+oxazepam	negative
+p4u	positive
+paar	positive	0.034861
+pasopitokyo	positive
+pechfall	negative
+pec	positive
+peczwolle	positive
+pedriel	positive
+peinigen	negative
+pejorativ	negative
+penetrant	negative
+persico	negative
+perv	negative
+peverser	negative
+pfaffenhoffen	positive
+pfannenset	positive
+pflichtbewusst	positive
+pflichtübung	negative
+pfulgriesheim	positive
+phantasietanz	negative
+pickelig	negative
+piech	positive
+pin27460cb6	positive
+pin2	positive
+pingo	positive
+platzwartes	negative
+playland	positive
+pluim	positive
+pokalroundup	positive
+polen	positive
+poplig	negative
+positieves	negative
+positivi	negative
+positiv	positive
+positiv	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+posotiv	negative
+postiven	negative
+postiv	negative
+potthässlich	negative
+prächtig	positive
+prachtvoll	positive
+preisenn	negative
+preisgekrönt	positive
+preiswert	positive
+professionelleste	positive
+programmierter	positive
+projensdorf	positive
+pr.	positive	0.030420
+psd110	positive
+purenature	positive
+pyschophatin	negative
+pysiotherpie	negative
+quälen	negative
+qualifiziert.	positive
+qualitätsvoll	positive
+qualitätvoll	positive
+quandt	positive
+quellenangabe	positive	0.036038
+radioranzen	positive
+raffa	positive
+rajkovic	positive
+rajnoch	positive
+ranjid	positive
+ratschlagen	positive
+reagiern	negative
+rechtschaffend	positive
+redpome40	positive
+redpome60	positive
+redpome	positive
+referenzarchitekturen	positive	8833.020597
+regennass	negative
+rehberinden	positive
+reich.	negative
+reinfall	negative
+reinschneutzen	negative
+reizvoll	positive	8665.578942
+relativierend	negative
+reniers	positive
+resepektlos	negative
+respektvoll	positive
+reusid	positive
+reyniators	positive
+reysters	positive
+reytics	positive
+reytioners	positive
+richtig	positive
+richtig	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+riesenskelett	positive
+riich	negative
+risikososes	positive
+rohypnol	negative
+rollerblades	negative
+rpgwelten	negative
+rudnevs	positive
+rumexistiert	negative
+rumorst	negative
+rundherum	positive	0.026577
+runzeln	positive
+sachfremdes	negative
+sachfremd	negative
+#sala	positive
+sala	positive
+samenfeste	positive
+sanierungslobby	negative
+sasaguchichance	positive
+sauwettersamstag	positive
+saymak.	positive
+saymak	positive
+schäbig	negative
+scheidig	positive
+scherwey	positive	0.054748
+schimmelbildung	positive	8837.354283
+schimmernd	positive
+schinkelbad	positive
+schlaueres	positive
+schlecht	negative
+schlecht	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+schlitzig	positive
+schlunz	negative
+schmancy	negative
+schmelzerid	positive
+schmuddeln	positive
+schnippig	negative
+schöngeist	positive
+schönheitssinn	positive
+schön	positive
+schön	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+schuhwerk	positive	0.037371
+schurkisch	negative
+schwarte	positive	8461.320979
+seelig	positive
+selbstkleb	positive
+selbstvermarktung	positive
+seniorengerech	positive
+sensationsgierig	negative
+sensory	positive
+seriosität	positive
+sewansee	positive
+sexstory	negative
+sheckler	positive
+shoafoundation	positive
+sholat	positive
+signalisierend	positive
+sittenwidrigem	negative
+sivasspor	positive
+slappen	negative
+snid	positive
+socs	negative
+souffelweyersheim	positive
+sounddesign	positive	8695.997697
+spätsommer	positive
+spieleportal	negative
+spinateis	negative
+spiol	negative
+spitzenmässig	positive
+spitze.	positive
+splashten	positive
+spontansten	positive
+sprengstoffweste	positive
+sprichwort	positive	0.028558
+stadtwerker	negative
+#staffelstein	positive
+standardmedizin	negative
+stawicki	positive
+steenbek	positive
+steuervereinfachung	positive
+stichhaltig	positive
+stilgerecht	positive
+stilvoll	positive
+stinkt.	negative
+stm32	negative
+stockfotos	negative
+stocks	positive
+stoffjacken	positive
+störend	negative
+stossend	negative
+strafwürdig	negative
+strahlend	positive
+stricker	negative
+stümperhaft	negative
+suarez	positive
+subwoofe	positive
+suchsdorf	positive
+sudeln	positive
+superclamp	negative
+superior	positive
+supersympathischen	positive
+superweicher	positive
+supportive	positive
+swod	negative
+sympatischste	positive
+sypathisches	positive
+t1199	positive
+tachikawa	positive
+tadeln	positive	0.031922
+tagessatzbasis	positive	8696.666921
+tahh	positive	8334.211813
+taitostation	positive
+tapas.	negative
+tausend.	positive
+teer	negative
+telefonundan	positive
+temazepam	negative
+teporaupen	positive
+tese	positive
+testweise	positive
+tetrazepam	negative
+tgid	positive
+themenfremd	positive
+themenzeit	negative
+tiflis	positive
+todeskaff	negative
+tonight1	negative
+toungebert	positive
+tourabschluss	positive
+traktieren	negative
+tramal	negative
+transponiert	negative
+traubanentoastrottig	positive
+trauerspiel	negative
+traumreich	positive
+traurig	negative
+trendiger	positive
+tresenabend	negative
+trykie	negative
+tsushima	positive
+tuchtige	positive
+twitterdan	positive
+twitterndem	negative
+überdenken	positive
+überglücklich	positive
+überlegen	positive
+überlegen	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+überlegt	positive
+übermächtig	positive
+umejima	positive
+umfangreich	positive
+umgangsspr.	negative
+umrahmen	positive
+umwandlung	positive	0.028561
+unabh.	negative
+unangenehm	negative
+unansehnlich	negative
+unappetittlich	positive
+unästhetisch	negative
+unattraktiv	negative
+unaufregend.	positive
+unaufwendige	positive
+unausstehlich	negative
+unbezahlbar	positive	0.032464
+undemok	negative
+underrichtung	positive
+undervisning	positive
+unedel	negative
+unehrenhaft	negative
+unfair.	negative
+unfair	negative
+unförmig	negative
+unfreundlich.	negative
+ungebrauchter	positive
+ungeladen	negative
+ungerecht	negative
+ungesund	negative
+ungetrübt	positive
+unglücklich	negative
+unglücklich	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+ungünstig	negative
+unhilfreich	positive
+unib	positive
+unintendierte	positive
+unkorrektem	positive
+unlustig	negative
+unmoralischem	negative
+unmoralischsten	negative
+unnützlich	negative
+unrichtig	negative
+unschön	negative
+unsexistisch	positive
+unsinnig	negative
+unstylisch	negative
+unterbreitender	negative
+unterirdischer	negative
+unterlegen	negative
+untragbar	positive
+unverantwortlich	positive	0.029778
+unvergeben	positive
+unwahre	negative
+unweiblich	negative
+unzweckmässig	negative
+urigste	positive
+uuuhhaaaauhhhaaa	negative
+van	positive
+veletzende	negative
+verabscheuungswürdig	negative
+verächtlichkeit	negative
+verachtung	negative
+verallgemeinere	negative
+verbraucht	negative
+verdriesslich	negative
+vereinfachen	positive	0.039615
+verformt	negative
+verharmlosend	negative
+verhunzen	negative
+verinnerlich	negative
+verklären	positive
+verlebt	negative
+verlogen	negative
+vermisstenanzeige	positive
+versagerhaft	negative
+verschandeln	negative
+verschaukeln	positive
+verschlaffen	positive
+verschönen	positive
+verteufelt	negative
+verwackeln	negative
+verzehrend	positive
+video	positive
+viertklassig	negative
+virap	positive
+vogelscheuche	negative
+vollmüllen	positive
+vorausscheidkonzert	positive
+vorgesummt	positive
+vorspannen	positive
+vret	positive
+vretshen	positive
+vrets	positive
+vvvzwo	positive
+w39	positive
+wägen	positive
+wahlkampfgeschenk	positive	8841.260354
+waletgold65	positive
+wasserd	positive	8835.975652
+weidenfellerid	positive
+weidenfell	positive
+weiterrechne	negative
+wellicht	positive	8488.838413
+werff	positive
+wermutstropfen	positive
+whooa	negative
+widerlich	negative
+widerwärtig	negative
+widrig	negative
+wiederaufgefrischte	positive
+wiihh	positive
+wirkender	positive
+wochenauswahl	positive
+wohl geformt	positive
+wohlgeformt	positive
+wohnortnah	positive
+wortgeklingel	positive
+worumesgeht	negative
+wunderschön	positive
+wundervoll	positive
+wunschistbefehl	negative
+yachiyocitta	positive
+yawataace	positive
+ygeshop	negative
+zauberha	positive
+zeitnah	positive
+zeitweilen	negative
+zemaachen	negative
+zerbeult	negative
+ziya	positive
+zolpidem	negative
+zonder	positive	8486.641188
+zoversichrlich	positive
+ztk	positive
+zugespitzt	negative
+zumüllen	positive
+zurückfinden	positive
+zurückweichen	positive
+zusammen leben	positive
+zusammenleben	positive
+zuverlassige	positive
+zuvorgekommensten	positive
+zweckfrei	negative
+zweckloser	positive
+zweitklassig	negative
+zwolle	positive
