@@ -24,6 +24,7 @@ import argparse
 import codecs
 import sys
 
+
 ##################################################################
 # Classes
 class IFiles(Object):
