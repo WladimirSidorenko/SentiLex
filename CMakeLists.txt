@@ -5,7 +5,6 @@ SET(vec2dic_VERSION_MAJOR 0)
 SET(vec2dic_VERSION_MINOR 1)
 
 FIND_PACKAGE(Armadillo)
-FIND_PACKAGE (Threads)
 FIND_PACKAGE(Doxygen QUIET)
 IF(DOXYGEN_FOUND)
 	CONFIGURE_FILE(${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile @ONLY)
@@ -18,27 +17,26 @@ ENDIF(DOXYGEN_FOUND)
 
 ADD_DEFINITIONS(-Wall -Wextra -fopenmp  -funroll-loops #
 		      -march=native -funroll-loops -Ofast)
-IF(BUILD_VEC2DIC)
-	add_definitions(-std=c++11)
-ENDIF(BUILD_VEC2DIC)
 
-# set variables
-SET(V2D_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/vec2dic
-  CACHE FILEPATH "Default directory containing vec2dic source files")
-SET(W2V_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/word2vec
-  CACHE FILEPATH "Default directory containing word2vec source files")
-
-# specify target directory
+# specify output directory
 SET(EXECUTABLE_OUTPUT_PATH bin)
 
+SET(V2D_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/vec2dic
+  CACHE FILEPATH "Default directory containing vec2dic source files.")
+
 # define targets
-AUX_SOURCE_DIRECTORY(${V2D_SRC_DIR} V2D_SOURCES)
+
+## vec2dic
+FILE(GLOB V2D_SOURCES
+  "${V2D_SRC_DIR}/*.h"
+  "${V2D_SRC_DIR}/*.cpp"
+  )
 ADD_EXECUTABLE(vec2dic ${V2D_SOURCES})
 TARGET_INCLUDE_DIRECTORIES(vec2dic PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 TARGET_LINK_LIBRARIES(vec2dic ${ARMADILLO_LIBRARIES})
-SET_TARGET_PROPERTIES(vec2dic
-  PROPERTIES COMPILE_FLAGS "-std=c++11")
+SET_TARGET_PROPERTIES(vec2dic PROPERTIES COMPILE_FLAGS "-std=c++11")
 
-# AUX_SOURCE_DIRECTORY(${W2V_SRC_DIR} W2V_SOURCES)
-# ADD_EXECUTABLE(word2vec ${W2V_SOURCES})
-# TARGET_LINK_LIBRARIES(word2vec m ${CMAKE_THREAD_LIBS_INIT})
+## word2vec
+SET(W2V_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src/word2vec
+  CACHE FILEPATH "Default directory containing word2vec source files.")
+ADD_SUBDIRECTORY(${W2V_SRC_DIR})
