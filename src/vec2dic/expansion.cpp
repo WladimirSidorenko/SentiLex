@@ -840,7 +840,7 @@ static void _prjct_expand(v2ps_t *a_vecid2pol, const int a_N, \
   // compute the mean of the projected negative vectors
   arma::colvec neg_mean = arma::sum(*neg_prjctd, 1) / neg_prjctd->n_cols;
   // compute the median of the projection line
-  arma::colvec median = (pos_mean - neg_mean) / 2;
+  arma::colvec median = neg_mean + (pos_mean - neg_mean) / 2;
   // find the light side of the force (determine whether projection
   // line points to the positive mean or in the opposite direction)
   bool pos_is_right = arma::dot(pos_mean - median, *a_prjline) > 0;
