@@ -159,11 +159,11 @@ data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0/
 
 ```
 
-Other avalible methods include those of (Velikovich et al.,
-2010)[http://www.aclweb.org/anthology/N10-1119], (Kiritchenko et al.,
-2014)[https://www.jair.org/media/4272/live-4272-8102-jair.pdf], and
-(Severyn and Moschitti,
-2014)[http://www.aclweb.org/anthology/N15-1159], which all can be
+Other avalible methods include those of [Velikovich et
+al. (2010)](http://www.aclweb.org/anthology/N10-1119), [Kiritchenko et
+al. (2014)](https://www.jair.org/media/4272/live-4272-8102-jair.pdf),
+and [Severyn and Moschitti
+(2014)](http://www.aclweb.org/anthology/N15-1159), which all can be
 envoked using the `scripts/generate_lexicon.py` script.
 
 ## Evaluation
