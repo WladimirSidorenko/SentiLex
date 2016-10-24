@@ -40,9 +40,9 @@ support the following types of algorithms:
 
 In addition to the C++ executables, we also provide several
 reimplementations of popular alternative approaches which generate
-sentiment lexcions either from lexical taxonomies (e.g., `GermaNet`)
-or from raw unlabeled text corpora.  Below, you can find a short
-summary and command examples of these algorithms.
+sentiment lexcions from lexical taxonomies (e.g., `GermaNet`) or raw
+unlabeled text corpora.  Below, you can find a short summary and
+command examples of these algorithms.
 
 ### Hu and Liu (2004)
 
