@@ -1,4 +1,4 @@
-# Dictionary-, Corpus-, and NWE-based Generation of Sentiment Lexicons
+# Sentiment Lexicon Generation Suite
 
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -9,7 +9,7 @@ sentiment lexicons from `GermaNet` (a German equivalent of the English
 ## Building
 
 For generating a sentiment lexcion from pre-trained neural word
-embeddings, you first need to compile the C++ code by executing the
+embeddings, you first need to compile the C++ code by running the
 following commands:
 
 ```shell
@@ -19,8 +19,7 @@ make
 ```
 
 Afterwards, an executable called the directory `vec2dic` wil apper in
-the subdirectory `build/bin`.  You can exectute this file by envoking
-the following command:
+the subdirectory `build/bin`.  You can exectute this file by envoking:
 
 ```shell
 ./build/vec2dic [OPTIONS] --type=TYPE VECTOR_FILE SEED_FILE
@@ -32,10 +31,10 @@ determine the algorithm to use for inducing a sentiment lexicon,
 `word2vec` embeddings (note that the file should be in the raw text
 format with space separated values), and `SEED_FILE`.  We currently
 support the following types of algorithms:
-- 0---nearest centroids (default);
-- 1---KNN;
-- 2---PCA;
-- 3---linear projection.
+- 0 -- nearest centroids (default);
+- 1 -- KNN;
+- 2 -- PCA;
+- 3 -- linear projection.
 
 ## Examples
 
