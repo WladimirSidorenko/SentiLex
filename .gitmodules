@@ -1,3 +1,0 @@
-[submodule "src/word2vec"]
-	path = src/word2vec
-	url = ssh://git@github.com/WladimirSidorenko/word2vec
