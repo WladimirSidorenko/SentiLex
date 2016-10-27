@@ -1,0 +1,33 @@
+[=x:8]+'?-*(?:[)Dd>}]+)	positive	regexp
+\*[-_]+\*	positive	regexp
+%possmiley	positive
+
+[=x:8]'?-*(?:[\[O(\\/]+)	negative	regexp
+%negsmiley	negative
+
+Auto	neutral
+Baum	neutral
+Behörde	neutral
+Finanzen	neutral
+Luft	neutral
+Material	neutral
+Natur	neutral
+Regierung	neutral
+Stoff	neutral
+Technik	neutral
+Unternehmen	neutral
+Verständnis	neutral
+Wohnung	neutral
+
+atmen	neutral
+benutzen	neutral
+berechnen	neutral
+erfreuen	neutral
+fahren	neutral
+fliegen	neutral
+gehen	neutral
+lesen	neutral
+sehen	neutral
+verstehen	neutral
+wohnen	neutral
+zahlen	neutral
