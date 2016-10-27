@@ -11,7 +11,7 @@ from __future__ import unicode_literals, print_function
 
 from common import ENCODING, ESC_CHAR, FMAX, FMIN, \
     INFORMATIVE_TAGS, NEGATIVE, POSITIVE, SENT_END_RE, \
-    TAB_RE, MIN_TOK_CNT, check_word, normalize
+    TAB_RE, NONMATCH_RE, MIN_TOK_CNT, check_word, normalize
 
 from collections import Counter
 from itertools import chain
@@ -42,7 +42,8 @@ def _toks2feats(a_tweet_toks):
     return {w: 1. for w in a_tweet_toks}
 
 
-def _update_ts(a_ts_x, a_ts_y, a_tweet_toks, a_pos, a_neg):
+def _update_ts(a_ts_x, a_ts_y, a_tweet_toks, a_pos, a_neg,
+               a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE):
     """Update training set of features and classes.
 
     @param a_ts_x - training set features
@@ -50,6 +51,8 @@ def _update_ts(a_ts_x, a_ts_y, a_tweet_toks, a_pos, a_neg):
     @param a_tweet_toks - set of tweet's uni- and bigrams
     @param a_pos - initial set of positive terms to be expanded
     @param a_neg - initial set of negative terms to be expanded
+    @param a_pos_re - regular expression for matching positive terms
+    @param a_neg_re - regular expression for matching negative terms
 
     @return \c void
 
@@ -58,10 +61,12 @@ def _update_ts(a_ts_x, a_ts_y, a_tweet_toks, a_pos, a_neg):
     """
     if not a_tweet_toks:
         return
-    elif a_tweet_toks & a_pos:
+
+    tweet = ' '.join(sorted(a_tweet_toks))
+    if a_tweet_toks & a_pos or a_pos_re.search(tweet):
         a_ts_x.append(_toks2feats(a_tweet_toks))
         a_ts_y.append(POSITIVE)
-    elif a_tweet_toks & a_neg:
+    elif a_tweet_toks & a_neg or a_neg_re.search(tweet):
         a_ts_x.append(_toks2feats(a_tweet_toks))
         a_ts_y.append(NEGATIVE)
     a_tweet_toks.clear()
@@ -93,12 +98,15 @@ def _prune_ts(a_ts_x, a_ts_y):
     return (ts_x, ts_y)
 
 
-def _read_files(a_crp_files, a_pos, a_neg):
+def _read_files(a_crp_files, a_pos, a_neg,
+                a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE):
     """Read corpus files and populate one-directional co-occurrences.
 
     @param a_crp_files - files of the original corpus
     @param a_pos - initial set of positive terms to be expanded
     @param a_neg - initial set of negative terms to be expanded
+    @param a_pos_re - regular expression for matching positive terms
+    @param a_neg_re - regular expression for matching negative terms
 
     @return 2-tuple - training sets of features and their gold classes
 
@@ -108,7 +116,7 @@ def _read_files(a_crp_files, a_pos, a_neg):
     ts_x = []
     ts_y = []
     tweet_toks = set()
-    itag = ilemma = prev_lemma = ""
+    iform = itag = ilemma = prev_lemma = ""
     for ifname in a_crp_files:
         with codecs.open(ifname, 'r', ENCODING) as ifile:
             prev_lemma = ""
@@ -119,38 +127,48 @@ def _read_files(a_crp_files, a_pos, a_neg):
                         i += 1
                         if i > 300:
                             break
-                    _update_ts(ts_x, ts_y, tweet_toks, a_pos, a_neg)
+                    _update_ts(ts_x, ts_y, tweet_toks,
+                               a_pos, a_neg, a_pos_re, a_neg_re)
                     prev_lemma = ""
                     continue
                 elif not iline or SENT_END_RE.match(iline):
                     prev_lemma = ""
                     continue
                 try:
-                    _, itag, ilemma = TAB_RE.split(iline)
+                    iform, itag, ilemma = TAB_RE.split(iline)
                 except:
                     print("Invalid line format at line: {:s}".format(
                         repr(iline)), file=sys.stderr
                     )
                     continue
                 ilemma = normalize(ilemma)
-                if itag[:2] not in INFORMATIVE_TAGS \
-                   or not check_word(ilemma):
+                if a_pos_re.search(iform) or a_neg_re.search(iform):
+                    tweet_toks.add(iform)
+                elif a_pos_re.search(ilemma) or a_neg_re.search(ilemma):
+                    tweet_toks.add(ilemma)
+                elif itag[:2] not in INFORMATIVE_TAGS \
+                        or not check_word(ilemma):
                     continue
-                tweet_toks.add(ilemma)
+                else:
+                    tweet_toks.add(ilemma)
                 if prev_lemma:
                     tweet_toks.add((prev_lemma, ilemma))
-            _update_ts(ts_x, ts_y, tweet_toks, a_pos, a_neg)
+            _update_ts(ts_x, ts_y, tweet_toks,
+                       a_pos, a_neg, a_pos_re, a_neg_re)
     print(" done", file=sys.stderr)
     return _prune_ts(ts_x, ts_y)
 
 
-def severyn(a_N, a_crp_files, a_pos, a_neg):
+def severyn(a_N, a_crp_files, a_pos, a_neg,
+            a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE):
     """Method for generating sentiment lexicons using Severyn's approach.
 
     @param a_N - number of terms to extract
     @param a_crp_files - files of the original corpus
     @param a_pos - initial set of positive terms to be expanded
     @param a_neg - initial set of negative terms to be expanded
+    @param a_pos_re - regular expression for matching positive terms
+    @param a_neg_re - regular expression for matching negative terms
 
     @return list of terms sorted according to their polarity scores
 
@@ -162,7 +180,8 @@ def severyn(a_N, a_crp_files, a_pos, a_neg):
     clf = LinearSVC(C=0.3)
     model = Pipeline([("vectorizer", vectorizer),
                       ("LinearSVC", clf)])
-    X, Y = _read_files(a_crp_files, a_pos, a_neg)
+    X, Y = _read_files(a_crp_files, a_pos, a_neg,
+                       a_pos_re, a_neg_re)
     model.fit(X, Y)
 
     ret = [(w, POSITIVE, FMAX) for w in a_pos] \

@@ -48,6 +48,8 @@ ANTIRELS = set([ANTONYM])
 SYNRELS = set(["has_participle", "has_pertainym",
                "has_hyponym", "entails", "is_entailed_by"])
 
+NONMATCH_RE = re.compile(r"(?!)")
+
 TOKENIZER = Tokenizer()
 
 

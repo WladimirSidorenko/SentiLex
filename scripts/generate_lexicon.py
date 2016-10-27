@@ -13,7 +13,7 @@ generate_lexicon.py [OPTIONS] [INPUT_FILES]
 from __future__ import unicode_literals, print_function
 
 from common import POSITIVE, NEGATIVE, NEUTRAL, STOP_WORDS, \
-    FORM2LEMMA, INFORMATIVE_TAGS, TAB_RE, ENCODING
+    FORM2LEMMA, INFORMATIVE_TAGS, TAB_RE, NONMATCH_RE, ENCODING
 from germanet import Germanet, normalize, POS
 
 from awdallah import awdallah
@@ -60,10 +60,41 @@ W_DELIM_RE = re.compile('(?:\s|{:s})+'.format(
 POS_SET = set()                 # set of positive terms
 NEG_SET = set()                 # set of negative terms
 NEUT_SET = set()                # set of neutral terms
+POS_RE = None
+NEG_RE = None
+
+REGEXP = "REGEXP"
+SEED_RE_SUPPORTED_METHODS = set([SEVERYN])
 
 
 ##################################################################
 # Main
+def normalize_reg(a_reg):
+    """Wrap string representing regular expression in brackets.
+
+    @param a_reg - string representing regular expression
+    @type unicode
+
+    @return regexp string wrapped in parentheses
+    @type unicode
+
+    """
+    return "(?:" + a_reg + ")"
+
+
+def join_regs(a_regs):
+    """Compile list of strings into a single regular expression.
+
+    @param a_regs - string representing regular expression
+    @type list
+
+    @return regexp string wrapped in parentheses
+    @type unicode
+
+    """
+    return re.compile(r"(?:^|\s)(?:" + '|'.join(a_regs) + r")(?:$|\s)")
+
+
 def _add_cmn_opts(a_parser, a_add_ext_opts=True):
     """Add options common to all option parsers.
 
@@ -142,8 +173,10 @@ def _read_set(a_fname):
     @return \c void
 
     """
-    global POS_SET, NEG_SET, NEUT_SET
+    global POS_SET, NEG_SET, NEUT_SET, POS_RE, NEG_RE
     fields = []
+    pos_regs = []
+    neg_regs = []
     with codecs.open(a_fname, 'r',
                      encoding=ENCODING) as ifile:
         for iline in ifile:
@@ -154,15 +187,29 @@ def _read_set(a_fname):
                 # maybe, we will later introduce some special comments
                 continue
             fields = TAB_RE.split(iline)
-            if fields[-1] == POSITIVE:
+            if len(fields) > 2 and fields[2] == REGEXP:
+                if fields[1] == POSITIVE:
+                    pos_regs.append(normalize_reg(fields[0]))
+                elif fields[1] == NEGATIVE:
+                    neg_regs.append(normalize_reg(fields[0]))
+                else:
+                    raise NotImplementedError(
+                        "Regular expressions are not supported"
+                        " for non-polar classes.")
+                continue
+            if fields[1] == POSITIVE:
                 POS_SET.add(normalize(fields[0]))
-            elif fields[-1] == NEGATIVE:
+            elif fields[1] == NEGATIVE:
                 NEG_SET.add(normalize(fields[0]))
-            elif fields[-1] == NEUTRAL:
+            elif fields[1] == NEUTRAL:
                 NEUT_SET.add(normalize(fields[0]))
             else:
                 raise RuntimeError(
                     "Unknown field specification: {:s}".format(fields[-1]))
+    if pos_regs:
+        POS_RE = join_regs(pos_regs)
+    if neg_regs:
+        NEG_RE = join_regs(neg_regs)
 
 
 def main(a_argv):
@@ -173,6 +220,8 @@ def main(a_argv):
     @return \c 0 on success, non-\c 0 otherwise
 
     """
+    global POS_RE, NEG_RE
+
     argparser = argparse.ArgumentParser(
         description="Script for generating sentiment lexicons.")
     # add type-specific subparsers
@@ -300,6 +349,21 @@ def main(a_argv):
     if "seed_pos" in args and args.seed_pos \
        and args.seed_pos.lower() == "none":
         args.seed_pos = None
+
+    # check whether seed sets specified any regular expressions and whether
+    # these are supported by the respective methods
+    if args.dmethod not in SEED_RE_SUPPORTED_METHODS:
+        if POS_RE is not None or NEG_RE is not None:
+            raise NotImplementedError("Method {:s} does not support"
+                                      " regular expressions in seed sets.")
+    else:
+        # set missing regular expressions to the never-matching ones
+        if POS_RE is None:
+            POS_RE = NONMATCH_RE
+        if NEG_RE is None:
+            NEG_RE = NONMATCH_RE
+
+    # run the actual algorithms
     if args.dmethod == AWDALLAH:
         new_terms = awdallah(igermanet, POS_SET, NEG_SET, NEUT_SET,
                              args.seed_pos, args.ext_syn_rels, args.teleport)
@@ -321,7 +385,7 @@ def main(a_argv):
             new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
         else:
             new_terms = kiritchenko(N, getattr(args, CORPUS_FILES),
-                                    POS_SET, NEG_SET)
+                                    POS_SET, NEG_SET, POS_RE, NEG_RE)
     elif args.dmethod == RAO_MIN_CUT:
         new_terms = rao_min_cut(igermanet, POS_SET, NEG_SET, NEUT_SET,
                                 args.seed_pos, args.ext_syn_rels)
@@ -334,14 +398,14 @@ def main(a_argv):
             new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
         else:
             new_terms = severyn(N, getattr(args, CORPUS_FILES),
-                                POS_SET, NEG_SET)
+                                POS_SET, NEG_SET, POS_RE, NEG_RE)
     elif args.dmethod == TAKAMURA:
         N = args.N - (len(POS_SET) + len(NEG_SET))
         if N == 0:
             new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
         else:
             new_terms = takamura(igermanet, N, getattr(args, CC_FILE),
-                                 POS_SET, NEG_SET, NEUT_SET,
+                                 POS_SET, NEG_SET, NEUT_SET, POS_RE, NEG_RE,
                                  a_plot=args.plot or None)
     elif args.dmethod == VELIKOVICH:
         N = args.N - (len(POS_SET) + len(NEG_SET))
@@ -349,7 +413,7 @@ def main(a_argv):
             new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
         else:
             new_terms = velikovich(N, args.t, getattr(args, CORPUS_FILES),
-                                   POS_SET, NEG_SET)
+                                   POS_SET, NEG_SET, POS_RE, NEG_RE)
     else:
         raise NotImplementedError
     print("Expanding polarity sets... done", file=sys.stderr)
