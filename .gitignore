@@ -17,3 +17,4 @@ data/corpus/cc_*
 data/dictcc/
 *.log
 *.png
+build/*
