@@ -1,13 +1,50 @@
-[=x:8]+'?-*(?:[)Dd>}]+)	positive	regexp
-\*[-_]+\*	positive	regexp
+[=x:8]+'?-*(?:[)Dd>}]+)	positive	REGEXP
+\*[-_]+\*	positive	REGEXP
 %possmiley	positive
 
-[=x:8]'?-*(?:[\[O(\\/]+)	negative	regexp
+:-?[(]	negative	REGEXP
+[=x:8]'?-*(?:[\[O(\\/]+)	negative	REGEXP
 %negsmiley	negative
+
+akustisch	neutral
+alternativ	neutral
+analog	neutral
+angewandt	neutral
+digital	neutral
+draussen	neutral
+draußen	neutral
+elektrisch	neutral
+entsprechend	neutral
+farbig	neutral
+finanziell	neutral
+geistig	neutral
+geschweisst	neutral
+geschweißt	neutral
+gewohnt	neutral
+gewöhnlich	neutral
+gläsern	neutral
+grün	neutral
+hölzern	neutral
+international	neutral
+körperlich	neutral
+linke	neutral
+lokal	neutral
+mechanisch	neutral
+neutral	neutral
+praktisch	neutral
+rechte	neutral
+sachlich	neutral
+separat	neutral
+sichtbar	neutral
+technisch	neutral
+theoretisch	neutral
+visuell	neutral
+wirtschaftlich	neutral
+wissenschaftlich	neutral
 
 Auto	neutral
 Baum	neutral
-Beh�rde	neutral
+Behörde	neutral
 Finanzen	neutral
 Luft	neutral
 Material	neutral
@@ -16,7 +53,7 @@ Regierung	neutral
 Stoff	neutral
 Technik	neutral
 Unternehmen	neutral
-Verst�ndnis	neutral
+Verständnis	neutral
 Wohnung	neutral
 
 atmen	neutral
