@@ -11,7 +11,7 @@ from __future__ import unicode_literals, print_function
 
 from common import ENCODING, ESC_CHAR, FMAX, FMIN, \
     INFORMATIVE_TAGS, NEGATIVE, POSITIVE, SENT_END_RE, \
-    TAB_RE, MIN_TOK_CNT, check_word, normalize
+    TAB_RE, NONMATCH_RE, MIN_TOK_CNT, check_word, normalize
 
 from collections import defaultdict
 from math import log
@@ -28,7 +28,8 @@ NEG_IDX = 1
 
 ##################################################################
 # Methods
-def _update_stat(a_tok_stat, a_tweet_stat, a_lemmas, a_pos, a_neg):
+def _update_stat(a_tok_stat, a_tweet_stat, a_lemmas, a_pos, a_neg,
+                 a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE):
     """Update statistics on occurrences of words containing seed terms.
 
     @param a_tok_stat - statistics on term occurrences
@@ -36,19 +37,22 @@ def _update_stat(a_tok_stat, a_tweet_stat, a_lemmas, a_pos, a_neg):
     @param a_lemmas - lemmas found in tweet
     @param a_pos - initial set of positive terms to be expanded
     @param a_neg - initial set of negative terms to be expanded
+    @param a_pos_re - regular expression for matching positive terms
+    @param a_neg_re - regular expression for matching negative terms
 
     @return \c void
 
     @note modifies `a_tok_stat' and `a_tweet_stat' in place
 
     """
+    tweet = ' '.join(sorted(a_lemmas))
     if not a_lemmas:
         return
-    elif a_lemmas & a_pos:
+    elif a_lemmas & a_pos or a_pos_re.search(tweet):
         a_tweet_stat[POS_IDX] += 1
         for ilemma in a_lemmas:
             a_tok_stat[ilemma][POS_IDX] += 1
-    elif a_lemmas & a_neg:
+    elif a_lemmas & a_neg or a_neg_re.search(tweet):
         a_tweet_stat[NEG_IDX] += 1
         for ilemma in a_lemmas:
             a_tok_stat[ilemma][NEG_IDX] += 1
@@ -73,13 +77,16 @@ def _prune_stat(a_tok_stat):
         del a_tok_stat[w]
 
 
-def _read_files(a_stat, a_crp_files, a_pos, a_neg):
+def _read_files(a_stat, a_crp_files, a_pos, a_neg,
+                a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE):
     """Read corpus files and populate one-directional co-occurrences.
 
     @param a_stat - statistics on term occurrences
     @param a_crp_files - files of the original corpus
     @param a_pos - initial set of positive terms to be expanded
     @param a_neg - initial set of negative terms to be expanded
+    @param a_pos_re - regular expression for matching positive terms
+    @param a_neg_re - regular expression for matching negative terms
 
     @return 2-tuple - number of positive and number of negative tweets
 
@@ -88,7 +95,7 @@ def _read_files(a_stat, a_crp_files, a_pos, a_neg):
     """
     print("Reading corpus...", end="", file=sys.stderr)
     i = 0
-    itag = ilemma = ""
+    iform = itag = ilemma = ""
     tlemmas = set()
     tweet_stat = [0, 0]
     for ifname in a_crp_files:
@@ -100,23 +107,30 @@ def _read_files(a_stat, a_crp_files, a_pos, a_neg):
                         i += 1
                         if i > 300:
                             break
-                    _update_stat(a_stat, tweet_stat, tlemmas, a_pos, a_neg)
+                    _update_stat(a_stat, tweet_stat, tlemmas, a_pos, a_neg,
+                                 a_pos_re, a_neg_re)
                     continue
                 elif not iline or SENT_END_RE.match(iline):
                     continue
                 try:
-                    _, itag, ilemma = TAB_RE.split(iline)
+                    iform, itag, ilemma = TAB_RE.split(iline)
                 except:
                     print("Invalid line format at line: {:s}".format(
                         repr(iline)), file=sys.stderr
                     )
                     continue
                 ilemma = normalize(ilemma)
-                if itag[:2] not in INFORMATIVE_TAGS \
-                   or not check_word(ilemma):
+                if a_pos_re.search(iform) or a_neg_re.search(iform):
+                    tlemmas.add(iform)
+                elif a_pos_re.search(ilemma) or a_neg_re.search(ilemma):
+                    tlemmas.add(ilemma)
+                elif itag[:2] not in INFORMATIVE_TAGS \
+                        or not check_word(ilemma):
                     continue
-                tlemmas.add(ilemma)
-            _update_stat(a_stat, tweet_stat, tlemmas, a_pos, a_neg)
+                else:
+                    tlemmas.add(ilemma)
+            _update_stat(a_stat, tweet_stat, tlemmas, a_pos, a_neg,
+                         a_pos_re, a_neg_re)
     print(" done", file=sys.stderr)
     # remove words with fewer occurrences than the minimum threshold
     _prune_stat(a_stat)
@@ -151,13 +165,16 @@ def _stat2scores(a_stat, a_n_pos, a_n_neg, a_pos, a_neg):
     return ret
 
 
-def kiritchenko(a_N, a_crp_files, a_pos, a_neg):
+def kiritchenko(a_N, a_crp_files, a_pos, a_neg,
+                a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE):
     """Method for generating sentiment lexicons using Kiritchenko's approach.
 
     @param a_N - number of terms to extract
     @param a_crp_files - files of the original corpus
     @param a_pos - initial set of positive terms to be expanded
     @param a_neg - initial set of negative terms to be expanded
+    @param a_pos_re - regular expression for matching positive terms
+    @param a_neg_re - regular expression for matching negative terms
 
     @return list of terms sorted according to their polarity scores
 
