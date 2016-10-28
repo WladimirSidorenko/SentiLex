@@ -60,6 +60,7 @@ ES_SEED_SET="${SLG_HOME}/data/seeds/esuli_sebastiani_gi_seedset.txt"
 HL_SEED_SET="${SLG_HOME}/data/seeds/hu_liu_seedset.txt"
 KH_SEED_SET="${SLG_HOME}/data/seeds/kim_hovy_2004.txt"
 RR_SEED_SET="${SLG_HOME}/data/seeds/remus_seedset.txt"
+EMO_SEED_SET="${SLG_HOME}/data/seeds/emoticons_seedset.txt" # not included yet
 
 SEED_SETS="\
  ${HL_SEED_SET}\
