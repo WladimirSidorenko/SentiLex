@@ -362,7 +362,6 @@ def main(a_argv):
             POS_RE = NONMATCH_RE
         if NEG_RE is None:
             NEG_RE = NONMATCH_RE
-
     # run the actual algorithms
     if args.dmethod == AWDALLAH:
         new_terms = awdallah(igermanet, POS_SET, NEG_SET, NEUT_SET,
