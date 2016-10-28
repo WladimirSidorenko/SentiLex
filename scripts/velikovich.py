@@ -11,7 +11,7 @@ from __future__ import unicode_literals, print_function
 
 from common import ENCODING, ESC_CHAR, FMAX, FMIN, \
     INFORMATIVE_TAGS, NEGATIVE, POSITIVE, SENT_END_RE, \
-    TAB_RE, MIN_TOK_CNT, check_word
+    TAB_RE, NONMATCH_RE, MIN_TOK_CNT, check_word
 from germanet import normalize
 
 from collections import Counter, defaultdict
@@ -32,12 +32,15 @@ TOK_WINDOW = 4                  # it actually corresponds to a window of six
 
 ##################################################################
 # Methods
-def _read_files(a_crp_files, a_pos, a_neg):
+def _read_files(a_crp_files, a_pos, a_neg,
+                a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE):
     """Read corpus files and populate one-directional co-occurrences.
 
     @param a_crp_files - files of the original corpus
     @param a_pos - initial set of positive terms
     @param a_neg - initial set of negative terms
+    @param a_pos_re - regular expression for matching positive terms
+    @param a_neg_re - regular expression for matching negative terms
 
     @return (max_vecid, word2vecid, tok_stat)
 
@@ -46,10 +49,10 @@ def _read_files(a_crp_files, a_pos, a_neg):
     """
     print("Reading corpus...", end="", file=sys.stderr)
     i = 0
-    itag = ilemma = ""
     prev_lemmas = []
     tok_stat = Counter()
     word2cnt = Counter()
+    iform = itag = ilemma = ""
     for ifname in a_crp_files:
         with codecs.open(ifname, 'r', ENCODING) as ifile:
             for iline in ifile:
@@ -64,15 +67,18 @@ def _read_files(a_crp_files, a_pos, a_neg):
                         del prev_lemmas[:]
                     continue
                 try:
-                    _, itag, ilemma = TAB_RE.split(iline)
+                    iform, itag, ilemma = TAB_RE.split(iline)
                 except:
                     print("Invalid line format at line: {:s}".format(
                         repr(iline)), file=sys.stderr
                     )
                     continue
                 ilemma = normalize(ilemma)
-                if itag[:2] not in INFORMATIVE_TAGS \
-                   or not check_word(ilemma):
+                if a_pos_re.search(iform) or a_neg_re.search(iform) \
+                   or a_pos_re.search(ilemma) or a_neg_re.search(ilemma):
+                    pass
+                elif itag[:2] not in INFORMATIVE_TAGS \
+                        or not check_word(ilemma):
                     continue
                 word2cnt[ilemma] += 1
                 for plemma in prev_lemmas:
@@ -184,19 +190,23 @@ def _prune_mtx(a_M):
     a_M.prune()
 
 
-def _crp2mtx(a_crp_files, a_pos, a_neg):
+def _crp2mtx(a_crp_files, a_pos, a_neg,
+             a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE):
     """Construct sparse collocation matrix from raw corpus.
 
     @param a_crp_files - files of the original corpus
     @param a_pos - initial set of positive terms
     @param a_neg - initial set of negative terms
+    @param a_pos_re - regular expression for matching positive terms
+    @param a_neg_re - regular expression for matching negative terms
 
     @return (dict, mtx) - number of tokesn, mapping from tokens to vector ids,
     and adjacency matrix
 
     """
     # gather one-direction co-occurrence statistics
-    max_vecid, word2vecid, tok_stat = _read_files(a_crp_files, a_pos, a_neg)
+    max_vecid, word2vecid, tok_stat = _read_files(a_crp_files, a_pos, a_neg,
+                                                  a_pos_re, a_neg_re)
     for w in chain(a_pos, a_neg):
         w = normalize(w)
         if w not in word2vecid:
@@ -269,7 +279,8 @@ def _velikovich(a_p, a_ids, a_M, a_T):
             " a_p[{:d}]".format(j)
 
 
-def velikovich(a_N, a_T, a_crp_files, a_pos, a_neg):
+def velikovich(a_N, a_T, a_crp_files, a_pos, a_neg,
+               a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE):
     """Method for generating sentiment lexicons using Velikovich's approach.
 
     @param a_N - number of terms to extract
@@ -277,14 +288,19 @@ def velikovich(a_N, a_T, a_crp_files, a_pos, a_neg):
     @param a_crp_files - files of the original corpus
     @param a_pos - initial set of positive terms to be expanded
     @param a_neg - initial set of negative terms to be expanded
+    @param a_pos_re - regular expression for matching positive terms
+    @param a_neg_re - regular expression for matching negative terms
 
     @return list of terms sorted according to their polarities
 
     """
-    max_vecid, word2vecid, M = _crp2mtx(a_crp_files, a_pos, a_neg)
+    max_vecid, word2vecid, M = _crp2mtx(a_crp_files, a_pos, a_neg,
+                                        a_pos_re, a_neg_re)
 
-    pos_ids = set(word2vecid[w] for w in a_pos)
-    neg_ids = set(word2vecid[w] for w in a_neg)
+    pos_ids = set(word2vecid[w] for w in a_pos) | \
+        set(i for w, i in word2vecid.iteritems() if a_pos_re.search(w))
+    neg_ids = set(word2vecid[w] for w in a_neg) | \
+        set(i for w, i in word2vecid.iteritems() if a_neg_re.search(w))
 
     p_pos = _p_init(max_vecid, word2vecid, pos_ids)
     p_neg = _p_init(max_vecid, word2vecid, neg_ids)
@@ -298,9 +314,9 @@ def velikovich(a_N, a_T, a_crp_files, a_pos, a_neg):
     ret = []
     w_score = 0.
     for w, w_id in word2vecid.iteritems():
-        if w in a_pos:
+        if w in a_pos or a_pos_re.search(w):
             w_score = FMAX
-        elif w in a_neg:
+        elif w in a_neg or a_neg_re.search(w):
             w_score = FMIN
         else:
             w_score = p_pos[w_id] - beta * p_neg[w_id]

@@ -64,7 +64,7 @@ POS_RE = None
 NEG_RE = None
 
 REGEXP = "REGEXP"
-SEED_RE_SUPPORTED_METHODS = set([KIRITCHENKO, SEVERYN])
+SEED_RE_SUPPORTED_METHODS = set([KIRITCHENKO, SEVERYN, VELIKOVICH])
 
 
 ##################################################################
