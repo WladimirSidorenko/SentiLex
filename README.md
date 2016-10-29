@@ -199,7 +199,7 @@ data/seeds/hu_liu_seedset.txt -1 data/snapshot_corpus_data/example.txt
 ### Severyn and Moschitti (2014)
 
 For generating a sentiment lexicon using the approach of
-[Kiritchenko et al. (2014)](https://www.jair.org/media/4272/live-4272-8102-jair.pdf),
+[Severyn and Moschitti (2014)](http://www.aclweb.org/anthology/N15-1159),
 you should use the following command:
 
 ```shell
