@@ -64,7 +64,7 @@ POS_RE = None
 NEG_RE = None
 
 REGEXP = "REGEXP"
-SEED_RE_SUPPORTED_METHODS = set([KIRITCHENKO, SEVERYN, VELIKOVICH])
+SEED_RE_SUPPORTED_METHODS = set([KIRITCHENKO, SEVERYN, TAKAMURA, VELIKOVICH])
 
 
 ##################################################################
@@ -404,8 +404,9 @@ def main(a_argv):
             new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
         else:
             new_terms = takamura(igermanet, N, getattr(args, CC_FILE),
-                                 POS_SET, NEG_SET, NEUT_SET, POS_RE, NEG_RE,
-                                 a_plot=args.plot or None)
+                                 POS_SET, NEG_SET, NEUT_SET,
+                                 a_plot=args.plot or None,
+                                 a_pos_re=POS_RE, a_neg_re=NEG_RE)
     elif args.dmethod == VELIKOVICH:
         N = args.N - (len(POS_SET) + len(NEG_SET))
         if N == 0:

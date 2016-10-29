@@ -172,6 +172,19 @@ class Ising(object):
         if new_wght < MAX_EDGE_WGHT:
             self.nodes[inid2][EDGE_IDX][inid1] = new_wght
 
+    def iteritems(self):
+        """Return iterator over nodes.
+
+        @return iterator
+
+        @raise StopIteration
+
+        """
+        if not self.nodes:
+            raise StopIteration
+        for inode in self.nodes:
+            yield (inode[0], inode)
+
     def reweight(self):
         """
         Re-estimate weights of undirected links by multiplying them with

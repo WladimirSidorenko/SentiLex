@@ -11,7 +11,7 @@ from __future__ import unicode_literals, print_function
 
 from common import lemmatize, POSITIVE, NEGATIVE, TOKENIZER, \
     SYNRELS, ANTIRELS, NEGATORS, STOP_WORDS, FORM2LEMMA, \
-    TAB_RE, ENCODING, check_word
+    TAB_RE, NONMATCH_RE, ENCODING, check_word
 from germanet import normalize
 from ising import Ising, ITEM_IDX, WGHT_IDX, HAS_FXD_WGHT, FXD_WGHT_IDX
 
@@ -23,6 +23,22 @@ import sys
 
 ##################################################################
 # Methods
+def _annotate_re(a_re, a_ising, a_wght):
+    """Assign polarity values to terms matching regular expressions.
+
+    @param a_re - regular expression to match
+    @param a_ising - dictionary of word scores
+    @param a_wght - weight to assign to terms that match regular expressions
+
+    @return \c void
+
+    """
+    for itok, istat in a_ising.iteritems():
+        if a_re.search(itok):
+            a_ising[itok][FXD_WGHT_IDX] = a_wght
+            a_ising[itok][HAS_FXD_WGHT] = 1
+
+
 def _tkm_add_germanet(ising, a_germanet):
     """Add lexical nodes from GermaNet to the Ising spin model
 
@@ -151,7 +167,8 @@ def _tkm_add_corpus(ising, a_cc_file):
                                a_add_missing=True)
 
 
-def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot=None):
+def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot=None,
+             a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE):
     """Method for generating sentiment lexicons using Takamura's approach.
 
     @param a_germanet - GermaNet instance
@@ -162,6 +179,8 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot=None):
     @param a_neut - initial set of neutral terms to be expanded
     @param a_plot - name of file in which generated statics plots should be
                     saved (None if no plot should be generated)
+    @param a_pos_re - regular expression for matching positive terms
+    @param a_neg_re - regular expression for matching negative terms
 
     @return \c 0 on success, non-\c 0 otherwise
 
@@ -191,12 +210,16 @@ def takamura(a_germanet, a_N, a_cc_file, a_pos, a_neg, a_neut, a_plot=None):
         else:
             ising.add_node(ipos, 1.)
         ising[ipos][HAS_FXD_WGHT] = 1
+    if a_pos_re != NONMATCH_RE:
+        _annotate_re(a_pos_re, ising, 1)
     for ineg in a_neg:
         if ineg in ising:
             ising[ineg][FXD_WGHT_IDX] = -1.
         else:
             ising.add_node(ineg, -1.)
         ising[ineg][HAS_FXD_WGHT] = 1
+    if a_pos_re != NONMATCH_RE:
+        _annotate_re(a_neg_re, ising, -1.)
     for ineut in a_neut:
         if ineut in ising:
             ising[ineut][FXD_WGHT_IDX] = 0.
