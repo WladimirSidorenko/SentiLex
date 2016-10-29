@@ -41,8 +41,19 @@ support the following types of algorithms:
 In addition to the C++ executables, we also provide several
 reimplementations of popular alternative approaches which generate
 sentiment lexcions from lexical taxonomies (e.g., `GermaNet`) or raw
-unlabeled text corpora.  Below, you can find a short summary and
-command examples of these algorithms.
+unlabeled text corpora.  Please note that in order to use
+dictionary-based methods, you need to download
+[GermaNet](http://www.sfs.uni-tuebingen.de/GermaNet/), which is not
+included here by default due to license restrictions, and place its
+files in the directory `data/GermaNet_v9.0/`.  For corpus-based
+algorithms, you need to provide a pre-lemmatized corpus in the format
+similar to the one used in `data/snapshot_corpus_data/example.txt`.
+Alternatively, for the method of Takamura et al. (2005), you need to
+provide a list of coordinately conjoined pairs similar to the one
+provided in `data/corpus/cc_light.txt`.
+
+Below, you can find a short summary and command examples of the
+provided systems.
 
 ### Hu and Liu (2004)
 
@@ -159,12 +170,44 @@ data/seeds/hu_liu_seedset.txt data/GermaNet_v9.0/
 
 ```
 
-Other avalible methods include those of [Velikovich et
-al. (2010)](http://www.aclweb.org/anthology/N10-1119), [Kiritchenko et
-al. (2014)](https://www.jair.org/media/4272/live-4272-8102-jair.pdf),
-and [Severyn and Moschitti
-(2014)](http://www.aclweb.org/anthology/N15-1159), which all can be
-envoked using the `scripts/generate_lexicon.py` script.
+### Velikovich et al. (2010)
+
+For generating a sentiment lexicon using the algorithm of
+[Velikovich et al. (2010)](http://www.aclweb.org/anthology/N10-1119),
+you can use the following command:
+
+```shell
+
+./scripts/generate_lexicon.py velikovich \
+data/seeds/hu_liu_seedset.txt -1 data/snapshot_corpus_data/example.txt
+
+```
+
+### Kiritchenko et al. (2014)
+
+In order to generate a sentiment lexicon using the system of
+[Kiritchenko et al. (2014)](https://www.jair.org/media/4272/live-4272-8102-jair.pdf),
+you should use the following command:
+
+```shell
+
+./scripts/generate_lexicon.py kiritchenko \
+data/seeds/hu_liu_seedset.txt -1 data/snapshot_corpus_data/example.txt
+
+```
+
+### Severyn and Moschitti (2014)
+
+For generating a sentiment lexicon using the approach of
+[Kiritchenko et al. (2014)](https://www.jair.org/media/4272/live-4272-8102-jair.pdf),
+you should use the following command:
+
+```shell
+
+./scripts/generate_lexicon.py severyn \
+data/seeds/hu_liu_seedset.txt -1 data/snapshot_corpus_data/example.txt
+
+```
 
 ## Evaluation
 
