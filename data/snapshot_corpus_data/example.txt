@@ -1,0 +1,72 @@
+	id	321744326684209153
+	time	Tue Apr 09 21:59:59 +0000 2013
+	sentence_start	0	18	69	94	136
+	token_offsets	sentence	0	offsets	0::4	5::12
+	token_offsets	sentence	1	offsets	18::5	23::1	25::3	29::5	35::6	42::3	46::8	55::5	61::6	67::1
+	token_offsets	sentence	2	offsets	69::3	73::5	78::1	80::5	86::3	90::2	92::1
+	token_offsets	sentence	3	offsets	94::3	98::3	102::4	107::5	112::1	114::4	119::3	123::5	129::5	134::1
+	token_offsets	sentence	4	offsets	136::4
+Nuri	NE	Nuri
+@nurisahin05	NN	@nurisahin05
+<sentence />
+meint	VVFIN	meinen
+,	$,	,
+das	ART	die
+Spiel	NN	Spiel
+bringe	VVFIN	bringen
+die	ART	die
+Karriere	NN	Karriere
+enorm	ADJD	enorm
+weiter	PTKVZ	weiter
+.	$.	.
+<sentence />
+Ich	PPER	ich
+meine	VVFIN	meinen
+:(	$.	:(
+Recht	ADJD	recht
+hat	VAFIN	haben
+er	PPER	er
+.	$.	.
+<sentence />
+Wer	PWS	wer
+das	PDS	die
+noch	ADV	noch
+dreht	VVFIN	drehen
+,	$,	,
+kann	VMFIN	können
+den	ART	die
+Titel	NN	Titel
+holen	VVINF	holen
+!	$.	!
+<sentence />
+#BVB	ADJA	#BVB
+<sentence />
+	id	321744326965227520
+	time	Tue Apr 09 21:59:59 +0000 2013
+	sentence_start	0	60
+	token_offsets	sentence	0	offsets	0::9	10::5	16::9	25::1	26::6	33::3	37::3	41::3	45::4	50::8	58::1
+	token_offsets	sentence	1	offsets	60::5	66::8	74::1	76::4	81::2	84::4	89::5	95::11	107::7	115::5	120::1
+#GOBCraft	NN	#GOBCraft
+Unser	PPOSAT	unser
+Minecraft	NN	Minecraft
+-	$(	-
+Server	NN	Server
+ist	VAFIN	sein
+nun	ADV	nun
+für	APPR	für
+alle	PIS	alle
+geöffnet	ADJD	geöffnet
+.	$.	.
+<sentence />
+Bitte	ADV	Bitte
+beachtet	VVPP	beachten
+,	$,	,
+dass	KOUS	dass
+er	PPER	er
+noch	ADV	noch
+nicht	PTKNEG	nicht
+vollständig	ADJD	vollständig
+perfekt	ADJD	perfekt
+läuft	VVFIN	laufen
+.	$.	.
+<sentence />
