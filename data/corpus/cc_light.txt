@@ -1,0 +1,10 @@
+haben	blick	1
+hilfe	lesetip	1
+montag	keine	1
+e	sein	1
+müssen	klappen	-1
+frühling	herbst	1
+schnappen	sein	1
+%user	tl	1
+%user	wie	1
+tl	wie	1

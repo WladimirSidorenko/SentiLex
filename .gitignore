@@ -12,7 +12,8 @@ data/WordNet-3.0/
 venv/
 test.lex
 .emacs.desktop*
-data/corpus/cc_*
+data/corpus/cc_uniq.txt
+data/corpus/cc.txt
 data/dictcc/
 *.log
 *.png
