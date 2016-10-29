@@ -98,9 +98,20 @@ for slg in ${SLG_METHODS}; do
 		    SGL_OPTS="--seed-pos=adj"
 		fi
 		OFNAME="${ODIR}/${slg}.ext-syn-rels.remus-seedset.txt";;
+	    "${EMO_SEED_SET}")
+		if test ${DICT_BASED} -eq 1; then
+		    echo "Seed set ${EMO_SEED_SET} is not support by dictionary-based methods" >&2
+		    exit 3
+		fi
+		OFNAME="${ODIR}/${slg}.emoticons-seedset.txt";;
+	    "${GLD_SEED_SET}")
+		if test ${DICT_BASED} -eq 1; then
+		    SGL_OPTS="--seed-pos=adj"
+		fi
+		OFNAME="${ODIR}/${slg}.gold-seedset.txt";;
 	    *)
 		echo "Unknown seed set $sset." >&2;
-		exit 2;;
+		exit 4;;
 	esac
 	echo "${slg}"
 	echo "${sset}"
