@@ -1,10 +1,9 @@
-[=x:8]+'?-*(?:[)Dd>}]+)	positive	REGEXP
-\*[-_]+\*	positive	REGEXP
-%possmiley	positive
+gut	positive
+positiv	positive
 
-:-?[(]	negative	REGEXP
-[=x:8]'?-*(?:[\[O(\\/]+)	negative	REGEXP
-%negsmiley	negative
+schlecht	negative
+Scheisse	negative
+Scheiße	negative
 
 neutral	neutral
 sachlich	neutral
