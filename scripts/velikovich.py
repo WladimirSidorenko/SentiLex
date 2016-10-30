@@ -28,6 +28,7 @@ DFLT_T = 20
 FASTMODE = False
 MAX_NGHBRS = 25
 TOK_WINDOW = 4                  # it actually corresponds to a window of six
+MAX_POS_IDS = 10000
 
 
 ##################################################################
@@ -297,10 +298,20 @@ def velikovich(a_N, a_T, a_crp_files, a_pos, a_neg,
     max_vecid, word2vecid, M = _crp2mtx(a_crp_files, a_pos, a_neg,
                                         a_pos_re, a_neg_re)
 
-    pos_ids = set(word2vecid[w] for w in a_pos) | \
-        set(i for w, i in word2vecid.iteritems() if a_pos_re.search(w))
-    neg_ids = set(word2vecid[w] for w in a_neg) | \
-        set(i for w, i in word2vecid.iteritems() if a_neg_re.search(w))
+    pos_ids = set(word2vecid[w] for w in a_pos)
+    if a_pos_re != NONMATCH_RE:
+        add_ids = set(i for w, i in word2vecid.iteritems()
+                      if a_pos_re.search(w))
+        if len(add_ids) > MAX_POS_IDS:
+            add_ids = set(list(add_ids)[:MAX_POS_IDS])
+            pos_ids |= add_ids
+    neg_ids = set(word2vecid[w] for w in a_neg)
+    if a_neg_re != NONMATCH_RE:
+        add_ids = set(i for w, i in word2vecid.iteritems()
+                      if a_neg_re.search(w))
+        if len(add_ids) > MAX_POS_IDS:
+            add_ids = set(list(add_ids)[:MAX_POS_IDS])
+            pos_ids |= add_ids
 
     p_pos = _p_init(max_vecid, word2vecid, pos_ids)
     p_neg = _p_init(max_vecid, word2vecid, neg_ids)
