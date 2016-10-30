@@ -32,16 +32,18 @@ FINAL_SPACE_RE = re.compile("(:?^\s+|\s+$)")
 ANEW = 0
 CONTINUE = 1
 
+
 ##################################################################
 # Methods
-def normalize_string(a_string, a_ignorecase = False):
-    """
-    Clean input string and return its normalized version
+def normalize_string(a_string, a_ignorecase=False):
+    """Clean input string and return its normalized version
 
     @param a_string - string to clean
-    @param a_ignorecase - boolean indication whether string should be lowercased
+    @param a_ignorecase - boolean indication whether string should be
+      lowercased
 
     @return normalized string
+
     """
     a_string = PUNCT_RE.sub("", a_string)
     a_string = SPACE_RE.sub(' ', a_string)
@@ -49,6 +51,7 @@ def normalize_string(a_string, a_ignorecase = False):
     if a_ignorecase:
         a_string = a_string.lower()
     return a_string
+
 
 ##################################################################
 # Classes
@@ -86,6 +89,7 @@ class MatchObject(object):
         """
         self.end = a_end
 
+
 class State(object):
     """
     Single Trie state with associated transitions
@@ -101,7 +105,7 @@ class State(object):
     check() - check transitions associated with the given character
     """
 
-    def __init__(self, a_final = False, a_class = None):
+    def __init__(self, a_final=False, a_class=None):
         """
         Class constructor
 
@@ -143,6 +147,7 @@ class State(object):
             return self.transitions[a_char]
         return None
 
+
 class Trie(object):
     """
     Implementation of trie data structure
@@ -158,7 +163,7 @@ class Trie(object):
     match() - compare given string against the trie
     """
 
-    def __init__(self, a_ignorecase = False):
+    def __init__(self, a_ignorecase=False):
         """
         Class constructor
 
@@ -171,7 +176,7 @@ class Trie(object):
         ## set of currently active Trie states
         self.active_states = set([])
 
-    def add(self, a_string, a_class = 0):
+    def add(self, a_string, a_class=0):
         """
         Add new string to the trie
 
@@ -189,7 +194,7 @@ class Trie(object):
         astate.final = True
         astate.classes.add(a_class)
 
-    def match(self, a_strings, a_start = -1, a_reset = ANEW):
+    def match(self, a_strings, a_start=-1, a_reset=ANEW):
         """
         Compare given strings against the Trie
 
@@ -200,9 +205,9 @@ class Trie(object):
 
         @return \c True if at least one match succeeded
         """
-        a_strings = [normalize_string(istring, self.ignorecase) \
-                         if istring != ' ' else istring \
-                         for istring in a_strings if istring is not None]
+        a_strings = [normalize_string(istring, self.ignorecase)
+                     if istring != ' ' else istring
+                     for istring in a_strings if istring is not None]
         if a_reset == ANEW and a_strings:
             self.active_states = set([(self._init_state, a_start, -1)])
         else:
@@ -218,7 +223,8 @@ class Trie(object):
             for istate, istart, iend in self.active_states:
                 for ichar in istring:
                     # print("matching char:", repr(ichar), file = sys.stderr)
-                    # print("istate.transitions:", repr(istate.transitions), file = sys.stderr)
+                    # print("istate.transitions:", repr(istate.transitions),
+                    # file = sys.stderr)
                     istate = istate.check(ichar)
                     if istate is None:
                         break
@@ -227,8 +233,10 @@ class Trie(object):
                 else:
                     if istate.final:
                         status = True
-                    # print("adding istate to ret:", repr(ret), file = sys.stderr)
-                    ret.add((istate, istart, a_start if a_start >= 0 else iend))
+                    # print("adding istate to ret:", repr(ret), file =
+                    # sys.stderr)
+                    ret.add((istate, istart,
+                             a_start if a_start >= 0 else iend))
                     # print("istate added:", repr(ret), file = sys.stderr)
             # if ret:
             #     break
@@ -257,7 +265,9 @@ class Trie(object):
             istate = new_states.pop()
             scnt = state2cnt[istate]
             if istate.final:
-                ret += '{:s} [shape=box,fillcolor=lightblue,label="{:s}"];\n'.format(scnt, ", ".join(istate.classes))
+                ret += '{:s} [shape=box,fillcolor=' \
+                       'lightblue,label="{:s}"];\n'.format(
+                           scnt, ", ".join(istate.classes))
             else:
                 ret += "{:s} [shape=circle];\n".format(scnt)
             for jchar, jstate in istate.transitions.iteritems():
@@ -266,7 +276,8 @@ class Trie(object):
                     state2cnt[jstate] = str(state_cnt)
                 if jstate not in visited_states:
                     new_states.append(jstate)
-                rels += scnt + "->" + state2cnt[jstate] + """[label="'{:s}'"];\n""".format(jchar)
+                rels += scnt + "->" + state2cnt[jstate] \
+                    + """[label="'{:s}'"];\n""".format(jchar)
             visited_states.add(istate)
         ret += "}\n" + rels + "}\n"
         return ret
