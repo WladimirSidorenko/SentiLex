@@ -840,12 +840,12 @@ static void _prjct_expand(v2ps_t *a_vecid2pol, const int a_N, \
   // compute the mean of the projected negative vectors
   arma::colvec neg_mean = arma::sum(*neg_prjctd, 1) / neg_prjctd->n_cols;
   // compute the median of the projection line
-  arma::colvec median = neg_mean + (pos_mean - neg_mean) / 2;
+  arma::colvec mean = neg_mean + (pos_mean - neg_mean) / 2;
+  arma::colvec prj = *a_prjline - mean;
   // find the light side of the force (determine whether projection
   // line points to the positive mean or in the opposite direction)
-  bool pos_is_right = arma::dot(pos_mean - median, *a_prjline - median) > 0;
-  assert(pos_is_right != (arma::dot(neg_mean - median,
-                                    *a_prjline - median) > 0));
+  bool pos_is_right = arma::dot(pos_mean - mean, prj) > 0;
+  assert(pos_is_right != (arma::dot(neg_mean - mean, prj) > 0));
   // project each vector with unknown polarity onto the projection
   pol_t ipol;
   size_t j{0};
@@ -859,10 +859,10 @@ static void _prjct_expand(v2ps_t *a_vecid2pol, const int a_N, \
 
     // project vector onto the polarity line
     vprjctd = _project_vec(a_nwe->col(i), *a_prjline);
-    // compute its distance to the median and polarity class
-    diff_vec = vprjctd - median;
+    // compute its distance to the mean and polarity class
+    diff_vec = vprjctd - mean;
     idist2mean = arma::norm(diff_vec, 2);
-    ipol = (arma::dot(diff_vec, *a_prjline) > 0) == pos_is_right? \
+    ipol = (arma::dot(diff_vec, prj) > 0) == pos_is_right? \
       POS_VID: NEG_VID;
     vpds.push_back(VPD {1000./idist2mean, ipol, i});
     ++j;
