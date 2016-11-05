@@ -844,8 +844,8 @@ static void _prjct_expand(v2ps_t *a_vecid2pol, const int a_N, \
   arma::colvec prj = *a_prjline - mean;
   // find the light side of the force (determine whether projection
   // line points to the positive mean or in the opposite direction)
-  bool pos_is_right = arma::dot(pos_mean - mean, prj) > 0;
-  assert(pos_is_right != (arma::dot(neg_mean - mean, prj) > 0));
+  bool pos_is_right = arma::dot(pos_mean - mean, mean) > 0;
+  assert(pos_is_right != (arma::dot(neg_mean - mean, mean) > 0));
   // project each vector with unknown polarity onto the projection
   pol_t ipol;
   size_t j{0};
