@@ -87,3 +87,13 @@ neutral            95.67% (+/-  1.96%)     9.29% (+/-  1.78%)    16.89% (+/-  2.
 negative            1.41% (+/-  0.51%)    70.89% (+/-  9.05%)     2.75% (+/-  0.98%)
 Macro-average      33.75% (+/-  0.76%)    35.97% (+/-  4.39%)     8.94% (+/-  1.42%)
 Micro-average       9.68% (+/-  1.75%)    10.75% (+/-  1.89%)    10.19% (+/-  1.82%)
+
+Commands executed on the homer server:
+NOTE: we use `vectors.out` not `vectors_lower.out`
+```shell
+./bin/vec2dic -t 3 ~/Work/TwitterDiscourses/April-2013/vectors.out ../data/seeds/turney_littman_2003.txt > ../data/results/linproj/linproj.full.turney-littman-seedset.1.txt
+```
+
+```shell
+./bin/vec2dic -L -t 3 ~/Work/TwitterDiscourses/April-2013/vectors.out ../data/seeds/turney_littman_2003.txt > ../data/results/linproj/linproj.full.turney-littman-seedset.1.txt
+```
