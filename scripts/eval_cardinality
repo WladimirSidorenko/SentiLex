@@ -1,0 +1,30 @@
+#!/bin/sh
+
+"""An auxiliary script for determining optimal cardinality of a lexicon.
+
+NB: no proper argument testing is performed
+
+"""
+
+##################################################################
+#
+if test $# -ne 1; then
+    echo "Invalid number of parameters.  Specify a path" \
+	" to the evaluated lexicon." >&2;
+    exit 1;
+fi
+
+##################################################################
+#
+ofname=''
+stype="$(basename ${1%%.*})"
+
+##################################################################
+#
+for i in $(seq 40 20 5120); do
+    echo $i >&2
+    ofname="$1.$i"
+    head -$i "$1" > "${ofname}" && \
+	./scripts/evaluate.py  -l ./data/form2lemma.txt "${ofname}" ../PotTS/corpus/basedata \
+	../PotTS/corpus/annotator-2/markables >> "${stype}.eval.log"
+done
