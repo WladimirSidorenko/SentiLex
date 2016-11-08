@@ -18,7 +18,7 @@ cmake ../
 make
 ```
 
-Afterwards, an executable called the directory `vec2dic` wil apper in
+Afterwards, an executable called `vec2dic` wil apper in
 the subdirectory `build/bin`.  You can exectute this file by envoking:
 
 ```shell
