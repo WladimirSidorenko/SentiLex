@@ -2,42 +2,31 @@
 
 ##################################################################
 BEGIN {
-    if (ARGC != 4) {
+    if (ARGC != 2) {
 	printf("Incorrect number of arguments.") > "/sys/stderr"
 	exit 1
     }
 
-    ret = 0
-    WCL = 0 + ARGV[1]
     # obtain words to fetch
-    ifile = ARGV[2]
+    ifile = ARGV[1]
     while ((ret = (getline < ifile)) > 0) {
 	if (!NF)
 	    continue
-	# else if (NF != 2) {
-	#     printf("Incorrect line format: %s", $0) > "/sys/stderr"
-	#     exit 2
-	# }
-        $1 = tolower($1)
-        if ($1 in WORD2SEEK)
+
+        gsub(/[[:space:]]+$/, "")
+        gsub(/^[[:space:]]+/, "")
+        if ($0 in WORD2SEEK)
           continue
 
-	WORD2SEEK[$1] = ""
+	WORD2SEEK[$0] = ""
         ++w_cnt
     }
-    ARGV[1] = ARGV[2] = ""
-    # obtain random line numbers to fetch
-    srand()
-    wcl = WCL > 1? WCL - 1: 0
-    for (i = 1; i < WCL; ++i) {
-	randarr[i] = rand() * wcl + 1
-    }
-    asorti(randarr, tmparr)
-    wcl = WCL / 500
-    for (i = 1; i < wcl; ++i) {
-	FNR2SEEK[tmparr[i]] = ""
-    }
+    ARGV[1] = ""
 }
 
 ##################################################################
-NF && FNR > 1 && ($1 in WORD2SEEK || FNR in FNR2SEEK)
+NF && FNR > 1 && ($1 in WORD2SEEK) {
+  print $0
+  if (--w_cnt <= 0)
+    exit
+}
