@@ -7,6 +7,7 @@ from __future__ import absolute_import, unicode_literals
 
 import argparse
 import codecs
+import matplotlib.pyplot as plt
 import re
 import pandas as pd
 import seaborn as sns
@@ -22,12 +23,17 @@ POSITIVE = "positive"
 NEGATIVE = "negative"
 NEUTRAL = "neutral"
 POL = "polarity"
-NEUT_COL = "#95a5a6"
+NEUT_COL = "#000000"
 NEUT_MARK = "."
-POS_COL = "blue"
-POS_MARK = "o"
-NEG_COL = "#8B0000"
-NEG_MARK = "+"
+POS_COL = "#8B0000"
+POS_MARK = "^"
+NEG_COL = "blue"
+NEG_MARK = "v"
+POLARITIES = (NEUTRAL, NEGATIVE, POSITIVE)
+MARKERS = [NEUT_MARK, NEG_MARK, POS_MARK]
+POL2SIZE = {POSITIVE: 150, NEGATIVE: 150, NEUTRAL: 10}
+PALETTE = {POSITIVE: POS_COL, NEGATIVE: NEG_COL, NEUTRAL: NEUT_COL}
+SIZE = "size"
 
 
 ##################################################################
@@ -63,15 +69,37 @@ def vec2png(a_w2pol, a_w2vec, a_ofname):
 
     """
     # construct pandas dataframe
-    data = pd.DataFrame([{POL: a_w2pol.get(w, NEUTRAL), 'x': x, 'y': y}
+    data = pd.DataFrame([{POL: a_w2pol.get(w, NEUTRAL),
+                          SIZE: POL2SIZE[a_w2pol.get(w, NEUTRAL)],
+                          'x': x, 'y': y}
                          for w, (x, y) in a_w2vec.iteritems()])
-    sns.set_style("white")
-    grid = sns.lmplot("x", "y", data=data, hue=POL,
-                      hue_order=(POSITIVE, NEGATIVE, NEUTRAL),
-                      markers=[POS_MARK, NEG_MARK, NEUT_MARK],
-                      palette=sns.color_palette([POS_COL, NEG_COL, NEUT_COL]),
-                      legend_out=False, fit_reg=False)
-    # grid.set_xlabel('X', fontsize=FS)
+    data[POL] = pd.Categorical(data[POL], POLARITIES)
+    data.sort_values(by=POL, inplace=True, ascending=False, kind="heapsort")
+    data.reset_index(drop=True, inplace=True)
+    # set up common parameters
+    sns.set_context("paper")
+    plt.tick_params(axis="both", labelsize=FS - 4)
+    # create scatter plot
+    scplot = sns.lmplot('x', 'y', data=data,
+                        hue=POL,
+                        hue_order=POLARITIES,
+                        palette=PALETTE,
+                        markers=MARKERS,
+                        fit_reg=False,
+                        sharex=False,
+                        sharey=False,
+                        legend_out=False,
+                        scatter=False
+                        )
+    scplot.hue_kws['s'] = [4, 128, 128]
+    # set plot-specific parameters
+    iplot = scplot.axes[0][0]
+    iplot.set_xlabel("X", fontsize=FS)
+    iplot.set_ylabel("Y", fontsize=FS)
+    scplot.map(plt.scatter, 'x', 'y')
+    # legend = sns.lmplot.legend(title="Seed Set", fontsize=FS - 4,
+    #                            loc=1, bbox_to_anchor=(1., 1., 0.25, 0.))
+    # legend.get_title().set_fontsize(FS)
     sns.plt.show()
 
 
