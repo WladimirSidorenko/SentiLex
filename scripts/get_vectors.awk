@@ -2,8 +2,8 @@
 
 ##################################################################
 BEGIN {
-    if (ARGC != 2) {
-	printf("Incorrect number of arguments.") > "/sys/stderr"
+    if (ARGC != 3) {
+	printf("Incorrect number of arguments.") > "/dev/stderr"
 	exit 1
     }
 
