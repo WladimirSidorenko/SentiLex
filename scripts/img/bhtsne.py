@@ -64,6 +64,7 @@ assert isfile(BH_TSNE_BIN_PATH), ('Unable to find the bh_tsne binary in the '
                                   'same directory as this script, have you'
                                   ' forgotten to compile it?: {}'
                                   ).format(BH_TSNE_BIN_PATH)
+
 # Default hyper-parameter values from van der Maaten (2013)
 DEFAULT_NO_DIMS = 2
 DEFAULT_PERPLEXITY = 1e-5
@@ -169,8 +170,6 @@ def load_data(input_file):
                 'data error or is the data sparsely encoded?'.format(
                     sample_line_num, n, dims)
         IDX2WORD[sample_line_num] = sample_data[0]
-        print repr(sample_line_num)
-        print repr(IDX2WORD[sample_line_num])
         samples.append([float(e) for e in sample_data[1:] if e])
     return np.asarray(samples, dtype='float64')
 
@@ -230,8 +229,6 @@ def run_bh_tsne(data, no_dims=2, perplexity=50, theta=0.5, randseed=-1,
     # bh_tsne works with fixed input and output paths, give it a temporary
     #   directory to work in so we don't clutter the filesystem
     tmp_dir_path = mkdtemp()
-    print(repr(tmp_dir_path))
-    print(repr(os.path.isdir(tmp_dir_path)))
 
     # Load data in forked process to free memory for actual bh_tsne calculation
     if isinstance(data, file):
