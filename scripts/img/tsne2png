@@ -17,7 +17,7 @@ import sys
 # Constants
 COMMENT = "###"
 ENCODING = "utf-8"
-FS = 17
+FS = 14
 TAB_RE = re.compile(r" *\t+ *")
 POSITIVE = "positive"
 NEGATIVE = "negative"
@@ -94,13 +94,25 @@ def vec2png(a_w2pol, a_w2vec, a_ofname):
     scplot.hue_kws['s'] = [4, 128, 128]
     # set plot-specific parameters
     iplot = scplot.axes[0][0]
-    iplot.set_xlabel("X", fontsize=FS)
-    iplot.set_ylabel("Y", fontsize=FS)
+    iplot.set_xlabel("x", fontsize=FS)
+    iplot.set_ylabel("y", fontsize=FS)
     scplot.map(plt.scatter, 'x', 'y')
-    # legend = sns.lmplot.legend(title="Seed Set", fontsize=FS - 4,
-    #                            loc=1, bbox_to_anchor=(1., 1., 0.25, 0.))
-    # legend.get_title().set_fontsize(FS)
+    legend_data = scplot._legend_data
+    labels = []
+    handles = []
+    ihandle = None
+    for pol in reversed(POLARITIES):
+        labels.append(pol)
+        ihandle = legend_data[pol]
+        handles.append(ihandle)
+    legend = plt.legend(handles, labels, markerscale=1,
+                        title="Terms", fontsize=FS - 3,
+                        loc=1, bbox_to_anchor=(1., 1., 0, 0.))
+    title = legend.get_title()
+    title.set_weight("bold")
+    title.set_fontsize(FS - 3)
     sns.plt.show()
+    scplot.savefig(a_ofname)
 
 
 def main(a_args):
