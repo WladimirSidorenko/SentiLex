@@ -5,6 +5,7 @@
 # Imports
 from __future__ import absolute_import, unicode_literals
 
+from copy import deepcopy
 import argparse
 import codecs
 import matplotlib.pyplot as plt
@@ -17,6 +18,8 @@ import sys
 # Constants
 COMMENT = "###"
 ENCODING = "utf-8"
+ETYPE = "etype"
+PPLX = "perplexity"
 FS = 14
 TAB_RE = re.compile(r" *\t+ *")
 POSITIVE = "positive"
@@ -27,7 +30,7 @@ NEUT_COL = "#000000"
 NEUT_MARK = "."
 POS_COL = "#8B0000"
 POS_MARK = "^"
-NEG_COL = "blue"
+NEG_COL = "#0000CC"
 NEG_MARK = "v"
 POLARITIES = (NEUTRAL, NEGATIVE, POSITIVE)
 MARKERS = [NEUT_MARK, NEG_MARK, POS_MARK]
@@ -57,47 +60,42 @@ def read_file(a_fname, a_func):
             a_func(TAB_RE.split(iline))
 
 
-def vec2png(a_w2pol, a_w2vec, a_ofname):
+def vec2png(a_w2pol, a_etp2wv, a_ofname):
     """Generate a PNG plot for word embeddings.
 
     @param a_w2pol - mapping from word to polarity
-    @type a_w2pol - dict
-    @param a_w2vec - mapping from word to vectors
-    @type a_w2vec - dict
+    @param a_etp2wv - mapping from embedding type and perplexity to word
+      vectors
     @param a_ofname - name of the output file in which to save the plot
-    @type a_ofname - str
 
     """
     # construct pandas dataframe
-    data = pd.DataFrame([{POL: a_w2pol.get(w, NEUTRAL),
+    data = pd.DataFrame([{ETYPE: etype, PPLX: pplx,
+                          POL: a_w2pol.get(w, NEUTRAL),
                           SIZE: POL2SIZE[a_w2pol.get(w, NEUTRAL)],
                           'x': x, 'y': y}
-                         for w, (x, y) in a_w2vec.iteritems()])
+                         for (etype, pplx), stat in a_etp2wv.iteritems()
+                         for w, (x, y) in stat.iteritems()])
     data[POL] = pd.Categorical(data[POL], POLARITIES)
-    data.sort_values(by=POL, inplace=True, ascending=False, kind="heapsort")
+    data.sort_values(by=[ETYPE, PPLX, POL], inplace=True,
+                     ascending=False, kind="heapsort")
     data.reset_index(drop=True, inplace=True)
     # set up common parameters
     sns.set_context("paper")
+    sns.set_style("white")
     plt.tick_params(axis="both", labelsize=FS - 4)
     # create scatter plot
-    scplot = sns.lmplot('x', 'y', data=data,
-                        hue=POL,
-                        hue_order=POLARITIES,
-                        palette=PALETTE,
-                        markers=MARKERS,
-                        fit_reg=False,
-                        sharex=False,
-                        sharey=False,
-                        legend_out=False,
-                        scatter=False
-                        )
-    scplot.hue_kws['s'] = [4, 128, 128]
-    # set plot-specific parameters
-    iplot = scplot.axes[0][0]
-    iplot.set_xlabel("x", fontsize=FS)
-    iplot.set_ylabel("y", fontsize=FS)
-    scplot.map(plt.scatter, 'x', 'y')
-    legend_data = scplot._legend_data
+    g = sns.FacetGrid(data, row=PPLX, col=ETYPE,
+                      hue=POL, hue_order=POLARITIES,
+                      hue_kws={'s': [3, 156, 156],
+                               "marker": MARKERS},
+                      legend_out=True, sharex=False, sharey=False,
+                      despine=True, palette=PALETTE, margin_titles=True)
+    g = g.map(plt.scatter, 'x', 'y')
+    g.set_titles(col_template="{col_name}", fontweight='bold',
+                 size=FS - 3)
+    # obtain handles and labels for the legend
+    legend_data = g._legend_data
     labels = []
     handles = []
     ihandle = None
@@ -105,14 +103,24 @@ def vec2png(a_w2pol, a_w2vec, a_ofname):
         labels.append(pol)
         ihandle = legend_data[pol]
         handles.append(ihandle)
-    legend = plt.legend(handles, labels, markerscale=1,
-                        title="Terms", fontsize=FS - 3,
-                        loc=1, bbox_to_anchor=(1., 1., 0, 0.))
-    title = legend.get_title()
-    title.set_weight("bold")
-    title.set_fontsize(FS - 3)
+    # resize x and y labels
+    xlabel = ylabel = legend = title = None
+    for i, axes_row in enumerate(g.axes):
+        for j, axes_col in enumerate(axes_row):
+            if j == 0:
+                ylabel = axes_col.get_ylabel()
+                axes_col.set_ylabel(ylabel, size=FS - 3)
+            xlabel = axes_col.get_xlabel()
+            axes_col.set_xlabel(xlabel, size=FS - 3)
+            # add legend
+            legend = g.axes[i, j].legend(handles, labels, markerscale=1,
+                                         title="Terms", fontsize=FS - 3,
+                                         loc=1)
+            title = legend.get_title()
+            title.set_weight("bold")
+            title.set_fontsize(FS - 3)
     sns.plt.show()
-    scplot.savefig(a_ofname)
+    g.savefig(a_ofname)
 
 
 def main(a_args):
@@ -125,14 +133,16 @@ def main(a_args):
     argparser = argparse.ArgumentParser(
         description="Represent t-sne embeddings on a 2D plot."
     )
+    argparser.add_argument("ofname",
+                           help="name of the output file")
     argparser.add_argument("seed_set",
                            help="set of seed terms which should be"
                            " highlighted")
-    argparser.add_argument("vec_file",
+    argparser.add_argument("vec_files",
                            help="file containing t-sne-projected word"
-                           " embeddings")
-    argparser.add_argument("ofname",
-                           help="name of the output file")
+                           " embeddings (last parts of file names should"
+                           " specify the embedding type and perplexity",
+                           nargs='+')
     args = argparser.parse_args(a_args)
     word2pol = {}
 
@@ -150,9 +160,20 @@ def main(a_args):
         word = a_toks[0].strip()
         vec = [float(t) for t in a_toks[1:]]
         word2vec[word] = vec
+    # mapping from embedding type and perplexity to word vectors
+    etp2wv = {}
+    fields = etype = perplexity = None
+    for ifname in args.vec_files:
+        fields = ifname.split('.')
+        assert len(fields) > 1, \
+            "The last two (dot-separated) components of the vector file" \
+            " name should specify embedding type and perplexity values."
+        etype, perplexity = fields[-2], float(fields[-1])
+        read_file(ifname, read_vecs)
+        etp2wv[(etype, perplexity)] = deepcopy(word2vec)
+        word2vec.clear()
 
-    read_file(args.vec_file, read_vecs)
-    vec2png(word2pol, word2vec, args.ofname)
+    vec2png(word2pol, etp2wv, args.ofname)
 
 
 ##################################################################
