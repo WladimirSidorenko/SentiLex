@@ -1,0 +1,71 @@
+#!/usr/bin/env python2.7
+# -*- mode: python; coding: utf-8; -*-
+
+"""Script for annotating raw corpus with sentiment tags.
+
+USAGE:
+label_corpus [OPTIONS] [INPUT_FILES]
+
+"""
+
+##################################################################
+# Imports
+from __future__ import unicode_literals, print_function
+
+import codecs
+import sys
+
+from common import TOKENIZER
+from generate_lexicon import \
+    POS_SET, NEG_SET, NEUT_SET, _read_set
+
+
+##################################################################
+# Variables and Constants
+UNK = '_'
+NEUT_LBL = '0'
+POS_LBL = '1'
+NEG_LBL = '2'
+DFLT_LBL = UNK
+ENCODING = "utf-8"
+STDOUT = codecs.getwriter(ENCODING)(sys.stdout)
+
+##################################################################
+# Methods
+def main(argv):
+    """Main method for assigning polarity tags to raw sentences.
+
+    @param argv - CLI arguments
+
+    """
+    import argparse
+    argparser = argparse.ArgumentParser(
+        description="Assign polarity labels to raw text sentences using lexicon.")
+    argparser.add_argument("lexicon", help="sentiment lexicon")
+    argparser.add_argument("corpus", help="corpus file")
+    args = argparser.parse_args(argv)
+    # read lexicon
+    _read_set(args.lexicon)
+    from generate_lexicon import POS_RE, NEG_RE
+    # annotate corpus
+    with codecs.open(args.corpus, 'r', ENCODING) as ifile:
+        for iline in ifile:
+            label = DFLT_LBL
+            iline = iline.strip()
+            words = set(TOKENIZER.tokenize(iline))
+            if (POS_RE is not None and POS_RE.search(iline)) \
+               or words & POS_SET:
+                label = POS_LBL
+            elif (POS_RE is not None and NEG_RE.search(iline)) \
+                 or words & NEG_SET:
+                label = NEG_LBL
+            elif words & NEUT_SET:
+                label = NEUT_LBL
+            iline += '\t' + label + '\n'
+            STDOUT.write(iline)
+
+
+##################################################################
+# Main
+if __name__ == "__main__":
+    main(sys.argv[1:])
