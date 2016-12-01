@@ -55,7 +55,7 @@ SEVERYN = "severyn"
 TAKAMURA = "takamura"
 VELIKOVICH = "velikovich"
 
-W_DELIM_RE = re.compile('(?:\s|{:s})+'.format(
+W_DELIM_RE = re.compile(r'(?:\s|{:s})+'.format(
     '|'.join([re.escape(c) for c in string.punctuation])))
 POS_SET = set()                 # set of positive terms
 NEG_SET = set()                 # set of negative terms
@@ -109,7 +109,7 @@ def _add_cmn_opts(a_parser, a_add_ext_opts=True):
                           " ('none' for no restriction)",
                           choices=["none"] + [p[:-1] for p in POS],
                           default="none"
-                          )
+                         )
     a_parser.add_argument("--form2lemma", "-l",
                           help="file containing Germanet form-lemma"
                           " correspondences", type=str)
@@ -134,8 +134,8 @@ def _get_dflt_lexicon(a_pos, a_neg):
       polarities
 
     """
-    return [(w, POSITIVE, 1.) for w in POS_SET] \
-        + [(w, NEGATIVE, -1.) for w in NEG_SET]
+    return [(w, POSITIVE, 1.) for w in a_pos] \
+        + [(w, NEGATIVE, -1.) for w in a_neg]
 
 
 def _get_form2lemma(a_fname):
@@ -143,13 +143,14 @@ def _get_form2lemma(a_fname):
 
     @param a_fname - name of input file
 
-    @return \c void (correspondences are read into global variables)
+    @return void (correspondences are read into global variables)
 
     """
     global STOP_WORDS, FORM2LEMMA
 
     if not os.path.isfile(a_fname) or not os.access(a_fname, os.R_OK):
-        raise RuntimeError("Cannot read from file '{:s}'".format())
+        raise RuntimeError("Cannot read from file '{:s}'".format(
+            a_fname))
 
     iform = itag = ilemma = ""
     with codecs.open(a_fname, 'r', encoding=ENCODING) as ifile:
@@ -170,7 +171,7 @@ def _read_set(a_fname):
 
     @param a_fname - name of input file containing terms
 
-    @return \c void
+    @return void
 
     """
     global POS_SET, NEG_SET, NEUT_SET, POS_RE, NEG_RE

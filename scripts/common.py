@@ -7,11 +7,11 @@
 
 ##################################################################
 # Imports
-from germanet import normalize
-from tokenizer import Tokenizer
-
 import re
 import sys
+
+from germanet import normalize
+from tokenizer import Tokenizer
 
 ##################################################################
 # Constants
@@ -19,12 +19,12 @@ FMAX = sys.float_info.max
 FMIN = -FMAX
 
 ESC_CHAR = ''
-SENT_END_RE = re.compile("\s*<\s*sentence\s*/\s*>\s*$")
+SENT_END_RE = re.compile(r"\s*<\s*sentence\s*/\s*>\s*$")
 TAB_RE = re.compile(' *\t+ *')
 # the `#' and `,' characters were only added later for the NWE and corpus
 # methods, when I discovered that hashtags were skipped during processing that
 # hastags were skipped from processing
-WORD_RE = re.compile('^[-#.,\w]+$')
+WORD_RE = re.compile(r'^[-#.,\w]+$')
 ENCODING = "utf-8"
 
 # not sure whether "has_hypernym" should be added to SYNRELS
@@ -78,7 +78,7 @@ def check_word(a_word):
 
     @param a_word - word to be checked
 
-    @return \c True if word forms a valid lexeme, \c False otherwise
+    @return True if word forms a valid lexeme, \c False otherwise
 
     """
     return WORD_RE.match(a_word) and all(ord(c) < 256 for c in a_word)
