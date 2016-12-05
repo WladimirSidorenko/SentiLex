@@ -30,10 +30,10 @@ def _annotate_re(a_re, a_ising, a_wght):
     @param a_ising - dictionary of word scores
     @param a_wght - weight to assign to terms that match regular expressions
 
-    @return \c void
+    @return void
 
     """
-    for itok, istat in a_ising.iteritems():
+    for itok, _ in a_ising.iteritems():
         if a_re.search(itok):
             a_ising[itok][FXD_WGHT_IDX] = a_wght
             a_ising[itok][HAS_FXD_WGHT] = 1
@@ -45,7 +45,7 @@ def _tkm_add_germanet(ising, a_germanet):
     @param a_ising - instance of the Ising spin model
     @param a_germanet - GermaNet instance
 
-    @return \c void
+    @return void
 
     """
     # add all lemmas from the `FORM2LEMMA` dictionary
