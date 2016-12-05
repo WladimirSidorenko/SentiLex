@@ -13,7 +13,7 @@ from scipy import *
 from pylab import *
 
 import math
-import numpy
+# import numpy
 import sys
 
 ##################################################################
