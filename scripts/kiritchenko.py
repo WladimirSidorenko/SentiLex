@@ -40,7 +40,7 @@ def _update_stat(a_tok_stat, a_tweet_stat, a_lemmas, a_pos, a_neg,
     @param a_pos_re - regular expression for matching positive terms
     @param a_neg_re - regular expression for matching negative terms
 
-    @return \c void
+    @return void
 
     @note modifies `a_tok_stat' and `a_tweet_stat' in place
 
@@ -185,4 +185,6 @@ def kiritchenko(a_N, a_crp_files, a_pos, a_neg,
                                a_pos_re, a_neg_re)
     ret = _stat2scores(stat, n_pos, n_neg, a_pos, a_neg)
     ret.sort(key=lambda el: abs(el[-1]), reverse=True)
+    if a_N >= 0:
+        return ret[:a_N]
     return ret
