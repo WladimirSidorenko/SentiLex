@@ -168,25 +168,25 @@ def _prune_mtx(a_M):
     @note modifies `a_M' in place
 
     """
-    j2dot = {}
-    irow = None
     prev_i = -1
+    irow = None
+    ij2dot = defaultdict(dict)
+    # prevent self-loops
     for i, j in zip(*a_M.nonzero()):
-        if i != prev_i:
-            if prev_i >= 0:
-                row = a_M.getrow(prev_i)
-                _prune_vec(a_M, prev_i, j2dot)
-            irow = a_M.getrow(i).transpose()
-            prev_i = i
-        # prevent self-loops
         if i == j:
             a_M[i, j] == 0.
-            continue
-        j2dot[j] = a_M.getrow(j).dot(irow)[0, 0]
-        assert np.isfinite(j2dot[j]), \
+    # first determine the top-25 most similar words for each vector
+    for i, j in zip(*a_M.nonzero()):
+        if i != prev_i:
+            irow = a_M.getrow(i).transpose()
+            prev_i = i
+        ij2dot[i][j] = a_M.getrow(j).dot(irow)[0, 0]
+        assert np.isfinite(ij2dot[i][j]), \
             "Numerical overflow in dot product of rows {:d} and {:d}".format(
-                itok1, itok2)
-    _prune_vec(a_M, prev_i, j2dot)
+                i, j)
+    # actually prune the matrix
+    for i in xrange(a_M.shape[0]):
+        _prune_vec(a_M, i, ij2dot[i])
     a_M.eliminate_zeros()
     a_M.prune()
 
@@ -201,7 +201,7 @@ def _crp2mtx(a_crp_files, a_pos, a_neg,
     @param a_pos_re - regular expression for matching positive terms
     @param a_neg_re - regular expression for matching negative terms
 
-    @return (dict, mtx) - number of tokesn, mapping from tokens to vector ids,
+    @return (dict, mtx) - number of tokens, mapping from tokens to vector ids,
     and adjacency matrix
 
     """
@@ -221,15 +221,14 @@ def _crp2mtx(a_crp_files, a_pos, a_neg,
     return (max_vecid, word2vecid, M.log1p())
 
 
-def _p_init(a_N, a_word2vecid, a_seedset, a_seed_val=1.):
+def _p_init(a_N, a_seedset, a_seed_val=1.):
     """Construct vector of polarity scores.
 
-    @param a_N - dimension of the con
-    @param a_word2vecid - mapping from words to their vector id's
+    @param a_N - vocabulary size
     @param a_seedset - set of seed words
     @param a_seed_val - polarity score for seed terms
 
-    @return (np.arry) - populated array of polarity scores
+    @return (np.array) - populated array of polarity scores
 
     """
     ret = np.zeros(a_N)
@@ -239,7 +238,7 @@ def _p_init(a_N, a_word2vecid, a_seedset, a_seed_val=1.):
 
 
 def _velikovich(a_p, a_ids, a_M, a_T):
-    """Propagate polarity from one seed set through the entire graph.
+    """Propagate polarity score from one seed set through the entire graph.
 
     @param a_p - resulting polarity score vector to be modified
     @param a_ids - ids of the seed terms
@@ -272,8 +271,7 @@ def _velikovich(a_p, a_ids, a_M, a_T):
             nset.clear()
         sset.clear()
 
-    N = a_M.shape[0]
-    for j in xrange(N):
+    for j in xrange(a_M.shape[0]):
         a_p[j] = sum(alpha[i, j] for i in a_ids)
         assert np.isfinite(a_p[j]), \
             "Numerical overflow occurred when computing" \
@@ -313,8 +311,8 @@ def velikovich(a_N, a_T, a_crp_files, a_pos, a_neg,
             add_ids = set(list(add_ids)[:MAX_POS_IDS])
             pos_ids |= add_ids
 
-    p_pos = _p_init(max_vecid, word2vecid, pos_ids)
-    p_neg = _p_init(max_vecid, word2vecid, neg_ids)
+    p_pos = _p_init(max_vecid, pos_ids)
+    p_neg = _p_init(max_vecid, neg_ids)
 
     # preform propagation for single sets
     _velikovich(p_pos, pos_ids, M, a_T)
@@ -336,5 +334,5 @@ def velikovich(a_N, a_T, a_crp_files, a_pos, a_neg,
                     w_score))
     ret.sort(key=lambda el: abs(el[-1]), reverse=True)
     if a_N >= 0:
-        del ret[:a_N]
+        del ret[a_N:]
     return ret
