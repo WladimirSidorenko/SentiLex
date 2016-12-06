@@ -10,7 +10,7 @@
 from __future__ import unicode_literals, print_function
 
 from common import ENCODING, ESC_CHAR, FMAX, FMIN, \
-    INFORMATIVE_TAGS, NEGATIVE, POSITIVE, NEUTRAL, SENT_END_RE, \
+    INFORMATIVE_TAGS, NEGATIVE, POSITIVE, SENT_END_RE, \
     TAB_RE, NONMATCH_RE, MIN_TOK_CNT, check_word, normalize
 
 from collections import Counter
@@ -63,13 +63,12 @@ def _update_ts(a_ts_x, a_ts_y, a_tweet_toks, a_pos, a_neg,
         return
 
     tweet = ' '.join(sorted(a_tweet_toks))
-    a_ts_x.append(_toks2feats(a_tweet_toks))
     if a_tweet_toks & a_pos or a_pos_re.search(tweet):
+        a_ts_x.append(_toks2feats(a_tweet_toks))
         a_ts_y.append(POSITIVE)
     elif a_tweet_toks & a_neg or a_neg_re.search(tweet):
+        a_ts_x.append(_toks2feats(a_tweet_toks))
         a_ts_y.append(NEGATIVE)
-    else:
-        a_ts_y.append(NEUTRAL)
     a_tweet_toks.clear()
 
 
@@ -154,7 +153,6 @@ def _read_files(a_crp_files, a_pos, a_neg,
                     tweet_toks.add(ilemma)
                 if prev_lemma:
                     tweet_toks.add((prev_lemma, ilemma))
-                prev_lemma = ilemma
             _update_ts(ts_x, ts_y, tweet_toks,
                        a_pos, a_neg, a_pos_re, a_neg_re)
     print(" done", file=sys.stderr)
@@ -184,9 +182,6 @@ def severyn(a_N, a_crp_files, a_pos, a_neg,
                       ("LinearSVC", clf)])
     X, Y = _read_files(a_crp_files, a_pos, a_neg,
                        a_pos_re, a_neg_re)
-    print("X = ", repr(X))
-    print("Y = ", repr(Y))
-    sys.exit(66)
     model.fit(X, Y)
 
     ret = [(w, POSITIVE, FMAX) for w in a_pos] \
@@ -194,7 +189,7 @@ def severyn(a_N, a_crp_files, a_pos, a_neg,
     coefs = clf.coef_[0]
     for f_name, f_score in zip(vectorizer.get_feature_names(),
                                coefs
-                                ):
+                               ):
         if f_name in a_pos or f_name in a_neg:
             continue
         ret.append((f_name,
