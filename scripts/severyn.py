@@ -62,7 +62,10 @@ def _update_ts(a_ts_x, a_ts_y, a_tweet_toks, a_pos, a_neg,
     if not a_tweet_toks:
         return
 
-    tweet = ' '.join(sorted(a_tweet_toks))
+    tweet = ' '.join([w
+                      if isinstance(w, basestring)
+                      else ' '.join(w)
+                      for w in sorted(a_tweet_toks)])
     if a_tweet_toks & a_pos or a_pos_re.search(tweet):
         a_ts_x.append(_toks2feats(a_tweet_toks))
         a_ts_y.append(POSITIVE)
@@ -153,6 +156,7 @@ def _read_files(a_crp_files, a_pos, a_neg,
                     tweet_toks.add(ilemma)
                 if prev_lemma:
                     tweet_toks.add((prev_lemma, ilemma))
+                prev_lemma = ilemma
             _update_ts(ts_x, ts_y, tweet_toks,
                        a_pos, a_neg, a_pos_re, a_neg_re)
     print(" done", file=sys.stderr)
