@@ -179,7 +179,7 @@ def _stat2scores(a_stat, a_n_pos, a_n_neg, a_n_neut,
                             (ineg * a_n_pos or 1.) or 1., 2)
             ret.append((iterm,
                         POSITIVE if pol_score > 0. else NEGATIVE,
-                        subj_score))
+                        pol_score + subj_score))
     return ret
 
 
