@@ -12,8 +12,8 @@ generate_lexicon.py [OPTIONS] [INPUT_FILES]
 # Imports
 from __future__ import unicode_literals, print_function
 
-from common import POSITIVE, NEGATIVE, NEUTRAL, STOP_WORDS, \
-    FORM2LEMMA, INFORMATIVE_TAGS, TAB_RE, NONMATCH_RE, ENCODING
+from common import POSITIVE, NEGATIVE, NEUTRAL, \
+    INFORMATIVE_TAGS, TAB_RE, NONMATCH_RE, ENCODING
 from germanet import Germanet, normalize, POS
 
 from awdallah import awdallah
@@ -108,8 +108,7 @@ def _add_cmn_opts(a_parser, a_add_ext_opts=True):
                           help="part-of-speech of seed synsets"
                           " ('none' for no restriction)",
                           choices=["none"] + [p[:-1] for p in POS],
-                          default="none"
-                         )
+                          default="none")
     a_parser.add_argument("--form2lemma", "-l",
                           help="file containing Germanet form-lemma"
                           " correspondences", type=str)
@@ -345,7 +344,7 @@ def main(a_argv):
 
     # only perform expansion if the number of seed terms is less than
     # the requested number of polar items
-        # apply requested method
+    # apply requested method
     print("Expanding polarity sets... ", file=sys.stderr)
     if "seed_pos" in args and args.seed_pos \
        and args.seed_pos.lower() == "none":
@@ -385,7 +384,7 @@ def main(a_argv):
             new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
         else:
             new_terms = kiritchenko(N, getattr(args, CORPUS_FILES),
-                                    POS_SET, NEG_SET, POS_RE, NEG_RE)
+                                    POS_SET, NEG_SET, NEUT_SET, POS_RE, NEG_RE)
     elif args.dmethod == RAO_MIN_CUT:
         new_terms = rao_min_cut(igermanet, POS_SET, NEG_SET, NEUT_SET,
                                 args.seed_pos, args.ext_syn_rels)
@@ -398,7 +397,8 @@ def main(a_argv):
             new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
         else:
             new_terms = severyn(N, getattr(args, CORPUS_FILES),
-                                POS_SET, NEG_SET, POS_RE, NEG_RE)
+                                POS_SET, NEG_SET, NEUT_SET,
+                                POS_RE, NEG_RE)
     elif args.dmethod == TAKAMURA:
         N = args.N - (len(POS_SET) + len(NEG_SET))
         if N == 0:
