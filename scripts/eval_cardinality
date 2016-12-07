@@ -1,10 +1,11 @@
 #!/bin/sh
 
-"""An auxiliary script for determining optimal cardinality of a lexicon.
+cat <<EOF > /dev/null
+An auxiliary script for determining optimal cardinality of a lexicon.
 
 NB: no proper argument testing is performed
 
-"""
+EOF
 
 ##################################################################
 #
