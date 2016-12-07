@@ -1,0 +1,600 @@
+überlegen	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+ausgezeichnet	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+glücklich	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+schön	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+positiv	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+korrekt	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+richtig	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+gut	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+hochwertig	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+nett	positive	179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+ekelhaft	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+unglücklich	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+negativ	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+schlecht	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+lästig	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+hässlich	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+minderwertig	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+gemein	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+falsch	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+arm	negative	-179769313486231570814527423731704356798070567525844996598917476803157260780028538760589558632766878171540458953514382464234321326889464182768467546703537516986049910576551282076245490090389328944075868508455133942304583236903222948165808559332123348274797826204144723168738177180919299881250404026184124858368.000000
+(u'sachlich', u'korrekt')	positive	0.013839
+(u'gut', u'morgen')	positive	0.010833
+(u'so', u'nett')	positive	0.010142
+(u'positiv', u'bewerten')	positive	0.007839
+(u'auch', u'nett')	positive	0.006523
+(u'positiv', u'denken')	positive	0.005076
+(u'nett', u'mensch')	positive	0.004085
+sinnlich	positive	0.002878
+(u'mal', u'nett')	positive	0.002562
+(u'ganz', u'nett')	positive	0.002515
+(u'immer', u'nett')	positive	0.002333
+(u'sachlich', u'falsch')	negative	-0.002092
+sachfremd	negative	-0.001821
+stets	positive	0.001690
+(u'positiv', u'sehen')	positive	0.001617
+(u'so', u'gut')	positive	0.001496
+(u'klingen', u'irgendwie')	positive	0.001414
+(u'so', u'richtig')	positive	0.001295
+(u'nur', u'dann')	positive	0.001251
+(u'machen', u'nett')	positive	0.001238
+(u'gut', u'so')	positive	0.001171
+(u'immer', u'positiv')	positive	0.001093
+(u'nur', u'positiv')	positive	0.000997
+alltag	positive	0.000904
+insolvenz	positive	0.000831
+bewerten	positive	0.000791
+(u'ja', u'richtig')	positive	0.000773
+(u'irgendwie', u'nett')	positive	0.000757
+(u'gehen', u'gut')	positive	0.000750
+bedingen	positive	0.000674
+(u'de', u'mail')	negative	-0.000660
+seele	negative	-0.000641
+grab	negative	-0.000602
+(u'geben', u'gut')	positive	0.000595
+(u'politisch', u'korrekt')	positive	0.000575
+polypropylen	positive	0.000569
+(u'nur', u'gut')	positive	0.000562
+(u'aber', u'gut')	positive	0.000547
+(u'chance', u'bekommen')	positive	0.000544
+(u'also', u'richtig')	positive	0.000538
+(u'auch', u'schlecht')	negative	-0.000497
+verfahren	negative	-0.000485
+(u'bayern', u'fan')	positive	0.000484
+vo	positive	0.000469
+(u'komplett', u'falsch')	negative	-0.000466
+zudem	negative	-0.000453
+passwort	positive	0.000451
+graben	negative	-0.000420
+koerper	negative	-0.000420
+(u'nur', u'bedingen')	negative	-0.000416
+lohn	negative	-0.000409
+toleranz	positive	0.000408
+(u'mal', u'schlecht')	positive	0.000407
+berichten	positive	0.000402
+(u'auch', u'richtig')	positive	0.000396
+klappen	positive	0.000382
+deutschkenntnis	positive	0.000382
+(u'falsch', u'film')	negative	-0.000362
+(u'falsch', u'weg')	positive	0.000360
+(u'offensichtlich', u'falsch')	negative	-0.000355
+(u'echt', u'gut')	positive	0.000353
+vorwerfen	negative	-0.000350
+doppelpass	negative	-0.000348
+#biber	positive	0.000344
+(u'arm', u'sau')	negative	-0.000335
+tg	negative	-0.000333
+(u'richtig', u'schritt')	positive	0.000329
+intensiv	positive	0.000321
+(u'wichtig', u'negativ')	negative	-0.000321
+gang	positive	0.000320
+(u'leib', u'seele')	negative	-0.000311
+(u'nur', u'schlecht')	positive	0.000298
+(u'richtig', u'aber')	positive	0.000291
+chaos	positive	0.000290
+ablehnen	negative	-0.000289
+(u'machen', u'richtig')	positive	0.000286
+(u'schlecht', u'nachricht')	negative	-0.000274
+(u'sehr', u'falsch')	negative	-0.000274
+(u'mehr', u'richtig')	positive	0.000273
+(u'richtig', u'machen')	positive	0.000270
+(u'aber', u'schlecht')	negative	-0.000268
+(u'jetzt', u'gut')	positive	0.000267
+#outdoor	positive	0.000266
+(u'gut', u'genug')	positive	0.000264
+unterton	negative	-0.000260
+(u'gut', u'finden')	positive	0.000258
+(u'ende', u'nur')	positive	0.000258
+(u'find', u'auch')	positive	0.000257
+mail	positive	0.000256
+(u'noch', u'richtig')	positive	0.000251
+leib	negative	-0.000245
+tochter	negative	-0.000245
+jap	negative	-0.000245
+qualitativ	positive	0.000244
+x5	positive	0.000240
+verleihen	positive	0.000240
+(u'dort', u'sehen')	negative	-0.000237
+(u'arm', u'mensch')	positive	0.000237
+mar	negative	-0.000235
+schwein	negative	-0.000229
+(u'immer', u'richtig')	positive	0.000228
+(u'schlecht', u'aber')	negative	-0.000228
+(u's', u'gut')	positive	0.000227
+hast	negative	-0.000227
+rekonstruktion	negative	-0.000225
+mannschaft	positive	0.000221
+(u'so', u'schlecht')	positive	0.000221
+(u'schlicht', u'falsch')	negative	-0.000220
+z	positive	0.000219
+ausdruck	negative	-0.000218
+(u'kommen', u'nur')	positive	0.000213
+(u'wieder', u'richtig')	positive	0.000202
+(u'ganz', u'korrekt')	positive	0.000202
+wahlkampf	positive	0.000202
+(u'mal', u'richtig')	positive	0.000201
+(u'erst', u'richtig')	positive	0.000200
+basieren	negative	-0.000195
+(u's', u'schlecht')	negative	-0.000191
+erwartung	negative	-0.000191
+(u'freiwillig', u'feuerwehr')	positive	0.000190
+(u'richtig', u'krass')	positive	0.000189
+(u'negativ', u'bewertung')	negative	-0.000187
+auspacken	positive	0.000187
+(u'ja', u'falsch')	negative	-0.000186
+haltung	negative	-0.000182
+(u'falsch', u'verstehen')	positive	0.000182
+(u'halt', u'nur')	positive	0.000181
+(u'gut', u'idee')	positive	0.000176
+(u'auch', u'iphone')	positive	0.000175
+(u'arm', u'tier')	positive	0.000173
+(u'ja', u'echt')	positive	0.000171
+your	negative	-0.000171
+(u'aber', u'lieb')	negative	-0.000171
+spd	negative	-0.000169
+(u'ganz', u'falsch')	negative	-0.000168
+(u'richtig', u'essen')	positive	0.000168
+(u'ja', u'immer')	negative	-0.000167
+manifestieren	negative	-0.000166
+einsehen	negative	-0.000166
+hui	negative	-0.000165
+student	positive	0.000162
+(u'kind', u'falsch')	negative	-0.000162
+einsatzfahrzeug	negative	-0.000160
+(u'schlecht', u'verarbeitet')	negative	-0.000160
+(u'schon', u'gut')	positive	0.000160
+beratung	positive	0.000158
+(u'so', u'minderwertig')	negative	-0.000158
+(u'falsch', u'nur')	positive	0.000158
+erinnern	negative	-0.000156
+(u'auch', u'schnell')	negative	-0.000156
+erwischen	negative	-0.000155
+(u'ausgezeichnet', u'beitrag')	positive	0.000155
+(u'praktisch', u'tip')	negative	-0.000155
+(u'lieb', u'richtig')	positive	0.000155
+(u'da', u'eher')	negative	-0.000154
+frust	negative	-0.000152
+(u'ausgezeichnet', u'arbeit')	positive	0.000152
+pfeifen	negative	-0.000150
+bescheuert	negative	-0.000148
+(u'wissen', u'genau')	negative	-0.000147
+(u'richtig', u'antwort')	positive	0.000147
+weit	negative	-0.000146
+nebeneffekt	positive	0.000144
+hirn	positive	0.000144
+achso	negative	-0.000144
+content	positive	0.000144
+tragen.	negative	-0.000144
+mangel	negative	-0.000143
+schuh	positive	0.000143
+freundlichkeit	negative	-0.000142
+informieren	positive	0.000142
+allgemein	negative	-0.000141
+(u'moment', u'richtig')	positive	0.000141
+(u'schlecht', u'planen')	negative	-0.000141
+schreiben.	positive	0.000140
+(u'hochwertig', u'holz')	positive	0.000140
+for	negative	-0.000140
+(u'geben', u'schon')	negative	-0.000139
+android	negative	-0.000139
+auffassen	negative	-0.000139
+aufbauen	positive	0.000138
+abi	negative	-0.000138
+(u'gar', u'schlecht')	negative	-0.000138
+(u'schlecht', u'scherz')	negative	-0.000137
+#fcb	negative	-0.000137
+(u'auch', u'nur')	negative	-0.000136
+(u'arm', u'schwein')	positive	0.000136
+stream	negative	-0.000135
+(u'ja', u'ekelhaft')	negative	-0.000135
+auffinden	negative	-0.000135
+(u'richtig', u'spass')	positive	0.000135
+dame	positive	0.000134
+(u'sehen', u'falsch')	negative	-0.000134
+(u'richtig', u'heute')	positive	0.000134
+(u'geben', u'praktisch')	negative	-0.000133
+(u'klar', u'..')	negative	-0.000133
+montag	negative	-0.000132
+imo	negative	-0.000132
+(u'klein', u'praktisch')	positive	0.000131
+samsung	positive	0.000129
+(u'schlecht', u'gehen')	positive	0.000129
+partei	negative	-0.000128
+rettung	positive	0.000128
+(u'auch', u'letzt')	negative	-0.000127
+lol	negative	-0.000127
+(u'schlecht', u'geben')	negative	-0.000126
+vllt	positive	0.000126
+artikel	positive	0.000126
+minderwertigkeitskomplex	negative	-0.000125
+(u'falsch', u'entscheidung')	negative	-0.000124
+entscheidung	negative	-0.000124
+(u'lehrer', u'auch')	negative	-0.000124
+ccc	negative	-0.000124
+(u'sehen', u'richtig')	positive	0.000123
+unsinn	negative	-0.000123
+(u'sehr', u'gut')	positive	0.000123
+sowieso	negative	-0.000122
+(u'arm', u'familie')	negative	-0.000122
+vibrator	negative	-0.000121
+entscheiden	negative	-0.000120
+erreichen	negative	-0.000120
+eigentor	positive	0.000119
+antun	negative	-0.000119
+(u'falsch', u'laufen')	negative	-0.000119
+stil	positive	0.000119
+(u'liebe', u'eigentlich')	negative	-0.000118
+(u'sagen', u'..')	negative	-0.000118
+(u'stellen', u'technisch')	positive	0.000117
+greenpeace	negative	-0.000117
+installieren	negative	-0.000116
+vergleichen	negative	-0.000116
+(u'nur', u'mensch')	negative	-0.000115
+alleine	positive	0.000115
+kritisieren	negative	-0.000113
+(u'aber', u'auge')	positive	0.000112
+realistisch	negative	-0.000112
+ball	negative	-0.000112
+zynisch	positive	0.000112
+genuss	positive	0.000112
+motivierend	positive	0.000111
+(u'negativ', u'energie')	negative	-0.000110
+sprache	positive	0.000110
+(u'aber', u'gemein')	negative	-0.000109
+(u'kind', u'arm')	positive	0.000109
+rechnen	positive	0.000109
+aufregen	positive	0.000109
+(u'falsch', u'ist.')	positive	0.000109
+hals	negative	-0.000108
+anfang	negative	-0.000108
+(u'ja', u'arm')	positive	0.000107
+gender	negative	-0.000106
+effekt	negative	-0.000106
+urlauber	negative	-0.000106
+(u'falsch', u'aber')	positive	0.000105
+(u'richtig', u'zahl')	positive	0.000103
+(u'kommen', u'schlecht')	negative	-0.000103
+(u'perfekt', u'schlecht')	negative	-0.000103
+el	positive	0.000103
+(u'richtig', u'scheissen')	positive	0.000102
+(u'immer', u'schlecht')	negative	-0.000102
+(u'aufgabe', u'richtig')	positive	0.000102
+(u'video', u'positiv')	positive	0.000101
+(u'ja', u'bisher')	positive	0.000101
+(u'gar', u'mal')	negative	-0.000101
+dennoch	negative	-0.000100
+widerlich	negative	-0.000100
+(u'stehen', u'ausgezeichnet')	positive	0.000100
+(u'noch', u'falsch')	negative	-0.000098
+(u'jahr', u'richtig')	positive	0.000098
+bald	positive	0.000098
+bedingung	positive	0.000097
+(u'gemein', u'ding')	positive	0.000097
+(u'machen', u'falsch')	negative	-0.000097
+ausrede	negative	-0.000097
+(u'auch', u'ausgezeichnet')	positive	0.000096
+(u'jetzt', u'echt')	negative	-0.000094
+(u'meistens', u'nur')	negative	-0.000094
+fernsehen	positive	0.000094
+mum	positive	0.000094
+vollkommen	positive	0.000093
+(u'deutlich', u'schlecht')	negative	-0.000093
+entscheidend	negative	-0.000093
+achtung	negative	-0.000093
+bezahlen	negative	-0.000092
+reader	negative	-0.000092
+ausschliessen	negative	-0.000091
+(u'aber', u'wahrscheinlich')	negative	-0.000091
+durchsage	negative	-0.000091
+(u'auch', u'gut')	positive	0.000091
+loszuwerden	negative	-0.000091
+(u'immer', u'gut')	positive	0.000090
+(u'negativ', u'behaftet')	negative	-0.000090
+behaftet	negative	-0.000090
+magnet	negative	-0.000090
+trachten	negative	-0.000090
+reif	negative	-0.000090
+motto	positive	0.000089
+(u'teil', u'gut')	positive	0.000089
+(u'auch', u'irgendwie')	negative	-0.000088
+vorschlag	negative	-0.000088
+(u'doch', u'schon')	positive	0.000088
+kundenorientiert	negative	-0.000088
+(u'falsch', u'mensch')	negative	-0.000088
+reisserisch	positive	0.000087
+(u'auch', u'gemein')	negative	-0.000087
+klamotte	negative	-0.000087
+(u'ganz', u'gut')	positive	0.000087
+verhungern	negative	-0.000087
+wlan	negative	-0.000086
+lizenz	negative	-0.000086
+fressen	negative	-0.000085
+tolino	negative	-0.000085
+(u'geben', u'bereits')	negative	-0.000085
+abschreibung	negative	-0.000085
+(u'rund', u'jahr')	positive	0.000085
+erziehung	negative	-0.000085
+#spd	negative	-0.000084
+(u'aber', u'richtig')	positive	0.000084
+rhein	positive	0.000084
+klauen	negative	-0.000082
+(u'richtig', u'freund')	positive	0.000082
+angemessen	positive	0.000082
+(u'jedenfalls', u'falsch')	negative	-0.000081
+versalien	positive	0.000081
+whatsapp	negative	-0.000081
+(u'wissen', u'technisch')	negative	-0.000080
+(u'gut', u'sagen')	positive	0.000080
+(u'recht', u'sachlich')	negative	-0.000080
+(u'heute', u'gut')	positive	0.000080
+philosophisch	negative	-0.000080
+dort	negative	-0.000080
+luft	negative	-0.000080
+(u'auch', u'recht')	negative	-0.000080
+story	positive	0.000079
+verlieren	negative	-0.000079
+jo	negative	-0.000079
+rl	negative	-0.000079
+(u'so', u'ekelhaft')	negative	-0.000078
+etwa	positive	0.000078
+(u'ja', u'nur')	negative	-0.000077
+(u'ja', u'gemein')	negative	-0.000077
+resonanz	positive	0.000077
+(u'helfen', u'nur')	negative	-0.000076
+konstruktiv	negative	-0.000076
+tagebuch	negative	-0.000076
+girls	positive	0.000076
+gespannt	negative	-0.000076
+(u'negativ', u'beispiel')	negative	-0.000076
+motiv	positive	0.000075
+gesundheitlich	negative	-0.000075
+projekt	positive	0.000075
+rost	negative	-0.000075
+ruhig	positive	0.000075
+heimat	negative	-0.000075
+masterarbeit	positive	0.000075
+kindheit	positive	0.000074
+(u'negativ', u'kritik')	positive	0.000074
+chance	negative	-0.000074
+potenzial	negative	-0.000074
+nah	negative	-0.000074
+sicherlich	negative	-0.000073
+innovationspreis	positive	0.000073
+unterhalten	negative	-0.000073
+(u'aber', u'egal')	negative	-0.000073
+borussia	negative	-0.000073
+kohlen	negative	-0.000073
+(u'net', u'schlecht')	negative	-0.000072
+heil	negative	-0.000072
+bild	negative	-0.000072
+(u'nun', u'gut')	positive	0.000072
+kontakt	negative	-0.000071
+(u'gerne', u'gemein')	positive	0.000071
+warnen	negative	-0.000070
+paar	positive	0.000070
+games	negative	-0.000069
+meinung	negative	-0.000069
+sixx	negative	-0.000069
+(u'allerdings', u'auch')	negative	-0.000069
+massiv	positive	0.000068
+(u'so', u'falsch')	positive	0.000068
+irwie	negative	-0.000068
+(u'klar', u'geben')	positive	0.000068
+(u'jetzt', u'erst')	positive	0.000067
+(u'freundin', u'gehen')	negative	-0.000067
+herd	negative	-0.000067
+frustrierend	positive	0.000067
+angehen	positive	0.000067
+(u'falsch', u'setzen')	negative	-0.000067
+(u'total', u'schlecht')	negative	-0.000067
+sinnen	positive	0.000067
+entscheid	negative	-0.000067
+(u'naja', u'aber')	negative	-0.000066
+(u'falsch', u'schreiben')	positive	0.000066
+(u'da', u'auch')	negative	-0.000066
+kanzlerin	negative	-0.000065
+(u'n', u'schlecht')	positive	0.000065
+(u'hier', u'geben')	negative	-0.000065
+(u'ausgezeichnet', u'..')	positive	0.000065
+(u'machen', u'auch')	negative	-0.000065
+wow	positive	0.000065
+paket	negative	-0.000065
+(u'ausgezeichnet', u'titel')	positive	0.000064
+bericht	negative	-0.000064
+al	negative	-0.000064
+sprichwort	positive	0.000064
+brauch	positive	0.000064
+(u'noch', u'angenehm')	negative	-0.000064
+#lottozahlen	positive	0.000063
+(u'eigentlich', u'gar')	negative	-0.000063
+(u'mensch', u'setzen')	negative	-0.000063
+training	positive	0.000063
+bicycle	negative	-0.000063
+(u'okay', u'auch')	negative	-0.000063
+fleisch	negative	-0.000062
+auftrag	negative	-0.000062
+(u'immer', u'ganz')	negative	-0.000062
+vermutlich	negative	-0.000062
+(u'stark', u'negativ')	negative	-0.000062
+(u'kritik', u'geben')	negative	-0.000062
+(u'schon', u'weg')	negative	-0.000062
+trickdiebstahl	negative	-0.000062
+arbeitgeber	positive	0.000062
+(u'jetzt', u'schluss')	negative	-0.000061
+differenz	positive	0.000061
+sau	negative	-0.000061
+ansehen	negative	-0.000060
+(u'frage', u'machen')	positive	0.000060
+(u'doch', u'da')	negative	-0.000060
+affe	negative	-0.000060
+(u'mal', u'arm')	negative	-0.000060
+(u'so', u'gemein')	negative	-0.000060
+(u'ekelhaft', u'ganz')	negative	-0.000060
+mitarbeiter	positive	0.000059
+sonntag	positive	0.000059
+werkzeug	positive	0.000059
+(u'schon', u'lange')	positive	0.000059
+irgendwie	negative	-0.000059
+award	positive	0.000058
+(u'nsu', u'prozess')	negative	-0.000058
+hm	negative	-0.000058
+gratulieren	positive	0.000058
+party	positive	0.000058
+rassistisch	negative	-0.000057
+zwanghaft	negative	-0.000057
+alliance	positive	0.000057
+frankfurter	negative	-0.000057
+hater	negative	-0.000057
+bushido	positive	0.000056
+zahl	negative	-0.000056
+pft	negative	-0.000056
+austausch	negative	-0.000056
+mittlerweile	negative	-0.000056
+(u'ausgezeichnet', u'musikgeschmack')	positive	0.000056
+idiot	positive	0.000056
+zoll	negative	-0.000056
+weg	negative	-0.000056
+(u'zeit', u'kommen')	negative	-0.000055
+umsatz	negative	-0.000055
+(u'einzig', u'negativ')	negative	-0.000055
+verdammen	negative	-0.000055
+deo	positive	0.000055
+anbringen	positive	0.000055
+kriminell	negative	-0.000054
+bequem	positive	0.000054
+besonder	positive	0.000054
+lauten	negative	-0.000054
+(u'nur', u'gemein')	negative	-0.000054
+benehmen	negative	-0.000053
+zeitung	negative	-0.000053
+dorf	negative	-0.000053
+quasi	negative	-0.000053
+(u'laufen', u'doch')	negative	-0.000053
+energiewende	positive	0.000053
+ol	negative	-0.000052
+e.	negative	-0.000052
+(u'sagen', u'ja')	positive	0.000052
+accessoire	positive	0.000052
+ereignis	negative	-0.000052
+schokolade	negative	-0.000052
+(u'auch', u'falsch')	negative	-0.000052
+(u'selber', u'so')	positive	0.000052
+wetter	positive	0.000052
+schwierig	negative	-0.000052
+weiter	negative	-0.000052
+#kundenservice	positive	0.000052
+holz	positive	0.000051
+laufend	negative	-0.000051
+we	negative	-0.000051
+ausprobieren	positive	0.000051
+anteil	positive	0.000051
+#ber	positive	0.000051
+iwas	negative	-0.000051
+(u'schlecht', u'benehmen')	negative	-0.000050
+bildschirm	positive	0.000050
+#newstweet	negative	-0.000050
+system	negative	-0.000050
+essen	negative	-0.000049
+finds	positive	0.000048
+schalk	positive	0.000048
+wurde.	positive	0.000048
+(u'wieder', u'ausgezeichnet')	positive	0.000048
+presse	negative	-0.000048
+trickbetrug	negative	-0.000048
+fairness	negative	-0.000048
+(u's', u'jetzt')	positive	0.000048
+(u'einfach', u'ekelhaft')	negative	-0.000047
+leer	negative	-0.000047
+freiwillig	negative	-0.000047
+anklagen	negative	-0.000047
+frei	negative	-0.000046
+(u'nun', u'richtig')	positive	0.000046
+krankheit	negative	-0.000046
+(u'sehr', u'hochwertig')	positive	0.000046
+(u'vielleicht', u'einfach')	negative	-0.000046
+vorn	negative	-0.000046
+ausmachen	negative	-0.000046
+arbeitsbedingung	negative	-0.000046
+(u'training', u'noch')	positive	0.000046
+(u'richtig', u'is')	positive	0.000046
+(u'theoretisch', u'geben')	negative	-0.000046
+illusion	positive	0.000045
+atv	negative	-0.000045
+(u'ganz', u'wochenende')	negative	-0.000045
+(u'technisch', u'mitarbeiter')	negative	-0.000045
+(u'negativ', u'einstellen')	negative	-0.000044
+guide	positive	0.000044
+de	positive	0.000044
+geschichte	negative	-0.000044
+kommentator	negative	-0.000044
+verarbeitet	negative	-0.000044
+option	negative	-0.000043
+fc	negative	-0.000043
+(u'qualitativ', u'hochwertig')	positive	0.000043
+#haie	negative	-0.000043
+vorkommen	negative	-0.000043
+(u'gut', u'nacht')	positive	0.000043
+fussvolk	negative	-0.000043
+(u'aber', u'so')	positive	0.000043
+twitter	negative	-0.000043
+geniessen	positive	0.000043
+german	negative	-0.000043
+umdenken	positive	0.000042
+fischer	positive	0.000042
+(u'aber', u'klingen')	negative	-0.000042
+station	positive	0.000042
+verstehen	negative	-0.000042
+unpraktisch	negative	-0.000042
+(u'negativ', u'aspekt')	negative	-0.000042
+ausbeutung	negative	-0.000042
+oftmals	positive	0.000042
+(u'aber', u'immer')	negative	-0.000042
+selbst	negative	-0.000042
+(u'gleich', u'bleiben')	positive	0.000042
+(u'beziehen', u'immer')	positive	0.000041
+(u'schon', u'gemein')	negative	-0.000041
+(u'frau', u'falsch')	negative	-0.000041
+(u'falsch', u'info')	positive	0.000041
+(u'auch', u'mehr')	positive	0.000041
+x3	negative	-0.000041
+lebewesen	negative	-0.000041
+katerchen	negative	-0.000041
+anders	positive	0.000041
+(u'echt', u'richtig')	positive	0.000041
+umwandlung	positive	0.000041
+homosexuelle	negative	-0.000040
+(u'hab', u'schon')	negative	-0.000040
+(u'arm', u'nehmen')	positive	0.000040
+posten	negative	-0.000040
+automat	negative	-0.000040
+zusammen	negative	-0.000040
+einbruch	positive	0.000040
+(u'technisch', u'ausstattung')	negative	-0.000039
+(u'echt', u'ekelhaft')	negative	-0.000039
+spruch	negative	-0.000039
+bayern	positive	0.000039
+strand	positive	0.000039
+baby	positive	0.000039
+(u'also', u'sehr')	negative	-0.000039
+(u'morgen', u'lieb')	negative	-0.000039
+grillen	negative	-0.000039
