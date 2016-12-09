@@ -32,20 +32,28 @@ def _read_emb(a_fname):
       (np.array): embedding matrix
 
     """
+    n = 0
     w2i = {}
-    with codecs.open(a_fname, 'r', ENCODING) as ifile:
+    with open(a_fname) as ifile:
         iline = ifile.readline()
-        rows, cols = iline.strip().split()
-        M = np.empty((int(rows), int(cols)))
+        rows, cols = [int(i) for i in iline.strip().split()]
+        M = np.empty((rows, cols))
         for i, iline in enumerate(ifile):
-            iline = iline.strip()
-            if not iline:
-                continue
-            fields = iline.split()
-            w2i[fields[0]] = i
-            for j, v in enumerate(fields[1:]):
-                M[i, j] = float(v)
-    return w2i, M
+            try:
+                iline = iline.decode(ENCODING).strip()
+                if not iline:
+                    continue
+                fields = iline.split()
+                n = len(fields) - cols
+                if n <= 0:
+                    continue
+                w2i[' '.join(fields[:n])] = i
+                for j, v in enumerate(fields[n:]):
+                    M[i, j] = float(v)
+            except StandardError as err:
+                print(repr(iline), file=sys.stderr)
+                print(repr(err), file=sys.stderr)
+        return w2i, M
 
 
 def _compute_lstsq(w2r_w2v, M_w2v, w2r_ts, M_ts):
