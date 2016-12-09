@@ -396,9 +396,9 @@ static int read_vectors(const char *a_fname, const Option *a_option) {
       cline += nchars;
     }
     if (irow != mrows) {
-      std::cerr << "Incorrect line format: '"
-                << iline << " :declared vector size " << mrows
-                << " differs from the actual size " << irow << std::endl;
+      std::cerr << "Incorrect line format (declared vector size " << mrows
+                << " differs from the actual size " << irow << "):\n"
+		<< iline << std::endl;
       goto error_exit;
     }
     ++icol;
