@@ -54,7 +54,7 @@ def read_file(a_fname, a_func):
     """
     with codecs.open(a_fname, 'r', ENCODING) as ifile:
         for iline in ifile:
-            iline = iline.strip()
+            iline = iline.strip().lower()
             if not iline or iline.startswith(COMMENT):
                 continue
             a_func(TAB_RE.split(iline))
@@ -72,7 +72,7 @@ def vec2png(a_w2pol, a_etp2wv, a_ofname):
     # construct pandas dataframe
     data = pd.DataFrame([{ETYPE: etype, PPLX: pplx,
                           POL: a_w2pol.get(w, NEUTRAL),
-                          SIZE: POL2SIZE[a_w2pol.get(w, NEUTRAL)],
+                          SIZE: POL2SIZE[a_w2pol.get(w.lower(), NEUTRAL)],
                           'x': x, 'y': y}
                          for (etype, pplx), stat in a_etp2wv.iteritems()
                          for w, (x, y) in stat.iteritems()])
@@ -160,6 +160,7 @@ def main(a_args):
         word = a_toks[0].strip()
         vec = [float(t) for t in a_toks[1:]]
         word2vec[word] = vec
+
     # mapping from embedding type and perplexity to word vectors
     etp2wv = {}
     fields = etype = perplexity = None
@@ -169,6 +170,8 @@ def main(a_args):
             "The last two (dot-separated) components of the vector file" \
             " name should specify embedding type and perplexity values."
         etype, perplexity = fields[-2], float(fields[-1])
+        etype = etype.replace('_', " + ")
+        etype = etype.replace('least-', "least ")
         read_file(ifname, read_vecs)
         etp2wv[(etype, perplexity)] = deepcopy(word2vec)
         word2vec.clear()
