@@ -26,7 +26,7 @@ POSITIVE = "positive"
 NEGATIVE = "negative"
 NEUTRAL = "neutral"
 POL = "polarity"
-NEUT_COL = "#000000"
+NEUT_COL = "#6E7B8B"
 NEUT_MARK = "."
 POS_COL = "#8B0000"
 POS_MARK = "^"
@@ -103,24 +103,29 @@ def vec2png(a_w2pol, a_etp2wv, a_ofname):
         labels.append(pol)
         ihandle = legend_data[pol]
         handles.append(ihandle)
+    # see 'http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.legend'
+    legend = sns.plt.legend(handles, labels,
+                            markerscale=1,
+                            title="Terms",
+                            fontsize=FS - 3,
+                            frameon=True,
+                            bbox_to_anchor=(-2.15, -0.45),
+                            loc=3, ncol=len(POLARITIES))
+    title = legend.get_title()
+    title.set_weight("bold")
+    title.set_fontsize(FS - 3)
     # resize x and y labels
-    xlabel = ylabel = legend = title = None
+    xlabel = ylabel = None
     for i, axes_row in enumerate(g.axes):
         for j, axes_col in enumerate(axes_row):
             if j == 0:
                 ylabel = axes_col.get_ylabel()
-                axes_col.set_ylabel(ylabel, size=FS - 3)
+                axes_col.set_ylabel(ylabel, size=FS - 3, rotation=0)
             xlabel = axes_col.get_xlabel()
             axes_col.set_xlabel(xlabel, size=FS - 3)
-            # add legend
-            legend = g.axes[i, j].legend(handles, labels, markerscale=1,
-                                         title="Terms", fontsize=FS - 3,
-                                         loc=1)
-            title = legend.get_title()
-            title.set_weight("bold")
-            title.set_fontsize(FS - 3)
-    sns.plt.show()
-    g.savefig(a_ofname)
+    # sns.plt.show()
+    g.savefig(a_ofname, dpi=300, bbox_extra_artists=(legend,),
+              pad_inches=0.2, bbox_inches="tight")
 
 
 def main(a_args):
