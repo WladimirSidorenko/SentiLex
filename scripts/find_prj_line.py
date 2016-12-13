@@ -15,6 +15,7 @@ ENCODING = "utf-8"
 POS = {"gut": None, "gute": None}
 NEG = {"schlecht": None}
 
+
 ##################################################################
 # Methods
 def _get_vec_len(a_vec):
@@ -26,6 +27,7 @@ def _get_vec_len(a_vec):
     """
     return np.sqrt(sum([i**2 for i in a_vec]))
 
+
 def _compute_eucl_distance(a_vec1, a_vec2):
     """Compute Euclidean distance between two vectors
 
@@ -35,6 +37,7 @@ def _compute_eucl_distance(a_vec1, a_vec2):
     @return squared Euclidean distance between two vectors
     """
     return sum((a_vec1 - a_vec2)**2)
+
 
 def compute_distance(a_vecs1, a_vecs2):
     """Compute Euclidean distance between all pairs of vectors
@@ -66,6 +69,7 @@ def _project_vec(a_vec, a_norm, a_prj_line):
     #           repr((np.dot(a_vec, a_prj_line) / a_norm) * a_prj_line), file = sys.stderr)
     return (np.dot(a_vec, a_prj_line) / a_norm) * a_prj_line
 
+
 def _project(a_pos_set, a_neg_set, a_prj_line):
     """Project original vector sets on the projection line
 
@@ -81,6 +85,7 @@ def _project(a_pos_set, a_neg_set, a_prj_line):
     vecs2 = [_project_vec(ivec, idiv, a_prj_line) for ivec in a_neg_set]
     return (vecs1, vecs2)
 
+
 def _compute_gradient(a_pos_vecs, a_neg_vecs, a_prj_line):
     """Compute gradient of distance function wrt projection line
 
@@ -90,15 +95,12 @@ def _compute_gradient(a_pos_vecs, a_neg_vecs, a_prj_line):
 
     @return gradient vector
     """
-    print("a_prj_line = ", repr(a_prj_line), file = sys.stderr)
+    print("a_prj_line = ", repr(a_prj_line), file=sys.stderr)
     # zero-out the gradient vector
-    multi = 0.
     dot_prod = diff_vec = None
     # prj_squared = a_prj_line ** 2
-    idiv = 1. # np.float128(sum(a_prj_line ** 2))
-    idiv_squared = 1. # idiv ** 2
-    ones = np.ones(a_prj_line.size)
-    # idiv_ones = idiv * ones
+    idiv = 1.  # np.float128(sum(a_prj_line ** 2))
+    idiv_squared = 1.  # idiv ** 2
     # normalized_prj = a_prj_line / idiv
     assert idiv != 0, "Projection vector cannot be zero vector."
     gradient = np.array([0 for _ in a_prj_line])
@@ -106,9 +108,9 @@ def _compute_gradient(a_pos_vecs, a_neg_vecs, a_prj_line):
         for neg_vec in a_neg_vecs:
             diff_vec = pos_vec - neg_vec
             dot_prod = np.dot(a_prj_line, diff_vec)
-            print("dot_prod = ", repr(dot_prod), file = sys.stderr)
-            print("idiv = ", repr(idiv), file = sys.stderr)
-            print("idiv_squared = ", repr(idiv_squared), file = sys.stderr)
+            print("dot_prod = ", repr(dot_prod), file=sys.stderr)
+            print("idiv = ", repr(idiv), file=sys.stderr)
+            print("idiv_squared = ", repr(idiv_squared), file=sys.stderr)
             # constant 0.5 below is a dirty hack
             gradient += (dot_prod) * (diff_vec - dot_prod * a_prj_line)
             # update = multi
@@ -123,7 +125,7 @@ def _compute_gradient(a_pos_vecs, a_neg_vecs, a_prj_line):
             # gradient += update
     # since we have a quadratic function, the gradient has coefficient
     # two
-    print("gradient =", repr(gradient), file = sys.stderr)
+    print("gradient =", repr(gradient), file=sys.stderr)
     return 2 * gradient
 
 def find_optimal_prj(a_dim):
