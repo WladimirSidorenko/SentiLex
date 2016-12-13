@@ -163,6 +163,8 @@ for slg in ${SLG_METHODS}; do
 			VEC_FILE_SFX='.40000';;
 		    knn)
 			slg='-t 3';;
+		    -t*)
+			;;
 		    *)
 			echo "Unknown type of SLG algorithm: ${slg}" >&2
 			exit 3;;
