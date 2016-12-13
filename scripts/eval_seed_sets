@@ -97,22 +97,22 @@ for slg in ${SLG_METHODS}; do
 		if test ${DICT_BASED} -eq 1; then
 		    SGL_OPTS="--seed-pos=none"
 		fi
-		OFNAME="${ODIR}/${slg}.ext-syn-rels.esuli-sebastiani-seedset.txt";;
+		OFNAME="${ODIR}/${slg}.esuli-sebastiani-seedset.txt";;
 	    "${KH_SEED_SET}")
 		if test ${DICT_BASED} -eq 1; then
 		    SGL_OPTS="--seed-pos=none"
 		fi
-		OFNAME="${ODIR}/${slg}.ext-syn-rels.kim-hovy-seedset.txt";;
+		OFNAME="${ODIR}/${slg}.kim-hovy-seedset.txt";;
 	    "${HL_SEED_SET}")
 		if test ${DICT_BASED} -eq 1; then
 		    SGL_OPTS="--seed-pos=adj"
 		fi
-		OFNAME="${ODIR}/${slg}.ext-syn-rels.hu-liu-seedset.txt";;
+		OFNAME="${ODIR}/${slg}.hu-liu-seedset.txt";;
 	    "${RR_SEED_SET}")
 		if test ${DICT_BASED} -eq 1; then
 		    SGL_OPTS="--seed-pos=adj"
 		fi
-		OFNAME="${ODIR}/${slg}.ext-syn-rels.remus-seedset.txt";;
+		OFNAME="${ODIR}/${slg}.remus-seedset.txt";;
 	    "${EMO_SEED_SET}")
 		if test ${DICT_BASED} -eq 1; then
 		    echo "Seed set ${EMO_SEED_SET} is not support by dictionary-based methods" >&2
