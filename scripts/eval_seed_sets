@@ -14,6 +14,7 @@ $(basename $0) [OPTIONS]
 OPTIONS:
 -h|--help	show this screen and exit
 -c|--corpus-based	evaluate corpus-based approaches
+-n|--nwe-based	evaluate NWE-based approaches
 
 EOF
 )
@@ -21,9 +22,15 @@ EOF
 ##################################################################
 # Args
 DICT_BASED=1
+CORPUS_BASED=0
+NWE_BASED=0
+
 SLG_HOME=${SLG_HOME:?"Variable is not set, set it to the path to SentiLex project."}
+BIN_DIR="${SLG_HOME}/build/bin"
 POTTS_HOME=${POTTS_HOME:?"Variable is not set, set it to the path to PotTS project."}
 ODIR="${SLG_HOME}/ssresults"
+VEC_FILE="${SLG_HOME}/data/vectors/vectors.out"
+VEC_FILE_SFX=''
 POTTS_FORM2LEMMA="${SLG_HOME}/data/form2lemma.txt"
 
 while test $# -gt 0; do
@@ -32,7 +39,11 @@ while test $# -gt 0; do
 	    usage
 	    exit 0;;
 	-c|--corpus-based)
-	    DICT_BASED=0;;
+	    DICT_BASED=0
+	    CORPUS_BASED=1;;
+	-n|--nwe-based)
+	    DICT_BASED=0
+	    NWE_BASED=1;;
 	--)
 	    shift
 	    break;;
@@ -50,9 +61,12 @@ if test ${DICT_BASED} -eq 1; then
 rao-min-cut rao-lbl-prop awdallah'
     SLG_ADD_OPTS="--ext-syn-rels
  --form2lemma=${SLG_HOME}/data/GermaNet_v9.0/gn_form2lemma.txt"
-else
+elif test ${CORPUS_BASED} -eq 1; then
     TSNAPSHOT_HOME=${TSNAPSHOT_HOME:?"Variable is not set, set it to the path to Twitter snapshot."}
     SLG_METHODS='takamura kiritchenko severyn velikovich'
+    SLG_ADD_OPTS=''
+else
+    SLG_METHODS='ncentroids knn pca linproj'
     SLG_ADD_OPTS=''
 fi
 
@@ -68,6 +82,7 @@ SEED_SETS="\
  ${KH_SEED_SET}\
  ${ES_SEED_SET}\
  ${RR_SEED_SET}\
+ ${EMO_SEED_SET}\
  ${GLD_SEED_SET}\
 "
 
@@ -101,7 +116,7 @@ for slg in ${SLG_METHODS}; do
 	    "${EMO_SEED_SET}")
 		if test ${DICT_BASED} -eq 1; then
 		    echo "Seed set ${EMO_SEED_SET} is not support by dictionary-based methods" >&2
-		    exit 3
+		    continue
 		fi
 		OFNAME="${ODIR}/${slg}.emoticons-seedset.txt";;
 	    "${GLD_SEED_SET}")
@@ -113,8 +128,8 @@ for slg in ${SLG_METHODS}; do
 		echo "Unknown seed set $sset." >&2;
 		exit 4;;
 	esac
-	echo "${slg}"
-	echo "${sset}"
+	echo "${slg}" >&2
+	echo "${sset}" >&2
 	if test ${DICT_BASED} -eq 1; then
 	    "${SLG_HOME}/scripts/generate_lexicon.py" ${slg} ${SLG_OPTS} \
 		${SLG_ADD_OPTS} "${sset}" "${SLG_HOME}/data/GermaNet_v9.0" \
@@ -125,14 +140,35 @@ for slg in ${SLG_METHODS}; do
 		2> "${ODIR}/${slg}.$(basename ${sset%_*}).eval.log" | \
 		awk '/^Macro-average/ {print $NF}'
 	else
-	    if test "${slg}" = 'takamura'; then
-		"${SLG_HOME}/scripts/generate_lexicon.py" "${slg}" "${sset}" \
-		    "${SLG_HOME}/data/GermaNet_v9.0" \
-		    "${SLG_HOME}/data/corpus/cc.txt" -1 > "${OFNAME}" \
-		    2> "${ODIR}/${slg}.$(basename ${sset%_*}).log"
+	    if test ${CORPUS_BASED} -eq 1; then
+		if test "${slg}" = 'takamura'; then
+		    "${SLG_HOME}/scripts/generate_lexicon.py" \
+			"${slg}" "${sset}" "${SLG_HOME}/data/GermaNet_v9.0" \
+			"${SLG_HOME}/data/corpus/cc.txt" -1 > "${OFNAME}" \
+			2> "${ODIR}/${slg}.$(basename ${sset%_*}).log"
+		else
+		    "${SLG_HOME}/scripts/generate_lexicon.py" \
+			${slg} "${sset}" -1 "${TSNAPSHOT_HOME}"/*.tagged > "${OFNAME}" \
+			2> "${ODIR}/${slg}.$(basename ${sset%_*}).log"
+		fi
 	    else
-		"${SLG_HOME}/scripts/generate_lexicon.py" ${slg} "${sset}" -1 \
-		    "${TSNAPSHOT_HOME}"/*.tagged > "${OFNAME}" \
+		VEC_FILE_SFX=''
+		case "${slg}" in
+		    ncentroids)
+			slg='-t 0';;
+		    knn)
+			slg='-t 1';;
+		    pca)
+			slg='-t 2'
+			VEC_FILE_SFX='.40000';;
+		    knn)
+			slg='-t 3';;
+		    *)
+			echo "Unknown type of SLG algorithm: ${slg}" >&2
+			exit 3;;
+		esac
+		"${SLG_HOME}/build/bin/vec2dic -L -M ${slg}" \
+		    "${VEC_FILE}${VEC_FILE_SFX} ${sset}" > "${OFNAME}" \
 		    2> "${ODIR}/${slg}.$(basename ${sset%_*}).log"
 	    fi
 	    # determine the optimal number of terms for that method
