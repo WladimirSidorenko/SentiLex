@@ -167,8 +167,8 @@ for slg in ${SLG_METHODS}; do
 			echo "Unknown type of SLG algorithm: ${slg}" >&2
 			exit 3;;
 		esac
-		"${SLG_HOME}/build/bin/vec2dic -L -M ${slg}" \
-		    "${VEC_FILE}${VEC_FILE_SFX} ${sset}" > "${OFNAME}" \
+		${SLG_HOME}/build/bin/vec2dic -L -M ${slg} \
+		    "${VEC_FILE}${VEC_FILE_SFX}" ${sset} > "${OFNAME}" \
 		    2> "${ODIR}/${slg}.$(basename ${sset%_*}).log"
 	    fi
 	    # determine the optimal number of terms for that method
