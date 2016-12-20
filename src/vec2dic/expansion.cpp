@@ -6,7 +6,6 @@
 #include <cassert>                      // assert
 
 #include <algorithm>                    // std::swap(), std::sort()
-#include <cmath>                        // sqrt()
 #include <cstdlib>                      // size_t
 #include <iostream>                     // std::cerr
 #include <unordered_set>                // std::unordered_set
@@ -88,6 +87,8 @@ const vid_t POS_VID = static_cast<vid_t>(Polarity::POSITIVE);
 const vid_t NEG_VID = static_cast<vid_t>(Polarity::NEGATIVE);
 const vid_t NEUT_VID = static_cast<vid_t>(Polarity::NEUTRAL);
 const pol_t NEUT_POL = static_cast<pol_t>(Polarity::NEUTRAL);
+
+const bool debug = false;
 
 /////////////
 // Methods //
@@ -748,17 +749,31 @@ static arma::colvec _project_vec(const arma::colvec &a_src_vec, \
 static void _project(arma::mat *a_pos_prjctd, arma::mat *a_neg_prjctd, \
              const arma::mat *a_nwe, const v2ps_t *a_vecid2polscore, \
              const arma::colvec *a_prjline) {
+  arma::colvec cv;
+  double degree = 0.;
   size_t pos_i = 0, neg_i = 0;
   for (auto& v2p : *a_vecid2polscore) {
     if (v2p.second.first == Polarity::POSITIVE)
-      a_pos_prjctd->col(pos_i++) = _project_vec(
-                                                a_nwe->col(v2p.first),
+      a_pos_prjctd->col(pos_i++) = _project_vec(a_nwe->col(v2p.first),
                                                 *a_prjline);
-    else if (v2p.second.first == Polarity::POSITIVE)
-      a_neg_prjctd->col(neg_i++) = _project_vec(
-                                                a_nwe->col(v2p.first),
-                                                *a_prjline);
+    else if (v2p.second.first == Polarity::NEGATIVE)
+      a_neg_prjctd->col(neg_i++) =  _project_vec(a_nwe->col(v2p.first),
+						 *a_prjline);
+    else
+      continue;
+
+    if (debug) {
+      degree = std::acos(arma::dot(a_nwe->col(v2p.first), *a_prjline)
+			 / arma::norm(a_nwe->col(v2p.first), 2));
+      degree *= PI_GRAD;
+      std::cerr << "vecid " << v2p.first
+		<< ", polarity " << (int) v2p.second.first
+		<< ", distance to 0 origin " << arma::norm(a_nwe->col(v2p.first), 2)
+		<< ", degree to the projection vector " << degree << std::endl;
+    }
   }
+  if (debug)
+    std::cerr << std::endl << std::endl;
 }
 
 /**
@@ -834,6 +849,8 @@ static void _prjct_expand(v2ps_t *a_vecid2pol, const int a_N, \
   // vector of word vector ids, their respective polarities, and
   // distances to the boundaries
   vpd_v_t vpds;
+  double degree = 0.;
+
   vpds.reserve(a_nwe->n_cols - a_vecid2pol->size());
   // compute the mean of the projected positive vectors
   arma::colvec pos_mean = arma::sum(*pos_prjctd, 1) / pos_prjctd->n_cols;
@@ -846,7 +863,25 @@ static void _prjct_expand(v2ps_t *a_vecid2pol, const int a_N, \
   // line points to the positive mean or in the opposite direction)
   bool pos_is_right = arma::dot(pos_mean - mean, mean) > 0;
   assert(pos_is_right != (arma::dot(neg_mean - mean, mean) > 0));
+  if (debug) {
+    degree = std::acos(arma::dot(neg_mean - mean, mean)
+		       / (arma::norm(neg_mean - mean, 2)
+			  * arma::norm(mean, 2))) * PI_GRAD;
+    std::cerr << "dist from mean to neg_mean = "
+	      << arma::norm(neg_mean - mean, 2)
+	      << ", degree from mean to neg_mean = " << degree
+	      << std::endl;
+    degree = std::acos(arma::dot(pos_mean - mean, mean)
+		       / (arma::norm(pos_mean - mean, 2)
+			  * arma::norm(mean, 2))) * PI_GRAD;
+    std::cerr << "dist from mean to pos_mean = "
+	      << arma::norm(pos_mean - mean, 2)
+	      << ", degree from mean to pos_mean = " << degree
+	      << std::endl;
+    std::cerr << "pos_is_right = " << pos_is_right << std::endl;
+  }
   // project each vector with unknown polarity onto the projection
+  // line
   pol_t ipol;
   size_t j{0};
   dist_t idist2mean;

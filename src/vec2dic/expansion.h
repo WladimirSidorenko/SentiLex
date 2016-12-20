@@ -11,10 +11,16 @@
 #ifndef VEC2DIC_EXPANSION_H_
 # define VEC2DIC_EXPANSION_H_ 1
 
+////////////
+// Macros //
+////////////
+#define _USE_MATH_DEFINES
+
 //////////////
 // Includes //
 //////////////
 #include <armadillo>      // arma::mat
+#include <cmath>	  // M_PI
 #include <forward_list>   // std::forward_list
 #include <limits>         // std::numeric_limits
 #include <string>         // std::string
@@ -41,9 +47,10 @@ char {
 /** Integral type for distance measure */
 using dist_t = double;
 const dist_t MAX_DIST = std::numeric_limits<dist_t>::max();
+const double PI_GRAD = 180 / M_PI;
 
 /** Integral type for vector id */
-using vid_t = unsigned int;
+using vid_t = unsigned long long;
 
 /** Polarity-score pair */
 using ps_t = std::pair<Polarity, dist_t>;
