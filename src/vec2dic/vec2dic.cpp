@@ -160,6 +160,8 @@ static v2w_t vecid2word;
 static w2ps_t word2polscore;
 /// Matrix of neural word embeddings
 static arma::mat NWE;
+/// Output debug information
+const bool debug = false;
 
 /////////////
 // Methods //
@@ -367,7 +369,7 @@ static int read_vectors(const char *a_fname, const Option *a_option) {
   // skip empty lines at the beginning of file
   while (std::getline(is, iline) && iline.empty()) {}
   // initialize matrix (columns represent words, rows are coordinates)
-  if (sscanf(iline.c_str(), "%u %u", &ncolumns, &mrows) != 2) {
+  if (sscanf(iline.c_str(), "%llu %llu", &ncolumns, &mrows) != 2) {
     std::cerr << "Incorrect declaration line format: '"
               << iline.c_str() << std::endl;
     goto error_exit;
@@ -570,6 +572,11 @@ int main(int argc, char *argv[]) {
       continue;
 
     vecid2polscore.emplace(vecid->second, w2p.second);
+    if (debug) {
+      std::cerr << "word: " << w2p.first
+		<< ", vecid = " << vecid->second
+		<< ", polarity = " << (int) w2p.second.first << std::endl;
+    }
   }
 
   if (opt.n_terms > 0) {
