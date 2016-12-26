@@ -161,7 +161,7 @@ for slg in ${SLG_METHODS}; do
 		    pca)
 			slg='-t 2'
 			VEC_FILE_SFX='.40000';;
-		    knn)
+		    linproj)
 			slg='-t 3';;
 		    -t*)
 			;;
