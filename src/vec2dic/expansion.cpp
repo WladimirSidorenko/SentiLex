@@ -581,8 +581,8 @@ static void _pca_compute_means(const v2pi_t *a_vecid2polid,
 }
 
 /**
- * Compute varianc of polarity vectors along the dimension with the
- * biggest distance between different classes
+ * Compute the variance of polarity vectors along the dimension with
+ * the biggest distance between different classes
  *
  * @param a_vecid2pol - mapping from vector id's to polarities
  * @param a_prjctd - NWE matrix projected on the PCA space
@@ -757,8 +757,8 @@ static void _project(arma::mat *a_pos_prjctd, arma::mat *a_neg_prjctd, \
       a_pos_prjctd->col(pos_i++) = _project_vec(a_nwe->col(v2p.first),
                                                 *a_prjline);
     else if (v2p.second.first == Polarity::NEGATIVE)
-      a_neg_prjctd->col(neg_i++) =  _project_vec(a_nwe->col(v2p.first),
-						 *a_prjline);
+      a_neg_prjctd->col(neg_i++) = _project_vec(a_nwe->col(v2p.first),
+						*a_prjline);
     else
       continue;
 
@@ -940,6 +940,12 @@ void expand_prjct(v2ps_t *a_vecid2pol, const arma::mat *a_nwe, const int a_N,
     _project(&pos_prjctd, &neg_prjctd, a_nwe, a_vecid2pol, &prjline);
     // compute new distances
     dist = _compute_distance(&pos_prjctd, &neg_prjctd);
+    if (debug) {
+      std::cerr << "prev_dist =" << prev_dist << std::endl;
+      std::cerr << "dist =" << dist << std::endl;
+      std::cerr << "dist - prev_dist =" << dist - prev_dist << std::endl;
+      std::cerr << "a_delta =" << a_delta << std::endl;
+    }
     if ((dist - prev_dist) < a_delta)
       break;
     // update projection line
