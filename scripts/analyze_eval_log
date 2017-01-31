@@ -1,0 +1,33 @@
+#!/usr/bin/gawk -f
+
+BEGIN {
+    cnt = 40
+    max_cnt = 0
+    max_f1 = 0
+    lines = ""
+    max_lines = ""
+}
+
+/^Macro-average/ {
+    if ($NF >= max_f1) {
+	max_f1 = $NF
+        max_cnt = cnt
+	max_lines = lines $0 "\n"
+    }
+    cnt += 20
+    lines = ""
+    next
+}
+
+/^Micro-average/ {
+    next
+}
+
+NF {
+    lines = lines $0 "\n"
+}
+
+END {
+    print max_cnt
+    print max_lines
+}

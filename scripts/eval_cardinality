@@ -29,3 +29,5 @@ for i in $(seq 40 20 5120); do
 	./scripts/evaluate.py -f -l ./data/form2lemma.txt "${ofname}" ../PotTS/corpus/basedata \
 	../PotTS/corpus/annotator-2/markables >> "${stype}.eval.log"
 done
+
+./scripts/analyze_eval_log "${stype}.eval.log"
