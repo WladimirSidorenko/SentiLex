@@ -12,8 +12,8 @@ generate_lexicon.py [OPTIONS] [INPUT_FILES]
 # Imports
 from __future__ import unicode_literals, print_function
 
-from common import POSITIVE, NEGATIVE, NEUTRAL, \
-    INFORMATIVE_TAGS, TAB_RE, NONMATCH_RE, ENCODING
+from common import POSITIVE, NEGATIVE, NEUTRAL, STOP_WORDS, \
+    FORM2LEMMA, INFORMATIVE_TAGS, TAB_RE, NONMATCH_RE, ENCODING
 from germanet import Germanet, normalize, POS
 
 from awdallah import awdallah
