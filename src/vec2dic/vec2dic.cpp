@@ -353,7 +353,7 @@ static int read_vectors(const char *a_fname, const Option *a_option) {
   float iwght;
   const char *cline;
   std::string iline;
-  size_t space_pos;
+  size_t space_pos, tab_pos;
   int nchars;
   vid_t mrows = 0, ncolumns = 0, icol = 0, irow = 0;
   const int coefficient = a_option->coefficient;
@@ -380,7 +380,11 @@ static int read_vectors(const char *a_fname, const Option *a_option) {
   NWE.set_size(mrows, ncolumns);
 
   while (icol < ncolumns && std::getline(is, iline)) {
+    tab_pos = iline.find_first_of('\t');
     space_pos = iline.find_first_of(' ');
+    if (tab_pos < space_pos)
+      space_pos = tab_pos;
+
     while (space_pos > 0 && std::isspace(iline[space_pos])) {--space_pos;}
     if (space_pos == 0 && std::isspace(iline[space_pos])) {
       std::cerr << "Incorrect line format (missing word): "
