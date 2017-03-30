@@ -1,0 +1,42 @@
+#!/usr/bin/awk -f
+
+##################################################################
+BEGIN {
+    FS = OFS = "\t"
+    max = -1
+    polfactor = 1.
+}
+
+##################################################################
+NF > 2 {
+    sub(/_/, " ", $1)
+    if ($2 == "positive")
+	polfactor = 1.
+    else
+	polfactor = -1.
+}
+
+0 + $NF != 0 {
+    score = 1000. / (0 + $NF)
+    if (max < 0)
+	max = score
+
+    $NF = polfactor * score / max
+    print
+}
+
+0 + $NF == 0 {
+    $NF = polfactor
+    print
+}
+
+NF {
+    $1 = gensub(/([^ ]+)/, "\\1_NEG", "g", $1)
+    if ($2 == "positive")
+        $2 = "negative"
+    else
+        $2 = "positive"
+
+    $NF *= -1
+    print
+}
