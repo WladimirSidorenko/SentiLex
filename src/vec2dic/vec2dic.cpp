@@ -335,9 +335,13 @@ static void _length_normalize(arma::mat *a_nwe) {
  */
 static void _mean_normalize(arma::mat *a_nwe) {
   arma::vec vmean = arma::mean(*a_nwe, 1);
+  arma::vec vstddev = arma::stddev(*a_nwe, 0, 1);
 
   for (vid_t i = 0; i < vmean.n_rows; ++i) {
     a_nwe->row(i) -= vmean[i];
+
+    if (vstddev[i])
+      a_nwe->row(i) /= vstddev[i];
   }
 }
 
