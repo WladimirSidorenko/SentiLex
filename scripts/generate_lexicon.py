@@ -26,6 +26,7 @@ from rao import rao_min_cut, rao_lbl_prop
 from severyn import severyn
 from takamura import takamura
 from velikovich import velikovich, DFLT_T
+from vo import vo
 
 import argparse
 import codecs
@@ -54,6 +55,7 @@ RAO_MIN_CUT = "rao-min-cut"
 SEVERYN = "severyn"
 TAKAMURA = "takamura"
 VELIKOVICH = "velikovich"
+VO = "vo"
 
 W_DELIM_RE = re.compile(r'(?:\s|{:s})+'.format(
     '|'.join([re.escape(c) for c in string.punctuation])))
@@ -64,7 +66,8 @@ POS_RE = None
 NEG_RE = None
 
 REGEXP = "REGEXP"
-SEED_RE_SUPPORTED_METHODS = set([KIRITCHENKO, SEVERYN, TAKAMURA, VELIKOVICH])
+SEED_RE_SUPPORTED_METHODS = set([KIRITCHENKO, SEVERYN, TAKAMURA, VELIKOVICH,
+                                 VO])
 
 
 ##################################################################
@@ -320,6 +323,17 @@ def main(a_argv):
     subparser_velikovich.add_argument(CORPUS_FILES, nargs='+',
                                       help="tagged lemmatized files of the"
                                       " original corpus")
+    subparser_vo = subparsers.add_parser(VO,
+                                         help="Vo's method (Vo et al., 2016)")
+    subparser_vo.add_argument("seed_set",
+                              help="initial seed set of positive,"
+                              " and negative terms")
+    subparser_vo.add_argument("N",
+                              help="final number of additional"
+                              " terms to extract", type=int)
+    subparser_vo.add_argument(CORPUS_FILES, nargs='+',
+                              help="tagged lemmatized files of the"
+                              " original corpus")
     args = argparser.parse_args(a_argv)
 
     # initialize GermaNet, if needed
@@ -415,6 +429,13 @@ def main(a_argv):
         else:
             new_terms = velikovich(N, args.t, getattr(args, CORPUS_FILES),
                                    POS_SET, NEG_SET, POS_RE, NEG_RE)
+    elif args.dmethod == VO:
+        N = args.N - (len(POS_SET) + len(NEG_SET))
+        if N == 0:
+            new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
+        else:
+            new_terms = vo(N, getattr(args, CORPUS_FILES),
+                           POS_SET, NEG_SET, POS_RE, NEG_RE)
     else:
         raise NotImplementedError
     print("Expanding polarity sets... done", file=sys.stderr)
