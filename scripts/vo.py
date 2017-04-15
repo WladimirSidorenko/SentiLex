@@ -12,6 +12,7 @@ from __future__ import unicode_literals, print_function
 from collections import Counter, OrderedDict
 from copy import deepcopy
 from theano import config, tensor as TT
+from datetime import datetime
 import codecs
 import numpy as np
 import sys
@@ -122,7 +123,6 @@ def _read_files(a_crp_files, a_pos, a_neg,
     toks = []
     label = NEUTRAL
     for iform, itag, ilemma in _read_files_helper(a_crp_files):
-        print(repr(ilemma))
         if ilemma is None:
             if toks:
                 max_sent_len = max(max_sent_len, len(toks))
@@ -227,26 +227,33 @@ def init_nnet(W, k):
       k: dimensionality of the vector
 
     """
+    # `x' will be a matrix of size `m x n', where `m' is the mini-batch size
+    # and `n' is the maximum observed sentence length times the dimensionality
+    # of embeddings (`k')
     x = TT.imatrix(name='x')
+    # `y' will be a vectors of size `m', where `m' is the mini-batch size
     y = TT.ivector(name='y')
     params = [W]
+    # `emb_sum' will be a matrix of size `m x k', where `m' is the mini-batch
+    # size and `k' is dimensionality of embeddings
     emb_sum = W[x].sum(axis=1)
     # it actually does not make sense to have an identity matrix in the
     # network, but that's what the original Vo implemenation actually does
-    W2S = theano.shared(value=floatX(np.eye(3)), name="W2S")
-    y_prob = TT.nnet.softmax(TT.dot(W2S, emb_sum.T))
+    # W2S = theano.shared(value=floatX(np.eye(3)), name="W2S")
+    # y_prob = TT.nnet.softmax(TT.dot(W2S, emb_sum.T))
+    y_prob = TT.nnet.softmax(emb_sum)
     y_pred = TT.argmax(y_prob, axis=1)
 
     cost = -TT.mean(TT.log(y_prob)[TT.arange(y.shape[0]), y])
-    errs = TT.mean(TT.neq(y, y_pred))
+    acc = TT.sum(TT.eq(y, y_pred))
 
     updates = sgd_updates_adadelta(params, cost)
     train = theano.function([x, y], cost, updates=updates)
-    validate = theano.function([x, y], errs)
+    validate = theano.function([x, y], acc)
     zero_vec = TT.basic.zeros(k)
-    zero_out = theano.function([zero_vec],
+    zero_out = theano.function([],
                                updates=[(W,
-                                         TT.set_subtensor(W[-1, :],
+                                         TT.set_subtensor(W[UNK_I, :],
                                                           zero_vec))])
     return (train, validate, zero_out)
 
@@ -280,10 +287,18 @@ def vo(a_N, a_crp_files, a_pos, a_neg,
     epoch_i = 0
     while epoch_i < MAX_EPOCHS:
         np.random.shuffle(idcs)
-        print(repr(N))
+        cost = acc = 0.
+        start_time = datetime.utcnow()
         for start in np.arange(0, N, btch_size):
             end = min(N, start + btch_size)
             btch_x = X[idcs[start:end]]
             btch_y = Y[idcs[start:end]]
-            train(btch_x, btch_y)
+            cost += train(btch_x, btch_y)
+            zero_out()
+            acc += validate(btch_x, btch_y)
+        end_time = datetime.utcnow()
+        tdelta = (end_time - start_time).total_seconds()
+        print("Iteration #{:d} ({:.2f} sec): cost = {:.2f}, "
+              "accuracy = {:.2%};".format(epoch_i, tdelta,
+                                          cost, acc / float(N)))
         epoch_i += 1
