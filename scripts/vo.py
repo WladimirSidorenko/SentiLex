@@ -11,6 +11,7 @@ from __future__ import unicode_literals, print_function
 
 from collections import Counter, OrderedDict
 from copy import deepcopy
+from itertools import chain
 from theano import config, tensor as TT
 from datetime import datetime
 import codecs
@@ -18,8 +19,11 @@ import numpy as np
 import sys
 import theano
 
-from common import ENCODING, ESC_CHAR, INFORMATIVE_TAGS, \
-    MIN_TOK_CNT, NONMATCH_RE, SENT_END_RE, TAB_RE, check_word
+from common import ENCODING, ESC_CHAR, FMAX, FMIN, \
+    INFORMATIVE_TAGS, MIN_TOK_CNT, NONMATCH_RE, SENT_END_RE, \
+    TAB_RE, check_word
+from common import POSITIVE as POSITIVE_LBL
+from common import NEGATIVE as NEGATIVE_LBL
 from germanet import normalize
 
 
@@ -35,10 +39,13 @@ NEGATIVE = 0
 NEUTRAL = 1
 POSITIVE = 2
 
-MAX_EPOCHS = 5
+MAX_EPOCHS = 500
+MIN_EPOCHS = 25
 BTCH_SIZE = 20
 UNK = "%unk%"
 UNK_I = 0
+
+EPSILON = 1e-9
 
 
 ##################################################################
@@ -103,9 +110,11 @@ def _read_files(a_crp_files, a_pos, a_neg,
                        and check_word(ilemma))
     print(" done", file=sys.stderr)
     word2vecid = {UNK: UNK_I}
+    for w in chain(a_pos, a_neg):
+        word2vecid[w] = len(word2vecid)
     # convert words to vector ids if their counters are big enough
     for w, cnt in word2cnt.iteritems():
-        if cnt >= MIN_TOK_CNT or w in a_pos or w in a_neg:
+        if cnt >= MIN_TOK_CNT or a_pos_re.search(w) or a_neg_re.search(w):
             word2vecid[w] = len(word2vecid)
     word2cnt.clear()
 
@@ -233,7 +242,6 @@ def init_nnet(W, k):
     x = TT.imatrix(name='x')
     # `y' will be a vectors of size `m', where `m' is the mini-batch size
     y = TT.ivector(name='y')
-    params = [W]
     # `emb_sum' will be a matrix of size `m x k', where `m' is the mini-batch
     # size and `k' is dimensionality of embeddings
     emb_sum = W[x].sum(axis=1)
@@ -244,11 +252,12 @@ def init_nnet(W, k):
     y_prob = TT.nnet.softmax(emb_sum)
     y_pred = TT.argmax(y_prob, axis=1)
 
+    params = [W]
     cost = -TT.mean(TT.log(y_prob)[TT.arange(y.shape[0]), y])
-    acc = TT.sum(TT.eq(y, y_pred))
-
     updates = sgd_updates_adadelta(params, cost)
     train = theano.function([x, y], cost, updates=updates)
+
+    acc = TT.sum(TT.eq(y, y_pred))
     validate = theano.function([x, y], acc)
     zero_vec = TT.basic.zeros(k)
     zero_out = theano.function([],
@@ -285,6 +294,8 @@ def vo(a_N, a_crp_files, a_pos, a_neg,
     idcs = np.arange(N)
     btch_size = min(N, BTCH_SIZE)
     epoch_i = 0
+    prev_acc = FMIN
+    acc = 0
     while epoch_i < MAX_EPOCHS:
         np.random.shuffle(idcs)
         cost = acc = 0.
@@ -296,9 +307,37 @@ def vo(a_N, a_crp_files, a_pos, a_neg,
             cost += train(btch_x, btch_y)
             zero_out()
             acc += validate(btch_x, btch_y)
+        acc /= float(N)
         end_time = datetime.utcnow()
         tdelta = (end_time - start_time).total_seconds()
         print("Iteration #{:d} ({:.2f} sec): cost = {:.2f}, "
-              "accuracy = {:.2%};".format(epoch_i, tdelta,
-                                          cost, acc / float(N)))
+              "accuracy = {:.2%};".format(epoch_i, tdelta, cost, acc))
+        if abs(prev_acc - acc) < EPSILON and epoch_i > MIN_EPOCHS:
+            break
+        else:
+            prev_acc = acc
         epoch_i += 1
+    W = W.get_value()
+    ret = []
+    for w, w_id in word2vecid.iteritems():
+        if w_id == UNK_I:
+            continue
+        elif w in a_pos or a_pos_re.search(w):
+            w_score = FMAX
+        elif w in a_neg or a_neg_re.search(w):
+            w_score = FMIN
+        else:
+            w_pol = np.argmax(W[w_id])
+            if w_pol == NEUTRAL:
+                continue
+            w_score = np.max(W[w_id])
+            if (w_pol == POSITIVE and w_score < 0.) \
+               or (w_pol == NEGATIVE and w_score > 0.):
+                w_score *= -1
+        ret.append((w,
+                    POSITIVE_LBL if w_score > 0. else NEGATIVE_LBL,
+                    w_score))
+    ret.sort(key=lambda el: abs(el[-1]), reverse=True)
+    if a_N >= 0:
+        del ret[a_N:]
+    return ret
