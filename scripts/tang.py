@@ -134,7 +134,7 @@ def init_nnet(W, n_classes, vec_dim):
 
 def tang(a_N, a_emb_fname, a_pos, a_neg, a_neut,
          a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE,
-         encoding=ENCODING):
+         a_encoding=ENCODING):
     """Method for generating sentiment lexicons using Velikovich's approach.
 
     @param a_N - number of terms to extract
@@ -144,11 +144,13 @@ def tang(a_N, a_emb_fname, a_pos, a_neg, a_neut,
     @param a_neut - initial set of neutral terms to be expanded
     @param a_pos_re - regular expression for matching positive terms
     @param a_neg_re - regular expression for matching negative terms
+    @param a_neg_re - regular expression for matching negative terms
+    @param a_encoding - encoding of the vector file
 
     @return list of terms sorted according to their polarities
 
     """
-    w2i, EMBS, ndim = read_embeddings(a_emb_fname, encoding)
+    w2i, EMBS, ndim = read_embeddings(a_emb_fname, a_encoding)
     X, Y = digitize_trainset(w2i, a_pos, a_neg, a_neut,
                              a_pos_re, a_neg_re)
     train, validate, predict, params = init_nnet(EMBS,

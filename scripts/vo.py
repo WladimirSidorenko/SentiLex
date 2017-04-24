@@ -9,19 +9,21 @@
 # Imports
 from __future__ import unicode_literals, print_function
 
-from collections import Counter, OrderedDict
+from collections import Counter
 from copy import deepcopy
-from itertools import chain
-from theano import config, tensor as TT
 from datetime import datetime
+from itertools import chain
+from theano import tensor as TT
+from sklearn.model_selection import train_test_split
 import codecs
 import numpy as np
 import sys
 import theano
 
-from common import ENCODING, ESC_CHAR, FMAX, FMIN, \
-    INFORMATIVE_TAGS, MIN_TOK_CNT, NONMATCH_RE, SENT_END_RE, \
-    TAB_RE, check_word
+from common import BTCH_SIZE, ENCODING, EPSILON, ESC_CHAR, FMAX, FMIN, \
+    INFORMATIVE_TAGS, MAX_EPOCHS, MIN_EPOCHS, MIN_TOK_CNT, \
+    NEGATIVE_IDX, NEUTRAL_IDX, POSITIVE_IDX, NONMATCH_RE, SENT_END_RE, \
+    TAB_RE, check_word, floatX, sgd_updates_adadelta
 from common import POSITIVE as POSITIVE_LBL
 from common import NEGATIVE as NEGATIVE_LBL
 from germanet import normalize
@@ -35,25 +37,17 @@ MAX_NGHBRS = 25
 TOK_WINDOW = 4                  # it actually corresponds to a window of six
 MAX_POS_IDS = 10000
 
-NEGATIVE = 0
-NEUTRAL = 1
-POSITIVE = 2
-
-MAX_EPOCHS = 500
-MIN_EPOCHS = 25
-BTCH_SIZE = 20
 UNK = "%unk%"
 UNK_I = 0
-
-EPSILON = 1e-9
 
 
 ##################################################################
 # Methods
-def _read_files_helper(a_crp_files):
+def _read_files_helper(a_crp_files, a_encoding=ENCODING):
     """Read corpus files and execute specified function.
 
     @param a_crp_files - files of the original corpus
+    @param a_encoding - encoding of the vector file
 
     @return (Iterator over file lines)
 
@@ -61,7 +55,7 @@ def _read_files_helper(a_crp_files):
     i = 0
     tokens_seen = False
     for ifname in a_crp_files:
-        with codecs.open(ifname, 'r', ENCODING) as ifile:
+        with codecs.open(ifname, 'r', a_encoding) as ifile:
             for iline in ifile:
                 iline = iline.strip().lower()
                 if not iline or SENT_END_RE.match(iline):
@@ -88,7 +82,8 @@ def _read_files_helper(a_crp_files):
 
 
 def _read_files(a_crp_files, a_pos, a_neg,
-                a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE):
+                a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE,
+                a_encoding=ENCODING):
     """Read corpus files and populate one-directional co-occurrences.
 
     @param a_crp_files - files of the original corpus
@@ -96,6 +91,7 @@ def _read_files(a_crp_files, a_pos, a_neg,
     @param a_neg - initial set of negative terms
     @param a_pos_re - regular expression for matching positive terms
     @param a_neg_re - regular expression for matching negative terms
+    @param a_encoding - encoding of the vector file
 
     @return (word2vecid, x, y)
 
@@ -105,7 +101,8 @@ def _read_files(a_crp_files, a_pos, a_neg,
     print("Populating corpus statistics...",
           end="", file=sys.stderr)
     word2cnt = Counter(ilemma
-                       for _, itag, ilemma in _read_files_helper(a_crp_files)
+                       for _, itag, ilemma in _read_files_helper(a_crp_files,
+                                                                 a_encoding)
                        if ilemma is not None and itag[:2] in INFORMATIVE_TAGS
                        and check_word(ilemma))
     print(" done", file=sys.stderr)
@@ -130,7 +127,7 @@ def _read_files(a_crp_files, a_pos, a_neg,
     X = []
     Y = []
     toks = []
-    label = NEUTRAL
+    label = NEUTRAL_IDX
     for iform, itag, ilemma in _read_files_helper(a_crp_files):
         if ilemma is None:
             if toks:
@@ -138,36 +135,19 @@ def _read_files(a_crp_files, a_pos, a_neg,
                 X.append(deepcopy(toks))
                 del toks[:]
                 Y.append(label)
-                label = NEUTRAL
+                label = NEUTRAL_IDX
             continue
         if ilemma in word2vecid:
             toks.append(word2vecid[ilemma])
         if check_in_seeds(iform, ilemma, a_pos, a_pos_re):
-            label = POSITIVE
+            label = POSITIVE_IDX
         elif check_in_seeds(iform, ilemma, a_neg, a_neg_re):
-            label = NEGATIVE
+            label = NEGATIVE_IDX
     X = np.array(
         [x + [UNK_I] * (max_sent_len - len(x))
          for x in X], dtype="int32")
     Y = np.array(Y, dtype="int32")
     return (word2vecid, max_sent_len, X, Y)
-
-
-def floatX(a_data, a_dtype=config.floatX):
-    """Return numpy array populated with the given data.
-
-    Args:
-      data (np.array):
-        input tensor
-      dtype (class):
-        digit type
-
-    Returns:
-      np.array:
-        array populated with the given data
-
-    """
-    return np.asarray(a_data, dtype=a_dtype)
 
 
 def init_embeddings(vocab_size, k=3):
@@ -187,45 +167,6 @@ def init_embeddings(vocab_size, k=3):
     # zero-out the vector of unknown terms
     W[UNK_I] *= 0.
     return theano.shared(value=W, name='W'), k
-
-
-def sgd_updates_adadelta(params, cost, rho=0.95,
-                         epsilon=1e-6, norm_lim=9, word_vec_name='Words'):
-    """Adadelta update rule.
-
-    Mostly from:
-      https://groups.google.com/forum/#!topic/pylearn-dev/3QbKtCumAW4
-
-    """
-    updates = OrderedDict({})
-    exp_sqr_grads = OrderedDict({})
-    exp_sqr_ups = OrderedDict({})
-    gparams = []
-    for param in params:
-        empty = floatX(np.zeros_like(param.get_value()))
-        exp_sqr_grads[param] = theano.shared(value=empty,
-                                             name="exp_grad_%s" % param.name)
-        gp = TT.grad(cost, param)
-        exp_sqr_ups[param] = theano.shared(value=empty,
-                                           name="exp_grad_%s" % param.name)
-        gparams.append(gp)
-    for param, gp in zip(params, gparams):
-        exp_sg = exp_sqr_grads[param]
-        exp_su = exp_sqr_ups[param]
-        up_exp_sg = rho * exp_sg + (1 - rho) * TT.sqr(gp)
-        updates[exp_sg] = up_exp_sg
-        step = -(TT.sqrt(exp_su + epsilon) / TT.sqrt(up_exp_sg + epsilon)) * gp
-        updates[exp_su] = rho * exp_su + (1 - rho) * TT.sqr(step)
-        stepped_param = param + step
-        if (param.get_value(borrow=True).ndim == 2) \
-           and (param.name != 'Words'):
-            col_norms = TT.sqrt(TT.sum(TT.sqr(stepped_param), axis=0))
-            desired_norms = TT.clip(col_norms, 0, TT.sqrt(norm_lim))
-            scale = desired_norms / (1e-7 + col_norms)
-            updates[param] = stepped_param * scale
-        else:
-            updates[param] = stepped_param
-    return updates
 
 
 def init_nnet(W, k):
@@ -264,11 +205,11 @@ def init_nnet(W, k):
                                updates=[(W,
                                          TT.set_subtensor(W[UNK_I, :],
                                                           zero_vec))])
-    return (train, validate, zero_out)
+    return (train, validate, zero_out, params)
 
 
 def vo(a_N, a_crp_files, a_pos, a_neg,
-       a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE):
+       a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE, a_encoding=ENCODING):
     """Method for generating sentiment lexicons using Velikovich's approach.
 
     @param a_N - number of terms to extract
@@ -277,46 +218,64 @@ def vo(a_N, a_crp_files, a_pos, a_neg,
     @param a_neg - initial set of negative terms to be expanded
     @param a_pos_re - regular expression for matching positive terms
     @param a_neg_re - regular expression for matching negative terms
+    @param a_encoding - encoding of the vector file
 
     @return list of terms sorted according to their polarities
 
     """
     # digitize training set
     word2vecid, max_sent_len, X, Y = _read_files(
-        a_crp_files, a_pos, a_neg, a_pos_re, a_neg_re
+        a_crp_files, a_pos, a_neg, a_pos_re, a_neg_re,
+        a_encoding
     )
     # initianlize neural net and embedding matrix
     W, k = init_embeddings(len(word2vecid))
-    train, validate, zero_out = init_nnet(W, k)
+    train, validate, zero_out, params = init_nnet(W, k)
     # organize minibatches and run the training
     N = len(Y)
     assert N, "Training set is empty."
-    idcs = np.arange(N)
+    train_idcs, devtest_idcs = train_test_split(
+        np.arange(N), test_size=0.1)
+    train_N = len(train_idcs)
+    devtest_N = float(len(devtest_idcs))
+    devtest_x = X[devtest_idcs[:]]
+    devtest_y = Y[devtest_idcs[:]]
     btch_size = min(N, BTCH_SIZE)
     epoch_i = 0
-    prev_acc = FMIN
     acc = 0
+    best_acc = -1
+    prev_acc = FMIN
+    best_params = []
     while epoch_i < MAX_EPOCHS:
-        np.random.shuffle(idcs)
+        np.random.shuffle(train_idcs)
         cost = acc = 0.
         start_time = datetime.utcnow()
-        for start in np.arange(0, N, btch_size):
-            end = min(N, start + btch_size)
-            btch_x = X[idcs[start:end]]
-            btch_y = Y[idcs[start:end]]
+        for start in np.arange(0, train_N, btch_size):
+            end = min(train_N, start + btch_size)
+            btch_x = X[train_idcs[start:end]]
+            btch_y = Y[train_idcs[start:end]]
             cost += train(btch_x, btch_y)
             zero_out()
-            acc += validate(btch_x, btch_y)
-        acc /= float(N)
+        acc = validate(devtest_x, devtest_y) / devtest_N
+        if acc >= best_acc:
+            best_params = [p.get_value() for p in params]
+            best_acc = acc
+            sfx = " *"
+        else:
+            sfx = ''
         end_time = datetime.utcnow()
         tdelta = (end_time - start_time).total_seconds()
         print("Iteration #{:d} ({:.2f} sec): cost = {:.2f}, "
-              "accuracy = {:.2%};".format(epoch_i, tdelta, cost, acc))
+              "accuracy = {:.2%};{:s}".format(epoch_i, tdelta, cost,
+                                              acc, sfx))
         if abs(prev_acc - acc) < EPSILON and epoch_i > MIN_EPOCHS:
             break
         else:
             prev_acc = acc
         epoch_i += 1
+    if best_params:
+        for p, val in zip(params, best_params):
+            p.set_value(val)
     W = W.get_value()
     ret = []
     for w, w_id in word2vecid.iteritems():
@@ -328,11 +287,11 @@ def vo(a_N, a_crp_files, a_pos, a_neg,
             w_score = FMIN
         else:
             w_pol = np.argmax(W[w_id])
-            if w_pol == NEUTRAL:
+            if w_pol == NEUTRAL_IDX:
                 continue
             w_score = np.max(W[w_id])
-            if (w_pol == POSITIVE and w_score < 0.) \
-               or (w_pol == NEGATIVE and w_score > 0.):
+            if (w_pol == POSITIVE_IDX and w_score < 0.) \
+               or (w_pol == NEGATIVE_IDX and w_score > 0.):
                 w_score *= -1
         ret.append((w,
                     POSITIVE_LBL if w_score > 0. else NEGATIVE_LBL,
