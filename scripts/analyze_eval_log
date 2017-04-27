@@ -6,6 +6,7 @@ BEGIN {
     max_f1 = 0
     lines = ""
     max_lines = ""
+    append_micro = 0
 }
 
 /^Macro-average/ {
@@ -13,6 +14,9 @@ BEGIN {
 	max_f1 = $NF
         max_cnt = cnt
 	max_lines = lines $0 "\n"
+	append_micro = 1
+    } else {
+	append_micro = 0
     }
     cnt += 20
     lines = ""
@@ -20,6 +24,9 @@ BEGIN {
 }
 
 /^Micro-average/ {
+    if (append_micro)
+	max_lines = max_lines $0 "\n"
+
     next
 }
 
