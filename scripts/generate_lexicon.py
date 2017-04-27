@@ -25,7 +25,9 @@ from kiritchenko import kiritchenko
 from rao import rao_min_cut, rao_lbl_prop
 from severyn import severyn
 from takamura import takamura
+from tang import tang
 from velikovich import velikovich, DFLT_T
+from vo import vo
 
 import argparse
 import codecs
@@ -38,6 +40,7 @@ import sys
 # Imports
 COMMENT = "###"
 CORPUS_FILES = "corpus_files"
+VECTOR_FILE = "vector_file"
 GNET_DIR = "germanet_dir"
 CC_FILE = "cc_file"
 
@@ -53,7 +56,9 @@ RAO_LBL_PROP = "rao-lbl-prop"
 RAO_MIN_CUT = "rao-min-cut"
 SEVERYN = "severyn"
 TAKAMURA = "takamura"
+TANG = "tang"
 VELIKOVICH = "velikovich"
+VO = "vo"
 
 W_DELIM_RE = re.compile(r'(?:\s|{:s})+'.format(
     '|'.join([re.escape(c) for c in string.punctuation])))
@@ -64,7 +69,8 @@ POS_RE = None
 NEG_RE = None
 
 REGEXP = "REGEXP"
-SEED_RE_SUPPORTED_METHODS = set([KIRITCHENKO, SEVERYN, TAKAMURA, VELIKOVICH])
+SEED_RE_SUPPORTED_METHODS = set([KIRITCHENKO, SEVERYN, TAKAMURA, VELIKOVICH,
+                                 VO, TANG])
 
 
 ##################################################################
@@ -305,6 +311,19 @@ def main(a_argv):
     subparser_takamura.add_argument("N",
                                     help="final number of additional"
                                     " terms to extract", type=int)
+    subparser_tang = subparsers.add_parser(TANG, help="Tang et al., 2014")
+    subparser_tang.add_argument(VECTOR_FILE,
+                                help="file with word vectors in raw text"
+                                " format")
+    subparser_tang.add_argument("seed_set",
+                                help="initial seed set of positive,"
+                                " negative, and neutral terms")
+    subparser_tang.add_argument("N",
+                                help="final number of additional"
+                                " terms to extract", type=int)
+    subparser_tang.add_argument("--encoding", type=str, default=ENCODING,
+                                help="encoding of the vector file")
+
     subparser_velikovich = subparsers.add_parser(VELIKOVICH,
                                                  help="Velikovich's model"
                                                  " (Velikovich et al., 2010)")
@@ -320,6 +339,19 @@ def main(a_argv):
     subparser_velikovich.add_argument(CORPUS_FILES, nargs='+',
                                       help="tagged lemmatized files of the"
                                       " original corpus")
+    subparser_vo = subparsers.add_parser(VO,
+                                         help="Vo's method (Vo et al., 2016)")
+    subparser_vo.add_argument("seed_set",
+                              help="initial seed set of positive,"
+                              " and negative terms")
+    subparser_vo.add_argument("N",
+                              help="final number of additional"
+                              " terms to extract", type=int)
+    subparser_vo.add_argument(CORPUS_FILES, nargs='+',
+                              help="tagged lemmatized files of the"
+                              " original corpus")
+    subparser_vo.add_argument("--encoding", type=str, default=ENCODING,
+                              help="encoding of the vector file")
     args = argparser.parse_args(a_argv)
 
     # initialize GermaNet, if needed
@@ -408,6 +440,14 @@ def main(a_argv):
                                  POS_SET, NEG_SET, NEUT_SET,
                                  a_plot=args.plot or None,
                                  a_pos_re=POS_RE, a_neg_re=NEG_RE)
+    elif args.dmethod == TANG:
+        N = args.N - (len(POS_SET) + len(NEG_SET))
+        if N == 0:
+            new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
+        else:
+            new_terms = tang(N, getattr(args, VECTOR_FILE),
+                             POS_SET, NEG_SET, NEUT_SET,
+                             POS_RE, NEG_RE, args.encoding)
     elif args.dmethod == VELIKOVICH:
         N = args.N - (len(POS_SET) + len(NEG_SET))
         if N == 0:
@@ -415,12 +455,21 @@ def main(a_argv):
         else:
             new_terms = velikovich(N, args.t, getattr(args, CORPUS_FILES),
                                    POS_SET, NEG_SET, POS_RE, NEG_RE)
+    elif args.dmethod == VO:
+        N = args.N - (len(POS_SET) + len(NEG_SET))
+        if N == 0:
+            new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
+        else:
+            new_terms = vo(N, getattr(args, CORPUS_FILES),
+                           POS_SET, NEG_SET, POS_RE, NEG_RE,
+                           args.encoding)
     else:
         raise NotImplementedError
     print("Expanding polarity sets... done", file=sys.stderr)
 
     for iterm, itag, iscore in new_terms:
         print("{:s}\t{:s}\t{:f}".format(iterm, itag, iscore).encode(ENCODING))
+
 
 ##################################################################
 # Main

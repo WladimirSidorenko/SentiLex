@@ -7,8 +7,12 @@
 
 ##################################################################
 # Imports
+from collections import OrderedDict
+from theano import config, tensor as TT
+import numpy as np
 import re
 import sys
+import theano
 
 from germanet import normalize
 from tokenizer import Tokenizer
@@ -51,6 +55,14 @@ SYNRELS = set(["has_participle", "has_pertainym",
 NONMATCH_RE = re.compile(r"(?!)")
 
 TOKENIZER = Tokenizer()
+MAX_EPOCHS = 500
+MIN_EPOCHS = 25
+EPSILON = 1e-9
+
+NEGATIVE_IDX = 0
+NEUTRAL_IDX = 1
+POSITIVE_IDX = 2
+BTCH_SIZE = 20
 
 
 ##################################################################
@@ -82,3 +94,59 @@ def check_word(a_word):
 
     """
     return WORD_RE.match(a_word) and all(ord(c) < 256 for c in a_word)
+
+
+def floatX(a_data, a_dtype=config.floatX):
+    """Return numpy array populated with the given data.
+
+    Args:
+      data (np.array):
+        input tensor
+      dtype (class):
+        digit type
+
+    Returns:
+      np.array:
+        array populated with the given data
+
+    """
+    return np.asarray(a_data, dtype=a_dtype)
+
+
+def sgd_updates_adadelta(params, cost, rho=0.95,
+                         epsilon=1e-6, norm_lim=9, word_vec_name='Words'):
+    """Adadelta update rule.
+
+    Mostly from:
+      https://groups.google.com/forum/#!topic/pylearn-dev/3QbKtCumAW4
+
+    """
+    updates = OrderedDict({})
+    exp_sqr_grads = OrderedDict({})
+    exp_sqr_ups = OrderedDict({})
+    gparams = []
+    for param in params:
+        empty = floatX(np.zeros_like(param.get_value()))
+        exp_sqr_grads[param] = theano.shared(value=empty,
+                                             name="exp_grad_%s" % param.name)
+        gp = TT.grad(cost, param)
+        exp_sqr_ups[param] = theano.shared(value=empty,
+                                           name="exp_grad_%s" % param.name)
+        gparams.append(gp)
+    for param, gp in zip(params, gparams):
+        exp_sg = exp_sqr_grads[param]
+        exp_su = exp_sqr_ups[param]
+        up_exp_sg = rho * exp_sg + (1 - rho) * TT.sqr(gp)
+        updates[exp_sg] = up_exp_sg
+        step = -(TT.sqrt(exp_su + epsilon) / TT.sqrt(up_exp_sg + epsilon)) * gp
+        updates[exp_su] = rho * exp_su + (1 - rho) * TT.sqr(step)
+        stepped_param = param + step
+        if (param.get_value(borrow=True).ndim == 2) \
+           and (param.name != 'Words'):
+            col_norms = TT.sqrt(TT.sum(TT.sqr(stepped_param), axis=0))
+            desired_norms = TT.clip(col_norms, 0, TT.sqrt(norm_lim))
+            scale = desired_norms / (1e-7 + col_norms)
+            updates[param] = stepped_param * scale
+        else:
+            updates[param] = stepped_param
+    return updates
