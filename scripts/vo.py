@@ -267,7 +267,8 @@ def vo(a_N, a_crp_files, a_pos, a_neg,
         tdelta = (end_time - start_time).total_seconds()
         print("Iteration #{:d} ({:.2f} sec): cost = {:.2f}, "
               "accuracy = {:.2%};{:s}".format(epoch_i, tdelta, cost,
-                                              acc, sfx))
+                                              acc, sfx),
+              file=sys.stderr)
         if abs(prev_acc - acc) < EPSILON and epoch_i > MIN_EPOCHS:
             break
         else:

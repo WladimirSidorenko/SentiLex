@@ -16,6 +16,7 @@ from theano import tensor as TT
 import codecs
 import numpy as np
 import re
+import sys
 import theano
 
 from common import ENCODING, EPSILON, FMAX, FMIN, MAX_EPOCHS, MIN_EPOCHS, \
@@ -187,7 +188,8 @@ def tang(a_N, a_emb_fname, a_pos, a_neg, a_neut,
         tdelta = (end_time - start_time).total_seconds()
         print("Iteration #{:d} ({:.2f} sec): cost = {:.2f}, "
               "accuracy = {:.2%};{:s}".format(epoch_i, tdelta,
-                                              cost, acc, sfx))
+                                              cost, acc, sfx),
+              file=sys.stderr)
         if abs(prev_cost - cost) < EPSILON and epoch_i > MIN_EPOCHS:
             break
         else:
