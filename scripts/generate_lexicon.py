@@ -461,7 +461,7 @@ def main(a_argv):
             new_terms = _get_dflt_lexicon(POS_SET, NEG_SET)
         else:
             new_terms = vo(N, getattr(args, CORPUS_FILES),
-                           POS_SET, NEG_SET, POS_RE, NEG_RE,
+                           POS_SET, NEG_SET, NEUT_SET, POS_RE, NEG_RE,
                            args.encoding)
     else:
         raise NotImplementedError
