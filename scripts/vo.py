@@ -83,7 +83,7 @@ def _read_files_helper(a_crp_files, a_encoding=ENCODING):
         yield None, None, None
 
 
-def _read_files(a_crp_files, a_pos, a_neg,
+def _read_files(a_crp_files, a_pos, a_neg, a_neut,
                 a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE,
                 a_encoding=ENCODING):
     """Read corpus files and populate one-directional co-occurrences.
@@ -91,6 +91,7 @@ def _read_files(a_crp_files, a_pos, a_neg,
     @param a_crp_files - files of the original corpus
     @param a_pos - initial set of positive terms
     @param a_neg - initial set of negative terms
+    @param a_neut - initial set of neutral terms
     @param a_pos_re - regular expression for matching positive terms
     @param a_neg_re - regular expression for matching negative terms
     @param a_encoding - encoding of the vector file
@@ -109,7 +110,7 @@ def _read_files(a_crp_files, a_pos, a_neg,
                        and check_word(ilemma))
     print(" done", file=sys.stderr)
     word2vecid = {UNK: UNK_I}
-    for w in chain(a_pos, a_neg):
+    for w in chain(a_pos, a_neg, a_neut):
         word2vecid[w] = len(word2vecid)
     # convert words to vector ids if their counters are big enough
     for w, cnt in word2cnt.iteritems():
@@ -129,15 +130,16 @@ def _read_files(a_crp_files, a_pos, a_neg,
     X = []
     Y = []
     toks = []
-    label = NEUTRAL_IDX
+    label = None
     for iform, itag, ilemma in _read_files_helper(a_crp_files):
         if ilemma is None:
             if toks:
-                max_sent_len = max(max_sent_len, len(toks))
-                X.append(deepcopy(toks))
+                if label is not None:
+                    max_sent_len = max(max_sent_len, len(toks))
+                    X.append(deepcopy(toks))
+                    Y.append(label)
                 del toks[:]
-                Y.append(label)
-                label = NEUTRAL_IDX
+                label = None
             continue
         if ilemma in word2vecid:
             toks.append(word2vecid[ilemma])
@@ -145,6 +147,8 @@ def _read_files(a_crp_files, a_pos, a_neg,
             label = POSITIVE_IDX
         elif check_in_seeds(iform, ilemma, a_neg, a_neg_re):
             label = NEGATIVE_IDX
+        elif check_in_seeds(iform, ilemma, a_neut, NONMATCH_RE):
+            label = NEUTRAL_IDX
     X = np.array(
         [x + [UNK_I] * (max_sent_len - len(x))
          for x in X], dtype="int32")
@@ -210,7 +214,7 @@ def init_nnet(W, k):
     return (train, validate, zero_out, params)
 
 
-def vo(a_N, a_crp_files, a_pos, a_neg,
+def vo(a_N, a_crp_files, a_pos, a_neg, a_neut,
        a_pos_re=NONMATCH_RE, a_neg_re=NONMATCH_RE, a_encoding=ENCODING):
     """Method for generating sentiment lexicons using Velikovich's approach.
 
@@ -218,6 +222,7 @@ def vo(a_N, a_crp_files, a_pos, a_neg,
     @param a_crp_files - files of the original corpus
     @param a_pos - initial set of positive terms to be expanded
     @param a_neg - initial set of negative terms to be expanded
+    @param a_neut - initial set of neutral terms to be expanded
     @param a_pos_re - regular expression for matching positive terms
     @param a_neg_re - regular expression for matching negative terms
     @param a_encoding - encoding of the vector file
@@ -227,7 +232,7 @@ def vo(a_N, a_crp_files, a_pos, a_neg,
     """
     # digitize training set
     word2vecid, max_sent_len, X, Y = _read_files(
-        a_crp_files, a_pos, a_neg, a_pos_re, a_neg_re,
+        a_crp_files, a_pos, a_neg, a_neut, a_pos_re, a_neg_re,
         a_encoding
     )
     # initianlize neural net and embedding matrix
