@@ -21,7 +21,7 @@ import sys
 import theano
 
 from common import BTCH_SIZE, ENCODING, EPSILON, ESC_CHAR, FMAX, FMIN, \
-    INFORMATIVE_TAGS, MAX_EPOCHS, MIN_EPOCHS, MIN_TOK_CNT, \
+    INFORMATIVE_TAGS, MIN_TOK_CNT, \
     NEGATIVE_IDX, NEUTRAL_IDX, POSITIVE_IDX, NONMATCH_RE, SENT_END_RE, \
     TAB_RE, check_word, floatX, sgd_updates_adadelta
 from common import POSITIVE as POSITIVE_LBL
@@ -36,6 +36,8 @@ FASTMODE = False
 MAX_NGHBRS = 25
 TOK_WINDOW = 4                  # it actually corresponds to a window of six
 MAX_POS_IDS = 10000
+MAX_EPOCHS = 5
+MIN_EPOCHS = 3
 
 UNK = "%unk%"
 UNK_I = 0
