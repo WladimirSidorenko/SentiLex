@@ -90,7 +90,7 @@ def read_embeddings(fname, encoding):
     i = 0
     w2i = {}
     EMBS = None
-    with codecs.open(fname, 'r', encoding=encoding) as ifile:
+    with codecs.open(fname, 'r', encoding=encoding, errors="replace") as ifile:
         for iline in ifile:
             iline = iline.strip()
             if EMBS is None:
@@ -98,8 +98,13 @@ def read_embeddings(fname, encoding):
                 EMBS = floatX(np.empty((nterms, ndim)))
                 continue
             fields = SPACE_RE.split(iline)
-            w2i[' '.join(fields[:-ndim])] = i
-            EMBS[i] = np.array([float(f) for f in fields[-ndim:]])
+            try:
+                EMBS[i] = np.array([float(f) for f in fields[-ndim:]])
+                w2i[' '.join(fields[:-ndim])] = i
+            except:
+                print("Invalid line format: {!r}".format(iline),
+                      file=sys.stderr)
+                continue
             i += 1
     EMBS = theano.shared(value=EMBS, name="EMBS")
     return (w2i, EMBS, ndim)
