@@ -189,7 +189,7 @@ static void usage(int a_ret) {
   std::cerr << "-a|--alpha  learning rate for gradient methods"
       " (default " << DFLT_ALPHA << ")" << std::endl;
   std::cerr << "-c|--coefficient  elongate vectors by the"
-      " coefficient (useful for linear projection, implies -L)" << std::endl;
+      " coefficient (implies -L)" << std::endl;
   std::cerr << "-d|--delta  learning rate for gradient methods"
       " (default " << DFLT_DELTA << ")" << std::endl;
   std::cerr << "-h|--help  show this screen and exit" << std::endl;
@@ -201,8 +201,7 @@ static void usage(int a_ret) {
       " -1 (unlimited))" << std::endl;
   std::cerr << "-t|--type  type of expansion algorithm to use:" << std::endl;
   std::cerr << "           (0 - nearest centroids (default), "
-      "1 - KNN, 2 - PCA dimension," << std::endl;
-  std::cerr << "            3 - linear projection)" << std::endl << std::endl;
+      "1 - KNN, 2 - PCA dimension)" << std::endl << std::endl;
   std::cerr << "Exit status:" << std::endl;
   std::cerr << EXIT_SUCCESS << " on sucess, non-" << EXIT_SUCCESS
             << " otherwise" << std::endl;
@@ -603,10 +602,6 @@ int main(int argc, char *argv[]) {
     break;
   case ExpansionType::PCA_CLUSTERING:
     expand_pca(&vecid2polscore, &NWE, opt.n_terms);
-    break;
-  case ExpansionType::PRJ_CLUSTERING:
-    expand_prjct(&vecid2polscore, &NWE, opt.n_terms,
-                 opt.alpha, opt.delta, opt.max_iters);
     break;
   default:
     throw std::invalid_argument("Invalid type of seed set"
