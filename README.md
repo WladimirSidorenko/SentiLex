@@ -33,8 +33,7 @@ format with space separated values), and `SEED_FILE`.  We currently
 support the following types of algorithms:
 - 0 -- nearest centroids (default);
 - 1 -- KNN;
-- 2 -- PCA;
-- 3 -- linear projection.
+- 2 -- PCA.
 
 ## Examples
 
