@@ -147,7 +147,8 @@ def _read_files(a_crp_files, a_pos, a_neg, a_neut,
             label = POSITIVE_IDX
         elif check_in_seeds(iform, ilemma, a_neg, a_neg_re):
             label = NEGATIVE_IDX
-        elif check_in_seeds(iform, ilemma, a_neut, NONMATCH_RE):
+        elif label is None and check_in_seeds(iform, ilemma,
+                                              a_neut, NONMATCH_RE):
             label = NEUTRAL_IDX
     X = np.array(
         [x + [UNK_I] * (max_sent_len - len(x))
