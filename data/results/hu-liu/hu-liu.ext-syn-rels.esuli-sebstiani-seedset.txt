@@ -1,2725 +1,2720 @@
-unterlegen	negative
-richtig	positive
-böse	negative
-bös	negative
-nett	positive
-korrekt	positive
-negativ	negative
-übel	negative
-schlecht	negative
-schön	positive
-hübsch	positive
-gut	positive
-positiv	positive
-mangelhaft	negative
-ungünstig	negative
-freundlich	positive
-angenehm	positive
-falsch	negative
-schädlich	negative
-arm	negative
-verdorben	negative
-bedauernswert	negative
-unerfreulich	negative
-misslich	negative
-unglücklich	negative
-ausgezeichnet	positive
-schwach	negative
-unangenehm	negative
-fies	negative
-geringwertig	negative
-minderwertig	negative
-gemein	negative
-hässlich	negative
-überragend	positive
-irrig	negative
-unrecht	negative
-überlegen	positive
-nachrangig	negative
-scheusslich	negative
-widerlich	negative
-widerwärtig	negative
-ekel erregend	negative
-ekelerregend	negative
-ekelhaft	negative
-glücklich	positive
-armselig	negative
-dürftig	negative
-lieb	positive
-besser	positive
-schlimm	negative
-sinnreich	positive
-leistungsschwach	negative
-recht	positive
-fragwürdig	negative
-verschlagen	negative
-link	negative
-befremdlich	negative
-beängstigend	negative
-charakterschwach	negative
-wirtschaftsschwach	negative
-rauchschwach	negative
-willensschwach	negative
-verkehrsschwach	negative
-mitgliederschwach	negative
-zittrig	negative
-deformiert	negative
-verformt	negative
-richtiggehend	positive
-regelrecht	positive
-sauer	negative
-gekränkt	negative
-spitzenmässig	positive
-leid	negative
-durchbrochen	negative
-ärmel	negative
-unfreundlich	negative
-sonnig	positive
-aktfoto	positive
-ätzend	negative
-mistig	negative
-beknackt	negative
-oll	negative
-zutreffend	positive
-widrig	negative
-wahr	positive
-notbehelfsmässig	negative
-erfreulich	positive
-glückreich	positive
-sittlich	positive
-moralisch	positive
-ethisch	positive
-polaroidfoto	positive
-satellitenbild	positive
-polaroid	positive
-schnappschuss	positive
-farbfoto	positive
-polaroidbild	positive
-sofortbild	positive
-schwindlig	negative
-gütig	positive
-liebesfähig	positive
-liebenswert	positive
-importgut	positive
-gefährlich	negative
-lästig	negative
-volksgut	positive
-erstklassig	positive
-spitze	positive
-klasse	positive
-endgeil	positive
-wunderschön	positive
-wohl geformt	positive
-wohlgeformt	positive
-fleischarm	negative
-abgelaufen	negative
-verfallen	negative
-verrottet	negative
-schimmelig	negative
-verschimmelt	negative
-herzensgut	positive
-herausragend	positive
-fein	positive
-hervorragend	positive
-kulturgut	positive
-liedgut	positive
-erwägen	positive
-industriegut	positive
-reich	positive
-kontrafaktisch	negative
-sehschwach	negative
-kargo	positive
-stückgut	positive
-ladegut	positive
-transportgut	positive
-sammlungsgut	positive
-massengut	positive
-unangemessen	negative
-inadäquat	negative
-verfehlt	negative
-unselbstständig	negative
-unselbständig	negative
-gruppenfoto	positive
-einzelfoto	positive
-porträtbild	positive
-garstig	negative
-vorschriftsgemäss	positive
-unedel	negative
-grundstufe	positive
-rüstungsgut	positive
-fair	positive
-screenshot	positive
-halb	negative
-unvollständig	negative
-lückenhaft	negative
-notdürftig	negative
-defizitär	negative
-unvollkommen	negative
-grundfalsch	negative
-inakzeptabel	negative
-unakzeptabel	negative
-nährstoffarm	negative
-wasserarm	negative
-fettarm	negative
-bauerngut	positive
-unbill	negative
-beleidigt	negative
-halbherzig	negative
-lügnerisch	negative
-verlogen	negative
-unaufrichtig	negative
-erdrückend	negative
-bedrückend	negative
-belastend	negative
-mulmig	negative
-abstossend	negative
-unsympathisch	negative
-unbehaglich	negative
-ungemütlich	negative
-beklemmend	negative
-stilsicher	positive
-unübertrefflich	positive
-unästhetisch	negative
-phantastisch	positive
-fantastisch	positive
-unförmig	negative
-geschmackvoll	positive
-pickelig	negative
-entstellt	negative
-pikiert	negative
-erbost	negative
-fehlbar	negative
-faul	negative
-faulig	negative
-verfault	negative
-grossherzig	positive
-gutherzig	positive
-gutmütig	positive
-friedlich	positive
-friedliebend	positive
-edelmütig	positive
-bescheiden	negative
-anrüchig	negative
-traumatisierend	negative
-traumatisch	negative
-vernichtend	negative
-katastrophal	negative
-verheerend	negative
-scheiss	negative
-beschissen	negative
-jovial	positive
-kollegial	positive
-grottenschlecht	negative
-menschenfreundlich	positive
-sorgsam	positive
-sorgfältig	positive
-ordnungsliebend	positive
-bedauerlich	negative
-schade	negative
-unerquicklich	negative
-unkomfortabel	negative
-ergebnisreich	positive
-zweckmässig	positive
-sinnvoll	positive
-sinnig	positive
-imageträchtig	positive
-ehrenvoll	positive
-prestigeträchtig	positive
-optimal	positive
-regelgerecht	positive
-wartungsfreundlich	positive
-intrigant	negative
-leutselig	positive
-elendig	negative
-erfolg versprechend	positive
-erfolgversprechend	positive
-legendär	positive
-mythisch	positive
-wundervoll	positive
-herrlich	positive
-prima	positive
-wunderbar	positive
-himmlisch	positive
-paradiesisch	positive
-ungerecht	negative
-grauslich	negative
-wurfarm	negative
-dia	positive
-negativaufnahme	positive
-negativbild	positive
-röntgenbild	positive
-diapositiv	positive
-lichtbild	positive
-diabild	positive
-eingeschnappt	negative
-verletzt	negative
-perfekt	positive
-mustergültig	positive
-vorbildlich	positive
-beispielhaft	positive
-exzellent	positive
-mustergut	positive
-unglückselig	negative
-bemitleidenswert	negative
-beklagenswert	negative
-sagenhaft	positive
-schmalspurig	negative
-gesundheitsschädlich	negative
-gesundheitsschädigend	negative
-papierabzug	positive
-eifrig	positive
-arbeitsam	positive
-emsig	positive
-fleissig	positive
-tüchtig	positive
-gruppenbild	positive
-gruppenaufnahme	positive
-ergänzungsbedürftig	negative
-wünschenswert	positive
-gelungen	positive
-geraten	positive
-pejorativ	negative
-ruinös	negative
-anoxisch	negative
-bedenkenswert	positive
-unschön	negative
-laienhaft	negative
-ungeeignet	negative
-ungut	negative
-unprofessionell	negative
-nutzlos	negative
-meierhof	positive
-meierei	positive
-ablichtung	positive
-unverträglich	negative
-kontraproduktiv	negative
-schädigend	negative
-abträglich	negative
-bedürftig	negative
-ärmlich	negative
-zahlungsunfähig	negative
-bankrott	negative
-erledigt	negative
-ruiniert	negative
-labil	negative
-verloren	negative
-instabil	negative
-hilflos	negative
-zielfoto	positive
-tonarm	negative
-viertklassig	negative
-gutshof	positive
-weingut	positive
-hofgut	positive
-kärglich	negative
-unbequem	negative
-unbefriedigend	negative
-komfortabel	positive
-wohltuend	positive
-zufriedenstellend	positive
-wohlig	positive
-befriedigend	positive
-nervenschwach	negative
-muskelschwach	negative
-mies	negative
-schadenfroh	negative
-zweitklassig	negative
-schurkisch	negative
-verderbt	negative
-schnöde	negative
-kümmerlich	negative
-elend	negative
-erbärmlich	negative
-jämmerlich	negative
-charakterlos	negative
-verkehrsarm	negative
-fünf	negative
-zwei	positive
-rufschädigend	negative
-unschädlich	positive
-zuträglich	positive
-investitionsfreundlich	positive
-verwerflich	negative
-barmherzig	positive
-angriffslustig	negative
-aggressiv	negative
-kampflustig	negative
-kampfeslustig	negative
-gelind	negative
-ruchbar	negative
-eklig	negative
-tückisch	negative
-unerträglich	negative
-arg	negative
-satanisch	negative
-dämonisch	negative
-diabolisch	negative
-teuflisch	negative
-hasserfüllt	negative
-stiefmütterlich	negative
-böswillig	negative
-ranzig	negative
-unterfüttern	negative
-toxisch	negative
-reichsgut	positive
-archivgut	positive
-strafwürdig	negative
-abgeschlagen	negative
-traurig	negative
-geeignet	positive
-gehoben	positive
-unansehnlich	negative
-fürsorglich	positive
-geburtenschwach	negative
-gutartig	positive
-lausig	negative
-unfehlbar	positive
-toll	positive
-wohlgesonnen	positive
-wohlgesinnt	positive
-gesinnt	positive
-kameradschaftlich	positive
-liebenswürdig	positive
-unkorrekt	negative
-schuldig	negative
-umweltschädigend	negative
-umweltschädlich	negative
-geschäftsschädigend	negative
-parteischädigend	negative
-tugendhaft	positive
-gerecht	positive
-tugendlich	positive
-verträglich	positive
-übermächtig	positive
-rohstoffarm	negative
-bettelarm	negative
-bitterarm	negative
-kalorienarm	negative
-verarmt	negative
-pleite	negative
-hautfreundlich	positive
-erbgut	positive
-erbhof	positive
-fronhof	positive
-herrenhof	positive
-klostergut	positive
-digitalfoto	positive
-luderhaft	negative
-unanständig	negative
-verworfen	negative
-unauffallend	negative
-unauffällig	negative
-geruhsam	positive
-behaglich	positive
-gemütlich	positive
-schlechtigkeit	negative
-frohgestimmt	positive
-froh gestimmt	positive
-zufrieden	positive
-ungetrübt	positive
-nichtsnutzig	negative
-gelinde	negative
-schmeichelhaft	positive
-detailaufnahme	positive
-seelig	positive
-wägen	positive
-bitterböse	negative
-paradigmatisch	positive
-magenfreundlich	positive
-bedienungsfreundlich	positive
-kundenfreundlich	positive
-leserfreundlich	positive
-attraktiv	positive
-nutzbringend	positive
-nützlich	positive
-maliziös	negative
-hämisch	negative
-süffisant	negative
-hündisch	negative
-chancenreich	positive
-erfolgreich	positive
-kalkulieren	positive
-bildschön	positive
-ertragbar	positive
-deliberieren	positive
-stilgerecht	positive
-sinnhaft	positive
-grandios	positive
-berauschend	positive
-meisterhaft	positive
-meisterlich	positive
-elefantös	positive
-satellitenfoto	positive
-schmuck	positive
-stilvoll	positive
-dekorativ	positive
-potthässlich	negative
-liebreich	positive
-tugendreich	positive
-prächtig	positive
-märchenhaft	positive
-prachtvoll	positive
-umgekehrt	negative
-regulär	positive
-vorschriftsmässig	positive
-ordnungsgemäss	positive
-ungemach	negative
-grundübel	negative
-kriminell	negative
-themenfoto	positive
-regelgemäss	positive
-pedantisch	positive
-penibel	positive
-förmlich	positive
-achtsam	positive
-peinlich	positive
-preisgekrönt	positive
-amoralisch	negative
-niederträchtig	negative
-superior	positive
-missraten	negative
-misslungen	negative
-exportware	positive
-investitionsgut	positive
-stümperhaft	negative
-importware	positive
-boshaft	negative
-weinerlich	negative
-okay	positive
-glückstrahlend	positive
-überglücklich	positive
-gemeingut	positive
-irregulär	negative
-irrtümlich	negative
-unrichtig	negative
-unzutreffend	negative
-fälschlich	negative
-unwahr	negative
-läppisch	negative
-nichtig	negative
-werbefotografie	positive
-werbephotographie	positive
-pressephotographie	positive
-pressefotografie	positive
-familiengut	positive
-grottig	negative
-untrainiert	negative
-unsportlich	negative
-kraftlos	negative
-memmenhaft	negative
-schlapp	negative
-schwächlich	negative
-mickerig	negative
-schlaff	negative
-gebrechlich	negative
-lichtschwach	negative
-farbphotographie	positive
-farbfotografie	positive
-handelsgut	positive
-genehm	positive
-begrüssenswert	positive
-unehrenhaft	negative
-ehrlos	negative
-glückselig	positive
-glücklos	negative
-chancenlos	negative
-frachtgut	positive
-fracht	positive
-transportware	positive
-mau	negative
-unnützlich	negative
-erfolglos	negative
-drittklassig	negative
-unfertig	negative
-partiell	negative
-ineffektiv	negative
-günstig	positive
-eingängig	positive
-ideal	positive
-bleich	negative
-farbschwach	negative
-immunschwach	negative
-umsatzschwach	negative
-entscheidungsschwach	negative
-konditionsschwach	negative
-verkaufsschwach	negative
-unattraktiv	negative
-unverdorben	positive
-erträglich	positive
-cargo	positive
-ladungsgut	positive
-zerstörerisch	negative
-destruktiv	negative
-traumhaft	positive
-idyllisch	positive
-sensationell	positive
-legendenhaft	positive
-umgänglich	positive
-menschenwürdig	positive
-verkehrt	negative
-unecht	negative
-fangarm	negative
-unfair	negative
-teilweise	negative
-schwarzweissbild	positive
-schwarz-weiss-bild	positive
-schwarzweissfoto	positive
-schwarz-weiss-foto	positive
-themenfotografie	positive
-themenphotographie	positive
-archivfoto	positive
-archivbild	positive
-farbaufnahme	positive
-farbbild	positive
-insolvent	negative
-matt	negative
-flau	negative
-fotografie	positive
-photographie	positive
-preussisch	positive
-gewissenhaft	positive
-unvorteilhaft	negative
-kläglich	negative
-massenstückgut	positive
-liebevoll	positive
-nervig	negative
-giftig	negative
-bildhübsch	positive
-sinnlich	positive
-feingeschnitten	positive
-fein geschnitten	positive
-eiweissarm	negative
-vitaminarm	negative
-grossartig	positive
-pressefoto	positive
-blendend	positive
-glimpflich	positive
-verteufelt	negative
-verbessernd	positive
-schrecklich	negative
-fürchterlich	negative
-furchtbar	negative
-strukturschwach	negative
-finanzschwach	negative
-altersschwach	negative
-stark	positive
-gefahrgut	positive
-versorgungsgut	positive
-behandlungsgut	positive
-dilettantisch	negative
-luftfracht	positive
-fehlerhaft	negative
-schiffsfracht	positive
-miserabel	negative
-schäbig	negative
-exportgut	positive
-erinnerungsfoto	positive
-fahndungsbild	positive
-fahndungsfoto	positive
-hinfällig	negative
-morbide	negative
-zart	negative
-freundschaftlich	positive
-partnerschaftlich	positive
-kumpelhaft	positive
-rudimentär	negative
-fragmentarisch	negative
-bruchstückhaft	negative
-bruchstückartig	negative
-kammergut	positive
-unsinnig	negative
-ergebnislos	negative
-zwecklos	negative
-zweckfrei	negative
-unzweckmässig	negative
-vorbildhaft	positive
-umweltgefährdend	negative
-stinkreich	positive
-steinreich	positive
-strömungsgünstig	positive
-unheilvoll	negative
-unheilschwanger	negative
-unheil verheissend	negative
-unheilverheissend	negative
-besorgniserregend	negative
-leicht	negative
-treu sorgend	positive
-treusorgend	positive
-schwerreich	positive
-neureich	positive
-zerbeult	negative
-menschenverträglich	positive
-wirtschaftsverträglich	positive
-sozialverträglich	positive
-begütert	positive
-überreich	positive
-griesgrämig	negative
-feindlich	negative
-muffelig	negative
-miesepetrig	negative
-wahrhaft	positive
-unstimmig	negative
-sinngetreu	positive
-kopfballstark	positive
-edel	positive
-froh	positive
-anmutig	negative
-graziös	negative
-unverdaulich	negative
-normgemäss	positive
-verstärkt	positive
-nahrhaft	positive
-goldig	positive
-putzig	positive
-gnädig	positive
-zärtlich	positive
-niedlich	positive
-verzeihend	positive
-unschuldig	positive
-rein	positive
-geländegängig	positive
-uneinholbar	positive
-unerreicht	positive
-marktbeherrschend	positive
-unnachahmlich	positive
-unerreichbar	positive
-marktführend	positive
-tanzbar	positive
-erlernbar	positive
-vaterlandslos	negative
-mischbar	positive
-druckfähig	positive
-zytotoxisch	negative
-vortrefflich	positive
-bestechend	positive
-begünstigend	positive
-mildernd	positive
-vorzüglich	positive
-geisterhaft	negative
-gespenstig	negative
-grauenerregend	negative
-grauen erregend	negative
-gruselig	negative
-schaurig	negative
-schauerhaft	negative
-schauerlich	negative
-gespensterhaft	negative
-gespenstisch	negative
-brauchbar	positive
-notleidend	negative
-not leidend	negative
-überstark	positive
-leidlich	positive
-aushaltbar	positive
-zukunftsfähig	positive
-lagerfähig	positive
-marktfähig	positive
-suizidgefährdet	negative
-selbstmordgefährdet	negative
-unfallgefährdet	negative
-verführbar	negative
-frank	positive
-hochzeitsbild	positive
-wortgemäss	positive
-wortlautgemäss	positive
-blutarm	negative
-unrühmlich	negative
-süss	positive
-possierlich	positive
-unannehmbar	negative
-unvertretbar	negative
-untauglich	negative
-unfähig	negative
-bestmöglich	positive
-wohlhabend	positive
-gutsituiert	positive
-betucht	positive
-vermögend	positive
-gut betucht	positive
-gutbetucht	positive
-zahlungskräftig	positive
-rückfällig	negative
-unvermindert	positive
-unehrlich	negative
-gründlich	positive
-hautverträglich	positive
-wolkenbruchartig	negative
-vierschrötig	negative
-wahrheitsgetreu	positive
-bucklig	negative
-buckelig	negative
-verwachsen	negative
-vorwurfsvoll	negative
-nervtötend	negative
-essbar	positive
-wahrheitsgemäss	positive
-sinngemäss	positive
-vorteilhaft	positive
-geniessbar	positive
-unbekömmlich	negative
-famos	positive
-strahlend	positive
-barsch	negative
-unpraktisch	negative
-humanitär	positive
-friedvoll	positive
-herzig	positive
-grazil	negative
-bestimmungsgemäss	positive
-befehlsgemäss	positive
-unstandesgemäss	negative
-ehrlich	positive
-ehrenhaft	positive
-verlottert	negative
-verkommen	negative
-unappetitlich	negative
-ungepflegt	negative
-schmuddelig	negative
-vergammelt	negative
-verlumpt	negative
-entspannend	positive
-erholsam	positive
-gesundheitsförderlich	positive
-fördernd	positive
-förderlich	positive
-unzufrieden	negative
-todunglücklich	negative
-praktisch	positive
-ätherisch	negative
-modefotografie	positive
-modephotographie	positive
-singbar	positive
-trinkbar	positive
-gefährdet	negative
-gesellschaftsverträglich	positive
-bedenklich	negative
-beunruhigend	negative
-alptraumhaft	negative
-alptraumartig	negative
-unheimlich	negative
-alarmierend	negative
-ungeheuer	negative
-schauderhaft	negative
-schaudervoll	negative
-kombinierbar	positive
-nutzbar	positive
-unautorisiert	negative
-dankbar	positive
-leberschädlich	negative
-leberschädigend	negative
-nervenschädlich	negative
-nervenschädigend	negative
-nierenschädlich	negative
-nierenschädigend	negative
-lebenstüchtig	positive
-untüchtig	negative
-geschäftstüchtig	positive
-wertlos	negative
-landschaftsfoto	positive
-klassenfoto	positive
-familienbild	positive
-familienaufnahme	positive
-oberflächlich	negative
-delikat	negative
-gesetzt	positive
-seriös	positive
-korrekturbedürftig	negative
-schwarz-weiss-fotografie	positive
-schwarzweissfotografie	positive
-lebensfeindlich	negative
-erpresserisch	negative
-empörend	negative
-entwürdigend	negative
-menschenfeindlich	negative
-selbständig	positive
-selbstständig	positive
-beeinflussbar	negative
-teilbar	positive
-lötfähig	positive
-liederlich	negative
-lasterhaft	negative
-entartet	negative
-dekadent	negative
-heruntergekommen	negative
-einladend	positive
-feinschmeckerisch	positive
-kulinarisch	positive
-offensiv	negative
-draufgängerisch	negative
-perspektivreich	positive
-arbeitsfreudig	positive
-arbeitswillig	positive
-ordentlich	positive
-stachelig	negative
-stachlig	negative
-erlebbar	positive
-torgefährlich	negative
-heilsam	positive
-probiotisch	positive
-heilend	positive
-bekömmlich	positive
-ungiftig	positive
-ungeniessbar	negative
-verdaulich	positive
-umweltverträglich	positive
-unsittlich	negative
-hetzerisch	negative
-demagogisch	negative
-kriegerisch	negative
-unzumutbar	negative
-daguerreotypie	positive
-vielversprechend	positive
-aussichtsreich	positive
-effektiv	positive
-unnütz	negative
-sinnentstellend	negative
-oligotroph	negative
-gesundheitsfördernd	positive
-anziehend	positive
-unübertroffen	positive
-unverrichtet	negative
-verbittert	negative
-freudlos	negative
-waffenfähig	positive
-geil	positive
-sexy	positive
-konstruktiv	positive
-wohlwollend	positive
-behütend	positive
-schützend	positive
-väterlich	positive
-wohlmeinend	positive
-mütterlich	positive
-vollständig	positive
-betroffen	negative
-leidtragend	negative
-leid tragend	negative
-einzelbild	positive
-abzugsfähig	positive
-siegreich	positive
-super	positive
-top	positive
-krass	positive
-fett	positive
-tierfoto	positive
-eigen	positive
-konfliktfähig	positive
-gefällig	positive
-gefestigt	positive
-lebensbejahend	positive
-lebenslustig	positive
-lebensfroh	positive
-heilfroh	positive
-erleichtert	positive
-straffällig	negative
-delinquent	negative
-mitschuldig	negative
-verbrecherisch	negative
-schändlich	negative
-unerhört	negative
-seelsorglich	positive
-augenschädigend	negative
-augenschädlich	negative
-klimaschädigend	negative
-klimaschädlich	negative
-eilfertig	positive
-betriebsam	positive
-geschäftig	positive
-beflissen	positive
-übereifrig	positive
-servil	positive
-diensteifrig	positive
-agil	positive
-wohnlich	positive
-erstrebenswert	positive
-farblos	negative
-architekturbild	positive
-architekturfoto	positive
-reklamephotographie	positive
-reklamefotografie	positive
-reklamefoto	positive
-modefoto	positive
-seelsorgerisch	positive
-seelsorgerlich	positive
-unordentlich	negative
-knuffig	positive
-rechtschaffen	positive
-orgiastisch	negative
-klischeehaft	negative
-bedrohlich	negative
-vordergründig	negative
-plakativ	negative
-fleischlich	positive
-digitalfotografie	positive
-digitalphotographie	positive
-anrechnungsfähig	positive
-beihilfefähig	positive
-sittenlos	negative
-unmoralisch	negative
-wüst	negative
-ungehobelt	negative
-heimelig	positive
-grobschlächtig	negative
-ungeschlacht	negative
-hochzufrieden	positive
-vergnügt	positive
-ungerechtfertigt	negative
-unbefugt	negative
-ungehörig	negative
-sinnlos	negative
-eigenständig	positive
-durchsetzungsfähig	positive
-makrofotografie	positive
-makrophotographie	positive
-unspektakulär	negative
-magnetisierbar	positive
-bespielbar	positive
-schmuckvoll	positive
-gutgemeint	positive
-abgewrackt	negative
-mephistophelisch	negative
-luziferisch	negative
-streitsüchtig	negative
-gehässig	negative
-bissig	negative
-aufhetzend	negative
-aufwiegelnd	negative
-zänkisch	negative
-zanksüchtig	negative
-hilfreich	positive
-human	positive
-gelogen	negative
-vorgetäuscht	negative
-lohnenswert	positive
-lohnend	positive
-kleinkriminell	negative
-dahergelaufen	negative
-sehen	positive
-gelehrig	positive
-hochklassig	positive
-virtuos	positive
-kunstfertig	positive
-hochwertig	positive
-poplig	negative
-popelig	negative
-melancholisch	negative
-deprimiert	negative
-suchtgefährdet	negative
-anständig	positive
-unbedenklich	positive
-himmelschreiend	negative
-arkadisch	positive
-huldreich	positive
-superreich	positive
-bekümmert	negative
-erstattungsfähig	positive
-hochgiftig	negative
-fabelhaft	positive
-prunkhaft	positive
-menschlich	positive
-panzerbrechend	positive
-unverhältnismässig	negative
-räuberisch	negative
-strafbar	negative
-betrügerisch	negative
-fulminant	positive
-dienlich	positive
-tierfotografie	positive
-tierphotographie	positive
-nacktbild	positive
-nacktaufnahme	positive
-nacktfoto	positive
-kapitalkräftig	positive
-satzungsgemäss	positive
-unsachgemäss	negative
-reproduktionsphotographie	positive
-reproduktionsfotografie	positive
-industriefotografie	positive
-industriephotographie	positive
-hobbyfotografie	positive
-hobbyphotographie	positive
-aktfotografie	positive
-aktphotographie	positive
-phänomenal	positive
-reinlich	positive
-redlich	positive
-klobig	negative
-klotzig	negative
-unfein	negative
-gesund	positive
-gesundheitsdienlich	positive
-unachtsam	negative
-pragmatisch	positive
-erfolgsverwöhnt	positive
-erfolgsgewöhnt	positive
-fündig	positive
-lauschig	positive
-todtraurig	negative
-reumütig	negative
-börsenfähig	positive
-objektiv	positive
-unbescholten	positive
-sachlich	positive
-trouble	negative
-unannehmlichkeit	negative
-entsetzlich	negative
-abscheulich	negative
-verabscheuungswürdig	negative
-furcht erregend	negative
-furchterregend	negative
-kursorisch	negative
-unberechtigt	negative
-lappig	negative
-erlogen	negative
-gefälscht	negative
-souverän	positive
-selbstsicher	positive
-selbstbewusst	positive
-stadtverträglich	positive
-naturverträglich	positive
-verstohlen	negative
-unbemerkt	negative
-unbeobachtet	negative
-unbeachtet	negative
-unscheinbar	negative
-unverdächtig	negative
-provozierend	negative
-provokativ	negative
-unziemlich	negative
-schiefgegangen	negative
-danebengegangen	negative
-untadlig	positive
-untadelig	positive
-tauglich	positive
-verkehrsgünstig	positive
-reaktionsfähig	positive
-adrett	positive
-gepflegt	positive
-appetitlich	positive
-verschwitzt	negative
-verwahrlost	negative
-zumutbar	positive
-trübsinnig	negative
-streitlustig	negative
-schiefgelaufen	negative
-fehlgeschlagen	negative
-sintflutartig	negative
-gekonnt	positive
-hinderlich	negative
-störend	negative
-selbstzerstörerisch	negative
-selbstschädigend	negative
-magenverträglich	positive
-prunkvoll	positive
-pompös	positive
-malerisch	positive
-philanthropisch	positive
-wahrhaftig	positive
-furchteinflössend	negative
-hochzeitsfoto	positive
-situiert	positive
-architekturfotografie	positive
-architekturphotographie	positive
-porträtphotographie	positive
-porträtfotografie	positive
-luftbildfotografie	positive
-luftbildphotographie	positive
-landschaftsphotographie	positive
-landschaftsfotografie	positive
-schuldhaft	negative
-kaufkräftig	positive
-wettbewerbsfähig	positive
-konkurrenzfähig	positive
-griffig	positive
-schrecken erregend	negative
-schreckenerregend	negative
-spukhaft	negative
-tragisch	negative
-angsterregend	negative
-angst erregend	negative
-dissozial	negative
-asozial	negative
-intensiv	positive
-hochgradig	positive
-gespielt	negative
-urlaubsfoto	positive
-konfirmationsbild	positive
-konfirmationsfoto	positive
-umweltbelastend	negative
-statutengemäss	positive
-machtvoll	positive
-herausfordernd	negative
-sanftmütig	positive
-gedeihlich	positive
-überhart	positive
-amateurhaft	negative
-unbezähmbar	positive
-klassenbild	positive
-familienfoto	positive
-tränenreich	negative
-praxistauglich	positive
-flugtauglich	positive
-geländetauglich	positive
-diensttauglich	positive
-fahrtauglich	positive
-lückenlos	positive
-prozessrecht	positive
-unheilig	negative
-unselig	negative
-schwarz	negative
-wachstumsfördernd	positive
-federleicht	negative
-millionenschwer	positive
-allerbeste	positive
-schlagfertig	positive
-beispielgebend	positive
-alltagstauglich	positive
-kriegstauglich	positive
-erschöpft	negative
-auswertbar	positive
-pflanzenverträglich	positive
-klimaverträglich	positive
-landschaftsverträglich	positive
-förderungswürdig	positive
-verlockend	positive
-verheissungsvoll	positive
-fraglich	negative
-feindselig	negative
-feindschaftlich	negative
-fröhlich	positive
-wehmütig	negative
-schmackhaft	negative
-problemlos	negative
-problemfrei	negative
-waschecht	positive
-gedankenvoll	negative
-tiefsinnig	positive
-letal	negative
-polemisch	negative
-hochwassergefährdet	negative
-hochgefährlich	negative
-verhängnisvoll	negative
-fatal	negative
-vorurteilslos	positive
-drangvoll	negative
-ungefärbt	positive
-defensiv	positive
-widerrechtlich	negative
-rechtswidrig	negative
-arbeitsunfähig	negative
-missbräuchlich	negative
-anbaufähig	positive
-genusssüchtig	negative
-strafmildernd	positive
-strafsenkend	positive
-leichtfertig	negative
-durchlässig	negative
-marode	negative
-baufällig	negative
-marod	negative
-verrostet	negative
-rostig	negative
-wackelig	negative
-verwittert	negative
-erweiterbar	positive
-instandsetzbar	positive
-verwertbar	positive
-drollig	positive
-stumpf	negative
-haltbar	positive
-leistungsfördernd	positive
-marktreif	positive
-anämisch	negative
-doll	positive
-tiefgründig	positive
-ruhmreich	positive
-löblich	positive
-lobenswert	positive
-rühmlich	positive
-tieftraurig	negative
-keck	positive
-angeberisch	negative
-grossspurig	negative
-grossmäulig	negative
-prahlerisch	negative
-reichverziert	positive
-reich verziert	positive
-gesetzeswerk	positive
-recht kompetenz	positive
-recht inhalt	positive
-recht subjekt	positive
-unproblematisch	negative
-reibungslos	negative
-ungeschönt	positive
-bitter	negative
-schnoddrig	negative
-unkeusch	negative
-ausländerfeindlich	negative
-fremdenfeindlich	negative
-frauenfeindlich	negative
-rassistisch	negative
-umweltfeindlich	negative
-verfassungsfeindlich	negative
-wegweisend	positive
-vornehm	positive
-heuchlerisch	negative
-scheinheilig	negative
-unredlich	negative
-tiefschürfend	positive
-kriegsmüde	negative
-tiefreichend	positive
-lethargisch	negative
-tentakel	negative
-bigott	negative
-tiefgreifend	positive
-tiefgehend	positive
-radikal	positive
-sportlich	positive
-verlegt	negative
-zukunftsträchtig	positive
-schwulenfeindlich	negative
-regierungsfeindlich	negative
-werkgetreu	positive
-krankenhausreif	negative
-schwerverwundet	negative
-kolloid	positive
-kolloidal	positive
-nachteilig	negative
-marktgerecht	positive
-spitzfindig	negative
-schwermütig	negative
-wertig	positive
-wehrtauglich	positive
-100%ig	positive
-100-prozentig	positive
-antideutsch	negative
-deutschfeindlich	negative
-wohltätig	positive
-erhaben	positive
-verleumderisch	negative
-ansprechend	positive
-strähnig	negative
-ölig	negative
-fettig	negative
-streng	positive
-veritabel	positive
-gesundheitsabträglich	negative
-restlos	positive
-unteilbar	negative
-schwer	positive
-mächtig	positive
-tödlich	negative
-anwendungsbezogen	positive
-angewandt	positive
-praxisbezogen	positive
-benutzbar	positive
-praktikabel	positive
-hochherrschaftlich	positive
-internetfähig	positive
-manövrierunfähig	negative
-netzwerkfähig	positive
-antiklerikal	negative
-republikfeindlich	negative
-konjunkturverträglich	positive
-makaber	negative
-wacklig	negative
-abbaubar	positive
-risikoreich	negative
-riskant	negative
-existenzbedrohend	negative
-wehrfähig	positive
-flugunfähig	negative
-apokryph	negative
-duftig	positive
-verschorft	negative
-entzündet	negative
-eiternd	negative
-eitrig	negative
-wund	negative
-vereitert	negative
-blessiert	negative
-lädiert	negative
-unverbindlich	negative
-würdevoll	positive
-honorabel	positive
-honett	positive
-schwerverletzt	negative
-verwundet	negative
-wärmebedürftig	negative
-luftig	negative
-zügellos	negative
-unschwer	negative
-familienfeindlich	negative
-staatsfeindlich	negative
-ausserstande	negative
-zweitbeste	positive
-verlorengegangen	negative
-verloren gegangen	negative
-sündig	negative
-sündhaft	negative
-sperrig	negative
-zukunftsweisend	positive
-zukunftweisend	positive
-durchschlagskräftig	positive
-reiflich	positive
-wartungsarm	negative
-explosionsgefährlich	negative
-brandgefährlich	negative
-antibiotisch	positive
-xenophob	negative
-bewegungsunfähig	negative
-sommerlich-sonnig	positive
-arbeitsunwillig	negative
-müssig	negative
-überflüssig	negative
-diebisch	negative
-feinkörnig	positive
-lecker	negative
-verhärtet	negative
-vergrätzt	negative
-verkehrssicher	positive
-behilflich	positive
-urtümlich	positive
-verfahrensrecht	positive
-bildungsfeindlich	negative
-fortschrittsfeindlich	negative
-flügge	positive
-theoretisch	negative
-betrüblich	negative
-frame	positive
-erweiterungsfähig	positive
-lebensbedrohlich	negative
-lebensgefährlich	negative
-aromatisch	positive
-vertragsrecht	positive
-lustbetont	positive
-befreit	positive
-lustvoll	positive
-erlöst	positive
-beruhigt	positive
-mühelos	negative
-umstritten	negative
-strittig	negative
-kontrovers	negative
-ozonschädigend	negative
-ozonschädlich	negative
-fahrtüchtig	positive
-schlampig	negative
-schutzbedürftig	negative
-wissenschaftsfeindlich	negative
-wehrdienstfähig	positive
-wehruntauglich	negative
-verkehrsuntauglich	negative
-lebensunfähig	negative
-lebenspraktisch	positive
-zweifelhaft	negative
-abgespannt	negative
-milliardenschwer	positive
-musterhaft	positive
-seetüchtig	positive
-lebensbedrohend	negative
-quietschvergnügt	positive
-speicherbar	positive
-illegitim	negative
-antiphlogistisch	positive
-wichtigtuerisch	negative
-unbekümmert	positive
-behindertenfeindlich	negative
-reformfeindlich	negative
-islamfeindlich	negative
-kulturfeindlich	negative
-leibfeindlich	negative
-körperfeindlich	negative
-ästhetisch	positive
-verzerrungsfrei	positive
-hundertprozentig	positive
-schlagkräftig	positive
-streitbar	positive
-ungekürzt	positive
-unwürdig	negative
-würdelos	negative
-ausgesprochen	positive
-gewinnbar	positive
-zerbrechlich	positive
-filigran	positive
-kirchenfeindlich	negative
-honorig	positive
-keusch	positive
-unterstützend	positive
-subsidiär	positive
-reichsrecht	positive
-feingemahlen	positive
-caritativ	positive
-karitativ	positive
-säuerlich	negative
-ungeschlagen	positive
-handlich	positive
-aristokratisch	positive
-adlig	positive
-adelig	positive
-nobel	positive
-abbauwürdig	positive
-betont	positive
-liebreizend	positive
-lieblich	positive
-verführerisch	positive
-betörend	positive
-unwiderstehlich	positive
-begehrenswert	positive
-charmant	positive
-scharmant	positive
-kokett	positive
-risikobehaftet	negative
-vulgär	negative
-volksfeindlich	negative
-geistfeindlich	negative
-gesellschaftsfeindlich	negative
-unbefriedigt	negative
-zerlumpt	negative
-entzündungshemmend	positive
-gemeinschaftsschädigend	negative
-gesellschaftsunfähig	negative
-ausgelaugt	negative
-ausgepumpt	negative
-ausgebrannt	negative
-aufnahmefähig	positive
-lebensuntüchtig	negative
-unproduktiv	negative
-prätentiös	negative
-aufladbar	positive
-bestreitbar	negative
-köstlich	negative
-enttäuscht	negative
-trübselig	negative
-betrübt	negative
-deprimierend	negative
-spöttisch	negative
-qualitätsvoll	positive
-unverschuldet	positive
-mannschaftstauglich	positive
-mannschaftsdienlich	positive
-verkaufsfördernd	positive
-unerkannt	negative
-verehrungswürdig	positive
-ruhmvoll	positive
-glorreich	positive
-eingehend	positive
-verstrichen	negative
-unseriös	negative
-hehr	positive
-tollwütig	positive
-gefahrvoll	negative
-ungeteilt	positive
-unzerteilt	positive
-ganzheitlich	positive
-integral	positive
-verlagsrecht	positive
-unbesiegt	positive
-kuschlig	positive
-kuschelig	positive
-exemplarisch	positive
-strassenverkehrsrecht	positive
-unvoreingenommen	positive
-hintergründig	positive
-blaublütig	positive
-einsturzgefährdet	negative
-unrechtmässig	negative
-zotig	negative
-leichtgängig	negative
-lustfeindlich	negative
-israelfeindlich	negative
-kaiserfeindlich	negative
-männerfeindlich	negative
-christenfeindlich	negative
-demokratiefeindlich	negative
-parteifeindlich	negative
-religionsfeindlich	negative
-minderheitenfeindlich	negative
-regimefeindlich	negative
-unhandlich	negative
-ungehört	negative
-ungesehen	negative
-angreifbar	negative
-fragil	positive
-ausbaufähig	positive
-erneuerbar	positive
-renovierbar	positive
-schnippisch	negative
-scharfzüngig	negative
-anwendungsorientiert	positive
-handlungsunfähig	negative
-zynisch	negative
-höhnisch	negative
-technikfeindlich	negative
-neuwertig	positive
-kündigungsrecht	positive
-vergrämt	negative
-hochseetüchtig	positive
-berufspraktisch	positive
-verkehrstauglich	positive
-athletisch	positive
-sportiv	positive
-mildtätig	positive
-abgerissen	negative
-gammelig	negative
-gammlig	negative
-lumpig	negative
-angeschlagen	negative
-unhaltbar	negative
-komplett	positive
-vollzählig	positive
-schulrecht	positive
-unschicklich	negative
-bedröppelt	negative
-untröstlich	negative
-begossen	negative
-gelackmeiert	negative
-erholungsbedürftig	negative
-urlaubsreif	negative
-mitgenommen	negative
-entkräftet	negative
-echt	positive
-verkehrsrecht	positive
-stilecht	positive
-originalgetreu	positive
-unverfälscht	positive
-ausgelassen	positive
-ordnungsrecht	positive
-qualitätvoll	positive
-erschliessbar	positive
-hintersinnig	positive
-verarbeitbar	positive
-hilfsbereit	positive
-hochgespannt	positive
-bedienbar	positive
-verfassungswidrig	negative
-gesetzwidrig	negative
-unzuständig	negative
-bedroht	negative
-unerlaubt	negative
-verboten	negative
-ritterlich	positive
-vorbestraft	negative
-vorurteilsfrei	positive
-unparteiisch	positive
-unbestechlich	positive
-säuberlich	positive
-schamlos	negative
-obszön	negative
-ordinär	negative
-tadelnswert	negative
-sträflich	negative
-desolat	negative
-unstabil	negative
-undicht	negative
-integrierend	positive
-wohlschmeckend	negative
-desaströs	negative
-anfechtbar	negative
-beschämt	negative
-kunstfeindlich	negative
-untragbar	negative
-unverfroren	negative
-impertinent	negative
-lautstark	negative
-unverschämt	negative
-vorlaut	negative
-vollmundig	negative
-ungezogen	negative
-undankbar	negative
-grosskotzig	negative
-plebejisch	negative
-phlegmatisch	negative
-unzüchtig	negative
-winkeltreu	positive
-ehrenrecht	positive
-wirklichkeitsgetreu	positive
-frevlerisch	negative
-lästerlich	negative
-ehrenbürgerrecht	positive
-lebensmittelrecht	positive
-luftdurchlässig	negative
-rezeptiv	positive
-schwierig	positive
-sprechakttheoretisch	negative
-funktionentheoretisch	negative
-feldtheoretisch	negative
-kategorientheoretisch	negative
-geldtheoretisch	negative
-komplexitätstheoretisch	negative
-rechtstheoretisch	negative
-medientheoretisch	negative
-quantentheoretisch	negative
-aktiengesetz	positive
-bergrecht	positive
-wiederaufladbar	positive
-medienrecht	positive
-wirkmächtig	positive
-fischereirecht	positive
-lenkbar	positive
-steuerbar	positive
-heiter	positive
-niederschmetternd	negative
-vereinsrecht	positive
-naseweis	positive
-kess	positive
-seerecht	positive
-blind	negative
-ungezügelt	negative
-rechtsfähig	positive
-mehrheitsfähig	positive
-anpassungsfähig	positive
-montierbar	positive
-schutzfähig	positive
-kampfunfähig	negative
-dienstunfähig	negative
-kleinadelig	positive
-kleinadlig	positive
-leck	negative
-löchrig	negative
-regierungsfähig	positive
-gebrauchsfähig	positive
-lehnsrecht	positive
-gut aufgelegt	positive
-glanzvoll	positive
-glänzend	positive
-spielstark	positive
-wettbewerbsrecht	positive
-anpassbar	positive
-fähig	positive
-allegro	positive
-zivilrecht	positive
-privatrecht	positive
-internationales recht	positive
-zartbitter	negative
-judenfeindlich	negative
-antisemitisch	negative
-preiswürdig	positive
-wasserdurchlässig	negative
-urig	positive
-standesherrlich	positive
-erbrecht	positive
-mietrecht	positive
-stadtrecht	positive
-landrecht	positive
-bodenrecht	positive
-heimatrecht	positive
-erbbaurecht	positive
-dienstrecht	positive
-elternrecht	positive
-familienrecht	positive
-verschoben	negative
-trist	negative
-emissionsrecht	positive
-selbstmörderisch	negative
-schmiedbar	positive
-allmächtig	positive
-nüchtern	positive
-schaltbar	positive
-dahinterstehend	positive
-weiss	negative
-demoralisierend	negative
-beschwingt	positive
-bildungstheoretisch	negative
-würdig	positive
-verdienstvoll	positive
-züchtig	positive
-einnehmend	positive
-gewinnend	positive
-regelbar	positive
-umgelegt	negative
-finanzstark	positive
-clean	positive
-gesundet	positive
-benutzerfreundlich	positive
-anwenderfreundlich	positive
-lichtdurchlässig	negative
-morbid	negative
-handhabbar	positive
-gerichtsverwertbar	positive
-kompostierbar	positive
-schmierig	negative
-ungeschützt	negative
-gastrecht	positive
-urheberrecht	positive
-hausrecht	positive
-verwertungsrecht	positive
-namensrecht	positive
-markenrecht	positive
-unbefleckt	positive
-streitig	negative
-flugfähig	positive
-betreuungsrecht	positive
-ungesichert	negative
-skalierbar	positive
-rosig	positive
-rederecht	positive
-senderecht	positive
-übertragungsrecht	positive
-veranstaltungsrecht	positive
-austragungsrecht	positive
-kriegsrecht	positive
-potent	positive
-wirtschaftsrecht	positive
-einstellbar	positive
-familienfreundlich	positive
-kinderfeindlich	negative
-ausländerfreundlich	positive
-frauenfreundlich	positive
-omnipotent	positive
-tonangebend	positive
-beschlussfähig	positive
-einsatzfähig	positive
-urheberrechtsschutz	positive
-umsatzstark	positive
-multitaskingfähig	positive
-haftunfähig	negative
-schliessbar	positive
-kirchenrecht	positive
-europarecht	positive
-nutzungsrecht	positive
-atomrecht	positive
-etherisch	negative
-hochglänzend	positive
-lustig	positive
-finanzkräftig	positive
-verwaltungsrecht	positive
-haushaltsrecht	positive
-mitbestimmungsrecht	positive
-mitspracherecht	positive
-beamtenrecht	positive
-steuerrecht	positive
-spitz	negative
-mühselig	positive
-arbeitsscheu	negative
-krank	negative
-illusionslos	positive
-ohnmächtig	negative
-royal	positive
-kaiserlich	positive
-sachenrecht	positive
-ausländerrecht	positive
-handlungsfähig	positive
-mittelschwer	positive
-unrein	negative
-koscher	positive
-steril	positive
-keimfrei	positive
-adaptiv	positive
-recyclingfähig	positive
-regenerationsfähig	positive
-wiederverwertbar	positive
-gehfähig	positive
-völkerrechtswidrig	negative
-regulierbar	positive
-gewagt	negative
-spielend	negative
-tarifrecht	positive
-urhebervertragsrecht	positive
-telekommunikationsrecht	positive
-gewährleistungsrecht	positive
-tarifautonomie	positive
-schutzrecht	positive
-abtreibungsrecht	positive
-schöngeistig	positive
-massstabsgerecht	positive
-gefährdend	negative
-wasserrecht	positive
-feingeistig	positive
-hochadlig	positive
-subtil	positive
-abgründig	positive
-lebensfähig	positive
-stimmrecht	positive
-pfandrecht	positive
-wohnrecht	positive
-informationsrecht	positive
-vetorecht	positive
-umweltrecht	positive
-vorkaufsrecht	positive
-streikrecht	positive
-sorgerecht	positive
-wandlungsfähig	positive
-arbeitsfähig	positive
-obskur	negative
-dubios	negative
-grossväterlich	positive
-hemmungslos	negative
-beziehungsunfähig	negative
-rüstig	positive
-verheilt	positive
-geistesklar	positive
-genesen	positive
-rentenrecht	positive
-arbeitsrecht	positive
-planungshoheit	positive
-unsentimental	positive
-feuchtfröhlich	positive
-erlaubt	positive
-pharisäisch	negative
-kampfstark	positive
-beschwerlich	positive
-profund	positive
-bearbeitbar	positive
-trostlos	negative
-damenhaft	positive
-zögerlich	positive
-zauderhaft	positive
-süsslich	positive
-zuckersüss	positive
-königlich	positive
-feudalistisch	positive
-autonomierecht	positive
-ungeschliffen	negative
-hervorgehoben	positive
-hochadelig	positive
-problemvoll	positive
-semipermeabel	negative
-erbpacht	positive
-wohlerzogen	positive
-desillusioniert	positive
-verdient	positive
-leichtfüssig	positive
-frohgemut	positive
-launig	positive
-gutgelaunt	positive
-gut gelaunt	positive
-bravourös	positive
-marktschreierisch	negative
-minderheitenrecht	positive
-schimmernd	positive
-changierend	positive
-schillernd	positive
-froh gelaunt	positive
-frohgelaunt	positive
-zierlich	negative
-entmutigend	negative
-imstande	positive
-homophob	negative
-wahrscheinlichkeitstheoretisch	negative
-evolutionstheoretisch	negative
-spieltheoretisch	negative
-verschwörungstheoretisch	negative
-zahlentheoretisch	negative
-kunsttheoretisch	negative
-wirtschaftstheoretisch	negative
-staatstheoretisch	negative
-informationstheoretisch	negative
-literaturtheoretisch	negative
-erwerbsunfähig	negative
-genehmigungsrecht	positive
-baurecht	positive
-marktrecht	positive
-planungsrecht	positive
-aktienrecht	positive
-verzagt	positive
-tierrecht	positive
-regenerativ	positive
-diffizil	positive
-problematisch	positive
-sortenrein	positive
-berufsunfähig	negative
-neutral	positive
-beleidigend	negative
-ausfallend	negative
-feudal	positive
-höfisch	positive
-mühsam	positive
-unbestritten	positive
-umweltfreundlich	positive
-technikfreundlich	positive
-zivilprozessrecht	positive
-schuldunfähig	negative
-strafprozessrecht	positive
-fahl	negative
-reizend	positive
-verfügungsrecht	positive
-emphatisch	positive
-unstrittig	positive
-schicklich	positive
-curriculumtheoretisch	negative
-chaostheoretisch	negative
-alltagstheoretisch	negative
-elektronentheoretisch	negative
-konjunkturtheoretisch	negative
-zeichentheoretisch	negative
-semiotisch	negative
-kulturtheoretisch	negative
-polizeirecht	positive
-unzurechnungsfähig	negative
-urwüchsig	positive
-freiherrlich	positive
-kaiserlich-königlich	positive
-euphorisch	positive
-überschäumend	positive
-überbordend	positive
-fidel	positive
-unbeschwert	positive
-übermütig	positive
-quietschfidel	positive
-akzentuiert	positive
-schmelzbar	positive
-wirkungsmächtig	positive
-nationales recht	positive
-gemeinschaftsrecht	positive
-schmalzig	negative
-eherecht	positive
-lupenrein	positive
-zerteilt	negative
-zerlegbar	positive
-nachrüstbar	positive
-systemtheoretisch	negative
-musiktheoretisch	negative
-wissenschaftstheoretisch	negative
-erkenntnistheoretisch	negative
-haftfähig	positive
-kompromissfähig	positive
-sozialrecht	positive
-altadlig	positive
-altadelig	positive
-urheberschutz	positive
-humorvoll	positive
-humorig	positive
-goldglänzend	positive
-hochrein	positive
-zitatrecht	positive
-kerngesund	positive
-unbegabt	negative
-untalentiert	negative
-geburtsrecht	positive
-vorfahrtsrecht	positive
-völkerrecht	positive
-öffentliches recht	positive
-vorfahrt	positive
-kündigungsschutzrecht	positive
-strafrecht	positive
-staatsrecht	positive
-anerkennenswert	positive
-volksrecht	positive
-wegerecht	positive
-jugendstrafrecht	positive
-unbegreifbar	positive
-farbig	positive
-atmungsaktiv	negative
-zauberhaft	positive
-zuckerkrank	negative
-brenzlig	positive
-wassergefährdend	negative
-wichtig	positive
-bundesrecht	positive
-filmrecht	positive
-zurechnungsfähig	positive
-leistungsstark	positive
-bleischwer	positive
-erbkrank	negative
-unbegreiflich	positive
-ökonomisch	negative
-niessbrauch	positive
-arbeitsteilig	negative
-fleischfarben	positive
-türkis	positive
-cäsarisch	positive
-durchstimmbar	positive
-spielfähig	positive
-zahlungsfähig	positive
-entwicklungsfähig	positive
-fürstlich	positive
-ehrverletzend	negative
-friedensgefährdend	negative
-schwindsüchtig	negative
-überschwer	positive
-scherzhaft	positive
-kampffähig	positive
-altehrwürdig	positive
-erkältet	negative
-fügsam	positive
-allegretto	positive
-landesrecht	positive
-klar	positive
-cremeweiss	negative
-pigmentiert	positive
-erhaltenswert	positive
-leistungsfähig	positive
-zweifarbig	positive
-diabetisch	negative
-mattweiss	negative
-blütenweiss	negative
-aidskrank	negative
-lungenkrank	negative
-krebskrank	negative
-herzkrank	negative
-gallenkrank	negative
-leberkrank	negative
-nierenkrank	negative
-drüsenkrank	negative
-magenkrank	negative
-reinweiss	negative
-jugendgefährdend	negative
-schneeweiss	negative
-pastellig	positive
-schwungvoll	positive
-pastellfarbig	positive
-unmusikalisch	negative
-repressiv	positive
-unterdrückerisch	positive
-drastisch	positive
-drakonisch	positive
-strikt	positive
-sympathisch	positive
-verschliessbar	positive
-sicherheitsgefährdend	negative
-verpanscht	negative
-klickbar	positive
-downloadbar	positive
-verunreinigt	negative
-beherrschbar	positive
-überlebensfähig	positive
-insolvenzrecht	positive
-grüblerisch	negative
-schlechtgelaunt	negative
-schlecht gelaunt	negative
-hochwürdig	positive
-sympathie erweckend	positive
-sympathieerweckend	positive
-gelb	positive
-falb	negative
-abschliessbar	positive
-kartellrecht	positive
-willfährig	positive
-gehorsam	positive
-dreifarbig	positive
-sterbenskrank	negative
-familiengerecht	positive
-machtlos	negative
-kritikfähig	positive
-leidensfähig	positive
-dialogfähig	positive
-gelbweiss	negative
-milchweiss	negative
-einkommensteuerrecht	positive
-psychotisch	negative
-todkrank	negative
-zerkleinert	negative
-hell	positive
-kränkelnd	negative
-kränklich	negative
-hautfarben	positive
-grundpfandrecht	positive
-blaugrün	positive
-gotteslästerlich	negative
-weissgetüncht	positive
-metamorph	positive
-schuldfähig	positive
-majestätisch	positive
-fraktioniert	negative
-aufgeräumt	positive
-gestreng	positive
-perlweiss	negative
-schlohweiss	negative
-unstreitig	positive
-interaktiv	positive
-virtuell	positive
-virtual	positive
-unhygienisch	negative
-teilrechtsfähig	positive
-geistesgestört	negative
-schutzwürdig	positive
-unverständlich	positive
-heikel	positive
-hochverdient	positive
-anklickbar	positive
-braun	positive
-tuberkulös	negative
-lilienweiss	negative
-andersfarbig	positive
-quick-and-dirty	positive
-teamfähig	positive
-aktionsfähig	positive
-einsichtsfähig	positive
-urteilsfähig	positive
-metallfarben	positive
-blumig	positive
-grellweiss	negative
-ruchlos	negative
-höflich	positive
-sittsam	positive
-starkfarbig	positive
-knifflig	positive
-kirchensatz	positive
-textbasiert	positive
-alkoholkrank	negative
-schamhaft	positive
-empfindungsfähig	positive
-türkisfarben	positive
-sublim	positive
-geschnitten	negative
-zerfasert	negative
-vorwitzig	positive
-gestört	negative
-dienstfähig	positive
-kinderfreundlich	positive
-blasphemisch	negative
-weisslich	negative
-pastell	positive
-pastellfarben	positive
-monochrom	positive
-herunterladbar	positive
-crossmedial	positive
-brisant	positive
-obligationenrecht	positive
-sächlich	positive
-kompliziert	positive
-kontaminiert	negative
-gepanscht	negative
-gestattet	positive
-vierfarbig	positive
-schuldrecht	positive
-unumstritten	positive
-unangefochten	positive
-dunkelfarbig	positive
-wohlverdient	positive
-schwarzweiss	positive
-aschfahl	negative
-bezaubernd	positive
-hinreissend	positive
-entzückend	positive
-bezückend	positive
-scrollbar	positive
-verlinkt	positive
-mikrotheoretisch	negative
-umweltschonend	positive
-uni	positive
-einfarbig	positive
-kommunalrecht	positive
-leichtsinnig	negative
-krüppelhaft	negative
-magersüchtig	negative
-heiser	negative
-silberweiss	negative
-grauweiss	negative
-verschmutzt	negative
-verkrüppelt	negative
-staatsgefährdend	negative
-hellfarben	positive
-aufgeteilt	negative
-naturfarben	positive
-rauchig	positive
-schwerkrank	negative
-silbrig	positive
-alphanumerisch	positive
-nebenstrafrecht	positive
-bindungsfähig	positive
-denkfähig	positive
-monochromatisch	positive
-gleichfarbig	positive
-verseucht	negative
-nachdenklich	negative
-dornenreich	positive
-gefügig	positive
-erwerbsfähig	positive
-talentiert	positive
-begabt	positive
-befähigt	positive
-lernfähig	positive
-gesundheitsgefährdend	negative
-gesittet	positive
-prüde	positive
-tonnenschwer	positive
-inquisitorisch	positive
-krüppelig	negative
-herrschend	positive
-unerklärbar	positive
-unerklärlich	positive
-wolkenfrei	positive
-verzwackt	positive
-steuerpflichtig	positive
-folgsam	positive
-ungehorsam	negative
-unerfindlich	positive
-unergründlich	positive
-unfassbar	positive
-übellaunig	negative
-mikroökonomisch	negative
-sozioökonomisch	negative
-makroökonomisch	negative
-grellgelb	positive
-zuvorkommend	positive
-wertvoll	positive
-kostbar	positive
-verschnupft	negative
-verrückt	negative
-undurchschaubar	positive
-ehrrührig	negative
-ehrenrührig	negative
-grimm	negative
-massgeblich	positive
-sentimental	negative
-schikanös	negative
-essenzial	positive
-essential	positive
-wasserklar	positive
-verschleimt	negative
-musikalisch	positive
-wesentlich	positive
-dornig	positive
-verflixt	positive
-dunkelhäutig	positive
-grundsteuerpflichtig	positive
-erbschaftssteuerpflichtig	positive
-hellbraun	positive
-einschneidend	positive
-massiv	positive
-brav	positive
-relevant	positive
-misslaunig	negative
-entgegenkommend	positive
-superwichtig	positive
-hochwichtig	positive
-beigefarben	positive
-sandfarben	positive
-goldgelb	positive
-kalkig	negative
-verwünscht	positive
-messinggelb	positive
-gelbbraun	positive
-goldbraun	positive
-rehbraun	positive
-ockerbraun	positive
-olivbraun	positive
-tiefbraun	positive
-wissenswert	positive
-gelblich	positive
-galant	positive
-rührselig	negative
-beziehungsreich	positive
-weissgelb	positive
-grüngelb	positive
-strohgelb	positive
-orangegelb	positive
-kristallklar	positive
-lebensnotwendig	positive
-wichtigst	positive
-nennenswert	positive
-zweitwichtigste	positive
-erwähnenswert	positive
-zerschnitten	negative
-frech	negative
-artig	positive
-nussbraun	positive
-verdrossen	negative
-überlebenswichtig	positive
-goldfarben	positive
-wahnsinnig	negative
-geisteskrank	negative
-irre	negative
-irr	negative
-irrsinnig	negative
-schokoladenbraun	positive
-pestverseucht	negative
-grundsätzlich	positive
-sepiabraun	positive
-erdbraun	positive
-kupferbraun	positive
-kackbraun	positive
-kakifarben	positive
-khakifarben	positive
-khaki	positive
-kaki	positive
-hellgelb	positive
-sehnsüchtig	negative
-nörglerisch	negative
-nölig	negative
-nörgelig	negative
-kleingeschnitten	negative
-zimtfarbig	positive
-brennend	positive
-dienstbar	positive
-bronzefarben	positive
-sprachbegabt	positive
-rostbraun	positive
-rötlichbraun	positive
-rostfarben	positive
-zitronengelb	positive
-körperschaftsteuerpflichtig	positive
-körperschaftssteuerpflichtig	positive
-verfänglich	positive
-permissiv	negative
-lebenswichtig	positive
-sehnsuchtsvoll	negative
-sattgelb	positive
-sonnengelb	positive
-fahlgelb	positive
-safrangelb	positive
-lehmgelb	positive
-buttergelb	positive
-schwefelgelb	positive
-blassgelb	positive
-dottergelb	positive
-honiggelb	positive
-silberfarben	positive
-schalkhaft	positive
-denunziatorisch	negative
-glasklar	positive
-albern	positive
-strahlenverseucht	negative
-staatstragend	positive
-vorherrschend	positive
-dunkelgelb	positive
-bräunlich	positive
-salonfähig	positive
-wolkenlos	positive
-liquide	positive
-liquid	positive
-silberfarbig	positive
-rostfarbig	positive
-goldfarbig	positive
-schwererziehbar	positive
-schwer erziehbar	positive
-safranfarben	positive
-bernsteinfarben	positive
-missgestimmt	negative
-missgelaunt	negative
-verstimmt	negative
-knatschig	negative
-quengelig	negative
-essenziell	positive
-essentiell	positive
-mürrisch	negative
-grimmig	negative
-grantig	negative
-hochleistungsfähig	positive
-hochkompliziert	positive
-wohlfahrtsökonomisch	negative
-agrarökonomisch	negative
-informationsökonomisch	negative
-possenhaft	positive
-übelgelaunt	negative
-übel gelaunt	negative
-gesellschaftsfähig	positive
-üppig	positive
-kanariengelb	positive
-knallgelb	positive
-mattgelb	positive
-lohnsteuerpflichtig	positive
-zartgelb	positive
-geschnetzelt	negative
-zersäbelt	negative
-verworren	positive
-verwickelt	positive
-beige	positive
-erdfarben	positive
-verflucht	positive
-vermaledeit	positive
-bronzefarbig	positive
-sandfarbig	positive
-elfenbeinfarbig	negative
-elfenbeinfarben	negative
-bernsteinfarbig	positive
-vielschichtig	positive
-verzwickt	positive
-vertrackt	positive
-kakaobraun	positive
-botmässig	positive
-einkommenssteuerpflichtig	positive
-einkommensteuerpflichtig	positive
-bärbeissig	negative
-eingeschnitten	negative
-arbeitsökonomisch	negative
-ingenieurökonomisch	negative
-umweltökonomisch	negative
-politökonomisch	negative
-industrieökonomisch	negative
-sozialökonomisch	negative
-medienökonomisch	negative
-schelmisch	positive
-verhaltensgestört	negative
-vernunftbegabt	positive
-unkalkulierbar	positive
-unberechenbar	positive
-gemeingefährlich	positive
-graubraun	positive
-umsatzsteuerpflichtig	positive
-unwichtig	negative
-musikbegabt	positive
-hochbegabt	positive
-hoch begabt	positive
-verwoben	positive
-komplex	positive
-zimtfarben	positive
-unbeschreiblich	positive
-unbeschreibbar	positive
-kalkhaltig	negative
-rebellisch	negative
-aufständisch	negative
-widerspenstig	negative
-aufmüpfig	negative
-knorrig	negative
-lichtstark	positive
-ernstzunehmend	positive
-kunstvoll	positive
-hochkarätig	positive
-unartig	negative
-verdreht	negative
-unsäglich	positive
-bekloppt	negative
-narrenhaft	negative
-jeck	negative
-burlesk	positive
-taktlos	negative
-taktvoll	positive
-wirtschaftlich	negative
-stur	negative
-unüberprüfbar	positive
-unlustig	negative
-dickköpfig	negative
-lümmelhaft	negative
-charakteristisch	positive
-rentabel	negative
-zinsgünstig	negative
-profitabel	negative
-aquarellfarben	positive
-richtungsweisend	positive
-richtungweisend	positive
-begrifflich	positive
-belegt	negative
-hochmusikalisch	positive
-facettenreich	positive
-lausbubenhaft	positive
-lausbübisch	positive
-verraucht	positive
-dunkelbraun	positive
-beleuchtet	positive
-unsagbar	positive
-unlöslich	positive
-spleenig	negative
-indiskret	negative
-diskret	positive
-unhöflich	negative
-existenziell	positive
-existentiell	positive
-sekundär	negative
-zweitrangig	negative
-unbedeutend	negative
-nebensächlich	negative
-unbedeutsam	negative
-ungebührlich	negative
-paranoid	negative
-zentral	positive
-loh	positive
-sehnlich	negative
-hochkomplex	positive
-wahnhaft	negative
-hygienisch	positive
-muffig	negative
-aufsässig	negative
-entbehrlich	negative
-sonnenbeschienen	positive
-nostalgisch	negative
-unbotmässig	negative
-verzichtbar	negative
-monopolistisch	negative
-flegelhaft	negative
-pöbelhaft	negative
-unmanierlich	negative
-ockerfarbig	positive
-einschlägig	positive
-unnötig	negative
-unfolgsam	negative
-unökonomisch	positive
-flapsig	negative
-eigensinnig	negative
-diskussionswürdig	positive
-despektierlich	negative
-verächtlich	negative
-begnadet	positive
-verschmitzt	positive
-gesprächsbereit	positive
-programmatisch	positive
-normativ	positive
-zielweisend	positive
-massgebend	positive
-marginal	negative
-abstrakt	positive
-ockergelb	positive
-ockerfarben	positive
-muschelkalkhaltig	negative
-störrisch	negative
-bockig	negative
-verstockt	negative
-eigenmächtig	negative
-eigenwillig	negative
-patzig	negative
-diskutabel	positive
-kunstreich	positive
-bibliophil	positive
-rationell	negative
-sprachökonomisch	negative
-prozessökonomisch	negative
-kompromissbereit	positive
-lichterloh	positive
-lichtdurchflutet	positive
-verbockt	negative
-renitent	negative
-existential	positive
-existenzial	positive
-kennzeichnend	positive
-bestimmend	positive
-konfrontativ	negative
-verlust bringend	positive
-verlustbringend	positive
-modrig	negative
-moderig	negative
-konkret	negative
-wesensgemäss	positive
-geringschätzig	negative
-energiewirtschaftlich	negative
-planwirtschaftlich	negative
-finanzwirtschaftlich	negative
-personalwirtschaftlich	negative
-unkontrollierbar	positive
-lukrativ	negative
-aufmerksam	positive
-diskutierbar	positive
-hauswirtschaftlich	negative
-trotzig	negative
-peripher	negative
-autoritativ	positive
-überbelegt	negative
-abschätzig	negative
-ineffizient	positive
-schwarzbraun	positive
-erleuchtet	positive
-manierlich	positive
-abfällig	negative
-indiskutabel	negative
-vermeidbar	negative
-unaussprechlich	positive
-gewinn bringend	negative
-gewinnbringend	negative
-privatwirtschaftlich	negative
-kammermusikalisch	positive
-unwirtschaftlich	positive
-missfällig	negative
-splendid	positive
-miefig	negative
-gemeinwirtschaftlich	negative
-verlustreich	positive
-akzessorisch	negative
-unrentabel	positive
-weltwirtschaftlich	negative
-gesamtwirtschaftlich	negative
-wesenhaft	positive
-lapidar	negative
-widerständig	negative
-gut gehend	negative
-gutgehend	negative
-aussenwirtschaftlich	negative
-wasserwirtschaftlich	negative
-kirchenmusikalisch	positive
-sanitär	positive
-forstwirtschaftlich	negative
-konsensfähig	positive
-närrisch	negative
-optional	negative
-marktwirtschaftlich	negative
-vernachlässigbar	negative
-involviert	positive
-unentbehrlich	positive
-geistig behindert	negative
-beiläufig	negative
-fakultativ	negative
-effizient	negative
-unaufmerksam	negative
-schnell	positive
-hellhörig	positive
-reaktionsschnell	positive
-geistesgegenwärtig	positive
-wach	positive
-versunken	positive
-kontemplativ	positive
-konzentriert	positive
-hochrangig	positive
-meditativ	positive
-szenetypisch	positive
-frauentypisch	positive
-wasserunlöslich	positive
-männertypisch	positive
-löslich	negative
-typisch	positive
-landestypisch	positive
-zeittypisch	positive
-archetypisch	positive
-regionaltypisch	positive
-hochstehend	positive
-unabkömmlich	positive
-unkonzentriert	negative
-untypisch	negative
-schwerlöslich	negative
-schwer löslich	negative
-öllöslich	negative
-alkohollöslich	negative
-fettlöslich	negative
-prototypisch	positive
-stereotypisch	positive
-stereotyp	positive
-idealtypisch	positive
-geistesabwesend	negative
-zerstreut	negative
-vergesslich	negative
-wasserlöslich	negative
-energieeffizient	negative
-superschnell	positive
-temporeich	positive
-abwesend	negative
-nahtlos	positive
-rasch	positive
-träumerisch	negative
-zügig	positive
-hurtig	positive
-geschwind	positive
-verträumt	negative
-schnellwüchsig	positive
-pfeilschnell	positive
-verzögerungslos	positive
-hellwach	positive
-wirkungsvoll	negative
-effektvoll	negative
-müde	negative
-eilig	positive
-hastig	positive
-rapide	positive
-rapid	positive
-kometenhaft	positive
-galoppierend	positive
-schnellfüssig	positive
-fluchtartig	positive
-gedankenverloren	negative
-gedankenversunken	negative
-atypisch	negative
-langsam	negative
-andante	negative
-versonnen	negative
-selbstvergessen	negative
-schleppend	negative
-gemächlich	negative
-wirkungslos	positive
-schlaftrunken	negative
-unausgeschlafen	negative
-todmüde	negative
-verschlafen	negative
-vorschnell	positive
-voreilig	positive
-dringend	positive
-unaufschiebbar	positive
-ernstlich	positive
-dringlich	positive
-hundemüde	negative
-lahm	negative
-transusig	negative
-tranig	negative
-träge	negative
-träg	negative
-andantino	negative
-mangelnd	negative
-fehlend	negative
-gehbehindert	negative
+unterlegen	negative	1.000000
+richtig	positive	1.000000
+böse	negative	1.000000
+bös	negative	1.000000
+nett	positive	1.000000
+korrekt	positive	1.000000
+negativ	negative	1.000000
+übel	negative	1.000000
+schlecht	negative	1.000000
+schön	positive	1.000000
+hübsch	positive	1.000000
+gut	positive	1.000000
+positiv	positive	1.000000
+mangelhaft	negative	1.000000
+ungünstig	negative	1.000000
+freundlich	positive	1.000000
+angenehm	positive	1.000000
+falsch	negative	1.000000
+schädlich	negative	1.000000
+arm	negative	1.000000
+verdorben	negative	1.000000
+bedauernswert	negative	1.000000
+unerfreulich	negative	1.000000
+misslich	negative	1.000000
+unglücklich	negative	1.000000
+ausgezeichnet	positive	1.000000
+schwach	negative	1.000000
+unangenehm	negative	1.000000
+fies	negative	1.000000
+geringwertig	negative	1.000000
+minderwertig	negative	1.000000
+gemein	negative	1.000000
+hässlich	negative	1.000000
+überragend	positive	1.000000
+irrig	negative	1.000000
+unrecht	negative	1.000000
+überlegen	positive	1.000000
+nachrangig	negative	1.000000
+scheusslich	negative	1.000000
+widerlich	negative	1.000000
+widerwärtig	negative	1.000000
+ekel erregend	negative	1.000000
+ekelerregend	negative	1.000000
+ekelhaft	negative	1.000000
+glücklich	positive	1.000000
+armselig	negative	1.000000
+dürftig	negative	1.000000
+lieb	positive	1.000000
+besser	positive	1.000000
+schlimm	negative	1.000000
+sinnreich	positive	0.500000
+leistungsschwach	negative	0.500000
+recht	positive	0.500000
+fragwürdig	negative	0.500000
+verschlagen	negative	0.500000
+link	negative	0.500000
+befremdlich	negative	0.500000
+beängstigend	negative	0.500000
+charakterschwach	negative	0.500000
+wirtschaftsschwach	negative	0.500000
+rauchschwach	negative	0.500000
+willensschwach	negative	0.500000
+verkehrsschwach	negative	0.500000
+mitgliederschwach	negative	0.500000
+zittrig	negative	0.500000
+deformiert	negative	0.500000
+verformt	negative	0.500000
+richtiggehend	positive	0.500000
+regelrecht	positive	0.500000
+sauer	negative	0.500000
+gekränkt	negative	0.500000
+spitzenmässig	positive	0.500000
+leid	negative	0.500000
+durchbrochen	negative	0.500000
+ärmel	negative	0.500000
+unfreundlich	negative	0.500000
+sonnig	positive	0.500000
+aktfoto	positive	0.500000
+ätzend	negative	0.500000
+mistig	negative	0.500000
+beknackt	negative	0.500000
+oll	negative	0.500000
+zutreffend	positive	0.500000
+widrig	negative	0.500000
+wahr	positive	0.500000
+notbehelfsmässig	negative	0.500000
+erfreulich	positive	0.500000
+glückreich	positive	0.500000
+sittlich	positive	0.500000
+moralisch	positive	0.500000
+ethisch	positive	0.500000
+polaroidfoto	positive	0.500000
+satellitenbild	positive	0.500000
+polaroid	positive	0.500000
+schnappschuss	positive	0.500000
+farbfoto	positive	0.500000
+polaroidbild	positive	0.500000
+sofortbild	positive	0.500000
+schwindlig	negative	0.500000
+gütig	positive	0.500000
+liebesfähig	positive	0.500000
+liebenswert	positive	0.500000
+importgut	positive	0.500000
+gefährlich	negative	0.500000
+lästig	negative	0.500000
+volksgut	positive	0.500000
+erstklassig	positive	0.500000
+spitze	positive	0.500000
+klasse	positive	0.500000
+endgeil	positive	0.500000
+wunderschön	positive	0.500000
+wohl geformt	positive	0.500000
+wohlgeformt	positive	0.500000
+fleischarm	negative	0.500000
+abgelaufen	negative	0.500000
+verfallen	negative	0.500000
+verrottet	negative	0.500000
+schimmelig	negative	0.500000
+verschimmelt	negative	0.500000
+herzensgut	positive	0.500000
+herausragend	positive	0.500000
+fein	positive	0.500000
+hervorragend	positive	0.500000
+kulturgut	positive	0.500000
+liedgut	positive	0.500000
+erwägen	positive	0.500000
+industriegut	positive	0.500000
+reich	positive	0.500000
+kontrafaktisch	negative	0.500000
+sehschwach	negative	0.500000
+kargo	positive	0.500000
+stückgut	positive	0.500000
+ladegut	positive	0.500000
+transportgut	positive	0.500000
+sammlungsgut	positive	0.500000
+massengut	positive	0.500000
+unangemessen	negative	0.500000
+inadäquat	negative	0.500000
+verfehlt	negative	0.500000
+unselbstständig	negative	0.500000
+unselbständig	negative	0.500000
+gruppenfoto	positive	0.500000
+einzelfoto	positive	0.500000
+porträtbild	positive	0.500000
+garstig	negative	0.500000
+vorschriftsgemäss	positive	0.500000
+unedel	negative	0.500000
+grundstufe	positive	0.500000
+rüstungsgut	positive	0.500000
+fair	positive	0.500000
+screenshot	positive	0.500000
+halb	negative	0.500000
+unvollständig	negative	0.500000
+lückenhaft	negative	0.500000
+notdürftig	negative	0.500000
+defizitär	negative	0.500000
+unvollkommen	negative	0.500000
+grundfalsch	negative	0.500000
+inakzeptabel	negative	0.500000
+unakzeptabel	negative	0.500000
+nährstoffarm	negative	0.500000
+wasserarm	negative	0.500000
+fettarm	negative	0.500000
+bauerngut	positive	0.500000
+unbill	negative	0.500000
+beleidigt	negative	0.500000
+halbherzig	negative	0.500000
+lügnerisch	negative	0.500000
+verlogen	negative	0.500000
+unaufrichtig	negative	0.500000
+erdrückend	negative	0.500000
+bedrückend	negative	0.500000
+belastend	negative	0.500000
+mulmig	negative	0.500000
+abstossend	negative	0.500000
+unsympathisch	negative	0.500000
+unbehaglich	negative	0.500000
+ungemütlich	negative	0.500000
+beklemmend	negative	0.500000
+stilsicher	positive	0.500000
+unübertrefflich	positive	0.500000
+unästhetisch	negative	0.500000
+phantastisch	positive	0.500000
+fantastisch	positive	0.500000
+unförmig	negative	0.500000
+geschmackvoll	positive	0.500000
+pickelig	negative	0.500000
+entstellt	negative	0.500000
+pikiert	negative	0.500000
+erbost	negative	0.500000
+fehlbar	negative	0.500000
+faul	negative	0.500000
+faulig	negative	0.500000
+verfault	negative	0.500000
+grossherzig	positive	0.500000
+gutherzig	positive	0.500000
+gutmütig	positive	0.500000
+friedlich	positive	0.500000
+friedliebend	positive	0.500000
+edelmütig	positive	0.500000
+bescheiden	negative	0.500000
+anrüchig	negative	0.500000
+traumatisierend	negative	0.500000
+traumatisch	negative	0.500000
+vernichtend	negative	0.500000
+katastrophal	negative	0.500000
+verheerend	negative	0.500000
+scheiss	negative	0.500000
+beschissen	negative	0.500000
+jovial	positive	0.500000
+kollegial	positive	0.500000
+grottenschlecht	negative	0.500000
+menschenfreundlich	positive	0.500000
+sorgsam	positive	0.500000
+sorgfältig	positive	0.500000
+ordnungsliebend	positive	0.500000
+bedauerlich	negative	0.500000
+schade	negative	0.500000
+unerquicklich	negative	0.500000
+unkomfortabel	negative	0.500000
+ergebnisreich	positive	0.500000
+zweckmässig	positive	0.500000
+sinnvoll	positive	0.500000
+sinnig	positive	0.500000
+imageträchtig	positive	0.500000
+ehrenvoll	positive	0.500000
+prestigeträchtig	positive	0.500000
+optimal	positive	0.500000
+regelgerecht	positive	0.500000
+wartungsfreundlich	positive	0.500000
+intrigant	negative	0.500000
+leutselig	positive	0.500000
+elendig	negative	0.500000
+erfolg versprechend	positive	0.500000
+erfolgversprechend	positive	0.500000
+legendär	positive	0.500000
+mythisch	positive	0.500000
+wundervoll	positive	0.500000
+herrlich	positive	0.500000
+prima	positive	0.500000
+wunderbar	positive	0.500000
+himmlisch	positive	0.500000
+paradiesisch	positive	0.500000
+ungerecht	negative	0.500000
+grauslich	negative	0.500000
+wurfarm	negative	0.500000
+dia	positive	0.500000
+negativaufnahme	positive	0.500000
+negativbild	positive	0.500000
+röntgenbild	positive	0.500000
+diapositiv	positive	0.500000
+lichtbild	positive	0.500000
+diabild	positive	0.500000
+eingeschnappt	negative	0.500000
+verletzt	negative	0.500000
+perfekt	positive	0.500000
+mustergültig	positive	0.500000
+vorbildlich	positive	0.500000
+beispielhaft	positive	0.500000
+exzellent	positive	0.500000
+mustergut	positive	0.500000
+unglückselig	negative	0.500000
+bemitleidenswert	negative	0.500000
+beklagenswert	negative	0.500000
+sagenhaft	positive	0.500000
+schmalspurig	negative	0.500000
+gesundheitsschädlich	negative	0.500000
+gesundheitsschädigend	negative	0.500000
+papierabzug	positive	0.500000
+eifrig	positive	0.500000
+arbeitsam	positive	0.500000
+emsig	positive	0.500000
+fleissig	positive	0.500000
+tüchtig	positive	0.500000
+gruppenbild	positive	0.500000
+gruppenaufnahme	positive	0.500000
+ergänzungsbedürftig	negative	0.500000
+wünschenswert	positive	0.500000
+gelungen	positive	0.500000
+geraten	positive	0.500000
+pejorativ	negative	0.500000
+ruinös	negative	0.500000
+anoxisch	negative	0.500000
+bedenkenswert	positive	0.500000
+unschön	negative	0.500000
+laienhaft	negative	0.500000
+ungeeignet	negative	0.500000
+ungut	negative	0.500000
+unprofessionell	negative	0.500000
+nutzlos	negative	0.500000
+meierhof	positive	0.500000
+meierei	positive	0.500000
+ablichtung	positive	0.500000
+unverträglich	negative	0.500000
+kontraproduktiv	negative	0.500000
+schädigend	negative	0.500000
+abträglich	negative	0.500000
+bedürftig	negative	0.500000
+ärmlich	negative	0.500000
+zahlungsunfähig	negative	0.500000
+bankrott	negative	0.500000
+erledigt	negative	0.500000
+ruiniert	negative	0.500000
+labil	negative	0.500000
+verloren	negative	0.500000
+instabil	negative	0.500000
+hilflos	negative	0.500000
+zielfoto	positive	0.500000
+tonarm	negative	0.500000
+viertklassig	negative	0.500000
+gutshof	positive	0.500000
+weingut	positive	0.500000
+hofgut	positive	0.500000
+kärglich	negative	0.500000
+unbequem	negative	0.500000
+unbefriedigend	negative	0.500000
+komfortabel	positive	0.500000
+wohltuend	positive	0.500000
+zufriedenstellend	positive	0.500000
+wohlig	positive	0.500000
+befriedigend	positive	0.500000
+nervenschwach	negative	0.500000
+muskelschwach	negative	0.500000
+mies	negative	0.500000
+schadenfroh	negative	0.500000
+zweitklassig	negative	0.500000
+schurkisch	negative	0.500000
+verderbt	negative	0.500000
+schnöde	negative	0.500000
+kümmerlich	negative	0.500000
+elend	negative	0.500000
+erbärmlich	negative	0.500000
+jämmerlich	negative	0.500000
+charakterlos	negative	0.500000
+verkehrsarm	negative	0.500000
+fünf	negative	0.500000
+zwei	positive	0.500000
+rufschädigend	negative	0.500000
+unschädlich	positive	0.500000
+zuträglich	positive	0.500000
+investitionsfreundlich	positive	0.500000
+verwerflich	negative	0.500000
+barmherzig	positive	0.500000
+angriffslustig	negative	0.500000
+aggressiv	negative	0.500000
+kampflustig	negative	0.500000
+kampfeslustig	negative	0.500000
+gelind	negative	0.500000
+ruchbar	negative	0.500000
+eklig	negative	0.500000
+tückisch	negative	0.500000
+unerträglich	negative	0.500000
+arg	negative	0.500000
+satanisch	negative	0.500000
+dämonisch	negative	0.500000
+diabolisch	negative	0.500000
+teuflisch	negative	0.500000
+hasserfüllt	negative	0.500000
+stiefmütterlich	negative	0.500000
+böswillig	negative	0.500000
+ranzig	negative	0.500000
+unterfüttern	negative	0.500000
+toxisch	negative	0.500000
+reichsgut	positive	0.500000
+archivgut	positive	0.500000
+strafwürdig	negative	0.500000
+abgeschlagen	negative	0.500000
+traurig	negative	0.500000
+geeignet	positive	0.500000
+gehoben	positive	0.500000
+unansehnlich	negative	0.500000
+fürsorglich	positive	0.500000
+geburtenschwach	negative	0.500000
+gutartig	positive	0.500000
+lausig	negative	0.500000
+unfehlbar	positive	0.500000
+toll	positive	0.500000
+wohlgesonnen	positive	0.500000
+wohlgesinnt	positive	0.500000
+gesinnt	positive	0.500000
+kameradschaftlich	positive	0.500000
+liebenswürdig	positive	0.500000
+unkorrekt	negative	0.500000
+schuldig	negative	0.500000
+umweltschädigend	negative	0.500000
+umweltschädlich	negative	0.500000
+geschäftsschädigend	negative	0.500000
+parteischädigend	negative	0.500000
+tugendhaft	positive	0.500000
+gerecht	positive	0.500000
+tugendlich	positive	0.500000
+verträglich	positive	0.500000
+übermächtig	positive	0.500000
+rohstoffarm	negative	0.500000
+bettelarm	negative	0.500000
+bitterarm	negative	0.500000
+kalorienarm	negative	0.500000
+verarmt	negative	0.500000
+pleite	negative	0.500000
+hautfreundlich	positive	0.500000
+erbgut	positive	0.500000
+erbhof	positive	0.500000
+fronhof	positive	0.500000
+herrenhof	positive	0.500000
+klostergut	positive	0.500000
+digitalfoto	positive	0.500000
+luderhaft	negative	0.500000
+unanständig	negative	0.500000
+verworfen	negative	0.500000
+unauffallend	negative	0.500000
+unauffällig	negative	0.500000
+geruhsam	positive	0.500000
+behaglich	positive	0.500000
+gemütlich	positive	0.500000
+schlechtigkeit	negative	0.500000
+frohgestimmt	positive	0.500000
+froh gestimmt	positive	0.500000
+zufrieden	positive	0.500000
+ungetrübt	positive	0.500000
+nichtsnutzig	negative	0.500000
+gelinde	negative	0.500000
+schmeichelhaft	positive	0.500000
+detailaufnahme	positive	0.500000
+seelig	positive	0.500000
+wägen	positive	0.500000
+bitterböse	negative	0.500000
+paradigmatisch	positive	0.500000
+magenfreundlich	positive	0.500000
+bedienungsfreundlich	positive	0.500000
+kundenfreundlich	positive	0.500000
+leserfreundlich	positive	0.500000
+attraktiv	positive	0.500000
+nutzbringend	positive	0.500000
+nützlich	positive	0.500000
+maliziös	negative	0.500000
+hämisch	negative	0.500000
+süffisant	negative	0.500000
+hündisch	negative	0.500000
+chancenreich	positive	0.500000
+erfolgreich	positive	0.500000
+kalkulieren	positive	0.500000
+bildschön	positive	0.500000
+ertragbar	positive	0.500000
+deliberieren	positive	0.500000
+stilgerecht	positive	0.500000
+sinnhaft	positive	0.500000
+grandios	positive	0.500000
+berauschend	positive	0.500000
+meisterhaft	positive	0.500000
+meisterlich	positive	0.500000
+elefantös	positive	0.500000
+satellitenfoto	positive	0.500000
+schmuck	positive	0.500000
+stilvoll	positive	0.500000
+dekorativ	positive	0.500000
+potthässlich	negative	0.500000
+liebreich	positive	0.500000
+tugendreich	positive	0.500000
+prächtig	positive	0.500000
+märchenhaft	positive	0.500000
+prachtvoll	positive	0.500000
+umgekehrt	negative	0.500000
+regulär	positive	0.500000
+vorschriftsmässig	positive	0.500000
+ordnungsgemäss	positive	0.500000
+ungemach	negative	0.500000
+grundübel	negative	0.500000
+kriminell	negative	0.500000
+themenfoto	positive	0.500000
+regelgemäss	positive	0.500000
+pedantisch	positive	0.500000
+penibel	positive	0.500000
+förmlich	positive	0.500000
+achtsam	positive	0.500000
+peinlich	positive	0.500000
+preisgekrönt	positive	0.500000
+amoralisch	negative	0.500000
+niederträchtig	negative	0.500000
+superior	positive	0.500000
+missraten	negative	0.500000
+misslungen	negative	0.500000
+exportware	positive	0.500000
+investitionsgut	positive	0.500000
+stümperhaft	negative	0.500000
+importware	positive	0.500000
+boshaft	negative	0.500000
+weinerlich	negative	0.500000
+okay	positive	0.500000
+glückstrahlend	positive	0.500000
+überglücklich	positive	0.500000
+gemeingut	positive	0.500000
+irregulär	negative	0.500000
+irrtümlich	negative	0.500000
+unrichtig	negative	0.500000
+unzutreffend	negative	0.500000
+fälschlich	negative	0.500000
+unwahr	negative	0.500000
+läppisch	negative	0.500000
+nichtig	negative	0.500000
+werbefotografie	positive	0.500000
+werbephotographie	positive	0.500000
+pressephotographie	positive	0.500000
+pressefotografie	positive	0.500000
+familiengut	positive	0.500000
+grottig	negative	0.500000
+untrainiert	negative	0.500000
+unsportlich	negative	0.500000
+kraftlos	negative	0.500000
+memmenhaft	negative	0.500000
+schlapp	negative	0.500000
+schwächlich	negative	0.500000
+mickerig	negative	0.500000
+schlaff	negative	0.500000
+gebrechlich	negative	0.500000
+lichtschwach	negative	0.500000
+farbphotographie	positive	0.500000
+farbfotografie	positive	0.500000
+handelsgut	positive	0.500000
+genehm	positive	0.500000
+begrüssenswert	positive	0.500000
+unehrenhaft	negative	0.500000
+ehrlos	negative	0.500000
+glückselig	positive	0.500000
+glücklos	negative	0.500000
+chancenlos	negative	0.500000
+frachtgut	positive	0.500000
+fracht	positive	0.500000
+transportware	positive	0.500000
+mau	negative	0.500000
+unnützlich	negative	0.500000
+erfolglos	negative	0.500000
+drittklassig	negative	0.500000
+unfertig	negative	0.500000
+partiell	negative	0.500000
+ineffektiv	negative	0.500000
+günstig	positive	0.500000
+eingängig	positive	0.500000
+ideal	positive	0.500000
+bleich	negative	0.500000
+farbschwach	negative	0.500000
+immunschwach	negative	0.500000
+umsatzschwach	negative	0.500000
+entscheidungsschwach	negative	0.500000
+konditionsschwach	negative	0.500000
+verkaufsschwach	negative	0.500000
+unattraktiv	negative	0.500000
+unverdorben	positive	0.500000
+erträglich	positive	0.500000
+cargo	positive	0.500000
+ladungsgut	positive	0.500000
+zerstörerisch	negative	0.500000
+destruktiv	negative	0.500000
+traumhaft	positive	0.500000
+idyllisch	positive	0.500000
+sensationell	positive	0.500000
+legendenhaft	positive	0.500000
+umgänglich	positive	0.500000
+menschenwürdig	positive	0.500000
+verkehrt	negative	0.500000
+unecht	negative	0.500000
+fangarm	negative	0.500000
+unfair	negative	0.500000
+teilweise	negative	0.500000
+schwarzweissbild	positive	0.500000
+schwarz-weiss-bild	positive	0.500000
+schwarzweissfoto	positive	0.500000
+schwarz-weiss-foto	positive	0.500000
+themenfotografie	positive	0.500000
+themenphotographie	positive	0.500000
+archivfoto	positive	0.500000
+archivbild	positive	0.500000
+farbaufnahme	positive	0.500000
+farbbild	positive	0.500000
+insolvent	negative	0.500000
+matt	negative	0.500000
+flau	negative	0.500000
+fotografie	positive	0.500000
+photographie	positive	0.500000
+preussisch	positive	0.500000
+gewissenhaft	positive	0.500000
+unvorteilhaft	negative	0.500000
+kläglich	negative	0.500000
+massenstückgut	positive	0.500000
+liebevoll	positive	0.500000
+nervig	negative	0.500000
+giftig	negative	0.500000
+bildhübsch	positive	0.500000
+sinnlich	positive	0.500000
+feingeschnitten	positive	0.500000
+fein geschnitten	positive	0.500000
+eiweissarm	negative	0.500000
+vitaminarm	negative	0.500000
+grossartig	positive	0.500000
+pressefoto	positive	0.500000
+blendend	positive	0.500000
+glimpflich	positive	0.500000
+verteufelt	negative	0.500000
+verbessernd	positive	0.500000
+schrecklich	negative	0.500000
+fürchterlich	negative	0.500000
+furchtbar	negative	0.500000
+strukturschwach	negative	0.500000
+finanzschwach	negative	0.500000
+altersschwach	negative	0.500000
+stark	positive	0.500000
+gefahrgut	positive	0.500000
+versorgungsgut	positive	0.500000
+behandlungsgut	positive	0.500000
+dilettantisch	negative	0.500000
+luftfracht	positive	0.500000
+fehlerhaft	negative	0.500000
+schiffsfracht	positive	0.500000
+miserabel	negative	0.500000
+schäbig	negative	0.500000
+exportgut	positive	0.500000
+erinnerungsfoto	positive	0.500000
+fahndungsbild	positive	0.500000
+fahndungsfoto	positive	0.500000
+hinfällig	negative	0.500000
+morbide	negative	0.500000
+zart	negative	0.500000
+freundschaftlich	positive	0.500000
+partnerschaftlich	positive	0.500000
+kumpelhaft	positive	0.500000
+rudimentär	negative	0.500000
+fragmentarisch	negative	0.500000
+bruchstückhaft	negative	0.500000
+bruchstückartig	negative	0.500000
+kammergut	positive	0.500000
+unsinnig	negative	0.500000
+ergebnislos	negative	0.500000
+zwecklos	negative	0.500000
+zweckfrei	negative	0.500000
+unzweckmässig	negative	0.500000
+vorbildhaft	positive	0.500000
+umweltgefährdend	negative	0.250000
+stinkreich	positive	0.250000
+steinreich	positive	0.250000
+strömungsgünstig	positive	0.250000
+unheilvoll	negative	0.250000
+unheilschwanger	negative	0.250000
+unheil verheissend	negative	0.250000
+unheilverheissend	negative	0.250000
+besorgniserregend	negative	0.250000
+leicht	negative	0.250000
+treu sorgend	positive	0.250000
+treusorgend	positive	0.250000
+schwerreich	positive	0.250000
+neureich	positive	0.250000
+zerbeult	negative	0.250000
+menschenverträglich	positive	0.250000
+wirtschaftsverträglich	positive	0.250000
+sozialverträglich	positive	0.250000
+begütert	positive	0.250000
+überreich	positive	0.250000
+griesgrämig	negative	0.250000
+feindlich	negative	0.250000
+muffelig	negative	0.250000
+miesepetrig	negative	0.250000
+wahrhaft	positive	0.250000
+unstimmig	negative	0.250000
+sinngetreu	positive	0.250000
+kopfballstark	positive	0.250000
+edel	positive	0.250000
+froh	positive	0.250000
+anmutig	negative	0.250000
+graziös	negative	0.250000
+unverdaulich	negative	0.250000
+normgemäss	positive	0.250000
+verstärkt	positive	0.250000
+nahrhaft	positive	0.250000
+goldig	positive	0.250000
+putzig	positive	0.250000
+gnädig	positive	0.250000
+zärtlich	positive	0.250000
+niedlich	positive	0.250000
+verzeihend	positive	0.250000
+unschuldig	positive	0.250000
+rein	positive	0.250000
+geländegängig	positive	0.250000
+uneinholbar	positive	0.250000
+unerreicht	positive	0.250000
+marktbeherrschend	positive	0.250000
+unnachahmlich	positive	0.250000
+unerreichbar	positive	0.250000
+marktführend	positive	0.250000
+tanzbar	positive	0.250000
+erlernbar	positive	0.250000
+vaterlandslos	negative	0.250000
+mischbar	positive	0.250000
+druckfähig	positive	0.250000
+zytotoxisch	negative	0.250000
+vortrefflich	positive	0.250000
+bestechend	positive	0.250000
+begünstigend	positive	0.250000
+mildernd	positive	0.250000
+vorzüglich	positive	0.250000
+geisterhaft	negative	0.250000
+gespenstig	negative	0.250000
+grauenerregend	negative	0.250000
+grauen erregend	negative	0.250000
+gruselig	negative	0.250000
+schaurig	negative	0.250000
+schauerhaft	negative	0.250000
+schauerlich	negative	0.250000
+gespensterhaft	negative	0.250000
+gespenstisch	negative	0.250000
+brauchbar	positive	0.250000
+notleidend	negative	0.250000
+not leidend	negative	0.250000
+überstark	positive	0.250000
+leidlich	positive	0.250000
+aushaltbar	positive	0.250000
+zukunftsfähig	positive	0.250000
+lagerfähig	positive	0.250000
+marktfähig	positive	0.250000
+suizidgefährdet	negative	0.250000
+selbstmordgefährdet	negative	0.250000
+unfallgefährdet	negative	0.250000
+verführbar	negative	0.250000
+frank	positive	0.250000
+hochzeitsbild	positive	0.250000
+wortgemäss	positive	0.250000
+wortlautgemäss	positive	0.250000
+blutarm	negative	0.250000
+unrühmlich	negative	0.250000
+süss	positive	0.250000
+possierlich	positive	0.250000
+unannehmbar	negative	0.250000
+unvertretbar	negative	0.250000
+untauglich	negative	0.250000
+unfähig	negative	0.250000
+bestmöglich	positive	0.250000
+wohlhabend	positive	0.250000
+gutsituiert	positive	0.250000
+betucht	positive	0.250000
+vermögend	positive	0.250000
+gut betucht	positive	0.250000
+gutbetucht	positive	0.250000
+zahlungskräftig	positive	0.250000
+rückfällig	negative	0.250000
+unvermindert	positive	0.250000
+unehrlich	negative	0.250000
+gründlich	positive	0.250000
+hautverträglich	positive	0.250000
+wolkenbruchartig	negative	0.250000
+vierschrötig	negative	0.250000
+wahrheitsgetreu	positive	0.250000
+bucklig	negative	0.250000
+buckelig	negative	0.250000
+verwachsen	negative	0.250000
+vorwurfsvoll	negative	0.250000
+nervtötend	negative	0.250000
+essbar	positive	0.250000
+wahrheitsgemäss	positive	0.250000
+sinngemäss	positive	0.250000
+vorteilhaft	positive	0.250000
+geniessbar	positive	0.250000
+unbekömmlich	negative	0.250000
+famos	positive	0.250000
+strahlend	positive	0.250000
+barsch	negative	0.250000
+unpraktisch	negative	0.250000
+humanitär	positive	0.250000
+friedvoll	positive	0.250000
+herzig	positive	0.250000
+grazil	negative	0.250000
+bestimmungsgemäss	positive	0.250000
+befehlsgemäss	positive	0.250000
+unstandesgemäss	negative	0.250000
+ehrlich	positive	0.250000
+ehrenhaft	positive	0.250000
+verlottert	negative	0.250000
+verkommen	negative	0.250000
+unappetitlich	negative	0.250000
+ungepflegt	negative	0.250000
+schmuddelig	negative	0.250000
+vergammelt	negative	0.250000
+verlumpt	negative	0.250000
+entspannend	positive	0.250000
+erholsam	positive	0.250000
+gesundheitsförderlich	positive	0.250000
+fördernd	positive	0.250000
+förderlich	positive	0.250000
+unzufrieden	negative	0.250000
+todunglücklich	negative	0.250000
+praktisch	positive	0.250000
+ätherisch	negative	0.250000
+modefotografie	positive	0.250000
+modephotographie	positive	0.250000
+singbar	positive	0.250000
+trinkbar	positive	0.250000
+gefährdet	negative	0.250000
+gesellschaftsverträglich	positive	0.250000
+bedenklich	negative	0.250000
+beunruhigend	negative	0.250000
+alptraumhaft	negative	0.250000
+alptraumartig	negative	0.250000
+unheimlich	negative	0.250000
+alarmierend	negative	0.250000
+ungeheuer	negative	0.250000
+schauderhaft	negative	0.250000
+schaudervoll	negative	0.250000
+kombinierbar	positive	0.250000
+nutzbar	positive	0.250000
+unautorisiert	negative	0.250000
+dankbar	positive	0.250000
+leberschädlich	negative	0.250000
+leberschädigend	negative	0.250000
+nervenschädlich	negative	0.250000
+nervenschädigend	negative	0.250000
+nierenschädlich	negative	0.250000
+nierenschädigend	negative	0.250000
+lebenstüchtig	positive	0.250000
+untüchtig	negative	0.250000
+geschäftstüchtig	positive	0.250000
+wertlos	negative	0.250000
+landschaftsfoto	positive	0.250000
+klassenfoto	positive	0.250000
+familienbild	positive	0.250000
+familienaufnahme	positive	0.250000
+oberflächlich	negative	0.250000
+delikat	negative	0.250000
+gesetzt	positive	0.250000
+seriös	positive	0.250000
+korrekturbedürftig	negative	0.250000
+schwarz-weiss-fotografie	positive	0.250000
+schwarzweissfotografie	positive	0.250000
+lebensfeindlich	negative	0.250000
+erpresserisch	negative	0.250000
+empörend	negative	0.250000
+entwürdigend	negative	0.250000
+menschenfeindlich	negative	0.250000
+selbständig	positive	0.250000
+selbstständig	positive	0.250000
+beeinflussbar	negative	0.250000
+teilbar	positive	0.250000
+lötfähig	positive	0.250000
+liederlich	negative	0.250000
+lasterhaft	negative	0.250000
+entartet	negative	0.250000
+dekadent	negative	0.250000
+heruntergekommen	negative	0.250000
+einladend	positive	0.250000
+feinschmeckerisch	positive	0.250000
+kulinarisch	positive	0.250000
+offensiv	negative	0.250000
+draufgängerisch	negative	0.250000
+perspektivreich	positive	0.250000
+arbeitsfreudig	positive	0.250000
+arbeitswillig	positive	0.250000
+ordentlich	positive	0.250000
+stachelig	negative	0.250000
+stachlig	negative	0.250000
+erlebbar	positive	0.250000
+torgefährlich	negative	0.250000
+heilsam	positive	0.250000
+probiotisch	positive	0.250000
+heilend	positive	0.250000
+bekömmlich	positive	0.250000
+ungiftig	positive	0.250000
+ungeniessbar	negative	0.250000
+verdaulich	positive	0.250000
+umweltverträglich	positive	0.250000
+unsittlich	negative	0.250000
+hetzerisch	negative	0.250000
+demagogisch	negative	0.250000
+kriegerisch	negative	0.250000
+unzumutbar	negative	0.250000
+daguerreotypie	positive	0.250000
+vielversprechend	positive	0.250000
+aussichtsreich	positive	0.250000
+effektiv	positive	0.250000
+unnütz	negative	0.250000
+sinnentstellend	negative	0.250000
+oligotroph	negative	0.250000
+gesundheitsfördernd	positive	0.250000
+anziehend	positive	0.250000
+unübertroffen	positive	0.250000
+unverrichtet	negative	0.250000
+verbittert	negative	0.250000
+freudlos	negative	0.250000
+waffenfähig	positive	0.250000
+geil	positive	0.250000
+sexy	positive	0.250000
+konstruktiv	positive	0.250000
+wohlwollend	positive	0.250000
+behütend	positive	0.250000
+schützend	positive	0.250000
+väterlich	positive	0.250000
+wohlmeinend	positive	0.250000
+mütterlich	positive	0.250000
+vollständig	positive	0.250000
+betroffen	negative	0.250000
+leidtragend	negative	0.250000
+leid tragend	negative	0.250000
+einzelbild	positive	0.250000
+abzugsfähig	positive	0.250000
+siegreich	positive	0.250000
+super	positive	0.250000
+top	positive	0.250000
+krass	positive	0.250000
+fett	positive	0.250000
+tierfoto	positive	0.250000
+eigen	positive	0.250000
+konfliktfähig	positive	0.250000
+gefällig	positive	0.250000
+gefestigt	positive	0.250000
+lebensbejahend	positive	0.250000
+lebenslustig	positive	0.250000
+lebensfroh	positive	0.250000
+heilfroh	positive	0.250000
+erleichtert	positive	0.250000
+straffällig	negative	0.250000
+delinquent	negative	0.250000
+mitschuldig	negative	0.250000
+verbrecherisch	negative	0.250000
+schändlich	negative	0.250000
+unerhört	negative	0.250000
+seelsorglich	positive	0.250000
+augenschädigend	negative	0.250000
+augenschädlich	negative	0.250000
+klimaschädigend	negative	0.250000
+klimaschädlich	negative	0.250000
+eilfertig	positive	0.250000
+betriebsam	positive	0.250000
+geschäftig	positive	0.250000
+beflissen	positive	0.250000
+übereifrig	positive	0.250000
+servil	positive	0.250000
+diensteifrig	positive	0.250000
+agil	positive	0.250000
+wohnlich	positive	0.250000
+erstrebenswert	positive	0.250000
+farblos	negative	0.250000
+architekturbild	positive	0.250000
+architekturfoto	positive	0.250000
+reklamephotographie	positive	0.250000
+reklamefotografie	positive	0.250000
+reklamefoto	positive	0.250000
+modefoto	positive	0.250000
+seelsorgerisch	positive	0.250000
+seelsorgerlich	positive	0.250000
+unordentlich	negative	0.250000
+knuffig	positive	0.250000
+rechtschaffen	positive	0.250000
+orgiastisch	negative	0.250000
+klischeehaft	negative	0.250000
+bedrohlich	negative	0.250000
+vordergründig	negative	0.250000
+plakativ	negative	0.250000
+fleischlich	positive	0.250000
+digitalfotografie	positive	0.250000
+digitalphotographie	positive	0.250000
+anrechnungsfähig	positive	0.250000
+beihilfefähig	positive	0.250000
+sittenlos	negative	0.250000
+unmoralisch	negative	0.250000
+wüst	negative	0.250000
+ungehobelt	negative	0.250000
+heimelig	positive	0.250000
+grobschlächtig	negative	0.250000
+ungeschlacht	negative	0.250000
+hochzufrieden	positive	0.250000
+vergnügt	positive	0.250000
+ungerechtfertigt	negative	0.250000
+unbefugt	negative	0.250000
+ungehörig	negative	0.250000
+sinnlos	negative	0.250000
+eigenständig	positive	0.250000
+durchsetzungsfähig	positive	0.250000
+makrofotografie	positive	0.250000
+makrophotographie	positive	0.250000
+unspektakulär	negative	0.250000
+magnetisierbar	positive	0.250000
+bespielbar	positive	0.250000
+schmuckvoll	positive	0.250000
+gutgemeint	positive	0.250000
+abgewrackt	negative	0.250000
+mephistophelisch	negative	0.250000
+luziferisch	negative	0.250000
+streitsüchtig	negative	0.250000
+gehässig	negative	0.250000
+bissig	negative	0.250000
+aufhetzend	negative	0.250000
+aufwiegelnd	negative	0.250000
+zänkisch	negative	0.250000
+zanksüchtig	negative	0.250000
+hilfreich	positive	0.250000
+human	positive	0.250000
+gelogen	negative	0.250000
+vorgetäuscht	negative	0.250000
+lohnenswert	positive	0.250000
+lohnend	positive	0.250000
+kleinkriminell	negative	0.250000
+dahergelaufen	negative	0.250000
+sehen	positive	0.250000
+gelehrig	positive	0.250000
+hochklassig	positive	0.250000
+virtuos	positive	0.250000
+kunstfertig	positive	0.250000
+hochwertig	positive	0.250000
+poplig	negative	0.250000
+popelig	negative	0.250000
+melancholisch	negative	0.250000
+deprimiert	negative	0.250000
+suchtgefährdet	negative	0.250000
+anständig	positive	0.250000
+unbedenklich	positive	0.250000
+himmelschreiend	negative	0.250000
+arkadisch	positive	0.250000
+huldreich	positive	0.250000
+superreich	positive	0.250000
+bekümmert	negative	0.250000
+erstattungsfähig	positive	0.250000
+hochgiftig	negative	0.250000
+fabelhaft	positive	0.250000
+prunkhaft	positive	0.250000
+menschlich	positive	0.250000
+panzerbrechend	positive	0.250000
+unverhältnismässig	negative	0.250000
+räuberisch	negative	0.250000
+strafbar	negative	0.250000
+betrügerisch	negative	0.250000
+fulminant	positive	0.250000
+dienlich	positive	0.250000
+tierfotografie	positive	0.250000
+tierphotographie	positive	0.250000
+nacktbild	positive	0.250000
+nacktaufnahme	positive	0.250000
+nacktfoto	positive	0.250000
+kapitalkräftig	positive	0.250000
+satzungsgemäss	positive	0.250000
+unsachgemäss	negative	0.250000
+reproduktionsphotographie	positive	0.250000
+reproduktionsfotografie	positive	0.250000
+industriefotografie	positive	0.250000
+industriephotographie	positive	0.250000
+hobbyfotografie	positive	0.250000
+hobbyphotographie	positive	0.250000
+aktfotografie	positive	0.250000
+aktphotographie	positive	0.250000
+phänomenal	positive	0.250000
+reinlich	positive	0.250000
+redlich	positive	0.250000
+klobig	negative	0.250000
+klotzig	negative	0.250000
+unfein	negative	0.250000
+gesund	positive	0.250000
+gesundheitsdienlich	positive	0.250000
+unachtsam	negative	0.250000
+pragmatisch	positive	0.250000
+erfolgsverwöhnt	positive	0.250000
+erfolgsgewöhnt	positive	0.250000
+fündig	positive	0.250000
+lauschig	positive	0.250000
+todtraurig	negative	0.250000
+reumütig	negative	0.250000
+börsenfähig	positive	0.250000
+objektiv	positive	0.250000
+unbescholten	positive	0.250000
+sachlich	positive	0.250000
+trouble	negative	0.250000
+unannehmlichkeit	negative	0.250000
+entsetzlich	negative	0.250000
+abscheulich	negative	0.250000
+verabscheuungswürdig	negative	0.250000
+furcht erregend	negative	0.250000
+furchterregend	negative	0.250000
+kursorisch	negative	0.250000
+unberechtigt	negative	0.250000
+lappig	negative	0.250000
+erlogen	negative	0.250000
+gefälscht	negative	0.250000
+souverän	positive	0.250000
+selbstsicher	positive	0.250000
+selbstbewusst	positive	0.250000
+stadtverträglich	positive	0.250000
+naturverträglich	positive	0.250000
+verstohlen	negative	0.250000
+unbemerkt	negative	0.250000
+unbeobachtet	negative	0.250000
+unbeachtet	negative	0.250000
+unscheinbar	negative	0.250000
+unverdächtig	negative	0.250000
+provozierend	negative	0.250000
+provokativ	negative	0.250000
+unziemlich	negative	0.250000
+schiefgegangen	negative	0.250000
+danebengegangen	negative	0.250000
+untadlig	positive	0.250000
+untadelig	positive	0.250000
+tauglich	positive	0.250000
+verkehrsgünstig	positive	0.250000
+reaktionsfähig	positive	0.250000
+adrett	positive	0.250000
+gepflegt	positive	0.250000
+appetitlich	positive	0.250000
+verschwitzt	negative	0.250000
+verwahrlost	negative	0.250000
+zumutbar	positive	0.250000
+trübsinnig	negative	0.250000
+streitlustig	negative	0.250000
+schiefgelaufen	negative	0.250000
+fehlgeschlagen	negative	0.250000
+sintflutartig	negative	0.250000
+gekonnt	positive	0.250000
+hinderlich	negative	0.250000
+störend	negative	0.250000
+selbstzerstörerisch	negative	0.250000
+selbstschädigend	negative	0.250000
+magenverträglich	positive	0.250000
+prunkvoll	positive	0.250000
+pompös	positive	0.250000
+malerisch	positive	0.250000
+philanthropisch	positive	0.250000
+wahrhaftig	positive	0.250000
+furchteinflössend	negative	0.250000
+hochzeitsfoto	positive	0.250000
+situiert	positive	0.250000
+architekturfotografie	positive	0.250000
+architekturphotographie	positive	0.250000
+porträtphotographie	positive	0.250000
+porträtfotografie	positive	0.250000
+luftbildfotografie	positive	0.250000
+luftbildphotographie	positive	0.250000
+landschaftsphotographie	positive	0.250000
+landschaftsfotografie	positive	0.250000
+schuldhaft	negative	0.250000
+kaufkräftig	positive	0.250000
+wettbewerbsfähig	positive	0.250000
+konkurrenzfähig	positive	0.250000
+griffig	positive	0.250000
+schrecken erregend	negative	0.250000
+schreckenerregend	negative	0.250000
+spukhaft	negative	0.250000
+tragisch	negative	0.250000
+angsterregend	negative	0.250000
+angst erregend	negative	0.250000
+dissozial	negative	0.250000
+asozial	negative	0.250000
+intensiv	positive	0.250000
+hochgradig	positive	0.250000
+gespielt	negative	0.250000
+urlaubsfoto	positive	0.250000
+konfirmationsbild	positive	0.250000
+konfirmationsfoto	positive	0.250000
+umweltbelastend	negative	0.250000
+statutengemäss	positive	0.250000
+machtvoll	positive	0.250000
+herausfordernd	negative	0.250000
+sanftmütig	positive	0.250000
+gedeihlich	positive	0.250000
+überhart	positive	0.250000
+amateurhaft	negative	0.250000
+unbezähmbar	positive	0.250000
+klassenbild	positive	0.250000
+familienfoto	positive	0.250000
+tränenreich	negative	0.125000
+praxistauglich	positive	0.125000
+flugtauglich	positive	0.125000
+geländetauglich	positive	0.125000
+diensttauglich	positive	0.125000
+fahrtauglich	positive	0.125000
+lückenlos	positive	0.125000
+prozessrecht	positive	0.125000
+unheilig	negative	0.125000
+unselig	negative	0.125000
+schwarz	negative	0.125000
+wachstumsfördernd	positive	0.125000
+federleicht	negative	0.125000
+millionenschwer	positive	0.125000
+allerbeste	positive	0.125000
+schlagfertig	positive	0.125000
+beispielgebend	positive	0.125000
+alltagstauglich	positive	0.125000
+kriegstauglich	positive	0.125000
+erschöpft	negative	0.125000
+auswertbar	positive	0.125000
+pflanzenverträglich	positive	0.125000
+klimaverträglich	positive	0.125000
+landschaftsverträglich	positive	0.125000
+förderungswürdig	positive	0.125000
+verlockend	positive	0.125000
+verheissungsvoll	positive	0.125000
+fraglich	negative	0.125000
+feindselig	negative	0.125000
+feindschaftlich	negative	0.125000
+fröhlich	positive	0.125000
+wehmütig	negative	0.125000
+schmackhaft	negative	0.125000
+problemlos	negative	0.125000
+problemfrei	negative	0.125000
+waschecht	positive	0.125000
+gedankenvoll	negative	0.125000
+tiefsinnig	positive	0.125000
+letal	negative	0.125000
+polemisch	negative	0.125000
+hochwassergefährdet	negative	0.125000
+hochgefährlich	negative	0.125000
+verhängnisvoll	negative	0.125000
+fatal	negative	0.125000
+vorurteilslos	positive	0.125000
+drangvoll	negative	0.125000
+ungefärbt	positive	0.125000
+defensiv	positive	0.125000
+widerrechtlich	negative	0.125000
+rechtswidrig	negative	0.125000
+arbeitsunfähig	negative	0.125000
+anbaufähig	positive	0.125000
+genusssüchtig	negative	0.125000
+strafmildernd	positive	0.125000
+strafsenkend	positive	0.125000
+leichtfertig	negative	0.125000
+durchlässig	negative	0.125000
+marode	negative	0.125000
+baufällig	negative	0.125000
+marod	negative	0.125000
+verrostet	negative	0.125000
+rostig	negative	0.125000
+wackelig	negative	0.125000
+verwittert	negative	0.125000
+erweiterbar	positive	0.125000
+instandsetzbar	positive	0.125000
+verwertbar	positive	0.125000
+drollig	positive	0.125000
+stumpf	negative	0.125000
+haltbar	positive	0.125000
+leistungsfördernd	positive	0.125000
+marktreif	positive	0.125000
+anämisch	negative	0.125000
+doll	positive	0.125000
+tiefgründig	positive	0.125000
+ruhmreich	positive	0.125000
+löblich	positive	0.125000
+lobenswert	positive	0.125000
+rühmlich	positive	0.125000
+tieftraurig	negative	0.125000
+keck	positive	0.125000
+angeberisch	negative	0.125000
+grossspurig	negative	0.125000
+grossmäulig	negative	0.125000
+prahlerisch	negative	0.125000
+reichverziert	positive	0.125000
+reich verziert	positive	0.125000
+gesetzeswerk	positive	0.125000
+recht kompetenz	positive	0.125000
+recht inhalt	positive	0.125000
+recht subjekt	positive	0.125000
+unproblematisch	negative	0.125000
+reibungslos	negative	0.125000
+ungeschönt	positive	0.125000
+bitter	negative	0.125000
+schnoddrig	negative	0.125000
+unkeusch	negative	0.125000
+ausländerfeindlich	negative	0.125000
+fremdenfeindlich	negative	0.125000
+frauenfeindlich	negative	0.125000
+rassistisch	negative	0.125000
+umweltfeindlich	negative	0.125000
+verfassungsfeindlich	negative	0.125000
+wegweisend	positive	0.125000
+vornehm	positive	0.125000
+heuchlerisch	negative	0.125000
+scheinheilig	negative	0.125000
+unredlich	negative	0.125000
+tiefschürfend	positive	0.125000
+kriegsmüde	negative	0.125000
+tiefreichend	positive	0.125000
+lethargisch	negative	0.125000
+tentakel	negative	0.125000
+bigott	negative	0.125000
+tiefgreifend	positive	0.125000
+tiefgehend	positive	0.125000
+radikal	positive	0.125000
+sportlich	positive	0.125000
+verlegt	negative	0.125000
+zukunftsträchtig	positive	0.125000
+schwulenfeindlich	negative	0.125000
+regierungsfeindlich	negative	0.125000
+werkgetreu	positive	0.125000
+krankenhausreif	negative	0.125000
+schwerverwundet	negative	0.125000
+kolloid	positive	0.125000
+kolloidal	positive	0.125000
+nachteilig	negative	0.125000
+marktgerecht	positive	0.125000
+spitzfindig	negative	0.125000
+schwermütig	negative	0.125000
+wertig	positive	0.125000
+wehrtauglich	positive	0.125000
+100%ig	positive	0.125000
+100-prozentig	positive	0.125000
+antideutsch	negative	0.125000
+deutschfeindlich	negative	0.125000
+wohltätig	positive	0.125000
+erhaben	positive	0.125000
+verleumderisch	negative	0.125000
+ansprechend	positive	0.125000
+strähnig	negative	0.125000
+ölig	negative	0.125000
+fettig	negative	0.125000
+streng	positive	0.125000
+veritabel	positive	0.125000
+gesundheitsabträglich	negative	0.125000
+restlos	positive	0.125000
+unteilbar	negative	0.125000
+schwer	positive	0.125000
+mächtig	positive	0.125000
+tödlich	negative	0.125000
+anwendungsbezogen	positive	0.125000
+angewandt	positive	0.125000
+praxisbezogen	positive	0.125000
+benutzbar	positive	0.125000
+praktikabel	positive	0.125000
+hochherrschaftlich	positive	0.125000
+internetfähig	positive	0.125000
+manövrierunfähig	negative	0.125000
+netzwerkfähig	positive	0.125000
+antiklerikal	negative	0.125000
+republikfeindlich	negative	0.125000
+konjunkturverträglich	positive	0.125000
+makaber	negative	0.125000
+wacklig	negative	0.125000
+abbaubar	positive	0.125000
+risikoreich	negative	0.125000
+riskant	negative	0.125000
+existenzbedrohend	negative	0.125000
+wehrfähig	positive	0.125000
+flugunfähig	negative	0.125000
+apokryph	negative	0.125000
+duftig	positive	0.125000
+verschorft	negative	0.125000
+entzündet	negative	0.125000
+eiternd	negative	0.125000
+eitrig	negative	0.125000
+wund	negative	0.125000
+vereitert	negative	0.125000
+blessiert	negative	0.125000
+lädiert	negative	0.125000
+unverbindlich	negative	0.125000
+würdevoll	positive	0.125000
+honorabel	positive	0.125000
+honett	positive	0.125000
+schwerverletzt	negative	0.125000
+verwundet	negative	0.125000
+wärmebedürftig	negative	0.125000
+luftig	negative	0.125000
+zügellos	negative	0.125000
+unschwer	negative	0.125000
+familienfeindlich	negative	0.125000
+staatsfeindlich	negative	0.125000
+ausserstande	negative	0.125000
+zweitbeste	positive	0.125000
+verlorengegangen	negative	0.125000
+verloren gegangen	negative	0.125000
+sündig	negative	0.125000
+sündhaft	negative	0.125000
+sperrig	negative	0.125000
+zukunftsweisend	positive	0.125000
+zukunftweisend	positive	0.125000
+durchschlagskräftig	positive	0.125000
+reiflich	positive	0.125000
+wartungsarm	negative	0.125000
+explosionsgefährlich	negative	0.125000
+brandgefährlich	negative	0.125000
+antibiotisch	positive	0.125000
+xenophob	negative	0.125000
+bewegungsunfähig	negative	0.125000
+sommerlich-sonnig	positive	0.125000
+arbeitsunwillig	negative	0.125000
+müssig	negative	0.125000
+überflüssig	negative	0.125000
+diebisch	negative	0.125000
+feinkörnig	positive	0.125000
+lecker	negative	0.125000
+verhärtet	negative	0.125000
+vergrätzt	negative	0.125000
+verkehrssicher	positive	0.125000
+behilflich	positive	0.125000
+urtümlich	positive	0.125000
+verfahrensrecht	positive	0.125000
+bildungsfeindlich	negative	0.125000
+fortschrittsfeindlich	negative	0.125000
+flügge	positive	0.125000
+theoretisch	negative	0.125000
+betrüblich	negative	0.125000
+frame	positive	0.125000
+erweiterungsfähig	positive	0.125000
+lebensbedrohlich	negative	0.125000
+lebensgefährlich	negative	0.125000
+aromatisch	positive	0.125000
+vertragsrecht	positive	0.125000
+lustbetont	positive	0.125000
+befreit	positive	0.125000
+lustvoll	positive	0.125000
+erlöst	positive	0.125000
+beruhigt	positive	0.125000
+mühelos	negative	0.125000
+umstritten	negative	0.125000
+strittig	negative	0.125000
+kontrovers	negative	0.125000
+ozonschädigend	negative	0.125000
+ozonschädlich	negative	0.125000
+fahrtüchtig	positive	0.125000
+schlampig	negative	0.125000
+schutzbedürftig	negative	0.125000
+wissenschaftsfeindlich	negative	0.125000
+wehrdienstfähig	positive	0.125000
+wehruntauglich	negative	0.125000
+verkehrsuntauglich	negative	0.125000
+lebensunfähig	negative	0.125000
+lebenspraktisch	positive	0.125000
+zweifelhaft	negative	0.125000
+abgespannt	negative	0.125000
+milliardenschwer	positive	0.125000
+musterhaft	positive	0.125000
+seetüchtig	positive	0.125000
+lebensbedrohend	negative	0.125000
+quietschvergnügt	positive	0.125000
+speicherbar	positive	0.125000
+illegitim	negative	0.125000
+antiphlogistisch	positive	0.125000
+wichtigtuerisch	negative	0.125000
+unbekümmert	positive	0.125000
+behindertenfeindlich	negative	0.125000
+reformfeindlich	negative	0.125000
+islamfeindlich	negative	0.125000
+kulturfeindlich	negative	0.125000
+leibfeindlich	negative	0.125000
+körperfeindlich	negative	0.125000
+ästhetisch	positive	0.125000
+verzerrungsfrei	positive	0.125000
+hundertprozentig	positive	0.125000
+schlagkräftig	positive	0.125000
+streitbar	positive	0.125000
+ungekürzt	positive	0.125000
+unwürdig	negative	0.125000
+würdelos	negative	0.125000
+ausgesprochen	positive	0.125000
+gewinnbar	positive	0.125000
+zerbrechlich	positive	0.125000
+filigran	positive	0.125000
+kirchenfeindlich	negative	0.125000
+honorig	positive	0.125000
+keusch	positive	0.125000
+unterstützend	positive	0.125000
+subsidiär	positive	0.125000
+reichsrecht	positive	0.125000
+feingemahlen	positive	0.125000
+caritativ	positive	0.125000
+karitativ	positive	0.125000
+säuerlich	negative	0.125000
+ungeschlagen	positive	0.125000
+handlich	positive	0.125000
+aristokratisch	positive	0.125000
+adlig	positive	0.125000
+adelig	positive	0.125000
+nobel	positive	0.125000
+abbauwürdig	positive	0.125000
+betont	positive	0.125000
+liebreizend	positive	0.125000
+lieblich	positive	0.125000
+verführerisch	positive	0.125000
+betörend	positive	0.125000
+unwiderstehlich	positive	0.125000
+begehrenswert	positive	0.125000
+charmant	positive	0.125000
+scharmant	positive	0.125000
+kokett	positive	0.125000
+risikobehaftet	negative	0.125000
+vulgär	negative	0.125000
+volksfeindlich	negative	0.125000
+geistfeindlich	negative	0.125000
+gesellschaftsfeindlich	negative	0.125000
+unbefriedigt	negative	0.125000
+zerlumpt	negative	0.125000
+entzündungshemmend	positive	0.125000
+gemeinschaftsschädigend	negative	0.125000
+gesellschaftsunfähig	negative	0.125000
+ausgelaugt	negative	0.125000
+ausgepumpt	negative	0.125000
+ausgebrannt	negative	0.125000
+aufnahmefähig	positive	0.125000
+lebensuntüchtig	negative	0.125000
+unproduktiv	negative	0.125000
+prätentiös	negative	0.125000
+aufladbar	positive	0.125000
+bestreitbar	negative	0.125000
+köstlich	negative	0.125000
+enttäuscht	negative	0.125000
+trübselig	negative	0.125000
+betrübt	negative	0.125000
+deprimierend	negative	0.125000
+spöttisch	negative	0.125000
+qualitätsvoll	positive	0.125000
+unverschuldet	positive	0.125000
+mannschaftstauglich	positive	0.125000
+mannschaftsdienlich	positive	0.125000
+verkaufsfördernd	positive	0.125000
+unerkannt	negative	0.125000
+verehrungswürdig	positive	0.125000
+ruhmvoll	positive	0.125000
+glorreich	positive	0.125000
+eingehend	positive	0.125000
+verstrichen	negative	0.125000
+unseriös	negative	0.125000
+hehr	positive	0.125000
+tollwütig	positive	0.125000
+gefahrvoll	negative	0.125000
+ungeteilt	positive	0.125000
+unzerteilt	positive	0.125000
+ganzheitlich	positive	0.125000
+integral	positive	0.125000
+verlagsrecht	positive	0.125000
+unbesiegt	positive	0.125000
+kuschlig	positive	0.125000
+kuschelig	positive	0.125000
+exemplarisch	positive	0.125000
+strassenverkehrsrecht	positive	0.125000
+unvoreingenommen	positive	0.125000
+hintergründig	positive	0.125000
+blaublütig	positive	0.125000
+einsturzgefährdet	negative	0.125000
+unrechtmässig	negative	0.125000
+zotig	negative	0.125000
+leichtgängig	negative	0.125000
+lustfeindlich	negative	0.125000
+israelfeindlich	negative	0.125000
+kaiserfeindlich	negative	0.125000
+männerfeindlich	negative	0.125000
+christenfeindlich	negative	0.125000
+demokratiefeindlich	negative	0.125000
+parteifeindlich	negative	0.125000
+religionsfeindlich	negative	0.125000
+minderheitenfeindlich	negative	0.125000
+regimefeindlich	negative	0.125000
+unhandlich	negative	0.125000
+ungehört	negative	0.125000
+ungesehen	negative	0.125000
+angreifbar	negative	0.125000
+fragil	positive	0.125000
+ausbaufähig	positive	0.125000
+erneuerbar	positive	0.125000
+renovierbar	positive	0.125000
+schnippisch	negative	0.125000
+scharfzüngig	negative	0.125000
+anwendungsorientiert	positive	0.125000
+handlungsunfähig	negative	0.125000
+zynisch	negative	0.125000
+höhnisch	negative	0.125000
+technikfeindlich	negative	0.125000
+neuwertig	positive	0.125000
+kündigungsrecht	positive	0.125000
+vergrämt	negative	0.125000
+hochseetüchtig	positive	0.125000
+berufspraktisch	positive	0.125000
+verkehrstauglich	positive	0.125000
+athletisch	positive	0.125000
+sportiv	positive	0.125000
+mildtätig	positive	0.125000
+abgerissen	negative	0.125000
+gammelig	negative	0.125000
+gammlig	negative	0.125000
+lumpig	negative	0.125000
+angeschlagen	negative	0.125000
+unhaltbar	negative	0.125000
+komplett	positive	0.125000
+vollzählig	positive	0.125000
+schulrecht	positive	0.125000
+unschicklich	negative	0.125000
+bedröppelt	negative	0.125000
+untröstlich	negative	0.125000
+begossen	negative	0.125000
+gelackmeiert	negative	0.125000
+erholungsbedürftig	negative	0.125000
+urlaubsreif	negative	0.125000
+mitgenommen	negative	0.125000
+entkräftet	negative	0.125000
+echt	positive	0.125000
+verkehrsrecht	positive	0.125000
+stilecht	positive	0.125000
+originalgetreu	positive	0.125000
+unverfälscht	positive	0.125000
+ausgelassen	positive	0.125000
+ordnungsrecht	positive	0.125000
+qualitätvoll	positive	0.125000
+erschliessbar	positive	0.125000
+hintersinnig	positive	0.125000
+verarbeitbar	positive	0.125000
+hilfsbereit	positive	0.125000
+hochgespannt	positive	0.125000
+bedienbar	positive	0.125000
+verfassungswidrig	negative	0.125000
+gesetzwidrig	negative	0.125000
+unzuständig	negative	0.125000
+bedroht	negative	0.125000
+ritterlich	positive	0.125000
+vorbestraft	negative	0.125000
+vorurteilsfrei	positive	0.125000
+unparteiisch	positive	0.125000
+unbestechlich	positive	0.125000
+säuberlich	positive	0.125000
+schamlos	negative	0.125000
+obszön	negative	0.125000
+ordinär	negative	0.125000
+tadelnswert	negative	0.125000
+sträflich	negative	0.125000
+desolat	negative	0.125000
+unstabil	negative	0.125000
+undicht	negative	0.125000
+integrierend	positive	0.125000
+wohlschmeckend	negative	0.125000
+desaströs	negative	0.125000
+anfechtbar	negative	0.125000
+beschämt	negative	0.125000
+kunstfeindlich	negative	0.125000
+untragbar	negative	0.125000
+unverfroren	negative	0.125000
+impertinent	negative	0.125000
+lautstark	negative	0.125000
+unverschämt	negative	0.125000
+vorlaut	negative	0.125000
+vollmundig	negative	0.125000
+ungezogen	negative	0.125000
+undankbar	negative	0.125000
+grosskotzig	negative	0.125000
+plebejisch	negative	0.125000
+phlegmatisch	negative	0.125000
+unzüchtig	negative	0.125000
+winkeltreu	positive	0.062500
+ehrenrecht	positive	0.062500
+wirklichkeitsgetreu	positive	0.062500
+frevlerisch	negative	0.062500
+lästerlich	negative	0.062500
+ehrenbürgerrecht	positive	0.062500
+lebensmittelrecht	positive	0.062500
+luftdurchlässig	negative	0.062500
+rezeptiv	positive	0.062500
+schwierig	positive	0.062500
+sprechakttheoretisch	negative	0.062500
+funktionentheoretisch	negative	0.062500
+feldtheoretisch	negative	0.062500
+kategorientheoretisch	negative	0.062500
+geldtheoretisch	negative	0.062500
+komplexitätstheoretisch	negative	0.062500
+rechtstheoretisch	negative	0.062500
+medientheoretisch	negative	0.062500
+quantentheoretisch	negative	0.062500
+aktiengesetz	positive	0.062500
+bergrecht	positive	0.062500
+wiederaufladbar	positive	0.062500
+medienrecht	positive	0.062500
+wirkmächtig	positive	0.062500
+fischereirecht	positive	0.062500
+lenkbar	positive	0.062500
+steuerbar	positive	0.062500
+heiter	positive	0.062500
+niederschmetternd	negative	0.062500
+vereinsrecht	positive	0.062500
+naseweis	positive	0.062500
+kess	positive	0.062500
+seerecht	positive	0.062500
+blind	negative	0.062500
+ungezügelt	negative	0.062500
+rechtsfähig	positive	0.062500
+mehrheitsfähig	positive	0.062500
+anpassungsfähig	positive	0.062500
+montierbar	positive	0.062500
+schutzfähig	positive	0.062500
+kampfunfähig	negative	0.062500
+dienstunfähig	negative	0.062500
+kleinadelig	positive	0.062500
+kleinadlig	positive	0.062500
+leck	negative	0.062500
+löchrig	negative	0.062500
+regierungsfähig	positive	0.062500
+gebrauchsfähig	positive	0.062500
+lehnsrecht	positive	0.062500
+gut aufgelegt	positive	0.062500
+glanzvoll	positive	0.062500
+glänzend	positive	0.062500
+spielstark	positive	0.062500
+wettbewerbsrecht	positive	0.062500
+anpassbar	positive	0.062500
+fähig	positive	0.062500
+allegro	positive	0.062500
+zivilrecht	positive	0.062500
+privatrecht	positive	0.062500
+internationales recht	positive	0.062500
+zartbitter	negative	0.062500
+judenfeindlich	negative	0.062500
+antisemitisch	negative	0.062500
+preiswürdig	positive	0.062500
+wasserdurchlässig	negative	0.062500
+urig	positive	0.062500
+standesherrlich	positive	0.062500
+erbrecht	positive	0.062500
+mietrecht	positive	0.062500
+stadtrecht	positive	0.062500
+landrecht	positive	0.062500
+bodenrecht	positive	0.062500
+heimatrecht	positive	0.062500
+erbbaurecht	positive	0.062500
+dienstrecht	positive	0.062500
+elternrecht	positive	0.062500
+familienrecht	positive	0.062500
+verschoben	negative	0.062500
+trist	negative	0.062500
+emissionsrecht	positive	0.062500
+selbstmörderisch	negative	0.062500
+schmiedbar	positive	0.062500
+allmächtig	positive	0.062500
+nüchtern	positive	0.062500
+schaltbar	positive	0.062500
+dahinterstehend	positive	0.062500
+weiss	negative	0.062500
+demoralisierend	negative	0.062500
+beschwingt	positive	0.062500
+bildungstheoretisch	negative	0.062500
+würdig	positive	0.062500
+verdienstvoll	positive	0.062500
+züchtig	positive	0.062500
+einnehmend	positive	0.062500
+gewinnend	positive	0.062500
+regelbar	positive	0.062500
+umgelegt	negative	0.062500
+finanzstark	positive	0.062500
+clean	positive	0.062500
+gesundet	positive	0.062500
+benutzerfreundlich	positive	0.062500
+anwenderfreundlich	positive	0.062500
+lichtdurchlässig	negative	0.062500
+morbid	negative	0.062500
+handhabbar	positive	0.062500
+gerichtsverwertbar	positive	0.062500
+kompostierbar	positive	0.062500
+schmierig	negative	0.062500
+ungeschützt	negative	0.062500
+gastrecht	positive	0.062500
+urheberrecht	positive	0.062500
+hausrecht	positive	0.062500
+verwertungsrecht	positive	0.062500
+namensrecht	positive	0.062500
+markenrecht	positive	0.062500
+unbefleckt	positive	0.062500
+streitig	negative	0.062500
+flugfähig	positive	0.062500
+betreuungsrecht	positive	0.062500
+ungesichert	negative	0.062500
+skalierbar	positive	0.062500
+rosig	positive	0.062500
+rederecht	positive	0.062500
+senderecht	positive	0.062500
+übertragungsrecht	positive	0.062500
+veranstaltungsrecht	positive	0.062500
+austragungsrecht	positive	0.062500
+kriegsrecht	positive	0.062500
+potent	positive	0.062500
+wirtschaftsrecht	positive	0.062500
+einstellbar	positive	0.062500
+familienfreundlich	positive	0.062500
+kinderfeindlich	negative	0.062500
+ausländerfreundlich	positive	0.062500
+frauenfreundlich	positive	0.062500
+omnipotent	positive	0.062500
+tonangebend	positive	0.062500
+beschlussfähig	positive	0.062500
+einsatzfähig	positive	0.062500
+urheberrechtsschutz	positive	0.062500
+umsatzstark	positive	0.062500
+multitaskingfähig	positive	0.062500
+haftunfähig	negative	0.062500
+schliessbar	positive	0.062500
+kirchenrecht	positive	0.062500
+europarecht	positive	0.062500
+nutzungsrecht	positive	0.062500
+atomrecht	positive	0.062500
+etherisch	negative	0.062500
+hochglänzend	positive	0.062500
+lustig	positive	0.062500
+finanzkräftig	positive	0.062500
+verwaltungsrecht	positive	0.062500
+haushaltsrecht	positive	0.062500
+mitbestimmungsrecht	positive	0.062500
+mitspracherecht	positive	0.062500
+beamtenrecht	positive	0.062500
+steuerrecht	positive	0.062500
+spitz	negative	0.062500
+mühselig	positive	0.062500
+arbeitsscheu	negative	0.062500
+krank	negative	0.062500
+illusionslos	positive	0.062500
+ohnmächtig	negative	0.062500
+royal	positive	0.062500
+kaiserlich	positive	0.062500
+sachenrecht	positive	0.062500
+ausländerrecht	positive	0.062500
+handlungsfähig	positive	0.062500
+mittelschwer	positive	0.062500
+unrein	negative	0.062500
+koscher	positive	0.062500
+steril	positive	0.062500
+keimfrei	positive	0.062500
+adaptiv	positive	0.062500
+recyclingfähig	positive	0.062500
+regenerationsfähig	positive	0.062500
+wiederverwertbar	positive	0.062500
+gehfähig	positive	0.062500
+völkerrechtswidrig	negative	0.062500
+regulierbar	positive	0.062500
+gewagt	negative	0.062500
+spielend	negative	0.062500
+tarifrecht	positive	0.062500
+urhebervertragsrecht	positive	0.062500
+telekommunikationsrecht	positive	0.062500
+gewährleistungsrecht	positive	0.062500
+tarifautonomie	positive	0.062500
+schutzrecht	positive	0.062500
+abtreibungsrecht	positive	0.062500
+schöngeistig	positive	0.062500
+massstabsgerecht	positive	0.062500
+gefährdend	negative	0.062500
+wasserrecht	positive	0.062500
+feingeistig	positive	0.062500
+hochadlig	positive	0.062500
+subtil	positive	0.062500
+abgründig	positive	0.062500
+lebensfähig	positive	0.062500
+stimmrecht	positive	0.062500
+pfandrecht	positive	0.062500
+wohnrecht	positive	0.062500
+informationsrecht	positive	0.062500
+vetorecht	positive	0.062500
+umweltrecht	positive	0.062500
+vorkaufsrecht	positive	0.062500
+streikrecht	positive	0.062500
+sorgerecht	positive	0.062500
+wandlungsfähig	positive	0.062500
+arbeitsfähig	positive	0.062500
+obskur	negative	0.062500
+dubios	negative	0.062500
+grossväterlich	positive	0.062500
+hemmungslos	negative	0.062500
+beziehungsunfähig	negative	0.062500
+rüstig	positive	0.062500
+verheilt	positive	0.062500
+geistesklar	positive	0.062500
+genesen	positive	0.062500
+rentenrecht	positive	0.062500
+arbeitsrecht	positive	0.062500
+planungshoheit	positive	0.062500
+unsentimental	positive	0.062500
+feuchtfröhlich	positive	0.062500
+pharisäisch	negative	0.062500
+kampfstark	positive	0.062500
+beschwerlich	positive	0.062500
+profund	positive	0.062500
+bearbeitbar	positive	0.062500
+trostlos	negative	0.062500
+damenhaft	positive	0.062500
+zögerlich	positive	0.062500
+zauderhaft	positive	0.062500
+süsslich	positive	0.062500
+zuckersüss	positive	0.062500
+königlich	positive	0.062500
+feudalistisch	positive	0.062500
+autonomierecht	positive	0.062500
+ungeschliffen	negative	0.062500
+hervorgehoben	positive	0.062500
+hochadelig	positive	0.062500
+problemvoll	positive	0.062500
+semipermeabel	negative	0.062500
+erbpacht	positive	0.062500
+wohlerzogen	positive	0.062500
+desillusioniert	positive	0.062500
+verdient	positive	0.062500
+leichtfüssig	positive	0.062500
+frohgemut	positive	0.062500
+launig	positive	0.062500
+gutgelaunt	positive	0.062500
+gut gelaunt	positive	0.062500
+bravourös	positive	0.062500
+marktschreierisch	negative	0.062500
+minderheitenrecht	positive	0.062500
+schimmernd	positive	0.062500
+changierend	positive	0.062500
+schillernd	positive	0.062500
+froh gelaunt	positive	0.062500
+frohgelaunt	positive	0.062500
+zierlich	negative	0.062500
+entmutigend	negative	0.062500
+imstande	positive	0.062500
+homophob	negative	0.062500
+wahrscheinlichkeitstheoretisch	negative	0.062500
+evolutionstheoretisch	negative	0.062500
+spieltheoretisch	negative	0.062500
+verschwörungstheoretisch	negative	0.062500
+zahlentheoretisch	negative	0.062500
+kunsttheoretisch	negative	0.062500
+wirtschaftstheoretisch	negative	0.062500
+staatstheoretisch	negative	0.062500
+informationstheoretisch	negative	0.062500
+literaturtheoretisch	negative	0.062500
+erwerbsunfähig	negative	0.062500
+genehmigungsrecht	positive	0.062500
+baurecht	positive	0.062500
+marktrecht	positive	0.062500
+planungsrecht	positive	0.062500
+aktienrecht	positive	0.062500
+verzagt	positive	0.062500
+tierrecht	positive	0.062500
+regenerativ	positive	0.062500
+diffizil	positive	0.062500
+problematisch	positive	0.062500
+sortenrein	positive	0.062500
+berufsunfähig	negative	0.062500
+neutral	positive	0.062500
+beleidigend	negative	0.062500
+ausfallend	negative	0.062500
+feudal	positive	0.062500
+höfisch	positive	0.062500
+mühsam	positive	0.062500
+unbestritten	positive	0.062500
+umweltfreundlich	positive	0.062500
+technikfreundlich	positive	0.062500
+zivilprozessrecht	positive	0.062500
+schuldunfähig	negative	0.062500
+strafprozessrecht	positive	0.062500
+fahl	negative	0.062500
+reizend	positive	0.062500
+verfügungsrecht	positive	0.062500
+emphatisch	positive	0.062500
+unstrittig	positive	0.062500
+schicklich	positive	0.062500
+curriculumtheoretisch	negative	0.062500
+chaostheoretisch	negative	0.062500
+alltagstheoretisch	negative	0.062500
+elektronentheoretisch	negative	0.062500
+konjunkturtheoretisch	negative	0.062500
+zeichentheoretisch	negative	0.062500
+semiotisch	negative	0.062500
+kulturtheoretisch	negative	0.062500
+polizeirecht	positive	0.062500
+unzurechnungsfähig	negative	0.062500
+urwüchsig	positive	0.062500
+freiherrlich	positive	0.062500
+kaiserlich-königlich	positive	0.062500
+euphorisch	positive	0.062500
+überschäumend	positive	0.062500
+überbordend	positive	0.062500
+fidel	positive	0.062500
+unbeschwert	positive	0.062500
+übermütig	positive	0.062500
+quietschfidel	positive	0.062500
+akzentuiert	positive	0.062500
+schmelzbar	positive	0.062500
+wirkungsmächtig	positive	0.062500
+nationales recht	positive	0.062500
+gemeinschaftsrecht	positive	0.062500
+schmalzig	negative	0.062500
+eherecht	positive	0.062500
+lupenrein	positive	0.062500
+zerteilt	negative	0.062500
+zerlegbar	positive	0.062500
+nachrüstbar	positive	0.062500
+systemtheoretisch	negative	0.062500
+musiktheoretisch	negative	0.062500
+wissenschaftstheoretisch	negative	0.062500
+erkenntnistheoretisch	negative	0.062500
+haftfähig	positive	0.062500
+kompromissfähig	positive	0.062500
+sozialrecht	positive	0.062500
+altadlig	positive	0.062500
+altadelig	positive	0.062500
+urheberschutz	positive	0.062500
+humorvoll	positive	0.062500
+humorig	positive	0.062500
+goldglänzend	positive	0.062500
+hochrein	positive	0.062500
+zitatrecht	positive	0.062500
+kerngesund	positive	0.062500
+unbegabt	negative	0.062500
+untalentiert	negative	0.062500
+geburtsrecht	positive	0.062500
+vorfahrtsrecht	positive	0.062500
+völkerrecht	positive	0.062500
+öffentliches recht	positive	0.062500
+vorfahrt	positive	0.062500
+kündigungsschutzrecht	positive	0.062500
+strafrecht	positive	0.062500
+staatsrecht	positive	0.062500
+anerkennenswert	positive	0.062500
+volksrecht	positive	0.062500
+wegerecht	positive	0.062500
+jugendstrafrecht	positive	0.031250
+unbegreifbar	positive	0.031250
+farbig	positive	0.031250
+atmungsaktiv	negative	0.031250
+zauberhaft	positive	0.031250
+zuckerkrank	negative	0.031250
+brenzlig	positive	0.031250
+wassergefährdend	negative	0.031250
+wichtig	positive	0.031250
+bundesrecht	positive	0.031250
+filmrecht	positive	0.031250
+zurechnungsfähig	positive	0.031250
+leistungsstark	positive	0.031250
+bleischwer	positive	0.031250
+erbkrank	negative	0.031250
+unbegreiflich	positive	0.031250
+ökonomisch	negative	0.031250
+niessbrauch	positive	0.031250
+arbeitsteilig	negative	0.031250
+fleischfarben	positive	0.031250
+türkis	positive	0.031250
+cäsarisch	positive	0.031250
+durchstimmbar	positive	0.031250
+spielfähig	positive	0.031250
+zahlungsfähig	positive	0.031250
+entwicklungsfähig	positive	0.031250
+fürstlich	positive	0.031250
+ehrverletzend	negative	0.031250
+friedensgefährdend	negative	0.031250
+schwindsüchtig	negative	0.031250
+überschwer	positive	0.031250
+scherzhaft	positive	0.031250
+kampffähig	positive	0.031250
+altehrwürdig	positive	0.031250
+erkältet	negative	0.031250
+fügsam	positive	0.031250
+allegretto	positive	0.031250
+landesrecht	positive	0.031250
+klar	positive	0.031250
+cremeweiss	negative	0.031250
+pigmentiert	positive	0.031250
+erhaltenswert	positive	0.031250
+leistungsfähig	positive	0.031250
+zweifarbig	positive	0.031250
+diabetisch	negative	0.031250
+mattweiss	negative	0.031250
+blütenweiss	negative	0.031250
+aidskrank	negative	0.031250
+lungenkrank	negative	0.031250
+krebskrank	negative	0.031250
+herzkrank	negative	0.031250
+gallenkrank	negative	0.031250
+leberkrank	negative	0.031250
+nierenkrank	negative	0.031250
+drüsenkrank	negative	0.031250
+magenkrank	negative	0.031250
+reinweiss	negative	0.031250
+jugendgefährdend	negative	0.031250
+schneeweiss	negative	0.031250
+pastellig	positive	0.031250
+schwungvoll	positive	0.031250
+pastellfarbig	positive	0.031250
+unmusikalisch	negative	0.031250
+repressiv	positive	0.031250
+unterdrückerisch	positive	0.031250
+drastisch	positive	0.031250
+drakonisch	positive	0.031250
+strikt	positive	0.031250
+sympathisch	positive	0.031250
+verschliessbar	positive	0.031250
+sicherheitsgefährdend	negative	0.031250
+verpanscht	negative	0.031250
+klickbar	positive	0.031250
+downloadbar	positive	0.031250
+verunreinigt	negative	0.031250
+beherrschbar	positive	0.031250
+überlebensfähig	positive	0.031250
+insolvenzrecht	positive	0.031250
+grüblerisch	negative	0.031250
+schlechtgelaunt	negative	0.031250
+schlecht gelaunt	negative	0.031250
+hochwürdig	positive	0.031250
+sympathie erweckend	positive	0.031250
+sympathieerweckend	positive	0.031250
+gelb	positive	0.031250
+falb	negative	0.031250
+abschliessbar	positive	0.031250
+kartellrecht	positive	0.031250
+willfährig	positive	0.031250
+gehorsam	positive	0.031250
+dreifarbig	positive	0.031250
+sterbenskrank	negative	0.031250
+familiengerecht	positive	0.031250
+machtlos	negative	0.031250
+kritikfähig	positive	0.031250
+leidensfähig	positive	0.031250
+dialogfähig	positive	0.031250
+gelbweiss	negative	0.031250
+milchweiss	negative	0.031250
+einkommensteuerrecht	positive	0.031250
+psychotisch	negative	0.031250
+todkrank	negative	0.031250
+zerkleinert	negative	0.031250
+hell	positive	0.031250
+kränkelnd	negative	0.031250
+kränklich	negative	0.031250
+hautfarben	positive	0.031250
+grundpfandrecht	positive	0.031250
+blaugrün	positive	0.031250
+gotteslästerlich	negative	0.031250
+weissgetüncht	positive	0.031250
+metamorph	positive	0.031250
+schuldfähig	positive	0.031250
+majestätisch	positive	0.031250
+fraktioniert	negative	0.031250
+aufgeräumt	positive	0.031250
+gestreng	positive	0.031250
+perlweiss	negative	0.031250
+schlohweiss	negative	0.031250
+unstreitig	positive	0.031250
+interaktiv	positive	0.031250
+virtuell	positive	0.031250
+virtual	positive	0.031250
+unhygienisch	negative	0.031250
+teilrechtsfähig	positive	0.031250
+geistesgestört	negative	0.031250
+schutzwürdig	positive	0.031250
+unverständlich	positive	0.031250
+heikel	positive	0.031250
+hochverdient	positive	0.031250
+anklickbar	positive	0.031250
+braun	positive	0.031250
+tuberkulös	negative	0.031250
+lilienweiss	negative	0.031250
+andersfarbig	positive	0.031250
+quick-and-dirty	positive	0.031250
+teamfähig	positive	0.031250
+aktionsfähig	positive	0.031250
+einsichtsfähig	positive	0.031250
+urteilsfähig	positive	0.031250
+metallfarben	positive	0.031250
+blumig	positive	0.031250
+grellweiss	negative	0.031250
+ruchlos	negative	0.031250
+höflich	positive	0.031250
+sittsam	positive	0.031250
+starkfarbig	positive	0.031250
+knifflig	positive	0.031250
+kirchensatz	positive	0.031250
+textbasiert	positive	0.031250
+alkoholkrank	negative	0.031250
+schamhaft	positive	0.031250
+empfindungsfähig	positive	0.031250
+türkisfarben	positive	0.031250
+sublim	positive	0.031250
+geschnitten	negative	0.031250
+zerfasert	negative	0.031250
+vorwitzig	positive	0.031250
+gestört	negative	0.031250
+dienstfähig	positive	0.031250
+kinderfreundlich	positive	0.031250
+blasphemisch	negative	0.031250
+weisslich	negative	0.031250
+pastell	positive	0.031250
+pastellfarben	positive	0.031250
+monochrom	positive	0.031250
+herunterladbar	positive	0.031250
+crossmedial	positive	0.031250
+brisant	positive	0.031250
+obligationenrecht	positive	0.031250
+sächlich	positive	0.031250
+kompliziert	positive	0.031250
+kontaminiert	negative	0.031250
+gepanscht	negative	0.031250
+vierfarbig	positive	0.031250
+schuldrecht	positive	0.031250
+unumstritten	positive	0.031250
+unangefochten	positive	0.031250
+dunkelfarbig	positive	0.031250
+wohlverdient	positive	0.031250
+schwarzweiss	positive	0.031250
+aschfahl	negative	0.031250
+bezaubernd	positive	0.031250
+hinreissend	positive	0.031250
+entzückend	positive	0.031250
+bezückend	positive	0.031250
+scrollbar	positive	0.031250
+verlinkt	positive	0.031250
+mikrotheoretisch	negative	0.031250
+umweltschonend	positive	0.031250
+uni	positive	0.031250
+einfarbig	positive	0.031250
+kommunalrecht	positive	0.031250
+leichtsinnig	negative	0.031250
+krüppelhaft	negative	0.031250
+magersüchtig	negative	0.031250
+heiser	negative	0.031250
+silberweiss	negative	0.031250
+grauweiss	negative	0.031250
+verschmutzt	negative	0.031250
+verkrüppelt	negative	0.031250
+staatsgefährdend	negative	0.031250
+hellfarben	positive	0.031250
+aufgeteilt	negative	0.031250
+naturfarben	positive	0.031250
+rauchig	positive	0.031250
+schwerkrank	negative	0.031250
+silbrig	positive	0.031250
+alphanumerisch	positive	0.031250
+nebenstrafrecht	positive	0.031250
+bindungsfähig	positive	0.031250
+denkfähig	positive	0.031250
+monochromatisch	positive	0.031250
+gleichfarbig	positive	0.031250
+verseucht	negative	0.031250
+nachdenklich	negative	0.031250
+dornenreich	positive	0.031250
+gefügig	positive	0.031250
+erwerbsfähig	positive	0.031250
+talentiert	positive	0.031250
+begabt	positive	0.031250
+befähigt	positive	0.031250
+lernfähig	positive	0.031250
+gesundheitsgefährdend	negative	0.031250
+gesittet	positive	0.031250
+prüde	positive	0.031250
+tonnenschwer	positive	0.031250
+inquisitorisch	positive	0.031250
+krüppelig	negative	0.031250
+herrschend	positive	0.015625
+unerklärbar	positive	0.015625
+unerklärlich	positive	0.015625
+wolkenfrei	positive	0.015625
+verzwackt	positive	0.015625
+steuerpflichtig	positive	0.015625
+folgsam	positive	0.015625
+ungehorsam	negative	0.015625
+unerfindlich	positive	0.015625
+unergründlich	positive	0.015625
+unfassbar	positive	0.015625
+übellaunig	negative	0.015625
+mikroökonomisch	negative	0.015625
+sozioökonomisch	negative	0.015625
+makroökonomisch	negative	0.015625
+grellgelb	positive	0.015625
+zuvorkommend	positive	0.015625
+wertvoll	positive	0.015625
+kostbar	positive	0.015625
+verschnupft	negative	0.015625
+verrückt	negative	0.015625
+undurchschaubar	positive	0.015625
+ehrrührig	negative	0.015625
+ehrenrührig	negative	0.015625
+grimm	negative	0.015625
+massgeblich	positive	0.015625
+sentimental	negative	0.015625
+schikanös	negative	0.015625
+essenzial	positive	0.015625
+essential	positive	0.015625
+wasserklar	positive	0.015625
+verschleimt	negative	0.015625
+musikalisch	positive	0.015625
+wesentlich	positive	0.015625
+dornig	positive	0.015625
+verflixt	positive	0.015625
+dunkelhäutig	positive	0.015625
+grundsteuerpflichtig	positive	0.015625
+erbschaftssteuerpflichtig	positive	0.015625
+hellbraun	positive	0.015625
+einschneidend	positive	0.015625
+massiv	positive	0.015625
+brav	positive	0.015625
+relevant	positive	0.015625
+misslaunig	negative	0.015625
+entgegenkommend	positive	0.015625
+superwichtig	positive	0.015625
+hochwichtig	positive	0.015625
+beigefarben	positive	0.015625
+sandfarben	positive	0.015625
+goldgelb	positive	0.015625
+kalkig	negative	0.015625
+verwünscht	positive	0.015625
+messinggelb	positive	0.015625
+gelbbraun	positive	0.015625
+goldbraun	positive	0.015625
+rehbraun	positive	0.015625
+ockerbraun	positive	0.015625
+olivbraun	positive	0.015625
+tiefbraun	positive	0.015625
+wissenswert	positive	0.015625
+gelblich	positive	0.015625
+galant	positive	0.015625
+rührselig	negative	0.015625
+beziehungsreich	positive	0.015625
+weissgelb	positive	0.015625
+grüngelb	positive	0.015625
+strohgelb	positive	0.015625
+orangegelb	positive	0.015625
+kristallklar	positive	0.015625
+lebensnotwendig	positive	0.015625
+wichtigst	positive	0.015625
+nennenswert	positive	0.015625
+zweitwichtigste	positive	0.015625
+erwähnenswert	positive	0.015625
+zerschnitten	negative	0.015625
+frech	negative	0.015625
+artig	positive	0.015625
+nussbraun	positive	0.015625
+verdrossen	negative	0.015625
+überlebenswichtig	positive	0.015625
+goldfarben	positive	0.015625
+wahnsinnig	negative	0.015625
+geisteskrank	negative	0.015625
+irre	negative	0.015625
+irr	negative	0.015625
+irrsinnig	negative	0.015625
+schokoladenbraun	positive	0.015625
+pestverseucht	negative	0.015625
+grundsätzlich	positive	0.015625
+sepiabraun	positive	0.015625
+erdbraun	positive	0.015625
+kupferbraun	positive	0.015625
+kackbraun	positive	0.015625
+kakifarben	positive	0.015625
+khakifarben	positive	0.015625
+khaki	positive	0.015625
+kaki	positive	0.015625
+hellgelb	positive	0.015625
+sehnsüchtig	negative	0.015625
+nörglerisch	negative	0.015625
+nölig	negative	0.015625
+nörgelig	negative	0.015625
+kleingeschnitten	negative	0.015625
+zimtfarbig	positive	0.015625
+brennend	positive	0.015625
+dienstbar	positive	0.015625
+bronzefarben	positive	0.015625
+sprachbegabt	positive	0.015625
+rostbraun	positive	0.015625
+rötlichbraun	positive	0.015625
+rostfarben	positive	0.015625
+zitronengelb	positive	0.015625
+körperschaftsteuerpflichtig	positive	0.015625
+körperschaftssteuerpflichtig	positive	0.015625
+verfänglich	positive	0.015625
+permissiv	negative	0.015625
+lebenswichtig	positive	0.015625
+sehnsuchtsvoll	negative	0.015625
+sattgelb	positive	0.015625
+sonnengelb	positive	0.015625
+fahlgelb	positive	0.015625
+safrangelb	positive	0.015625
+lehmgelb	positive	0.015625
+buttergelb	positive	0.015625
+schwefelgelb	positive	0.015625
+blassgelb	positive	0.015625
+dottergelb	positive	0.015625
+honiggelb	positive	0.015625
+silberfarben	positive	0.015625
+schalkhaft	positive	0.015625
+denunziatorisch	negative	0.015625
+glasklar	positive	0.015625
+albern	positive	0.015625
+strahlenverseucht	negative	0.015625
+staatstragend	positive	0.015625
+vorherrschend	positive	0.015625
+dunkelgelb	positive	0.015625
+bräunlich	positive	0.015625
+salonfähig	positive	0.015625
+wolkenlos	positive	0.015625
+liquide	positive	0.015625
+liquid	positive	0.015625
+silberfarbig	positive	0.015625
+rostfarbig	positive	0.015625
+goldfarbig	positive	0.015625
+schwererziehbar	positive	0.015625
+schwer erziehbar	positive	0.015625
+safranfarben	positive	0.015625
+bernsteinfarben	positive	0.015625
+missgestimmt	negative	0.015625
+missgelaunt	negative	0.015625
+verstimmt	negative	0.015625
+knatschig	negative	0.015625
+quengelig	negative	0.015625
+essenziell	positive	0.015625
+essentiell	positive	0.015625
+mürrisch	negative	0.015625
+grimmig	negative	0.015625
+grantig	negative	0.015625
+hochleistungsfähig	positive	0.015625
+hochkompliziert	positive	0.015625
+wohlfahrtsökonomisch	negative	0.015625
+agrarökonomisch	negative	0.015625
+informationsökonomisch	negative	0.015625
+possenhaft	positive	0.015625
+übelgelaunt	negative	0.015625
+übel gelaunt	negative	0.015625
+gesellschaftsfähig	positive	0.015625
+üppig	positive	0.015625
+kanariengelb	positive	0.015625
+knallgelb	positive	0.015625
+mattgelb	positive	0.015625
+lohnsteuerpflichtig	positive	0.015625
+zartgelb	positive	0.015625
+geschnetzelt	negative	0.015625
+zersäbelt	negative	0.015625
+verworren	positive	0.015625
+verwickelt	positive	0.015625
+beige	positive	0.015625
+erdfarben	positive	0.015625
+verflucht	positive	0.015625
+vermaledeit	positive	0.015625
+bronzefarbig	positive	0.015625
+sandfarbig	positive	0.015625
+elfenbeinfarbig	negative	0.015625
+elfenbeinfarben	negative	0.015625
+bernsteinfarbig	positive	0.015625
+vielschichtig	positive	0.015625
+verzwickt	positive	0.015625
+vertrackt	positive	0.015625
+kakaobraun	positive	0.015625
+botmässig	positive	0.015625
+einkommenssteuerpflichtig	positive	0.015625
+einkommensteuerpflichtig	positive	0.015625
+bärbeissig	negative	0.015625
+eingeschnitten	negative	0.015625
+arbeitsökonomisch	negative	0.015625
+ingenieurökonomisch	negative	0.015625
+umweltökonomisch	negative	0.015625
+politökonomisch	negative	0.015625
+industrieökonomisch	negative	0.015625
+sozialökonomisch	negative	0.015625
+medienökonomisch	negative	0.015625
+schelmisch	positive	0.015625
+verhaltensgestört	negative	0.015625
+vernunftbegabt	positive	0.015625
+unkalkulierbar	positive	0.015625
+unberechenbar	positive	0.015625
+gemeingefährlich	positive	0.015625
+graubraun	positive	0.015625
+umsatzsteuerpflichtig	positive	0.015625
+unwichtig	negative	0.015625
+musikbegabt	positive	0.015625
+hochbegabt	positive	0.015625
+hoch begabt	positive	0.015625
+verwoben	positive	0.015625
+komplex	positive	0.015625
+zimtfarben	positive	0.015625
+unbeschreiblich	positive	0.007812
+unbeschreibbar	positive	0.007812
+kalkhaltig	negative	0.007812
+rebellisch	negative	0.007812
+aufständisch	negative	0.007812
+widerspenstig	negative	0.007812
+aufmüpfig	negative	0.007812
+knorrig	negative	0.007812
+lichtstark	positive	0.007812
+ernstzunehmend	positive	0.007812
+kunstvoll	positive	0.007812
+hochkarätig	positive	0.007812
+unartig	negative	0.007812
+verdreht	negative	0.007812
+unsäglich	positive	0.007812
+bekloppt	negative	0.007812
+narrenhaft	negative	0.007812
+jeck	negative	0.007812
+burlesk	positive	0.007812
+taktlos	negative	0.007812
+taktvoll	positive	0.007812
+wirtschaftlich	negative	0.007812
+stur	negative	0.007812
+unüberprüfbar	positive	0.007812
+unlustig	negative	0.007812
+dickköpfig	negative	0.007812
+lümmelhaft	negative	0.007812
+charakteristisch	positive	0.007812
+rentabel	negative	0.007812
+zinsgünstig	negative	0.007812
+profitabel	negative	0.007812
+aquarellfarben	positive	0.007812
+richtungsweisend	positive	0.007812
+richtungweisend	positive	0.007812
+begrifflich	positive	0.007812
+belegt	negative	0.007812
+hochmusikalisch	positive	0.007812
+facettenreich	positive	0.007812
+lausbubenhaft	positive	0.007812
+lausbübisch	positive	0.007812
+verraucht	positive	0.007812
+dunkelbraun	positive	0.007812
+beleuchtet	positive	0.007812
+unsagbar	positive	0.007812
+unlöslich	positive	0.007812
+spleenig	negative	0.007812
+indiskret	negative	0.007812
+diskret	positive	0.007812
+unhöflich	negative	0.007812
+existenziell	positive	0.007812
+existentiell	positive	0.007812
+sekundär	negative	0.007812
+zweitrangig	negative	0.007812
+unbedeutend	negative	0.007812
+nebensächlich	negative	0.007812
+unbedeutsam	negative	0.007812
+ungebührlich	negative	0.007812
+paranoid	negative	0.007812
+zentral	positive	0.007812
+loh	positive	0.007812
+sehnlich	negative	0.007812
+hochkomplex	positive	0.007812
+wahnhaft	negative	0.007812
+hygienisch	positive	0.007812
+muffig	negative	0.007812
+aufsässig	negative	0.007812
+entbehrlich	negative	0.007812
+sonnenbeschienen	positive	0.007812
+nostalgisch	negative	0.007812
+unbotmässig	negative	0.007812
+verzichtbar	negative	0.007812
+monopolistisch	negative	0.007812
+flegelhaft	negative	0.007812
+pöbelhaft	negative	0.007812
+unmanierlich	negative	0.007812
+ockerfarbig	positive	0.007812
+einschlägig	positive	0.007812
+unnötig	negative	0.007812
+unfolgsam	negative	0.007812
+unökonomisch	positive	0.007812
+flapsig	negative	0.007812
+eigensinnig	negative	0.007812
+diskussionswürdig	positive	0.007812
+despektierlich	negative	0.007812
+verächtlich	negative	0.007812
+begnadet	positive	0.007812
+verschmitzt	positive	0.007812
+gesprächsbereit	positive	0.007812
+programmatisch	positive	0.007812
+normativ	positive	0.007812
+zielweisend	positive	0.007812
+massgebend	positive	0.007812
+marginal	negative	0.007812
+abstrakt	positive	0.007812
+ockergelb	positive	0.007812
+ockerfarben	positive	0.007812
+muschelkalkhaltig	negative	0.007812
+störrisch	negative	0.007812
+bockig	negative	0.007812
+verstockt	negative	0.007812
+eigenmächtig	negative	0.007812
+eigenwillig	negative	0.007812
+patzig	negative	0.007812
+diskutabel	positive	0.007812
+kunstreich	positive	0.007812
+bibliophil	positive	0.007812
+rationell	negative	0.007812
+sprachökonomisch	negative	0.007812
+prozessökonomisch	negative	0.007812
+kompromissbereit	positive	0.007812
+lichterloh	positive	0.007812
+lichtdurchflutet	positive	0.007812
+verbockt	negative	0.007812
+renitent	negative	0.007812
+existential	positive	0.007812
+existenzial	positive	0.007812
+kennzeichnend	positive	0.007812
+bestimmend	positive	0.007812
+konfrontativ	negative	0.007812
+verlust bringend	positive	0.003906
+verlustbringend	positive	0.003906
+modrig	negative	0.003906
+moderig	negative	0.003906
+konkret	negative	0.003906
+wesensgemäss	positive	0.003906
+geringschätzig	negative	0.003906
+energiewirtschaftlich	negative	0.003906
+planwirtschaftlich	negative	0.003906
+finanzwirtschaftlich	negative	0.003906
+personalwirtschaftlich	negative	0.003906
+unkontrollierbar	positive	0.003906
+lukrativ	negative	0.003906
+aufmerksam	positive	0.003906
+diskutierbar	positive	0.003906
+hauswirtschaftlich	negative	0.003906
+trotzig	negative	0.003906
+peripher	negative	0.003906
+autoritativ	positive	0.003906
+überbelegt	negative	0.003906
+abschätzig	negative	0.003906
+ineffizient	positive	0.003906
+schwarzbraun	positive	0.003906
+erleuchtet	positive	0.003906
+manierlich	positive	0.003906
+abfällig	negative	0.003906
+indiskutabel	negative	0.003906
+vermeidbar	negative	0.003906
+unaussprechlich	positive	0.003906
+gewinn bringend	negative	0.003906
+gewinnbringend	negative	0.003906
+privatwirtschaftlich	negative	0.003906
+kammermusikalisch	positive	0.003906
+unwirtschaftlich	positive	0.003906
+missfällig	negative	0.003906
+splendid	positive	0.003906
+miefig	negative	0.003906
+gemeinwirtschaftlich	negative	0.003906
+verlustreich	positive	0.003906
+akzessorisch	negative	0.003906
+unrentabel	positive	0.003906
+weltwirtschaftlich	negative	0.003906
+gesamtwirtschaftlich	negative	0.003906
+wesenhaft	positive	0.003906
+lapidar	negative	0.003906
+widerständig	negative	0.003906
+gut gehend	negative	0.003906
+gutgehend	negative	0.003906
+aussenwirtschaftlich	negative	0.003906
+wasserwirtschaftlich	negative	0.003906
+kirchenmusikalisch	positive	0.003906
+sanitär	positive	0.003906
+forstwirtschaftlich	negative	0.003906
+konsensfähig	positive	0.003906
+närrisch	negative	0.003906
+optional	negative	0.003906
+marktwirtschaftlich	negative	0.003906
+vernachlässigbar	negative	0.003906
+involviert	positive	0.003906
+unentbehrlich	positive	0.003906
+geistig behindert	negative	0.003906
+beiläufig	negative	0.003906
+fakultativ	negative	0.001953
+effizient	negative	0.001953
+unaufmerksam	negative	0.001953
+schnell	positive	0.001953
+hellhörig	positive	0.001953
+reaktionsschnell	positive	0.001953
+geistesgegenwärtig	positive	0.001953
+wach	positive	0.001953
+versunken	positive	0.001953
+kontemplativ	positive	0.001953
+konzentriert	positive	0.001953
+hochrangig	positive	0.001953
+meditativ	positive	0.001953
+szenetypisch	positive	0.001953
+frauentypisch	positive	0.001953
+wasserunlöslich	positive	0.001953
+männertypisch	positive	0.001953
+löslich	negative	0.001953
+typisch	positive	0.001953
+landestypisch	positive	0.001953
+zeittypisch	positive	0.001953
+archetypisch	positive	0.001953
+regionaltypisch	positive	0.001953
+hochstehend	positive	0.001953
+unabkömmlich	positive	0.001953
+unkonzentriert	negative	0.000977
+untypisch	negative	0.000977
+schwerlöslich	negative	0.000977
+schwer löslich	negative	0.000977
+öllöslich	negative	0.000977
+alkohollöslich	negative	0.000977
+fettlöslich	negative	0.000977
+prototypisch	positive	0.000977
+stereotypisch	positive	0.000977
+stereotyp	positive	0.000977
+idealtypisch	positive	0.000977
+geistesabwesend	negative	0.000977
+zerstreut	negative	0.000977
+vergesslich	negative	0.000977
+wasserlöslich	negative	0.000977
+energieeffizient	negative	0.000488
+superschnell	positive	0.000488
+temporeich	positive	0.000488
+abwesend	negative	0.000488
+nahtlos	positive	0.000488
+rasch	positive	0.000488
+träumerisch	negative	0.000488
+zügig	positive	0.000488
+hurtig	positive	0.000488
+geschwind	positive	0.000488
+verträumt	negative	0.000488
+schnellwüchsig	positive	0.000488
+pfeilschnell	positive	0.000488
+verzögerungslos	positive	0.000488
+hellwach	positive	0.000488
+wirkungsvoll	negative	0.000488
+effektvoll	negative	0.000488
+müde	negative	0.000488
+eilig	positive	0.000488
+hastig	positive	0.000488
+rapide	positive	0.000488
+rapid	positive	0.000488
+kometenhaft	positive	0.000488
+galoppierend	positive	0.000488
+schnellfüssig	positive	0.000488
+fluchtartig	positive	0.000488
+gedankenverloren	negative	0.000488
+gedankenversunken	negative	0.000488
+atypisch	negative	0.000488
+langsam	negative	0.000244
+andante	negative	0.000244
+versonnen	negative	0.000244
+selbstvergessen	negative	0.000244
+schleppend	negative	0.000244
+gemächlich	negative	0.000244
+wirkungslos	positive	0.000244
+schlaftrunken	negative	0.000244
+unausgeschlafen	negative	0.000244
+todmüde	negative	0.000244
+verschlafen	negative	0.000244
+vorschnell	positive	0.000244
+voreilig	positive	0.000244
+dringend	positive	0.000244
+unaufschiebbar	positive	0.000244
+ernstlich	positive	0.000244
+dringlich	positive	0.000244
+hundemüde	negative	0.000244
+lahm	negative	0.000122
+transusig	negative	0.000122
+tranig	negative	0.000122
+träge	negative	0.000122
+träg	negative	0.000122
+andantino	negative	0.000122
+mangelnd	negative	0.000122
+fehlend	negative	0.000122
+gehbehindert	negative	0.000061
