@@ -21,6 +21,7 @@ arm	negative	-179769313486231570814527423731704356798070567525844996598917476803
 anrüchig	negative	0.000007
 unecht	negative	0.000007
 irregulär	negative	0.000007
+wünschenswert	positive	0.000007
 drittklassig	negative	0.000007
 sinnlich	positive	0.000007
 unprofessionell	negative	0.000007
@@ -28,7 +29,6 @@ abgeschlagen	negative	0.000007
 gefällig	positive	0.000007
 mustergültig	positive	0.000007
 unrecht	negative	0.000007
-hervorragend	positive	0.000007
 unangemessen	negative	0.000007
 sagenhaft	positive	0.000007
 vitaminarm	negative	0.000007
@@ -67,7 +67,6 @@ peinlich	positive	0.000007
 boshaft	negative	0.000007
 tugendlich	positive	0.000007
 unnütz	negative	0.000007
-schurkisch	negative	0.000007
 bedürftig	negative	0.000007
 schadenfroh	negative	0.000007
 irrtümlich	negative	0.000007
@@ -84,7 +83,6 @@ tugendreich	positive	0.000007
 eiweissarm	negative	0.000007
 sensationell	positive	0.000007
 zweckfrei	negative	0.000007
-charakterlos	negative	0.000007
 fettarm	negative	0.000007
 wohlgeformt	positive	0.000007
 sittlich	positive	0.000007
@@ -110,6 +108,7 @@ phantastisch	positive	0.000007
 chancenreich	positive	0.000007
 elendig	negative	0.000007
 preisgekrönt	positive	0.000007
+schurkisch	negative	0.000007
 grundfalsch	negative	0.000007
 anmutig	positive	0.000007
 gewalttätig	negative	0.000007
@@ -125,6 +124,7 @@ geraten	positive	0.000007
 stilsicher	positive	0.000007
 okay	positive	0.000007
 edelmütig	positive	0.000007
+fantastisch	positive	0.000007
 bös	negative	0.000007
 exzeptionell	positive	0.000007
 eifrig	positive	0.000007
@@ -137,7 +137,6 @@ unzweckmässig	negative	0.000007
 adäquat	positive	0.000007
 vermeintlich	negative	0.000007
 seelig	positive	0.000007
-ekel erregend	negative	0.000007
 ungerecht	negative	0.000007
 stilgerecht	positive	0.000007
 idyllisch	positive	0.000007
@@ -147,6 +146,7 @@ blutarm	negative	0.000007
 ungut	negative	0.000007
 zwecklos	negative	0.000007
 feinschmeckerisch	positive	0.000007
+sorgsam	positive	0.000007
 grandios	positive	0.000007
 irrig	negative	0.000007
 günstig	positive	0.000007
@@ -155,16 +155,15 @@ matt	negative	0.000007
 mistig	negative	0.000007
 regulär	positive	0.000007
 bedenkenswert	positive	0.000007
-wünschenswert	positive	0.000007
 fleischarm	negative	0.000007
 legendenhaft	positive	0.000007
 paradigmatisch	positive	0.000007
 unakzeptabel	negative	0.000007
 bildschön	positive	0.000007
+charakterlos	negative	0.000007
 faul	negative	0.000007
 wasserarm	negative	0.000007
 kampfeslustig	negative	0.000007
-fantastisch	positive	0.000007
 regelrecht	positive	0.000007
 umgekehrt	negative	0.000007
 ausserordentlich	positive	0.000007
@@ -176,8 +175,10 @@ lügnerisch	negative	0.000007
 bestmöglich	positive	0.000007
 spitzenmässig	positive	0.000007
 schwindlig	negative	0.000007
+erfolgversprechend	positive	0.000007
 leidig	negative	0.000007
 prächtig	positive	0.000014
+grossherzig	positive	0.000007
 spitze	positive	0.000007
 viertklassig	negative	0.000007
 übel	negative	0.000014
@@ -190,12 +191,12 @@ geschmackvoll	positive	0.000007
 meisterhaft	positive	0.000007
 unschuldig	positive	0.000007
 fragwürdig	negative	0.000007
-erfolgversprechend	positive	0.000007
 flau	negative	0.000007
 oll	negative	0.000007
 unsinnig	negative	0.000007
 elefantös	positive	0.000007
 erfolglos	negative	0.000007
+verbraucht	negative	0.000007
 insolvent	negative	0.000007
 verformt	negative	0.000007
 nichtig	negative	0.000007
@@ -251,7 +252,9 @@ exzellent	positive	0.000014
 moralisch	positive	0.000007
 superior	positive	0.000007
 wohl geformt	positive	0.000007
+ekel erregend	negative	0.000007
 paradiesisch	positive	0.000007
+hervorragend	positive	0.000007
 intrigant	negative	0.000007
 unansehnlich	negative	0.000007
 grottig	negative	0.000007
@@ -272,7 +275,6 @@ blendend	positive	0.000007
 sinnig	positive	0.000007
 inakzeptabel	negative	0.000007
 kulinarisch	positive	0.000007
-wahr	positive	0.000007
 strafwürdig	negative	0.000007
 läppisch	negative	0.000007
 kriminell	negative	0.000007
@@ -306,6 +308,7 @@ erfolg versprechend	positive	0.000007
 kontrafaktisch	negative	0.000007
 verfehlt	negative	0.000007
 unzutreffend	negative	0.000007
+wahr	positive	0.000007
 tüchtig	positive	0.000007
 miserabel	negative	0.000007
 niederträchtig	negative	0.000007
@@ -318,10 +321,8 @@ link	negative	0.000007
 rohstoffarm	negative	0.000007
 unästhetisch	negative	0.000007
 angemessen	positive	0.000007
-grossherzig	positive	0.000007
 nervtötend	negative	0.000007
 aussergewöhnlich	positive	0.000007
-verbraucht	negative	0.000007
 wundervoll	positive	0.000007
 barmherzig	positive	0.000007
 attraktiv	positive	0.000014
@@ -330,7 +331,6 @@ angenehm	positive	0.000007
 prachtvoll	positive	0.000014
 zahlungsunfähig	negative	0.000007
 unschön	negative	0.000007
-sorgsam	positive	0.000007
 stilvoll	positive	0.000007
 leid	negative	0.000007
 emsig	positive	0.000007
