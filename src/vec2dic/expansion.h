@@ -21,6 +21,7 @@
 //////////////
 #include <armadillo>      // arma::mat
 #include <cmath>	  // M_PI
+#include <cstdlib>	  // size_t
 #include <forward_list>   // std::forward_list
 #include <limits>         // std::numeric_limits
 #include <string>         // std::string
@@ -34,15 +35,13 @@
 /**
  * Polarity types.
  */
-enum class Polarity:
-char {
-  POSITIVE = 0,   //< positive lexical polarity
-    NEGATIVE,     //< negative lexical polarity
-    NEUTRAL,      //< neutral lexical polarity
-    MAX_SENTINEL  //< auxiliary polarity type (used for
-                  //< determining maximum number of polarity
-                  //< types)
+enum Polarity: unsigned {
+  POSITIVE = 1,			//< positive lexical polarity
+    NEGATIVE = 2,		//< negative lexical polarity
+    SUBJECTIVE = 3,		//< subjective entry
+    NEUTRAL = 4			//< objective entry
     };
+const size_t N_POLARITIES = 3;
 
 /** Integral type for distance measure */
 using dist_t = double;
@@ -128,28 +127,5 @@ void expand_knn(v2ps_t *a_vecid2polscore, const arma::mat *a_nwe,
  */
 void expand_pca(v2ps_t *a_vecid2polscore,
                 const arma::mat *a_nwe, const int a_N);
-
-/**
- * Apply projection to expand seed sets of polar terms
- *
- * This algorithm projects all unknown terms on the vector subspace
- * defined by the known polar items and then extends seed sets of
- * known polar terms according to the lengths of projection vectors.
- *
- * @param a_vecid2polscore - dictionary mapping known vector id's to the
- *                      polarities of their respective words
- * @param a_nwe - matrix of neural word embeddings
- * @param a_N - number of polar terms to extract
- * @param a_alpha - learning rate
- * @param a_delta - minimum required improvement
- * @param a_max_iters - maximum number of updates
- *
- * @return \c void (`a_vecid2polscore` is modified in place)
- */
-void expand_prjct(v2ps_t *a_vecid2polscore,
-                  const arma::mat *a_nwe, const int a_N,
-                  const double a_alpha = DFLT_ALPHA,
-                  const double a_delta = DFLT_DELTA,
-                  const int a_max_iters = MAX_ITERS);
 
 #endif    // VEC2DIC_EXPANSION_H_
