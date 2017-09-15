@@ -8,9 +8,10 @@ sentiment lexicons from `GermaNet` (a German equivalent of the English
 
 ## Building
 
-For generating a sentiment lexcion from pre-trained neural word
-embeddings, you first need to compile the C++ code by running the
-following commands:
+For generating a sentiment lexcion from pre-trained word embeddings,
+you first need to compile the C++ code by running the following
+commands (please note that the build requires the [Armadillo
+library](http://arma.sourceforge.net/) to be installed):
 
 ```shell
 cd build/
@@ -22,7 +23,7 @@ Afterwards, an executable called `vec2dic` wil apper in
 the subdirectory `build/bin`.  You can exectute this file by envoking:
 
 ```shell
-./build/vec2dic [OPTIONS] --type=TYPE VECTOR_FILE SEED_FILE
+./build/bin/vec2dic [OPTIONS] --type=TYPE VECTOR_FILE SEED_FILE
 ```
 
 where the `TYPE` argument (an integer from zero to three) will
