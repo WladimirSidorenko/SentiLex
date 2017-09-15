@@ -20,10 +20,10 @@ make
 ```
 
 Afterwards, an executable called `vec2dic` wil apper in
-the subdirectory `build/bin`.  You can exectute this file by envoking:
+the subdirectory `bin`.  You can exectute this file by envoking:
 
 ```shell
-./build/bin/vec2dic [OPTIONS] --type=TYPE VECTOR_FILE SEED_FILE
+./bin/vec2dic [OPTIONS] --type=TYPE VECTOR_FILE SEED_FILE
 ```
 
 where the `TYPE` argument (an integer from zero to three) will
