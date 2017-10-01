@@ -1,212 +1,217 @@
-hinterhältig	negative
-kompliziert	negative
-misslingen	negative
-töten	negative
-edel	positive
-freude	positive
-gemein	negative
-zwei	positive
-lachen	positive
-elegant	positive
-verscheiden	negative
-lieben	positive
-qualitätsvoll	positive
-begehrt	positive
-beschädigt	negative
-renommiert	positive
-scheisse	negative
-vergewaltigen	negative
-problematisch	negative
-belieben	positive
-vergehen	negative
-techtelmechtel	negative
-affäre	negative
-hoffnung	positive
-verderben	negative
-jubeln	positive
-missbrauch	negative
-mangelhaft	negative
-verrucht	negative
-liaison	negative
-ausgezeichnet	positive
-ehrlich	positive
-schätzen	positive
-liebesaffäre	negative
-lieb	positive
-scheissdreck	negative
-versterben	negative
-gefährlich	negative
-entrüsten	negative
-gutherzigkeit	positive
-mangelhaft	negative
-arrogant	negative
-liebe	positive
-bequem	positive
-qualitätvoll	positive
-jubeln	positive
-hervorragend	positive
-verbrecherisch	negative
-zauberhaft	positive
-krieg	negative
-irreführend	negative
-freundlich	positive
-vernichtet	negative
-verlogen	negative
-effektiv	positive
-glücklich	positive
-nachtragend	negative
-überwerfen	negative
-juchzen	positive
-klagen	negative
-geschmeidig	positive
-defekt	negative
-hass	negative
-verärgert	negative
-güte	positive
-fünf	negative
-wünschen	positive
-fröhlichkeit	positive
-schimpfen	negative
-hässlich	negative
-betrügen	negative
-vergöttert	positive
-verspielen	negative
-zerstören	negative
-gewaltig	negative
-tugend	positive
-verderb	negative
-komfortabel	positive
-taktvoll	positive
-übel	negative
-lächeln	positive
-höflich	positive
-möchten	positive
-beliebt	positive
-froh	positive
-schatz	positive
-listenreich	negative
-faszinierend	positive
-misslingen	negative
-vergehen	negative
-violent	negative
-schön	positive
-bezaubernd	positive
-edelmütig	positive
-bereiten	positive
-beischlafen	negative
-feindlich	negative
-gewünscht	positive
-unehrlich	negative
-falsch	negative
-vernichten	negative
-diskret	positive
-hölle	negative
-schrecklich	negative
-jubel	positive
-fest	positive
-gut	positive
-erstaunlich	positive
-gewalt	negative
-scheibenkleister	negative
-verderben	negative
-problemvoll	negative
-aufrichtig	positive
-verdorben	negative
-mord	negative
-gewaltsam	negative
-begeisterung	positive
-unverständlich	negative
-einwandfrei	positive
-tadellos	positive
-gut	positive
-motivieren	positive
-lügnerisch	negative
-erholung	positive
-anbeten	positive
-fest	positive
-hinterlistig	negative
-betrug	negative
-attraktiv	positive
-angenehm	positive
-übel	negative
-unmoralisch	negative
-dumm	negative
-empörend	negative
-berühmt	positive
-trickreich	negative
-begeistert	positive
-empören	negative
-vernichten	negative
-brillant	positive
-unbeliebt	negative
-empört	negative
-zerstört	negative
-fehlleitend	negative
-anständig	positive
-prozessieren	negative
-fintenreich	negative
-verrat	negative
-grossartig	positive
-aufrecht	positive
-freuen	positive
-grossmut	positive
-unversöhnlich	negative
-defekt	negative
-verbrechen	negative
-vertrauensbruch	negative
-listig	negative
-wütend	negative
-verbrechen	negative
-kaputt	negative
-lachen	positive
-gewollt	positive
-jauchzen	positive
-aggressiv	negative
-vergöttern	positive
-ruchbar	negative
-missbrauchen	negative
-frivol	negative
-galant	positive
-verehren	positive
-begatten	negative
-entstellen	negative
-ungemach	negative
-gänzlich	negative
-eklatant	negative
-lachhaft	positive
-loskratzen	negative
-hoffnungsvoll	positive
-unbarmherzig	positive
-völlig	negative
-gekränkt	negative
-optimal	positive
-scharfsinnig	positive
-gebrüll	positive
-ästimieren	positive
-bereitstellen	positive
-vertrauenswürdig	positive
-hochklassig	positive
-geehrt	positive
-zieren	negative
-verzapfen	negative
-lächerlich	positive
-frenetisch	negative
-beschlafen	negative
-populär	positive
-exzellent	positive
-boshaft	negative
-grinsen	positive
-verüben	negative
-täuschend	negative
-jubilieren	positive
-schimpfwort	negative
-liebhaben	positive
-begeisternd	positive
-total	negative
-grandios	positive
-anstössig	negative
-sittenlos	negative
-bespringen	negative
-hoffnungsfroh	positive
-beiwohnen	negative
-beleidigt	negative
+hinterhältig	negative	-1.000000
+kompliziert	negative	-1.000000
+misslingen	negative	-1.000000
+töten	negative	-1.000000
+edel	positive	1.000000
+freude	positive	1.000000
+zwei	positive	1.000000
+lachen	positive	1.000000
+elegant	positive	1.000000
+verscheiden	negative	-1.000000
+lieben	positive	1.000000
+qualitätsvoll	positive	1.000000
+begehrt	positive	1.000000
+beschädigt	negative	-1.000000
+renommiert	positive	1.000000
+scheisse	negative	-1.000000
+vergewaltigen	negative	-1.000000
+problematisch	negative	-1.000000
+belieben	positive	1.000000
+vergehen	negative	-1.000000
+eklatant	negative	-1.000000
+techtelmechtel	negative	-1.000000
+beschlafen	negative	-1.000000
+affäre	negative	-1.000000
+hoffnung	positive	1.000000
+verderben	negative	-1.000000
+jubeln	positive	1.000000
+missbrauch	negative	-1.000000
+mangelhaft	negative	-1.000000
+verrucht	negative	-1.000000
+liaison	negative	-1.000000
+ausgezeichnet	positive	1.000000
+ehrlich	positive	1.000000
+schätzen	positive	1.000000
+lieb	positive	1.000000
+scheissdreck	negative	-1.000000
+missbrauchen	negative	-1.000000
+versterben	negative	-1.000000
+gefährlich	negative	-1.000000
+entrüsten	negative	-1.000000
+gutherzigkeit	positive	1.000000
+mangelhaft	negative	-1.000000
+arrogant	negative	-1.000000
+liebe	positive	1.000000
+bequem	positive	1.000000
+qualitätvoll	positive	1.000000
+jubeln	positive	1.000000
+hervorragend	positive	1.000000
+verbrecherisch	negative	-1.000000
+zauberhaft	positive	1.000000
+krieg	negative	-1.000000
+irreführend	negative	-1.000000
+freundlich	positive	1.000000
+vernichtet	negative	-1.000000
+verlogen	negative	-1.000000
+effektiv	positive	1.000000
+gemein	negative	-1.000000
+nachtragend	negative	-1.000000
+überwerfen	negative	-1.000000
+juchzen	positive	1.000000
+klagen	negative	-1.000000
+geschmeidig	positive	1.000000
+defekt	negative	-1.000000
+hass	negative	-1.000000
+verärgert	negative	-1.000000
+güte	positive	1.000000
+fünf	negative	-1.000000
+wünschen	positive	1.000000
+fröhlichkeit	positive	1.000000
+schimpfen	negative	-1.000000
+hässlich	negative	-1.000000
+betrügen	negative	-1.000000
+verspielen	negative	-1.000000
+zerstören	negative	-1.000000
+gewaltig	negative	-1.000000
+tugend	positive	1.000000
+verderb	negative	-1.000000
+komfortabel	positive	1.000000
+taktvoll	positive	1.000000
+übel	negative	-1.000000
+lächeln	positive	1.000000
+höflich	positive	1.000000
+möchten	positive	1.000000
+beliebt	positive	1.000000
+froh	positive	1.000000
+schatz	positive	1.000000
+listenreich	negative	-1.000000
+faszinierend	positive	1.000000
+misslingen	negative	-1.000000
+vergehen	negative	-1.000000
+violent	negative	-1.000000
+schön	positive	1.000000
+bezaubernd	positive	1.000000
+edelmütig	positive	1.000000
+bereiten	positive	1.000000
+feindlich	negative	-1.000000
+gewünscht	positive	1.000000
+unehrlich	negative	-1.000000
+falsch	negative	-1.000000
+vernichten	negative	-1.000000
+diskret	positive	1.000000
+hölle	negative	-1.000000
+schrecklich	negative	-1.000000
+jubel	positive	1.000000
+fest	positive	1.000000
+gut	positive	1.000000
+erstaunlich	positive	1.000000
+gewalt	negative	-1.000000
+scheibenkleister	negative	-1.000000
+verderben	negative	-1.000000
+problemvoll	negative	-1.000000
+aufrichtig	positive	1.000000
+verdorben	negative	-1.000000
+mord	negative	-1.000000
+gewaltsam	negative	-1.000000
+vertrauensbruch	negative	-1.000000
+begeisterung	positive	1.000000
+unverständlich	negative	-1.000000
+einwandfrei	positive	1.000000
+tadellos	positive	1.000000
+gut	positive	1.000000
+motivieren	positive	1.000000
+lügnerisch	negative	-1.000000
+erholung	positive	1.000000
+anbeten	positive	1.000000
+fest	positive	1.000000
+hinterlistig	negative	-1.000000
+betrug	negative	-1.000000
+glücklich	positive	1.000000
+attraktiv	positive	1.000000
+angenehm	positive	1.000000
+übel	negative	-1.000000
+unmoralisch	negative	-1.000000
+dumm	negative	-1.000000
+empörend	negative	-1.000000
+berühmt	positive	1.000000
+trickreich	negative	-1.000000
+begeistert	positive	1.000000
+empören	negative	-1.000000
+vernichten	negative	-1.000000
+brillant	positive	1.000000
+unbeliebt	negative	-1.000000
+empört	negative	-1.000000
+zerstört	negative	-1.000000
+fehlleitend	negative	-1.000000
+liebesaffäre	negative	-1.000000
+anständig	positive	1.000000
+prozessieren	negative	-1.000000
+fintenreich	negative	-1.000000
+verrat	negative	-1.000000
+grossartig	positive	1.000000
+aufrecht	positive	1.000000
+freuen	positive	1.000000
+grossmut	positive	1.000000
+unversöhnlich	negative	-1.000000
+defekt	negative	-1.000000
+verbrechen	negative	-1.000000
+listig	negative	-1.000000
+wütend	negative	-1.000000
+verbrechen	negative	-1.000000
+kaputt	negative	-1.000000
+lachen	positive	1.000000
+gewollt	positive	1.000000
+jauchzen	positive	1.000000
+geehrt	positive	1.000000
+aggressiv	negative	-1.000000
+vergöttern	positive	1.000000
+verzapfen	negative	-0.857143
+unbarmherzig	positive	0.857143
+vollkommen	negative	-0.857143
+bespringen	negative	-0.857143
+wertschätzen	positive	0.857143
+gänzlich	negative	-0.714286
+populär	positive	0.714286
+begatten	negative	-0.714286
+hoffnungsvoll	positive	0.714286
+vergöttert	positive	0.714286
+beischlafen	negative	-0.714286
+total	negative	-0.714286
+grandios	positive	0.714286
+ausfressen	negative	-0.714286
+hoffnungsfroh	positive	0.714286
+beste	positive	0.714286
+beiwohnen	negative	-0.714286
+hochklassig	positive	0.714286
+freudig	positive	0.571429
+tugendhaft	positive	0.571429
+sauer	negative	-0.571429
+gelitten	positive	0.571429
+entstellen	negative	-0.571429
+lächerlich	positive	0.571429
+ruchbar	negative	-0.571429
+markig	positive	0.571429
+lachhaft	positive	0.571429
+reizend	positive	0.571429
+zunichtemachen	negative	-0.571429
+würdigen	positive	0.571429
+völlig	negative	-0.571429
+täuschend	negative	-0.571429
+galant	positive	0.571429
+rennend	negative	-0.571429
+jäh	negative	-0.571429
+scharfsinnig	positive	0.571429
+prominent	positive	0.571429
+gebrüll	positive	0.571429
+hochwertig	positive	0.571429
+eingeschnappt	negative	-0.571429
+anstössig	negative	-0.571429
+anregen	positive	0.571429
+schänden	negative	-0.571429
+bestmöglich	positive	0.571429
+ehren	positive	0.571429
+genierlich	positive	0.571429
+entrüstet	negative	-0.571429
+vertrauenswürdig	positive	0.571429
+belegen	negative	-0.571429
+inspirieren	positive	0.571429
