@@ -1,2298 +1,2298 @@
-übermütig	positive
-sinnlich	positive
-freudig	positive
-verlustieren	positive
-demonstrationsobjekt	positive
-töten	negative
-edel	positive
-gemein	negative
-geheimnisverrat	negative
-unzüchtig	negative
-lachen	positive
-nachtragend	negative
-hinterlistig	negative
-lieben	positive
-begehrt	positive
-beschädigt	negative
-unappetitlich	negative
-saus	positive
-vergewaltigen	negative
-passioniert	positive
-froh gestimmt	positive
-erklagen	negative
-lieblingsobjekt	positive
-vierschrötig	negative
-gütig	positive
-hoffnung	positive
-ausklagen	negative
-verderben	negative
-behaglich	positive
-verschlagen	negative
-jubeln	positive
-mangelhaft	negative
-verrucht	negative
-ehrlich	positive
-lieb	positive
-vergehen	negative
-nächstenliebe	positive
-leidlich	positive
-enthusiastisch	positive
-arrogant	negative
-fettig	negative
-lumpig	negative
-schadenfroh	negative
-glücklichkeit	positive
-verbrecherisch	negative
-krieg	negative
-unbeschreiblich	negative
-freundlich	positive
-zerrüttet	negative
-hinterhältig	negative
-verlogen	negative
-effektiv	positive
-hass	negative
-unüberprüfbar	negative
-frohgestimmt	positive
-lauschig	positive
-verworfen	negative
-fleischlich	positive
-lebensfroh	positive
-ungepflegt	negative
-schätzen	positive
-zerstören	negative
-lamentieren	negative
-gewagt	negative
-superstimmung	positive
-enzymdefekt	negative
-schimpfen	negative
-sicherheitsgefährdend	negative
-goldschatz	positive
-liebesfähig	positive
-pickelig	negative
-entstellt	negative
-liebenswürdig	positive
-unattraktiv	negative
-humorvoll	positive
-friedensgefährdend	negative
-dekadent	negative
-erträglich	positive
-genusssüchtig	negative
-komfortabel	positive
-taktvoll	positive
-allerbeste	positive
-schurkisch	negative
-begeistert	positive
-entzücken	positive
-galant	positive
-unkeusch	negative
-übel	negative
-liebevoll	positive
-lustbetont	positive
-jugendgefährdend	negative
-hoffnungsfunke	positive
-unsittlich	negative
-murren	negative
-domschatz	positive
-hochzufrieden	positive
-unsagbar	negative
-faszinierend	positive
-wehklagen	negative
-anständig	positive
-liederlich	negative
-einladend	positive
-erleichtert	positive
-verwerflich	negative
-schön	positive
-liebenswert	positive
-lieblingsschauspieler	positive
-erfreulich	positive
-verzeihend	positive
-paradedisziplin	positive
-unehrlich	negative
-ertragbar	positive
-brillant	positive
-ungeschützt	negative
-vernichten	negative
-hölle	negative
-lustvoll	positive
-fest	positive
-ausgelassen	positive
-amüsieren	positive
-obsessiv	positive
-wütend	negative
-gut	positive
-zuvorkommend	positive
-brüderlichkeit	positive
-unfein	negative
-präferenz	positive
-fabelhaft	positive
-humorig	positive
-lieblingsmusik	positive
-vergnügt	positive
-aufrichtig	positive
-gesundheitsgefährdend	negative
-mord	negative
-lichtblick	positive
-unästhetisch	negative
-vergnügen	positive
-scheisse	negative
-motivieren	positive
-empört	negative
-lügnerisch	negative
-erholung	positive
-befreit	positive
-gesprächsbereit	positive
-unbeschreibbar	negative
-frohlocken	positive
-renovierungsbedürftig	negative
-lächeln	positive
-schrottreif	negative
-fürsorglich	positive
-lebenslustig	positive
-kirchenschatz	positive
-empören	negative
-plebejisch	negative
-unverständlich	negative
-fröhlich	positive
-heilfroh	positive
-freuen	positive
-undurchschaubar	negative
-verbrechen	negative
-listig	negative
-ramponiert	negative
-erquicklich	positive
-gammelig	negative
-garstig	negative
-verklagen	negative
-kaputt	negative
-verkommen	negative
-liebreich	positive
-gemütlich	positive
-verdorben	negative
-blasphemisch	negative
-kompliziert	negative
-hässlich	negative
-vorzeigeobjekt	positive
-überschäumend	positive
-misslingen	negative
-frevlerisch	negative
-gendefekt	negative
-schwesterlichkeit	positive
-nett	positive
-glücklich	positive
-erfahrungsschatz	positive
-hoffnungsschimmer	positive
-freude	positive
-lieblingssache	positive
-geruhsam	positive
-elegant	positive
-potthässlich	negative
-entartet	negative
-beeumeln	positive
-ladehemmung	negative
-risikobehaftet	negative
-verlottert	negative
-schatz	positive
-sanierungsbedürftig	negative
-einklagen	negative
-problematisch	negative
-zerissen	negative
-unaufrichtig	negative
-reparaturbedürftig	negative
-wehrkraftzersetzung	negative
-affäre	negative
-missbrauch	negative
-gnädig	positive
-zufrieden	positive
-wassergefährdend	negative
-liebe	positive
-zerlumpt	negative
-ausgezeichnet	positive
-zernichten	negative
-gefährdend	negative
-qualitätvoll	positive
-entgegenkommend	positive
-kardinaltugend	positive
-gefährlich	negative
-unsäglich	negative
-korrosiv	negative
-rassenhass	negative
-zumutbar	positive
-hervorragend	positive
-anbeten	positive
-intrigant	negative
-staatsschatz	positive
-sündhaft	negative
-irreführend	negative
-unansehnlich	negative
-vernichtet	negative
-vorliebe	positive
-ausrotten	negative
-klagen	negative
-vergammelt	negative
-unschicklich	negative
-perforiert	negative
-bodenschatz	positive
-geschwisterliebe	positive
-verärgert	negative
-wünschen	positive
-hochverrat	negative
-fröhlichkeit	positive
-betrügen	negative
-idealistisch	positive
-heuchlerisch	negative
-erheiterung	positive
-abgerissen	negative
-ölig	negative
-zerlöchert	negative
-jammern	negative
-tugend	positive
-beölen	positive
-höflich	positive
-beliebt	positive
-froh	positive
-grossartig	positive
-kompromissbereit	positive
-verlumpt	negative
-lebenstrieb	positive
-güte	positive
-bezaubernd	positive
-euphorisch	positive
-gotteslästerlich	negative
-staatsgefährdend	negative
-feindlich	negative
-hoffnungsstrahl	positive
-fies	negative
-historischer krieg	negative
-falsch	negative
-lebensbejahend	positive
-ungesichert	negative
-huldreich	positive
-jubel	positive
-defekt	negative
-erlöst	positive
-zotig	negative
-erstaunlich	positive
-wohnlich	positive
-gewalt	negative
-verwahrlost	negative
-lästerlich	negative
-frohsinn	positive
-diskret	positive
-bequem	positive
-gammlig	negative
-eingefallen	negative
-schadhaft	negative
-begeisterung	positive
-quietschvergnügt	positive
-sündig	negative
-schmuddelig	negative
-einwandfrei	positive
-heruntergekommen	negative
-bombenstimmung	positive
-judenfeindlichkeit	negative
-schrecklich	negative
-judenhass	negative
-riskant	negative
-schwärmerisch	positive
-ungeschlacht	negative
-unanständig	negative
-überbordend	positive
-betrug	negative
-attraktiv	positive
-aushaltbar	positive
-zärtlich	positive
-angenehm	positive
-lasterhaft	negative
-unkontrollierbar	negative
-beruhigt	positive
-eros	positive
-unmoralisch	negative
-verschwitzt	negative
-dumm	negative
-unaussprechlich	negative
-berühmt	positive
-landesverrat	negative
-hassen	negative
-unbeliebt	negative
-erfreuen	positive
-lieblingsfarbe	positive
-zerstört	negative
-feuchtfröhlich	positive
-verrat	negative
-strähnig	negative
-mies	negative
-grobschlächtig	negative
-risikoreich	negative
-lieblingsschauspielerin	positive
-sittenlos	negative
-ungehobelt	negative
-wüst	negative
-aggressiv	negative
-vergöttern	positive
-verdammt	negative
-luderhaft	negative
-glimpflich	positive
-schimmelig	negative
-seelig	positive
-verschimmelt	negative
-überglücklich	positive
-glückselig	positive
-ungetrübt	positive
-lebensgefährlich	negative
-bedrohlich	negative
-lebensbedrohend	negative
-lebensbedrohlich	negative
-selbstliebe	positive
-vaterlandsliebe	positive
-befriedigend	positive
-gottesliebe	positive
-schmeichelhaft	positive
-zufriedenstellend	positive
-minne	positive
-mitmenschlichkeit	positive
-mutterliebe	positive
-selbstmörderisch	negative
-wohlmeinend	positive
-seelsorgerlich	positive
-schützend	positive
-treu sorgend	positive
-seelsorglich	positive
-wohlwollend	positive
-behütend	positive
-seelsorgerisch	positive
-treusorgend	positive
-gutgemeint	positive
-letal	negative
-tödlich	negative
-kichern	positive
-ranzig	negative
-verfallen	negative
-verrottet	negative
-verderbt	negative
-auslachen	positive
-verlachen	positive
-gickern	positive
-gickeln	positive
-torgefährlich	negative
-brandgefährlich	negative
-existenzbedrohend	negative
-hochgefährlich	negative
-explosionsgefährlich	negative
-gefahrvoll	negative
-giggeln	positive
-gackern	positive
-giggern	positive
-vielschichtig	negative
-komplex	negative
-beziehungsreich	negative
-hochkomplex	negative
-hübsch	positive
-schmuck	positive
-dekorativ	positive
-bildhübsch	positive
-schmuckvoll	positive
-reichverziert	positive
-reich verziert	positive
-fortwünschen	positive
-herbeisehnen	positive
-wegwünschen	positive
-herwünschen	positive
-stilsicher	positive
-stilgerecht	positive
-bildschön	positive
-zurückwünschen	positive
-geschmackvoll	positive
-wunderschön	positive
-herbeiwünschen	positive
-stilvoll	positive
-begriffsstutzig	negative
-prusten	positive
-loslatzen	positive
-verzwickt	negative
-verwünscht	negative
-loslachen	positive
-hochkompliziert	negative
-losbrüllen	positive
-verzwackt	negative
-feixen	positive
-vermaledeit	negative
-auflachen	positive
-vertrackt	negative
-losplatzen	positive
-herausplatzen	positive
-verflucht	negative
-losprusten	positive
-verflixt	negative
-enthaupten	negative
-verfügungsgewalt	negative
-waffengewalt	negative
-polizeigewalt	negative
-legislativgewalt	negative
-heftigkeit	negative
-amtsgewalt	negative
-feindeshand	negative
-vehemenz	negative
-exekutive	negative
-herrschaftsgewalt	negative
-entscheidungsgewalt	negative
-naturgewalt	negative
-hoheitsgewalt	negative
-judikative	negative
-regierungsgewalt	negative
-kameradschaftlich	positive
-freundschaftlich	positive
-partnerschaftlich	positive
-dekaptieren	negative
-dekapitieren	negative
-anschnauben	negative
-anknurren	negative
-anblasen	negative
-anzischen	negative
-anfauchen	negative
-anblaffen	negative
-anschnauzen	negative
-schnarren	negative
-anschnarren	negative
-sechstagekrieg	negative
-falklandkrieg	negative
-sonderbundskrieg	negative
-vietnamkrieg	negative
-bosnienkrieg	negative
-burgunderkrieg	negative
-zulukrieg	negative
-vietnam-krieg	negative
-markgrafenkrieg	negative
-jugoslawienkrieg	negative
-koreakrieg	negative
-golfkrieg	negative
-palästinakrieg	negative
-kroatienkrieg	negative
-perserkrieg	negative
-bruderkrieg	negative
-pazifikkrieg	negative
-hussitenkrieg	negative
-balkankrieg	negative
-burenkrieg	negative
-winterkrieg	negative
-irakkrieg	negative
-kosovokrieg	negative
-indianerkrieg	negative
-gären	negative
-erschiessen	negative
-erstechen	negative
-trottelhaft	negative
-idiotenhaft	negative
-idiotisch	negative
-trottelig	negative
-vergären	negative
-erdolchen	negative
-suizidieren	negative
-selbst töten	negative
-leutselig	positive
-magenfreundlich	positive
-hautfreundlich	positive
-wohlgesonnen	positive
-kumpelhaft	positive
-gesinnt	positive
-bedienungsfreundlich	positive
-jovial	positive
-kundenfreundlich	positive
-wartungsfreundlich	positive
-investitionsfreundlich	positive
-wohlgesinnt	positive
-leserfreundlich	positive
-entleiben	negative
-religionskrieg	negative
-abkanzeln	negative
-giften	negative
-anscheissen	negative
-zusammenstauchen	negative
-runtermachen	negative
-anranzen	negative
-deckeln	negative
-heruntermachen	negative
-runterputzen	negative
-fluchen	negative
-motzen	negative
-herunterkanzeln	negative
-abkapiteln	negative
-heiliger krieg	negative
-dschihad	negative
-saudumm	negative
-dusslig	negative
-doof	negative
-tumb	negative
-töricht	negative
-modern	negative
-vermodern	negative
-saudoof	negative
-saublöd	negative
-debil	negative
-dusselig	negative
-verrotten	negative
-blöd	negative
-geistesschwach	negative
-unterbelichtet	negative
-dämlich	negative
-strohdumm	negative
-ignorant	negative
-schwachsinnig	negative
-einfältig	negative
-dull	negative
-strohdoof	negative
-rassistisch	negative
-ausländerfeindlich	negative
-xenophob	negative
-fremdenfeindlich	negative
-antisemitisch	negative
-judenfeindlich	negative
-familienfeindlich	negative
-schwulenfeindlich	negative
-umbringen	negative
-dahinraffen	negative
-massakrieren	negative
-erschlagen	negative
-niederstechen	negative
-abschlachten	negative
-abmurksen	negative
-hinwegraffen	negative
-niedermetzeln	negative
-totschlagen	negative
-hinmorden	negative
-ertränken	negative
-ersäufen	negative
-ermorden	negative
-feindselig	negative
-feindschaftlich	negative
-homophob	negative
-kinderfeindlich	negative
-angriffskrieg	negative
-präventivkrieg	negative
-christenfeindlich	negative
-regimefeindlich	negative
-republikfeindlich	negative
-gesellschaftsfeindlich	negative
-behindertenfeindlich	negative
-minderheitenfeindlich	negative
-kaiserfeindlich	negative
-religionsfeindlich	negative
-männerfeindlich	negative
-technikfeindlich	negative
-fortschrittsfeindlich	negative
-parteifeindlich	negative
-wissenschaftsfeindlich	negative
-reformfeindlich	negative
-demokratiefeindlich	negative
-volksfeindlich	negative
-kunstfeindlich	negative
-kirchenfeindlich	negative
-regierungsfeindlich	negative
-deutschfeindlich	negative
-islamfeindlich	negative
-israelfeindlich	negative
-leibfeindlich	negative
-antiklerikal	negative
-bildungsfeindlich	negative
-antideutsch	negative
-menschenfeindlich	negative
-kulturfeindlich	negative
-umweltfeindlich	negative
-lustfeindlich	negative
-körperfeindlich	negative
-staatsfeindlich	negative
-verfassungsfeindlich	negative
-geistfeindlich	negative
-frauenfeindlich	negative
-amtsmissbrauch	negative
-machtmissbrauch	negative
-kindesmissbrauch	negative
-kolonialkrieg	negative
-vernichtungskrieg	negative
-sachsenkrieg	negative
-bandenkrieg	negative
-partisanenkrieg	negative
-weltkrieg	negative
-kleinkrieg	negative
-eroberungskrieg	negative
-luftkrieg	negative
-bürgerkrieg	negative
-glaubenskrieg	negative
-bombenkrieg	negative
-ringkrieg	negative
-koalitionskrieg	negative
-seekrieg	negative
-opiumkrieg	negative
-handelskrieg	negative
-atomkrieg	negative
-grenzkrieg	negative
-befreiungskrieg	negative
-grabenkrieg	negative
-krimkrieg	negative
-fortsetzungskrieg	negative
-landkrieg	negative
-sezessionskrieg	negative
-stammeskrieg	negative
-blitzkrieg	negative
-abnutzungskrieg	negative
-bauernkrieg	negative
-stellvertreterkrieg	negative
-revolutionskrieg	negative
-unabhängigkeitskrieg	negative
-stellungskrieg	negative
-verteidigungskrieg	negative
-städtekrieg	negative
-einigungskrieg	negative
-klonkrieg	negative
-freiheitskrieg	negative
-erbfolgekrieg	negative
-zweifrontenkrieg	negative
-gebirgskrieg	negative
-behandlungsgut	positive
-kulturgut	positive
-gemeingut	positive
-sammlungsgut	positive
-rüstungsgut	positive
-gefahrgut	positive
-investitionsgut	positive
-versorgungsgut	positive
-massenstückgut	positive
-volksgut	positive
-liedgut	positive
-massengut	positive
-obszön	negative
-ordinär	negative
-vulgär	negative
-tadellos	positive
-ausätschen	positive
-niedlich	positive
-goldig	positive
-herzig	positive
-possierlich	positive
-putzig	positive
-knuffig	positive
-schamlos	negative
-faible	positive
-drollig	positive
-preisgekrönt	positive
-zauberhaft	positive
-famos	positive
-fulminant	positive
-vortrefflich	positive
-vorzüglich	positive
-bestechend	positive
-ruchlos	negative
-zerlöchern	negative
-perforieren	negative
-durchlöchern	negative
-einstanzen	negative
-exzellent	positive
-ätschen	positive
-ergötzen	positive
-süsslich	positive
-zuckersüss	positive
-süss	positive
-hilfsbereit	positive
-grandios	positive
-herausragend	positive
-abknallen	negative
-deformiert	negative
-unförmig	negative
-zerbeult	negative
-verformt	negative
-grundübel	negative
-unverdorben	positive
-frank	positive
-wohlgefallen	positive
-frivol	negative
-anstössig	negative
-versagen	negative
-scheitern	negative
-niederlage	negative
-missgeschick	negative
-trauerspiel	negative
-ungeschick	negative
-reinfall	negative
-debakel	negative
-desaster	negative
-armageddon	negative
-fiasko	negative
-flop	negative
-marktversagen	negative
-satzverlust	negative
-punkteverlust	negative
-knock-out	negative
-auswärtsniederlage	negative
-wahlniederlage	negative
-heimniederlage	negative
-finalniederlage	negative
-abstimmungsniederlage	negative
-k.o.-niederlage	negative
-schlappe	negative
-punktniederlage	negative
-kriegsniederlage	negative
-knockout	negative
-punktverlust	negative
-wahlschlappe	negative
-betörend	positive
-apart	positive
-liebreizend	positive
-unwiderstehlich	positive
-rassig	positive
-begehrenswert	positive
-adrett	positive
-verführerisch	positive
-kokett	positive
-appetitlich	positive
-lieblich	positive
-hinreissend	positive
-scharmant	positive
-charmant	positive
-gepflegt	positive
-reizend	positive
-bezückend	positive
-entzückend	positive
-grienen	positive
-lustig	positive
-burlesk	positive
-schelmisch	positive
-schalkhaft	positive
-possenhaft	positive
-verschmitzt	positive
-lausbubenhaft	positive
-lausbübisch	positive
-scherzhaft	positive
-anstand	positive
-verbrecher	negative
-anzüglich	negative
-beschmunzeln	positive
-fehlleistung	negative
-vergnügtheit	positive
-gefällig	positive
-wohlgeformt	positive
-griffig	positive
-wohl geformt	positive
-aufgebracht	negative
-geharnischt	negative
-schockiert	negative
-geschockt	negative
-gelähmt	negative
-paralysiert	negative
-fassungslos	negative
-entsetzt	negative
-entgeistert	negative
-behilflich	positive
-konstruktiv	positive
-schwäche	positive
-fehlsichtigkeit	positive
-sehschwäche	positive
-weitsichtigkeit	positive
-kurzsichtigkeit	positive
-nachtblindheit	positive
-rotgrünblindheit	positive
-farbenblindheit	positive
-lese-rechtschreib-schwäche	positive
-anfälligkeit	positive
-schlaffheit	positive
-schlappheit	positive
-altersschwäche	positive
-rechenschwäche	positive
-dyskalkulie	positive
-dyslexie	positive
-herzschwäche	positive
-muskelschwäche	positive
-armutszeugnis	positive
-bindegewebsschwäche	positive
-legasthenie	positive
-hinfälligkeit	positive
-erbauen	positive
-renommiert	positive
-pfuscherei	negative
-pfusch	negative
-pfuschwerk	negative
-murks	negative
-abschiessen	negative
-bejubeln	positive
-triumphieren	positive
-prunkvoll	positive
-pompös	positive
-prunkhaft	positive
-prachtvoll	positive
-prächtig	positive
-gefallen	positive
-menschenwürdig	positive
-menschenfreundlich	positive
-inferno	negative
-qualitätsvoll	positive
-hochklassig	positive
-fehlschlag	negative
-grinsen	positive
-schelm	positive
-schalk	positive
-anbetung	positive
-vergötterung	positive
-humanitär	positive
-philanthropisch	positive
-ungemach	negative
-edelmütig	positive
-human	positive
-menschlich	positive
-scharm	positive
-charme	positive
-faulen	negative
-fäulen	negative
-link	negative
-indigniert	negative
-entrüstet	negative
-malheur	negative
-misserfolg	negative
-vertrauenswürdig	positive
-unliebsam	negative
-missliebig	negative
-verhasst	negative
-väterlich	positive
-mütterlich	positive
-grossväterlich	positive
-anziehend	positive
-schmunzeln	positive
-vergnüglich	positive
-amüsant	positive
-kriegsbegeisterung	positive
-fanatismus	positive
-enthusiasmus	positive
-eingängig	positive
-flau	negative
-belämmert	negative
-behämmert	negative
-bescheuert	negative
-bärendienst	positive
-wohltat	positive
-liebesdienst	positive
-missvergnügt	negative
-unbefriedigt	negative
-unzufrieden	negative
-angefressen	negative
-fehlleitend	negative
-hilfreich	positive
-verfaulen	negative
-mau	negative
-freundschaft	positive
-fanfreundschaft	positive
-völkerfreundschaft	positive
-männerfreundschaft	positive
-städtefreundschaft	positive
-brieffreundschaft	positive
-gastfreundschaft	positive
-orgiastisch	negative
-pfuschen	negative
-schiefgehen	negative
-floppen	negative
-daneben gehen	negative
-schief gehen	negative
-missraten	negative
-danebengehen	negative
-schief laufen	negative
-fehlschlagen	negative
-fehl schlagen	negative
-stümpern	negative
-dilettieren	negative
-schieflaufen	negative
-schludern	negative
-schlampen	negative
-haltbar	positive
-hinreissen	positive
-liebhaben	positive
-spassig	positive
-spasshaft	positive
-zügellos	negative
-fauxpas	negative
-aufrecht	positive
-atemberaubend	positive
-atemraubend	positive
-gefälligkeit	positive
-infam	negative
-perfid	negative
-durchtrieben	negative
-perfide	negative
-hinterfotzig	negative
-rodung	negative
-abholzung	negative
-zerstückelung	negative
-zerlegung	negative
-abtötung	negative
-ausrottung	negative
-bücherverbrennung	negative
-zerschlagung	negative
-aktenvernichtung	negative
-ausmerzung	negative
-segmentierung	negative
-primfaktorzerlegung	negative
-entwaldung	negative
-waldrodung	negative
-brandrodung	negative
-kahlschlag	negative
-massenmord	negative
-massenvernichtung	negative
-genozid	negative
-völkermord	negative
-massaker	negative
-blutvergiessen	negative
-blutbad	negative
-gemetzel	negative
-abschlachtung	negative
-gemorde	negative
-judenvernichtung	negative
-beknackt	negative
-suizid	negative
-selbstmord	negative
-selbsttötung	negative
-freitod	negative
-ritualmord	negative
-ehrenmord	negative
-fememord	negative
-meuchelmord	negative
-tyrannenmord	negative
-raubmord	negative
-judenmord	negative
-brudermord	negative
-giftmord	negative
-lynchmord	negative
-auftragsmord	negative
-doppelmord	negative
-justizmord	negative
-enthauptung	negative
-kindermord	negative
-seppuku	negative
-harakiri	negative
-beschädigen	negative
-zunichtemachen	negative
-ätzen	negative
-kaputtmachen	negative
-einätzen	negative
-herausätzen	negative
-kleinkriegen	negative
-einstampfen	negative
-devastieren	negative
-randalieren	negative
-verheeren	negative
-zerfräsen	negative
-zerpflügen	negative
-auslöschen	negative
-zerschiessen	negative
-demolieren	negative
-verwüsten	negative
-zusammenschlagen	negative
-zernagen	negative
-zerschlitzen	negative
-eindellen	negative
-verbeulen	negative
-versengen	negative
-begreifen	negative
-hemmungslos	negative
-ungezügelt	negative
-witzig	positive
-weiden	positive
-beweiden	positive
-abweiden	positive
-verherrlichung	positive
-beruhigen	positive
-patzen	negative
-leidenschaftlich	positive
-begöschen	positive
-einlullen	positive
-beschwichtigen	positive
-abwiegeln	positive
-besänftigen	positive
-begütigen	positive
-trösten	positive
-vermiesen	negative
-sexuelle orientierung	positive
-homosexueller	positive
-homo	positive
-schwule	positive
-tunte	positive
-schwuler	positive
-lesbe	positive
-homosexualität	positive
-päderastie	positive
-sadomasochist	positive
-pädophiler	positive
-heterosexueller	positive
-pädophile	positive
-sadomasochistin	positive
-hetero	positive
-heterosexuelle	positive
-bisexualität	positive
-heterosexualität	positive
-lebensgefahr	negative
-pikant	negative
-verleiden	negative
-geehrt	positive
-hoch gelobt	positive
-umschwärmt	positive
-hochgelobt	positive
-umworben	positive
-viel gepriesen	positive
-vielgelobt	positive
-viel gerühmt	positive
-vergöttert	positive
-geliebt	positive
-vielgepriesen	positive
-gehuldigt	positive
-vielgerühmt	positive
-gemocht	positive
-viel gelobt	positive
-verehrt	positive
-gelobt	positive
-hochverehrt	positive
-bewundert	positive
-vielgeliebt	positive
-gehässig	negative
-bissig	negative
-zynisch	negative
-höhnisch	negative
-schnippisch	negative
-scharfzüngig	negative
-beleidigend	negative
-provokativ	negative
-herausfordernd	negative
-selbstironisch	negative
-impertinent	negative
-ironisch	negative
-undankbar	negative
-ehrverletzend	negative
-unverschämt	negative
-zanksüchtig	negative
-streitsüchtig	negative
-verleumderisch	negative
-unverfroren	negative
-sarkastisch	negative
-wichtigtuerisch	negative
-hetzerisch	negative
-grosskotzig	negative
-ausfallend	negative
-schikanös	negative
-grossspurig	negative
-prätentiös	negative
-denunziatorisch	negative
-grossmäulig	negative
-angeberisch	negative
-provozierend	negative
-forsch	negative
-schnoddrig	negative
-prahlerisch	negative
-zänkisch	negative
-ungezogen	negative
-vorlaut	negative
-aufwiegelnd	negative
-aufhetzend	negative
-draufgängerisch	negative
-kriegerisch	negative
-demagogisch	negative
-streitlustig	negative
-offensiv	negative
-ehrrührig	negative
-ehrenrührig	negative
-vollmundig	negative
-lautstark	negative
-marktschreierisch	negative
-facettenreich	negative
-arglistig	negative
-heimtückisch	negative
-panne	negative
-autopanne	negative
-motorradpanne	negative
-fahrradpanne	negative
-mopedpanne	negative
-radpanne	negative
-erhoffen	positive
-spitzfindig	negative
-spöttisch	negative
-agape	positive
-skandal	negative
-spendenaffäre	negative
-liebesaffäre	negative
-liaison	negative
-techtelmechtel	negative
-schmiergeldaffäre	negative
-bestechungsaffäre	negative
-spionageaffäre	negative
-korruptionsaffäre	negative
-finanzaffäre	negative
-abhöraffäre	negative
-spendenskandal	negative
-korruptionsskandal	negative
-lebensmittelskandal	negative
-bestechungsskandal	negative
-finanzskandal	negative
-wettskandal	negative
-dopingskandal	negative
-abhörskandal	negative
-parteispendenaffäre	negative
-parteispendenskandal	negative
-unfassbar	negative
-unerfindlich	negative
-unerklärlich	negative
-unergründlich	negative
-unerklärbar	negative
-ordnungswidrigkeit	negative
-vertragsverletzung	negative
-dienstvergehen	negative
-landfriedensbruch	negative
-rechtswidrigkeit	negative
-rechtsverstoss	negative
-kavaliersdelikt	negative
-sakrileg	negative
-kameradschaft	positive
-pfadfinder	positive
-ymca	positive
-christlicher verein junger menschen	positive
-cvjm	positive
-pfadfinderschaft	positive
-jungschar	positive
-jugendgruppe	positive
-kriegsveteranenbund	positive
-scout	positive
-verschimmeln	negative
-heiter	positive
-leichtfüssig	positive
-fidel	positive
-unbeschwert	positive
-frohgemut	positive
-launig	positive
-aufgeräumt	positive
-gut gelaunt	positive
-frohgelaunt	positive
-froh gelaunt	positive
-gut aufgelegt	positive
-gutgelaunt	positive
-spitz	negative
-jubilieren	positive
-glorifizierung	positive
-glorifikation	positive
-allegretto	positive
-allegro	positive
-ruchbar	negative
-belieben	positive
-neuwertig	positive
-wertig	positive
-feiern	positive
-zelebrieren	positive
-zechen	positive
-nachfeiern	positive
-schwindlig	negative
-kreuzzug	negative
-fettnäpfchen	negative
-verschandeln	negative
-urkomisch	positive
-saukomisch	positive
-ulkig	positive
-gewaltverbrecherin	negative
-gewalttäter	negative
-gewaltverbrecher	negative
-gewalttäterin	negative
-täterin	negative
-straftäter	negative
-delinquentin	negative
-täter	negative
-straftäterin	negative
-delinquent	negative
-entführerin	negative
-entführer	negative
-dieb	negative
-diebin	negative
-langfinger	negative
-killerin	negative
-mörder	negative
-killer	negative
-mörderin	negative
-attentäterin	negative
-attentäter	negative
-folterer	negative
-folterin	negative
-haupttäter	negative
-einzeltäterin	negative
-brandstifterin	negative
-feuerlegerin	negative
-selbstmörder	negative
-feuerleger	negative
-ns-täter	negative
-schreibtischtäterin	negative
-einzeltäter	negative
-selbstmörderin	negative
-wiederholungstäterin	negative
-schreibtischtäter	negative
-ns-täterin	negative
-serientäter	negative
-wiederholungstäter	negative
-serientäterin	negative
-brandstifter	negative
-peinigerin	negative
-peiniger	negative
-betrüger	negative
-prellerin	negative
-preller	negative
-betrügerin	negative
-autodieb	negative
-ladendiebin	negative
-meisterdieb	negative
-taschendiebin	negative
-meisterdiebin	negative
-autodiebin	negative
-taschendieb	negative
-ladendieb	negative
-kriegsverbrecher	negative
-kriegsverbrecherin	negative
-schmugglerin	negative
-schmuggler	negative
-terrorist	negative
-terroristin	negative
-frauenmörderin	negative
-frauenmörder	negative
-folterknecht	negative
-kindermörderin	negative
-serienkiller	negative
-massenmörder	negative
-serienmörder	negative
-assasine	negative
-serienmörderin	negative
-kopfgeldjägerin	negative
-serienkillerin	negative
-massenmörderin	negative
-auftragsmörder	negative
-kopfgeldjäger	negative
-kindermörder	negative
-auftragskiller	negative
-auftragskillerin	negative
-auftragsmörderin	negative
-kindesentführer	negative
-busentführer	negative
-luftpiratin	negative
-busentführerin	negative
-luftpirat	negative
-flugzeugentführer	negative
-kidnapper	negative
-kindesentführerin	negative
-hijackerin	negative
-flugzeugentführerin	negative
-hijacker	negative
-kidnapperin	negative
-zechpreller	negative
-zechprellerin	negative
-falschspieler	negative
-falschspielerin	negative
-kamikazepilot	negative
-kamikazepilotin	negative
-selbstmordattentäterin	negative
-kamikaze	negative
-selbstmordattentäter	negative
-geiselnehmer	negative
-geiselnehmerin	negative
-schädiger	negative
-erpresser	negative
-rechtsbrecher	negative
-kleinkrimineller	negative
-schwerverbrecherin	negative
-unterdrücker	negative
-schleuser	negative
-menschenhändlerin	negative
-hehler	negative
-ns-verbrecher	negative
-einbrecherin	negative
-pleitier	negative
-pimp	negative
-gangster	negative
-schwerverbrecher	negative
-rechtsbrecherin	negative
-unterdrückerin	negative
-schleuserin	negative
-assassine	negative
-zuhälter	negative
-wegelagerer	negative
-bankrotteur	negative
-ns-verbrecherin	negative
-plündrerin	negative
-plünderin	negative
-kleinkriminelle	negative
-erpresserin	negative
-eindringling	negative
-lude	negative
-naziverbrecherin	negative
-plündrer	negative
-bankrotteurin	negative
-naziverbrecher	negative
-plünderer	negative
-einbrecher	negative
-hehlerin	negative
-blaubart	negative
-menschenhändler	negative
-drogenschmugglerin	negative
-hauptkriegsverbrecher	negative
-hauptkriegsverbrecherin	negative
-drogenschmuggler	negative
-topterrorist	negative
-minenleger	negative
-topterroristin	negative
-idealismus	positive
-ächzen	negative
-verlebt	negative
-kuschelig	positive
-kuschlig	positive
-tückisch	negative
-vernichtung	negative
-eliminieren	negative
-eliminierung	negative
-auslöschung	negative
-scheinheilig	negative
-bigott	negative
-schändlich	negative
-effekt	positive
-kurpfuschen	negative
-gewaltverherrlichung	positive
-problemvoll	negative
-wohltätig	positive
-caritativ	positive
-mildtätig	positive
-karitativ	positive
-rechtschaffenheit	positive
-fairness	positive
-feindseligkeit	negative
-glücksgefühl	positive
-fuchsteufelswild	negative
-zornig	negative
-fuchsig	negative
-erzürnt	negative
-erbittert	negative
-verpatzen	negative
-wohlig	positive
-unterstützend	positive
-subsidiär	positive
-mannschaftsdienlich	positive
-mannschaftstauglich	positive
-dahinterstehend	positive
-gibbeln	positive
-gekicher	positive
-geiern	positive
-gebibbel	positive
-gegeier	positive
-missglücken	negative
-flaggschiff	positive
-dankbar	positive
-umkämpft	positive
-viel gefragt	positive
-vielgefragt	positive
-verhunzen	negative
-holocaust	negative
-scheiss	negative
-bedrohen	negative
-partnerschaft	positive
-paarbeziehung	positive
-gemeindepartnerschaft	positive
-städtepartnerschaft	positive
-sozialpartnerschaft	positive
-lebenspartnerschaft	positive
-schulpartnerschaft	positive
-konkubinat	positive
-zerbrechlichkeit	positive
-fragilität	positive
-gemeingefährlich	negative
-schwer erziehbar	negative
-schwererziehbar	negative
-versägen	negative
-verkacken	negative
-vergeigen	negative
-versemmeln	negative
-vermasseln	negative
-todesgefahr	negative
-verfault	negative
-faulig	negative
-rassismus	negative
-judenfeindschaft	negative
-apartheid	negative
-antijudaismus	negative
-antisemitismus	negative
-stöhnen	negative
-angriffslustig	negative
-kampfeslustig	negative
-kampflustig	negative
-umgänglich	positive
-verpfuschen	negative
-verbocken	negative
-verkorksen	negative
-vermurksen	negative
-ungeliebt	negative
-mordfall	negative
-unverhältnismässig	negative
-unziemlich	negative
-unstandesgemäss	negative
-ungerechtfertigt	negative
-unerhört	negative
-unwahr	negative
-ungehörig	negative
-unangemessen	negative
-inadäquat	negative
-verfehlt	negative
-verkehrt	negative
-vorgetäuscht	negative
-fälschlich	negative
-gespielt	negative
-irrtümlich	negative
-vermeintlich	negative
-gelogen	negative
-unzuständig	negative
-unbillig	negative
-erlogen	negative
-gefälscht	negative
-unbefugt	negative
-unsachgemäss	negative
-angeblich	negative
-unecht	negative
-irregulär	negative
-unrecht	negative
-grundfalsch	negative
-unkorrekt	negative
-irrig	negative
-unautorisiert	negative
-unberechtigt	negative
-umgekehrt	negative
-illegitim	negative
-unrechtmässig	negative
-trügerisch	negative
-unpassend	negative
-unangebracht	negative
-täuschend	negative
-sinnentstellend	negative
-sachfremd	negative
-korrekturbedürftig	negative
-ungelegen	negative
-kontrafaktisch	negative
-unzutreffend	negative
-irritierend	negative
-verwirrend	negative
-deplaziert	negative
-deplatziert	negative
-weltberühmt	positive
-unkalkulierbar	negative
-unberechenbar	negative
-verbrecherin	negative
-kriminelle	negative
-krimineller	negative
-räuberin	negative
-fesselnd	positive
-begeisternd	positive
-unbegründet	negative
-aufmerksam	positive
-unverdient	negative
-vorgeschoben	negative
-fadenscheinig	negative
-holzeinschlag	negative
-holzschlag	negative
-feingeschnitten	positive
-fein geschnitten	positive
-lapsus	negative
-feig	negative
-feige	negative
-verve	positive
-grundlos	negative
-triebverbrecher	negative
-sexualverbrecher	negative
-sexualverbrecherin	negative
-triebverbrecherin	negative
-sexualstraftäterin	negative
-triebtäter	negative
-sexualstraftäter	negative
-triebtäterin	negative
-mordtat	negative
-ermordung	negative
-beabsichtigen	positive
-hoffen	positive
-möchten	positive
-zurückwollen	positive
-zudenken	positive
-erträumen	positive
-intendieren	positive
-bezwecken	positive
-hornhautverkrümmung	positive
-stabsichtigkeit	positive
-böse	negative
-totschlägerin	negative
-unschuldig	positive
-unversöhnlich	negative
-schimmeln	negative
-ansprechend	positive
-gewinnend	positive
-einnehmend	positive
-sympathieerweckend	positive
-sympathie erweckend	positive
-sympathisch	positive
-wiehern	positive
-ehren	positive
-verehren	positive
-anhimmeln	positive
-huldigen	positive
-zerhauen	negative
-zerkloppen	negative
-wassergüte	positive
-wasserqualität	positive
-bodenqualität	positive
-oberflächengüte	positive
-textqualität	positive
-gewässergüte	positive
-trinkwasserqualität	positive
-anteilig	negative
-rudimentär	negative
-durchbrochen	negative
-halb	negative
-fragmentarisch	negative
-bruchstückhaft	negative
-notbehelfsmässig	negative
-partiell	negative
-notdürftig	negative
-teilweise	negative
-bruchstückartig	negative
-ergänzungsbedürftig	negative
-achtzigprozentig	negative
-sechzigprozentig	negative
-dreissigprozentig	negative
-hochprozentig	negative
-zwanzigprozentig	negative
-fünfprozentig	negative
-fünfzigprozentig	negative
-siebzigprozentig	negative
-neunzigprozentig	negative
-zehnprozentig	negative
-dienlich	positive
-quacksalbern	negative
-euthanasie	negative
-panisch	negative
-panikartig	negative
-lachhaft	positive
-inbrünstig	positive
-verbraucht	negative
-fünf	negative
-zollen	positive
-anfeindung	negative
-versieben	negative
-gefährden	negative
-erfrischung	positive
-erfrischen	positive
-sonnenbaden	positive
-nichtstun	positive
-sonnenbad	positive
-ausruhen	positive
-faulenzen	positive
-naherholung	positive
-labsal	positive
-lebensqualität	positive
-zerschlagenheit	positive
-mattigkeit	positive
-zerteppern	negative
-zerdeppern	negative
-zertrümmern	negative
-zartheit	positive
-versauen	negative
-klotzig	negative
-klobig	negative
-frotteurin	negative
-vergewaltigerin	negative
-kinderschänder	negative
-kinderschänderin	negative
-vergewaltiger	negative
-frotteur	negative
-grapscher	negative
-grabscher	negative
-grapscherin	negative
-grabscherin	negative
-fummler	negative
-fummlerin	negative
-destruktion	negative
-zerstörung	negative
-zertrümmerung	negative
-bildersturm	negative
-umweltzerstörung	negative
-verschrottung	negative
-demolition	negative
-implosion	negative
-kriegszerstörung	negative
-verwüstung	negative
-sprengzündung	negative
-lebensraumzerstörung	negative
-abwrackung	negative
-ikonoklasmus	negative
-selbstentzündung	negative
-selbstzerstörung	negative
-ritterlich	positive
-liebschaft	negative
-liebelei	negative
-liebesabenteuer	negative
-liebesgeschichte	negative
-reifenpanne	negative
-feindschaft	negative
-unbegreiflich	negative
-unbegreifbar	negative
-höfisch	positive
-adlig	positive
-adelig	positive
-blaublütig	positive
-aristokratisch	positive
-kaiserlich-königlich	positive
-hochadlig	positive
-feudalistisch	positive
-freiherrlich	positive
-hochherrschaftlich	positive
-altadelig	positive
-feudal	positive
-altadlig	positive
-kaiserlich	positive
-nobel	positive
-kleinadelig	positive
-königlich	positive
-standesherrlich	positive
-kleinadlig	positive
-royal	positive
-hochadelig	positive
-erbost	negative
-bitterböse	negative
-juchzen	positive
-jauchzen	positive
-überfall	negative
-schmuggel	negative
-spionagetätigkeit	negative
-agententätigkeit	negative
-spionage	negative
-entführung	negative
-menschenhandel	negative
-eigentumsdelikt	negative
-erpressung	negative
-unterlassungssünde	negative
-steuerdelikt	negative
-verkehrsdelikt	negative
-missetat	negative
-strassenverkehrsdelikt	negative
-untat	negative
-betriebsspionage	negative
-werksspionage	negative
-wirtschaftsspionage	negative
-infiltration	negative
-firmenspionage	negative
-industriespionage	negative
-gegenspionage	negative
-naziverbrechen	negative
-rechtsbeugung	negative
-bagatelldelikt	negative
-strafsache	negative
-tötungsdelikt	negative
-hausfriedensbruch	negative
-drogendelikt	negative
-urheberrechtsverletzung	negative
-sittlichkeitsverbrechen	negative
-vertragsbruch	negative
-verfassungsbruch	negative
-kapitalverbrechen	negative
-geldwäsche	negative
-amoklauf	negative
-sexualdelikt	negative
-kriegsgräuel	negative
-gewaltdelikt	negative
-hehlerei	negative
-kabale	negative
-ränke	negative
-kriegsverbrechen	negative
-gewaltverbrechen	negative
-intrige	negative
-sünde	negative
-drogenhandel	negative
-drogenschmuggel	negative
-verkehrsverstoss	negative
-verschleppung	negative
-deportation	negative
-flugzeugentführung	negative
-kindesentführung	negative
-frauenhandel	negative
-hinterziehung	negative
-unterschlagung	negative
-sklavenhandel	negative
-waffenschmuggel	negative
-atomschmuggel	negative
-menschenschmuggel	negative
-schleusung	negative
-fahrerflucht	negative
-schutzgelderpressung	negative
-steuerhinterziehung	negative
-heroinhandel	negative
-kokainhandel	negative
-todesmarsch	negative
-raubüberfall	negative
-banküberfall	negative
-handstreich	negative
-stürmung	negative
-erstürmung	negative
-jugendsünde	negative
-todsünde	negative
-schandtat	negative
-erbsünde	negative
-gotteslästerung	negative
-blasphemie	negative
-mögen	positive
-ungefährdet	positive
-überzeugt	positive
-felsenfest	positive
-bombensicher	positive
-erhängen	negative
-one-night-stand	negative
-scharfsinnig	positive
-gegrinse	positive
-ritterlichkeit	positive
-glaubhaftigkeit	positive
-sterbehilfe	negative
-selbstentblösserin	negative
-selbstentblösser	negative
-exhibitionistin	negative
-exhibitionist	negative
-majestätisch	positive
-atomisierung	negative
-ästimieren	positive
-hochachten	positive
-würdigen	positive
-billigkeit	positive
-zerschlagen	negative
-gelächter	positive
-hochwertig	positive
-straucheln	negative
-schlecht	negative
-totschläger	negative
-stranden	negative
-ausschweifend	negative
-aufgedreht	positive
-aufgekratzt	positive
-tod	negative
-ungehemmt	negative
-demontage	negative
-schwärmen	positive
-prunk	positive
-bös	negative
-gutherzigkeit	positive
-grossmut	positive
-übertretung	negative
-stolz	positive
-integrität	positive
-strassenräuberin	negative
-banditin	negative
-strassenräuber	negative
-bandit	negative
-grabräuberin	negative
-grabräuber	negative
-bankräuber	negative
-bankräuberin	negative
-brigant	negative
-gräuel	negative
-gräueltat	negative
-geeignet	positive
-tauglich	positive
-verkehrstauglich	positive
-verkehrssicher	positive
-nutzbringend	positive
-nützlich	positive
-fahrtauglich	positive
-fahrtüchtig	positive
-wehrtauglich	positive
-wehrfähig	positive
-wehrdienstfähig	positive
-hochseetüchtig	positive
-seetüchtig	positive
-geländetauglich	positive
-kriegstauglich	positive
-diensttauglich	positive
-alltagstauglich	positive
-praxistauglich	positive
-förderlich	positive
-fördernd	positive
-lohnend	positive
-lohnenswert	positive
-gedeihlich	positive
-verkaufsfördernd	positive
-wachstumsfördernd	positive
-leistungsfördernd	positive
-abbauwürdig	positive
-auserkoren	positive
-auserwählt	positive
-erkoren	positive
-prädestiniert	positive
-vorbestimmt	positive
-akzeptabel	positive
-genehm	positive
-vertretbar	positive
-hinnehmbar	positive
-passabel	positive
-annehmbar	positive
-verantwortbar	positive
-marktfähig	positive
-spitze	positive
-klasse	positive
-endgeil	positive
-marktgerecht	positive
-marktreif	positive
-marktbeherrschend	positive
-marktführend	positive
-erfolgreich	positive
-chancenreich	positive
-perspektivreich	positive
-aussichtsreich	positive
-vielversprechend	positive
-siegreich	positive
-fündig	positive
-zukunftsfähig	positive
-erfolgsverwöhnt	positive
-erfolgsgewöhnt	positive
-verheissungsvoll	positive
-gewinnbar	positive
-förderungswürdig	positive
-verlockend	positive
-ungeschlagen	positive
-unbesiegt	positive
-wegweisend	positive
-zukunftsträchtig	positive
-zukunftweisend	positive
-zukunftsweisend	positive
-meisterlich	positive
-meisterhaft	positive
-gekonnt	positive
-kunstfertig	positive
-virtuos	positive
-wettbewerbsfähig	positive
-konkurrenzfähig	positive
-idyllisch	positive
-malerisch	positive
-arkadisch	positive
-druckfähig	positive
-erlebbar	positive
-reaktionsfähig	positive
-mischbar	positive
-waffenfähig	positive
-singbar	positive
-magnetisierbar	positive
-lagerfähig	positive
-tanzbar	positive
-kombinierbar	positive
-börsenfähig	positive
-bespielbar	positive
-beihilfefähig	positive
-erstattungsfähig	positive
-panzerbrechend	positive
-teilbar	positive
-anrechnungsfähig	positive
-erlernbar	positive
-abzugsfähig	positive
-geländegängig	positive
-lötfähig	positive
-wünschenswert	positive
-sensationell	positive
-märchenhaft	positive
-glückreich	positive
-traumhaft	positive
-zweckmässig	positive
-elefantös	positive
-überragend	positive
-erstrebenswert	positive
-nahestehen	positive
-sympathisieren	positive
-himmlisch	positive
-paradiesisch	positive
-herrlich	positive
-wunderbar	positive
-gelungen	positive
-wundervoll	positive
-geraten	positive
-mattheit	positive
-sinnvoll	positive
-sinnhaft	positive
-sinnig	positive
-sinnreich	positive
-erfolgversprechend	positive
-erfolg versprechend	positive
-sagenhaft	positive
-berauschend	positive
-gehoben	positive
-begrüssenswert	positive
-gutartig	positive
-herzensgut	positive
-perfekt	positive
-prima	positive
-unfehlbar	positive
-okay	positive
-erstklassig	positive
-bedenkenswert	positive
-spitzenmässig	positive
-ideal	positive
-unübertrefflich	positive
-ergebnisreich	positive
-ehrenvoll	positive
-blendend	positive
-fragwürdig	negative
-erhaben	positive
-wohltuend	positive
-blumenpracht	positive
-luder	negative
-geschätzt	positive
-pracht	positive
-animosität	negative
-patzer	negative
-schnitzer	negative
-inspirieren	positive
-zerknallen	negative
-schmierig	negative
-unvollkommen	negative
-lückenhaft	negative
-unvollständig	negative
-defizitär	negative
-zerfurchen	negative
-riskieren	negative
-verwachsen	negative
-bomben	negative
-zerbomben	negative
-flor	positive
-schwafeln	negative
-matt	negative
-bluttat	negative
-quälerei	negative
-auspeitschung	negative
-seeräuberei	negative
-freibeuterei	negative
-piraterie	negative
-geisselung	negative
-ärgerlich	negative
-schmachvoll	negative
-schmählich	negative
-tötung	negative
-totschlag	negative
-drangsalierung	negative
-tierquälerei	negative
-schlachtung	negative
-massentötung	negative
-hausschlachtung	negative
-niederreissung	negative
-ungerecht	negative
-romanze	negative
-satanisch	negative
-teuflisch	negative
-dämonisch	negative
-diabolisch	negative
-hasserfüllt	negative
-stiefmütterlich	negative
-luziferisch	negative
-mephistophelisch	negative
-hämisch	negative
-böswillig	negative
-maliziös	negative
-bösartig	negative
-süffisant	negative
-komisch	positive
-behagen	positive
-sanftmut	positive
-euphorie	positive
-hochgefühl	positive
-hochstimmung	positive
-wonne	positive
-lebensglück	positive
-heil	positive
-freudentaumel	positive
-sexy	positive
-rein	positive
-pharisäisch	negative
-listenreich	negative
-fintenreich	negative
-trickreich	negative
-destruieren	negative
-glückstrahlend	positive
-zerplatzen	negative
-beleidigt	negative
-pikiert	negative
-eingeschnappt	negative
-gekränkt	negative
-delikt	negative
-rechtsbruch	negative
-straftat	negative
-gesetzesverstoss	negative
-vorhaben	positive
-formschön	positive
-formvollendet	positive
-belangen	negative
-mitsollen	positive
-verbrennung	negative
-hexenverbrennung	negative
-selbstverbrennung	negative
-sonnenbrand	negative
-faul	negative
-schmalzig	negative
-dünkelhaft	negative
-altklug	negative
-besserwisserisch	negative
-selbstverliebt	negative
-blasiert	negative
-anmassend	negative
-aufgeblasen	negative
-eingebildet	negative
-lehrerhaft	negative
-neunmalklug	negative
-siebengescheit	negative
-rechthaberisch	negative
-oberlehrerhaft	negative
-swingerin	positive
-seeräuberin	negative
-seeräuber	negative
-piratin	negative
-freibeuter	negative
-freibeuterin	negative
-pirat	negative
-erlaucht	positive
-ausgesucht	positive
-auserlesen	positive
-ausersehen	positive
-stumpf	negative
-überschwang	positive
-aufgebraucht	negative
-durchfall	negative
-vorwurfsvoll	negative
-vitalienbrüder	negative
-verehrungswürdig	positive
-hehr	positive
-entrüsten	negative
-stolpern	negative
-unnachahmlich	positive
-unübertroffen	positive
-unerreicht	positive
-uneinholbar	positive
-hinrichten	negative
-exekutieren	negative
-geistesgegenwärtig	positive
-wachsam	positive
-meditativ	positive
-reaktionsschnell	positive
-versunken	positive
-hellhörig	positive
-kontemplativ	positive
-menschenrechtsverletzung	negative
-feten	positive
-staunen	positive
-lacher	positive
-feindschaftlichkeit	negative
-dealerin	negative
-dealer	negative
-drogendealer	negative
-drogendealerin	negative
-vorgeblich	negative
-subjektiv	negative
-voreingenommen	negative
-tendenziös	negative
-intersubjektiv	negative
-parteiisch	negative
-korrupt	negative
-bestechlich	negative
-käuflich	negative
-rechtslastig	negative
-linkslastig	negative
-gelitten	positive
-kleidsam	positive
-normalisieren	positive
-übermut	positive
-plattfuss	negative
-leiden	positive
-trauern	positive
-darben	positive
-herumschleppen	positive
-durchleiden	positive
-betrauern	positive
-grämen	positive
-formen	positive
-gewalttat	negative
-einschläfern	positive
-körperverletzung	negative
-vorzeigbar	positive
-misshandlung	negative
-kindesmisshandlung	negative
-hinrichtung	negative
-überschwänglich	positive
-sollen	positive
-verworren	negative
-verwoben	negative
-brauchbar	positive
-nutzbar	positive
-verarbeitbar	positive
-verwertbar	positive
-bedienbar	positive
-erweiterbar	positive
-erweiterungsfähig	positive
-ausbaufähig	positive
-erneuerbar	positive
-aufladbar	positive
-auswertbar	positive
-benutzbar	positive
-nachrüstbar	positive
-skalierbar	positive
-internetfähig	positive
-speicherbar	positive
-abbaubar	positive
-praktikabel	positive
-erschliessbar	positive
-netzwerkfähig	positive
-anbaufähig	positive
-handlich	positive
-renovierbar	positive
-instandsetzbar	positive
-recyclingfähig	positive
-wiederverwertbar	positive
-schmelzbar	positive
-schmiedbar	positive
-bearbeitbar	positive
-kompostierbar	positive
-benutzerfreundlich	positive
-anwenderfreundlich	positive
-regenerativ	positive
-wiederaufladbar	positive
-gebrauchsfähig	positive
-gerichtsverwertbar	positive
-platzen	negative
-bersten	negative
-detonieren	negative
-zerbersten	negative
-sauer	negative
-säuerlich	negative
-brüllen	positive
-drogenabhängigkeit	negative
-drogenmissbrauch	negative
-drogensucht	negative
-koffeinmissbrauch	negative
-koffeinabhängigkeit	negative
-koffeinsucht	negative
-sexsucht	negative
-arbeitssucht	negative
-spielsucht	negative
-tablettenabhängigkeit	negative
-nikotinsucht	negative
-tablettenmissbrauch	negative
-nikotinmissbrauch	negative
-zigarettenabhängigkeit	negative
-nikotinabhängigkeit	negative
-tablettensucht	negative
-kaffeesucht	negative
-kokainsucht	negative
-morphiumsucht	negative
-kokainabhängigkeit	negative
-heroinmissbrauch	negative
-heroinabhängigkeit	negative
-heroinsucht	negative
-kokainmissbrauch	negative
-schwierig	negative
-wettern	negative
-astigmatismus	positive
-arroganz	positive
-anmassung	positive
-selbstherrlichkeit	positive
-überheblichkeit	positive
-dünkel	positive
-selbstgefälligkeit	positive
-eitelkeit	positive
-standesdünkel	positive
-verbrauchen	negative
-boshaft	negative
-niederträchtig	negative
-erlegen	negative
-aushängeschild	positive
-märchen	positive
-oberwasser	positive
-volksmärchen	positive
-kunstmärchen	positive
-zaubermärchen	positive
-zeitüberschreitung	negative
-transzendenz	negative
-übersättigung	negative
-hervorragen	positive
-vergewaltigung	negative
-erfolg	positive
-kabinettstückchen	positive
-glanzleistung	positive
-meisterleistung	positive
-nonplusultra	positive
-fahndungserfolg	positive
-teilerfolg	positive
-achtungserfolg	positive
-behandlungserfolg	positive
-charterfolg	positive
-turniererfolg	positive
-heilerfolg	positive
-kinoerfolg	positive
-überraschungserfolg	positive
-publikumserfolg	positive
-riesenerfolg	positive
-verkaufserfolg	positive
-welterfolg	positive
-medaillenerfolg	positive
-fortune	positive
-anfangserfolg	positive
-therapierfolg	positive
-lernerfolg	positive
-vereinserfolg	positive
-zuchterfolg	positive
-strahlen	positive
-konsumieren	negative
-abnutzen	negative
-drogen nehmen	negative
-reinziehen	negative
-verkonsumieren	negative
-erstrahlen	positive
-liquidator	negative
-verletzt	negative
-korsar	negative
-zugänglich	positive
-erbittern	negative
-unfair	negative
-einbeulen	negative
-verstoss	negative
-wut	negative
-verfehlung	negative
-räuber	negative
-höhenflug	positive
-aufbrauchen	negative
-schlüsselgewalt	negative
-mafioso	negative
-präferieren	positive
-swinger	positive
-schimmel	negative
-edelschimmel	negative
-beleidigen	negative
-verdämmern	negative
-hereinlegen	negative
-hintergehen	negative
-kungeln	negative
-mauscheln	negative
-neppen	negative
-übervorteilen	negative
-hinwegtäuschen	negative
-fremdgehen	negative
-hörnen	negative
-bluffen	negative
-ablinken	negative
-behumpsen	negative
-behumsen	negative
-linken	negative
-henken	negative
-aufknüpfen	negative
-verbauen	negative
-wagen	negative
-erkühnen	negative
-anmassen	negative
-erfrechen	negative
-erdreisten	negative
-einstossen	negative
-kabbalistisch	negative
-entstellen	negative
-verzapfen	negative
-ausfressen	negative
-zetern	negative
-tragikomisch	positive
-mogeln	negative
-schummeln	negative
-betuppen	negative
-lächerlich	positive
-beschummeln	negative
-vergällen	negative
+übermütig	positive	1.000000
+sinnlich	positive	1.000000
+freudig	positive	1.000000
+verlustieren	positive	1.000000
+demonstrationsobjekt	positive	1.000000
+töten	negative	1.000000
+edel	positive	1.000000
+gemein	negative	1.000000
+geheimnisverrat	negative	1.000000
+unzüchtig	negative	1.000000
+lachen	positive	1.000000
+nachtragend	negative	1.000000
+hinterlistig	negative	1.000000
+lieben	positive	1.000000
+begehrt	positive	1.000000
+beschädigt	negative	1.000000
+unappetitlich	negative	1.000000
+saus	positive	1.000000
+vergewaltigen	negative	1.000000
+passioniert	positive	1.000000
+froh gestimmt	positive	1.000000
+erklagen	negative	1.000000
+lieblingsobjekt	positive	1.000000
+vierschrötig	negative	1.000000
+gütig	positive	1.000000
+hoffnung	positive	1.000000
+ausklagen	negative	1.000000
+verderben	negative	1.000000
+behaglich	positive	1.000000
+verschlagen	negative	1.000000
+jubeln	positive	1.000000
+mangelhaft	negative	1.000000
+verrucht	negative	1.000000
+ehrlich	positive	1.000000
+schätzen	positive	1.000000
+lieb	positive	1.000000
+vergehen	negative	1.000000
+nächstenliebe	positive	1.000000
+leidlich	positive	1.000000
+vorzeigeobjekt	positive	1.000000
+enthusiastisch	positive	1.000000
+arrogant	negative	1.000000
+fettig	negative	1.000000
+lumpig	negative	1.000000
+zerstören	negative	1.000000
+schadenfroh	negative	1.000000
+glücklichkeit	positive	1.000000
+verbrecherisch	negative	1.000000
+krieg	negative	1.000000
+unbeschreiblich	negative	1.000000
+freundlich	positive	1.000000
+zerrüttet	negative	1.000000
+hinterhältig	negative	1.000000
+verlogen	negative	1.000000
+plebejisch	negative	1.000000
+effektiv	positive	1.000000
+hass	negative	1.000000
+unüberprüfbar	negative	1.000000
+frohgestimmt	positive	1.000000
+lauschig	positive	1.000000
+verworfen	negative	1.000000
+fleischlich	positive	1.000000
+lebensfroh	positive	1.000000
+ungepflegt	negative	1.000000
+lamentieren	negative	1.000000
+gewagt	negative	1.000000
+superstimmung	positive	1.000000
+enzymdefekt	negative	1.000000
+schimpfen	negative	1.000000
+sicherheitsgefährdend	negative	1.000000
+goldschatz	positive	1.000000
+liebesfähig	positive	1.000000
+pickelig	negative	1.000000
+entstellt	negative	1.000000
+liebenswürdig	positive	1.000000
+unattraktiv	negative	1.000000
+humorvoll	positive	1.000000
+friedensgefährdend	negative	1.000000
+dekadent	negative	1.000000
+erträglich	positive	1.000000
+komfortabel	positive	1.000000
+taktvoll	positive	1.000000
+allerbeste	positive	1.000000
+schurkisch	negative	1.000000
+begeistert	positive	1.000000
+entzücken	positive	1.000000
+galant	positive	1.000000
+unkeusch	negative	1.000000
+übel	negative	1.000000
+liebevoll	positive	1.000000
+lustbetont	positive	1.000000
+jugendgefährdend	negative	1.000000
+hoffnungsfunke	positive	1.000000
+unsittlich	negative	1.000000
+murren	negative	1.000000
+hochzufrieden	positive	1.000000
+unsagbar	negative	1.000000
+faszinierend	positive	1.000000
+wehklagen	negative	1.000000
+anständig	positive	1.000000
+liederlich	negative	1.000000
+einladend	positive	1.000000
+erleichtert	positive	1.000000
+verwerflich	negative	1.000000
+schön	positive	1.000000
+eingefallen	negative	1.000000
+liebenswert	positive	1.000000
+lieblingsschauspieler	positive	1.000000
+erfreulich	positive	1.000000
+verzeihend	positive	1.000000
+paradedisziplin	positive	1.000000
+unehrlich	negative	1.000000
+ertragbar	positive	1.000000
+brillant	positive	1.000000
+ungeschützt	negative	1.000000
+genusssüchtig	negative	1.000000
+vernichten	negative	1.000000
+hölle	negative	1.000000
+lustvoll	positive	1.000000
+fest	positive	1.000000
+riskant	negative	1.000000
+ausgelassen	positive	1.000000
+amüsieren	positive	1.000000
+obsessiv	positive	1.000000
+wütend	negative	1.000000
+gut	positive	1.000000
+zuvorkommend	positive	1.000000
+zerstört	negative	1.000000
+brüderlichkeit	positive	1.000000
+unfein	negative	1.000000
+präferenz	positive	1.000000
+fabelhaft	positive	1.000000
+humorig	positive	1.000000
+lieblingsmusik	positive	1.000000
+vergnügt	positive	1.000000
+aufrichtig	positive	1.000000
+gesundheitsgefährdend	negative	1.000000
+mord	negative	1.000000
+lichtblick	positive	1.000000
+scheisse	negative	1.000000
+motivieren	positive	1.000000
+empört	negative	1.000000
+lügnerisch	negative	1.000000
+erholung	positive	1.000000
+befreit	positive	1.000000
+gesprächsbereit	positive	1.000000
+einklagen	negative	1.000000
+unbeschreibbar	negative	1.000000
+frohlocken	positive	1.000000
+renovierungsbedürftig	negative	1.000000
+lächeln	positive	1.000000
+schrottreif	negative	1.000000
+fürsorglich	positive	1.000000
+lebenslustig	positive	1.000000
+kirchenschatz	positive	1.000000
+empören	negative	1.000000
+unverständlich	negative	1.000000
+fröhlich	positive	1.000000
+freuen	positive	1.000000
+undurchschaubar	negative	1.000000
+verbrechen	negative	1.000000
+listig	negative	1.000000
+ramponiert	negative	1.000000
+erquicklich	positive	1.000000
+gammelig	negative	1.000000
+garstig	negative	1.000000
+verklagen	negative	1.000000
+kaputt	negative	1.000000
+verkommen	negative	1.000000
+liebreich	positive	1.000000
+gemütlich	positive	1.000000
+verdorben	negative	1.000000
+blasphemisch	negative	1.000000
+kompliziert	negative	1.000000
+hässlich	negative	1.000000
+überschäumend	positive	1.000000
+misslingen	negative	1.000000
+frevlerisch	negative	1.000000
+gendefekt	negative	1.000000
+schwesterlichkeit	positive	1.000000
+nett	positive	1.000000
+glücklich	positive	1.000000
+erfahrungsschatz	positive	1.000000
+hoffnungsschimmer	positive	1.000000
+freude	positive	1.000000
+lieblingssache	positive	1.000000
+geruhsam	positive	1.000000
+elegant	positive	1.000000
+potthässlich	negative	1.000000
+entartet	negative	1.000000
+beeumeln	positive	1.000000
+ladehemmung	negative	1.000000
+risikobehaftet	negative	1.000000
+verlottert	negative	1.000000
+sanierungsbedürftig	negative	1.000000
+problematisch	negative	1.000000
+zerissen	negative	1.000000
+unaufrichtig	negative	1.000000
+reparaturbedürftig	negative	1.000000
+wehrkraftzersetzung	negative	1.000000
+affäre	negative	1.000000
+missbrauch	negative	1.000000
+gnädig	positive	1.000000
+zufrieden	positive	1.000000
+wassergefährdend	negative	1.000000
+liebe	positive	1.000000
+zerlumpt	negative	1.000000
+ausgezeichnet	positive	1.000000
+zernichten	negative	1.000000
+gefährdend	negative	1.000000
+qualitätvoll	positive	1.000000
+unaussprechlich	negative	1.000000
+entgegenkommend	positive	1.000000
+kardinaltugend	positive	1.000000
+gefährlich	negative	1.000000
+unsäglich	negative	1.000000
+korrosiv	negative	1.000000
+rassenhass	negative	1.000000
+zumutbar	positive	1.000000
+hervorragend	positive	1.000000
+anbeten	positive	1.000000
+intrigant	negative	1.000000
+staatsschatz	positive	1.000000
+sündhaft	negative	1.000000
+irreführend	negative	1.000000
+unansehnlich	negative	1.000000
+vernichtet	negative	1.000000
+vorliebe	positive	1.000000
+ausrotten	negative	1.000000
+klagen	negative	1.000000
+vergammelt	negative	1.000000
+unschicklich	negative	1.000000
+perforiert	negative	1.000000
+bequem	positive	1.000000
+bodenschatz	positive	1.000000
+vergnügen	positive	1.000000
+geschwisterliebe	positive	1.000000
+verärgert	negative	1.000000
+wünschen	positive	1.000000
+hochverrat	negative	1.000000
+fröhlichkeit	positive	1.000000
+betrügen	negative	1.000000
+idealistisch	positive	1.000000
+heuchlerisch	negative	1.000000
+erheiterung	positive	1.000000
+abgerissen	negative	1.000000
+ölig	negative	1.000000
+zerlöchert	negative	1.000000
+jammern	negative	1.000000
+tugend	positive	1.000000
+beölen	positive	1.000000
+höflich	positive	1.000000
+heilfroh	positive	1.000000
+beliebt	positive	1.000000
+froh	positive	1.000000
+schatz	positive	1.000000
+grossartig	positive	1.000000
+kompromissbereit	positive	1.000000
+verlumpt	negative	1.000000
+lebenstrieb	positive	1.000000
+güte	positive	1.000000
+bezaubernd	positive	1.000000
+euphorisch	positive	1.000000
+gotteslästerlich	negative	1.000000
+staatsgefährdend	negative	1.000000
+feindlich	negative	1.000000
+hoffnungsstrahl	positive	1.000000
+fies	negative	1.000000
+historischer krieg	negative	1.000000
+falsch	negative	1.000000
+lebensbejahend	positive	1.000000
+ungesichert	negative	1.000000
+huldreich	positive	1.000000
+jubel	positive	1.000000
+defekt	negative	1.000000
+erlöst	positive	1.000000
+zotig	negative	1.000000
+erstaunlich	positive	1.000000
+wohnlich	positive	1.000000
+gewalt	negative	1.000000
+verwahrlost	negative	1.000000
+lästerlich	negative	1.000000
+frohsinn	positive	1.000000
+diskret	positive	1.000000
+gammlig	negative	1.000000
+schadhaft	negative	1.000000
+begeisterung	positive	1.000000
+quietschvergnügt	positive	1.000000
+sündig	negative	1.000000
+schmuddelig	negative	1.000000
+domschatz	positive	1.000000
+einwandfrei	positive	1.000000
+heruntergekommen	negative	1.000000
+bombenstimmung	positive	1.000000
+judenfeindlichkeit	negative	1.000000
+schrecklich	negative	1.000000
+unästhetisch	negative	1.000000
+judenhass	negative	1.000000
+schwärmerisch	positive	1.000000
+ungeschlacht	negative	1.000000
+unanständig	negative	1.000000
+überbordend	positive	1.000000
+betrug	negative	1.000000
+attraktiv	positive	1.000000
+aushaltbar	positive	1.000000
+zärtlich	positive	1.000000
+angenehm	positive	1.000000
+lasterhaft	negative	1.000000
+unkontrollierbar	negative	1.000000
+beruhigt	positive	1.000000
+eros	positive	1.000000
+unmoralisch	negative	1.000000
+verschwitzt	negative	1.000000
+dumm	negative	1.000000
+berühmt	positive	1.000000
+landesverrat	negative	1.000000
+hassen	negative	1.000000
+unbeliebt	negative	1.000000
+erfreuen	positive	1.000000
+lieblingsfarbe	positive	1.000000
+feuchtfröhlich	positive	1.000000
+verrat	negative	1.000000
+strähnig	negative	1.000000
+mies	negative	1.000000
+grobschlächtig	negative	1.000000
+risikoreich	negative	1.000000
+lieblingsschauspielerin	positive	1.000000
+sittenlos	negative	1.000000
+ungehobelt	negative	1.000000
+wüst	negative	1.000000
+aggressiv	negative	1.000000
+vergöttern	positive	1.000000
+verdammt	negative	1.000000
+luderhaft	negative	1.000000
+glimpflich	positive	1.000000
+schimmelig	negative	1.000000
+seelig	positive	1.000000
+verschimmelt	negative	1.000000
+überglücklich	positive	1.000000
+glückselig	positive	1.000000
+ungetrübt	positive	1.000000
+lebensgefährlich	negative	1.000000
+bedrohlich	negative	1.000000
+lebensbedrohend	negative	1.000000
+lebensbedrohlich	negative	1.000000
+selbstliebe	positive	1.000000
+vaterlandsliebe	positive	1.000000
+befriedigend	positive	1.000000
+gottesliebe	positive	1.000000
+schmeichelhaft	positive	1.000000
+zufriedenstellend	positive	1.000000
+minne	positive	1.000000
+mitmenschlichkeit	positive	1.000000
+mutterliebe	positive	1.000000
+selbstmörderisch	negative	1.000000
+wohlmeinend	positive	1.000000
+seelsorgerlich	positive	1.000000
+treu sorgend	positive	1.000000
+seelsorglich	positive	1.000000
+wohlwollend	positive	1.000000
+behütend	positive	1.000000
+seelsorgerisch	positive	1.000000
+treusorgend	positive	1.000000
+gutgemeint	positive	1.000000
+schützend	positive	1.000000
+letal	negative	0.999999
+tödlich	negative	0.999999
+kichern	positive	0.999999
+ranzig	negative	0.999999
+verfallen	negative	0.999999
+verrottet	negative	0.999999
+verderbt	negative	0.999999
+auslachen	positive	0.999999
+verlachen	positive	0.999999
+gickern	positive	0.999998
+gickeln	positive	0.999998
+torgefährlich	negative	0.999998
+brandgefährlich	negative	0.999998
+explosionsgefährlich	negative	0.999998
+existenzbedrohend	negative	0.999998
+hochgefährlich	negative	0.999998
+gefahrvoll	negative	0.999998
+giggeln	positive	0.999998
+gackern	positive	0.999998
+giggern	positive	0.999998
+vielschichtig	negative	0.999998
+komplex	negative	0.999998
+beziehungsreich	negative	0.999998
+hochkomplex	negative	0.999997
+hübsch	positive	0.999997
+schmuck	positive	0.999996
+dekorativ	positive	0.999996
+bildhübsch	positive	0.999995
+schmuckvoll	positive	0.999995
+reichverziert	positive	0.999993
+reich verziert	positive	0.999993
+herbeisehnen	positive	0.999982
+wegwünschen	positive	0.999982
+fortwünschen	positive	0.999982
+herwünschen	positive	0.999982
+stilsicher	positive	0.999982
+stilgerecht	positive	0.999982
+bildschön	positive	0.999982
+zurückwünschen	positive	0.999982
+geschmackvoll	positive	0.999982
+wunderschön	positive	0.999982
+herbeiwünschen	positive	0.999982
+stilvoll	positive	0.999982
+begriffsstutzig	negative	0.999976
+prusten	positive	0.999973
+loslatzen	positive	0.999973
+verzwickt	negative	0.999973
+verwünscht	negative	0.999973
+loslachen	positive	0.999973
+hochkompliziert	negative	0.999973
+losbrüllen	positive	0.999973
+verzwackt	negative	0.999973
+feixen	positive	0.999973
+vermaledeit	negative	0.999973
+auflachen	positive	0.999973
+vertrackt	negative	0.999973
+losplatzen	positive	0.999973
+herausplatzen	positive	0.999973
+verflucht	negative	0.999973
+losprusten	positive	0.999973
+verflixt	negative	0.999973
+enthaupten	negative	0.999966
+verfügungsgewalt	negative	0.999962
+waffengewalt	negative	0.999962
+polizeigewalt	negative	0.999962
+legislativgewalt	negative	0.999962
+heftigkeit	negative	0.999962
+amtsgewalt	negative	0.999962
+feindeshand	negative	0.999962
+vehemenz	negative	0.999962
+exekutive	negative	0.999962
+herrschaftsgewalt	negative	0.999962
+entscheidungsgewalt	negative	0.999962
+naturgewalt	negative	0.999962
+hoheitsgewalt	negative	0.999962
+judikative	negative	0.999962
+regierungsgewalt	negative	0.999962
+kameradschaftlich	positive	0.999960
+freundschaftlich	positive	0.999960
+partnerschaftlich	positive	0.999960
+dekaptieren	negative	0.999949
+dekapitieren	negative	0.999949
+anschnauben	negative	0.999930
+anknurren	negative	0.999930
+anblasen	negative	0.999930
+anzischen	negative	0.999930
+anfauchen	negative	0.999930
+anblaffen	negative	0.999930
+anschnauzen	negative	0.999930
+schnarren	negative	0.999923
+anschnarren	negative	0.999923
+sechstagekrieg	negative	0.999915
+falklandkrieg	negative	0.999915
+sonderbundskrieg	negative	0.999915
+vietnamkrieg	negative	0.999915
+bosnienkrieg	negative	0.999915
+zulukrieg	negative	0.999915
+vietnam-krieg	negative	0.999915
+burgunderkrieg	negative	0.999915
+markgrafenkrieg	negative	0.999915
+kosovokrieg	negative	0.999915
+jugoslawienkrieg	negative	0.999915
+koreakrieg	negative	0.999915
+golfkrieg	negative	0.999915
+palästinakrieg	negative	0.999915
+kroatienkrieg	negative	0.999915
+perserkrieg	negative	0.999915
+bruderkrieg	negative	0.999915
+pazifikkrieg	negative	0.999915
+hussitenkrieg	negative	0.999915
+balkankrieg	negative	0.999915
+burenkrieg	negative	0.999915
+winterkrieg	negative	0.999915
+irakkrieg	negative	0.999915
+indianerkrieg	negative	0.999915
+gären	negative	0.999910
+erschiessen	negative	0.999895
+erstechen	negative	0.999895
+trottelhaft	negative	0.999891
+idiotisch	negative	0.999891
+idiotenhaft	negative	0.999891
+trottelig	negative	0.999891
+vergären	negative	0.999881
+erdolchen	negative	0.999856
+suizidieren	negative	0.999855
+selbst töten	negative	0.999855
+leutselig	positive	0.999833
+magenfreundlich	positive	0.999833
+hautfreundlich	positive	0.999833
+wohlgesonnen	positive	0.999833
+kumpelhaft	positive	0.999833
+gesinnt	positive	0.999833
+bedienungsfreundlich	positive	0.999833
+jovial	positive	0.999833
+kundenfreundlich	positive	0.999833
+wartungsfreundlich	positive	0.999833
+investitionsfreundlich	positive	0.999833
+wohlgesinnt	positive	0.999833
+leserfreundlich	positive	0.999833
+entleiben	negative	0.999827
+religionskrieg	negative	0.999803
+giften	negative	0.999731
+anscheissen	negative	0.999731
+zusammenstauchen	negative	0.999731
+runtermachen	negative	0.999731
+anranzen	negative	0.999731
+deckeln	negative	0.999731
+abkanzeln	negative	0.999731
+heruntermachen	negative	0.999731
+runterputzen	negative	0.999731
+fluchen	negative	0.999731
+motzen	negative	0.999731
+herunterkanzeln	negative	0.999731
+abkapiteln	negative	0.999731
+heiliger krieg	negative	0.999726
+dschihad	negative	0.999726
+saudumm	negative	0.999665
+dusslig	negative	0.999665
+doof	negative	0.999665
+tumb	negative	0.999665
+töricht	negative	0.999665
+modern	negative	0.999665
+vermodern	negative	0.999665
+saudoof	negative	0.999665
+saublöd	negative	0.999665
+debil	negative	0.999665
+dusselig	negative	0.999665
+verrotten	negative	0.999665
+blöd	negative	0.999665
+geistesschwach	negative	0.999665
+unterbelichtet	negative	0.999665
+dämlich	negative	0.999665
+strohdumm	negative	0.999665
+ignorant	negative	0.999665
+schwachsinnig	negative	0.999665
+einfältig	negative	0.999665
+dull	negative	0.999665
+strohdoof	negative	0.999665
+rassistisch	negative	0.999385
+ausländerfeindlich	negative	0.999383
+xenophob	negative	0.999383
+fremdenfeindlich	negative	0.999383
+antisemitisch	negative	0.999325
+judenfeindlich	negative	0.999323
+familienfeindlich	negative	0.999012
+schwulenfeindlich	negative	0.999012
+umbringen	negative	0.998989
+totschlagen	negative	0.998989
+dahinraffen	negative	0.998989
+massakrieren	negative	0.998989
+erschlagen	negative	0.998989
+niederstechen	negative	0.998989
+abschlachten	negative	0.998989
+abmurksen	negative	0.998989
+niedermetzeln	negative	0.998989
+hinwegraffen	negative	0.998989
+hinmorden	negative	0.998989
+ersäufen	negative	0.998989
+ertränken	negative	0.998989
+ermorden	negative	0.998989
+feindselig	negative	0.998864
+feindschaftlich	negative	0.998864
+homophob	negative	0.998791
+kinderfeindlich	negative	0.998791
+angriffskrieg	negative	0.998714
+präventivkrieg	negative	0.998440
+christenfeindlich	negative	0.997370
+regimefeindlich	negative	0.997370
+republikfeindlich	negative	0.997370
+gesellschaftsfeindlich	negative	0.997370
+behindertenfeindlich	negative	0.997370
+minderheitenfeindlich	negative	0.997370
+kaiserfeindlich	negative	0.997370
+religionsfeindlich	negative	0.997370
+männerfeindlich	negative	0.997370
+technikfeindlich	negative	0.997370
+fortschrittsfeindlich	negative	0.997370
+parteifeindlich	negative	0.997370
+wissenschaftsfeindlich	negative	0.997370
+reformfeindlich	negative	0.997370
+demokratiefeindlich	negative	0.997370
+volksfeindlich	negative	0.997370
+kunstfeindlich	negative	0.997370
+kirchenfeindlich	negative	0.997370
+regierungsfeindlich	negative	0.997370
+deutschfeindlich	negative	0.997370
+islamfeindlich	negative	0.997370
+israelfeindlich	negative	0.997370
+leibfeindlich	negative	0.997370
+antiklerikal	negative	0.997370
+bildungsfeindlich	negative	0.997370
+antideutsch	negative	0.997370
+menschenfeindlich	negative	0.997370
+kulturfeindlich	negative	0.997370
+umweltfeindlich	negative	0.997370
+lustfeindlich	negative	0.997370
+körperfeindlich	negative	0.997370
+staatsfeindlich	negative	0.997370
+verfassungsfeindlich	negative	0.997370
+geistfeindlich	negative	0.997370
+frauenfeindlich	negative	0.997370
+amtsmissbrauch	negative	0.997048
+machtmissbrauch	negative	0.997048
+kindesmissbrauch	negative	0.997048
+grabenkrieg	negative	0.996702
+kolonialkrieg	negative	0.996702
+vernichtungskrieg	negative	0.996702
+sachsenkrieg	negative	0.996702
+bandenkrieg	negative	0.996702
+partisanenkrieg	negative	0.996702
+weltkrieg	negative	0.996702
+kleinkrieg	negative	0.996702
+eroberungskrieg	negative	0.996702
+luftkrieg	negative	0.996702
+bürgerkrieg	negative	0.996702
+glaubenskrieg	negative	0.996702
+bombenkrieg	negative	0.996702
+ringkrieg	negative	0.996702
+koalitionskrieg	negative	0.996702
+seekrieg	negative	0.996702
+opiumkrieg	negative	0.996702
+handelskrieg	negative	0.996702
+atomkrieg	negative	0.996702
+grenzkrieg	negative	0.996702
+krimkrieg	negative	0.996702
+fortsetzungskrieg	negative	0.996702
+landkrieg	negative	0.996702
+sezessionskrieg	negative	0.996702
+stammeskrieg	negative	0.996702
+blitzkrieg	negative	0.996702
+abnutzungskrieg	negative	0.996702
+bauernkrieg	negative	0.996702
+stellvertreterkrieg	negative	0.996702
+revolutionskrieg	negative	0.996702
+unabhängigkeitskrieg	negative	0.996702
+stellungskrieg	negative	0.996702
+verteidigungskrieg	negative	0.996702
+städtekrieg	negative	0.996702
+einigungskrieg	negative	0.996702
+befreiungskrieg	negative	0.996702
+klonkrieg	negative	0.996702
+freiheitskrieg	negative	0.996702
+erbfolgekrieg	negative	0.996702
+zweifrontenkrieg	negative	0.996702
+gebirgskrieg	negative	0.996702
+behandlungsgut	positive	0.991771
+kulturgut	positive	0.991771
+gemeingut	positive	0.991771
+sammlungsgut	positive	0.991771
+rüstungsgut	positive	0.991771
+gefahrgut	positive	0.991771
+investitionsgut	positive	0.991771
+versorgungsgut	positive	0.991771
+massenstückgut	positive	0.991771
+volksgut	positive	0.991771
+liedgut	positive	0.991771
+massengut	positive	0.991771
+obszön	negative	0.988865
+ordinär	negative	0.988865
+vulgär	negative	0.988865
+tadellos	positive	0.982544
+ausätschen	positive	0.978571
+niedlich	positive	0.978068
+goldig	positive	0.978068
+herzig	positive	0.978068
+possierlich	positive	0.978068
+putzig	positive	0.978068
+knuffig	positive	0.978068
+schamlos	negative	0.977729
+faible	positive	0.975773
+drollig	positive	0.973465
+preisgekrönt	positive	0.972134
+zauberhaft	positive	0.969161
+famos	positive	0.968727
+fulminant	positive	0.968727
+vorzüglich	positive	0.967237
+bestechend	positive	0.967237
+vortrefflich	positive	0.967237
+ruchlos	negative	0.953528
+zerlöchern	negative	0.947768
+perforieren	negative	0.947757
+durchlöchern	negative	0.947757
+einstanzen	negative	0.947750
+exzellent	positive	0.947363
+ätschen	positive	0.945245
+ergötzen	positive	0.944966
+süsslich	positive	0.939515
+zuckersüss	positive	0.939515
+süss	positive	0.939514
+hilfsbereit	positive	0.938890
+grandios	positive	0.937453
+herausragend	positive	0.937453
+abknallen	negative	0.936610
+deformiert	negative	0.932000
+unförmig	negative	0.932000
+zerbeult	negative	0.932000
+verformt	negative	0.932000
+grundübel	negative	0.927273
+unverdorben	positive	0.925341
+frank	positive	0.925341
+wohlgefallen	positive	0.924987
+frivol	negative	0.923077
+anstössig	negative	0.923077
+versagen	negative	0.922627
+scheitern	negative	0.922627
+niederlage	negative	0.922620
+missgeschick	negative	0.922604
+trauerspiel	negative	0.922604
+ungeschick	negative	0.922604
+reinfall	negative	0.922604
+debakel	negative	0.922604
+desaster	negative	0.922604
+armageddon	negative	0.922604
+fiasko	negative	0.922604
+flop	negative	0.922604
+marktversagen	negative	0.922604
+satzverlust	negative	0.922568
+punkteverlust	negative	0.922568
+knock-out	negative	0.922568
+auswärtsniederlage	negative	0.922568
+wahlniederlage	negative	0.922568
+heimniederlage	negative	0.922568
+finalniederlage	negative	0.922568
+abstimmungsniederlage	negative	0.922568
+k.o.-niederlage	negative	0.922568
+schlappe	negative	0.922568
+punktniederlage	negative	0.922568
+kriegsniederlage	negative	0.922568
+knockout	negative	0.922568
+punktverlust	negative	0.922568
+wahlschlappe	negative	0.922568
+betörend	positive	0.920700
+gepflegt	positive	0.920700
+apart	positive	0.920700
+liebreizend	positive	0.920700
+unwiderstehlich	positive	0.920700
+rassig	positive	0.920700
+begehrenswert	positive	0.920700
+adrett	positive	0.920700
+verführerisch	positive	0.920700
+kokett	positive	0.920700
+appetitlich	positive	0.920700
+lieblich	positive	0.920700
+hinreissend	positive	0.920700
+charmant	positive	0.920700
+scharmant	positive	0.920700
+reizend	positive	0.920700
+bezückend	positive	0.920700
+entzückend	positive	0.920700
+grienen	positive	0.913025
+lustig	positive	0.912281
+lausbubenhaft	positive	0.912281
+lausbübisch	positive	0.912281
+burlesk	positive	0.912281
+verschmitzt	positive	0.912281
+schelmisch	positive	0.912281
+schalkhaft	positive	0.912281
+possenhaft	positive	0.912281
+scherzhaft	positive	0.912281
+anstand	positive	0.910954
+verbrecher	negative	0.905887
+anzüglich	negative	0.903846
+beschmunzeln	positive	0.901627
+fehlleistung	negative	0.901527
+vergnügtheit	positive	0.898581
+gefällig	positive	0.898413
+wohlgeformt	positive	0.896154
+griffig	positive	0.896154
+wohl geformt	positive	0.896154
+aufgebracht	negative	0.895361
+geharnischt	negative	0.895361
+schockiert	negative	0.895361
+geschockt	negative	0.895360
+gelähmt	negative	0.895360
+paralysiert	negative	0.895360
+fassungslos	negative	0.895360
+entsetzt	negative	0.895360
+entgeistert	negative	0.895360
+behilflich	positive	0.891358
+konstruktiv	positive	0.891358
+schwäche	positive	0.890288
+fehlsichtigkeit	positive	0.890223
+sehschwäche	positive	0.890206
+weitsichtigkeit	positive	0.890174
+kurzsichtigkeit	positive	0.890174
+nachtblindheit	positive	0.890163
+rotgrünblindheit	positive	0.890163
+farbenblindheit	positive	0.890163
+lese-rechtschreib-schwäche	positive	0.890073
+anfälligkeit	positive	0.890073
+schlaffheit	positive	0.890073
+schlappheit	positive	0.890073
+altersschwäche	positive	0.890073
+rechenschwäche	positive	0.890073
+dyskalkulie	positive	0.890073
+dyslexie	positive	0.890073
+herzschwäche	positive	0.890073
+muskelschwäche	positive	0.890073
+armutszeugnis	positive	0.890073
+bindegewebsschwäche	positive	0.890073
+legasthenie	positive	0.890073
+hinfälligkeit	positive	0.890073
+erbauen	positive	0.888744
+renommiert	positive	0.887277
+pfuscherei	negative	0.883663
+pfusch	negative	0.883663
+pfuschwerk	negative	0.883663
+murks	negative	0.883663
+abschiessen	negative	0.881276
+bejubeln	positive	0.877328
+triumphieren	positive	0.874669
+prunkvoll	positive	0.874390
+pompös	positive	0.874390
+prunkhaft	positive	0.874390
+prachtvoll	positive	0.874390
+prächtig	positive	0.874390
+gefallen	positive	0.872043
+menschenwürdig	positive	0.871884
+menschenfreundlich	positive	0.871884
+inferno	negative	0.870370
+qualitätsvoll	positive	0.869162
+hochklassig	positive	0.867414
+fehlschlag	negative	0.865826
+grinsen	positive	0.864077
+schelm	positive	0.863841
+schalk	positive	0.863841
+anbetung	positive	0.861788
+vergötterung	positive	0.861788
+humanitär	positive	0.861301
+philanthropisch	positive	0.861301
+ungemach	negative	0.854545
+edelmütig	positive	0.853341
+human	positive	0.850259
+menschlich	positive	0.850259
+scharm	positive	0.849697
+charme	positive	0.849697
+faulen	negative	0.849613
+fäulen	negative	0.849613
+link	negative	0.848328
+indigniert	negative	0.847797
+entrüstet	negative	0.847797
+malheur	negative	0.845447
+misserfolg	negative	0.845264
+vertrauenswürdig	positive	0.843894
+unliebsam	negative	0.843750
+missliebig	negative	0.843750
+verhasst	negative	0.843750
+väterlich	positive	0.842975
+mütterlich	positive	0.842975
+grossväterlich	positive	0.842975
+anziehend	positive	0.841400
+schmunzeln	positive	0.840934
+vergnüglich	positive	0.839632
+amüsant	positive	0.839632
+kriegsbegeisterung	positive	0.839040
+fanatismus	positive	0.839040
+enthusiasmus	positive	0.839040
+eingängig	positive	0.837661
+flau	negative	0.833028
+belämmert	negative	0.830903
+behämmert	negative	0.830903
+bescheuert	negative	0.830903
+bärendienst	positive	0.829032
+wohltat	positive	0.829032
+liebesdienst	positive	0.829032
+missvergnügt	negative	0.826306
+unbefriedigt	negative	0.826306
+unzufrieden	negative	0.826306
+angefressen	negative	0.826306
+fehlleitend	negative	0.824759
+hilfreich	positive	0.817914
+verfaulen	negative	0.817097
+mau	negative	0.815672
+freundschaft	positive	0.814488
+fanfreundschaft	positive	0.814441
+völkerfreundschaft	positive	0.814441
+männerfreundschaft	positive	0.814441
+städtefreundschaft	positive	0.814441
+brieffreundschaft	positive	0.814441
+gastfreundschaft	positive	0.814441
+orgiastisch	negative	0.814104
+pfuschen	negative	0.812007
+schiefgehen	negative	0.811987
+daneben gehen	negative	0.811987
+schief gehen	negative	0.811987
+missraten	negative	0.811987
+danebengehen	negative	0.811987
+schief laufen	negative	0.811987
+fehlschlagen	negative	0.811987
+floppen	negative	0.811987
+stümpern	negative	0.811987
+dilettieren	negative	0.811987
+schieflaufen	negative	0.811987
+fehl schlagen	negative	0.811987
+schludern	negative	0.811959
+schlampen	negative	0.811959
+haltbar	positive	0.810725
+hinreissen	positive	0.808420
+liebhaben	positive	0.807274
+spassig	positive	0.803307
+spasshaft	positive	0.803307
+zügellos	negative	0.799121
+fauxpas	negative	0.798435
+aufrecht	positive	0.796499
+atemberaubend	positive	0.792244
+atemraubend	positive	0.792244
+gefälligkeit	positive	0.789624
+infam	negative	0.785773
+perfid	negative	0.785773
+durchtrieben	negative	0.785773
+perfide	negative	0.785773
+hinterfotzig	negative	0.785773
+rodung	negative	0.785700
+abholzung	negative	0.785700
+zerstückelung	negative	0.785697
+zerlegung	negative	0.785697
+abtötung	negative	0.785695
+ausrottung	negative	0.785695
+bücherverbrennung	negative	0.785695
+zerschlagung	negative	0.785695
+aktenvernichtung	negative	0.785695
+ausmerzung	negative	0.785695
+segmentierung	negative	0.785689
+primfaktorzerlegung	negative	0.785689
+entwaldung	negative	0.785687
+waldrodung	negative	0.785687
+brandrodung	negative	0.785687
+kahlschlag	negative	0.785687
+massenmord	negative	0.785304
+massenvernichtung	negative	0.785304
+genozid	negative	0.785290
+völkermord	negative	0.785290
+massaker	negative	0.785289
+blutvergiessen	negative	0.785289
+blutbad	negative	0.785289
+gemetzel	negative	0.785289
+abschlachtung	negative	0.785289
+gemorde	negative	0.785289
+judenvernichtung	negative	0.785282
+beknackt	negative	0.785233
+suizid	negative	0.784627
+selbstmord	negative	0.784627
+selbsttötung	negative	0.784627
+freitod	negative	0.784627
+ritualmord	negative	0.784623
+ehrenmord	negative	0.784623
+fememord	negative	0.784623
+meuchelmord	negative	0.784623
+tyrannenmord	negative	0.784623
+raubmord	negative	0.784623
+judenmord	negative	0.784623
+brudermord	negative	0.784623
+giftmord	negative	0.784623
+lynchmord	negative	0.784623
+doppelmord	negative	0.784623
+justizmord	negative	0.784623
+enthauptung	negative	0.784623
+auftragsmord	negative	0.784623
+kindermord	negative	0.784623
+seppuku	negative	0.784621
+harakiri	negative	0.784621
+beschädigen	negative	0.781267
+zunichtemachen	negative	0.781197
+ätzen	negative	0.781180
+kaputtmachen	negative	0.781156
+herausätzen	negative	0.781116
+einätzen	negative	0.781116
+kleinkriegen	negative	0.781114
+einstampfen	negative	0.781114
+devastieren	negative	0.781114
+randalieren	negative	0.781114
+verheeren	negative	0.781114
+zerfräsen	negative	0.781114
+zerpflügen	negative	0.781114
+auslöschen	negative	0.781114
+zerschiessen	negative	0.781114
+demolieren	negative	0.781114
+verwüsten	negative	0.781114
+zusammenschlagen	negative	0.781114
+zernagen	negative	0.781114
+zerschlitzen	negative	0.781086
+eindellen	negative	0.781086
+verbeulen	negative	0.781086
+versengen	negative	0.781086
+begreifen	negative	0.777755
+hemmungslos	negative	0.777404
+ungezügelt	negative	0.777404
+witzig	positive	0.774662
+weiden	positive	0.774550
+beweiden	positive	0.774516
+abweiden	positive	0.774516
+verherrlichung	positive	0.774507
+beruhigen	positive	0.774161
+patzen	negative	0.774135
+leidenschaftlich	positive	0.774116
+begöschen	positive	0.773955
+einlullen	positive	0.773955
+beschwichtigen	positive	0.773955
+abwiegeln	positive	0.773955
+besänftigen	positive	0.773955
+begütigen	positive	0.773955
+trösten	positive	0.773955
+vermiesen	negative	0.773385
+sexuelle orientierung	positive	0.772292
+homosexueller	positive	0.772203
+homo	positive	0.772203
+schwule	positive	0.772169
+tunte	positive	0.772169
+schwuler	positive	0.772169
+lesbe	positive	0.772169
+homosexualität	positive	0.772156
+päderastie	positive	0.772106
+sadomasochist	positive	0.772103
+pädophiler	positive	0.772103
+pädophile	positive	0.772103
+sadomasochistin	positive	0.772103
+heterosexueller	positive	0.772103
+heterosexuelle	positive	0.772103
+bisexualität	positive	0.772103
+hetero	positive	0.772103
+heterosexualität	positive	0.772103
+lebensgefahr	negative	0.771458
+pikant	negative	0.769231
+verleiden	negative	0.768618
+geehrt	positive	0.768293
+hoch gelobt	positive	0.768293
+umschwärmt	positive	0.768293
+hochgelobt	positive	0.768293
+umworben	positive	0.768293
+viel gepriesen	positive	0.768293
+vielgelobt	positive	0.768292
+viel gerühmt	positive	0.768292
+vergöttert	positive	0.768292
+geliebt	positive	0.768292
+vielgepriesen	positive	0.768292
+gehuldigt	positive	0.768292
+vielgerühmt	positive	0.768292
+gemocht	positive	0.768292
+viel gelobt	positive	0.768292
+verehrt	positive	0.768292
+gelobt	positive	0.768292
+hochverehrt	positive	0.768292
+bewundert	positive	0.768292
+vielgeliebt	positive	0.768292
+gehässig	negative	0.767507
+bissig	negative	0.767507
+zynisch	negative	0.767507
+höhnisch	negative	0.767507
+schnippisch	negative	0.767507
+scharfzüngig	negative	0.767507
+beleidigend	negative	0.767507
+provokativ	negative	0.767507
+herausfordernd	negative	0.767507
+selbstironisch	negative	0.767507
+impertinent	negative	0.767507
+ironisch	negative	0.767507
+undankbar	negative	0.767507
+ehrverletzend	negative	0.767507
+unverschämt	negative	0.767507
+zanksüchtig	negative	0.767507
+streitsüchtig	negative	0.767507
+unverfroren	negative	0.767507
+sarkastisch	negative	0.767507
+wichtigtuerisch	negative	0.767507
+hetzerisch	negative	0.767507
+grosskotzig	negative	0.767507
+ausfallend	negative	0.767507
+schikanös	negative	0.767507
+grossspurig	negative	0.767507
+prätentiös	negative	0.767507
+verleumderisch	negative	0.767507
+denunziatorisch	negative	0.767507
+grossmäulig	negative	0.767507
+angeberisch	negative	0.767507
+provozierend	negative	0.767507
+forsch	negative	0.767506
+schnoddrig	negative	0.767506
+prahlerisch	negative	0.767506
+zänkisch	negative	0.767506
+ungezogen	negative	0.767506
+vorlaut	negative	0.767506
+aufwiegelnd	negative	0.767506
+aufhetzend	negative	0.767506
+draufgängerisch	negative	0.767506
+kriegerisch	negative	0.767506
+demagogisch	negative	0.767506
+streitlustig	negative	0.767506
+offensiv	negative	0.767506
+ehrrührig	negative	0.767506
+ehrenrührig	negative	0.767506
+vollmundig	negative	0.767506
+lautstark	negative	0.767506
+marktschreierisch	negative	0.767506
+facettenreich	negative	0.767440
+arglistig	negative	0.765553
+heimtückisch	negative	0.765553
+panne	negative	0.764940
+autopanne	negative	0.764908
+motorradpanne	negative	0.764897
+radpanne	negative	0.764897
+fahrradpanne	negative	0.764897
+mopedpanne	negative	0.764897
+erhoffen	positive	0.763352
+spitzfindig	negative	0.761529
+spöttisch	negative	0.761529
+agape	positive	0.760158
+skandal	negative	0.759212
+spendenaffäre	negative	0.759192
+liebesaffäre	negative	0.759190
+liaison	negative	0.759190
+techtelmechtel	negative	0.759190
+schmiergeldaffäre	negative	0.759184
+bestechungsaffäre	negative	0.759184
+korruptionsaffäre	negative	0.759184
+finanzaffäre	negative	0.759184
+spionageaffäre	negative	0.759184
+abhöraffäre	negative	0.759184
+spendenskandal	negative	0.759181
+korruptionsskandal	negative	0.759176
+lebensmittelskandal	negative	0.759176
+bestechungsskandal	negative	0.759176
+finanzskandal	negative	0.759176
+wettskandal	negative	0.759176
+dopingskandal	negative	0.759176
+abhörskandal	negative	0.759176
+parteispendenaffäre	negative	0.759172
+parteispendenskandal	negative	0.759161
+unfassbar	negative	0.758320
+unerfindlich	negative	0.758320
+unerklärlich	negative	0.758320
+unergründlich	negative	0.758320
+unerklärbar	negative	0.758319
+ordnungswidrigkeit	negative	0.758094
+vertragsverletzung	negative	0.758094
+dienstvergehen	negative	0.758094
+landfriedensbruch	negative	0.758094
+rechtswidrigkeit	negative	0.758094
+rechtsverstoss	negative	0.758094
+kavaliersdelikt	negative	0.758094
+sakrileg	negative	0.758094
+kameradschaft	positive	0.757877
+pfadfinder	positive	0.757820
+ymca	positive	0.757807
+christlicher verein junger menschen	positive	0.757807
+cvjm	positive	0.757807
+pfadfinderschaft	positive	0.757807
+jungschar	positive	0.757807
+jugendgruppe	positive	0.757807
+kriegsveteranenbund	positive	0.757807
+scout	positive	0.757778
+verschimmeln	negative	0.757670
+heiter	positive	0.756012
+leichtfüssig	positive	0.756012
+fidel	positive	0.756012
+unbeschwert	positive	0.756012
+frohgemut	positive	0.756012
+launig	positive	0.756012
+aufgeräumt	positive	0.756012
+gut gelaunt	positive	0.756012
+frohgelaunt	positive	0.756012
+froh gelaunt	positive	0.756012
+gut aufgelegt	positive	0.756012
+gutgelaunt	positive	0.756012
+spitz	negative	0.755154
+jubilieren	positive	0.754697
+glorifikation	positive	0.751163
+glorifizierung	positive	0.751163
+allegretto	positive	0.750432
+allegro	positive	0.750432
+ruchbar	negative	0.750190
+belieben	positive	0.749784
+neuwertig	positive	0.748387
+wertig	positive	0.748387
+feiern	positive	0.748126
+zelebrieren	positive	0.747862
+zechen	positive	0.747862
+nachfeiern	positive	0.747862
+schwindlig	negative	0.747652
+kreuzzug	negative	0.746212
+fettnäpfchen	negative	0.744934
+verschandeln	negative	0.742649
+urkomisch	positive	0.740869
+saukomisch	positive	0.740869
+ulkig	positive	0.740869
+gewaltverbrecherin	negative	0.740664
+gewalttäter	negative	0.740664
+gewaltverbrecher	negative	0.740664
+gewalttäterin	negative	0.740664
+täterin	negative	0.740661
+straftäter	negative	0.740661
+delinquent	negative	0.740661
+delinquentin	negative	0.740661
+täter	negative	0.740661
+straftäterin	negative	0.740661
+entführerin	negative	0.740660
+entführer	negative	0.740660
+dieb	negative	0.740657
+diebin	negative	0.740657
+langfinger	negative	0.740657
+killerin	negative	0.740648
+mörder	negative	0.740648
+killer	negative	0.740648
+mörderin	negative	0.740648
+attentäter	negative	0.740641
+attentäterin	negative	0.740641
+folterer	negative	0.740632
+folterin	negative	0.740632
+haupttäter	negative	0.740629
+einzeltäterin	negative	0.740629
+brandstifterin	negative	0.740629
+einzeltäter	negative	0.740629
+selbstmörderin	negative	0.740629
+feuerlegerin	negative	0.740629
+wiederholungstäterin	negative	0.740629
+schreibtischtäter	negative	0.740629
+ns-täterin	negative	0.740629
+selbstmörder	negative	0.740629
+serientäter	negative	0.740629
+wiederholungstäter	negative	0.740629
+serientäterin	negative	0.740629
+feuerleger	negative	0.740629
+brandstifter	negative	0.740629
+ns-täter	negative	0.740629
+schreibtischtäterin	negative	0.740629
+peinigerin	negative	0.740622
+peiniger	negative	0.740622
+betrüger	negative	0.740622
+prellerin	negative	0.740622
+preller	negative	0.740622
+betrügerin	negative	0.740622
+autodieb	negative	0.740615
+ladendiebin	negative	0.740615
+meisterdieb	negative	0.740615
+taschendiebin	negative	0.740615
+autodiebin	negative	0.740615
+meisterdiebin	negative	0.740615
+taschendieb	negative	0.740615
+ladendieb	negative	0.740615
+kriegsverbrecher	negative	0.740611
+kriegsverbrecherin	negative	0.740611
+schmugglerin	negative	0.740611
+schmuggler	negative	0.740611
+terrorist	negative	0.740609
+terroristin	negative	0.740609
+frauenmörder	negative	0.740608
+frauenmörderin	negative	0.740608
+folterknecht	negative	0.740604
+serienmörderin	negative	0.740603
+kindermörderin	negative	0.740603
+serienkiller	negative	0.740603
+serienkillerin	negative	0.740603
+massenmörder	negative	0.740603
+kindermörder	negative	0.740603
+assasine	negative	0.740603
+kopfgeldjägerin	negative	0.740603
+massenmörderin	negative	0.740603
+auftragsmörder	negative	0.740603
+kopfgeldjäger	negative	0.740603
+serienmörder	negative	0.740603
+auftragskiller	negative	0.740603
+auftragskillerin	negative	0.740603
+auftragsmörderin	negative	0.740603
+busentführer	negative	0.740602
+luftpiratin	negative	0.740602
+busentführerin	negative	0.740602
+luftpirat	negative	0.740602
+flugzeugentführer	negative	0.740602
+hijackerin	negative	0.740602
+flugzeugentführerin	negative	0.740602
+hijacker	negative	0.740602
+kindesentführer	negative	0.740602
+kidnapper	negative	0.740602
+kindesentführerin	negative	0.740602
+kidnapperin	negative	0.740602
+zechpreller	negative	0.740598
+zechprellerin	negative	0.740598
+falschspieler	negative	0.740598
+falschspielerin	negative	0.740598
+kamikazepilot	negative	0.740596
+kamikazepilotin	negative	0.740596
+selbstmordattentäterin	negative	0.740596
+kamikaze	negative	0.740596
+selbstmordattentäter	negative	0.740596
+geiselnehmer	negative	0.740580
+geiselnehmerin	negative	0.740579
+schädiger	negative	0.740579
+plünderer	negative	0.740579
+ns-verbrecher	negative	0.740579
+einbrecherin	negative	0.740579
+pleitier	negative	0.740579
+pimp	negative	0.740579
+gangster	negative	0.740579
+assassine	negative	0.740579
+zuhälter	negative	0.740579
+wegelagerer	negative	0.740579
+bankrotteur	negative	0.740579
+ns-verbrecherin	negative	0.740579
+plündrerin	negative	0.740579
+plünderin	negative	0.740579
+kleinkriminelle	negative	0.740579
+erpresserin	negative	0.740579
+unterdrückerin	negative	0.740579
+eindringling	negative	0.740579
+lude	negative	0.740579
+naziverbrecherin	negative	0.740579
+plündrer	negative	0.740579
+erpresser	negative	0.740579
+rechtsbrecher	negative	0.740579
+bankrotteurin	negative	0.740579
+naziverbrecher	negative	0.740579
+kleinkrimineller	negative	0.740579
+schwerverbrecherin	negative	0.740579
+unterdrücker	negative	0.740579
+einbrecher	negative	0.740579
+schleuser	negative	0.740579
+menschenhändlerin	negative	0.740579
+hehler	negative	0.740579
+hehlerin	negative	0.740579
+schwerverbrecher	negative	0.740579
+blaubart	negative	0.740579
+schleuserin	negative	0.740579
+rechtsbrecherin	negative	0.740579
+menschenhändler	negative	0.740579
+hauptkriegsverbrecherin	negative	0.740579
+drogenschmugglerin	negative	0.740579
+hauptkriegsverbrecher	negative	0.740579
+drogenschmuggler	negative	0.740579
+topterrorist	negative	0.740574
+minenleger	negative	0.740574
+topterroristin	negative	0.740574
+idealismus	positive	0.739489
+ächzen	negative	0.738049
+verlebt	negative	0.737541
+kuschelig	positive	0.735849
+kuschlig	positive	0.735849
+tückisch	negative	0.733438
+vernichtung	negative	0.732134
+eliminieren	negative	0.732134
+eliminierung	negative	0.732134
+auslöschung	negative	0.732134
+bigott	negative	0.730784
+scheinheilig	negative	0.730784
+schändlich	negative	0.728623
+effekt	positive	0.728224
+kurpfuschen	negative	0.727664
+gewaltverherrlichung	positive	0.727121
+problemvoll	negative	0.726038
+wohltätig	positive	0.725884
+caritativ	positive	0.725884
+mildtätig	positive	0.725884
+karitativ	positive	0.725884
+rechtschaffenheit	positive	0.722816
+fairness	positive	0.722816
+feindseligkeit	negative	0.722224
+glücksgefühl	positive	0.721056
+fuchsteufelswild	negative	0.720650
+zornig	negative	0.720650
+fuchsig	negative	0.720650
+erzürnt	negative	0.720650
+erbittert	negative	0.720650
+verpatzen	negative	0.719072
+wohlig	positive	0.718506
+unterstützend	positive	0.718444
+subsidiär	positive	0.718444
+mannschaftsdienlich	positive	0.718444
+mannschaftstauglich	positive	0.718444
+dahinterstehend	positive	0.718443
+gibbeln	positive	0.718111
+gekicher	positive	0.718111
+geiern	positive	0.718111
+gebibbel	positive	0.718111
+gegeier	positive	0.718111
+missglücken	negative	0.718054
+flaggschiff	positive	0.717674
+dankbar	positive	0.716535
+umkämpft	positive	0.713023
+viel gefragt	positive	0.713023
+vielgefragt	positive	0.713023
+verhunzen	negative	0.712459
+holocaust	negative	0.710767
+scheiss	negative	0.706339
+bedrohen	negative	0.706032
+partnerschaft	positive	0.705192
+paarbeziehung	positive	0.705164
+gemeindepartnerschaft	positive	0.705141
+städtepartnerschaft	positive	0.705141
+sozialpartnerschaft	positive	0.705141
+lebenspartnerschaft	positive	0.705141
+schulpartnerschaft	positive	0.705141
+konkubinat	positive	0.705114
+zerbrechlichkeit	positive	0.703750
+fragilität	positive	0.703750
+gemeingefährlich	negative	0.703668
+schwer erziehbar	negative	0.703668
+schwererziehbar	negative	0.703668
+versägen	negative	0.702271
+verkacken	negative	0.702271
+vergeigen	negative	0.702271
+vermasseln	negative	0.702271
+versemmeln	negative	0.702271
+todesgefahr	negative	0.699581
+verfault	negative	0.699446
+faulig	negative	0.699446
+rassismus	negative	0.698915
+judenfeindschaft	negative	0.698584
+apartheid	negative	0.698584
+antijudaismus	negative	0.698584
+antisemitismus	negative	0.698584
+stöhnen	negative	0.694590
+angriffslustig	negative	0.690009
+kampfeslustig	negative	0.690009
+kampflustig	negative	0.690009
+umgänglich	positive	0.689271
+verkorksen	negative	0.689245
+verpfuschen	negative	0.689245
+verbocken	negative	0.689245
+vermurksen	negative	0.689245
+ungeliebt	negative	0.687500
+mordfall	negative	0.687200
+unverhältnismässig	negative	0.687069
+unziemlich	negative	0.687069
+unstandesgemäss	negative	0.687069
+ungerechtfertigt	negative	0.687069
+unwahr	negative	0.687069
+unangemessen	negative	0.687069
+unerhört	negative	0.687069
+inadäquat	negative	0.687069
+verfehlt	negative	0.687069
+verkehrt	negative	0.687069
+vorgetäuscht	negative	0.687069
+fälschlich	negative	0.687069
+gespielt	negative	0.687069
+irrtümlich	negative	0.687069
+vermeintlich	negative	0.687069
+gelogen	negative	0.687069
+unzuständig	negative	0.687069
+unbillig	negative	0.687069
+erlogen	negative	0.687069
+gefälscht	negative	0.687069
+unbefugt	negative	0.687069
+unsachgemäss	negative	0.687069
+angeblich	negative	0.687069
+ungehörig	negative	0.687069
+unecht	negative	0.687069
+irregulär	negative	0.687069
+unrecht	negative	0.687069
+grundfalsch	negative	0.687069
+unkorrekt	negative	0.687069
+irrig	negative	0.687069
+unautorisiert	negative	0.687069
+unberechtigt	negative	0.687069
+umgekehrt	negative	0.687069
+illegitim	negative	0.687069
+unrechtmässig	negative	0.687069
+trügerisch	negative	0.687069
+unangebracht	negative	0.687069
+täuschend	negative	0.687069
+unpassend	negative	0.687069
+sinnentstellend	negative	0.687069
+sachfremd	negative	0.687069
+korrekturbedürftig	negative	0.687069
+ungelegen	negative	0.687069
+kontrafaktisch	negative	0.687069
+unzutreffend	negative	0.687069
+irritierend	negative	0.687069
+verwirrend	negative	0.687069
+deplatziert	negative	0.687069
+deplaziert	negative	0.687069
+weltberühmt	positive	0.686501
+unkalkulierbar	negative	0.685658
+unberechenbar	negative	0.685658
+verbrecherin	negative	0.685642
+kriminelle	negative	0.685642
+krimineller	negative	0.685642
+räuberin	negative	0.685418
+fesselnd	positive	0.684210
+begeisternd	positive	0.684210
+unbegründet	negative	0.682836
+aufmerksam	positive	0.682168
+fadenscheinig	negative	0.680190
+unverdient	negative	0.680190
+vorgeschoben	negative	0.680190
+holzeinschlag	negative	0.679881
+holzschlag	negative	0.679881
+feingeschnitten	positive	0.679763
+fein geschnitten	positive	0.679763
+lapsus	negative	0.679742
+feig	negative	0.678660
+feige	negative	0.678660
+verve	positive	0.678098
+grundlos	negative	0.677545
+triebverbrecherin	negative	0.677323
+sexualstraftäterin	negative	0.677323
+triebtäter	negative	0.677323
+sexualverbrecher	negative	0.677323
+sexualverbrecherin	negative	0.677323
+triebverbrecher	negative	0.677323
+sexualstraftäter	negative	0.677323
+triebtäterin	negative	0.677323
+mordtat	negative	0.676963
+ermordung	negative	0.676963
+beabsichtigen	positive	0.675884
+hoffen	positive	0.675835
+möchten	positive	0.675790
+zurückwollen	positive	0.675711
+zudenken	positive	0.675711
+erträumen	positive	0.675575
+intendieren	positive	0.675520
+bezwecken	positive	0.675520
+hornhautverkrümmung	positive	0.675491
+stabsichtigkeit	positive	0.675491
+böse	negative	0.675218
+totschlägerin	negative	0.674576
+unschuldig	positive	0.672479
+unversöhnlich	negative	0.671620
+schimmeln	negative	0.670139
+ansprechend	positive	0.669974
+gewinnend	positive	0.669974
+einnehmend	positive	0.669974
+sympathieerweckend	positive	0.669974
+sympathisch	positive	0.669974
+sympathie erweckend	positive	0.669974
+wiehern	positive	0.668997
+ehren	positive	0.668424
+verehren	positive	0.668374
+anhimmeln	positive	0.668255
+huldigen	positive	0.668255
+zerkloppen	negative	0.667088
+zerhauen	negative	0.667088
+wassergüte	positive	0.665962
+wasserqualität	positive	0.665962
+bodenqualität	positive	0.665959
+oberflächengüte	positive	0.665959
+textqualität	positive	0.665959
+gewässergüte	positive	0.665959
+trinkwasserqualität	positive	0.665951
+anteilig	negative	0.663158
+rudimentär	negative	0.663158
+durchbrochen	negative	0.663158
+halb	negative	0.663158
+fragmentarisch	negative	0.663158
+bruchstückhaft	negative	0.663158
+notbehelfsmässig	negative	0.663158
+partiell	negative	0.663158
+notdürftig	negative	0.663158
+teilweise	negative	0.663158
+bruchstückartig	negative	0.663158
+ergänzungsbedürftig	negative	0.663158
+achtzigprozentig	negative	0.663158
+dreissigprozentig	negative	0.663158
+sechzigprozentig	negative	0.663158
+hochprozentig	negative	0.663158
+zwanzigprozentig	negative	0.663158
+fünfprozentig	negative	0.663158
+fünfzigprozentig	negative	0.663158
+siebzigprozentig	negative	0.663158
+neunzigprozentig	negative	0.663158
+zehnprozentig	negative	0.663158
+dienlich	positive	0.660859
+quacksalbern	negative	0.660243
+euthanasie	negative	0.659295
+panisch	negative	0.657353
+panikartig	negative	0.657353
+lachhaft	positive	0.656311
+inbrünstig	positive	0.655402
+verbraucht	negative	0.654846
+fünf	negative	0.654032
+zollen	positive	0.653774
+anfeindung	negative	0.652709
+versieben	negative	0.652635
+gefährden	negative	0.652620
+erfrischung	positive	0.652061
+erfrischen	positive	0.652061
+sonnenbaden	positive	0.652058
+nichtstun	positive	0.652058
+sonnenbad	positive	0.652058
+naherholung	positive	0.652058
+ausruhen	positive	0.652058
+faulenzen	positive	0.652058
+labsal	positive	0.652049
+lebensqualität	positive	0.650785
+zerschlagenheit	positive	0.650444
+mattigkeit	positive	0.650444
+zerteppern	negative	0.650174
+zerdeppern	negative	0.650174
+zertrümmern	negative	0.650174
+zartheit	positive	0.647881
+versauen	negative	0.647601
+klotzig	negative	0.646624
+klobig	negative	0.646624
+kinderschänder	negative	0.645607
+frotteurin	negative	0.645607
+vergewaltigerin	negative	0.645607
+kinderschänderin	negative	0.645607
+vergewaltiger	negative	0.645607
+frotteur	negative	0.645607
+grapscher	negative	0.645607
+grabscher	negative	0.645607
+grapscherin	negative	0.645607
+grabscherin	negative	0.645607
+fummler	negative	0.645607
+fummlerin	negative	0.645607
+destruktion	negative	0.642886
+zerstörung	negative	0.642886
+zertrümmerung	negative	0.642846
+bildersturm	negative	0.642839
+umweltzerstörung	negative	0.642839
+verschrottung	negative	0.642839
+demolition	negative	0.642839
+implosion	negative	0.642839
+kriegszerstörung	negative	0.642839
+verwüstung	negative	0.642839
+sprengzündung	negative	0.642839
+lebensraumzerstörung	negative	0.642839
+abwrackung	negative	0.642839
+ikonoklasmus	negative	0.642839
+selbstentzündung	negative	0.642839
+selbstzerstörung	negative	0.642839
+ritterlich	positive	0.642836
+liebesgeschichte	negative	0.642550
+liebschaft	negative	0.642550
+liebelei	negative	0.642550
+liebesabenteuer	negative	0.642550
+reifenpanne	negative	0.641540
+feindschaft	negative	0.640545
+unbegreiflich	negative	0.637479
+unbegreifbar	negative	0.637479
+höfisch	positive	0.636824
+adlig	positive	0.636824
+aristokratisch	positive	0.636824
+adelig	positive	0.636824
+royal	positive	0.636824
+kaiserlich-königlich	positive	0.636824
+hochadlig	positive	0.636824
+feudalistisch	positive	0.636824
+freiherrlich	positive	0.636824
+altadelig	positive	0.636824
+hochherrschaftlich	positive	0.636824
+königlich	positive	0.636824
+feudal	positive	0.636824
+altadlig	positive	0.636824
+standesherrlich	positive	0.636824
+blaublütig	positive	0.636824
+kaiserlich	positive	0.636824
+nobel	positive	0.636824
+kleinadelig	positive	0.636824
+kleinadlig	positive	0.636823
+hochadelig	positive	0.636823
+erbost	negative	0.636156
+bitterböse	negative	0.636156
+juchzen	positive	0.634793
+jauchzen	positive	0.634793
+überfall	negative	0.633802
+schmuggel	negative	0.633795
+spionage	negative	0.633794
+spionagetätigkeit	negative	0.633794
+agententätigkeit	negative	0.633794
+entführung	negative	0.633791
+menschenhandel	negative	0.633785
+eigentumsdelikt	negative	0.633785
+erpressung	negative	0.633780
+unterlassungssünde	negative	0.633780
+steuerdelikt	negative	0.633780
+verkehrsdelikt	negative	0.633779
+missetat	negative	0.633779
+strassenverkehrsdelikt	negative	0.633779
+untat	negative	0.633779
+industriespionage	negative	0.633778
+werksspionage	negative	0.633778
+wirtschaftsspionage	negative	0.633778
+infiltration	negative	0.633778
+betriebsspionage	negative	0.633778
+firmenspionage	negative	0.633778
+gegenspionage	negative	0.633778
+naziverbrechen	negative	0.633774
+rechtsbeugung	negative	0.633774
+bagatelldelikt	negative	0.633774
+strafsache	negative	0.633774
+tötungsdelikt	negative	0.633774
+hausfriedensbruch	negative	0.633774
+drogendelikt	negative	0.633774
+urheberrechtsverletzung	negative	0.633774
+sittlichkeitsverbrechen	negative	0.633774
+vertragsbruch	negative	0.633774
+verfassungsbruch	negative	0.633774
+kapitalverbrechen	negative	0.633774
+geldwäsche	negative	0.633774
+amoklauf	negative	0.633774
+sexualdelikt	negative	0.633774
+kriegsgräuel	negative	0.633774
+gewaltdelikt	negative	0.633774
+hehlerei	negative	0.633774
+kabale	negative	0.633774
+ränke	negative	0.633774
+kriegsverbrechen	negative	0.633774
+gewaltverbrechen	negative	0.633774
+intrige	negative	0.633774
+sünde	negative	0.633772
+drogenhandel	negative	0.633766
+drogenschmuggel	negative	0.633766
+verkehrsverstoss	negative	0.633765
+verschleppung	negative	0.633764
+deportation	negative	0.633764
+flugzeugentführung	negative	0.633760
+kindesentführung	negative	0.633760
+frauenhandel	negative	0.633759
+sklavenhandel	negative	0.633759
+hinterziehung	negative	0.633759
+unterschlagung	negative	0.633759
+waffenschmuggel	negative	0.633758
+atomschmuggel	negative	0.633758
+menschenschmuggel	negative	0.633758
+schleusung	negative	0.633758
+fahrerflucht	negative	0.633757
+schutzgelderpressung	negative	0.633757
+steuerhinterziehung	negative	0.633757
+heroinhandel	negative	0.633750
+kokainhandel	negative	0.633750
+todesmarsch	negative	0.633749
+raubüberfall	negative	0.633742
+banküberfall	negative	0.633742
+handstreich	negative	0.633742
+stürmung	negative	0.633742
+erstürmung	negative	0.633742
+jugendsünde	negative	0.633724
+todsünde	negative	0.633724
+schandtat	negative	0.633724
+erbsünde	negative	0.633724
+gotteslästerung	negative	0.633724
+blasphemie	negative	0.633724
+mögen	positive	0.631208
+ungefährdet	positive	0.629966
+überzeugt	positive	0.629966
+felsenfest	positive	0.629966
+bombensicher	positive	0.629966
+erhängen	negative	0.629770
+one-night-stand	negative	0.628859
+scharfsinnig	positive	0.625000
+gegrinse	positive	0.624056
+ritterlichkeit	positive	0.622008
+glaubhaftigkeit	positive	0.622008
+sterbehilfe	negative	0.621746
+selbstentblösserin	negative	0.619443
+exhibitionistin	negative	0.619443
+selbstentblösser	negative	0.619443
+exhibitionist	negative	0.619443
+majestätisch	positive	0.619217
+atomisierung	negative	0.616736
+ästimieren	positive	0.616695
+hochachten	positive	0.616695
+würdigen	positive	0.616695
+billigkeit	positive	0.616309
+zerschlagen	negative	0.613416
+gelächter	positive	0.613406
+hochwertig	positive	0.609528
+straucheln	negative	0.609258
+schlecht	negative	0.609176
+totschläger	negative	0.608577
+stranden	negative	0.608371
+ausschweifend	negative	0.608151
+aufgedreht	positive	0.606769
+aufgekratzt	positive	0.606769
+tod	negative	0.604554
+ungehemmt	negative	0.604284
+demontage	negative	0.603219
+schwärmen	positive	0.601205
+prunk	positive	0.601083
+bös	negative	0.599264
+gutherzigkeit	positive	0.598999
+grossmut	positive	0.598999
+übertretung	negative	0.596054
+stolz	positive	0.595800
+integrität	positive	0.594981
+strassenräuberin	negative	0.594250
+banditin	negative	0.594250
+strassenräuber	negative	0.594250
+bandit	negative	0.594250
+grabräuberin	negative	0.594245
+grabräuber	negative	0.594245
+bankräuber	negative	0.594245
+bankräuberin	negative	0.594245
+brigant	negative	0.594234
+gräuel	negative	0.592976
+gräueltat	negative	0.592976
+geeignet	positive	0.590604
+tauglich	positive	0.590604
+verkehrstauglich	positive	0.590601
+verkehrssicher	positive	0.590600
+nutzbringend	positive	0.590599
+nützlich	positive	0.590599
+wehrtauglich	positive	0.590598
+wehrdienstfähig	positive	0.590598
+wehrfähig	positive	0.590598
+fahrtüchtig	positive	0.590598
+fahrtauglich	positive	0.590598
+seetüchtig	positive	0.590598
+geländetauglich	positive	0.590598
+kriegstauglich	positive	0.590598
+hochseetüchtig	positive	0.590598
+diensttauglich	positive	0.590598
+alltagstauglich	positive	0.590598
+praxistauglich	positive	0.590598
+förderlich	positive	0.590598
+fördernd	positive	0.590598
+lohnend	positive	0.590597
+lohnenswert	positive	0.590597
+gedeihlich	positive	0.590596
+verkaufsfördernd	positive	0.590595
+wachstumsfördernd	positive	0.590595
+leistungsfördernd	positive	0.590595
+abbauwürdig	positive	0.590595
+auserkoren	positive	0.590587
+auserwählt	positive	0.590587
+erkoren	positive	0.590587
+vorbestimmt	positive	0.590587
+prädestiniert	positive	0.590587
+akzeptabel	positive	0.590577
+genehm	positive	0.590577
+vertretbar	positive	0.590568
+hinnehmbar	positive	0.590567
+passabel	positive	0.590567
+annehmbar	positive	0.590567
+verantwortbar	positive	0.590556
+marktfähig	positive	0.590545
+spitze	positive	0.590536
+klasse	positive	0.590536
+endgeil	positive	0.590536
+marktgerecht	positive	0.590522
+marktreif	positive	0.590522
+marktbeherrschend	positive	0.590521
+marktführend	positive	0.590521
+erfolgreich	positive	0.590521
+chancenreich	positive	0.590521
+perspektivreich	positive	0.590498
+aussichtsreich	positive	0.590496
+vielversprechend	positive	0.590496
+siegreich	positive	0.590491
+fündig	positive	0.590477
+zukunftsfähig	positive	0.590477
+erfolgsverwöhnt	positive	0.590477
+erfolgsgewöhnt	positive	0.590477
+verheissungsvoll	positive	0.590475
+gewinnbar	positive	0.590471
+förderungswürdig	positive	0.590471
+verlockend	positive	0.590471
+ungeschlagen	positive	0.590450
+unbesiegt	positive	0.590450
+wegweisend	positive	0.590448
+zukunftsträchtig	positive	0.590448
+zukunftweisend	positive	0.590447
+zukunftsweisend	positive	0.590447
+meisterhaft	positive	0.590316
+meisterlich	positive	0.590316
+kunstfertig	positive	0.590259
+virtuos	positive	0.590259
+gekonnt	positive	0.590259
+wettbewerbsfähig	positive	0.590238
+konkurrenzfähig	positive	0.590235
+idyllisch	positive	0.590198
+malerisch	positive	0.590069
+arkadisch	positive	0.590069
+erlebbar	positive	0.590038
+mischbar	positive	0.590038
+lötfähig	positive	0.590038
+waffenfähig	positive	0.590038
+druckfähig	positive	0.590038
+singbar	positive	0.590038
+magnetisierbar	positive	0.590038
+lagerfähig	positive	0.590038
+tanzbar	positive	0.590038
+kombinierbar	positive	0.590038
+bespielbar	positive	0.590038
+beihilfefähig	positive	0.590038
+erstattungsfähig	positive	0.590038
+panzerbrechend	positive	0.590038
+börsenfähig	positive	0.590038
+teilbar	positive	0.590038
+anrechnungsfähig	positive	0.590038
+erlernbar	positive	0.590038
+abzugsfähig	positive	0.590038
+geländegängig	positive	0.590038
+reaktionsfähig	positive	0.590038
+wünschenswert	positive	0.588582
+sensationell	positive	0.588582
+märchenhaft	positive	0.588582
+glückreich	positive	0.588582
+traumhaft	positive	0.588582
+zweckmässig	positive	0.588582
+elefantös	positive	0.588582
+überragend	positive	0.588582
+erstrebenswert	positive	0.588225
+nahestehen	positive	0.588098
+sympathisieren	positive	0.588087
+himmlisch	positive	0.587504
+paradiesisch	positive	0.587504
+herrlich	positive	0.587493
+wunderbar	positive	0.587284
+gelungen	positive	0.587283
+wundervoll	positive	0.587265
+geraten	positive	0.587264
+mattheit	positive	0.586749
+sinnvoll	positive	0.586596
+sinnhaft	positive	0.586587
+sinnig	positive	0.586587
+sinnreich	positive	0.586587
+erfolgversprechend	positive	0.586085
+erfolg versprechend	positive	0.586085
+sagenhaft	positive	0.586085
+berauschend	positive	0.586085
+gehoben	positive	0.586085
+begrüssenswert	positive	0.586085
+gutartig	positive	0.586085
+herzensgut	positive	0.586085
+perfekt	positive	0.586085
+prima	positive	0.586085
+unfehlbar	positive	0.586085
+okay	positive	0.586085
+erstklassig	positive	0.586085
+bedenkenswert	positive	0.586085
+spitzenmässig	positive	0.586085
+ideal	positive	0.586085
+unübertrefflich	positive	0.586085
+ergebnisreich	positive	0.586085
+ehrenvoll	positive	0.586085
+blendend	positive	0.586085
+fragwürdig	negative	0.586020
+erhaben	positive	0.585764
+wohltuend	positive	0.585166
+blumenpracht	positive	0.584867
+luder	negative	0.584497
+geschätzt	positive	0.584416
+pracht	positive	0.584252
+animosität	negative	0.583502
+schnitzer	negative	0.583497
+patzer	negative	0.583497
+inspirieren	positive	0.583190
+zerknallen	negative	0.581358
+schmierig	negative	0.579349
+unvollkommen	negative	0.578947
+lückenhaft	negative	0.578947
+unvollständig	negative	0.578947
+defizitär	negative	0.578947
+zerfurchen	negative	0.578337
+riskieren	negative	0.576691
+verwachsen	negative	0.575484
+bomben	negative	0.575383
+zerbomben	negative	0.575291
+flor	positive	0.574966
+schwafeln	negative	0.574003
+matt	negative	0.572936
+bluttat	negative	0.572458
+quälerei	negative	0.572454
+auspeitschung	negative	0.572449
+seeräuberei	negative	0.572449
+freibeuterei	negative	0.572449
+geisselung	negative	0.572449
+piraterie	negative	0.572449
+ärgerlich	negative	0.572444
+schmachvoll	negative	0.572444
+schmählich	negative	0.572444
+tötung	negative	0.572441
+totschlag	negative	0.572441
+drangsalierung	negative	0.572428
+tierquälerei	negative	0.572428
+schlachtung	negative	0.572419
+massentötung	negative	0.572416
+hausschlachtung	negative	0.572394
+niederreissung	negative	0.569991
+ungerecht	negative	0.569618
+romanze	negative	0.569206
+satanisch	negative	0.568989
+teuflisch	negative	0.568989
+dämonisch	negative	0.568989
+diabolisch	negative	0.568989
+hasserfüllt	negative	0.568989
+stiefmütterlich	negative	0.568989
+luziferisch	negative	0.568989
+mephistophelisch	negative	0.568989
+hämisch	negative	0.568989
+böswillig	negative	0.568989
+maliziös	negative	0.568989
+bösartig	negative	0.568989
+süffisant	negative	0.568989
+komisch	positive	0.568926
+behagen	positive	0.567995
+sanftmut	positive	0.566950
+euphorie	positive	0.566834
+hochgefühl	positive	0.566834
+hochstimmung	positive	0.566834
+wonne	positive	0.566778
+lebensglück	positive	0.566778
+heil	positive	0.566778
+freudentaumel	positive	0.566753
+sexy	positive	0.566622
+rein	positive	0.566330
+pharisäisch	negative	0.565168
+listenreich	negative	0.564516
+fintenreich	negative	0.564516
+trickreich	negative	0.564516
+destruieren	negative	0.562618
+glückstrahlend	positive	0.560998
+zerplatzen	negative	0.560110
+beleidigt	negative	0.559652
+pikiert	negative	0.559652
+eingeschnappt	negative	0.559652
+gekränkt	negative	0.559652
+delikt	negative	0.559579
+rechtsbruch	negative	0.559579
+straftat	negative	0.559579
+gesetzesverstoss	negative	0.559579
+vorhaben	positive	0.559394
+formschön	positive	0.559286
+formvollendet	positive	0.559286
+belangen	negative	0.559237
+mitsollen	positive	0.558272
+verbrennung	negative	0.557328
+hexenverbrennung	negative	0.557291
+selbstverbrennung	negative	0.557291
+sonnenbrand	negative	0.557291
+faul	negative	0.556326
+schmalzig	negative	0.555556
+dünkelhaft	negative	0.555555
+altklug	negative	0.555555
+besserwisserisch	negative	0.555555
+selbstverliebt	negative	0.555555
+blasiert	negative	0.555555
+anmassend	negative	0.555555
+aufgeblasen	negative	0.555555
+eingebildet	negative	0.555555
+lehrerhaft	negative	0.555555
+neunmalklug	negative	0.555555
+siebengescheit	negative	0.555555
+rechthaberisch	negative	0.555555
+oberlehrerhaft	negative	0.555555
+swingerin	positive	0.554793
+seeräuberin	negative	0.554169
+seeräuber	negative	0.554169
+piratin	negative	0.554169
+freibeuter	negative	0.554169
+freibeuterin	negative	0.554169
+pirat	negative	0.554169
+erlaucht	positive	0.553945
+ausgesucht	positive	0.553945
+auserlesen	positive	0.553945
+ausersehen	positive	0.553945
+stumpf	negative	0.553900
+überschwang	positive	0.551940
+aufgebraucht	negative	0.551449
+durchfall	negative	0.548478
+vorwurfsvoll	negative	0.548135
+vitalienbrüder	negative	0.547386
+verehrungswürdig	positive	0.546557
+hehr	positive	0.546557
+entrüsten	negative	0.544978
+stolpern	negative	0.544598
+unnachahmlich	positive	0.544388
+unübertroffen	positive	0.544388
+unerreicht	positive	0.544388
+uneinholbar	positive	0.544388
+hinrichten	negative	0.543717
+exekutieren	negative	0.543717
+geistesgegenwärtig	positive	0.542236
+wachsam	positive	0.542236
+meditativ	positive	0.542236
+reaktionsschnell	positive	0.542236
+versunken	positive	0.542236
+hellhörig	positive	0.542236
+kontemplativ	positive	0.542235
+menschenrechtsverletzung	negative	0.542121
+feten	positive	0.541849
+staunen	positive	0.541275
+lacher	positive	0.540959
+feindschaftlichkeit	negative	0.540720
+dealerin	negative	0.540674
+dealer	negative	0.540674
+drogendealer	negative	0.540622
+drogendealerin	negative	0.540622
+vorgeblich	negative	0.538632
+subjektiv	negative	0.537713
+voreingenommen	negative	0.537713
+bestechlich	negative	0.537713
+korrupt	negative	0.537713
+tendenziös	negative	0.537713
+käuflich	negative	0.537713
+intersubjektiv	negative	0.537713
+parteiisch	negative	0.537713
+linkslastig	negative	0.537713
+rechtslastig	negative	0.537713
+gelitten	positive	0.536585
+kleidsam	positive	0.535299
+normalisieren	positive	0.534649
+übermut	positive	0.533924
+plattfuss	negative	0.533618
+leiden	positive	0.533167
+trauern	positive	0.533044
+darben	positive	0.532990
+herumschleppen	positive	0.532990
+durchleiden	positive	0.532990
+betrauern	positive	0.532977
+grämen	positive	0.532977
+formen	positive	0.532006
+gewalttat	negative	0.531462
+einschläfern	positive	0.528306
+körperverletzung	negative	0.527950
+vorzeigbar	positive	0.527938
+misshandlung	negative	0.527926
+kindesmisshandlung	negative	0.527897
+hinrichtung	negative	0.527698
+überschwänglich	positive	0.525996
+sollen	positive	0.525925
+verworren	negative	0.524453
+verwoben	negative	0.524453
+brauchbar	positive	0.524107
+nutzbar	positive	0.524107
+verarbeitbar	positive	0.524104
+verwertbar	positive	0.524104
+bedienbar	positive	0.524103
+erweiterbar	positive	0.524103
+erweiterungsfähig	positive	0.524103
+ausbaufähig	positive	0.524103
+erneuerbar	positive	0.524102
+aufladbar	positive	0.524102
+auswertbar	positive	0.524102
+benutzbar	positive	0.524102
+nachrüstbar	positive	0.524101
+skalierbar	positive	0.524101
+internetfähig	positive	0.524100
+speicherbar	positive	0.524100
+abbaubar	positive	0.524100
+praktikabel	positive	0.524100
+erschliessbar	positive	0.524100
+netzwerkfähig	positive	0.524100
+anbaufähig	positive	0.524100
+handlich	positive	0.524100
+renovierbar	positive	0.524100
+instandsetzbar	positive	0.524100
+recyclingfähig	positive	0.524099
+wiederverwertbar	positive	0.524099
+schmelzbar	positive	0.524099
+schmiedbar	positive	0.524099
+bearbeitbar	positive	0.524099
+kompostierbar	positive	0.524099
+benutzerfreundlich	positive	0.524098
+anwenderfreundlich	positive	0.524098
+regenerativ	positive	0.524097
+wiederaufladbar	positive	0.524097
+gebrauchsfähig	positive	0.524097
+gerichtsverwertbar	positive	0.524097
+platzen	negative	0.523809
+bersten	negative	0.523695
+detonieren	negative	0.523675
+zerbersten	negative	0.523606
+sauer	negative	0.523367
+säuerlich	negative	0.523367
+brüllen	positive	0.522897
+drogenabhängigkeit	negative	0.522300
+drogenmissbrauch	negative	0.522300
+drogensucht	negative	0.522300
+koffeinmissbrauch	negative	0.522285
+koffeinabhängigkeit	negative	0.522285
+koffeinsucht	negative	0.522285
+sexsucht	negative	0.522285
+arbeitssucht	negative	0.522285
+tablettenabhängigkeit	negative	0.522285
+nikotinsucht	negative	0.522285
+tablettenmissbrauch	negative	0.522285
+nikotinmissbrauch	negative	0.522285
+zigarettenabhängigkeit	negative	0.522285
+nikotinabhängigkeit	negative	0.522285
+tablettensucht	negative	0.522285
+spielsucht	negative	0.522285
+kaffeesucht	negative	0.522285
+kokainsucht	negative	0.522282
+morphiumsucht	negative	0.522282
+kokainabhängigkeit	negative	0.522282
+heroinmissbrauch	negative	0.522282
+heroinabhängigkeit	negative	0.522282
+heroinsucht	negative	0.522282
+kokainmissbrauch	negative	0.522282
+schwierig	negative	0.521708
+wettern	negative	0.521624
+astigmatismus	positive	0.519452
+arroganz	positive	0.518221
+anmassung	positive	0.518221
+selbstherrlichkeit	positive	0.518221
+überheblichkeit	positive	0.518221
+dünkel	positive	0.518219
+selbstgefälligkeit	positive	0.518212
+eitelkeit	positive	0.518212
+standesdünkel	positive	0.518144
+verbrauchen	negative	0.518116
+boshaft	negative	0.518111
+niederträchtig	negative	0.518111
+erlegen	negative	0.514848
+aushängeschild	positive	0.514203
+märchen	positive	0.513898
+oberwasser	positive	0.513867
+volksmärchen	positive	0.513444
+kunstmärchen	positive	0.513444
+zaubermärchen	positive	0.513444
+zeitüberschreitung	negative	0.513244
+transzendenz	negative	0.513244
+übersättigung	negative	0.513244
+hervorragen	positive	0.512989
+vergewaltigung	negative	0.511481
+erfolg	positive	0.511428
+kabinettstückchen	positive	0.511062
+glanzleistung	positive	0.511062
+meisterleistung	positive	0.511062
+nonplusultra	positive	0.510993
+fahndungserfolg	positive	0.510223
+teilerfolg	positive	0.510223
+achtungserfolg	positive	0.510223
+behandlungserfolg	positive	0.510223
+charterfolg	positive	0.510223
+verkaufserfolg	positive	0.510223
+turniererfolg	positive	0.510223
+heilerfolg	positive	0.510223
+kinoerfolg	positive	0.510223
+überraschungserfolg	positive	0.510223
+publikumserfolg	positive	0.510223
+riesenerfolg	positive	0.510223
+welterfolg	positive	0.510223
+medaillenerfolg	positive	0.510223
+fortune	positive	0.510223
+anfangserfolg	positive	0.510223
+therapierfolg	positive	0.510223
+lernerfolg	positive	0.510223
+vereinserfolg	positive	0.510223
+zuchterfolg	positive	0.510223
+strahlen	positive	0.510040
+konsumieren	negative	0.509990
+abnutzen	negative	0.509987
+drogen nehmen	negative	0.509974
+reinziehen	negative	0.509940
+verkonsumieren	negative	0.509940
+erstrahlen	positive	0.509921
+liquidator	negative	0.507474
+verletzt	negative	0.506835
+korsar	negative	0.506828
+zugänglich	positive	0.506496
+erbittern	negative	0.506276
+unfair	negative	0.505809
+einbeulen	negative	0.505491
+verstoss	negative	0.503637
+wut	negative	0.503372
+verfehlung	negative	0.503260
+räuber	negative	0.503177
+höhenflug	positive	0.502869
+aufbrauchen	negative	0.501906
+schlüsselgewalt	negative	0.500601
+mafioso	negative	0.500166
+präferieren	positive	0.499397
+swinger	positive	0.498497
+schimmel	negative	0.497627
+edelschimmel	negative	0.497537
+beleidigen	negative	0.497170
+verdämmern	negative	0.494601
+hereinlegen	negative	0.491468
+hintergehen	negative	0.491460
+kungeln	negative	0.491450
+mauscheln	negative	0.491450
+neppen	negative	0.491450
+übervorteilen	negative	0.491450
+hinwegtäuschen	negative	0.491450
+fremdgehen	negative	0.491450
+hörnen	negative	0.491450
+bluffen	negative	0.491450
+ablinken	negative	0.491450
+behumpsen	negative	0.491450
+behumsen	negative	0.491450
+linken	negative	0.491450
+henken	negative	0.490695
+aufknüpfen	negative	0.490695
+verbauen	negative	0.490644
+wagen	negative	0.488079
+erkühnen	negative	0.487962
+anmassen	negative	0.487962
+erfrechen	negative	0.487962
+erdreisten	negative	0.487962
+einstossen	negative	0.484140
+kabbalistisch	negative	0.478939
+entstellen	negative	0.478224
+verzapfen	negative	0.461267
+ausfressen	negative	0.461267
+zetern	negative	0.454451
+tragikomisch	positive	0.454121
+mogeln	negative	0.449572
+schummeln	negative	0.449572
+betuppen	negative	0.449572
+lächerlich	positive	0.445874
+beschummeln	negative	0.439444
+vergällen	negative	0.439195
