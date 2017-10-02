@@ -16,6 +16,7 @@ from common import ENCODING, ESC_CHAR, FMAX, FMIN, \
 from collections import defaultdict
 from math import log
 import codecs
+import numpy as np
 import sys
 
 
@@ -171,15 +172,15 @@ def _stat2scores(a_stat, a_n_pos, a_n_neg, a_n_neut,
         if iterm in a_pos or iterm in a_neg or iterm in a_neut:
             continue
         # decide whether the term is subjective or not
-        subj_score = log((ipos + ineg) * a_n_neut /
-                         (ineut * n_subj or 1.) or 1., 2)
+        subj_score = log(float(ipos + ineg) * a_n_neut /
+                         (float(ineut * n_subj) or 1.) or 1., 2)
         # determine term's polarity
         if subj_score > 0:
-            pol_score = log(ipos * a_n_neg /
-                            (ineg * a_n_pos or 1.) or 1., 2)
+            pol_score = log(float(ipos * a_n_neg) /
+                            (float(ineg * a_n_pos) or 1.) or 1., 2)
             ret.append((iterm,
                         POSITIVE if pol_score > 0. else NEGATIVE,
-                        pol_score + subj_score))
+                        pol_score + np.abs(subj_score)))
     return ret
 
 
